@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Management Index — Engineering Studies Toolkit</title>
+<meta name="description" content="Project Management Index — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, PM, General Tools). An index of standalone project-management tools for running the team and commercial side of a project.">
+<link rel="canonical" href="https://www.engineerzcorner.com/pm/">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Project Management Index — Engineering Studies Toolkit">
+<meta property="og:description" content="Project Management Index — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, PM, General Tools). An index of standalone project-management tools for running the team and commercial side of a project.">
+<meta property="og:url" content="https://www.engineerzcorner.com/pm/">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Project Management Index — Engineering Studies Toolkit">
+<meta name="twitter:description" content="Project Management Index — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, PM, General Tools). An index of standalone project-management tools for running the team and commercial side of a project.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* ===== teal/petrol reskin — overrides shared vars so every rule using
+     --amber/--blue/--plate site-wide (icons, gradients, hovers) follows ===== */
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+
+  /* contained petrol banner behind the page title */
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+    animation:pgFloat 8s ease-in-out infinite;
+  }
+  @keyframes pgFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(10px);}}
+  @media (prefers-reduced-motion: reduce){.pagehero::before{animation:none;}}
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);}
+
+  .home-intro{border-left-color:var(--blue) !important;}
+
+  /* tool cards — tint, watermark, teal shadow on hover */
+  .tool-card{
+    background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;
+    position:relative;overflow:hidden;
+  }
+  .tool-card::after{
+    content:'';position:absolute;right:-22px;top:-22px;width:70px;height:70px;
+    background:linear-gradient(135deg,rgba(0,153,153,.14),rgba(0,153,153,0));
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);pointer-events:none;
+  }
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+
+  /* scroll-reveal */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pm",
+      "item": "https://www.engineerzcorner.com/pm/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Project Management Index",
+      "item": "https://www.engineerzcorner.com/pm/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Project Management Index",
+  "description": "Project Management Index \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, PM, General Tools). An index of standalone project-management tools for running the team and commercial side of a project.",
+  "url": "https://www.engineerzcorner.com/pm/"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Project Management</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="index.html" class="current">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pm">
+
+  <div class="pagehero">
+    <h1>Project Management — Index</h1>
+  </div>
+  <div class="home-intro">Eleven standalone tools for running the team and commercial side of a project, not the engineering side — who's doing what, what could go wrong, what's overdue, what got said in the last meeting, how the budget and schedule are actually tracking, the contract vocabulary that ties it together, and the PMBOK structure it all maps back to. Pick one below.</div>
+
+  <div class="tool-grid">
+    <a class="tool-card reveal" href="raci-matrix.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16M15 4v16"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.01</div>
+          <div class="tool-card-title">RACI Matrix Builder</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Set your team, list your tasks, and mark who's Responsible, Accountable, Consulted or Informed for each one.</div>
+    </a>
+    <a class="tool-card reveal" href="risk-register.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.02</div>
+          <div class="tool-card-title">Risk Register</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Log risks with probability &amp; impact — the score and priority (low/medium/high) update automatically.</div>
+    </a>
+    <a class="tool-card reveal" href="task-tracker.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.03</div>
+          <div class="tool-card-title">Action / Task Tracker</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Task, owner, due date, status — overdue open items are flagged automatically against today's date.</div>
+    </a>
+    <a class="tool-card reveal" href="meeting-minutes.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.04</div>
+          <div class="tool-card-title">Meeting Minutes &amp; Action Items</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Attendees, discussion notes and action items in one form — generate a clean, copyable minutes summary.</div>
+    </a>
+    <a class="tool-card reveal" href="evm.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-6 3 4 5-8"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.05</div>
+          <div class="tool-card-title">Earned Value Management (EVM)</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">PV, EV, AC and BAC in — CPI, SPI, cost/schedule variance, EAC, ETC and VAC out, with plain-English status.</div>
+    </a>
+    <a class="tool-card reveal" href="team-directory.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.06</div>
+          <div class="tool-card-title">Team Directory</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Name, role, email and phone for everyone on the project — one place to look instead of five inboxes.</div>
+    </a>
+    <a class="tool-card reveal" href="commercial-terms.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.07</div>
+          <div class="tool-card-title">Commercial Terms of Project</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Plain-language reference for contract, payment and claims vocabulary — LOI, retention, VOs, EOT, LDs, DLP and more.</div>
+    </a>
+    <a class="tool-card reveal" href="incoterms.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="13" rx="1"></rect><path d="M16 10h4l3 3v4h-7z"></path><circle cx="5.5" cy="20.5" r="1.5"></circle><circle cx="18.5" cy="20.5" r="1.5"></circle></svg></div>
+        <div>
+          <div class="tool-card-num">PM.08</div>
+          <div class="tool-card-title">Incoterms</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Incoterms 2020 reference — where risk transfers, who arranges carriage, and who pays freight and insurance.</div>
+    </a>
+    <a class="tool-card reveal" href="pmp-pmbok-reference.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M9 14.5 7 22l5-3 5 3-2-7.5"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.09</div>
+          <div class="tool-card-title">PMP / PMBOK Reference</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Process groups, knowledge areas, schedule/risk vocabulary and PMP credential basics, all in one reference page.</div>
+    </a>
+    <a class="tool-card reveal" href="punch-list.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.10</div>
+          <div class="tool-card-title">Punch List / Snag Tracker</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Log defects with location, trade and priority — open/critical counts update live, and it generates a copyable plain-text summary.</div>
+    </a>
+    <a class="tool-card reveal" href="permit-to-work.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">PM.11</div>
+          <div class="tool-card-title">Permit to Work / LOTO Checklist</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Isolation points, safety checks and sign-off fields — generates a copyable permit record for your site file.</div>
+    </a>
+  </div>
+  <footer>Eleven standalone tools — use the cards above or the tabs on any tool to jump between them. Nothing here saves between visits; export/copy anything you want to keep before you close the tab. <a href="../index.html">← All Disciplines</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<div class="nl-box reveal">
+  <style>
+    .nl-box{display:flex;gap:14px;align-items:flex-start;text-align:left;background:var(--sheet-2, #F7F8FC);border:1px solid var(--line, #E1E3F0);border-radius:14px;padding:20px;margin:26px 16px 0;position:relative;overflow:hidden;transition:transform .25s cubic-bezier(.22,.9,.34,1), box-shadow .25s ease, border-color .25s ease;}
+    .nl-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, var(--amber,#6C5CE7), var(--blue,#0D9488));opacity:0;transition:opacity .25s ease;pointer-events:none;}
+    .nl-box:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.08);border-color:transparent;}
+    .nl-box:hover::before{opacity:.04;}
+    .nl-box-icon{flex:none;width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg, var(--amber,#6C5CE7), var(--blue,#0D9488));display:flex;align-items:center;justify-content:center;color:#fff;position:relative;transition:transform .25s cubic-bezier(.22,.9,.34,1);animation:nlBoxFloat 3.6s ease-in-out infinite;}
+    .nl-box:hover .nl-box-icon{transform:scale(1.08) rotate(-4deg);}
+    .nl-box-icon svg{width:20px;height:20px;}
+    .nl-box-icon-dot{position:absolute;top:-2px;right:-2px;width:9px;height:9px;border-radius:50%;background:#2DD4BF;box-shadow:0 0 0 2px var(--sheet-2,#F7F8FC);animation:nlBoxPing 2.4s ease-in-out infinite;}
+    @keyframes nlBoxFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
+    @keyframes nlBoxPing{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.45;transform:scale(1.35);}}
+    @media (prefers-reduced-motion: reduce){.nl-box-icon{animation:none;}.nl-box-icon-dot{animation:none;}.nl-box{transition:none;}.nl-box:hover{transform:none;}.nl-box:hover .nl-box-icon{transform:none;}}
+    .nl-box-body{flex:1;min-width:0;}
+    .nl-box .sib-form{text-align:left;}
+    .nl-box #sib-container{max-width:420px;background:transparent;border:none;padding:0;}
+    .nl-box .sib-form-block{padding:4px 0 !important;}
+    .nl-box .sib-form-block p{margin:0;}
+    .nl-box input.input{font-family:inherit;font-size:12.5px;padding:8px 10px;border:1px solid #E1E3F0;border-radius:6px;width:100%;box-sizing:border-box;color:#181B29;background:#fff;}
+    .nl-box .sib-form-block__button{font-family:"JetBrains Mono","SF Mono",monospace !important;font-size:12px !important;font-weight:700 !important;padding:8px 16px !important;border-radius:6px !important;background:var(--blue,#0D9488) !important;color:#fff !important;cursor:pointer;margin-top:8px;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;}
+    .nl-box .sib-form-block__button:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.18);}
+    .nl-box input.input{transition:border-color .15s ease, box-shadow .15s ease;}
+    .nl-box input.input:focus{border-color:var(--blue,#0D9488) !important;box-shadow:0 0 0 3px rgba(13,148,136,.15);outline:none;}
+    .nl-box .entry__specification{display:none;}
+    .nl-box .entry__label{font-family:"Manrope","Arial",sans-serif !important;font-size:13.5px !important;font-weight:700 !important;color:#181B29 !important;}
+    .nl-box .sib-form-message-panel{max-width:100% !important;font-size:11.5px !important;margin-bottom:8px;}
+  </style>
+  <div class="nl-box-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="M22 6l-10 7L2 6"></path></svg>
+    <span class="nl-box-icon-dot"></span>
+  </div>
+  <div class="nl-box-body">
+  <div style="font-family:'Manrope','Arial',sans-serif;font-size:13.5px;font-weight:700;color:var(--ink,#181B29);margin-bottom:2px;">Get notified about new content</div>
+  <div style="font-size:11.5px;color:var(--ink-faint,#8D91AA);margin-bottom:10px;">New calculators, guides, notes &amp; tools — one short email when something ships. No spam, unsubscribe anytime.</div>
+
+  <div class="sib-form" style="text-align:center;">
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+        </div>
+      </div>
+      <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+        </div>
+      </div>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:420px;">
+        <form id="sib-form" method="POST" action="https://5f707dc5.sibforms.com/serve/MUIFAEozin-ZuSQjrJ6Lkt2qH35ZlJXqC-xbUMRbp7XgW2G7EFhuUYuLr22lq9tGRUV0d_7_xm7KyF5QzbKTYWWSZ4dCKbkdHlLUk6gYopHCz9aevP1UymURugquoAQgDDf4DHBOW12LR2DBY2GDPYfF7PUa1miGFfS1-336gBRI26BbyNQr39YglWNTX_wM946cs4z4ga9HIBAO5A==" data-type="subscription">
+          <div style="padding:4px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <div class="entry__field">
+                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="you@email.com" data-required="true" required />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:13px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;"></label>
+              </div>
+            </div>
+          </div>
+          <div style="padding:4px 0;text-align:left;">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:14px;height:14px;display:none;">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              SUBSCRIBE
+            </button>
+          </div>
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+          <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+
+<script src="../assets/app.js"></script>
+<script src="../assets/pm.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
