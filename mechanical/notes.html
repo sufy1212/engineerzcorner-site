@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechanical Learning Notes — Theory &amp; Reference</title>
+<meta name="description" content="Mechanical Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.">
+<link rel="canonical" href="https://www.engineerzcorner.com/mechanical/notes">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Mechanical Learning Notes — Theory &amp; Reference">
+<meta property="og:description" content="Mechanical Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.">
+<meta property="og:url" content="https://www.engineerzcorner.com/mechanical/notes">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mechanical Learning Notes — Theory &amp; Reference">
+<meta name="twitter:description" content="Mechanical Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231E2226'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23D68A4C' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D68A4C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --iron:#1E2226; --iron-2:#282D32; --iron-3:#333A40;
+    --grid-line: rgba(214,138,76,.07);
+    --copper:#D68A4C; --copper-dim:#8C5C30;
+    --vellum:#F6F1E4; --vellum-2:#EFE8D4; --vellum-line:#DCD2B4;
+    --ink:#241F14; --ink-dim:#6B6250; --ink-faint:#9A9078;
+    --paper-text:#E4DED0; --paper-text-dim:#A29A88;
+    --fault:#B23A2E;
+    --font-display:"Oswald","Arial Narrow",-apple-system,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:var(--iron);color:var(--paper-text);font-family:var(--font-body);}
+  body{
+    background-image:
+      repeating-linear-gradient(45deg, var(--grid-line) 0px, var(--grid-line) 1px, transparent 1px, transparent 16px),
+      repeating-linear-gradient(-45deg, var(--grid-line) 0px, var(--grid-line) 1px, transparent 1px, transparent 16px);
+    background-color:var(--iron);
+  }
+  ::selection{background:rgba(214,138,76,.28);}
+  a{color:var(--copper);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+
+  :focus-visible{outline:2px solid var(--copper); outline-offset:2px;}
+
+  /* ===== topbar ===== */
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(30,34,38,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(214,138,76,.20);}
+  .topbar-inner{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.02em;color:#F3EEDD;text-decoration:none;text-transform:uppercase;}
+  .brand .gear{color:var(--copper);font-size:16px;}
+  .searchbox{position:relative;flex:none;width:min(280px,60vw);}
+  .searchbox input{
+    width:100%;background:var(--iron-2);border:1px solid rgba(214,138,76,.24);border-radius:5px;
+    color:var(--paper-text);font-family:var(--font-mono);font-size:12.5px;padding:9px 12px 9px 30px;outline:none;
+  }
+  .searchbox input::placeholder{color:var(--paper-text-dim);}
+  .searchbox input:focus{border-color:var(--copper);}
+  .searchbox svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--paper-text-dim);pointer-events:none;}
+
+  /* ===== hero ===== */
+  .hero{padding:56px 0 8px;}
+  .eyebrow{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-bottom:14px;}
+  h1{font-family:var(--font-display);font-size:clamp(28px,5vw,44px);line-height:1.12;font-weight:600;color:#F6F1E4;margin:0 0 16px;letter-spacing:0;max-width:17ch;text-transform:uppercase;}
+  .hero-sub{font-family:var(--font-body);font-size:16px;line-height:1.65;color:var(--paper-text-dim);max-width:56ch;margin:0 0 22px;}
+  .hero-meta{display:flex;gap:22px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(214,138,76,.18);}
+  .hero-meta .m{font-family:var(--font-mono);font-size:11px;color:var(--paper-text-dim);}
+  .hero-meta .m b{display:block;color:#F6F1E4;font-size:19px;font-family:var(--font-display);font-weight:600;margin-bottom:2px;}
+
+  /* ===== filter board (gear-train diagram) ===== */
+  .board{margin:44px 0 6px;}
+  .board-label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-text-dim);margin-bottom:18px;}
+  .board-label b{color:var(--copper);font-weight:600;}
+  .sld{background:var(--iron-2);border:1px solid rgba(214,138,76,.18);border-radius:8px;padding:22px 22px 18px;overflow-x:auto;}
+  .shaft-row{position:relative;height:2px;background:linear-gradient(90deg, transparent, var(--copper-dim) 4%, var(--copper-dim) 96%, transparent);margin:0 6px 0;min-width:640px;}
+  .cogs{display:flex;min-width:640px;padding-top:0;}
+  .cog-btn{
+    flex:1;min-width:64px;background:none;border:none;cursor:pointer;padding:0 4px 4px;
+    display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--paper-text-dim);
+  }
+  .drop{width:2px;height:16px;background:var(--copper-dim);}
+  .cog{
+    width:26px;height:26px;border:2px solid var(--copper-dim);border-radius:50%;position:relative;background:var(--iron);
+    display:flex;align-items:center;justify-content:center;transition:border-color .15s ease, box-shadow .15s ease, transform .3s ease;
+  }
+  .cog::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px dashed transparent;}
+  .cog .hub{width:6px;height:6px;border-radius:50%;background:var(--copper-dim);transition:background .18s ease;}
+  .cog-btn[aria-pressed="true"] .cog{border-color:var(--copper);box-shadow:0 0 10px rgba(214,138,76,.45);transform:rotate(35deg);}
+  .cog-btn[aria-pressed="true"] .cog .hub{background:var(--copper);}
+  .cog-btn.is-all[aria-pressed="true"] .cog{border-color:#E8C27C;box-shadow:0 0 10px rgba(232,194,124,.45);}
+  .cog-btn.is-all[aria-pressed="true"] .cog .hub{background:#E8C27C;}
+  .cog-name{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;text-align:center;line-height:1.35;}
+  .cog-count{font-family:var(--font-mono);font-size:9px;color:var(--paper-text-dim);opacity:.8;}
+  .cog-btn:hover .cog-name{color:#F6F1E4;}
+  .cog-btn:hover .cog{border-color:var(--copper);}
+
+  /* ===== results meta ===== */
+  .results-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:26px 0 6px;font-family:var(--font-mono);font-size:11px;color:var(--paper-text-dim);flex-wrap:wrap;}
+  .results-meta .clear{background:none;border:1px solid rgba(214,138,76,.32);color:var(--copper);border-radius:4px;padding:5px 10px;cursor:pointer;font-family:var(--font-mono);font-size:10.5px;}
+  .results-meta .clear:hover{background:rgba(214,138,76,.1);}
+
+  /* ===== category sections ===== */
+  .catsection{margin-top:38px;}
+  .catsection-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .catdot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .catsection-head h2{font-family:var(--font-display);font-size:15px;font-weight:600;color:#F6F1E4;margin:0;letter-spacing:.01em;text-transform:uppercase;}
+  .catsection-head .catcount{font-family:var(--font-mono);font-size:10.5px;color:var(--paper-text-dim);}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;}
+
+  .note-card{
+    background:var(--vellum);border-radius:6px;border-left:4px solid var(--copper);
+    box-shadow:0 2px 10px rgba(0,0,0,.26);overflow:hidden;
+  }
+  .note-head{
+    width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:14px 15px 12px;
+    display:flex;flex-direction:column;gap:8px;font-family:inherit;color:inherit;
+  }
+  .note-toprow{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .note-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .note-time{font-family:var(--font-mono);font-size:9.5px;color:var(--ink-faint);white-space:nowrap;}
+  .note-title{font-family:var(--font-display);font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.35;margin:0;}
+  .note-summary{font-family:var(--font-body);font-size:12.5px;color:var(--ink-dim);line-height:1.55;margin:0;}
+  .note-toggle-hint{font-family:var(--font-mono);font-size:9.5px;color:var(--ink-faint);display:flex;align-items:center;gap:5px;margin-top:2px;}
+  .note-toggle-hint svg{width:9px;height:9px;transition:transform .15s ease;}
+  .note-card.open .note-toggle-hint svg{transform:rotate(180deg);}
+  .note-body{max-height:0;overflow:hidden;transition:max-height .28s ease;}
+  .note-card.open .note-body{max-height:900px;}
+  .note-body-inner{padding:0 15px 16px;border-top:1px solid var(--vellum-line);margin-top:2px;}
+  .note-body-inner p{font-family:var(--font-body);font-size:13px;line-height:1.7;color:var(--ink);margin:12px 0 0;}
+  .note-body-inner p:first-child{margin-top:14px;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .note-body, .cog, .note-card.open .note-toggle-hint svg{transition:none;}
+  }
+
+  .empty-state{
+    grid-column:1/-1;font-family:var(--font-mono);font-size:12px;color:var(--paper-text-dim);
+    border:1px dashed rgba(214,138,76,.28);border-radius:6px;padding:26px;text-align:center;
+  }
+
+  footer{margin:70px 0 40px;padding-top:22px;border-top:1px solid rgba(214,138,76,.18);}
+  .foot-note{font-family:var(--font-mono);font-size:11px;color:var(--paper-text-dim);line-height:1.7;max-width:64ch;}
+  .foot-mark{font-family:var(--font-mono);font-size:10px;color:var(--copper-dim);margin-top:16px;}
+
+  @media (max-width:560px){
+    .cog-btn{min-width:52px;}
+    .cog-name{font-size:8.5px;}
+    .sld{padding:18px 14px 14px;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mechanical",
+      "item": "https://www.engineerzcorner.com/mechanical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Mechanical Learning Notes",
+      "item": "https://www.engineerzcorner.com/mechanical/notes"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Mechanical Learning Notes",
+  "description": "Mechanical Learning Notes \u2014 Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.",
+  "url": "https://www.engineerzcorner.com/mechanical/notes"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Mechanical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Notes on how machines actually work.</span></div></nav>
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top"><span class="gear">⚙</span> MECHANICAL LEARNING NOTES</a>
+    <div class="searchbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="searchInput" placeholder="Search notes…" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<div class="wrap" id="top">
+  <div class="hero">
+    <div class="eyebrow">Personal reference · theory only</div>
+    <h1>Notes on how machines actually work.</h1>
+    <p class="hero-sub">A running set of short, plain-language write-ups on core mechanical engineering concepts — how things work and why, not how to size them. There are no calculators or design tools on this page, and nothing here is invented: every note covers established, textbook-level mechanical theory.</p>
+    <div class="hero-meta">
+      <div class="m"><b id="metaNoteCount">0</b>notes</div>
+      <div class="m"><b id="metaCatCount">0</b>subjects</div>
+      <div class="m"><b>0</b>calculators</div>
+    
+      <div class="notes-crosslinks" style="display:flex;gap:16px;flex-wrap:wrap;width:100%;padding-top:10px;">
+        <a href="../notes/index.html" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--paper-text-dim);text-decoration:underline;">&larr; All discipline notes</a>
+        <a href="../quiz.html" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--paper-text-dim);text-decoration:underline;">Take today's quiz &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="board-label">Filter by subject — <b>engage a gear</b> to select that subject</div>
+    <div class="sld">
+      <div class="shaft-row"></div>
+      <div class="cogs" id="cogRow"></div>
+    </div>
+  </div>
+
+  <div class="results-meta">
+    <span id="resultsCount"></span>
+    <button class="clear" id="clearFilters" type="button">Reset filters</button>
+  </div>
+
+  <main id="noteSections"></main>
+
+  <footer>
+    <p class="foot-note">These are summary explanations written for learning and quick reference — they're deliberately simplified and aren't a substitute for the current edition of the relevant standard (ASME, ISO, API, etc.) or for a qualified engineer's judgement on a real installation. No content on this page is generated per-visit or personalized — what you read is what's written into the page.</p>
+    <div class="foot-mark">— end of drive train —</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+
+  var DATA = [{"id": "fundamentals", "label": "Fundamentals", "color": "#C1662B", "notes": [{"title": "Stress, Strain and the Elastic Modulus", "summary": "The two numbers every mechanical calculation eventually comes back to.", "body": ["Stress is force divided by the area it acts over (σ = F/A), and strain is how much a material deforms relative to its original size (ε = ΔL/L). Neither one alone tells you much about a material — it's the relationship between them that matters.", "For most engineering materials at low stress, that relationship is a straight line, and its slope is the elastic modulus (Young's modulus, E): σ = E·ε. A stiffer material — steel versus rubber, for instance — simply has a steeper line, meaning it takes more stress to produce the same strain. This straight-line region is also where deformation is fully recoverable; unload the part and it springs back to its original shape."]}, {"title": "Newton's Laws in Mechanical Design", "summary": "Three 17th-century statements that still size every shaft and support today.", "body": ["Newton's three laws underpin essentially all of classical mechanical design. The first — a body stays at rest or in uniform motion unless acted on by a net force — is why a stationary machine needs no net force to stay put, but why an unbalanced rotating part will vibrate itself apart over time.", "The second law, F = ma, is the workhorse: it's what lets a designer connect a required acceleration (starting a conveyor, stopping a flywheel) to the force or torque a motor or brake actually has to deliver. The third law — every action has an equal and opposite reaction — is why a foundation has to resist the same force a machine exerts on it, and why bolted joints and foundations are sized for more than just the static weight sitting on them."]}, {"title": "Work, Energy and Power: The Basic Bookkeeping", "summary": "Three related quantities that get mixed up constantly — and shouldn't be.", "body": ["Work is force applied over a distance (W = F·d), and it's measured in the same units as energy, because doing work on something is exactly how energy gets transferred into or out of it. Lifting a weight, compressing a spring, and accelerating a mass are all just different ways of doing work.", "Power is the rate at which that work happens — energy per unit time (P = W/t) — which is why two machines can do the identical amount of work and need very different motor sizes, if one has to do it in a tenth of the time. Confusing energy (kWh, Joules) with power (kW, Watts) is one of the most common unit mistakes in mechanical estimating, precisely because the two are related but not interchangeable."]}, {"title": "Free Body Diagrams and Why Every Analysis Starts With One", "summary": "The habit that turns a confusing structure into a solvable one.", "body": ["A free body diagram isolates a single component or point and draws every external force and moment acting on it — gravity, applied loads, reactions from supports or connected parts — with the rest of the system stripped away. It sounds almost too simple to matter, but skipping it is the single most common source of sign errors and missed loads in a hand calculation.", "Once every force is drawn, the analysis is just applying equilibrium: the sum of forces in each direction and the sum of moments about any point must equal zero for a body at rest. Complex assemblies are solved by working through a chain of free body diagrams, one component at a time, so a mistake stays isolated instead of propagating invisibly through the whole calculation."]}]}, {"id": "fluids", "label": "Fluid Mechanics", "color": "#3D6B63", "notes": [{"title": "Bernoulli's Equation and Its Limits", "summary": "One of the most useful equations in fluid mechanics — and one of the most misapplied.", "body": ["Bernoulli's equation says that along a streamline, the sum of pressure energy, kinetic energy and potential energy per unit volume stays constant: p + ½ρv² + ρgh = constant. It's why fluid speeds up where a pipe narrows and why pressure drops where velocity rises — the same total energy is just redistributed between the terms.", "The catch is that the simple form assumes no friction and no energy added or removed by a pump or fitting, which is never quite true in a real pipe run. Real calculations use an extended version with a head-loss term added specifically to account for friction and fittings — Bernoulli gives the ideal baseline, and head loss is the correction that makes it match reality."]}, {"title": "Laminar vs Turbulent Flow: What Reynolds Number Tells You", "summary": "A single dimensionless number that predicts whether flow will be smooth or chaotic.", "body": ["The Reynolds number (Re = ρvD/μ) compares inertial forces to viscous forces in a flow. At low Reynolds numbers, viscosity dominates and fluid moves in smooth, parallel layers — laminar flow. At high Reynolds numbers, inertia wins out and the flow becomes chaotic and mixing, full of eddies — turbulent flow.", "In a typical pipe, flow is laminar below roughly Re ≈ 2300 and turbulent above roughly Re ≈ 4000, with a messy transitional zone in between. The distinction matters enormously for design because the two regimes follow different friction-factor relationships, and turbulent flow — the far more common case in real piping systems — loses noticeably more energy to friction for the same average velocity."]}, {"title": "Why Pumps Cavitate", "summary": "The vapor bubbles that form for a moment and take a pump apart over time.", "body": ["Cavitation happens when local pressure inside a pump — typically at the impeller eye, where velocity is highest and pressure lowest — drops below the fluid's vapor pressure at that temperature. The liquid flashes into vapor bubbles, which then collapse violently a moment later as they move into a higher-pressure region.", "Each collapsing bubble releases a tiny, intense shockwave against the nearest metal surface, and millions of these over time pit and erode the impeller — alongside noise, vibration, and a drop in pump performance. It's why NPSH available at the pump suction always has to exceed NPSH required by a margin: cavitation is a pressure problem at the suction side, not a discharge problem, and no amount of downstream pressure fixes it."]}, {"title": "Head Loss: Friction, Fittings and Why Pipes Aren't Free", "summary": "Every metre of pipe and every bend costs energy — this is how that cost is counted.", "body": ["As fluid moves through a pipe, friction against the pipe wall converts some of its mechanical energy into heat, which shows up as a pressure (or “head”) loss along the run. This friction loss scales with pipe length, roughly with the square of velocity, and depends on pipe roughness — rougher pipe means more turbulence right at the wall and more loss for the same flow.", "Bends, valves, tees and other fittings add further “minor” losses on top of the straight-pipe friction loss, and despite the name, minor losses in a fitting-heavy system can rival or exceed the friction loss in the straight runs. A pump has to be sized to overcome the total of both — static lift plus every friction and fitting loss in the system — which is why a pump selected only for static head routinely underperforms once it's actually installed."]}]}, {"id": "thermo-hvac", "label": "Thermodynamics & HVAC", "color": "#B23A2E", "notes": [{"title": "The First Law of Thermodynamics in Plain Terms", "summary": "Energy can move and change form, but the books always have to balance.", "body": ["The first law of thermodynamics is really just conservation of energy applied to heat and work: the change in a system's internal energy equals the heat added to it minus the work it does on its surroundings (ΔU = Q − W). Energy isn't created or destroyed inside the system, only converted between forms or moved across its boundary.", "This is the accounting rule behind everything from an engine cycle to a simple heat exchanger — whatever energy goes in as fuel, electricity or heat has to come out as useful work, waste heat, or a change in stored energy, with nothing left unaccounted for. Every efficiency figure quoted for mechanical equipment is really just a statement of how that balance splits between useful output and losses."]}, {"title": "How a Refrigeration Cycle Moves Heat Uphill", "summary": "Heat doesn't want to flow from cold to hot — the cycle forces it to, at a cost.", "body": ["A vapor-compression refrigeration cycle moves heat from a colder space to a warmer one, which doesn't happen on its own — the second law of thermodynamics says heat naturally flows the other way. The cycle gets around this by doing work on the refrigerant: a compressor raises its pressure and temperature, it rejects heat to the warm side in the condenser, expands back down through a valve, and absorbs heat from the cold side in the evaporator as it evaporates.", "The refrigerant is deliberately chosen so it evaporates and condenses at useful temperatures for the pressures involved, changing phase at both the hot and cold ends of the cycle, since phase change moves far more heat per kilogram than simply heating or cooling a fluid. Every air conditioner, chiller and heat pump runs on some variation of this same basic cycle."]}, {"title": "Sensible vs Latent Heat", "summary": "Why some cooling loads change a temperature and others change nothing but humidity.", "body": ["Sensible heat is energy that changes a substance's temperature without changing its phase — warming air from 24°C to 30°C, for instance. Latent heat is energy absorbed or released during a phase change, at constant temperature — water evaporating into humid air, or condensing back out of it, without the air's dry-bulb temperature itself changing at that instant.", "An air conditioning load is really the sum of both: the sensible load from equipment, lighting and people that raises air temperature, plus the latent load from moisture that has to be condensed out to control humidity. Sizing cooling equipment on sensible load alone is a common oversizing-or-undersizing mistake, especially in humid climates where the latent portion of the total load can be substantial."]}, {"title": "Why Air Changes Per Hour Isn't the Whole Ventilation Story", "summary": "A single number that tells you how often the air turns over, not whether it's actually clean.", "body": ["Air changes per hour (ACH) describes how many times a room's full air volume is theoretically replaced with fresh or filtered air in an hour, and it's a common quick sizing metric for ventilation and exhaust systems. A higher ACH generally means faster dilution of contaminants, heat, or humidity.", "What ACH doesn't capture is how well that air actually mixes — a poorly placed supply and return can let fresh air short-circuit straight from inlet to outlet while stagnant pockets sit unventilated elsewhere in the room, even at a high nominal ACH. That's why real ventilation design pairs an ACH target with diffuser placement and airflow patterns, rather than treating the ACH number alone as proof the space is well ventilated."]}]}, {"id": "machine-design", "label": "Machine Design & Power Transmission", "color": "#6E93C7", "notes": [{"title": "Why Bearings Fail: The Basics of Fatigue Life", "summary": "A bearing rarely breaks all at once — it wears out from millions of tiny repeated loads.", "body": ["Rolling-element bearings don't typically fail from a single overload; they fail from fatigue, as the rolling elements repeatedly stress the same small patches of raceway surface millions of times over the bearing's life. Eventually, subsurface cracks form and propagate to the surface as spalling, and the bearing's running noise and vibration rise sharply as this happens.", "Because fatigue is a statistical, cumulative process, bearing life is normally quoted as an L10 life — the number of revolutions or hours by which 90% of a batch of identical bearings are still expected to survive, not a guarantee for any individual bearing. Life scales strongly with load: even a modest increase in applied load shortens the expected fatigue life by a disproportionately larger amount, which is why correct load calculation matters more to bearing selection than almost any other single input."]}, {"title": "Gears vs Belts vs Chains: Choosing a Power Transmission Method", "summary": "Three ways to move rotation and torque from one shaft to another — each with a different trade-off.", "body": ["Gears mesh directly, tooth to tooth, giving precise, slip-free speed ratios and the ability to carry very high torque in a compact space, at the cost of requiring accurate shaft alignment and, usually, lubrication. Chains carry high torque over longer center distances without slipping, tolerating a bit more misalignment than gears, but need lubrication and stretch slightly as they wear.", "Belts are the quietest and most tolerant of misalignment, and (aside from timing belts) inherently allow a small amount of slip that can protect a machine from shock loads — but they carry less torque for a given size and eventually need retensioning as they age. Which one wins depends on the torque involved, the center distance needed, tolerance for slip, and how much maintenance access the installation allows."]}, {"title": "Factor of Safety: What It Actually Buys You", "summary": "A single number meant to absorb every uncertainty a designer can't fully calculate.", "body": ["A factor of safety is the ratio between a material or component's failure load and the load it's actually expected to see in service — a factor of safety of 4 means the part is designed to withstand four times its expected working load before failing. It exists because no calculation perfectly captures real conditions: material properties vary between batches, actual loads include shocks and vibration a static calculation misses, and manufacturing introduces small imperfections.", "Higher factors of safety are chosen where failure consequences are severe (lifting equipment, pressure vessels, structural supports) or where loading is poorly known, while lower factors are acceptable where loads are well characterized and failure is inconvenient rather than dangerous. It's a deliberately conservative buffer, not a precise prediction — doubling a factor of safety doesn't mean a part will literally last twice as long."]}, {"title": "Torque, Speed and Power: The Rotating Machine Triangle", "summary": "The three quantities every motor, pump and gearbox selection has to reconcile.", "body": ["For any rotating shaft, power, torque and rotational speed are locked together by a single relationship: P = T×ω (or, in common units, kW = T[Nm]×N[RPM]/9550). Fix any two and the third is determined — which is exactly why a gearbox that trades speed for torque can't also increase power output; it can only shift the balance between the two.", "This is also why a motor's nameplate speed matters as much as its power rating: the same kW motor delivers far more torque at low RPM than at high RPM, and machinery like conveyors or mixers that need high starting torque at low speed is generally paired with either a low-speed motor or a reduction gearbox rather than driven directly at motor speed."]}]}, {"id": "materials", "label": "Materials", "color": "#8B7FB8", "notes": [{"title": "Reading a Stress-Strain Curve", "summary": "One graph that tells you almost everything about how a material will behave under load.", "body": ["A stress-strain curve, generated by pulling a standard test specimen until it breaks, starts with a straight elastic region where the material returns to its original shape if unloaded. Beyond the yield point, the material enters the plastic region, deforming permanently even after the load is removed — this is the boundary most structural designs are deliberately kept below.", "Past yield, the curve typically keeps rising to an ultimate tensile strength as the material work-hardens, then falls off as the specimen necks down and finally fractures. The shape of the whole curve — how far it stretches before breaking, how sharply it drops after the peak — is what separates a ductile material, which gives visible warning before failing, from a brittle one, which can fracture with little or no prior deformation."]}, {"title": "Why Metals Fatigue Even Below Their Yield Strength", "summary": "A load too small to bend a part once can still break it after enough cycles.", "body": ["Fatigue failure happens under repeated or cyclic loading, at stress levels far below what would cause immediate yielding or fracture in a single application. Microscopic cracks initiate at a stress concentration — a sharp corner, a surface scratch, a void in the material — and grow a tiny amount with every load cycle until the remaining cross-section can no longer carry the load and fails suddenly.", "Many steels show a fatigue (or endurance) limit: a stress level below which the material can theoretically sustain an unlimited number of cycles without failing. Many other metals, aluminium alloys among them, don't show a true endurance limit at all — their fatigue strength keeps declining with more cycles no matter how low the stress, which is exactly why fatigue life, not just static strength, has to be checked explicitly for any part subject to repeated loading."]}, {"title": "Corrosion: The Electrochemistry Hiding in Rust", "summary": "Rust isn't just metal wearing out — it's a tiny battery running in reverse.", "body": ["Most corrosion is an electrochemical process: at an anodic site on a metal surface, atoms give up electrons and dissolve into solution as ions, while at a cathodic site elsewhere on the same surface, those electrons are consumed in a separate reaction, commonly involving oxygen and water. The metal, the electrolyte (moisture) and the electron flow between anode and cathode together form a tiny corrosion cell — essentially a short-circuited battery, slowly consuming the metal.", "This is why two dissimilar metals in electrical contact, in the presence of moisture, corrode faster than either would alone — galvanic corrosion — with the more “noble” metal protected at the expense of the more reactive one. It's also the principle behind sacrificial anodes and cathodic protection: attaching a more reactive metal deliberately gives the corrosion cell a preferred anode to consume instead of the structure being protected."]}, {"title": "Choosing Between Steel, Aluminium and Stainless: What Actually Matters", "summary": "There's no single “best” structural metal — only the one that fits the constraints in front of you.", "body": ["Carbon steel is the default structural choice for good reason: high strength and stiffness per unit cost, widely available, and easy to weld and fabricate — its main weakness is that it corrodes readily without a protective coating. Aluminium weighs roughly a third as much as steel for a given volume and resists corrosion far better on its own, but it's noticeably less stiff for the same cross-section and typically costs more.", "Stainless steel adds chromium to form a thin, self-healing oxide layer that resists corrosion far better than plain carbon steel, at a real cost premium and generally lower strength-to-cost than plain steel. The right choice usually comes down to weighing strength-to-weight, corrosion environment, fabrication method, and budget against each other — not picking whichever material sounds the most advanced."]}]}, {"id": "rotating-equipment", "label": "Rotating Equipment & Pumps", "color": "#4FA88F", "notes": [{"title": "Centrifugal vs Positive Displacement Pumps", "summary": "Two fundamentally different ways to move a fluid — and very different behavior when things go wrong.", "body": ["A centrifugal pump uses a spinning impeller to accelerate fluid outward and convert that velocity into pressure, and its flow rate depends heavily on the pressure it's working against — flow drops as system pressure (head) rises. It's simple, handles varying flow well, and is the default choice for most general liquid transfer.", "A positive displacement pump instead traps a fixed volume of fluid and physically pushes it through with each cycle — gear, screw, diaphragm and piston pumps all work this way — delivering a nearly constant flow rate regardless of pressure, up to the limit of the driver. That constant-flow behavior is exactly why positive displacement pumps need a pressure-relief path: unlike a centrifugal pump, a blocked outlet doesn't just reduce flow, it keeps building pressure until something gives way."]}, {"title": "Why Pump Curves Slope Downward", "summary": "The graph that tells you a centrifugal pump can't just deliver whatever flow you ask for.", "body": ["A centrifugal pump's performance curve plots the head it can develop against the flow rate passing through it, and that curve slopes downward: at shutoff (zero flow) the pump develops its maximum head, and head falls as flow increases. This happens because the impeller has a fixed amount of energy to add to the fluid, and pushing more flow through the same impeller geometry means more of that energy is lost to internal friction and turbulence rather than converted to useful head.", "A pump doesn't operate wherever you'd like on that curve — it settles at the single point where its head-flow curve crosses the system's own head-loss curve, called the operating point. That's why simply picking a pump rated for a desired flow isn't enough; the system curve it will actually be paired with has to be calculated too, or the real operating point can land somewhere the pump performs poorly or not at all."]}, {"title": "Motor and Pump Coupling: Why Alignment Matters", "summary": "A few tenths of a millimetre of misalignment is enough to wreck a bearing.", "body": ["When a motor and a pump (or any two rotating machines) are connected by a coupling, their shafts need to be aligned within a tight tolerance — both parallel offset and angular misalignment matter. Even misalignment too small to see with the naked eye forces the coupling and both machines' bearings to absorb cyclic side-loads they weren't designed for, every single revolution.", "Left uncorrected, that repeated side-loading accelerates bearing fatigue, increases vibration and seal wear, and can eventually crack the shaft itself — failures that often get misdiagnosed as a bad bearing or a bad pump when the real root cause was a coupling alignment that was never checked or drifted after installation. Laser alignment tools have made checking this fast enough that it's now standard practice on any coupled rotating equipment, not just critical machinery."]}, {"title": "Vibration as an Early Warning System", "summary": "A healthy machine has a vibration signature — and so does almost every way it can fail.", "body": ["Every piece of rotating machinery vibrates to some degree even when healthy, and that vibration has a characteristic pattern tied to its rotating speed and construction. Specific problems change that pattern in specific, recognizable ways: imbalance shows up as vibration at once-per-revolution frequency, misalignment often shows at twice that frequency, and a damaged bearing produces vibration at frequencies tied to its specific geometry — ball, race and cage.", "This is the basis of vibration-based condition monitoring: by tracking how a machine's vibration spectrum changes over time, developing problems can often be identified and scheduled for repair weeks or months before they'd otherwise cause an unplanned failure. It turns maintenance from a fixed schedule or a reaction to breakdowns into something closer to reading symptoms before they become a diagnosis."]}]}, {"id": "standards", "label": "Standards & Codes", "color": "#E2934E", "notes": [{"title": "ASME, ISO and API: Who Writes the Rules for Mechanical Equipment", "summary": "Three overlapping rulebooks that most mechanical equipment ends up governed by.", "body": ["ASME (the American Society of Mechanical Engineers) publishes some of the most widely referenced mechanical codes worldwide, including the Boiler and Pressure Vessel Code and the B31 series covering piping — these are treated as legally binding requirements in many jurisdictions, not just voluntary guidance. ISO produces internationally harmonized standards across a huge range of mechanical topics, from general tolerancing (ISO 286) to specific equipment classes, aiming for one standard usable across many countries at once.", "API (the American Petroleum Institute) focuses specifically on oil and gas equipment — pumps, valves, tanks, pressure vessels built to the demands of that industry. In practice, a single piece of mechanical equipment is often built to satisfy several of these at once — an ASME pressure vessel built to API materials requirements and inspected under a jurisdiction's own regulations layered on top."]}, {"title": "Piping Classes and Why Pipe Isn't “Just a Pipe”", "summary": "The same nominal pipe size can mean several very different wall thicknesses.", "body": ["A pipe's nominal size (like “4 inch”) describes roughly its bore, not its wall thickness — that's set separately by its schedule (Schedule 40, Schedule 80, and so on), which determines how much pressure and mechanical stress the pipe can actually withstand. Two pipes with the same nominal size but different schedules have noticeably different outside diameters and very different pressure ratings.", "A piping class in an engineering specification bundles together the pipe schedule, material, fitting type and rating appropriate for a specific service and pressure/temperature range, so that anyone selecting components for that service picks compatible parts without having to re-derive the requirements from scratch each time. Mixing pipe or fittings from the wrong class into a system is a common and serious error precisely because it can look correct at a glance while being rated for entirely different conditions."]}]}, {"id": "maintenance", "label": "Maintenance & Reliability", "color": "#B7A339", "notes": [{"title": "Preventive vs Predictive Maintenance", "summary": "Fixing things on a schedule versus fixing them when the data says they actually need it.", "body": ["Preventive maintenance replaces or services a component at fixed intervals — time-based or run-hours-based — regardless of its actual condition, on the theory that most failures follow a roughly predictable pattern. It's simple to plan and budget for, but it inevitably wastes some useful life on parts replaced early, and it can still miss failures that don't follow the assumed schedule.", "Predictive maintenance instead monitors a component's actual condition — through vibration analysis, oil analysis, thermal imaging, and similar techniques — and schedules work based on real evidence that something is degrading, not a calendar. It generally gets more useful life out of equipment and catches developing problems preventive schedules would miss, at the cost of needing monitoring equipment, data, and the expertise to interpret it correctly."]}, {"title": "Lubrication: The Cheapest Insurance a Machine Has", "summary": "Most mechanical wear is really a lubrication failure with a delay.", "body": ["Lubricant's main job is separating two moving metal surfaces with a thin film so they never make direct metal-to-metal contact, which is what most wear and friction actually come from. Beyond reducing friction, lubricant also carries heat away from the contact area and helps flush out wear debris and contaminants before they can act like an abrasive.", "A striking share of premature bearing and gear failures trace back to a lubrication problem — wrong lubricant grade, contamination (often water or dirt ingress), or simply running low or degraded — rather than a design or material defect in the component itself. That's exactly why lubrication is one of the highest-value, lowest-cost items on most maintenance schedules: getting it right prevents failures that would otherwise look, superficially, like unrelated mechanical problems."]}, {"title": "The Bathtub Curve and Why Equipment Fails When It Does", "summary": "A famous shape that describes failure rate over a machine's whole life, not just when it breaks.", "body": ["Plot a population of components' failure rate against time and it often traces a bathtub shape: a high initial failure rate from manufacturing defects and installation errors (infancy failures), dropping to a long, low, roughly constant failure rate during normal service (useful life), then rising again as wear-out mechanisms — fatigue, corrosion, general degradation — accumulate toward end of life.", "This shape is exactly why commissioning and initial run-in periods matter so much — they're specifically there to catch infancy failures before a machine is relied on in production — and why maintenance strategies shift over a machine's life: little intervention needed during the flat middle section, then increasing attention as age-related wear-out approaches. Reliability engineering is largely about recognizing which part of that curve a given piece of equipment is currently on."]}]}, {"id": "safety", "label": "Safety", "color": "#D65B4A", "notes": [{"title": "Lockout-Tagout: Isolating Stored Energy, Not Just Switching Off", "summary": "A machine that's “off” can still move, drop or discharge unless every energy source feeding it is actually locked out.", "body": ["Lockout-tagout controls hazardous energy during maintenance by physically isolating every source feeding a machine — electrical, but also stored mechanical energy in springs, a raised or suspended load, pressurized hydraulics or pneumatics, and residual heat — and locking each isolation point so it can't be re-energized while someone is working on the equipment.", "The tag matters almost as much as the lock: it identifies who applied the lockout and why, so nobody assumes a machine is safe to restart just because the immediate hazard looks gone. Most lockout-related injuries trace back to a source of stored energy nobody accounted for, not a failure of the lock itself — a spring-loaded mechanism, a suspended load, or residual pressure still in a line is exactly why a full energy-source inventory has to precede any lockout, not just isolating the obvious main switch."]}, {"title": "Machine Guarding: What a Guard Is Actually Preventing", "summary": "A guard isn't there to slow work down — it's there to keep a hazard out of reach while it's still capable of causing injury.", "body": ["Machine guarding exists to keep a person's body, clothing or tools out of a machine's point of operation, or out of the path of moving parts such as belts, gears or rotating shafts, while those parts are capable of causing injury. The type of guard is chosen for the specific hazard — a fixed barrier for a consistently dangerous zone, an interlocked guard that stops the machine the instant it's opened, or a presence-sensing device where an opening is too large to fully enclose.", "Removing or defeating a guard to work faster is one of the most common root causes of serious machine injuries, precisely because doing so restores full access to a hazard the guard was specifically installed to block — the machine doesn't become any less dangerous just because the guard is gone, only more reachable."]}, {"title": "Pressure Vessels and Why They're Regulated So Tightly", "summary": "A vessel under pressure stores energy the same way a compressed spring does — except it can release all of it at once.", "body": ["A pressure vessel holds its contents above atmospheric pressure, and that pressure is stored energy — if the vessel fails suddenly rather than through a controlled release, that energy can release explosively, propelling fragments and a pressure wave well beyond the vessel itself. That's why pressure vessel design, fabrication and inspection are governed by strict codes, the ASME Boiler and Pressure Vessel Code among them, rather than left to general structural judgement.", "Relief devices — safety valves or rupture discs — are a mandatory part of that protection, sized to vent excess pressure before it exceeds the vessel's rated limit, and deliberately kept independent of any other control system so they still function if everything else fails. Routine inspection matters just as much as the original design, since corrosion, fatigue or a degraded relief device can quietly erode a margin that was perfectly adequate when the vessel was new."]}]}, {"id": "manufacturing", "label": "Manufacturing Processes", "color": "#7A6BA6", "notes": [{"title": "Casting, Machining and Forming: Three Different Ways to Make a Part", "summary": "Shaping metal by pouring it, cutting it away, or squeezing it into shape are three fundamentally different manufacturing philosophies.", "body": ["Casting shapes a part by pouring molten metal into a mold and letting it solidify into the mold's cavity shape — it excels at complex geometries that would be difficult or impossible to machine, and it's economical at volume once the mold (or die) is made, but the tooling cost up front is significant and cast parts often need some machining afterward for precision surfaces. Machining instead starts from solid stock and removes material with cutting tools until the desired shape remains, which gives excellent dimensional accuracy and surface finish but wastes material and is comparatively slow for high-volume production.", "Forming shapes metal by plastically deforming it — rolling, forging, stamping, bending — without removing or adding material, which is efficient in both material usage and cycle time and often improves the material's mechanical properties by aligning its internal grain structure with the part's shape, but it's limited to geometries the forming process can actually achieve without cracking or excessive thinning. Choosing among the three for a given part comes down to production volume, geometric complexity, required tolerances, and the specific mechanical properties the application demands — there's rarely one universally correct choice."]}, {"title": "Why Tolerances Exist: No Part Is Ever Made to an Exact Dimension", "summary": "Every manufactured dimension is really a target plus an acceptable range, because manufacturing an exact dimension is physically impossible.", "body": ["No manufacturing process can produce a dimension to perfect, infinite precision — every process has some inherent variation from cut to cut, part to part, driven by tool wear, thermal expansion, machine vibration, and material inconsistency. Tolerances acknowledge this reality explicitly, specifying not a single exact dimension but an acceptable range around a nominal value that the part is still considered correct within.", "Tighter tolerances aren't simply 'better' — they cost more, because achieving them typically requires slower processes, more precise (and more expensive) equipment, more inspection, and often lower yield as more parts fall outside the tighter band. Good design assigns tight tolerances only where they're functionally necessary — a bearing seat that has to fit precisely — and leaves looser tolerances everywhere else, rather than specifying tight tolerances uniformly across a part out of caution, which needlessly inflates cost without improving function."]}, {"title": "GD&T: Controlling Geometry, Not Just Size", "summary": "A dimension alone can't guarantee a part actually fits and functions — geometric dimensioning and tolerancing controls the shape and relationship of features too.", "body": ["Geometric Dimensioning and Tolerancing (GD&T) is a symbolic language for specifying not just a feature's size but its form (flatness, roundness), orientation (perpendicularity, parallelism), location (position, concentricity) and profile relative to other features on the part — controls that a simple linear dimension and tolerance can't fully capture. Two holes can each individually be within their size tolerance and still fail to line up with mating fasteners if their position relative to each other isn't independently controlled.", "GD&T also formalizes datums — reference features a part's other dimensions and tolerances are measured from — which matters because measuring the 'same' dimension from a different reference point can produce a functionally different, and sometimes non-interchangeable, result. This is part of why GD&T, despite looking like unnecessary symbolic complexity to someone unfamiliar with it, is standard practice on precision mechanical drawings: it removes ambiguity about exactly what's being controlled and from where, in a way plain dimensions and general tolerance notes cannot."]}, {"title": "Welding: Joining Metal by Melting It Together", "summary": "Most structural and pressure-boundary metal joints aren't bolted or riveted — they're fused directly into one continuous piece of metal.", "body": ["Welding joins two pieces of metal by melting their adjoining edges (often with filler metal added) so they fuse into one continuous piece as the weld pool solidifies, rather than mechanically fastening two separate pieces together. Done correctly, a welded joint can be as strong as the base metal itself, which is why welding is the standard joining method for structural steel, pressure vessels, piping, and countless other applications where a mechanical fastener's inherent stress concentration and potential for loosening aren't acceptable.", "Weld quality depends heavily on process control — correct heat input, filler material compatible with the base metal, proper joint preparation, and appropriate technique for the position and material — because welding defects (incomplete fusion, porosity, cracking) can be difficult to detect visually while still seriously compromising the joint's strength. This is exactly why critical welds are qualified through welder certification and inspected with nondestructive testing methods like radiography or ultrasonic testing rather than simply trusted on visual appearance alone."]}, {"title": "Additive Manufacturing: Building a Part Layer by Layer", "summary": "Instead of removing material or forcing it into a mold, additive manufacturing builds a part up one thin layer at a time.", "body": ["Additive manufacturing (3D printing, in its industrial forms) builds a part by depositing or fusing material layer by layer directly from a digital model, rather than removing material from stock (machining) or shaping it in a mold (casting, forming). This approach makes internal geometries and complex organic shapes achievable that would be impossible or prohibitively expensive with traditional subtractive or forming processes, since there's no tool that needs physical access to every surface being created.", "The trade-offs are real, though: additive processes are generally slower per part than mass-production methods like casting or stamping, material options remain more limited than conventional manufacturing, and mechanical properties can be direction-dependent (anisotropic) based on the layer orientation used during printing, which has to be accounted for in design rather than assumed away. Additive manufacturing tends to be most valuable for low-volume, geometrically complex, or highly customized parts — prototypes, tooling, replacement parts for legacy equipment — rather than as a wholesale replacement for high-volume conventional manufacturing."]}, {"title": "Surface Finish: Why a Part's Texture Is Specified, Not Just Its Size", "summary": "Two parts can share identical dimensions and still behave completely differently depending on how smooth or rough their surfaces actually are.", "body": ["Surface finish (surface roughness) describes the microscopic texture left on a machined or formed surface, typically quantified as an average roughness value (Ra) measured from the peaks and valleys of that texture. It's specified independently from dimensional tolerance because surface finish affects real functional performance — a rough surface increases friction and wear between mating moving parts, can act as a stress concentration site that shortens fatigue life, and affects sealing performance where two surfaces need to mate closely.", "Different manufacturing processes inherently produce different characteristic surface finishes — grinding produces a much smoother finish than rough milling, for example — which is why achieving a specified surface finish sometimes drives the choice of manufacturing process itself, or requires an additional finishing operation after the primary shaping process, rather than the finish simply being whatever the initial process happens to leave behind."]}, {"title": "Heat Treatment: Changing a Metal's Properties Without Changing Its Shape", "summary": "The same piece of steel can be made dramatically harder, softer, tougher or more machinable purely by controlling how it's heated and cooled.", "body": ["Heat treatment changes a metal's internal microstructure — and therefore its mechanical properties — through controlled cycles of heating and cooling, without altering the part's shape or dimensions. Quenching (rapid cooling from a high temperature) can dramatically increase steel's hardness and strength but leaves it more brittle, while tempering (reheating a quenched part to a lower temperature) trades back some of that hardness for improved toughness and ductility, striking whatever balance the application actually needs.", "Annealing takes the opposite approach, using slow, controlled cooling to soften a metal and relieve internal stresses, which is useful for improving machinability before final shaping or for restoring ductility to metal that's been work-hardened by cold forming. The specific temperatures, hold times, and cooling rates for each of these processes are material-specific and precisely defined, because heat treatment that deviates from the correct cycle for a given alloy can produce inconsistent, unpredictable properties rather than the intended result."]}]}, {"id": "piping-pressure", "label": "Piping & Pressure Systems", "color": "#2E7D6B", "notes": [{"title": "Pipe Schedule and Why Wall Thickness Isn't Just One Number Per Size", "summary": "The same nominal pipe diameter can come in several different wall thicknesses, each rated for a different pressure capability.", "body": ["Pipe schedule is a standardized designation (Schedule 40, Schedule 80, and others) that specifies a pipe's wall thickness for a given nominal diameter — critically, the nominal diameter alone doesn't fix the wall thickness, since the same nominal size is manufactured in multiple schedules to suit different pressure and service requirements. A higher schedule number means a thicker wall and a higher pressure rating for the same outside diameter, at the cost of more material, more weight, and a smaller internal bore.", "This is why simply knowing a pipe's nominal size isn't enough to know its actual pressure capability or even its exact outside dimensions in some cases — the schedule has to be specified alongside the nominal size, and mixing schedules incorrectly in a system (assuming Schedule 40 fittings will mate properly with Schedule 80 pipe, for instance) is a common and consequential specification error since wall thickness differences change the pipe's outside-to-inside dimensional relationship."]}, {"title": "Thermal Expansion in Piping: Why Straight Runs Need Room to Move", "summary": "A pipe carrying hot fluid genuinely gets longer, and a system that doesn't accommodate that growth will fight itself.", "body": ["Pipe, like any material, expands as it heats up and contracts as it cools, and over a long straight run at process temperature this thermal growth can add up to a meaningful physical length change — a run of steel pipe carrying high-temperature steam can grow by several millimetres per metre of length compared to its cold, installed dimension. If that expansion is rigidly restrained at both ends with nowhere to go, it generates enormous internal stress in the pipe and at its supports and connections, which can lead to buckling, joint failure, or damage to connected equipment like pumps and vessels.", "Piping systems accommodate this expected movement deliberately — through expansion loops, bellows-type expansion joints, or simply routing pipe with enough directional changes that the natural flexibility of bends absorbs the growth — combined with supports designed to let the pipe slide or guide it as it moves rather than rigidly clamping it in place everywhere. Flexibility analysis, checking that a piping layout can actually accommodate its expected thermal growth without overstressing itself or the equipment it connects to, is a standard part of piping design for any system with a meaningful temperature swing between installed and operating conditions."]}, {"title": "Flanges and Gaskets: Making a Joint That Can Be Taken Apart", "summary": "Unlike a welded joint, a flanged connection is deliberately designed to be disassembled — which creates its own sealing challenge.", "body": ["A flanged joint bolts two mating flange faces together with a gasket compressed between them, providing a connection that can be disassembled for maintenance, inspection, or equipment replacement — something a welded joint fundamentally can't offer. The gasket's job is to fill the microscopic irregularities in both flange faces and maintain that seal under the system's operating pressure and temperature, which means gasket material and thickness have to be matched to the specific service — a gasket suitable for a low-pressure water line isn't necessarily suitable for high-temperature steam or aggressive chemical service.", "Achieving a reliable seal also depends heavily on correct, even bolt torque applied in the right sequence (typically a star or crisscross pattern rather than working around the flange sequentially), because uneven bolt loading can cock the flange faces slightly and leave part of the gasket under-compressed even though every bolt individually looks tight. This is exactly why flange bolt-up procedures specify torque values and tightening sequence explicitly rather than leaving it to installer judgment — a flange leak traced back to bolt-up is a common and largely preventable failure mode."]}, {"title": "Pipe Supports: Carrying the Pipe's Weight Without Fighting Its Movement", "summary": "A pipe support has two competing jobs — hold the pipe up, and let it move the way it needs to — and different support types split that job differently.", "body": ["Piping systems need continuous support against their own weight, the weight of the fluid inside them, and the weight of insulation and fittings, but that support has to coexist with the pipe's expected thermal movement rather than rigidly preventing it. A rigid support (a simple fixed hanger or shoe) holds the pipe firmly in one location — appropriate at anchor points where the design specifically wants the pipe restrained, but wrong wherever the pipe needs to move freely as it expands.", "A spring support instead applies a roughly constant supporting force across a range of vertical travel, letting the pipe rise or fall as it thermally grows or contracts without dumping its weight onto adjacent rigid points or lifting off its support entirely. A guide, by contrast, restrains the pipe in one direction (typically sideways) while still allowing free axial sliding movement along the pipe's length — the overall support layout for a piping system is really a deliberate mix of anchors, guides, and free or spring supports, each placed specifically according to how that section of pipe needs to move."]}, {"title": "Pressure Relief Valves: The Last Line of Defense Against Overpressure", "summary": "A pressure relief valve exists purely to open automatically when every other control has already failed to prevent overpressure.", "body": ["A pressure relief valve (PRV or PSV) is a purely mechanical safety device, held closed by a calibrated spring force and set to open automatically once system pressure exceeds a specific setpoint, venting fluid to relieve the overpressure and protect the vessel or piping from rupture. Because it's mechanical rather than relying on any electronic control, instrumentation, or operator action, it continues to function even if the electrical control system, the process control loop, and every other layer of protection have already failed — which is exactly the scenario it's designed for.", "Sizing a relief valve isn't simply about matching the system's normal operating pressure — it has to be sized against the worst-case overpressure scenario the system could realistically experience (a blocked outlet, external fire exposure, control valve failure) and sized to relieve that scenario's full flow rate fast enough to prevent pressure from climbing past what the vessel or pipe can safely withstand. Relief valves are also periodically tested and recertified, because a spring-loaded mechanical device that sits closed for years can stick or drift out of its set pressure calibration without any visible external sign that anything has changed."]}, {"title": "Valve Types: Gate, Globe, Ball, Butterfly and Check", "summary": "Different valve designs are good at different jobs — full on/off shutoff and precise throttling are not the same requirement.", "body": ["A gate valve uses a flat gate that lifts clear of the flow path when fully open, giving very low pressure drop and a nearly unobstructed bore, but it's a poor choice for throttling since a partially open gate creates turbulent flow that erodes the gate and seat over time — gate valves are meant for fully open or fully closed service, not modulating flow. A globe valve, by contrast, forces flow through a more tortuous path around a plug and seat, which gives it good throttling control and a more predictable flow characteristic at partial opening, at the cost of a higher permanent pressure drop even when fully open.", "A ball valve uses a rotating ball with a bore through it, giving fast quarter-turn operation and a very tight shutoff, making it popular for on/off isolation service. A butterfly valve uses a rotating disc within the pipe bore, offering a compact, lightweight, comparatively inexpensive design well suited to larger pipe sizes, though generally with somewhat less precise shutoff than a ball valve. A check valve is different in kind from all of these — it has no external actuation at all, opening automatically to allow forward flow and closing automatically (through a spring, a swinging disc, or flow reversal itself) to prevent backflow, functioning purely as a one-directional flow safeguard."]}, {"title": "Pipe Insulation: Managing Heat Loss, Freeze Risk and Personnel Safety Together", "summary": "Pipe insulation is rarely doing just one job — it's usually solving an energy, a process, and a safety problem all at once.", "body": ["Insulating hot piping reduces heat loss to the surroundings, which matters both for energy efficiency — heat lost from an uninsulated hot pipe is heat (and money) the process paid to add that's now simply escaping — and for maintaining the process fluid at its intended temperature over long pipe runs, since excessive heat loss can drop a fluid below a temperature needed for proper flow or process function. Insulating cold or chilled piping similarly reduces heat gain from the surroundings and helps control condensation on the pipe's outer surface, which left unmanaged can drip, promote corrosion under the insulation, or support mold growth.", "Insulation on hot piping in accessible areas also serves a direct personnel safety function, keeping the outer surface temperature below a threshold that would cause burns on contact — a requirement that's often specified independently of the insulation's thermal performance for energy purposes, since a pipe could be 'adequately' insulated for heat loss reduction while its surface is still hot enough to injure someone who touches it. This is why personnel protection insulation requirements are sometimes specified even on runs where the energy-loss case alone wouldn't otherwise justify insulating at all."]}]}];
+
+  var totalNotes = DATA.reduce(function(sum, cat){ return sum + cat.notes.length; }, 0);
+  document.getElementById('metaNoteCount').textContent = totalNotes;
+  document.getElementById('metaCatCount').textContent = DATA.length;
+
+  function wordCount(paras){
+    return paras.join(' ').trim().split(/\s+/).length;
+  }
+  function readTime(paras){
+    var words = wordCount(paras);
+    var mins = Math.max(1, Math.round(words / 200));
+    return mins + ' min read';
+  }
+
+  var activeCategory = 'all';
+  var searchTerm = '';
+
+  // ---- build cog row ----
+  var cogRow = document.getElementById('cogRow');
+  function makeCog(id, label, count, isAll){
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cog-btn' + (isAll ? ' is-all' : '');
+    btn.setAttribute('aria-pressed', String(id === activeCategory));
+    btn.dataset.cat = id;
+
+    var drop = document.createElement('div'); drop.className = 'drop';
+    var cog = document.createElement('div'); cog.className = 'cog';
+    var hub = document.createElement('div'); hub.className = 'hub';
+    cog.appendChild(hub);
+    var name = document.createElement('div'); name.className = 'cog-name'; name.textContent = label;
+    var cnt = document.createElement('div'); cnt.className = 'cog-count'; cnt.textContent = count + (count===1?' note':' notes');
+
+    btn.appendChild(drop); btn.appendChild(cog); btn.appendChild(name); btn.appendChild(cnt);
+    btn.addEventListener('click', function(){
+      activeCategory = id;
+      render();
+    });
+    return btn;
+  }
+  function renderCogs(){
+    cogRow.innerHTML = '';
+    cogRow.appendChild(makeCog('all', 'All Subjects', totalNotes, true));
+    DATA.forEach(function(cat){
+      cogRow.appendChild(makeCog(cat.id, cat.label, cat.notes.length, false));
+    });
+  }
+
+  // ---- build note card ----
+  function makeCard(cat, note){
+    var card = document.createElement('div');
+    card.className = 'note-card';
+    card.style.borderLeftColor = cat.color;
+
+    var head = document.createElement('button');
+    head.type = 'button';
+    head.className = 'note-head';
+    head.setAttribute('aria-expanded', 'false');
+
+    var top = document.createElement('div'); top.className = 'note-toprow';
+    var tag = document.createElement('span'); tag.className = 'note-tag'; tag.textContent = cat.label; tag.style.color = cat.color;
+    var time = document.createElement('span'); time.className = 'note-time'; time.textContent = readTime(note.body);
+    top.appendChild(tag); top.appendChild(time);
+
+    var title = document.createElement('h3'); title.className = 'note-title'; title.textContent = note.title;
+    var summary = document.createElement('p'); summary.className = 'note-summary'; summary.textContent = note.summary;
+
+    var hint = document.createElement('div'); hint.className = 'note-toggle-hint';
+    hint.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+    var hintText = document.createTextNode('Read note');
+    hint.appendChild(hintText);
+
+    head.appendChild(top); head.appendChild(title); head.appendChild(summary); head.appendChild(hint);
+
+    var body = document.createElement('div'); body.className = 'note-body';
+    var bodyInner = document.createElement('div'); bodyInner.className = 'note-body-inner';
+    note.body.forEach(function(paraText){
+      var p = document.createElement('p');
+      p.textContent = paraText;
+      bodyInner.appendChild(p);
+    });
+    body.appendChild(bodyInner);
+
+    head.addEventListener('click', function(){
+      var isOpen = card.classList.toggle('open');
+      head.setAttribute('aria-expanded', String(isOpen));
+      hint.replaceChild(document.createTextNode(isOpen ? 'Collapse' : 'Read note'), hint.lastChild);
+    });
+
+    card.appendChild(head);
+    card.appendChild(body);
+    return card;
+  }
+
+  function matchesSearch(note){
+    if(!searchTerm) return true;
+    var haystack = (note.title + ' ' + note.summary + ' ' + note.body.join(' ')).toLowerCase();
+    return haystack.indexOf(searchTerm) !== -1;
+  }
+
+  function render(){
+    // update cog pressed states
+    Array.prototype.forEach.call(cogRow.children, function(btn){
+      btn.setAttribute('aria-pressed', String(btn.dataset.cat === activeCategory));
+    });
+
+    var sectionsEl = document.getElementById('noteSections');
+    sectionsEl.innerHTML = '';
+    var shown = 0;
+
+    var catsToShow = DATA.filter(function(cat){ return activeCategory === 'all' || activeCategory === cat.id; });
+
+    catsToShow.forEach(function(cat){
+      var visibleNotes = cat.notes.filter(matchesSearch);
+      if(visibleNotes.length === 0) return;
+      shown += visibleNotes.length;
+
+      var section = document.createElement('section');
+      section.className = 'catsection';
+
+      var head = document.createElement('div'); head.className = 'catsection-head';
+      var dot = document.createElement('span'); dot.className = 'catdot'; dot.style.background = cat.color;
+      var h2 = document.createElement('h2'); h2.textContent = cat.label;
+      var count = document.createElement('span'); count.className = 'catcount'; count.textContent = visibleNotes.length + (visibleNotes.length===1?' note':' notes');
+      head.appendChild(dot); head.appendChild(h2); head.appendChild(count);
+
+      var grid = document.createElement('div'); grid.className = 'grid';
+      visibleNotes.forEach(function(note){ grid.appendChild(makeCard(cat, note)); });
+
+      section.appendChild(head);
+      section.appendChild(grid);
+      sectionsEl.appendChild(section);
+    });
+
+    if(shown === 0){
+      var empty = document.createElement('div');
+      empty.className = 'empty-state';
+      empty.textContent = 'No notes match that search. Try a different term, or reset filters below.';
+      sectionsEl.appendChild(empty);
+    }
+
+    document.getElementById('resultsCount').textContent = 'Showing ' + shown + ' of ' + totalNotes + ' notes';
+  }
+
+  document.getElementById('searchInput').addEventListener('input', function(e){
+    searchTerm = e.target.value.trim().toLowerCase();
+    render();
+  });
+  document.getElementById('clearFilters').addEventListener('click', function(){
+    activeCategory = 'all';
+    searchTerm = '';
+    document.getElementById('searchInput').value = '';
+    render();
+  });
+
+  renderCogs();
+  render();
+})();
+</script>
+
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
