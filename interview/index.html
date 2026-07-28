@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Interview Questions — Engineering Studies Toolkit</title>
+<meta name="description" content="Engineering Interview Questions — part of a free multi-discipline engineering toolkit (Electrical, Mechanical, HVAC, Civil, Automation, PM, General Tools). Interview prep by discipline, plus general/behavioral questions, with model-answer talking points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/interview/">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Engineering Interview Questions — Engineering Studies Toolkit">
+<meta property="og:description" content="Interview prep by discipline, plus general/behavioral questions, with model-answer talking points — free, no sign-up.">
+<meta property="og:url" content="https://www.engineerzcorner.com/interview/">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Engineering Interview Questions — Engineering Studies Toolkit">
+<meta name="twitter:description" content="Interview prep by discipline, plus general/behavioral questions, with model-answer talking points — free, no sign-up.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+    animation:pgFloat 8s ease-in-out infinite;
+  }
+  @keyframes pgFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(10px);}}
+  @media (prefers-reduced-motion: reduce){.pagehero::before{animation:none;}}
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);}
+  .home-intro{border-left-color:var(--blue) !important;}
+  .tool-card{background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;position:relative;overflow:hidden;}
+  .tool-card::after{
+    content:'';position:absolute;right:-22px;top:-22px;width:70px;height:70px;
+    background:linear-gradient(135deg,rgba(0,153,153,.14),rgba(0,153,153,0));
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);pointer-events:none;
+  }
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interview",
+      "item": "https://www.engineerzcorner.com/interview/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Engineering Interview Questions",
+      "item": "https://www.engineerzcorner.com/interview/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Engineering Interview Questions",
+  "description": "Engineering Interview Questions \u2014 part of a free multi-discipline engineering toolkit (Electrical, Mechanical, HVAC, Civil, Automation, PM, General Tools). Interview prep by discipline, plus general/behavioral questions, with model-answer talking points.",
+  "url": "https://www.engineerzcorner.com/interview/"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Interview Prep</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../pm/index.html">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="index.html" class="current">Interview Prep</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-interview">
+
+  <div class="pagehero">
+    <h1>Engineering Interview Questions</h1>
+  </div>
+  <div class="home-intro">Eight sets of interview questions — one per engineering discipline, plus a general/behavioral set that applies no matter what you're interviewing for. Each question comes with a full model answer, so you can read it, then practice saying it in your own words. Pick a discipline below.</div>
+
+  <div class="tool-grid">
+    <a class="tool-card reveal" href="electrical.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 5 8 18h6l-2 9 11-14h-7z"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.01</div>
+          <div class="tool-card-title">Electrical Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Fundamentals, power systems &amp; protection, and site-practical troubleshooting questions.</div>
+    </a>
+    <a class="tool-card reveal" href="mechanical.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.02</div>
+          <div class="tool-card-title">Mechanical Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Thermodynamics &amp; fluids, machine design, and site-practical troubleshooting questions.</div>
+    </a>
+    <a class="tool-card reveal" href="hvac.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.03</div>
+          <div class="tool-card-title">HVAC Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Load calcs &amp; psychrometrics, systems &amp; equipment, and commissioning-style questions.</div>
+    </a>
+    <a class="tool-card reveal" href="civil.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.04</div>
+          <div class="tool-card-title">Civil Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Structural fundamentals, materials &amp; construction, and site-practical questions.</div>
+    </a>
+    <a class="tool-card reveal" href="automation.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path><path d="M4 9H2M4 15H2M22 9h-2M22 15h-2M9 4V2M15 4V2M9 22v-2M15 22v-2"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.05</div>
+          <div class="tool-card-title">Automation &amp; Instrumentation Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Instrumentation fundamentals, control systems &amp; PLC, and loop-troubleshooting questions.</div>
+    </a>
+    <a class="tool-card reveal" href="solar.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.06</div>
+          <div class="tool-card-title">Solar Engineering Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">PV fundamentals, system design &amp; sizing, and site-practical questions.</div>
+    </a>
+    <a class="tool-card reveal" href="pm.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.07</div>
+          <div class="tool-card-title">Project Management Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">PM fundamentals, planning &amp; controls, and site-practical questions.</div>
+    </a>
+    <a class="tool-card reveal" href="general.html">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M6 21v-2a6 6 0 0 1 12 0v2"></path></svg></div>
+        <div>
+          <div class="tool-card-num">INT.08</div>
+          <div class="tool-card-title">General &amp; Behavioral Interview Questions</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">STAR-style behavioral, project/teamwork, career/motivation, and leadership questions for any discipline.</div>
+    </a>
+  </div>
+  <footer>Eight question sets — use the cards above or the tabs on any page to jump between them. Model answers are talking points, not scripts; practice putting them in your own words. <a href="../index.html">← All Disciplines</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<div class="nl-box" style="display:block;text-align:left;background-color:#F7F8FC;border:1px solid #E1E3F0;border-left:3px solid #0D9488;border-radius:0 8px 8px 0;padding:18px;margin:22px 16px 0;">
+  <style>
+    .nl-box .sib-form{text-align:left;}
+    .nl-box #sib-container{max-width:420px;background:transparent;border:none;padding:0;}
+    .nl-box .sib-form-block{padding:4px 0 !important;}
+    .nl-box .sib-form-block p{margin:0;}
+    .nl-box input.input{font-family:inherit;font-size:12.5px;padding:8px 10px;border:1px solid #E1E3F0;border-radius:6px;width:100%;box-sizing:border-box;color:#181B29;background:#fff;}
+    .nl-box .sib-form-block__button{font-family:"JetBrains Mono","SF Mono",monospace !important;font-size:12px !important;font-weight:700 !important;padding:8px 16px !important;border-radius:6px !important;background:#0D9488 !important;color:#fff !important;cursor:pointer;margin-top:8px;}
+    .nl-box .entry__specification{display:none;}
+    .nl-box .entry__label{font-family:"Manrope","Arial",sans-serif !important;font-size:13.5px !important;font-weight:700 !important;color:#181B29 !important;}
+    .nl-box .sib-form-message-panel{max-width:100% !important;font-size:11.5px !important;margin-bottom:8px;}
+  </style>
+  <div style="font-family:'Manrope','Arial',sans-serif;font-size:13.5px;font-weight:700;color:#181B29;margin-bottom:2px;">Get notified about new content</div>
+  <div style="font-size:11.5px;color:#8D91AA;margin-bottom:10px;">New calculators, guides, notes &amp; tools — one short email when something ships. No spam, unsubscribe anytime.</div>
+
+  <div class="sib-form" style="text-align:center;">
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+        </div>
+      </div>
+      <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+        </div>
+      </div>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:420px;">
+        <form id="sib-form" method="POST" action="https://5f707dc5.sibforms.com/serve/MUIFAEozin-ZuSQjrJ6Lkt2qH35ZlJXqC-xbUMRbp7XgW2G7EFhuUYuLr22lq9tGRUV0d_7_xm7KyF5QzbKTYWWSZ4dCKbkdHlLUk6gYopHCz9aevP1UymURugquoAQgDDf4DHBOW12LR2DBY2GDPYfF7PUa1miGFfS1-336gBRI26BbyNQr39YglWNTX_wM946cs4z4ga9HIBAO5A==" data-type="subscription">
+          <div style="padding:4px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <div class="entry__field">
+                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="you@email.com" data-required="true" required />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:13px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;"></label>
+              </div>
+            </div>
+          </div>
+          <div style="padding:4px 0;text-align:left;">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:14px;height:14px;display:none;">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              SUBSCRIBE
+            </button>
+          </div>
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+          <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

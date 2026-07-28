@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General & Behavioral Engineering Interview Questions — Engineering Studies Toolkit</title>
+<meta name="description" content="General &amp; Behavioral Interview Questions for Engineers — part of a free multi-discipline engineering toolkit. STAR-style behavioral, project/teamwork, career/motivation, and leadership/ownership interview questions with talking points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/interview/general">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="General & Behavioral Engineering Interview Questions — Engineering Studies Toolkit">
+<meta property="og:description" content="General &amp; Behavioral Interview Questions for Engineers — part of a free multi-discipline engineering toolkit. STAR-style behavioral, project/teamwork, career/motivation, and leadership/ownership interview questions with talking points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/interview/general">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="General & Behavioral Engineering Interview Questions — Engineering Studies Toolkit">
+<meta name="twitter:description" content="General &amp; Behavioral Interview Questions for Engineers — part of a free multi-discipline engineering toolkit. STAR-style behavioral, project/teamwork, career/motivation, and leadership/ownership interview questions with talking points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;margin:0;}
+  .pagehero .hero-sub{color:#D8F5F5 !important;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);position:relative;z-index:2;}
+  .intro{border-left-color:var(--blue) !important;}
+  .reftable-wrap{overflow-x:auto;}
+  .reftable-wrap table.reftable{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
+  table.reftable th, table.reftable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-wrap:break-word;}
+  table.reftable th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);background:var(--sheet-2);}
+  table.reftable th:first-child, table.reftable td:first-child{width:34%;font-weight:600;color:var(--ink);}
+  table.reftable th:last-child, table.reftable td:last-child{width:66%;}
+  @media (max-width:640px){
+    table.reftable, table.reftable thead, table.reftable tbody, table.reftable tr{display:block;}
+    table.reftable thead{display:none;}
+    table.reftable tr{border-bottom:1px solid var(--line);padding:10px 0;}
+    table.reftable td{display:block;width:100% !important;padding:4px 2px;border-bottom:none;}
+    table.reftable td:first-child{padding-top:8px;}
+    table.reftable td:last-child{padding-bottom:8px;color:var(--ink-dim);}
+  }
+  .reftable-jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .reftable-jump a{
+    font-family:var(--font-mono);font-size:11px;padding:6px 10px;border:1px solid var(--line);
+    border-radius:6px;color:var(--ink-dim);text-decoration:none;
+  }
+  .reftable-jump a:hover{border-color:var(--blue);color:var(--blue);}
+  .reftable-section{margin:22px 0;}
+  .reftable-section h2{font-size:16px;margin:0 0 4px;}
+  .reftable-note{font-size:12.5px;color:var(--ink-faint);margin:0 0 8px;}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0;}
+  .tool-card{background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;position:relative;overflow:hidden;}
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interview",
+      "item": "https://www.engineerzcorner.com/interview/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "General & Behavioral Engineering Interview Questions",
+      "item": "https://www.engineerzcorner.com/interview/general"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "General & Behavioral Engineering Interview Questions",
+  "description": "General &amp; Behavioral Interview Questions for Engineers \u2014 part of a free multi-discipline engineering toolkit. STAR-style behavioral, project/teamwork, career/motivation, and leadership/ownership interview questions with talking points.",
+  "url": "https://www.engineerzcorner.com/interview/general"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Interview Prep</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">General &amp; Behavioral — Interview Questions</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../pm/index.html">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="index.html">Interview Prep</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-interview-general">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M6 21v-2a6 6 0 0 1 12 0v2"></path></svg></div>
+    <div><h1>General &amp; Behavioral — Interview Questions</h1><div class="hero-sub">Discipline-agnostic questions every engineering interview loop tends to include</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Interview Index</a>
+    <a href="electrical.html">Electrical</a>
+    <a href="mechanical.html">Mechanical</a>
+    <a href="hvac.html">HVAC</a>
+    <a href="civil.html">Civil</a>
+    <a href="automation.html">Automation</a>
+    <a href="solar.html">Solar</a>
+    <a href="pm.html">Project Management</a>
+    <a href="general.html" class="current">General / Behavioral</a>
+  </div>
+
+  <div class="intro">The behavioral and fit questions that come up in almost every engineering interview, regardless of discipline — grouped by type, with a full model answer for each.</div>
+
+  <div class="reftable-jump">
+    <a href="#general-behavioral">Behavioral (STAR-Style)</a>
+    <a href="#general-project">Project & Teamwork</a>
+    <a href="#general-career">Career & Motivation</a>
+    <a href="#general-leadership">Leadership & Ownership</a>
+  </div>
+
+  <div class="reftable-section" id="general-behavioral">
+    <h2>Behavioral (STAR-Style)</h2>
+    <div class="reftable-note">The kind of question every interview loop includes, regardless of discipline.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Tell me about a time you made a mistake at work. How did you handle it?</td><td>A strong answer names the mistake plainly, explains what you did immediately to limit the impact, what you changed afterward to stop it recurring, and avoids blaming others for it.</td></tr>
+      <tr><td>Describe a time you disagreed with a supervisor or senior colleague.</td><td>Focus on how you raised the disagreement respectfully with reasoning/evidence, how it was resolved, and what you learned — showing you can push back constructively without being combative or simply deferring.</td></tr>
+      <tr><td>Tell me about a time you had to meet a tight deadline.</td><td>Explain how you prioritized the work, what trade-offs or extra effort you made, and the outcome — being honest about anything that slipped and how you managed that.</td></tr>
+      <tr><td>Describe a situation where you had to learn something new quickly.</td><td>Show the specific method you used to get up to speed (not just "I worked hard") — who you asked, what you read, how you tested your understanding — and how it was applied successfully.</td></tr>
+      <tr><td>Tell me about a time you had to give difficult feedback to a colleague or contractor.</td><td>Focus on how you kept it specific and job-related, delivered it privately and calmly, and what changed afterward — this shows maturity in working relationships, not just technical skill.</td></tr>
+      <tr><td>Describe a time you failed to meet a goal or deadline.</td><td>Be honest about what went wrong, take ownership of your part in it, and be specific about what you changed afterward — interviewers are often more interested in the recovery than the failure itself.</td></tr>
+      <tr><td>Tell me about a time you had to persuade someone who disagreed with your approach.</td><td>Focus on how you understood their concern first, backed your position with data or a concrete example rather than just asserting it, and describe the actual outcome, including if you ended up adjusting your view too.</td></tr>
+      <tr><td>Describe a time you had to work with incomplete information.</td><td>Show how you identified what you actually needed to know, made reasonable assumptions where you had to (and stated them), and adjusted the plan as better information came in, rather than freezing or guessing blindly.</td></tr>
+      <tr><td>Tell me about a time you went above and beyond what was expected of you.</td><td>Pick a specific, modest example you can describe in concrete detail rather than a vague claim — interviewers are checking for genuine initiative, not just a rehearsed "I always go the extra mile" line.</td></tr>
+      <tr><td>Describe a time you had to adapt to a significant change at work.</td><td>Explain the change, your initial reaction honestly, and the specific actions you took to adjust — this shows resilience and flexibility rather than just resistance or passive acceptance.</td></tr>
+      <tr><td>Tell me about a time you received critical feedback. How did you respond?</td><td>Show that you listened without getting defensive, asked clarifying questions if needed, and made a concrete change afterward — avoid an answer that quietly implies the feedback was wrong.</td></tr>
+      <tr><td>Describe a time you had to make a decision without your manager's input.</td><td>Explain the situation, how you weighed the options against what you knew of your manager's priorities/risk tolerance, the decision you made, and how you followed up afterward to keep them informed.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="general-project">
+    <h2>Project & Teamwork</h2>
+    <div class="reftable-note">Questions probing how you actually work with others and get things done.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>How do you handle working with a team member who isn't pulling their weight?</td><td>Talk to them directly and privately first to understand the cause, offer help if it's a skills/workload issue, and escalate to a supervisor only if it continues to affect the team after that conversation.</td></tr>
+      <tr><td>Describe your approach to managing multiple priorities at once.</td><td>Explain a concrete method (e.g., ranking by deadline and impact, blocking focus time, checking in with stakeholders on priority when it's unclear) rather than a vague "I'm good at multitasking."</td></tr>
+      <tr><td>How do you communicate technical information to non-technical stakeholders?</td><td>Emphasize adjusting the level of detail to the audience, leading with the decision/impact rather than the method, and using visuals or analogies where useful — with an example if you have one.</td></tr>
+      <tr><td>Tell me about a project you're proud of and your specific role in it.</td><td>Be precise about what you personally did versus the team, quantify the outcome where possible, and be ready for follow-up questions that probe the details — vague answers here are an easy tell.</td></tr>
+      <tr><td>How do you stay organized when a project scope keeps changing?</td><td>Describe how you track changes formally (change log, revised drawings/spec, updated schedule) rather than working from memory or verbal instructions, so nothing gets lost or assumed.</td></tr>
+      <tr><td>What would you do if you noticed a safety issue that wasn't your direct responsibility?</td><td>The expected answer is always to raise it immediately regardless of whose task it is — interviewers are checking that safety ownership isn't something you'll defer to "someone else's job."</td></tr>
+      <tr><td>How do you approach onboarding onto a new team or project quickly?</td><td>Describe a concrete method — reading available documentation first, asking targeted questions rather than open-ended ones, and shadowing or pairing with someone before working independently — to show you have a real system, not just good intentions.</td></tr>
+      <tr><td>Tell me about a time you had to coordinate across multiple teams or departments.</td><td>Focus on how you kept communication clear and consistent across groups with different priorities, how conflicts or misalignment were resolved, and what the outcome was — cross-team coordination questions are checking for communication skill as much as technical ability.</td></tr>
+      <tr><td>How do you handle a situation where a client or stakeholder keeps changing requirements?</td><td>Explain how you'd document each change formally, clarify the impact on cost/schedule before agreeing to it, and push back respectfully when a change threatens to derail the project rather than just absorbing every request silently.</td></tr>
+      <tr><td>Describe how you'd delegate a task you don't have time to do yourself.</td><td>Show that you'd match the task to the right person's skill level, give clear context and expectations rather than just handing it off, and check in appropriately without micromanaging.</td></tr>
+      <tr><td>How do you make sure important information doesn't get lost between shifts or handovers?</td><td>Describe a concrete habit — structured handover notes, a shared log, or a standard checklist — rather than relying on memory or a quick verbal summary, especially for anything safety- or schedule-critical.</td></tr>
+      <tr><td>Tell me about a time a project didn't go as planned. What would you do differently next time?</td><td>Be specific about the actual gap between plan and reality, take ownership of your part without over-blaming external factors, and give a genuine, specific lesson rather than a generic "communicate better" answer.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="general-career">
+    <h2>Career & Motivation</h2>
+    <div class="reftable-note">Fit and motivation questions — short, but easy to answer poorly if you haven't prepared them.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Why do you want to work in this discipline/industry?</td><td>Give a genuine, specific reason (a project, a professor, hands-on experience) rather than a generic "I like solving problems" — specificity is what makes this answer memorable.</td></tr>
+      <tr><td>Why do you want to work for this company specifically?</td><td>Show you've actually looked into what they do — a project, a market, a value — and connect it to something real about your background or interests, not just "you're a good company."</td></tr>
+      <tr><td>Where do you see yourself in five years?</td><td>Aim for an answer that's ambitious but plausible and shows you've thought about growth within (or adjacent to) the kind of role you're applying for, without sounding like you'll leave in a year or stay static forever.</td></tr>
+      <tr><td>What's your biggest weakness?</td><td>Pick something real and specific, briefly explain the impact it's had, and focus most of the answer on the concrete steps you're taking to manage or improve it.</td></tr>
+      <tr><td>Why should we hire you over other candidates?</td><td>Tie two or three of your strongest, most relevant experiences directly to what the role needs — this only lands well if you've actually read the job description closely beforehand.</td></tr>
+      <tr><td>Do you have any questions for us?</td><td>Always have at least two or three ready — about the team's current challenges, how success is measured in the role, or what a typical first few months look like; asking nothing reads as low interest.</td></tr>
+      <tr><td>What's your greatest strength?</td><td>Pick a strength that's genuinely relevant to the role, back it with a specific example rather than just stating it, and keep it concise — this is a chance to reinforce your fit, not just list a trait.</td></tr>
+      <tr><td>Why are you leaving your current job (or why did you leave your last one)?</td><td>Keep it factual and forward-looking (seeking growth, a new challenge, a better fit) rather than negative about a previous employer or manager, even if that's part of the real reason.</td></tr>
+      <tr><td>How do you handle stress or pressure on the job?</td><td>Give a concrete, practical method (prioritizing tasks, breaking a problem down, communicating early when something's at risk) rather than a vague "I stay calm" — a specific example makes this answer land.</td></tr>
+      <tr><td>What are you looking for in your next role?</td><td>Be specific about the kind of work, growth, or environment you want, and connect it genuinely to what this particular role offers — a generic answer here suggests you'd take any offer, which weakens your candidacy.</td></tr>
+      <tr><td>How do you keep your technical skills up to date?</td><td>Mention concrete habits — courses, certifications, reading standards/codes, hands-on side projects — rather than a vague claim of "staying current," since this is easy to make specific and easy to spot when it isn't.</td></tr>
+      <tr><td>What's a professional accomplishment you're most proud of, and why?</td><td>Choose something with a clear, quantifiable or otherwise verifiable outcome, explain your specific contribution to it, and be ready to go into detail if asked — this question is often used to test how well you know your own work.</td></tr>
+    </table></div>
+  </div>
+
+  <div class="reftable-section" id="general-leadership">
+    <h2>Leadership &amp; Ownership</h2>
+    <div class="reftable-note">Questions probing whether you take initiative and ownership, even without a formal leadership title.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Tell me about a time you led a project or task without having formal authority over the people involved.</td><td>Focus on how you built buy-in through clear communication and credibility rather than authority — sharing context, listening to concerns, and following through reliably — and give the concrete outcome.</td></tr>
+      <tr><td>Describe a situation where you had to take ownership of a problem that wasn't technically your responsibility.</td><td>Show that you noticed the gap, decided to act rather than wait for someone else to, and followed it through to resolution — interviewers are checking for initiative, not just competence.</td></tr>
+      <tr><td>How do you motivate a team or colleague who's lost momentum on a project?</td><td>Talk about identifying the actual cause (unclear priorities, burnout, an unresolved blocker) before trying to "motivate" with generic encouragement, and give a specific example of reconnecting the work to a clear, achievable next step.</td></tr>
+      <tr><td>Tell me about a decision you made that you'd make differently today.</td><td>Pick something real, explain the reasoning you had at the time, what information or judgment you'd apply differently now, and avoid either over-blaming yourself or dismissing it as no big deal.</td></tr>
+      <tr><td>Describe a time you had to hold someone accountable for a missed commitment.</td><td>Show that you addressed it directly and specifically rather than letting it slide or complaining about it elsewhere, focused on the impact rather than the person, and agreed on a clear path forward.</td></tr>
+      <tr><td>How do you approach mentoring someone more junior than you?</td><td>Emphasize adjusting your approach to how they learn best, giving them room to work through problems rather than just handing over answers, and checking in regularly rather than assuming things are fine.</td></tr>
+      <tr><td>Tell me about a time you had to make an unpopular decision.</td><td>Explain the reasoning behind the decision, how you communicated it (with transparency about trade-offs rather than just an announcement), and how you handled the pushback that followed.</td></tr>
+      <tr><td>How do you decide when to escalate a problem versus handling it yourself?</td><td>Give a concrete rule of thumb you actually use — e.g., safety or cost/schedule impact beyond your authority, or something you've already tried and hit a wall on — rather than a vague "it depends."</td></tr>
+      <tr><td>Describe a time you had to build trust with a new team or client quickly.</td><td>Focus on concrete actions — being transparent about what you did and didn't know, following through on small commitments early, and listening before offering opinions — rather than a vague claim of "being a people person."</td></tr>
+      <tr><td>Tell me about a time you took a calculated risk in your work.</td><td>Walk through how you assessed the risk versus the potential benefit, what you did to mitigate the downside, and the actual outcome — showing judgment rather than recklessness or excessive caution.</td></tr>
+    </table></div>
+  </div>
+
+  <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

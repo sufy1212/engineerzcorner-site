@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automation & Instrumentation Interview Questions — Engineering Studies Toolkit</title>
+<meta name="description" content="Automation &amp; Instrumentation Interview Questions — part of a free multi-discipline engineering toolkit. Instrumentation fundamentals, control systems/PLC, and site-practical interview questions with model-answer talking points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/interview/automation">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Automation & Instrumentation Interview Questions — Engineering Studies Toolkit">
+<meta property="og:description" content="Automation &amp; Instrumentation Interview Questions — part of a free multi-discipline engineering toolkit. Instrumentation fundamentals, control systems/PLC, and site-practical interview questions with model-answer talking points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/interview/automation">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automation & Instrumentation Interview Questions — Engineering Studies Toolkit">
+<meta name="twitter:description" content="Automation &amp; Instrumentation Interview Questions — part of a free multi-discipline engineering toolkit. Instrumentation fundamentals, control systems/PLC, and site-practical interview questions with model-answer talking points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;margin:0;}
+  .pagehero .hero-sub{color:#D8F5F5 !important;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);position:relative;z-index:2;}
+  .intro{border-left-color:var(--blue) !important;}
+  .reftable-wrap{overflow-x:auto;}
+  .reftable-wrap table.reftable{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
+  table.reftable th, table.reftable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-wrap:break-word;}
+  table.reftable th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);background:var(--sheet-2);}
+  table.reftable th:first-child, table.reftable td:first-child{width:34%;font-weight:600;color:var(--ink);}
+  table.reftable th:last-child, table.reftable td:last-child{width:66%;}
+  @media (max-width:640px){
+    table.reftable, table.reftable thead, table.reftable tbody, table.reftable tr{display:block;}
+    table.reftable thead{display:none;}
+    table.reftable tr{border-bottom:1px solid var(--line);padding:10px 0;}
+    table.reftable td{display:block;width:100% !important;padding:4px 2px;border-bottom:none;}
+    table.reftable td:first-child{padding-top:8px;}
+    table.reftable td:last-child{padding-bottom:8px;color:var(--ink-dim);}
+  }
+  .reftable-jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .reftable-jump a{
+    font-family:var(--font-mono);font-size:11px;padding:6px 10px;border:1px solid var(--line);
+    border-radius:6px;color:var(--ink-dim);text-decoration:none;
+  }
+  .reftable-jump a:hover{border-color:var(--blue);color:var(--blue);}
+  .reftable-section{margin:22px 0;}
+  .reftable-section h2{font-size:16px;margin:0 0 4px;}
+  .reftable-note{font-size:12.5px;color:var(--ink-faint);margin:0 0 8px;}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0;}
+  .tool-card{background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;position:relative;overflow:hidden;}
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interview",
+      "item": "https://www.engineerzcorner.com/interview/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Automation & Instrumentation Interview Questions",
+      "item": "https://www.engineerzcorner.com/interview/automation"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Automation & Instrumentation Interview Questions",
+  "description": "Automation &amp; Instrumentation Interview Questions \u2014 part of a free multi-discipline engineering toolkit. Instrumentation fundamentals, control systems/PLC, and site-practical interview questions with model-answer talking points.",
+  "url": "https://www.engineerzcorner.com/interview/automation"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Interview Prep</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Automation &amp; Instrumentation — Interview Questions</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../pm/index.html">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="index.html">Interview Prep</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-interview-automation">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path><path d="M4 9H2M4 15H2M22 9h-2M22 15h-2M9 4V2M15 4V2M9 22v-2M15 22v-2"></path></svg></div>
+    <div><h1>Automation &amp; Instrumentation — Interview Questions</h1><div class="hero-sub">Instrumentation fundamentals, control systems &amp; PLC, and site-practical questions</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Interview Index</a>
+    <a href="electrical.html">Electrical</a>
+    <a href="mechanical.html">Mechanical</a>
+    <a href="hvac.html">HVAC</a>
+    <a href="civil.html">Civil</a>
+    <a href="automation.html" class="current">Automation</a>
+    <a href="solar.html">Solar</a>
+    <a href="pm.html">Project Management</a>
+    <a href="general.html">General / Behavioral</a>
+  </div>
+
+  <div class="intro">Common automation and instrumentation interview questions grouped by topic, with a full model answer for each. Read them, then practice saying the answer in your own words.</div>
+
+  <div class="reftable-jump">
+    <a href="#automation-instr">Instrumentation Fundamentals</a>
+    <a href="#automation-control">Control Systems & PLC</a>
+    <a href="#automation-site">Site & Practical Scenarios</a>
+  </div>
+
+  <div class="reftable-section" id="automation-instr">
+    <h2>Instrumentation Fundamentals</h2>
+    <div class="reftable-note">The measurement and signal basics that come up constantly.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>What's the difference between accuracy and repeatability in an instrument?</td><td>Accuracy is how close a reading is to the true value; repeatability is how consistent readings are for the same input under the same conditions — an instrument can be repeatable but not accurate if it's consistently offset (needs calibration).</td></tr>
+      <tr><td>Explain the difference between 4-20mA and 0-10V signals.</td><td>4-20mA is a current loop signal, largely immune to voltage drop/noise over long cable runs and self-diagnosing (0mA clearly means a fault, not zero reading); 0-10V is simpler but more susceptible to noise and voltage drop over distance.</td></tr>
+      <tr><td>Why does a 4-20mA signal start at 4mA instead of 0mA?</td><td>The live zero lets you distinguish a genuine zero reading (4mA) from a broken wire or power loss (0mA), which is a built-in fault-detection feature.</td></tr>
+      <tr><td>What's the difference between open-loop and closed-loop control?</td><td>Open-loop control applies a fixed action without checking the result (no feedback); closed-loop control measures the actual output and continuously adjusts the input to correct any deviation from setpoint.</td></tr>
+      <tr><td>Explain the difference between a transmitter and a transducer.</td><td>A transducer converts one form of energy/signal to another (e.g., pressure to a small electrical signal); a transmitter takes that signal and conditions/amplifies it into a standardized output (like 4-20mA) suitable for transmission to a controller.</td></tr>
+      <tr><td>What's the purpose of a control valve's fail-safe position (fail-open/fail-closed)?</td><td>On loss of signal or air supply, the valve moves to a predetermined safe position (open or closed, set by the actuator's spring/design) so the process defaults to a safe state rather than an unpredictable one.</td></tr>
+      <tr><td>What's the difference between a two-wire and a four-wire transmitter?</td><td>A two-wire (loop-powered) transmitter uses the same two wires for both power and the 4-20mA signal, drawing its power from the loop itself; a four-wire transmitter has separate wires for power supply and signal output, needed when the device requires more power than the loop can provide.</td></tr>
+      <tr><td>What is turndown ratio and why does it matter for instrument/valve selection?</td><td>It's the ratio between the maximum and minimum flow (or range) an instrument or valve can measure/control accurately; a low turndown ratio means the device may lose accuracy or control quality if the actual process operates well below its maximum design flow.</td></tr>
+      <tr><td>Explain the difference between HART and Fieldbus communication.</td><td>HART overlays a digital signal on the standard 4-20mA analog signal, so it's backward compatible with legacy analog systems while adding diagnostics; Fieldbus (e.g., Foundation Fieldbus, Profibus) is a fully digital, multi-drop communication protocol carrying more data per device and typically requiring dedicated infrastructure.</td></tr>
+      <tr><td>What's the difference between a relative and an absolute pressure measurement?</td><td>Gauge (relative) pressure is measured relative to atmospheric pressure (zero at atmosphere); absolute pressure is measured relative to a perfect vacuum (zero at true vacuum) — absolute = gauge + atmospheric pressure.</td></tr>
+      <tr><td>What is a smart positioner and what advantage does it give over a simple pneumatic positioner?</td><td>A smart (digital) positioner uses a microprocessor to precisely control valve position, offers diagnostics (stiction, travel deviation, response time), and can be configured/calibrated remotely — giving better control accuracy and predictive maintenance insight versus a purely mechanical pneumatic positioner.</td></tr>
+      <tr><td>What's the difference between intrinsically safe and explosion-proof equipment ratings?</td><td>Intrinsically safe design limits the energy in the circuit itself so it can never generate a spark/heat capable of igniting a hazardous atmosphere; explosion-proof (flameproof) design instead allows an internal ignition but contains it within a rugged enclosure so it can't ignite the surrounding atmosphere — different philosophies for the same hazard.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="automation-control">
+    <h2>Control Systems & PLC</h2>
+    <div class="reftable-note">PID, PLC logic and the practical control-engineering questions.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Explain the three terms in PID control.</td><td>Proportional acts on the current error, Integral eliminates steady-state error by accumulating past error over time, and Derivative reacts to the rate of change of error to dampen overshoot — tuned together to balance speed and stability.</td></tr>
+      <tr><td>What happens if you increase the integral gain too much?</td><td>The controller responds more aggressively to accumulated error, which speeds up steady-state error correction but increases the risk of overshoot and oscillation (integral windup can also become a problem if the actuator saturates).</td></tr>
+      <tr><td>What's the difference between a PLC and a DCS?</td><td>A PLC is typically used for discrete/sequential control of a machine or process cell with fast scan times; a DCS is architected for large, continuous plant-wide control with distributed processing, more built-in redundancy and process-oriented tools — the line has blurred but the design philosophy differs.</td></tr>
+      <tr><td>What is a SCADA system used for?</td><td>Supervisory Control and Data Acquisition — it gathers data from field devices/PLCs/RTUs across a site or wide area, presents it to operators (trends, alarms, mimic screens) and allows supervisory-level control commands.</td></tr>
+      <tr><td>Explain ladder logic and why it's still widely used in PLCs.</td><td>A graphical programming language modeled on relay logic (contacts and coils in rungs); it's still common because it maps intuitively to physical relay/switch logic that electricians and technicians already understand, easing troubleshooting.</td></tr>
+      <tr><td>What is signal scaling and why is it needed?</td><td>Converting a raw instrument signal (e.g., 4-20mA) into real engineering units (e.g., 0-100°C) using the known range, so the value displayed/used in logic reflects the actual process variable.</td></tr>
+      <tr><td>What's the difference between a normally open (NO) and normally closed (NC) contact, and why does the choice matter for safety circuits?</td><td>NO closes only when actuated; NC is closed by default and opens when actuated. Safety circuits typically use NC contacts so that a broken wire or lost power is detected as a fault/stop condition (fail-safe) rather than silently failing as if everything were fine.</td></tr>
+      <tr><td>What is the difference between an analog and a discrete (digital) I/O point on a PLC?</td><td>A discrete I/O point represents a simple on/off (binary) state (e.g., a limit switch or a motor start command); an analog I/O point represents a continuously variable value (e.g., 4-20mA from a transmitter or a variable speed command) requiring analog-to-digital or digital-to-analog conversion.</td></tr>
+      <tr><td>What's the purpose of a safety instrumented system (SIS) and how does it relate to the basic process control system (BPCS)?</td><td>The BPCS handles normal, everyday process control; the SIS is a separate, independent layer designed specifically to detect hazardous conditions and take the process to a safe state, providing protection even if the BPCS itself fails or misbehaves.</td></tr>
+      <tr><td>What is cascade control and when would you use it?</td><td>A control structure where the output of one (master/primary) controller sets the setpoint of another (slave/secondary) controller, which responds faster to disturbances closer to the final control element — used when there's a faster inner process variable (e.g., valve position or flow) that can correct disturbances before they significantly affect the slower primary variable (e.g., temperature).</td></tr>
+      <tr><td>What is the difference between feedback and feedforward control?</td><td>Feedback control reacts after an error is measured between setpoint and actual value; feedforward control anticipates a known disturbance and adjusts the output proactively before it affects the process variable — the two are often combined for faster, more stable control.</td></tr>
+      <tr><td>What does 'bumpless transfer' mean in the context of manual/auto control switching?</td><td>It means switching between manual and automatic control modes without causing a sudden jump (bump) in the controller output, which could otherwise upset the process — achieved by tracking the output value continuously in the inactive mode so the transition is seamless.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="automation-site">
+    <h2>Site & Practical Scenarios</h2>
+    <div class="reftable-note">Commissioning, loop-checking and troubleshooting on live systems.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>A control loop is oscillating — how would you approach tuning it?</td><td>Check for an obvious mechanical cause first (valve stiction, sensor noise, sizing issue), then reduce gain until oscillation stops and retune systematically (e.g., Ziegler-Nichols or a similar method) rather than guessing at parameters.</td></tr>
+      <tr><td>How would you perform a loop check on a new instrument?</td><td>Simulate or apply a known input at the field device, verify the correct reading appears at the controller/HMI, confirm the output correctly drives the final control element, and check the failure mode is as specified.</td></tr>
+      <tr><td>A transmitter reads a value that seems too high compared to a local gauge — how do you investigate?</td><td>Check for calibration drift, wiring/loop resistance issues, whether the transmitter and gauge are actually measuring the same point (elevation/process tap differences), and cross-check with a calibrated reference instrument.</td></tr>
+      <tr><td>What's your process for troubleshooting a valve that won't reach its commanded position?</td><td>Check the control signal is actually reaching the positioner, air/hydraulic supply pressure is adequate, the positioner is calibrated to the actuator's stroke, and there's no mechanical obstruction or excessive friction/stiction in the valve itself.</td></tr>
+      <tr><td>How do you approach commissioning a new automation system safely?</td><td>Work through a structured sequence — power-up checks, I/O verification, loop checks, interlock/safety function testing, then functional/sequence testing — with sign-off at each stage before moving to live process operation.</td></tr>
+      <tr><td>What would you check if a PLC output isn't energizing a field device even though the logic shows it's true?</td><td>Check the physical output module/point (forced value, blown fuse, wiring), field wiring continuity, power to the device, and any interposing relay or safety interlock that might be blocking it downstream of the PLC.</td></tr>
+      <tr><td>A level transmitter reads erratically in a turbulent vessel — how would you address it?</td><td>Check whether a stilling well or damping/filtering setting is appropriate for the technology in use, verify mounting location isn't near an inlet/agitator causing turbulence at the sensor, and confirm the damping time constant is tuned to smooth noise without masking real process changes.</td></tr>
+      <tr><td>How would you approach a PLC program that's been modified on-site without updated documentation?</td><td>Compare the running program against the last known-good backup/documentation to identify the actual changes, understand why they were made before deciding whether to keep or revert them, and update documentation immediately once resolved so it doesn't happen again.</td></tr>
+      <tr><td>What's your process for verifying a safety interlock actually works, not just that it's wired?</td><td>Functionally test it by inducing (or simulating) the actual trip condition and confirming the correct safe-state response occurs end-to-end — visually checking wiring or logic alone doesn't prove the interlock performs as intended in the field.</td></tr>
+      <tr><td>How would you diagnose intermittent noise/interference on an analog signal loop?</td><td>Check for improper cable segregation (signal cables run alongside power cables), missing or multiple ground points on shielding (which can create ground loops), and loose terminations — intermittent issues are often connection- or routing-related rather than the instrument itself.</td></tr>
+      <tr><td>What would you do if a process safety valve (PSV) lifts unexpectedly during normal operation?</td><td>Treat it as an abnormal event requiring investigation, not just a reset — check for an upstream control failure, blocked outlet, or process upset that caused overpressure, and don't assume the valve itself is faulty until the process cause is ruled out.</td></tr>
+      <tr><td>How do you approach validating a new automation sequence before it goes live on a running process?</td><td>Test it in a simulated or offline environment first if possible, review the logic against the functional design/cause-and-effect matrix with operations, and plan a controlled first live run with extra monitoring rather than switching over unmonitored.</td></tr>
+    </table></div>
+  </div>
+
+  <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

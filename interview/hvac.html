@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Engineering Interview Questions — Engineering Studies Toolkit</title>
+<meta name="description" content="HVAC Engineering Interview Questions — part of a free multi-discipline engineering toolkit. Load calculations/psychrometrics, systems &amp; equipment, and site-practical interview questions with model-answer talking points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/interview/hvac">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="HVAC Engineering Interview Questions — Engineering Studies Toolkit">
+<meta property="og:description" content="HVAC Engineering Interview Questions — part of a free multi-discipline engineering toolkit. Load calculations/psychrometrics, systems &amp; equipment, and site-practical interview questions with model-answer talking points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/interview/hvac">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HVAC Engineering Interview Questions — Engineering Studies Toolkit">
+<meta name="twitter:description" content="HVAC Engineering Interview Questions — part of a free multi-discipline engineering toolkit. Load calculations/psychrometrics, systems &amp; equipment, and site-practical interview questions with model-answer talking points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;margin:0;}
+  .pagehero .hero-sub{color:#D8F5F5 !important;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);position:relative;z-index:2;}
+  .intro{border-left-color:var(--blue) !important;}
+  .reftable-wrap{overflow-x:auto;}
+  .reftable-wrap table.reftable{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
+  table.reftable th, table.reftable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-wrap:break-word;}
+  table.reftable th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);background:var(--sheet-2);}
+  table.reftable th:first-child, table.reftable td:first-child{width:34%;font-weight:600;color:var(--ink);}
+  table.reftable th:last-child, table.reftable td:last-child{width:66%;}
+  @media (max-width:640px){
+    table.reftable, table.reftable thead, table.reftable tbody, table.reftable tr{display:block;}
+    table.reftable thead{display:none;}
+    table.reftable tr{border-bottom:1px solid var(--line);padding:10px 0;}
+    table.reftable td{display:block;width:100% !important;padding:4px 2px;border-bottom:none;}
+    table.reftable td:first-child{padding-top:8px;}
+    table.reftable td:last-child{padding-bottom:8px;color:var(--ink-dim);}
+  }
+  .reftable-jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .reftable-jump a{
+    font-family:var(--font-mono);font-size:11px;padding:6px 10px;border:1px solid var(--line);
+    border-radius:6px;color:var(--ink-dim);text-decoration:none;
+  }
+  .reftable-jump a:hover{border-color:var(--blue);color:var(--blue);}
+  .reftable-section{margin:22px 0;}
+  .reftable-section h2{font-size:16px;margin:0 0 4px;}
+  .reftable-note{font-size:12.5px;color:var(--ink-faint);margin:0 0 8px;}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0;}
+  .tool-card{background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;position:relative;overflow:hidden;}
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interview",
+      "item": "https://www.engineerzcorner.com/interview/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "HVAC Engineering Interview Questions",
+      "item": "https://www.engineerzcorner.com/interview/hvac"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HVAC Engineering Interview Questions",
+  "description": "HVAC Engineering Interview Questions \u2014 part of a free multi-discipline engineering toolkit. Load calculations/psychrometrics, systems &amp; equipment, and site-practical interview questions with model-answer talking points.",
+  "url": "https://www.engineerzcorner.com/interview/hvac"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Interview Prep</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">HVAC Engineering — Interview Questions</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../pm/index.html">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="index.html">Interview Prep</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-interview-hvac">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"></path></svg></div>
+    <div><h1>HVAC Engineering — Interview Questions</h1><div class="hero-sub">Load calcs &amp; psychrometrics, systems &amp; equipment, and site-practical questions</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Interview Index</a>
+    <a href="electrical.html">Electrical</a>
+    <a href="mechanical.html">Mechanical</a>
+    <a href="hvac.html" class="current">HVAC</a>
+    <a href="civil.html">Civil</a>
+    <a href="automation.html">Automation</a>
+    <a href="solar.html">Solar</a>
+    <a href="pm.html">Project Management</a>
+    <a href="general.html">General / Behavioral</a>
+  </div>
+
+  <div class="intro">Common HVAC engineering interview questions grouped by topic, with a full model answer for each. Read them, then practice saying the answer in your own words.</div>
+
+  <div class="reftable-jump">
+    <a href="#hvac-load">Load Calculations & Psychrometrics</a>
+    <a href="#hvac-systems">Systems & Equipment</a>
+    <a href="#hvac-site">Site & Practical Scenarios</a>
+  </div>
+
+  <div class="reftable-section" id="hvac-load">
+    <h2>Load Calculations & Psychrometrics</h2>
+    <div class="reftable-note">The core sizing logic behind almost every HVAC design question.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>What's the difference between sensible and latent heat load?</td><td>Sensible heat changes air temperature (dry-bulb) without changing moisture content; latent heat changes moisture content (humidity) without changing temperature — total cooling load is the sum of both.</td></tr>
+      <tr><td>Walk through the main components of a cooling load calculation.</td><td>Solar and conduction gains through the envelope, internal gains from people/lighting/equipment, ventilation/infiltration air load, and any process loads — summed as sensible and latent, often using methods like CLTD/CLF or software-based heat balance.</td></tr>
+      <tr><td>What is a psychrometric chart used for?</td><td>It plots air properties (dry-bulb temperature, humidity ratio, relative humidity, wet-bulb, enthalpy) so you can visualize cooling, heating, humidification and mixing processes and read off resulting conditions.</td></tr>
+      <tr><td>Explain sensible heat ratio (SHR).</td><td>The ratio of sensible load to total load; a lower SHR means a higher proportion of latent (dehumidification) load, which affects coil selection and whether reheat is needed to avoid overcooling.</td></tr>
+      <tr><td>Why does outside air (ventilation) load matter so much in load calculations?</td><td>Fresh air brought in for indoor air quality often carries a large temperature and humidity difference from the space setpoint, so it can be one of the largest single contributors to total cooling load, especially in humid climates.</td></tr>
+      <tr><td>What is the difference between CFM and cooling tonnage, and how are they related?</td><td>CFM is airflow rate; tonnage is a unit of cooling capacity (1 ton = 12,000 BTU/hr). They're linked through the sensible heat equation (Q = 1.08 × CFM × ΔT for standard air), so a given load can be met with different CFM/ΔT combinations.</td></tr>
+      <tr><td>What's the difference between dry-bulb, wet-bulb and dew-point temperature?</td><td>Dry-bulb is the regular air temperature reading; wet-bulb accounts for evaporative cooling (lower when air is less humid) and indicates how much cooling evaporation can provide; dew-point is the temperature at which air becomes saturated and moisture starts condensing out.</td></tr>
+      <tr><td>Why do cooling loads peak at a different time than the highest outdoor temperature?</td><td>Solar and structural heat gain lag behind outdoor air temperature because building mass absorbs and releases heat with a delay; the peak load time depends on orientation, construction mass, and internal gain schedules, not just outdoor temperature alone.</td></tr>
+      <tr><td>What's the difference between design load and actual/part-load conditions, and why does it matter for equipment selection?</td><td>Design load is the worst-case condition equipment must be sized for; actual operation spends most of its time well below that peak, so equipment (especially chillers) needs good part-load efficiency, not just peak-condition capacity, to run economically most of the year.</td></tr>
+      <tr><td>What is the ASHRAE 62.1 (or similar) ventilation requirement based on, roughly?</td><td>It sets minimum outdoor air rates based on occupancy (people-based component) and floor area (building-based component) for the space type, ensuring adequate fresh air for indoor air quality regardless of the cooling/heating load.</td></tr>
+      <tr><td>What's the difference between makeup air and ventilation air?</td><td>Ventilation air is fresh outdoor air brought in for indoor air quality; makeup air specifically replaces air being exhausted elsewhere (kitchen hoods, fume extraction) so the space doesn't go into excessive negative pressure — the two purposes can overlap but aren't identical.</td></tr>
+      <tr><td>How does building orientation affect cooling load, and what would you do differently for a west-facing glazed wall?</td><td>West-facing glass takes intense low-angle afternoon sun, often the single largest driver of peak cooling load on that side; mitigation includes external shading, higher-performance/low-SHGC glazing, or reduced glazing area rather than relying on the cooling system alone to absorb it.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="hvac-systems">
+    <h2>Systems & Equipment</h2>
+    <div class="reftable-note">Chillers, ducts, and the equipment questions interviewers use to check hands-on exposure.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>What's the difference between a chiller and a cooling tower?</td><td>A chiller removes heat from chilled water using a refrigeration cycle; a cooling tower rejects the chiller's condenser heat to atmosphere by evaporative cooling of the condenser water loop — they work together, not as alternatives.</td></tr>
+      <tr><td>Compare air-cooled and water-cooled chillers.</td><td>Air-cooled chillers reject heat directly to ambient air (simpler, no cooling tower/water treatment, but less efficient and noisier); water-cooled chillers use a condenser water loop and cooling tower (higher efficiency, especially at scale, but more infrastructure and maintenance).</td></tr>
+      <tr><td>How do you size ductwork?</td><td>Determine required airflow (CFM) per zone from the load calc, then size ducts using a method like equal friction or static regain, keeping velocity within noise/pressure-drop limits, and check total system pressure drop against fan capability.</td></tr>
+      <tr><td>What is COP and how does it differ from EER/SEER?</td><td>COP (coefficient of performance) is a dimensionless ratio of cooling/heating output to power input in consistent units; EER and SEER are US efficiency metrics (BTU/hr output per watt input) — SEER is a seasonal average, EER a rated-point value.</td></tr>
+      <tr><td>Explain the basic vapor-compression refrigeration cycle.</td><td>Refrigerant is compressed (raising pressure/temperature), condensed while rejecting heat, expanded through a valve (dropping pressure/temperature), then evaporated while absorbing heat from the space — and the cycle repeats.</td></tr>
+      <tr><td>What's the purpose of a VAV (variable air volume) system versus CAV (constant air volume)?</td><td>VAV varies the airflow to each zone to match the actual load (saving fan energy and improving comfort across zones with different loads); CAV supplies a fixed airflow and instead varies supply air temperature to meet load, which is simpler but less efficient for multi-zone buildings.</td></tr>
+      <tr><td>What's the difference between a fan coil unit (FCU) and an air handling unit (AHU)?</td><td>An FCU is a smaller terminal unit (fan + coil) usually serving a single zone with no or minimal outside air/filtration capability; an AHU is a larger central unit that conditions and often mixes outside air for one or multiple zones, typically with more extensive filtration, coils and controls.</td></tr>
+      <tr><td>What is an economizer cycle and when is it used?</td><td>It uses cool outdoor air directly for free cooling instead of running mechanical cooling, when outdoor conditions (temperature and/or enthalpy) are favorable — controls modulate outside/return air dampers to use as much free cooling as the space can absorb.</td></tr>
+      <tr><td>What's the difference between a heat pump and a standard air conditioner?</td><td>A standard AC only moves heat one way (rejects heat from inside to outside); a heat pump has a reversing valve that lets it also run in reverse to extract heat from outside and deliver it inside for heating, giving both heating and cooling from one unit.</td></tr>
+      <tr><td>Why is refrigerant charge critical, and what happens if a system is undercharged or overcharged?</td><td>Correct charge is needed for proper subcooling/superheat and heat transfer; undercharge causes low suction pressure, reduced capacity and potential compressor overheating; overcharge causes high head pressure, liquid slugging risk and reduced efficiency — both shorten equipment life.</td></tr>
+      <tr><td>What's the purpose of a variable refrigerant flow (VRF) system?</td><td>It allows one outdoor condensing unit to serve multiple indoor units with independently varying refrigerant flow to each, giving zone-level heating/cooling control and good part-load efficiency, often used where ductwork space or zoning flexibility is limited.</td></tr>
+      <tr><td>What role does a cooling coil's bypass factor play in system design?</td><td>It represents the fraction of air passing through a coil without being fully treated (contacting the fins/coil surface); it affects the actual leaving air condition versus the theoretical apparatus dew point, and is a factor in psychrometric process calculations for coil selection.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="hvac-site">
+    <h2>Site & Practical Scenarios</h2>
+    <div class="reftable-note">Commissioning and troubleshooting-style questions.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>A zone is always too warm even though the AHU is running — what would you check?</td><td>Verify supply air temperature and airflow actually reaching that zone (damper position, duct leakage/blockage), check the zone's thermostat/sensor calibration, and confirm the load hasn't increased beyond the original design (extra equipment, occupancy, sun exposure).</td></tr>
+      <tr><td>How would you diagnose high humidity in a space even though temperature is on setpoint?</td><td>Check the SHR being delivered versus what the space actually needs — an oversized system can short-cycle and satisfy temperature before removing enough moisture; also check outside air intake and any envelope infiltration.</td></tr>
+      <tr><td>What steps would you take to commission a new AHU?</td><td>Verify fan rotation/direction, measure and balance airflow against design CFM, check coil delta-T and control valve operation, confirm sensor calibration, and test control sequences (occupied/unoccupied, economizer, safeties) before handover.</td></tr>
+      <tr><td>A chilled water system has poor delta-T ("low delta-T syndrome") — what usually causes it?</td><td>Common causes include control valves not fully closing, oversized coils/valves, three-way valves bypassing flow, or coils fouled/air-bound — all of which let water return warmer than expected relative to design.</td></tr>
+      <tr><td>How do you approach balancing a duct/air distribution system?</td><td>Start from the index (most restrictive) run, measure airflow at each terminal against design CFM, adjust dampers proportionally working from the fan outward, and re-verify total system airflow and static pressure match design.</td></tr>
+      <tr><td>What would you check if a cooling tower is not achieving its approach temperature?</td><td>Check fan operation and airflow, water distribution/nozzle condition, fill for scaling or fouling, and condenser water flow rate versus design — any of these reduces the tower's ability to reject heat effectively.</td></tr>
+      <tr><td>A rooftop unit is short-cycling — what would you investigate?</td><td>Check for an oversized unit relative to the actual load, a thermostat/sensor located badly (short-cycling due to a local draft or sun exposure), low refrigerant charge tripping safeties, or a dirty condenser causing high-pressure trips.</td></tr>
+      <tr><td>How would you diagnose poor airflow at a diffuser even though the fan appears to be running normally?</td><td>Check for a closed or partially closed damper upstream, duct blockage or crushed flex duct, a dirty filter increasing system static pressure beyond design, and that fan speed/belt condition still matches commissioning values.</td></tr>
+      <tr><td>What steps would you take if occupants report inconsistent temperatures across a multi-zone VAV floor?</td><td>Verify each zone's VAV box is responding to its own thermostat and airflow setpoint, check for a stuck damper or failed actuator, confirm supply air temperature at the AHU is correct, and check that static pressure reset/setpoints haven't drifted from design.</td></tr>
+      <tr><td>How would you approach a refrigerant leak investigation on a chiller?</td><td>Use an electronic leak detector or UV dye at likely points (fittings, valves, braze joints), check sight glass/subcooling trends over time for a slow leak, and always recover refrigerant properly rather than venting it, per environmental regulations.</td></tr>
+      <tr><td>What would you check first if a building's chilled water pumps are cavitating?</td><td>Check available NPSH at the pump suction versus required, look for a partially closed suction valve or blocked strainer, verify the expansion tank is maintaining adequate system pressure, and confirm pump speed/duty hasn't been changed beyond its design point.</td></tr>
+      <tr><td>How do you approach seasonal changeover (heating to cooling) commissioning issues on a two-pipe system?</td><td>Verify the changeover valve/control sequence actually switches supply water temperature at the intended trigger, confirm no zones are left calling for the opposite mode, and check that time is allowed for the system to stabilize before judging comfort complaints.</td></tr>
+    </table></div>
+  </div>
+
+  <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

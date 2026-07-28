@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Engineering Interview Questions — Engineering Studies Toolkit</title>
+<meta name="description" content="Electrical Engineering Interview Questions — part of a free multi-discipline engineering toolkit. Fundamentals, power systems/protection, and site-practical interview questions with model-answer talking points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/interview/electrical">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Electrical Engineering Interview Questions — Engineering Studies Toolkit">
+<meta property="og:description" content="Electrical Engineering Interview Questions — part of a free multi-discipline engineering toolkit. Fundamentals, power systems/protection, and site-practical interview questions with model-answer talking points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/interview/electrical">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electrical Engineering Interview Questions — Engineering Studies Toolkit">
+<meta name="twitter:description" content="Electrical Engineering Interview Questions — part of a free multi-discipline engineering toolkit. Fundamentals, power systems/protection, and site-practical interview questions with model-answer talking points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;margin:0;}
+  .pagehero .hero-sub{color:#D8F5F5 !important;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);position:relative;z-index:2;}
+  .intro{border-left-color:var(--blue) !important;}
+  .reftable-wrap{overflow-x:auto;}
+  .reftable-wrap table.reftable{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
+  table.reftable th, table.reftable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-wrap:break-word;}
+  table.reftable th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);background:var(--sheet-2);}
+  table.reftable th:first-child, table.reftable td:first-child{width:34%;font-weight:600;color:var(--ink);}
+  table.reftable th:last-child, table.reftable td:last-child{width:66%;}
+  @media (max-width:640px){
+    table.reftable, table.reftable thead, table.reftable tbody, table.reftable tr{display:block;}
+    table.reftable thead{display:none;}
+    table.reftable tr{border-bottom:1px solid var(--line);padding:10px 0;}
+    table.reftable td{display:block;width:100% !important;padding:4px 2px;border-bottom:none;}
+    table.reftable td:first-child{padding-top:8px;}
+    table.reftable td:last-child{padding-bottom:8px;color:var(--ink-dim);}
+  }
+  .reftable-jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .reftable-jump a{
+    font-family:var(--font-mono);font-size:11px;padding:6px 10px;border:1px solid var(--line);
+    border-radius:6px;color:var(--ink-dim);text-decoration:none;
+  }
+  .reftable-jump a:hover{border-color:var(--blue);color:var(--blue);}
+  .reftable-section{margin:22px 0;}
+  .reftable-section h2{font-size:16px;margin:0 0 4px;}
+  .reftable-note{font-size:12.5px;color:var(--ink-faint);margin:0 0 8px;}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0;}
+  .tool-card{background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;position:relative;overflow:hidden;}
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interview",
+      "item": "https://www.engineerzcorner.com/interview/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Electrical Engineering Interview Questions",
+      "item": "https://www.engineerzcorner.com/interview/electrical"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Electrical Engineering Interview Questions",
+  "description": "Electrical Engineering Interview Questions \u2014 part of a free multi-discipline engineering toolkit. Fundamentals, power systems/protection, and site-practical interview questions with model-answer talking points.",
+  "url": "https://www.engineerzcorner.com/interview/electrical"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Interview Prep</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Electrical Engineering — Interview Questions</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../pm/index.html">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="index.html">Interview Prep</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-interview-electrical">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 5 8 18h6l-2 9 11-14h-7z"></path></svg></div>
+    <div><h1>Electrical Engineering — Interview Questions</h1><div class="hero-sub">Fundamentals, power systems &amp; protection, and site-practical questions</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Interview Index</a>
+    <a href="electrical.html" class="current">Electrical</a>
+    <a href="mechanical.html">Mechanical</a>
+    <a href="hvac.html">HVAC</a>
+    <a href="civil.html">Civil</a>
+    <a href="automation.html">Automation</a>
+    <a href="solar.html">Solar</a>
+    <a href="pm.html">Project Management</a>
+    <a href="general.html">General / Behavioral</a>
+  </div>
+
+  <div class="intro">Common electrical engineering interview questions grouped by topic, with a full model answer for each. Read them, then practice saying the answer in your own words.</div>
+
+  <div class="reftable-jump">
+    <a href="#electrical-fund">Fundamentals & Circuit Theory</a>
+    <a href="#electrical-power">Power Systems & Protection</a>
+    <a href="#electrical-site">Site & Practical Scenarios</a>
+  </div>
+
+  <div class="reftable-section" id="electrical-fund">
+    <h2>Fundamentals & Circuit Theory</h2>
+    <div class="reftable-note">Core theory questions used to check you actually understand the basics, not just formulas.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Explain Ohm's Law and where it breaks down.</td><td>V = IR for a fixed resistance at constant temperature; note it doesn't hold for non-linear devices (diodes, lamps) where resistance changes with current/temperature.</td></tr>
+      <tr><td>What's the difference between AC and DC, and why is AC used for transmission?</td><td>AC periodically reverses direction and can be transformed to high voltage for low-loss transmission (P=I²R, higher V means lower I for the same power); DC is constant and needs power electronics to step voltage up/down.</td></tr>
+      <tr><td>Define active, reactive and apparent power.</td><td>Active power (kW) does real work; reactive power (kVAR) is exchanged with inductive/capacitive loads and does no net work; apparent power (kVA) is the vector sum, S = P + jQ, |S| = √(P²+Q²).</td></tr>
+      <tr><td>What is power factor and why does a low PF matter?</td><td>Ratio of active to apparent power, cosθ; low PF means more current is drawn for the same real power, increasing losses, cable/transformer sizing and sometimes attracting utility penalties.</td></tr>
+      <tr><td>Explain the difference between star and delta connections.</td><td>Star (wye) gives line voltage = √3 × phase voltage and a neutral point; delta has line voltage = phase voltage with no neutral; star-delta starters also use this to reduce motor starting current/torque.</td></tr>
+      <tr><td>What is skin effect?</td><td>At higher frequencies AC current tends to flow near the conductor's surface rather than uniformly through the cross-section, effectively raising AC resistance versus DC resistance.</td></tr>
+      <tr><td>What is the difference between resistance, impedance and reactance?</td><td>Resistance (R) opposes current and dissipates energy as heat; reactance (X) is the opposition from inductors/capacitors that stores and releases energy rather than dissipating it; impedance (Z) is the combined AC opposition, Z = R + jX, with magnitude |Z| = √(R²+X²).</td></tr>
+      <tr><td>Explain Kirchhoff's Current and Voltage Laws.</td><td>KCL: the sum of currents entering a node equals the sum leaving it (charge is conserved). KVL: the sum of voltage rises and drops around any closed loop equals zero (energy is conserved).</td></tr>
+      <tr><td>What's the difference between series and parallel circuits?</td><td>In series, the same current flows through all elements and voltages add up (Rtotal = R1+R2+...); in parallel, all elements share the same voltage and currents add up (1/Rtotal = 1/R1+1/R2+...).</td></tr>
+      <tr><td>What is the difference between a capacitor and an inductor in terms of behavior?</td><td>A capacitor resists a change in voltage (stores energy in an electric field, blocks DC once charged, passes AC); an inductor resists a change in current (stores energy in a magnetic field, passes DC freely, opposes AC).</td></tr>
+      <tr><td>What is transformer turns ratio and how does it relate voltage and current?</td><td>Turns ratio (N1/N2) equals the primary-to-secondary voltage ratio; current is inversely proportional to the turns ratio (an ideal transformer conserves power, so V1I1 = V2I2).</td></tr>
+      <tr><td>What is the difference between synchronous speed and slip in an induction motor?</td><td>Synchronous speed (Ns = 120f/P) is set by supply frequency and pole count; the rotor always runs slightly slower than this under load, and slip = (Ns − Nr)/Ns expresses that difference — slip is what actually produces torque in an induction motor.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="electrical-power">
+    <h2>Power Systems & Protection</h2>
+    <div class="reftable-note">Protection, grounding and equipment sizing — the practical backbone of most electrical interviews.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Why is earthing/grounding important?</td><td>Provides a low-impedance path for fault current so protective devices trip quickly, limits touch/step voltages for personnel safety, and stabilizes system voltage reference.</td></tr>
+      <tr><td>Explain the difference between a fuse and a circuit breaker.</td><td>A fuse is a one-time sacrificial element that melts to break the circuit; a breaker uses a mechanism to trip and can be reset/reused, and usually offers more precise, adjustable protection.</td></tr>
+      <tr><td>What is selectivity (discrimination) in protection?</td><td>Coordinating protective devices so only the device closest to a fault trips, isolating the smallest section of the network while the rest stays energized.</td></tr>
+      <tr><td>What's the difference between an MCB, MCCB and ACB?</td><td>MCB (miniature) is for low current, fixed-trip final circuits; MCCB (moulded case) handles higher currents with adjustable trip settings; ACB (air) is used for large currents at main switchboard/incomer level, often with advanced protection relays.</td></tr>
+      <tr><td>How do you size a cable?</td><td>Start from design current, then check current-carrying capacity (derated for ambient temperature, grouping, installation method), voltage drop over the run length, and short-circuit withstand — the most restrictive of these sets the final size.</td></tr>
+      <tr><td>What causes voltage drop and why does it matter?</td><td>Cable resistance/reactance causes voltage loss proportional to current and length; excessive drop under-supplies equipment, so codes cap it (commonly ~3-5% depending on standard/application).</td></tr>
+      <tr><td>What is the difference between an overload relay and a short-circuit protective device?</td><td>An overload relay protects against sustained excess current (e.g., a stalled motor) with a time-delayed trip that mimics heating; short-circuit protection (fuse or magnetic trip on a breaker) reacts near-instantly to very high fault currents to prevent equipment damage and fire.</td></tr>
+      <tr><td>What is an earth fault loop and why does its impedance matter?</td><td>It's the complete path a fault current takes from the point of fault back to the source through the earth/protective conductor; low loop impedance ensures fault current is high enough to trip protection quickly, which is why it's measured and limited by design.</td></tr>
+      <tr><td>Explain the difference between TT, TN and IT earthing systems.</td><td>TN systems bond the neutral to earth at the source and use a dedicated protective conductor back to it (fast fault clearance via low-impedance path); TT systems use an independent earth electrode at the installation instead (relies on RCDs for fast disconnection); IT systems have no direct earth connection on the source side, so a single fault doesn't trip immediately, which suits continuity-critical supplies.</td></tr>
+      <tr><td>What is the purpose of a residual current device (RCD/ELCB)?</td><td>It monitors for an imbalance between line and neutral current (indicating current is leaking to earth, often through a person) and trips very quickly at low current thresholds — protecting people, not equipment, which is what overcurrent devices are for.</td></tr>
+      <tr><td>Why do transformers and generators need to be sized with more than just the running load in mind?</td><td>Starting/inrush currents (especially from motors), harmonic loading from non-linear loads, and future load growth all need headroom; sizing to only the steady running load risks nuisance tripping or overheating under normal transient conditions.</td></tr>
+      <tr><td>What's the difference between short-circuit current rating and continuous current rating on switchgear?</td><td>Continuous rating is the current the equipment can carry indefinitely without exceeding temperature limits; short-circuit rating is the much higher current (for a brief defined time) the equipment must withstand without mechanical or thermal failure during a fault, before protection clears it.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="electrical-site">
+    <h2>Site & Practical Scenarios</h2>
+    <div class="reftable-note">How you think on your feet — these often matter more than textbook recall.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>A breaker keeps tripping on a feeder — how do you troubleshoot it?</td><td>Check the trip flag/cause (overload vs short-circuit vs earth fault), review load history for overload, megger the cable and downstream equipment for insulation faults, and inspect connections for loose/overheating terminations before resetting.</td></tr>
+      <tr><td>How would you verify a panel is safe to work on?</td><td>Follow lockout-tagout, isolate and lock the supply, then test the tester on a known live source, test the circuit is dead, retest the tester — never rely on a single meter reading or the breaker position alone.</td></tr>
+      <tr><td>Two feeders read different voltages between phases — what would you check?</td><td>Look for an unbalanced load, a blown fuse/open phase upstream, a loose neutral, or a transformer tap issue; measure phase-to-phase and phase-to-neutral to localize whether it's a supply or load-side problem.</td></tr>
+      <tr><td>How do you decide between a star-delta starter, VFD, or soft starter for a motor?</td><td>Weigh starting torque needed, allowable starting current on the supply, whether speed control is needed in operation (VFD), and cost/complexity — VFD gives the most control but costs more and needs harmonic/EMI consideration.</td></tr>
+      <tr><td>What do you check before energizing new equipment?</td><td>Insulation resistance (megger) test, continuity/polarity checks, correct phase rotation, torque on terminations, protection settings match the design, and that as-built matches the approved drawings.</td></tr>
+      <tr><td>How do you approach arc-flash risk on a job?</td><td>Identify the incident energy from the study/label, use the specified PPE category, keep the boundary distance, and prefer working on de-energized equipment wherever the task allows it.</td></tr>
+      <tr><td>A motor trips on overload shortly after startup every time — what would you check?</td><td>Check actual running current against the motor's rated FLC and the overload relay setting, verify the motor isn't mechanically overloaded or bound, check for undervoltage at the terminals during start, and confirm the overload class/curve suits the load's starting duty.</td></tr>
+      <tr><td>How would you approach specifying standby generator capacity for a building?</td><td>Total the essential loads that must run on backup, add starting/inrush allowance for the largest motor loads (often the dominant factor), check step-load and voltage-dip tolerance, and build in margin for future additions rather than sizing to today's load exactly.</td></tr>
+      <tr><td>What's the purpose of power factor correction, and how would you size capacitors for it?</td><td>It reduces reactive power drawn from the supply (often to avoid utility penalties and reduce cable/transformer loading); sizing is based on closing the gap between existing and target power factor using the kVAR = kW × (tanθ1 − tanθ2) relationship, then selecting standard capacitor bank steps.</td></tr>
+      <tr><td>How do you read and use a single-line diagram (SLD) on site?</td><td>Trace the power path from source through protective devices to each load, cross-check ratings and settings shown against the physical equipment nameplates, and use it to identify isolation points before any work — treat discrepancies between the SLD and site as something to query, not ignore.</td></tr>
+      <tr><td>What would make you suspect a neutral is overloaded in a three-phase system with single-phase loads?</td><td>Significant phase imbalance (especially with non-linear loads like LED drivers or electronics generating triplen harmonics that add rather than cancel in the neutral) can push neutral current above what's expected — worth measuring neutral current directly rather than assuming it's always low.</td></tr>
+      <tr><td>How would you plan an electrical shutdown/outage on a live facility?</td><td>Identify everything affected (not just the obvious circuit), sequence isolation to avoid backfeeds, notify stakeholders with enough lead time, prepare a rollback plan if something doesn't go as expected, and confirm re-energization checks before restoring supply.</td></tr>
+    </table></div>
+  </div>
+
+  <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

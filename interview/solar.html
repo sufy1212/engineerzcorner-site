@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Engineering Interview Questions — Engineering Studies Toolkit</title>
+<meta name="description" content="Solar Engineering Interview Questions — part of a free multi-discipline engineering toolkit. PV fundamentals, system design & sizing, and site-practical interview questions with model-answer talking points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/interview/solar">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Solar Engineering Interview Questions — Engineering Studies Toolkit">
+<meta property="og:description" content="Solar Engineering Interview Questions — part of a free multi-discipline engineering toolkit. PV fundamentals, system design & sizing, and site-practical interview questions with model-answer talking points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/interview/solar">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solar Engineering Interview Questions — Engineering Studies Toolkit">
+<meta name="twitter:description" content="Solar Engineering Interview Questions — part of a free multi-discipline engineering toolkit. PV fundamentals, system design & sizing, and site-practical interview questions with model-answer talking points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%237CA5C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(0,153,153,.22) !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;margin:0;}
+  .pagehero .hero-sub{color:#D8F5F5 !important;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);position:relative;z-index:2;}
+  .intro{border-left-color:var(--blue) !important;}
+  .reftable-wrap{overflow-x:auto;}
+  .reftable-wrap table.reftable{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
+  table.reftable th, table.reftable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-wrap:break-word;}
+  table.reftable th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);background:var(--sheet-2);}
+  table.reftable th:first-child, table.reftable td:first-child{width:34%;font-weight:600;color:var(--ink);}
+  table.reftable th:last-child, table.reftable td:last-child{width:66%;}
+  @media (max-width:640px){
+    table.reftable, table.reftable thead, table.reftable tbody, table.reftable tr{display:block;}
+    table.reftable thead{display:none;}
+    table.reftable tr{border-bottom:1px solid var(--line);padding:10px 0;}
+    table.reftable td{display:block;width:100% !important;padding:4px 2px;border-bottom:none;}
+    table.reftable td:first-child{padding-top:8px;}
+    table.reftable td:last-child{padding-bottom:8px;color:var(--ink-dim);}
+  }
+  .reftable-jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .reftable-jump a{
+    font-family:var(--font-mono);font-size:11px;padding:6px 10px;border:1px solid var(--line);
+    border-radius:6px;color:var(--ink-dim);text-decoration:none;
+  }
+  .reftable-jump a:hover{border-color:var(--blue);color:var(--blue);}
+  .reftable-section{margin:22px 0;}
+  .reftable-section h2{font-size:16px;margin:0 0 4px;}
+  .reftable-note{font-size:12.5px;color:var(--ink-faint);margin:0 0 8px;}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0;}
+  .tool-card{background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;position:relative;overflow:hidden;}
+  .tool-card:hover{box-shadow:0 10px 24px rgba(0,153,153,.18) !important;}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .site-nav a.current{color:#3FE8E8 !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interview",
+      "item": "https://www.engineerzcorner.com/interview/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solar Engineering Interview Questions",
+      "item": "https://www.engineerzcorner.com/interview/solar"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Solar Engineering Interview Questions",
+  "description": "Solar Engineering Interview Questions \u2014 part of a free multi-discipline engineering toolkit. PV fundamentals, system design & sizing, and site-practical interview questions with model-answer talking points.",
+  "url": "https://www.engineerzcorner.com/interview/solar"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Interview Prep</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Solar Engineering — Interview Questions</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../pm/index.html">Project Management</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="index.html">Interview Prep</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-interview-solar">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></div>
+    <div><h1>Solar Engineering — Interview Questions</h1><div class="hero-sub">PV fundamentals, system design &amp; sizing, and site-practical questions</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Interview Index</a>
+    <a href="electrical.html">Electrical</a>
+    <a href="mechanical.html">Mechanical</a>
+    <a href="hvac.html">HVAC</a>
+    <a href="civil.html">Civil</a>
+    <a href="automation.html">Automation</a>
+    <a href="solar.html" class="current">Solar</a>
+    <a href="pm.html">Project Management</a>
+    <a href="general.html">General / Behavioral</a>
+  </div>
+
+  <div class="intro">Common solar/PV engineering interview questions grouped by topic, with a full model answer for each. Read them, then practice saying the answer in your own words.</div>
+
+  <div class="reftable-jump">
+    <a href="#solar-fund">PV Fundamentals</a>
+    <a href="#solar-design">System Design &amp; Sizing</a>
+    <a href="#solar-site">Site &amp; Practical Scenarios</a>
+  </div>
+
+  <div class="reftable-section" id="solar-fund">
+    <h2>PV Fundamentals</h2>
+    <div class="reftable-note">Core PV theory used to check you understand how the cell and array actually behave, not just formulas.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>Explain how a PV cell converts sunlight into electricity.</td><td>Photons striking the p-n junction free electrons, creating electron-hole pairs; the junction's built-in electric field separates them, driving a current through an external circuit — the photovoltaic effect.</td></tr>
+      <tr><td>What is the difference between STC and NOCT ratings?</td><td>STC (Standard Test Conditions: 1000 W/m², 25°C cell temp, AM1.5 spectrum) is used for nameplate ratings; NOCT reflects a more realistic operating temperature (~45°C cell temp at 800 W/m², 20°C ambient), giving a better real-world power estimate.</td></tr>
+      <tr><td>Why does panel output drop as temperature rises?</td><td>Higher cell temperature reduces the open-circuit voltage (negative temperature coefficient, typically around -0.3%/°C to -0.45%/°C for Voc), lowering power output even though current changes only slightly.</td></tr>
+      <tr><td>Explain the difference between series and parallel wiring of panels.</td><td>Series strings add voltage while current stays the same (limited by the weakest panel in the string); parallel strings add current while voltage stays the same — combining both builds the array to the inverter's required voltage/current window.</td></tr>
+      <tr><td>What causes a hot spot on a PV module, and why is it dangerous?</td><td>A shaded or faulty cell is forced to act as a load rather than a generator within its series string, dissipating power as heat instead of producing it; if severe/prolonged this can damage the encapsulant or backsheet, which is why bypass diodes exist to route current around the affected section.</td></tr>
+      <tr><td>What is the purpose of a bypass diode?</td><td>It provides an alternate current path around a shaded or underperforming cell string within a module, preventing that section from being forced into reverse bias and limiting hot-spot damage and string-level power loss.</td></tr>
+      <tr><td>What is the difference between monocrystalline, polycrystalline and thin-film panels?</td><td>Monocrystalline cells are cut from a single silicon crystal (highest efficiency, most uniform, priciest); polycrystalline uses multiple silicon fragments (slightly lower efficiency, lower cost); thin-film uses a different deposited material (lower efficiency, lighter/flexible, better shaded/high-temperature tolerance in some cases).</td></tr>
+      <tr><td>Explain the difference between a string inverter, microinverter and power optimizer setup.</td><td>A string inverter converts DC to AC for a whole string at once (simplest, cheapest, most exposed to per-panel shading loss); microinverters convert at each panel (best per-panel optimization and monitoring, higher cost); optimizers do per-panel DC-DC conditioning but still centralize the DC-AC conversion at one inverter.</td></tr>
+      <tr><td>What is the fill factor of a solar cell?</td><td>The ratio of the actual maximum power point (Vmp × Imp) to the theoretical maximum (Voc × Isc); it reflects how "square" the I-V curve is and is an indicator of cell quality/losses.</td></tr>
+      <tr><td>Why do panel datasheets list both Voc/Isc and Vmp/Imp?</td><td>Voc/Isc are the open-circuit/short-circuit extremes used for safety and equipment-rating calculations (e.g., inverter max input voltage); Vmp/Imp describe the actual operating point at maximum power, which is what real energy-yield calculations use.</td></tr>
+      <tr><td>What is an MPPT and why is it needed?</td><td>Maximum Power Point Tracking is the inverter/charge controller algorithm that continuously adjusts operating voltage to keep the array at its maximum-power point, since that point shifts with irradiance and temperature and isn't fixed.</td></tr>
+      <tr><td>What is the difference between irradiance and irradiation (insolation)?</td><td>Irradiance is instantaneous power density (W/m²) at a given moment; irradiation (insolation) is that irradiance integrated over time (kWh/m²/day or /year), which is what's actually used to estimate energy yield.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="solar-design">
+    <h2>System Design &amp; Sizing</h2>
+    <div class="reftable-note">Array configuration, inverter matching and system-level sizing — the practical backbone of most solar interviews.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>How do you size a PV array for a given load?</td><td>Start from the daily energy demand, divide by available peak sun hours for the site/season to get required array kW, then add losses (soiling, wiring, inverter efficiency, temperature) as a derate factor before selecting panel count.</td></tr>
+      <tr><td>How do you check a string is within an inverter's voltage window?</td><td>Take the panel's Voc, correct it for the coldest expected temperature (Voc rises as temperature drops), multiply by the number of panels in series, and confirm it stays below the inverter's maximum DC input voltage — the reverse check (lowest expected Vmp at highest temperature) confirms the string stays above the inverter's MPPT minimum.</td></tr>
+      <tr><td>Why does panel orientation and tilt matter for system output?</td><td>Tilt and azimuth determine how closely the panel faces the sun's path through the day/year, which directly affects the irradiance actually captured; the optimum is usually close to the site latitude tilted toward the equator, though real installs often trade off for roof pitch or aesthetics.</td></tr>
+      <tr><td>How would you approach a partially shaded roof in system design?</td><td>Identify which strings are affected and when, favor microinverters/optimizers over a single string inverter if shading is significant, use bypass diodes' effect on module output in yield estimates, and consider splitting arrays into separate MPPT inputs to isolate shaded and unshaded sections.</td></tr>
+      <tr><td>What is the purpose of a combiner box in a PV array?</td><td>It parallels multiple strings into a single feed to the inverter, typically housing fuses/breakers per string for overcurrent protection and providing a convenient disconnect and monitoring point.</td></tr>
+      <tr><td>How do you size a battery bank for an off-grid or hybrid system?</td><td>Total the daily energy consumption, divide by the usable depth-of-discharge fraction of the battery chemistry, add autonomy days for cloudy-weather coverage, and check the bank can deliver the peak load current the inverter demands.</td></tr>
+      <tr><td>What's the difference between grid-tied, off-grid and hybrid PV systems?</td><td>Grid-tied systems export/import with the utility and have no batteries (usually shut down in a grid outage unless designed otherwise); off-grid systems rely entirely on batteries/generator with no utility connection; hybrid systems combine grid connection with battery storage for backup and/or peak-shaving.</td></tr>
+      <tr><td>Why is DC cable sizing in a PV array different from a typical AC circuit?</td><td>Voltage drop matters even more since it directly reduces energy harvest (not just efficiency), cables must handle the maximum possible short-circuit current from parallel strings, and outdoor/rooftop exposure requires appropriate UV and temperature-rated cable.</td></tr>
+      <tr><td>What is the role of an anti-islanding function in a grid-tied inverter?</td><td>It detects loss of grid supply and automatically disconnects the inverter output, preventing the PV system from continuing to energize a de-energized grid section — a safety requirement for utility workers.</td></tr>
+      <tr><td>How do you estimate expected annual energy yield for a proposed system?</td><td>Multiply array DC capacity by site-specific peak sun hours (from solar resource data for the location/tilt/azimuth), then apply an overall system derate (inverter efficiency, soiling, wiring losses, shading, temperature) — commonly expressed as a performance ratio.</td></tr>
+    </table></div>
+  </div>
+  <div class="reftable-section" id="solar-site">
+    <h2>Site &amp; Practical Scenarios</h2>
+    <div class="reftable-note">How you think on your feet during commissioning or troubleshooting — often matters more than textbook recall.</div>
+    <div class="reftable-wrap"><table class="reftable">
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>An array is producing well below expected output — how do you troubleshoot it?</td><td>Check inverter fault logs and per-string/per-MPPT readings first, compare actual irradiance to expected, inspect for soiling/shading/debris, measure string voltage and current against datasheet expectations, and check for a tripped/failed combiner fuse isolating a string.</td></tr>
+      <tr><td>What would you check before commissioning a new PV system?</td><td>String polarity and voltage/current match design, insulation resistance test on DC wiring, correct MPPT/inverter configuration settings, ground continuity, and that labeling/signage meets code before energizing.</td></tr>
+      <tr><td>How do you approach arc-fault risk in DC PV wiring?</td><td>Ensure DC arc-fault protection (where required) is installed and functioning, keep connections properly torqued and use matched connector types (never mixing brands), and inspect for chafed insulation or loose MC4 connectors during maintenance.</td></tr>
+      <tr><td>A customer reports lower-than-expected savings on their bill — how do you investigate?</td><td>Compare actual production data (from inverter/monitoring) against the original design estimate, check for shading changes (new construction, tree growth), verify no strings/inverters are faulted or offline, and confirm the utility billing/net-metering setup matches what was designed.</td></tr>
+      <tr><td>How would you safely work on a PV array during daylight?</td><td>Treat DC conductors as live any time panels are exposed to light (they can't simply be "switched off" like AC), use insulated tools and PPE, cover panels if isolating strings physically, and follow lockout procedures on the inverter/AC side in addition to DC precautions.</td></tr>
+      <tr><td>What would cause an inverter to intermittently trip on overvoltage?</td><td>String Voc rising above the inverter's limit during cold, high-irradiance mornings is a common cause — worth rechecking the string sizing calculation against actual site temperature extremes rather than assuming the original design margin was sufficient.</td></tr>
+      <tr><td>How do you decide panel layout when roof space is limited?</td><td>Prioritize orientation/tilt closest to optimal within the available roof planes, keep string lengths balanced across MPPT inputs, avoid mixing significantly different orientations on the same MPPT/string, and account for setback/fire-code clearances required by the authority having jurisdiction.</td></tr>
+      <tr><td>What maintenance does a typical grid-tied PV system need?</td><td>Periodic panel cleaning depending on local soiling, visual inspection of connectors/mounting hardware, monitoring for underperforming strings via the inverter's data, and periodic torque/insulation checks per manufacturer or code interval.</td></tr>
+      <tr><td>How would you explain the value of monitoring/data logging to a client?</td><td>It allows early detection of underperformance (a failed string, soiling, shading creep) that would otherwise go unnoticed for months, supports warranty claims with production evidence, and gives the client visibility into savings and system health.</td></tr>
+    </table></div>
+  </div>
+
+  <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
