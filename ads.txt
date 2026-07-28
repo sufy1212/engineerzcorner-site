@@ -1,0 +1,5 @@
+# REQUIRED for Google AdSense to serve ads on this domain.
+# Replace pub-0000000000000000 below with YOUR real publisher ID,
+# found in your AdSense account under Account > Account information.
+# Do not add anything else to this line.
+google.com, pub-8155210015179361, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Chain — Technical Sequencing Game | Engineerz CorneR</title>
+<meta name="description" content="Signal Chain: a fast-paced engineering sequencing game. Rebuild circuit protection orders, air paths, control loops and process flows correctly before time runs out. Free, no signup.">
+<link rel="canonical" href="https://www.engineerzcorner.com/signal-chain">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Signal Chain — Technical Sequencing Game | Engineerz CorneR">
+<meta property="og:description" content="Rebuild real engineering sequences — protection order, air paths, control loops, process flow — against the clock.">
+<meta property="og:url" content="https://www.engineerzcorner.com/signal-chain">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Signal Chain — Technical Sequencing Game | Engineerz CorneR">
+<meta name="twitter:description" content="Rebuild real engineering sequences against the clock — protection order, air paths, control loops, process flow.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#00E5C7; --teal-dim:#00A896; --petrol:#00121A; --violet:#8B5CF6; --violet-dim:#6D3FD6;
+    --gold:#FFC24B; --green:#22D97A; --pink:#FF5C9A;
+    --ink:#EAF3F2; --ink-dim:#9AB3B0; --ink-faint:#5E7876;
+    --panel:#0A1D22; --panel-2:#0E262C; --line:rgba(255,255,255,.09); --line-bright:rgba(255,255,255,.18);
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:#020A0D;color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px 110px;}
+  a{color:var(--teal);}
+  ::selection{background:rgba(0,229,199,.28);}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  button{font-family:inherit;}
+
+  nav.sc-nav{background:#03090C;border-bottom:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:30;backdrop-filter:blur(8px);}
+  .sc-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .sc-nav-word span{color:var(--teal);}
+  nav.sc-nav a.sc-back{font-family:var(--font-mono);font-size:11px;color:#8FB3B0;text-decoration:none;letter-spacing:.03em;}
+  nav.sc-nav a.sc-back:hover{color:#fff;}
+
+  .sc-arena{position:relative;overflow:hidden;background:
+    radial-gradient(1200px 500px at 15% -10%, rgba(0,229,199,.16), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(139,92,246,.14), transparent 55%),
+    linear-gradient(180deg,#02080A 0%,#031014 55%,#020A0D 100%);
+  }
+  .sc-arena-grid{position:absolute;inset:0;opacity:.14;pointer-events:none;
+    background-image:linear-gradient(rgba(0,229,199,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,199,.5) 1px,transparent 1px);
+    background-size:42px 42px;
+    mask-image:radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 90%);
+    animation:scGridDrift 16s linear infinite;
+  }
+  @keyframes scGridDrift{0%{background-position:0 0,0 0;}100%{background-position:42px 84px,42px 84px;}}
+  @media (prefers-reduced-motion: reduce){ .sc-arena-grid{animation:none !important;} }
+
+  .sc-hero{position:relative;padding:48px 18px 10px;text-align:center;}
+  .sc-hero-inner{position:relative;z-index:2;max-width:600px;margin:0 auto;}
+  .sc-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:700;padding:7px 16px;border:1px solid rgba(0,229,199,.35);border-radius:20px;background:rgba(0,229,199,.06);margin-bottom:20px;}
+  .sc-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px 2px rgba(0,229,199,.8);animation:scPulseDot 1.6s ease-in-out infinite;}
+  @keyframes scPulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+  .sc-title{font-family:var(--font-display);font-weight:800;letter-spacing:-.03em;color:#fff;margin:0 0 14px;line-height:1.08;font-size:clamp(30px,7vw,46px);}
+  .sc-title .glow{background:linear-gradient(90deg,var(--teal),#7CF9E4 40%,var(--violet) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .sc-sub{font-size:14.5px;color:var(--ink-dim);max-width:480px;margin:0 auto 26px;line-height:1.65;}
+
+  .sc-card{background:linear-gradient(160deg, var(--panel-2), var(--panel));border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:18px;}
+
+  /* start screen */
+  .sc-start-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+  .sc-chip{font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:#DDEFEC;background:rgba(255,255,255,.04);border:1px solid var(--line);padding:8px 15px;border-radius:20px;}
+  .sc-chip b{color:var(--teal);}
+  .sc-how{text-align:left;display:grid;gap:10px;margin:18px 0 24px;}
+  .sc-how li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-dim);line-height:1.5;}
+  .sc-how li b{color:#fff;}
+  .sc-how-num{flex:none;width:24px;height:24px;border-radius:50%;background:rgba(0,229,199,.12);border:1px solid rgba(0,229,199,.35);color:var(--teal);font-family:var(--font-mono);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+
+  .sc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px 20px;border-radius:14px;border:none;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:16px;letter-spacing:-.01em;background:linear-gradient(90deg,var(--teal),#5FF3DB);color:#01201B;box-shadow:0 14px 30px -10px rgba(0,229,199,.55);transition:transform .2s ease,box-shadow .2s ease;}
+  .sc-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(0,229,199,.7);}
+  .sc-btn:active{transform:translateY(0);}
+  .sc-btn.ghost{background:rgba(255,255,255,.05);color:var(--ink);border:1px solid var(--line-bright);box-shadow:none;}
+  .sc-btn.ghost:hover{background:rgba(255,255,255,.08);}
+
+  /* HUD */
+  .sc-hud{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+  .sc-hud-group{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .sc-hud-item{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px;}
+  .sc-hud-item b{color:#fff;font-size:14px;}
+  .sc-hearts{display:flex;gap:4px;}
+  .sc-heart{width:16px;height:16px;filter:drop-shadow(0 0 4px rgba(255,92,154,.6));}
+  .sc-heart.lost path{fill:rgba(255,255,255,.12) !important;}
+
+  .sc-timerbar-track{height:8px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;margin-bottom:20px;border:1px solid var(--line);}
+  .sc-timerbar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--green));width:100%;transition:width .12s linear, background .3s ease;}
+  .sc-timerbar-fill.warn{background:linear-gradient(90deg,var(--gold),var(--pink));}
+
+  .sc-round-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--disc-color,var(--teal));background:rgba(255,255,255,.05);border:1px solid var(--line);padding:5px 12px;border-radius:20px;margin-bottom:12px;}
+  .sc-round-title{font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff;margin:0 0 6px;letter-spacing:-.01em;}
+  .sc-round-instr{font-size:13px;color:var(--ink-dim);margin:0 0 18px;line-height:1.5;}
+
+  .sc-chain{display:flex;flex-wrap:wrap;gap:8px;min-height:48px;padding:12px;border-radius:14px;background:rgba(0,0,0,.25);border:1px dashed var(--line-bright);margin-bottom:18px;}
+  .sc-chain:empty::before{content:'Tap components below in order →';font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);}
+  .sc-chain-slot{font-family:var(--font-mono);font-size:12px;font-weight:600;color:#01201B;background:linear-gradient(90deg,var(--teal),#5FF3DB);padding:8px 12px;border-radius:9px;display:flex;align-items:center;gap:6px;animation:scSlotIn .25s ease;}
+  @keyframes scSlotIn{from{opacity:0;transform:translateY(-6px) scale(.9);}to{opacity:1;transform:none;}}
+  .sc-chain-arrow{color:var(--ink-faint);font-size:12px;align-self:center;}
+
+  .sc-pool{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:20px;}
+  .sc-chip-btn{padding:14px 10px;border-radius:12px;border:1px solid var(--line-bright);background:rgba(255,255,255,.03);color:var(--ink);font-size:13px;font-weight:600;cursor:pointer;text-align:center;line-height:1.3;transition:transform .15s ease,background .15s ease,border-color .15s ease;}
+  .sc-chip-btn:hover{background:rgba(0,229,199,.08);border-color:rgba(0,229,199,.4);transform:translateY(-2px);}
+  .sc-chip-btn:active{transform:translateY(0);}
+  .sc-chip-btn.used{opacity:0;pointer-events:none;transform:scale(.7);}
+  .sc-chip-btn.wrong{animation:scShake .35s ease;border-color:var(--pink);background:rgba(255,92,154,.12);}
+  @keyframes scShake{0%,100%{transform:translateX(0);}25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+
+  .sc-footrow{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .sc-hint-btn{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:none;border:1px solid var(--line);padding:8px 14px;border-radius:20px;cursor:pointer;}
+  .sc-hint-btn:hover{color:#fff;border-color:var(--line-bright);}
+
+  .sc-toast{position:fixed;left:50%;top:18%;transform:translate(-50%,-10px);background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid rgba(0,229,199,.4);color:#fff;font-family:var(--font-display);font-weight:700;font-size:14px;padding:12px 22px;border-radius:14px;box-shadow:0 20px 40px -10px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:50;}
+  .sc-toast.show{opacity:1;transform:translate(-50%,0);}
+
+  .sc-over-title{font-family:var(--font-display);font-weight:800;font-size:26px;color:#fff;text-align:center;margin:6px 0 4px;}
+  .sc-over-score{font-family:var(--font-mono);text-align:center;font-size:44px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0;}
+  .sc-over-grid{display:flex;justify-content:center;gap:10px;margin:16px 0 22px;flex-wrap:wrap;}
+
+  .sc-footer{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;}
+  .hidden{display:none !important;}
+</style>
+<link rel="stylesheet" href="assets/sidebars.css">
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Signal Chain</span></div></nav>
+
+
+<nav class="sc-nav">
+  <span class="sc-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="sc-back" href="games.html">← All games</a>
+</nav>
+
+<div class="sc-arena">
+<div class="sc-arena-grid"></div>
+<div class="wrap">
+
+  <div class="sc-hero">
+    <div class="sc-hero-inner">
+      <div class="sc-eyebrow"><span class="sc-eyebrow-dot"></span> Technical sequencing game</div>
+      <h1 class="sc-title">Signal <span class="glow">Chain</span></h1>
+      <p class="sc-sub">Real engineering sequences, scrambled. Tap the components back into the correct order — protection order, air paths, control loops, process flow — before the clock runs out.</p>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div class="sc-card" id="startScreen">
+    <div class="sc-start-stats">
+      <span class="sc-chip" id="bestChip">Best score: <b>0</b></span>
+      <span class="sc-chip">7 disciplines</span>
+      <span class="sc-chip">3 lives</span>
+    </div>
+    <ul class="sc-how">
+      <li><span class="sc-how-num">1</span><span>You'll get a real system or circuit — <b>tap the scrambled components</b> in the correct technical order.</span></li>
+      <li><span class="sc-how-num">2</span><span>Each round has a <b>timer</b>. A wrong tap or a timeout costs a life. Three strikes ends the run.</span></li>
+      <li><span class="sc-how-num">3</span><span>Chain correct taps for a <b>combo multiplier</b>, and clear rounds fast for a time bonus.</span></li>
+    </ul>
+    <button class="sc-btn" id="startBtn">Start run</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="sc-card">
+      <div class="sc-hud">
+        <div class="sc-hud-group">
+          <div class="sc-hud-item">Score <b id="scoreVal">0</b></div>
+          <div class="sc-hud-item">Combo <b id="comboVal">×1</b></div>
+        </div>
+        <div class="sc-hud-item sc-hearts" id="heartsRow"></div>
+      </div>
+      <div class="sc-timerbar-track"><div class="sc-timerbar-fill" id="timerFill"></div></div>
+
+      <span class="sc-round-tag" id="roundTag" style="--disc-color:#00E5C7;">Electrical</span>
+      <h2 class="sc-round-title" id="roundTitle">—</h2>
+      <p class="sc-round-instr" id="roundInstr">—</p>
+
+      <div class="sc-chain" id="chainArea"></div>
+      <div class="sc-pool" id="poolArea"></div>
+
+      <div class="sc-footrow">
+        <button class="sc-hint-btn" id="hintBtn">💡 Hint (−50 pts)</button>
+        <span class="sc-hud-item">Rounds cleared <b id="roundsVal">0</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div class="hidden" id="overScreen">
+    <div class="sc-card">
+      <div class="sc-over-title">Chain broken</div>
+      <div class="sc-over-score" id="finalScore">0</div>
+      <div class="sc-over-grid">
+        <span class="sc-chip">Rounds cleared <b id="finalRounds">0</b></span>
+        <span class="sc-chip">Best <b id="finalBest">0</b></span>
+      </div>
+      <button class="sc-btn" id="againBtn">Play again</button>
+      <div style="height:10px;"></div>
+      <button class="sc-btn ghost" id="backBtn">Back to games</button>
+    </div>
+  </div>
+
+  <div class="sc-footer">More reference material lives in the <a href="index.html">discipline hubs</a>.</div>
+
+</div>
+</div>
+
+<div class="sc-toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- content: real technical sequences, source → load / start → end ----------
+  var SEQUENCES = [
+    {disc:"Electrical", color:"#00E5C7", title:"Motor starting & protection",
+     instr:"Order the protection chain from the supply down to the motor.",
+     items:["Incomer","Isolator","MCCB / Fuse","Contactor","Overload Relay","Motor"]},
+    {disc:"Electrical", color:"#00E5C7", title:"Earthing path",
+     instr:"Order the fault path from the equipment body down into the earth.",
+     items:["Equipment Body","Earth Conductor","Earth Bar","Earth Electrode","Soil Mass"]},
+    {disc:"Electrical", color:"#00E5C7", title:"Breaker selectivity",
+     instr:"Order the breakers from upstream (utility) to the downstream load.",
+     items:["Utility Fuse","Main Breaker","Feeder Breaker","Branch Breaker","Load"]},
+    {disc:"Electrical", color:"#00E5C7", title:"Short circuit protection coordination",
+     instr:"Order the relays from the utility down to the load, fastest-clearing last.",
+     items:["Utility Relay","Main Breaker Relay","Feeder Relay","Branch Fuse","Load"]},
+    {disc:"Electrical", color:"#00E5C7", title:"Transformer protection scheme",
+     instr:"Order the protection path from the transformer fault to breaker trip.",
+     items:["Transformer","Differential Relay","Buchholz Relay","Trip Coil","Breaker"]},
+    {disc:"Electrical", color:"#00E5C7", title:"Cable installation sequence",
+     instr:"Order the steps for installing a new LV feeder cable.",
+     items:["Route Survey","Trenching / Ducting","Cable Pulling","Termination","Testing & Commissioning"]},
+    {disc:"Electrical", color:"#00E5C7", title:"Lightning protection path",
+     instr:"Order the strike path from the air terminal into the earth.",
+     items:["Air Terminal","Down Conductor","Earth Electrode","Soil Mass"]},
+    {disc:"Electrical", color:"#00E5C7", title:"UPS power path",
+     instr:"Order the energy path from mains supply to the critical load.",
+     items:["Mains Supply","Rectifier / Charger","Battery Bank","Inverter","Critical Load"]},
+    {disc:"HVAC", color:"#22D97A", title:"Air handling path",
+     instr:"Order the airflow from outside air intake to the room.",
+     items:["Outside Air Intake","Filter Bank","Cooling Coil","Supply Fan","Ductwork","Room Diffuser"]},
+    {disc:"HVAC", color:"#22D97A", title:"Refrigeration cycle",
+     instr:"Order the refrigerant cycle starting from the compressor.",
+     items:["Compressor","Condenser","Expansion Valve","Evaporator"]},
+    {disc:"HVAC", color:"#22D97A", title:"Chilled water loop",
+     instr:"Order the chilled water path from the chiller to the AHU coil.",
+     items:["Chiller","Primary Pump","Distribution Header","AHU Coil","Return Header"]},
+    {disc:"HVAC", color:"#22D97A", title:"VAV terminal control",
+     instr:"Order the control signal path from the room to the supply air.",
+     items:["Room Thermostat","VAV Controller","Damper Actuator","Airflow Sensor","Supply Air"]},
+    {disc:"HVAC", color:"#22D97A", title:"Cooling tower loop",
+     instr:"Order the condenser water path starting from the condenser.",
+     items:["Condenser","Condenser Water Pump","Cooling Tower","Basin","Condenser Return"]},
+    {disc:"HVAC", color:"#22D97A", title:"Boiler heating loop",
+     instr:"Order the hot water path from the boiler to the return.",
+     items:["Boiler","Heating Pump","Distribution Header","Radiator / AHU Coil","Return Line"]},
+    {disc:"Automation", color:"#8B5CF6", title:"4–20 mA control loop",
+     instr:"Order the signal path from the field sensor to the process.",
+     items:["Sensor","Transmitter","Controller (PLC/DCS)","Final Control Element","Process"]},
+    {disc:"Automation", color:"#8B5CF6", title:"VFD speed control",
+     instr:"Order the signal path from the setpoint to the motor shaft.",
+     items:["Speed Setpoint","VFD Controller","Inverter Output","Motor","Shaft Speed"]},
+    {disc:"Automation", color:"#8B5CF6", title:"PID control loop",
+     instr:"Order the control loop from the setpoint to the process feedback.",
+     items:["Setpoint","Error Calculation","PID Controller","Actuator","Process Feedback"]},
+    {disc:"Automation", color:"#8B5CF6", title:"SCADA data flow",
+     instr:"Order the data path from the field device to the operator.",
+     items:["Field Device","RTU / PLC","Communication Network","SCADA Server","Operator HMI"]},
+    {disc:"Automation", color:"#8B5CF6", title:"Interlock logic sequence",
+     instr:"Order the safety logic path from the sensor to the final element.",
+     items:["Sensor Input","Logic Solver","Permissive Check","Output Relay","Final Element"]},
+    {disc:"Automation", color:"#8B5CF6", title:"Batch process sequence",
+     instr:"Order the steps of a typical batch recipe run.",
+     items:["Recipe Selection","Ingredient Charging","Reaction / Mixing","Quality Check","Discharge"]},
+    {disc:"Mechanical", color:"#FFC24B", title:"Centrifugal pump system",
+     instr:"Order the fluid path from suction to discharge.",
+     items:["Suction Line","Strainer","Pump","Check Valve","Discharge Line"]},
+    {disc:"Mechanical", color:"#FFC24B", title:"Belt drive train",
+     instr:"Order the power path from the motor to the driven load.",
+     items:["Motor","Driver Pulley","Belt","Driven Pulley","Load"]},
+    {disc:"Mechanical", color:"#FFC24B", title:"Compressed air system",
+     instr:"Order the air path from the compressor to point of use.",
+     items:["Compressor","Air Receiver","Dryer","Filter","Point of Use"]},
+    {disc:"Mechanical", color:"#FFC24B", title:"Bearing lubrication path",
+     instr:"Order the oil path from the reservoir back to the return line.",
+     items:["Oil Reservoir","Pump","Filter","Bearing","Return Line"]},
+    {disc:"Mechanical", color:"#FFC24B", title:"Gearbox power path",
+     instr:"Order the power path from the motor to the output shaft.",
+     items:["Motor","Coupling","Input Shaft","Gear Train","Output Shaft"]},
+    {disc:"Mechanical", color:"#FFC24B", title:"Heat exchanger flow path",
+     instr:"Order the flow path of the hot side through the exchanger.",
+     items:["Hot Fluid Inlet","Control Valve","Heat Exchanger","Hot Fluid Outlet"]},
+    {disc:"Civil", color:"#FF5C9A", title:"Structural load path",
+     instr:"Order the load path from the roof down to the ground.",
+     items:["Roof / Slab","Beam","Column","Footing","Soil"]},
+    {disc:"Civil", color:"#FF5C9A", title:"Concrete construction sequence",
+     instr:"Order the construction steps for a cast-in-place slab.",
+     items:["Formwork","Reinforcement","Concrete Pour","Curing","Formwork Removal"]},
+    {disc:"Civil", color:"#FF5C9A", title:"Foundation construction sequence",
+     instr:"Order the steps for building a strip foundation.",
+     items:["Excavation","Blinding Layer","Reinforcement","Formwork","Concrete Pour"]},
+    {disc:"Civil", color:"#FF5C9A", title:"Retaining wall load path",
+     instr:"Order the load path from backfill pressure to the subgrade.",
+     items:["Backfill Pressure","Wall Stem","Toe / Heel Footing","Subgrade"]},
+    {disc:"Civil", color:"#FF5C9A", title:"Steel erection sequence",
+     instr:"Order the steps of a structural steel erection.",
+     items:["Fabrication","Delivery","Column Erection","Beam Installation","Bolting / Welding"]},
+    {disc:"Civil", color:"#FF5C9A", title:"Pile foundation sequence",
+     instr:"Order the steps for constructing a piled foundation.",
+     items:["Pile Boring / Driving","Reinforcement Cage","Concrete Pour","Pile Cap","Column"]},
+    {disc:"Solar", color:"#FFC24B", title:"Grid-tied PV system",
+     instr:"Order the energy path from the panel to the grid.",
+     items:["PV Panel","Combiner Box","Inverter","AC Distribution Board","Grid Meter"]},
+    {disc:"Solar", color:"#FFC24B", title:"Off-grid PV with storage",
+     instr:"Order the energy path from the panel to the load.",
+     items:["PV Panel","Charge Controller","Battery Bank","Inverter","Load"]},
+    {disc:"Solar", color:"#FFC24B", title:"String inverter monitoring",
+     instr:"Order the energy and data path from the PV string to the grid.",
+     items:["PV String","DC Combiner","String Inverter","Energy Meter","Utility Grid"]},
+    {disc:"Solar", color:"#FFC24B", title:"Solar tracker control",
+     instr:"Order the control path from sun position to panel orientation.",
+     items:["Sun Position Sensor","Tracker Controller","Actuator Motor","Panel Orientation"]},
+    {disc:"Project Mgmt", color:"#00A896", title:"Document approval flow",
+     instr:"Order a technical document from first draft to issue.",
+     items:["Draft","Internal Review","Client Submission","Approval","Issued for Construction"]},
+    {disc:"Project Mgmt", color:"#00A896", title:"Change order process",
+     instr:"Order the steps of processing a project change order.",
+     items:["Change Request","Cost Impact Review","Client Approval","Revised Scope","Implementation"]},
+    {disc:"Project Mgmt", color:"#00A896", title:"Procurement sequence",
+     instr:"Order the steps from requisition to acceptance.",
+     items:["Requisition","Vendor Quote","Purchase Order","Delivery","Inspection & Acceptance"]},
+    {disc:"Project Mgmt", color:"#00A896", title:"Punch list closeout",
+     instr:"Order the steps of closing out a project punch list.",
+     items:["Inspection","Punch List Creation","Contractor Rectification","Re-inspection","Sign-off"]},
+    {disc:"Project Mgmt", color:"#00A896", title:"Risk management cycle",
+     instr:"Order the steps of a project risk management cycle.",
+     items:["Risk Identification","Risk Assessment","Mitigation Plan","Monitoring","Closure"]}
+  ];
+
+  // ---------- state ----------
+  var startScreen=document.getElementById('startScreen'),
+      gameScreen=document.getElementById('gameScreen'),
+      overScreen=document.getElementById('overScreen'),
+      chainArea=document.getElementById('chainArea'),
+      poolArea=document.getElementById('poolArea'),
+      timerFill=document.getElementById('timerFill'),
+      scoreVal=document.getElementById('scoreVal'),
+      comboVal=document.getElementById('comboVal'),
+      roundsVal=document.getElementById('roundsVal'),
+      heartsRow=document.getElementById('heartsRow'),
+      roundTag=document.getElementById('roundTag'),
+      roundTitle=document.getElementById('roundTitle'),
+      roundInstr=document.getElementById('roundInstr'),
+      toast=document.getElementById('toast'),
+      hintBtn=document.getElementById('hintBtn');
+
+  var deck=[], deckIdx=0, current=null, chainProgress=0, score=0, lives=3, streak=0,
+      roundsCleared=0, timeLeft=0, timerDur=0, timerHandle=null, hintUsed=false, roundDifficultyFactor=1;
+
+  function shuffle(arr){
+    var a=arr.slice();
+    for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}
+    return a;
+  }
+
+  function getBest(){
+    try{ return parseInt(localStorage.getItem('ecrSignalChainBest')||'0',10)||0; }catch(e){ return 0; }
+  }
+  function setBest(v){
+    try{ localStorage.setItem('ecrSignalChainBest', String(v)); }catch(e){}
+  }
+
+  document.getElementById('bestChip').innerHTML = 'Best score: <b>'+getBest()+'</b>';
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function(){ toast.classList.remove('show'); }, 1100);
+  }
+
+  function renderHearts(){
+    var html='';
+    for(var i=0;i<3;i++){
+      var lost = i >= lives;
+      html += '<svg class="sc-heart'+(lost?' lost':'')+'" viewBox="0 0 24 24"><path fill="'+(lost?'rgba(255,255,255,.12)':'#FF5C9A')+'" d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2 5 5.6 5c2 0 3.4 1 4.4 2.4C11 6 12.4 5 14.4 5 18 5 19.6 8.6 22 11.7 19.5 16.4 12 21 12 21z"/></svg>';
+    }
+    heartsRow.innerHTML = html;
+  }
+
+  function startRun(){
+    score=0; lives=3; streak=0; roundsCleared=0; roundDifficultyFactor=1;
+    deck = shuffle(SEQUENCES); deckIdx=0;
+    startScreen.classList.add('hidden');
+    overScreen.classList.add('hidden');
+    gameScreen.classList.remove('hidden');
+    updateHud();
+    nextRound();
+  }
+
+  function updateHud(){
+    scoreVal.textContent = score;
+    comboVal.textContent = '×'+(1+Math.min(2, Math.floor(streak/5))*0.5).toFixed(1).replace('.0','');
+    roundsVal.textContent = roundsCleared;
+    renderHearts();
+  }
+
+  function nextRound(){
+    if(deckIdx >= deck.length){ deck = shuffle(SEQUENCES); deckIdx=0; roundDifficultyFactor *= 0.94; }
+    current = deck[deckIdx++];
+    chainProgress = 0; hintUsed=false;
+    hintBtn.disabled=false; hintBtn.style.opacity=1;
+
+    roundTag.textContent = current.disc;
+    roundTag.style.setProperty('--disc-color', current.color);
+    roundTitle.textContent = current.title;
+    roundInstr.textContent = current.instr;
+
+    chainArea.innerHTML='';
+    var shuffled = shuffle(current.items);
+    poolArea.innerHTML='';
+    shuffled.forEach(function(label){
+      var btn=document.createElement('button');
+      btn.className='sc-chip-btn';
+      btn.textContent=label;
+      btn.setAttribute('data-label', label);
+      btn.addEventListener('click', function(){ onChipTap(btn, label); });
+      poolArea.appendChild(btn);
+    });
+
+    timerDur = Math.max(9, current.items.length * 5.5) * roundDifficultyFactor;
+    timeLeft = timerDur;
+    if(timerHandle) clearInterval(timerHandle);
+    timerHandle = setInterval(tick, 100);
+    updateHud();
+  }
+
+  function tick(){
+    timeLeft -= 0.1;
+    var pct = Math.max(0, timeLeft/timerDur*100);
+    timerFill.style.width = pct+'%';
+    timerFill.classList.toggle('warn', pct < 30);
+    if(timeLeft <= 0){
+      clearInterval(timerHandle);
+      loseLife('Out of time');
+    }
+  }
+
+  function onChipTap(btn, label){
+    if(btn.classList.contains('used')) return;
+    var expected = current.items[chainProgress];
+    if(label === expected){
+      btn.classList.add('used');
+      streak++;
+      var mult = 1+Math.min(2, Math.floor(streak/5))*0.5;
+      score += Math.round(40*mult);
+      var slot=document.createElement('span');
+      slot.className='sc-chain-slot';
+      slot.textContent=label;
+      chainArea.appendChild(slot);
+      chainProgress++;
+      updateHud();
+      if(chainProgress >= current.items.length){
+        clearInterval(timerHandle);
+        var bonus = Math.round(timeLeft*8)+150;
+        score += bonus;
+        roundsCleared++;
+        showToast('Sequence locked ✓  +'+bonus);
+        updateHud();
+        setTimeout(nextRound, 850);
+      }
+    } else {
+      btn.classList.add('wrong');
+      setTimeout(function(){ btn.classList.remove('wrong'); }, 350);
+      loseLife('Wrong order');
+    }
+  }
+
+  function loseLife(reason){
+    lives--;
+    streak=0;
+    updateHud();
+    if(lives<=0){
+      endRun();
+      return;
+    }
+    showToast(reason+' — chain reset');
+    // reset current round's progress, reshuffle pool
+    chainProgress=0;
+    chainArea.innerHTML='';
+    var kids = Array.prototype.slice.call(poolArea.children);
+    shuffle(kids).forEach(function(el){ el.classList.remove('used'); poolArea.appendChild(el); });
+    timeLeft = timerDur;
+    if(timerHandle) clearInterval(timerHandle);
+    timerHandle = setInterval(tick, 100);
+  }
+
+  hintBtn.addEventListener('click', function(){
+    if(hintUsed) return;
+    hintUsed=true;
+    hintBtn.disabled=true; hintBtn.style.opacity=.5;
+    score = Math.max(0, score-50);
+    updateHud();
+    var expected = current.items[chainProgress];
+    var kids = Array.prototype.slice.call(poolArea.children);
+    kids.forEach(function(el){
+      if(el.getAttribute('data-label') === expected && !el.classList.contains('used')){
+        el.style.borderColor = current.color;
+        el.style.boxShadow = '0 0 0 2px '+current.color+' inset';
+      }
+    });
+    showToast('Hint: next is highlighted');
+  });
+
+  function endRun(){
+    if(timerHandle) clearInterval(timerHandle);
+    gameScreen.classList.add('hidden');
+    overScreen.classList.remove('hidden');
+    var best = getBest();
+    if(score > best){ best = score; setBest(best); }
+    document.getElementById('finalScore').textContent = score;
+    document.getElementById('finalRounds').textContent = roundsCleared;
+    document.getElementById('finalBest').textContent = best;
+    document.getElementById('bestChip').innerHTML = 'Best score: <b>'+best+'</b>';
+  }
+
+  document.getElementById('startBtn').addEventListener('click', startRun);
+  document.getElementById('againBtn').addEventListener('click', startRun);
+  document.getElementById('backBtn').addEventListener('click', function(){ window.location.href='games.html'; });
+
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+</body>
+</html>

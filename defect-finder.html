@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defect Finder — Civil Engineering Inspection Game | Engineerz CorneR</title>
+<meta name="description" content="Defect Finder: a visual civil engineering inspection game. Read the symptom, scan the structural cross-section, and click the failing element — cracked footings, corroded rebar, failed joints, blocked drains and more. Free, no signup.">
+<link rel="canonical" href="https://www.engineerzcorner.com/defect-finder">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Defect Finder — Civil Inspection Game | Engineerz CorneR">
+<meta property="og:description" content="Read the symptom, scan the structural cross-section, click the failing element. A visual civil inspection game.">
+<meta property="og:url" content="https://www.engineerzcorner.com/defect-finder">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Defect Finder — Civil Inspection Game | Engineerz CorneR">
+<meta name="twitter:description" content="Read the symptom, scan the structural cross-section, click the failing element.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#00E5C7; --teal-dim:#00A896; --petrol:#00121A; --violet:#8B5CF6; --violet-dim:#6D3FD6;
+    --gold:#FFC24B; --green:#22D97A; --pink:#FF5C9A;
+    --ink:#EAF3F2; --ink-dim:#9AB3B0; --ink-faint:#5E7876;
+    --panel:#0A1D22; --panel-2:#0E262C; --line:rgba(255,255,255,.09); --line-bright:rgba(255,255,255,.18);
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:#020A0D;color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:780px;margin:0 auto;padding:0 18px 110px;}
+  a{color:var(--teal);}
+  ::selection{background:rgba(0,229,199,.28);}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  button{font-family:inherit;}
+
+  nav.ff-nav{background:#03090C;border-bottom:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:30;backdrop-filter:blur(8px);}
+  .ff-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .ff-nav-word span{color:var(--teal);}
+  nav.ff-nav a.ff-back{font-family:var(--font-mono);font-size:11px;color:#8FB3B0;text-decoration:none;letter-spacing:.03em;}
+  nav.ff-nav a.ff-back:hover{color:#fff;}
+
+  .ff-arena{position:relative;overflow:hidden;background:
+    radial-gradient(1200px 500px at 15% -10%, rgba(0,229,199,.16), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(255,92,154,.14), transparent 55%),
+    linear-gradient(180deg,#02080A 0%,#031014 55%,#020A0D 100%);
+  }
+  .ff-arena-grid{position:absolute;inset:0;opacity:.14;pointer-events:none;
+    background-image:linear-gradient(rgba(0,229,199,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,199,.5) 1px,transparent 1px);
+    background-size:42px 42px;
+    mask-image:radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 90%);
+    animation:ffGridDrift 16s linear infinite;
+  }
+  @keyframes ffGridDrift{0%{background-position:0 0,0 0;}100%{background-position:42px 84px,42px 84px;}}
+  @media (prefers-reduced-motion: reduce){ .ff-arena-grid{animation:none !important;} }
+
+  .ff-hero{position:relative;padding:48px 18px 10px;text-align:center;}
+  .ff-hero-inner{position:relative;z-index:2;max-width:620px;margin:0 auto;}
+  .ff-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:700;padding:7px 16px;border:1px solid rgba(0,229,199,.35);border-radius:20px;background:rgba(0,229,199,.06);margin-bottom:20px;}
+  .ff-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px 2px rgba(255,92,154,.8);animation:ffPulseDot 1.6s ease-in-out infinite;}
+  @keyframes ffPulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+  .ff-title{font-family:var(--font-display);font-weight:800;letter-spacing:-.03em;color:#fff;margin:0 0 14px;line-height:1.08;font-size:clamp(30px,7vw,46px);}
+  .ff-title .glow{background:linear-gradient(90deg,var(--gold),#FFB0D4 40%,var(--pink) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .ff-sub{font-size:14.5px;color:var(--ink-dim);max-width:480px;margin:0 auto 26px;line-height:1.65;}
+
+  .ff-card{background:linear-gradient(160deg, var(--panel-2), var(--panel));border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:18px;}
+
+  .ff-start-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+  .ff-chip{font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:#DDEFEC;background:rgba(255,255,255,.04);border:1px solid var(--line);padding:8px 15px;border-radius:20px;}
+  .ff-chip b{color:var(--gold);}
+  .ff-how{text-align:left;display:grid;gap:10px;margin:18px 0 24px;}
+  .ff-how li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-dim);line-height:1.5;}
+  .ff-how li b{color:#fff;}
+  .ff-how-num{flex:none;width:24px;height:24px;border-radius:50%;background:rgba(255,92,154,.12);border:1px solid rgba(255,92,154,.35);color:var(--gold);font-family:var(--font-mono);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+
+  .ff-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px 20px;border-radius:14px;border:none;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:16px;letter-spacing:-.01em;background:linear-gradient(90deg,var(--gold),#FF8FBB);color:#2A0413;box-shadow:0 14px 30px -10px rgba(255,92,154,.5);transition:transform .2s ease,box-shadow .2s ease;}
+  .ff-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(255,92,154,.65);}
+  .ff-btn:active{transform:translateY(0);}
+  .ff-btn.ghost{background:rgba(255,255,255,.05);color:var(--ink);border:1px solid var(--line-bright);box-shadow:none;}
+  .ff-btn.ghost:hover{background:rgba(255,255,255,.08);}
+
+  .ff-hud{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+  .ff-hud-group{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .ff-hud-item{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px;}
+  .ff-hud-item b{color:#fff;font-size:14px;}
+  .ff-hearts{display:flex;gap:4px;}
+  .ff-heart{width:16px;height:16px;filter:drop-shadow(0 0 4px rgba(0,229,199,.5));}
+
+  .ff-timerbar-track{height:8px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;margin-bottom:20px;border:1px solid var(--line);}
+  .ff-timerbar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gold),var(--pink));width:100%;transition:width .12s linear, background .3s ease;}
+  .ff-timerbar-fill.warn{background:linear-gradient(90deg,#fff,var(--gold));}
+
+  .ff-symptom-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(255,92,154,.08);border:1px solid rgba(255,92,154,.3);padding:5px 12px;border-radius:20px;margin-bottom:12px;}
+  .ff-symptom{font-family:var(--font-display);font-weight:700;font-size:17px;color:#fff;margin:0 0 4px;letter-spacing:-.01em;line-height:1.35;}
+  .ff-instr{font-size:12.5px;color:var(--ink-dim);margin:0 0 20px;}
+
+  .ff-diagram{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:0;padding:18px 6px 8px;border-radius:14px;background:rgba(0,0,0,.28);border:1px solid var(--line);margin-bottom:18px;overflow-x:auto;}
+  .ff-slot{display:flex;flex-direction:column;align-items:center;flex:none;}
+  .ff-icon-btn{width:64px;height:64px;border-radius:14px;border:1.5px solid var(--line-bright);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .15s ease,border-color .15s ease,background .15s ease;color:var(--ink);}
+  .ff-icon-btn svg{width:40px;height:40px;overflow:visible;}
+  .ff-icon-btn:hover{transform:translateY(-2px);border-color:rgba(255,92,154,.5);background:rgba(255,92,154,.06);}
+  .ff-icon-btn.static{cursor:default;opacity:.85;}
+  .ff-icon-btn.static:hover{transform:none;border-color:var(--line-bright);background:rgba(255,255,255,.03);}
+  .ff-icon-btn.correct{border-color:var(--green);background:rgba(34,217,122,.14);box-shadow:0 0 0 2px rgba(34,217,122,.4);}
+  .ff-icon-btn.wrong-pick{border-color:var(--gold);background:rgba(255,92,154,.16);animation:ffShake .35s ease;}
+  @keyframes ffShake{0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+  .ff-slot-label{font-family:var(--font-mono);font-size:10px;color:var(--ink-faint);margin-top:6px;text-align:center;max-width:74px;}
+  .ff-wire{width:22px;height:2px;background:var(--line-bright);align-self:center;margin-top:32px;flex:none;}
+
+  .ff-footrow{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .ff-hint-btn{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:none;border:1px solid var(--line);padding:8px 14px;border-radius:20px;cursor:pointer;}
+  .ff-hint-btn:hover{color:#fff;border-color:var(--line-bright);}
+
+  .ff-toast{position:fixed;left:50%;top:18%;transform:translate(-50%,-10px);background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid rgba(255,92,154,.4);color:#fff;font-family:var(--font-display);font-weight:700;font-size:14px;padding:12px 22px;border-radius:14px;box-shadow:0 20px 40px -10px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:50;text-align:center;max-width:88vw;}
+  .ff-toast.show{opacity:1;transform:translate(-50%,0);}
+
+  .ff-over-title{font-family:var(--font-display);font-weight:800;font-size:26px;color:#fff;text-align:center;margin:6px 0 4px;}
+  .ff-over-score{font-family:var(--font-mono);text-align:center;font-size:44px;font-weight:700;background:linear-gradient(90deg,var(--gold),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0;}
+  .ff-over-grid{display:flex;justify-content:center;gap:10px;margin:16px 0 22px;flex-wrap:wrap;}
+
+  .ff-footer{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;}
+  .hidden{display:none !important;}
+</style>
+<link rel="stylesheet" href="assets/sidebars.css">
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Defect Finder</span></div></nav>
+
+
+<nav class="ff-nav">
+  <span class="ff-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="ff-back" href="games.html">← All games</a>
+</nav>
+
+<div class="ff-arena">
+<div class="ff-arena-grid"></div>
+<div class="wrap">
+
+  <div class="ff-hero">
+    <div class="ff-hero-inner">
+      <div class="ff-eyebrow"><span class="ff-eyebrow-dot"></span> Civil inspection game</div>
+      <h1 class="ff-title">Defect <span class="glow">Finder</span></h1>
+      <p class="ff-sub">A symptom, a structural cross-section, and one failing element hiding in it. Cracked footings, corroded rebar, failed joints, blocked drains — read the defect, scan the structure, click the culprit.</p>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div class="ff-card" id="startScreen">
+    <div class="ff-start-stats">
+      <span class="ff-chip">Best score: <b id="bestVal">0</b></span>
+      <span class="ff-chip">36 assemblies</span>
+      <span class="ff-chip">3 lives</span>
+    </div>
+    <ul class="ff-how">
+      <li><span class="ff-how-num">1</span><span>You get a real <b>defect symptom</b> (e.g. "wall shows a diagonal crack") and a small structural diagram of that assembly.</span></li>
+      <li><span class="ff-how-num">2</span><span>One element in the diagram is drawn <b>failing</b> — cracked, spalled, corroded, settled, or blocked. Click it.</span></li>
+      <li><span class="ff-how-num">3</span><span>Beat the clock for a time bonus. A wrong click or a timeout costs a life — three strikes ends the run.</span></li>
+    </ul>
+    <button class="ff-btn" id="startBtn">Start run</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="ff-card">
+      <div class="ff-hud">
+        <div class="ff-hud-group">
+          <div class="ff-hud-item">Score <b id="scoreVal">0</b></div>
+          <div class="ff-hud-item">Combo <b id="comboVal">×1</b></div>
+        </div>
+        <div class="ff-hud-item ff-hearts" id="heartsRow"></div>
+      </div>
+      <div class="ff-timerbar-track"><div class="ff-timerbar-fill" id="timerFill"></div></div>
+
+      <span class="ff-symptom-tag" id="roundTag">Symptom</span>
+      <p class="ff-symptom" id="roundSymptom">—</p>
+      <p class="ff-instr">Tap the element in the diagram that's causing it.</p>
+
+      <div class="ff-diagram" id="diagramArea"></div>
+
+      <div class="ff-footrow">
+        <button class="ff-hint-btn" id="hintBtn">💡 Hint (−50 pts)</button>
+        <span class="ff-hud-item">Assemblies checked <b id="roundsVal">0</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div class="hidden" id="overScreen">
+    <div class="ff-card">
+      <div class="ff-over-title">Structure down</div>
+      <div class="ff-over-score" id="finalScore">0</div>
+      <div class="ff-over-grid">
+        <span class="ff-chip">Solved <b id="finalRounds">0</b></span>
+        <span class="ff-chip">Best <b id="finalBest">0</b></span>
+      </div>
+      <button class="ff-btn" id="againBtn">Play again</button>
+      <div style="height:10px;"></div>
+      <button class="ff-btn ghost" id="backBtn">Back to games</button>
+    </div>
+  </div>
+
+  <div class="ff-footer">More reference material lives in the <a href="index.html">discipline hubs</a>.</div>
+
+</div>
+</div>
+
+<div class="ff-toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- icon factory: normal + fault SVG per component type ----------
+  function svgWrap(inner){ return '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'+inner+'</svg>'; }
+
+  var ICONS = {
+    source: {
+      ok: svgWrap('<line x1="8" y1="42" x2="56" y2="42" stroke-width="2.5"/><path d="M12,42 L18,50 M20,42 L26,50 M28,42 L34,50 M36,42 L42,50 M44,42 L50,50" stroke-width="1.5"/>')
+    },
+    footing: {
+      ok: svgWrap('<rect x="10" y="30" width="44" height="18" rx="3"/><path d="M16,34 L22,45 M26,34 L32,45 M36,34 L42,45 M46,34 L50,43"/>'),
+      fault: svgWrap('<rect x="10" y="30" width="44" height="18" rx="3" stroke="#FF5C9A"/><path d="M14,32 L22,42 L18,36 L30,48" stroke="#FF5C9A"/><path d="M28,18 L28,28" stroke="#FFC24B" stroke-width="2"/><path d="M24,22 L32,22" stroke="#FFC24B" stroke-width="2"/>')
+    },
+    column: {
+      ok: svgWrap('<rect x="24" y="8" width="16" height="48" rx="3"/>'),
+      fault: svgWrap('<rect x="24" y="8" width="16" height="48" rx="3" stroke="#FF5C9A"/><path d="M24,20 L40,36" stroke="#FF5C9A"/><path d="M34,10 L44,10 L44,20" stroke="#FFC24B" stroke-width="2"/>')
+    },
+    beam: {
+      ok: svgWrap('<rect x="8" y="26" width="48" height="12" rx="3"/>'),
+      fault: svgWrap('<path d="M8,32 Q32,42 56,32" stroke="#FF5C9A"/><rect x="8" y="26" width="48" height="12" rx="3" stroke="#FF5C9A"/><path d="M28,26 L32,38 L36,26" stroke="#FFC24B" stroke-width="2"/>')
+    },
+    slab: {
+      ok: svgWrap('<rect x="8" y="24" width="48" height="10" rx="2"/>'),
+      fault: svgWrap('<rect x="8" y="24" width="48" height="10" rx="2" stroke="#FF5C9A"/><path d="M14,24 L20,34 M26,24 L32,34 M38,24 L44,34" stroke="#FF5C9A"/>')
+    },
+    wall: {
+      ok: svgWrap('<rect x="18" y="8" width="28" height="48" rx="3"/>'),
+      fault: svgWrap('<rect x="18" y="8" width="28" height="48" rx="3" stroke="#FF5C9A"/><path d="M20,16 L28,24 L28,32 L36,40 L36,48" stroke="#FF5C9A"/>')
+    },
+    rebar: {
+      ok: svgWrap('<rect x="10" y="18" width="44" height="28" rx="4"/><path d="M16,32 L22,24 L28,40 L34,24 L40,40 L46,24" stroke-width="2"/>'),
+      fault: svgWrap('<rect x="10" y="18" width="44" height="28" rx="4" stroke="#FF5C9A"/><path d="M16,32 L22,24 L28,40 L34,24 L40,40 L46,24" stroke="#FFC24B" stroke-width="2"/><circle cx="28" cy="40" r="3" fill="#FF5C9A" opacity=".55" stroke="none"/><circle cx="40" cy="40" r="3" fill="#FF5C9A" opacity=".55" stroke="none"/>')
+    },
+    joint: {
+      ok: svgWrap('<rect x="8" y="18" width="20" height="28" rx="3"/><rect x="36" y="18" width="20" height="28" rx="3"/><line x1="30" y1="18" x2="30" y2="46"/><line x1="34" y1="18" x2="34" y2="46"/>'),
+      fault: svgWrap('<rect x="8" y="18" width="18" height="28" rx="3" stroke="#FF5C9A"/><rect x="38" y="18" width="18" height="28" rx="3" stroke="#FF5C9A"/><path d="M26,20 L38,44 M26,44 L38,20" stroke="#FF5C9A"/>')
+    },
+    membrane: {
+      ok: svgWrap('<rect x="10" y="30" width="44" height="16" rx="2"/><path d="M10,26 Q18,20 26,26 T42,26 T58,26" stroke-width="2"/>'),
+      fault: svgWrap('<rect x="10" y="30" width="44" height="16" rx="2" stroke="#FF5C9A"/><path d="M10,26 Q18,20 26,26 T42,26" stroke="#FF5C9A"/><path d="M44,26 L50,20" stroke="#FF5C9A"/><path d="M46,40 Q46,48 44,52" stroke="#FFC24B" stroke-width="2"/>')
+    },
+    pile: {
+      ok: svgWrap('<line x1="8" y1="16" x2="56" y2="16" stroke-width="2"/><rect x="26" y="16" width="12" height="40" rx="2"/>'),
+      fault: svgWrap('<line x1="8" y1="16" x2="56" y2="16" stroke="#FF5C9A" stroke-width="2"/><rect x="26" y="16" width="12" height="40" rx="2" stroke="#FF5C9A"/><path d="M26,34 L38,40" stroke="#FF5C9A"/>')
+    },
+    bearing: {
+      ok: svgWrap('<line x1="10" y1="18" x2="54" y2="18"/><rect x="14" y="24" width="36" height="8" rx="2"/><line x1="10" y1="38" x2="54" y2="38"/>'),
+      fault: svgWrap('<line x1="10" y1="18" x2="54" y2="18" stroke="#FF5C9A"/><rect x="14" y="26" width="36" height="4" rx="2" stroke="#FF5C9A" fill="currentColor" opacity=".2"/><line x1="10" y1="34" x2="54" y2="34" stroke="#FF5C9A"/>')
+    },
+    drain: {
+      ok: svgWrap('<circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="4" fill="currentColor" stroke="none"/>'),
+      fault: svgWrap('<circle cx="32" cy="32" r="18" stroke="#FF5C9A"/><circle cx="32" cy="32" r="4" fill="#FF5C9A" stroke="none"/><path d="M18,44 Q32,54 46,44" stroke="#FFC24B" stroke-width="2"/>')
+    },
+    anchor: {
+      ok: svgWrap('<rect x="26" y="10" width="12" height="14" rx="2"/><line x1="32" y1="24" x2="32" y2="54"/><line x1="24" y1="54" x2="40" y2="54"/>'),
+      fault: svgWrap('<rect x="26" y="10" width="12" height="14" rx="2" stroke="#FF5C9A"/><line x1="32" y1="24" x2="32" y2="38" stroke="#FF5C9A"/><path d="M28,40 L36,48" stroke="#FF5C9A"/>')
+    },
+    truss: {
+      ok: svgWrap('<path d="M10,50 L32,14 L54,50 Z"/><line x1="21" y1="32" x2="43" y2="32"/>'),
+      fault: svgWrap('<path d="M10,50 L32,14 L54,50 Z" stroke="#FF5C9A"/><path d="M21,32 Q32,22 43,32" stroke="#FF5C9A"/>')
+    },
+    load: {
+      ok: svgWrap('<rect x="14" y="14" width="36" height="36" rx="3"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="38" x2="50" y2="38"/><line x1="26" y1="14" x2="26" y2="50"/><line x1="38" y1="14" x2="38" y2="50"/>'),
+      fault: svgWrap('<rect x="14" y="14" width="36" height="36" rx="3" stroke="#FF5C9A"/><path d="M18,18 L30,32 L26,26 L40,44" stroke="#FF5C9A"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="38" x2="50" y2="38"/>')
+    }
+  };
+
+  function iconMarkup(type, faulty){
+    var set = ICONS[type] || ICONS.load;
+    if(faulty && set.fault) return set.fault;
+    return set.ok;
+  }
+
+  // ---------- rounds: symptom + assembly chain + which slot is failing ----------
+  var ROUNDS = [
+    {symptom:"A column shows a diagonal crack running through it, wider at the base.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'column',l:'Column'},{t:'beam',l:'Beam'}],
+     faultIdx:2, faultLabels:["Structural crack from overload","Crack from differential settlement","Reinforcement corrosion cracking the cover"]},
+    {symptom:"Concrete along the underside of a beam is spalling and rebar is visible.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'beam',l:'Beam'},{t:'slab',l:'Slab'}],
+     faultIdx:2, faultLabels:["Corroded rebar spalling the soffit","Insufficient concrete cover exposed the rebar","Chloride-induced rebar corrosion"]},
+    {symptom:"A slab shows a wide crack across the middle after heavy loading.",
+     slots:[{t:'source',l:'Ground'},{t:'beam',l:'Beam'},{t:'slab',l:'Slab'}],
+     faultIdx:2, faultLabels:["Flexural crack from overload","Slab under-reinforced for the imposed load","Shrinkage crack widened under load"]},
+    {symptom:"Water is pooling on a roof slab and staining the ceiling below.",
+     slots:[{t:'source',l:'Ground'},{t:'slab',l:'Roof Slab'},{t:'membrane',l:'Membrane'},{t:'load',l:'Ceiling'}],
+     faultIdx:2, faultLabels:["Torn waterproofing membrane","Membrane lap joint failed","Membrane punctured by another trade"]},
+    {symptom:"A masonry wall shows stair-step cracking near a window opening.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'wall',l:'Wall'}],
+     faultIdx:2, faultLabels:["Differential settlement cracking the wall","Missing lintel over the opening","Wall crack from foundation movement"]},
+    {symptom:"An expansion joint between two slabs has become a solid, rigid connection.",
+     slots:[{t:'source',l:'Ground'},{t:'slab',l:'Slab A'},{t:'joint',l:'Joint'},{t:'slab',l:'Slab B'}],
+     faultIdx:2, faultLabels:["Joint packed with debris, locked solid","Sealant hardened, lost movement capacity","Joint never cleaned out after construction"]},
+    {symptom:"Reinforcement bars are visible and rusting through a balcony's concrete surface.",
+     slots:[{t:'source',l:'Ground'},{t:'slab',l:'Balcony Slab'},{t:'rebar',l:'Rebar'}],
+     faultIdx:2, faultLabels:["Corroded reinforcement cracking the cover","Chloride attack on embedded rebar","Inadequate concrete cover to the rebar"]},
+    {symptom:"A retaining wall is bulging outward at mid-height.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'wall',l:'Wall'}],
+     faultIdx:2, faultLabels:["Wall overstressed by backfill pressure","Blocked drainage raised hydrostatic pressure","Wall reinforcement insufficient for the lateral load"]},
+    {symptom:"Damp patches keep appearing at the base of a basement wall.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'membrane',l:'Membrane'},{t:'wall',l:'Wall'}],
+     faultIdx:2, faultLabels:["Failed damp-proofing membrane","Membrane lap not sealed correctly","Waterproofing punctured during backfilling"]},
+    {symptom:"A bridge bearing pad has been crushed flat and no longer allows movement.",
+     slots:[{t:'source',l:'Ground'},{t:'pile',l:'Pile'},{t:'bearing',l:'Bearing'},{t:'beam',l:'Beam'}],
+     faultIdx:2, faultLabels:["Bearing pad overloaded and crushed","Pad exceeded design rotation and delaminated","Wrong bearing pad specified for the load"]},
+    {symptom:"Storm water keeps ponding against a retaining wall instead of draining away.",
+     slots:[{t:'source',l:'Ground'},{t:'wall',l:'Wall'},{t:'drain',l:'Drain'}],
+     faultIdx:2, faultLabels:["Blocked weep hole / drain","Drainage backfill clogged with fines","Drain pipe crushed during backfilling"]},
+    {symptom:"A steel roof truss member has visibly bowed under snow load.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'truss',l:'Truss'}],
+     faultIdx:2, faultLabels:["Buckled compression member, undersized for load","Member damaged during erection","Missing bracing let the member buckle"]},
+    {symptom:"An anchor bolt holding down a steel column has sheared off.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'anchor',l:'Anchor'},{t:'column',l:'Column'}],
+     faultIdx:2, faultLabels:["Sheared anchor bolt from overload","Corroded anchor bolt failed in tension","Anchor bolt under-embedded in the footing"]},
+    {symptom:"A concrete footing shows visible cracking radiating from one corner.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'column',l:'Column'}],
+     faultIdx:1, faultLabels:["Footing cracked from differential settlement","Footing undersized for the column load","Poor soil bearing capacity beneath the footing"]},
+    {symptom:"A new floor slab developed fine surface cracks within days of pouring.",
+     slots:[{t:'source',l:'Ground'},{t:'slab',l:'Slab'}],
+     faultIdx:1, faultLabels:["Plastic shrinkage cracking from rapid drying","No curing compound applied after pour","Concrete finished before bleed water evaporated"]},
+    {symptom:"A precast beam-to-column connection shows spalling concrete around the corbel.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'beam',l:'Beam'}],
+     faultIdx:2, faultLabels:["Corbel spalling from bearing overstress","Insufficient bearing area at the connection","Corrosion of the embedded connection plate"]},
+    {symptom:"Formwork removed too early left a beam soffit sagging visibly.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'beam',l:'Beam'}],
+     faultIdx:2, faultLabels:["Beam sagged from premature formwork strike","Concrete hadn't reached design strength yet","Shoring removed before curing was complete"]},
+    {symptom:"A pile cap shows a crack pattern matching the pile positions below.",
+     slots:[{t:'source',l:'Ground'},{t:'pile',l:'Pile'},{t:'footing',l:'Pile Cap'}],
+     faultIdx:2, faultLabels:["Pile cap under-reinforced for pile reactions","Punching shear crack around a pile","Pile installed off-position, overstressing the cap"]},
+    {symptom:"A parking structure column shows a rust stain streak below a construction joint.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'joint',l:'Joint'},{t:'column',l:'Column'}],
+     faultIdx:2, faultLabels:["Water ingress through a failed construction joint","Joint waterstop missing or damaged","Poor joint prep let water track down"]},
+    {symptom:"Cladding panels are cracking at their anchor points.",
+     slots:[{t:'source',l:'Ground'},{t:'wall',l:'Wall'},{t:'anchor',l:'Anchor'}],
+     faultIdx:2, faultLabels:["Anchor corrosion cracking the panel","Anchor overtightened during install","Anchor undersized for wind load"]},
+    {symptom:"A slab-on-grade shows curling at the edges, lifting away from the base.",
+     slots:[{t:'source',l:'Ground'},{t:'slab',l:'Slab'}],
+     faultIdx:1, faultLabels:["Slab curling from differential drying shrinkage","Inadequate edge reinforcement","Vapor barrier missing beneath the slab"]},
+    {symptom:"A drain pipe beneath a floor slab is backing up during heavy rain.",
+     slots:[{t:'source',l:'Ground'},{t:'drain',l:'Drain'},{t:'slab',l:'Slab'}],
+     faultIdx:1, faultLabels:["Blocked under-slab drain pipe","Drain pipe crushed during construction","Drain laid with insufficient fall"]},
+    {symptom:"A masonry chimney is leaning visibly away from vertical.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'wall',l:'Chimney'}],
+     faultIdx:1, faultLabels:["Chimney footing settled unevenly","Undersized footing for the chimney load","Soil erosion beneath the footing"]},
+    {symptom:"Rebar cage is visible through a gap in a newly poured column's surface.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'column',l:'Column'},{t:'rebar',l:'Rebar'}],
+     faultIdx:3, faultLabels:["Honeycombing exposed the rebar cage","Poor consolidation during the pour","Formwork joint leaked grout, exposing rebar"]},
+    {symptom:"A composite floor deck is deflecting excessively under normal office loading.",
+     slots:[{t:'source',l:'Ground'},{t:'beam',l:'Beam'},{t:'slab',l:'Deck'}],
+     faultIdx:2, faultLabels:["Slab under-designed for the imposed load","Missing shear studs reduced composite action","Inadequate propping during construction"]},
+    {symptom:"Water is tracking along a construction joint in a basement wall.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'joint',l:'Joint'},{t:'wall',l:'Wall'}],
+     faultIdx:2, faultLabels:["Waterstop missing at the construction joint","Joint poorly prepared before the second pour","Hydrostatic pressure forcing water through"]},
+    {symptom:"A steel beam shows visible corrosion and section loss near its support.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'beam',l:'Beam'}],
+     faultIdx:2, faultLabels:["Corrosion from trapped moisture at the bearing","Protective coating failed at the support","Missing drainage detail let water pool there"]},
+    {symptom:"A bridge deck expansion joint is jammed shut and can't absorb thermal movement.",
+     slots:[{t:'source',l:'Ground'},{t:'beam',l:'Beam'},{t:'joint',l:'Joint'},{t:'slab',l:'Deck'}],
+     faultIdx:2, faultLabels:["Debris-packed expansion joint","Joint gland torn and filled with grit","Joint undersized for the design thermal range"]},
+    {symptom:"A retaining wall's weep holes show no discharge despite recent heavy rain.",
+     slots:[{t:'source',l:'Ground'},{t:'wall',l:'Wall'},{t:'drain',l:'Weep Holes'}],
+     faultIdx:2, faultLabels:["Weep holes blocked by fines migration","Geotextile filter clogged behind the wall","Weep holes set too high to drain the backfill"]},
+    {symptom:"An elevated walkway handrail post shows a cracked base plate weld.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'anchor',l:'Anchor'},{t:'column',l:'Post'}],
+     faultIdx:2, faultLabels:["Fatigue crack in the anchor weld","Anchor bolts undersized for lateral load","Corrosion-weakened base plate connection"]},
+    {symptom:"A precast wall panel joint shows sealant peeling away from both edges.",
+     slots:[{t:'source',l:'Ground'},{t:'wall',l:'Wall'},{t:'joint',l:'Joint'}],
+     faultIdx:2, faultLabels:["Sealant failed from UV degradation","Joint movement exceeded the sealant's range","Poor surface prep, sealant lost adhesion"]},
+    {symptom:"A concrete water tank wall shows staining and efflorescence on the outside face.",
+     slots:[{t:'source',l:'Ground'},{t:'footing',l:'Footing'},{t:'wall',l:'Tank Wall'},{t:'membrane',l:'Membrane'}],
+     faultIdx:3, faultLabels:["Waterproofing membrane failed, allowing seepage","Membrane never applied to that face","Membrane punctured during backfill compaction"]},
+    {symptom:"A steel truss bottom chord shows a fatigue crack near a welded joint.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'truss',l:'Truss'}],
+     faultIdx:2, faultLabels:["Fatigue crack at a poorly detailed weld","Connection undersized for the cyclic load","Weld defect from original fabrication"]},
+    {symptom:"A ground-floor slab shows a sinkhole-like depression forming near a drain.",
+     slots:[{t:'source',l:'Ground'},{t:'drain',l:'Drain'},{t:'slab',l:'Slab'}],
+     faultIdx:1, faultLabels:["Broken drain pipe washing out the sub-base","Drain joint failed, eroding surrounding soil","Drain pipe crushed under traffic loading"]},
+    {symptom:"A parking garage beam shows a delaminated patch that sounds hollow when tapped.",
+     slots:[{t:'source',l:'Ground'},{t:'column',l:'Column'},{t:'beam',l:'Beam'}],
+     faultIdx:2, faultLabels:["Delamination from corroding rebar beneath the surface","Poor bond between repair patch and substrate","Freeze-thaw damage delaminating the cover"]},
+    {symptom:"A rooftop plant support shows a cracked bearing pad under a chiller unit.",
+     slots:[{t:'source',l:'Ground'},{t:'slab',l:'Roof Slab'},{t:'bearing',l:'Bearing Pad'}],
+     faultIdx:2, faultLabels:["Bearing pad crushed under the chiller's weight","Bearing pad undersized for the point load","Pad degraded from oil / chemical exposure"]}
+  ];
+
+  // ---------- pick a stable random faultLabel per round instance ----------
+  function pickFaultLabel(round){
+    if(round.faultLabels && round.faultLabels.length){
+      return round.faultLabels[Math.floor(Math.random()*round.faultLabels.length)];
+    }
+    return round.faultLabel || "Failing element";
+  }
+
+  // ---------- state ----------
+  var startScreen=document.getElementById('startScreen'),
+      gameScreen=document.getElementById('gameScreen'),
+      overScreen=document.getElementById('overScreen'),
+      diagramArea=document.getElementById('diagramArea'),
+      timerFill=document.getElementById('timerFill'),
+      scoreVal=document.getElementById('scoreVal'),
+      comboVal=document.getElementById('comboVal'),
+      roundsVal=document.getElementById('roundsVal'),
+      heartsRow=document.getElementById('heartsRow'),
+      roundTag=document.getElementById('roundTag'),
+      roundSymptom=document.getElementById('roundSymptom'),
+      toast=document.getElementById('toast'),
+      hintBtn=document.getElementById('hintBtn');
+
+  var deck=[], deckIdx=0, current=null, score=0, lives=3, streak=0,
+      roundsSolved=0, timeLeft=0, timerDur=0, timerHandle=null, hintUsed=false,
+      difficultyFactor=1, answered=false;
+
+  function shuffle(arr){
+    var a=arr.slice();
+    for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}
+    return a;
+  }
+  function getBest(){ try{ return parseInt(localStorage.getItem('ecrDefectFinderBest')||'0',10)||0; }catch(e){ return 0; } }
+  function setBest(v){ try{ localStorage.setItem('ecrDefectFinderBest', String(v)); }catch(e){} }
+
+  document.getElementById('bestVal').textContent = getBest();
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function(){ toast.classList.remove('show'); }, 1200);
+  }
+
+  function renderHearts(){
+    var html='';
+    for(var i=0;i<3;i++){
+      var lost = i >= lives;
+      html += '<svg class="ff-heart" viewBox="0 0 24 24"><path fill="'+(lost?'rgba(255,255,255,.12)':'#00E5C7')+'" d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2 5 5.6 5c2 0 3.4 1 4.4 2.4C11 6 12.4 5 14.4 5 18 5 19.6 8.6 22 11.7 19.5 16.4 12 21 12 21z"/></svg>';
+    }
+    heartsRow.innerHTML = html;
+  }
+
+  function updateHud(){
+    scoreVal.textContent = score;
+    comboVal.textContent = '×'+(1+Math.min(2, Math.floor(streak/3))*0.5).toFixed(1).replace('.0','');
+    roundsVal.textContent = roundsSolved;
+    renderHearts();
+  }
+
+  function startRun(){
+    score=0; lives=3; streak=0; roundsSolved=0; difficultyFactor=1;
+    deck = shuffle(ROUNDS); deckIdx=0;
+    startScreen.classList.add('hidden');
+    overScreen.classList.add('hidden');
+    gameScreen.classList.remove('hidden');
+    updateHud();
+    nextRound();
+  }
+
+  function nextRound(){
+    if(deckIdx >= deck.length){ deck = shuffle(ROUNDS); deckIdx=0; difficultyFactor *= 0.92; }
+    current = deck[deckIdx++];
+    current.faultLabel = pickFaultLabel(current);
+    answered=false; hintUsed=false;
+    hintBtn.disabled=false; hintBtn.style.opacity=1;
+
+    roundTag.textContent = 'Defect';
+    roundSymptom.textContent = current.symptom;
+
+    diagramArea.innerHTML='';
+    current.slots.forEach(function(slot, i){
+      if(i>0){
+        var wire=document.createElement('div');
+        wire.className='ff-wire';
+        diagramArea.appendChild(wire);
+      }
+      var col=document.createElement('div');
+      col.className='ff-slot';
+      var btn=document.createElement('button');
+      btn.className='ff-icon-btn'+(slot.t==='source'?' static':'');
+      btn.innerHTML = iconMarkup(slot.t, false); // always neutral until revealed — don't give away the answer
+      if(slot.t !== 'source'){
+        btn.addEventListener('click', function(){ onIconTap(btn, i); });
+      }
+      col.appendChild(btn);
+      var lbl=document.createElement('div');
+      lbl.className='ff-slot-label';
+      lbl.textContent = slot.l;
+      col.appendChild(lbl);
+      diagramArea.appendChild(col);
+    });
+
+    timerDur = Math.max(10, current.slots.length*4.5) * difficultyFactor;
+    timeLeft = timerDur;
+    if(timerHandle) clearInterval(timerHandle);
+    timerHandle = setInterval(tick, 100);
+    updateHud();
+  }
+
+  function tick(){
+    if(answered) return;
+    timeLeft -= 0.1;
+    var pct = Math.max(0, timeLeft/timerDur*100);
+    timerFill.style.width = pct+'%';
+    timerFill.classList.toggle('warn', pct < 30);
+    if(timeLeft <= 0){
+      clearInterval(timerHandle);
+      resolveRound(false, true);
+    }
+  }
+
+  function onIconTap(btn, idx){
+    if(answered) return;
+    resolveRound(idx === current.faultIdx, false, btn);
+  }
+
+  function resolveRound(correct, timedOut, btnClicked){
+    answered = true;
+    clearInterval(timerHandle);
+    var allBtns = diagramArea.querySelectorAll('.ff-icon-btn');
+    var faultBtn = allBtns[current.faultIdx];
+    faultBtn.innerHTML = iconMarkup(current.slots[current.faultIdx].t, true); // reveal the fault visual now
+
+    if(correct){
+      streak++;
+      var mult = 1+Math.min(2, Math.floor(streak/3))*0.5;
+      var bonus = Math.round((40 + timeLeft*8) * mult);
+      score += bonus;
+      roundsSolved++;
+      faultBtn.classList.add('correct');
+      showToast('Found it: '+current.faultLabel+'  +'+bonus);
+      updateHud();
+      setTimeout(nextRound, 1000);
+    } else {
+      streak=0;
+      lives--;
+      if(btnClicked) btnClicked.classList.add('wrong-pick');
+      faultBtn.classList.add('correct');
+      showToast((timedOut?'Too slow — ':'Not quite — ')+'it was: '+current.faultLabel);
+      updateHud();
+      if(lives<=0){
+        setTimeout(endRun, 1100);
+      } else {
+        setTimeout(nextRound, 1300);
+      }
+    }
+  }
+
+  hintBtn.addEventListener('click', function(){
+    if(hintUsed || answered) return;
+    hintUsed=true;
+    hintBtn.disabled=true; hintBtn.style.opacity=.5;
+    score = Math.max(0, score-50);
+    updateHud();
+    var allBtns = diagramArea.querySelectorAll('.ff-icon-btn');
+    var faultBtn = allBtns[current.faultIdx];
+    faultBtn.style.borderColor = '#FFC24B';
+    faultBtn.style.boxShadow = '0 0 0 2px #FFC24B inset';
+    showToast('Hint: look closely at "'+current.slots[current.faultIdx].l+'"');
+  });
+
+  function endRun(){
+    if(timerHandle) clearInterval(timerHandle);
+    gameScreen.classList.add('hidden');
+    overScreen.classList.remove('hidden');
+    var best = getBest();
+    if(score > best){ best = score; setBest(best); }
+    document.getElementById('finalScore').textContent = score;
+    document.getElementById('finalRounds').textContent = roundsSolved;
+    document.getElementById('finalBest').textContent = best;
+    document.getElementById('bestVal').textContent = best;
+  }
+
+  document.getElementById('startBtn').addEventListener('click', startRun);
+  document.getElementById('againBtn').addEventListener('click', startRun);
+  document.getElementById('backBtn').addEventListener('click', function(){ window.location.href='games.html'; });
+
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+</body>
+</html>

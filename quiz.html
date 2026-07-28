@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Engineering Quiz | Engineerz CorneR</title>
+<meta name="description" content="Five new multiple-choice engineering questions every day, spanning Electrical, Mechanical, HVAC, Civil, Automation, General and Project Management.">
+<link rel="canonical" href="https://www.engineerzcorner.com/quiz">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Daily Engineering Quiz | Engineerz CorneR">
+<meta property="og:description" content="Five new multiple-choice engineering questions every day, spanning Electrical, Mechanical, HVAC, Civil, Automation, General and Project Management.">
+<meta property="og:url" content="https://www.engineerzcorner.com/quiz">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Engineering Quiz | Engineerz CorneR">
+<meta name="twitter:description" content="Five new multiple-choice engineering questions every day, spanning Electrical, Mechanical, HVAC, Civil, Automation, General and Project Management.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#009999; --teal-dark:#00696D; --petrol:#003D4C;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --green:#16A34A; --red:#DC2626;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:640px;margin:0 auto;padding:0 18px 100px;}
+  a{color:var(--teal-dark);}
+
+  nav.qz-nav{background:var(--petrol);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .qz-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .qz-nav-word span{color:#3FE8E8;}
+  .qz-nav a.qz-back{font-family:var(--font-mono);font-size:11px;color:#B8D9D9;text-decoration:none;letter-spacing:.03em;}
+  .qz-nav a.qz-back:hover{color:#fff;}
+
+  .qz-hero{text-align:center;margin:30px 0 10px;}
+  .qz-hero-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700;}
+  .qz-hero h1{font-family:var(--font-display);font-size:24px;font-weight:800;margin:8px 0 4px;color:var(--ink);}
+  .qz-hero-sub{font-size:13px;color:var(--ink-dim);}
+
+  .quiz-shell{max-width:640px;margin:24px auto 0;}
+  .quiz-progress{display:flex;gap:6px;justify-content:center;margin:6px 0 22px;}
+  .quiz-dot{width:9px;height:9px;border-radius:50%;background:var(--line);transition:background .25s, transform .25s;}
+  .quiz-dot.done-correct{background:var(--green);}
+  .quiz-dot.done-wrong{background:var(--red);}
+  .quiz-dot.current{transform:scale(1.35);background:var(--teal);}
+
+  .quiz-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:26px 24px;box-shadow:0 1px 3px rgba(24,27,41,.06);animation:quizCardIn .38s cubic-bezier(.22,.9,.34,1);}
+  @keyframes quizCardIn{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+
+  .quiz-badge{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--petrol);color:#F3EEDD;border-radius:20px;padding:3px 11px;margin-bottom:14px;}
+  .quiz-q{font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--ink);line-height:1.4;margin:0 0 20px;}
+
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{text-align:left;font-family:var(--font-body,inherit);font-size:14.5px;color:var(--ink);background:var(--bg-2);border:1.5px solid var(--line);border-radius:10px;padding:13px 16px;cursor:pointer;transition:all .15s ease;position:relative;width:100%;}
+  .quiz-opt:hover:not(:disabled){border-color:var(--teal-dark);background:rgba(0,153,153,.06);}
+  .quiz-opt:disabled{cursor:default;}
+  .quiz-opt.opt-correct{border-color:var(--green);background:rgba(22,163,74,.12);font-weight:700;animation:quizPulseGreen .5s ease;}
+  .quiz-opt.opt-wrong{border-color:var(--red);background:rgba(220,38,38,.1);animation:quizShake .4s ease;}
+  .quiz-opt.opt-faded{opacity:.5;}
+  @keyframes quizPulseGreen{ 0%{transform:scale(1);} 40%{transform:scale(1.02);box-shadow:0 0 0 4px rgba(22,163,74,.18);} 100%{transform:scale(1);} }
+  @keyframes quizShake{ 0%,100%{transform:translateX(0);} 25%{transform:translateX(-6px);} 50%{transform:translateX(5px);} 75%{transform:translateX(-3px);} }
+
+  .quiz-explain{margin-top:16px;padding:13px 15px;border-radius:8px;background:var(--bg-2);border-left:3px solid var(--teal-dark);font-size:13px;color:var(--ink-dim);line-height:1.55;animation:quizExplainIn .3s ease;}
+  @keyframes quizExplainIn{ from{opacity:0; max-height:0;} to{opacity:1; max-height:200px;} }
+
+  .quiz-next-row{margin-top:18px;text-align:right;}
+  .quiz-next-btn{font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--petrol);color:#F3EEDD;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;transition:transform .15s ease;}
+  .quiz-next-btn:hover{transform:translateY(-1px);}
+
+  .quiz-summary{text-align:center;padding:10px 0;}
+  .quiz-score-ring{width:120px;height:120px;margin:0 auto 18px;position:relative;}
+  .quiz-score-ring svg{transform:rotate(-90deg);}
+  .quiz-score-ring circle{fill:none;stroke-width:9;}
+  .quiz-score-ring .qsr-bg{stroke:var(--line);}
+  .quiz-score-ring .qsr-fg{stroke:var(--green);stroke-linecap:round;transition:stroke-dashoffset 1s cubic-bezier(.22,.9,.34,1);}
+  .quiz-score-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--ink);}
+  .quiz-summary-title{font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--ink);margin:0 0 6px;}
+  .quiz-summary-sub{font-size:13px;color:var(--ink-dim);margin:0 0 20px;}
+  .quiz-restart-btn{font-family:var(--font-mono);font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:var(--bg-2);color:var(--ink-dim);border:1px solid var(--line);border-radius:8px;padding:9px 16px;cursor:pointer;}
+  .quiz-restart-btn:hover{border-color:var(--teal-dark);color:var(--teal-dark);}
+
+  .quiz-already-done{text-align:center;padding:34px 24px;background:var(--bg);border:1px solid var(--line);border-radius:14px;}
+  .quiz-already-done .qad-icon{font-size:34px;margin-bottom:10px;}
+  .quiz-already-done h2{font-family:var(--font-display);font-size:18px;margin:0 0 6px;color:var(--ink);}
+  .quiz-already-done p{font-size:13px;color:var(--ink-dim);margin:0 0 4px;}
+  .quiz-already-done .qad-score{font-family:var(--font-display);font-size:30px;font-weight:800;color:var(--teal-dark);margin:12px 0;}
+
+  footer.qz-footer{text-align:center;font-size:11px;color:var(--ink-faint);margin-top:36px;font-family:var(--font-mono);}
+  footer.qz-footer a{color:var(--ink-faint);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Daily Engineering Quiz",
+      "item": "https://www.engineerzcorner.com/quiz"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Daily Engineering Quiz",
+  "description": "Five new multiple-choice engineering questions every day, spanning Electrical, Mechanical, HVAC, Civil, Automation, General and Project Management.",
+  "url": "https://www.engineerzcorner.com/quiz"
+}
+</script>
+<link rel="stylesheet" href="assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Today&#x27;s 5 Questions</span></div></nav>
+
+
+<nav class="qz-nav">
+  <div class="qz-nav-word">Engineerz<span>CorneR</span></div>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <a class="qz-back" href="notes/index.html">Study the notes &rarr;</a>
+    <a class="qz-back" href="games.html">&larr; Games</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="qz-hero">
+    <div class="qz-hero-eyebrow">Daily Engineering Quiz</div>
+    <h1>Today's 5 Questions</h1>
+    <p class="qz-hero-sub">A new mix every day, across Electrical, Mechanical, HVAC, Civil, Automation, General and Project Management.</p>
+  </div>
+
+  <div class="quiz-shell" id="quizShell"></div>
+
+  <footer class="qz-footer">Come back tomorrow for 5 new questions. <a href="flashcards.html">Try the symbol flashcards →</a></footer>
+</div>
+
+<script>
+var QUIZ_BANK = [
+  {d:"Electrical", q:"In the formula P = VI, if voltage is doubled and current stays the same, what happens to power?", opts:["It halves","It stays the same","It doubles","It quadruples"], a:2, e:"Power is directly proportional to voltage when current is constant, so doubling V doubles P."},
+  {d:"Electrical", q:"What does an RCD (residual current device) actually detect?", opts:["Overcurrent on the live conductor","An imbalance between live and neutral current","Overheating of the cable insulation","Low supply voltage"], a:1, e:"An RCD compares live and neutral current — any imbalance means current is leaking to earth, which trips it."},
+  {d:"Electrical", q:"Which cable insulation type is generally rated for the highest continuous operating temperature?", opts:["PVC","XLPE","Rubber","Bare copper"], a:1, e:"XLPE (cross-linked polyethylene) typically handles up to 90°C continuous, versus about 70°C for PVC."},
+  {d:"Electrical", q:"Why is power transmitted at high voltage over long distances?", opts:["High voltage is safer for wildlife","It reduces current, which reduces I²R losses","It reduces the number of towers needed","Transformers only work at high voltage"], a:1, e:"For a given power, higher voltage means lower current, and resistive losses scale with current squared."},
+  {d:"Electrical", q:"What is the main functional difference between a fuse and a circuit breaker?", opts:["A fuse can be reset; a breaker cannot","A breaker sacrifices itself; a fuse resets","A fuse must be replaced after operating; a breaker can be reset","There is no functional difference"], a:2, e:"A fuse element melts and must be replaced, while a breaker's contacts can be reset and reused."},
+  {d:"Electrical", q:"In a three-phase system, what is the approximate relationship between line voltage and phase voltage in a star (wye) connection?", opts:["Line voltage = phase voltage", "Line voltage = phase voltage × √3", "Line voltage = phase voltage × 3", "Line voltage = phase voltage ÷ √3"], a:1, e:"In a star connection, line voltage is √3 (about 1.732) times the phase voltage."},
+  {d:"Electrical", q:"What does a low power factor mean for a supply?", opts:["The load draws more real power than it needs","The load draws more current than needed to deliver its real power", "The voltage is too low", "The frequency is unstable"], a:1, e:"A low power factor means more apparent (kVA) current flows than is actually needed to do useful (kW) work."},
+  {d:"Electrical", q:"What is 'skin effect' in a large AC conductor?", opts:["Current concentrates near the conductor's outer surface","Current concentrates at the conductor's center", "The insulation degrades from UV exposure", "The conductor physically expands with heat"], a:0, e:"At higher AC frequencies, current crowds toward the surface, making the conductor's core less effective."},
+  {d:"Mechanical", q:"What does the Reynolds number in fluid mechanics primarily predict?", opts:["Fluid density", "Whether flow is laminar or turbulent", "The boiling point of the fluid", "Pipe material compatibility"], a:1, e:"Reynolds number compares inertial to viscous forces, indicating whether flow will be smooth (laminar) or chaotic (turbulent)."},
+  {d:"Mechanical", q:"What primarily causes pump cavitation?", opts:["Too much suction head", "Vapor bubbles forming where local pressure drops below the fluid's vapor pressure", "Excessive discharge pressure", "Running the pump too slowly"], a:1, e:"When local pressure at the impeller drops below the fluid's vapor pressure, bubbles form and then violently collapse."},
+  {d:"Mechanical", q:"On a stress-strain curve, what does the point just past the elastic limit represent?", opts:["Ultimate tensile strength", "Yield point — where permanent (plastic) deformation begins", "Fracture point", "Fatigue limit"], a:1, e:"The yield point marks where the material stops returning to its original shape after the load is removed."},
+  {d:"Mechanical", q:"Which power transmission method is generally the quietest and most tolerant of shaft misalignment?", opts:["Gears", "Belts", "Direct rigid coupling", "Chains"], a:1, e:"Belts flex and slip slightly, absorbing misalignment and vibration better than rigid gears or couplings."},
+  {d:"Mechanical", q:"What is the defining difference between preventive and predictive maintenance?", opts:["Preventive is scheduled by time or usage; predictive is triggered by condition data", "Predictive is always cheaper", "Preventive only applies to rotating equipment", "There is no real difference"], a:0, e:"Preventive maintenance follows a fixed schedule; predictive maintenance acts on actual condition-monitoring data."},
+  {d:"Mechanical", q:"Why do metals sometimes fail from fatigue even when the load never exceeds their yield strength?", opts:["Fatigue only affects non-metals", "Repeated cyclic loading below yield can still initiate and grow microscopic cracks over time", "Fatigue is caused by corrosion alone", "It only happens at very high temperatures"], a:1, e:"Repeated stress cycles, even below yield strength, can nucleate and slowly propagate cracks until sudden failure."},
+  {d:"HVAC", q:"What's the key difference between sensible and latent heat in an HVAC load?", opts:["Sensible heat changes temperature; latent heat changes moisture content at constant temperature", "Latent heat is always larger", "Sensible heat only applies to heating, not cooling", "They are the same thing"], a:0, e:"Sensible heat changes dry-bulb temperature; latent heat changes humidity without changing temperature."},
+  {d:"HVAC", q:"What does MERV rating measure on an air filter?", opts:["Airflow resistance only", "How effectively the filter captures particles of a given size range", "The filter's fire resistance", "Filter replacement frequency"], a:1, e:"MERV (Minimum Efficiency Reporting Value) rates a filter's ability to capture particles of a specified size."},
+  {d:"HVAC", q:"In a refrigeration cycle, what is the basic job of the compressor?", opts:["Cools the refrigerant", "Raises the refrigerant's pressure and temperature so it can reject heat", "Expands the refrigerant to drop its pressure", "Filters particulates from the refrigerant"], a:1, e:"The compressor raises pressure (and temperature) so heat can be rejected at the condenser, driving the cycle."},
+  {d:"HVAC", q:"Why is fan energy so sensitive to speed reduction in a variable-speed system?", opts:["Fan power scales linearly with speed", "Fan power scales roughly with the cube of speed", "Fan energy is unrelated to speed", "Fans always use the same power regardless of speed"], a:1, e:"The fan affinity laws state power scales with the cube of speed, so small speed cuts save disproportionate energy."},
+  {d:"HVAC", q:"What does a building operating at 'positive pressure' relative to outside mean?", opts:["Air tends to leak out through gaps rather than infiltrate", "The building's air is more humid than outside", "The HVAC system is malfunctioning", "The building uses more energy than negative-pressure buildings"], a:0, e:"Positive pressure means indoor air pushes outward through any leaks, generally limiting uncontrolled infiltration."},
+  {d:"Civil", q:"Why does reinforced concrete use steel rebar?", opts:["Steel is cheaper than concrete", "Concrete is strong in compression but weak in tension, and steel is strong in tension", "Steel speeds up the curing process", "Rebar prevents concrete from cracking during mixing"], a:1, e:"Concrete resists compression well but fails easily in tension; rebar supplies the tensile strength concrete lacks."},
+  {d:"Civil", q:"What is 'settlement' in a foundation, as a failure mode?", opts:["The foundation collapsing suddenly under overload", "Gradual, sometimes uneven sinking of a foundation into the soil over time", "Cracking caused only by poor concrete mix", "A foundation shifting sideways during an earthquake"], a:1, e:"Settlement is the foundation sinking into the soil, which can cause serious damage even without overload failure."},
+  {d:"Civil", q:"Why does concrete curing require water, not just time?", opts:["Water washes away impurities", "Concrete gains strength through an ongoing chemical reaction (hydration) that needs water", "Water simply cools the concrete down", "It doesn't — curing is really about drying"], a:1, e:"Concrete hardens via hydration, a chemical reaction between cement and water that continues well past initial set."},
+  {d:"Civil", q:"What decides whether a foundation should be shallow or deep?", opts:["Only the building's height", "Whether the soil near the surface can adequately support the load, or whether it must reach a stronger stratum", "Local weather patterns", "The color of the soil"], a:1, e:"If shallow soil is too weak or compressible, deep foundations bypass it to bear on stronger material further down."},
+  {d:"Automation", q:"In a PID controller, what does the 'I' (integral) term primarily correct for?", opts:["Sudden disturbances only", "Steady-state (persistent) error that the proportional term alone cannot eliminate", "Overshoot caused by fast setpoint changes", "Sensor noise"], a:1, e:"The integral term accumulates past error over time, driving out the steady-state offset that proportional control alone leaves behind."},
+  {d:"Automation", q:"Why do 4-20mA current loops start at 4mA instead of 0mA?", opts:["4mA is easier for wiring standards", "It creates a detectable 'live zero' so a broken wire (0mA) is distinguishable from a real low reading", "It reduces power consumption", "It is purely a historical accident with no technical reason"], a:1, e:"Starting the range above zero means a dead loop (0mA) is clearly a fault, not a valid low-end reading."},
+  {d:"Automation", q:"What is the core purpose of a Safety Instrumented System (SIS)?", opts:["To replace the normal process control system entirely", "To act as an independent layer that intervenes specifically when the regular control system fails to prevent a hazard", "To speed up the PLC scan cycle", "To log historical process data"], a:1, e:"An SIS is a separate, independent protection layer that only acts when the basic process control has already failed to prevent a hazardous condition."},
+  {d:"Automation", q:"What does a valve positioner do?", opts:["Physically moves the process fluid", "Closes the loop on the valve's actual stem position to make sure it reaches the commanded position", "Converts 4-20mA to a digital signal only", "Provides overpressure protection"], a:1, e:"A positioner measures actual valve position and corrects it, ensuring the valve really reaches where it was told to go."},
+  {d:"Automation", q:"What's the essential difference between a PLC's discrete and analog I/O?", opts:["Discrete I/O only exists on older PLCs", "Discrete I/O is binary (on/off); analog I/O represents a continuous range of values", "Analog I/O is always safer", "There is no real functional difference"], a:1, e:"Discrete I/O carries simple on/off states, while analog I/O represents a continuously variable signal like 4-20mA."},
+  {d:"General", q:"When converting a measurement between unit systems, which is the most reliable practice?", opts:["Round early to keep numbers simple", "Carry full precision through the conversion and round only the final answer", "Always use the more familiar unit as the reference", "Skip conversion if the difference seems small"], a:1, e:"Rounding intermediate values compounds error; keeping full precision until the final step avoids that."},
+  {d:"General", q:"What does 'markup' typically refer to in project costing, as distinct from 'margin'?", opts:["The same thing as margin, just a different name", "A percentage added on top of cost, whereas margin is profit expressed as a percentage of the selling price", "A discount applied to the final price", "A tax applied at the point of sale"], a:1, e:"Markup is calculated on cost; margin is calculated on the selling price — the same dollar profit gives two different percentages."},
+  {d:"General", q:"In engineering drawings, what does a dashed (hidden) line typically represent?", opts:["A dimension line", "An edge or feature that is hidden from the current view", "The cutting plane of a section view", "A centerline of symmetry"], a:1, e:"Hidden lines show edges or features that exist but aren't visible from the drawing's current viewing angle."},
+  {d:"Project Management", q:"In a RACI matrix, what does the 'A' role represent?", opts:["The person who actually performs the work", "The person who owns the outcome and is ultimately answerable for it — only one per task", "Anyone who is just kept informed", "The person consulted for input before a decision"], a:1, e:"'Accountable' is the single owner ultimately answerable for the task's outcome, distinct from who actually does the work ('Responsible')."},
+  {d:"Project Management", q:"In Earned Value Management, what does a Schedule Performance Index (SPI) below 1.0 indicate?", opts:["The project is ahead of schedule", "The project is behind schedule relative to the plan", "The project is over budget", "The metric doesn't relate to schedule at all"], a:1, e:"SPI = Earned Value ÷ Planned Value. A value below 1.0 means less work has been completed than was planned by this point."},
+  {d:"Project Management", q:"What is the primary purpose of a permit-to-work system?", opts:["To track employee attendance", "To formally document and control the precautions needed before hazardous work starts, removing reliance on memory alone", "To approve project budgets", "To schedule routine maintenance visits"], a:1, e:"A permit-to-work formalizes hazard checks and precautions in writing, so safety doesn't depend on someone simply remembering them."},
+  {d:"Project Management", q:"What is the main difference between a risk register's 'likelihood' and 'impact' scores?", opts:["They measure the same thing in different units", "Likelihood is the probability of the risk occurring; impact is the severity of the consequence if it does", "Likelihood only applies to financial risks", "Impact is always rated before likelihood is known"], a:1, e:"Likelihood is how probable the risk is; impact is how bad the consequences would be — multiplying the two gives an overall risk score."}
+];
+
+(function(){
+  function seededShuffle(arr, seed){
+    var a = arr.slice();
+    var s = seed;
+    function rnd(){ s = (s * 9301 + 49297) % 233280; return s / 233280; }
+    for(var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(rnd() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  var epochDay = Math.floor(Date.now() / 86400000);
+  var todayStr = new Date().toISOString().slice(0,10);
+  var order = seededShuffle(QUIZ_BANK.map(function(_,i){return i;}), epochDay);
+  var todaysQuestions = order.slice(0, 5).map(function(i){ return QUIZ_BANK[i]; });
+
+  var shell = document.getElementById('quizShell');
+  var current = 0;
+  var results = []; // 'correct' | 'wrong'
+  var STORE_KEY = 'toolkit_quizDate';
+  var SCORE_KEY = 'toolkit_quizScore';
+
+  var savedDate = null, savedScore = null;
+  try{
+    savedDate = localStorage.getItem(STORE_KEY);
+    savedScore = localStorage.getItem(SCORE_KEY);
+  }catch(e){}
+
+  if(savedDate === todayStr && savedScore !== null){
+    renderAlreadyDone(parseInt(savedScore, 10));
+  } else {
+    renderProgress();
+    renderQuestion();
+  }
+
+  function renderAlreadyDone(score){
+    shell.innerHTML =
+      '<div class="quiz-already-done">' +
+        '<div class="qad-icon">✅</div>' +
+        '<h2>You already did today\'s quiz</h2>' +
+        '<p>Come back tomorrow for 5 new questions.</p>' +
+        '<div class="qad-score">' + score + ' / 5</div>' +
+      '</div>';
+  }
+
+  function renderProgress(){
+    var html = '<div class="quiz-progress" id="quizProgress">';
+    for(var i = 0; i < todaysQuestions.length; i++){
+      var cls = 'quiz-dot';
+      if(i < results.length) cls += results[i] === 'correct' ? ' done-correct' : ' done-wrong';
+      else if(i === current) cls += ' current';
+      html += '<div class="' + cls + '"></div>';
+    }
+    html += '</div><div id="quizCardWrap"></div>';
+    shell.innerHTML = html;
+  }
+
+  function renderQuestion(){
+    renderProgress();
+    var wrap = document.getElementById('quizCardWrap');
+    var item = todaysQuestions[current];
+    var html = '<div class="quiz-card">' +
+      '<div class="quiz-badge">' + item.d + ' &middot; Question ' + (current + 1) + ' of ' + todaysQuestions.length + '</div>' +
+      '<div class="quiz-q">' + item.q + '</div>' +
+      '<div class="quiz-options">';
+    item.opts.forEach(function(opt, idx){
+      html += '<button class="quiz-opt" data-idx="' + idx + '">' + opt + '</button>';
+    });
+    html += '</div><div id="quizExplainWrap"></div></div>';
+    wrap.innerHTML = html;
+
+    var buttons = wrap.querySelectorAll('.quiz-opt');
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var idx = parseInt(btn.getAttribute('data-idx'), 10);
+        answer(idx, buttons, item);
+      });
+    });
+  }
+
+  function answer(idx, buttons, item){
+    var correct = idx === item.a;
+    results.push(correct ? 'correct' : 'wrong');
+    buttons.forEach(function(btn, i){
+      btn.disabled = true;
+      if(i === item.a) btn.classList.add('opt-correct');
+      else if(i === idx) btn.classList.add('opt-wrong');
+      else btn.classList.add('opt-faded');
+    });
+    document.getElementById('quizExplainWrap').innerHTML =
+      '<div class="quiz-explain">' + item.e + '</div>' +
+      '<div class="quiz-next-row"><button class="quiz-next-btn" id="quizNextBtn">' +
+      (current < todaysQuestions.length - 1 ? 'Next question →' : 'See results →') +
+      '</button></div>';
+    document.getElementById('quizNextBtn').addEventListener('click', function(){
+      current++;
+      if(current < todaysQuestions.length){
+        renderQuestion();
+      } else {
+        finish();
+      }
+    });
+    renderProgress();
+    // re-render card since renderProgress wipes quizCardWrap innerHTML container but not content;
+    // guard: renderProgress rebuilds shell, so re-attach current state
+    reattachCurrentCard(buttons, item, idx);
+  }
+
+  function reattachCurrentCard(buttons, item, chosenIdx){
+    var wrap = document.getElementById('quizCardWrap');
+    var html = '<div class="quiz-card">' +
+      '<div class="quiz-badge">' + item.d + ' &middot; Question ' + (current + 1) + ' of ' + todaysQuestions.length + '</div>' +
+      '<div class="quiz-q">' + item.q + '</div>' +
+      '<div class="quiz-options">';
+    item.opts.forEach(function(opt, idx){
+      var cls = 'quiz-opt';
+      if(idx === item.a) cls += ' opt-correct';
+      else if(idx === chosenIdx) cls += ' opt-wrong';
+      else cls += ' opt-faded';
+      html += '<button class="' + cls + '" disabled>' + opt + '</button>';
+    });
+    html += '</div><div class="quiz-explain">' + item.e + '</div>' +
+      '<div class="quiz-next-row"><button class="quiz-next-btn" id="quizNextBtnReattach">' +
+      (current < todaysQuestions.length - 1 ? 'Next question →' : 'See results →') +
+      '</button></div></div>';
+    wrap.innerHTML = html;
+    document.getElementById('quizNextBtnReattach').addEventListener('click', function(){
+      current++;
+      if(current < todaysQuestions.length){
+        renderQuestion();
+      } else {
+        finish();
+      }
+    });
+  }
+
+  function finish(){
+    var score = results.filter(function(r){ return r === 'correct'; }).length;
+    var total = todaysQuestions.length;
+    try{
+      localStorage.setItem(STORE_KEY, todayStr);
+      localStorage.setItem(SCORE_KEY, String(score));
+    }catch(e){}
+
+    var pct = score / total;
+    var radius = 51, circumference = 2 * Math.PI * radius;
+    var offset = circumference * (1 - pct);
+    var msg = score === total ? 'Perfect score!' : (score >= total * 0.6 ? 'Nice work.' : 'Worth a second look tomorrow.');
+
+    shell.innerHTML =
+      '<div class="quiz-summary">' +
+        '<div class="quiz-score-ring">' +
+          '<svg viewBox="0 0 120 120" width="120" height="120">' +
+            '<circle class="qsr-bg" cx="60" cy="60" r="' + radius + '"></circle>' +
+            '<circle class="qsr-fg" cx="60" cy="60" r="' + radius + '" stroke-dasharray="' + circumference + '" stroke-dashoffset="' + offset + '"></circle>' +
+          '</svg>' +
+          '<div class="quiz-score-num">' + score + '/' + total + '</div>' +
+        '</div>' +
+        '<div class="quiz-summary-title">' + msg + '</div>' +
+        '<div class="quiz-summary-sub">Come back tomorrow for 5 new questions across every discipline.</div>' +
+        '<a href="index.html" class="quiz-restart-btn" style="text-decoration:none;display:inline-block;">Back to home</a>' +
+      '</div>';
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+</body>
+</html>

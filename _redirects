@@ -1,0 +1,8 @@
+/mechanical/mechanical.html /mechanical/notes.html 301
+
+# Note: no rules needed to collapse /dir, /dir/, /page.html onto canonical
+# URLs — Cloudflare Pages already does that automatically at the platform
+# level (/page.html -> /page, /dir/index.html -> /dir/). Canonical tags,
+# sitemap.xml, and this file were previously fighting that behavior with
+# redirects pointing the opposite direction, which produced a redirect loop
+# on every directory page and was why Google couldn't index them.

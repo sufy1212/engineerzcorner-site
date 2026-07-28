@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quickfire — Engineering Calc Speed Game | Engineerz CorneR</title>
+<meta name="description" content="An endless, never-repeating calculation sprint. Fresh randomized engineering problems every round — Ohm's law, power, unit conversions, HVAC, civil, solar, EVM and more. Beat the clock, build your streak.">
+<link rel="canonical" href="https://www.engineerzcorner.com/quickfire">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Quickfire — Engineering Calc Speed Game | Engineerz CorneR">
+<meta property="og:description" content="An endless, never-repeating calculation sprint across every engineering discipline on the site.">
+<meta property="og:url" content="https://www.engineerzcorner.com/quickfire">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quickfire — Engineering Calc Speed Game | Engineerz CorneR">
+<meta name="twitter:description" content="An endless, never-repeating calculation sprint across every engineering discipline on the site.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#009999; --teal-dark:#00696D; --petrol:#003D4C;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --green:#16A34A; --red:#DC2626; --amber:#D97706;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:640px;margin:0 auto;padding:0 18px 100px;}
+  a{color:var(--teal-dark);}
+
+  nav.qf-nav{background:var(--petrol);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .qf-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .qf-nav-word span{color:#3FE8E8;}
+  nav.qf-nav a.qf-back{font-family:var(--font-mono);font-size:11px;color:#B8D9D9;text-decoration:none;letter-spacing:.03em;}
+  nav.qf-nav a.qf-back:hover{color:#fff;}
+
+  .qf-hero{text-align:center;margin:30px 0 6px;}
+  .qf-hero-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700;}
+  .qf-hero h1{font-family:var(--font-display);font-size:24px;font-weight:800;margin:8px 0 4px;color:var(--ink);}
+  .qf-hero-sub{font-size:13px;color:var(--ink-dim);margin:0 auto;max-width:460px;}
+
+  .qf-cats{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0 6px;}
+  .qf-cat-btn{font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;background:var(--bg);border:1px solid var(--line);color:var(--ink-dim);padding:7px 13px;border-radius:20px;cursor:pointer;}
+  .qf-cat-btn.active{background:var(--petrol);border-color:var(--petrol);color:#F3EEDD;}
+
+  .qf-stage{margin-top:22px;}
+
+  .qf-start{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:32px 24px;text-align:center;box-shadow:0 1px 3px rgba(24,27,41,.06);}
+  .qf-best{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);margin-bottom:18px;}
+  .qf-best b{color:var(--teal-dark);}
+  .qf-start-btn{font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--petrol);color:#F3EEDD;border:none;border-radius:10px;padding:14px 30px;cursor:pointer;transition:transform .15s ease;}
+  .qf-start-btn:hover{transform:translateY(-1px);}
+  .qf-rules{font-size:12.5px;color:var(--ink-dim);margin-top:16px;line-height:1.6;}
+
+  .qf-hud{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-family:var(--font-mono);}
+  .qf-hud-block{text-align:center;}
+  .qf-hud-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+  .qf-hud-val{font-size:20px;font-weight:700;color:var(--ink);}
+  .qf-hud-val.qf-timer-warn{color:var(--red);}
+  .qf-streak{font-size:20px;font-weight:700;color:var(--teal-dark);}
+
+  .qf-timebar-track{height:6px;border-radius:4px;background:var(--line);overflow:hidden;margin-bottom:20px;}
+  .qf-timebar-fill{height:100%;background:var(--teal);border-radius:4px;transition:width .2s linear, background .3s ease;}
+  .qf-timebar-fill.warn{background:var(--red);}
+
+  .qf-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:24px 22px;box-shadow:0 1px 3px rgba(24,27,41,.06);animation:qfCardIn .3s cubic-bezier(.22,.9,.34,1);}
+  @keyframes qfCardIn{ from{opacity:0; transform:scale(.97);} to{opacity:1; transform:scale(1);} }
+  .qf-cat-tag{display:flex;align-items:center;justify-content:center;gap:6px;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);text-align:center;margin-bottom:12px;}
+  .qf-cat-tag svg{width:13px;height:13px;}
+  .qf-q{font-family:var(--font-body);font-size:16px;color:var(--ink);line-height:1.55;text-align:center;margin:0 0 20px;min-height:66px;display:flex;align-items:center;justify-content:center;}
+  .qf-q-inner{display:block;}
+  .qf-q b{font-family:var(--font-mono);color:var(--petrol);}
+
+  .qf-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .qf-opt{font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--ink);background:var(--bg-2);border:1.5px solid var(--line);border-radius:10px;padding:14px 8px;cursor:pointer;transition:all .12s ease;}
+  .qf-opt:hover:not(:disabled){border-color:var(--teal-dark);background:rgba(0,153,153,.06);}
+  .qf-opt:disabled{cursor:default;}
+  .qf-opt.opt-correct{border-color:var(--green);background:rgba(22,163,74,.14);animation:qfPulseGreen .4s ease;}
+  .qf-opt.opt-wrong{border-color:var(--red);background:rgba(220,38,38,.1);animation:qfShake .35s ease;}
+  .qf-opt.opt-faded{opacity:.45;}
+  @keyframes qfPulseGreen{ 0%{transform:scale(1);} 40%{transform:scale(1.03);} 100%{transform:scale(1);} }
+  @keyframes qfShake{ 0%,100%{transform:translateX(0);} 25%{transform:translateX(-5px);} 50%{transform:translateX(4px);} 75%{transform:translateX(-3px);} }
+
+  .qf-toast{text-align:center;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;min-height:16px;margin-top:12px;color:var(--ink-faint);}
+  .qf-toast.good{color:var(--green);}
+  .qf-toast.bad{color:var(--red);}
+
+  .qf-summary{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 1px 3px rgba(24,27,41,.06);}
+  .qf-summary-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;}
+  .qf-summary-score{font-family:var(--font-display);font-size:44px;font-weight:800;color:var(--ink);margin:8px 0 2px;}
+  .qf-summary-sub{font-size:13px;color:var(--ink-dim);margin-bottom:6px;}
+  .qf-summary-new{display:inline-block;font-family:var(--font-mono);font-size:11px;font-weight:700;color:#fff;background:var(--teal-dark);padding:4px 12px;border-radius:20px;margin-bottom:14px;}
+  .qf-summary-stats{display:flex;justify-content:center;gap:26px;margin:18px 0 22px;}
+  .qf-stat{text-align:center;}
+  .qf-stat-num{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--petrol);}
+  .qf-stat-lbl{font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;}
+  .qf-restart-btn{font-family:var(--font-mono);font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--petrol);color:#F3EEDD;border:none;border-radius:10px;padding:12px 24px;cursor:pointer;}
+  .qf-again-link{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);text-decoration:none;display:inline-block;margin-top:14px;}
+  .qf-again-link:hover{color:var(--teal-dark);}
+
+  .qf-footer{text-align:center;font-size:12px;color:var(--ink-faint);margin-top:22px;}
+  .qf-footer a{color:var(--teal-dark);text-decoration:none;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+    {"@type":"ListItem","position":2,"name":"Quickfire","item":"https://www.engineerzcorner.com/quickfire"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Quickfire",
+  "description": "An endless, never-repeating calculation sprint across every engineering discipline on the site.",
+  "url": "https://www.engineerzcorner.com/quickfire"
+}
+</script>
+<link rel="stylesheet" href="assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Quickfire</span></div></nav>
+
+
+<nav class="qf-nav">
+  <div class="qf-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="qf-back" href="games.html">&larr; Games</a>
+</nav>
+
+<div class="wrap">
+  <div class="qf-hero">
+    <div class="qf-hero-eyebrow">Endless Calc Sprint</div>
+    <h1>Quickfire</h1>
+    <p class="qf-hero-sub">Every problem is generated on the spot with fresh random numbers — Ohm's law, power, unit conversions, HVAC, civil, solar, EVM and more. It never repeats, so it never runs out.</p>
+  </div>
+
+  <div class="qf-cats" id="qfCats"></div>
+
+  <div class="qf-stage" id="qfStage"></div>
+
+  <div class="qf-footer">Prefer flashcards? <a href="flashcards.html">Study drawing symbols untimed →</a> Or take the <a href="quiz.html">daily engineering quiz →</a></div>
+</div>
+
+<script>
+(function(){
+  var ICONS = {
+    bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>',
+    cog: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
+    snow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="7" x2="20" y2="17"/><line x1="4" y1="17" x2="20" y2="7"/></svg>',
+    building: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="9" y1="6" x2="9" y2="6"/><line x1="9" y1="10" x2="9" y2="10"/><line x1="9" y1="14" x2="9" y2="14"/><line x1="15" y1="6" x2="15" y2="6"/><line x1="15" y1="10" x2="15" y2="10"/><line x1="15" y1="14" x2="15" y2="14"/></svg>',
+    sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
+    wrench: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 1 0-5.4 5.4L2 19l3 3 7.3-7.3a4 4 0 0 0 5.4-5.4l-3.14 3.14-2.83-2.83z"/></svg>',
+    clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 4V2h6v2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/></svg>'
+  };
+
+  // ---------- helpers ----------
+  function rand(min, max){ return Math.random() * (max - min) + min; }
+  function randInt(min, max){ return Math.floor(rand(min, max + 1)); }
+  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+  function fmt(v){
+    var av = Math.abs(v);
+    var d = av >= 1000 ? 0 : av >= 100 ? 1 : av >= 1 ? 2 : 3;
+    var s = v.toFixed(d);
+    // trim trailing zeros but keep at least one digit after decimal removed cleanly
+    if (s.indexOf('.') !== -1) s = s.replace(/0+$/,'').replace(/\.$/,'');
+    return s;
+  }
+  function withUnit(v, unit){ return fmt(v) + (unit ? ' ' + unit : ''); }
+
+  function makeChoices(correct, unit){
+    var seen = {};
+    var correctStr = withUnit(correct, unit);
+    seen[correctStr] = true;
+    var out = [correctStr];
+    var attempts = 0;
+    var factors = [0.1, 0.25, 0.5, 0.75, 1.25, 1.5, 2, 3, 5, 10];
+    while (out.length < 4 && attempts < 60){
+      attempts++;
+      var val;
+      if (Math.random() < 0.75 && correct !== 0){
+        val = correct * pick(factors);
+      } else {
+        var scale = Math.max(1, Math.abs(correct)) * rand(0.15, 0.6);
+        val = correct + (Math.random() < 0.5 ? -1 : 1) * scale;
+      }
+      var str = withUnit(val, unit);
+      if (!seen[str]){
+        seen[str] = true;
+        out.push(str);
+      }
+    }
+    // pad if still short (rare edge case)
+    var pad = 1;
+    while (out.length < 4){
+      var v2 = correct + pad; pad++;
+      var s2 = withUnit(v2, unit);
+      if (!seen[s2]){ seen[s2]=true; out.push(s2); }
+    }
+    return shuffle(out);
+  }
+
+  function shuffle(arr){
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  // ---------- question generators ----------
+  // Each generator returns {text, correct, unit, cat, icon}
+  var GEN = [];
+
+  function add(cat, icon, fn){ GEN.push({cat:cat, icon:icon, fn:fn}); }
+
+  // -- Electrical --
+  add('Electrical','bolt', function(){
+    var R = randInt(5,500), I = +rand(0.5,20).toFixed(1);
+    return {text:'A circuit has a resistance of <b>'+R+' \u03A9</b> and carries <b>'+I+' A</b>. What is the voltage (Ohm\u2019s law)?', correct:I*R, unit:'V'};
+  });
+  add('Electrical','bolt', function(){
+    var V = randInt(12,480), R = randInt(5,200);
+    return {text:'A <b>'+V+' V</b> supply is applied across a <b>'+R+' \u03A9</b> resistor. What current flows?', correct:V/R, unit:'A'};
+  });
+  add('Electrical','bolt', function(){
+    var V = randInt(110,415), I = +rand(1,50).toFixed(1), pf = +rand(0.8,1).toFixed(2);
+    return {text:'A single-phase load draws <b>'+I+' A</b> at <b>'+V+' V</b> with a power factor of <b>'+pf+'</b>. What is the real power?', correct:(V*I*pf)/1000, unit:'kW'};
+  });
+  add('Electrical','bolt', function(){
+    var V = randInt(380,690), I = +rand(2,120).toFixed(1), pf = +rand(0.8,0.98).toFixed(2);
+    return {text:'A three-phase motor draws <b>'+I+' A</b> per line at <b>'+V+' V</b> (line-to-line), power factor <b>'+pf+'</b>. What is the real power?', correct:(1.732*V*I*pf)/1000, unit:'kW'};
+  });
+  add('Electrical','bolt', function(){
+    var hp = randInt(1,200);
+    return {text:'A motor is rated at <b>'+hp+' HP</b>. What is that in kilowatts?', correct:hp*0.746, unit:'kW'};
+  });
+  add('Electrical','bolt', function(){
+    var kwh = randInt(50,5000), rate = +rand(0.08,0.35).toFixed(2);
+    return {text:'A facility uses <b>'+kwh+' kWh</b> in a month at a rate of <b>$'+rate+'/kWh</b>. What is the energy cost?', correct:kwh*rate, unit:'$'};
+  });
+  add('Electrical','bolt', function(){
+    var I = randInt(10,300), Rkm = +rand(0.2,2).toFixed(2), L = randInt(10,500);
+    return {text:'A feeder carries <b>'+I+' A</b> over <b>'+L+' m</b> of cable with a resistance of <b>'+Rkm+' \u03A9/km</b> (one-way). Approx. round-trip voltage drop?', correct:(2*I*Rkm*L)/1000, unit:'V'};
+  });
+
+  // -- Mechanical --
+  add('Mechanical','cog', function(){
+    var T = randInt(5,500), N = randInt(200,3600);
+    return {text:'A shaft transmits <b>'+T+' N\u00b7m</b> of torque at <b>'+N+' rpm</b>. What power is being transmitted?', correct:(T*N)/9550, unit:'kW'};
+  });
+  add('Mechanical','cog', function(){
+    var P = +rand(1,200).toFixed(1), N = randInt(200,3600);
+    return {text:'A motor delivers <b>'+P+' kW</b> at <b>'+N+' rpm</b>. What torque is being produced?', correct:(P*9550)/N, unit:'N\u00b7m'};
+  });
+  add('Mechanical','cog', function(){
+    var Q = +rand(1,100).toFixed(1), H = randInt(5,150), eff = +rand(0.5,0.85).toFixed(2);
+    return {text:'A pump moves <b>'+Q+' L/s</b> against a head of <b>'+H+' m</b> with <b>'+Math.round(eff*100)+'%</b> efficiency. What is the required shaft power?', correct:(9.81*(Q/1000)*H)/eff, unit:'kW'};
+  });
+  add('Mechanical','cog', function(){
+    var N1 = randInt(500,3000), D1 = randInt(50,300), D2 = randInt(50,300);
+    return {text:'A driver pulley turns at <b>'+N1+' rpm</b> with diameter <b>'+D1+' mm</b>, driving a pulley of diameter <b>'+D2+' mm</b>. What is the driven pulley\u2019s speed?', correct:(N1*D1)/D2, unit:'rpm'};
+  });
+
+  // -- HVAC --
+  add('HVAC','snow', function(){
+    var cfm = randInt(200,8000), dT = randInt(5,40);
+    return {text:'An airstream of <b>'+cfm+' CFM</b> is heated through a temperature rise of <b>'+dT+' \u00b0F</b>. What sensible heat load results? (Q = 1.08 \u00d7 CFM \u00d7 \u0394T)', correct:1.08*cfm*dT, unit:'Btu/h'};
+  });
+  add('HVAC','snow', function(){
+    var btuh = randInt(5000,300000), dT = randInt(5,40);
+    return {text:'A coil must deliver <b>'+btuh+' Btu/h</b> of sensible heat across a <b>'+dT+' \u00b0F</b> rise. What airflow is required?', correct:btuh/(1.08*dT), unit:'CFM'};
+  });
+  add('HVAC','snow', function(){
+    var cfm = randInt(200,4000), area = +rand(0.5,4).toFixed(2);
+    return {text:'A duct carrying <b>'+cfm+' CFM</b> has a cross-sectional area of <b>'+area+' ft\u00b2</b>. What is the air velocity?', correct:cfm/area, unit:'fpm'};
+  });
+  add('HVAC','snow', function(){
+    var tonR = +rand(1,50).toFixed(1);
+    return {text:'A chiller is rated at <b>'+tonR+' tons</b> of refrigeration. What is that in kW?', correct:tonR*3.517, unit:'kW'};
+  });
+
+  // -- Civil --
+  add('Civil','building', function(){
+    var L = +rand(1,20).toFixed(1), W = +rand(1,10).toFixed(1), H = +rand(0.1,1).toFixed(2);
+    return {text:'A slab is <b>'+L+' m</b> long, <b>'+W+' m</b> wide and <b>'+H+' m</b> thick. What volume of concrete is needed?', correct:L*W*H, unit:'m\u00b3'};
+  });
+  add('Civil','building', function(){
+    var load = randInt(50,5000), area = +rand(0.5,10).toFixed(2);
+    return {text:'A footing carries a load of <b>'+load+' kN</b> over a base area of <b>'+area+' m\u00b2</b>. What bearing pressure results?', correct:load/area, unit:'kPa'};
+  });
+  add('Civil','building', function(){
+    var w = randInt(2,60), L = +rand(1,15).toFixed(1);
+    return {text:'A simply-supported beam carries a uniform load of <b>'+w+' kN/m</b> over a span of <b>'+L+' m</b>. What is the maximum bending moment (wL\u00b2/8)?', correct:(w*L*L)/8, unit:'kN\u00b7m'};
+  });
+
+  // -- Solar --
+  add('Solar','sun', function(){
+    var Wp = pick([335,400,450,500,550,600]), n = randInt(6,60);
+    return {text:'An array uses <b>'+n+'</b> panels rated at <b>'+Wp+' Wp</b> each. What is the total array size?', correct:(Wp*n)/1000, unit:'kWp'};
+  });
+  add('Solar','sun', function(){
+    var kwp = +rand(2,50).toFixed(1), psh = +rand(3,6.5).toFixed(1), derate = +rand(0.75,0.85).toFixed(2);
+    return {text:'A <b>'+kwp+' kWp</b> array sees <b>'+psh+'</b> peak sun hours/day with a <b>'+Math.round(derate*100)+'%</b> system derate. What is the approximate daily energy yield?', correct:kwp*psh*derate, unit:'kWh/day'};
+  });
+  add('Solar','sun', function(){
+    var Voc = +rand(35,50).toFixed(1), n = randInt(6,20), tempAdj = +rand(1.02,1.15).toFixed(2);
+    return {text:'A string of <b>'+n+'</b> modules each with a temperature-corrected Voc of <b>'+Voc+' V</b>. What is the string open-circuit voltage?', correct:Voc*n, unit:'V'};
+  });
+
+  // -- Project Management --
+  add('PM','clipboard', function(){
+    var ev = randInt(50,900), ac = randInt(50,900);
+    return {text:'A project has an Earned Value of <b>$'+ev+'k</b> and an Actual Cost of <b>$'+ac+'k</b>. What is the Cost Performance Index (CPI)?', correct:ev/ac, unit:''};
+  });
+  add('PM','clipboard', function(){
+    var ev = randInt(50,900), pv = randInt(50,900);
+    return {text:'A project has an Earned Value of <b>$'+ev+'k</b> and a Planned Value of <b>$'+pv+'k</b>. What is the Schedule Performance Index (SPI)?', correct:ev/pv, unit:''};
+  });
+  add('PM','clipboard', function(){
+    var bac = randInt(200,5000), cpi = +rand(0.7,1.2).toFixed(2);
+    return {text:'A project has a Budget at Completion of <b>$'+bac+'k</b> and a CPI of <b>'+cpi+'</b>. What is the Estimate at Completion (EAC = BAC / CPI)?', correct:bac/cpi, unit:'k'};
+  });
+
+  // -- General unit conversions (big combinatorial pool) --
+  var CONV = [
+    {from:'m',to:'ft', f:3.28084, range:[1,500]},
+    {from:'ft',to:'m', f:0.3048, range:[1,1500]},
+    {from:'kg',to:'lb', f:2.20462, range:[1,2000]},
+    {from:'lb',to:'kg', f:0.453592, range:[1,4000]},
+    {from:'psi',to:'bar', f:0.0689476, range:[1,3000]},
+    {from:'bar',to:'psi', f:14.5038, range:[1,200]},
+    {from:'L',to:'gal (US)', f:0.264172, range:[1,2000]},
+    {from:'gal (US)',to:'L', f:3.78541, range:[1,500]},
+    {from:'km',to:'mi', f:0.621371, range:[1,1000]},
+    {from:'mi',to:'km', f:1.60934, range:[1,600]},
+    {from:'N\u00b7m',to:'lb\u00b7ft', f:0.737562, range:[1,1000]},
+    {from:'kW',to:'HP', f:1.34102, range:[1,500]},
+    {from:'HP',to:'kW', f:0.7457, range:[1,500]},
+    {from:'mm',to:'in', f:0.0393701, range:[1,3000]},
+    {from:'in',to:'mm', f:25.4, range:[1,120]},
+    {from:'bar',to:'kPa', f:100, range:[1,50]},
+    {from:'kPa',to:'psi', f:0.145038, range:[1,2000]},
+    {from:'m\u00b3/h',to:'L/s', f:0.277778, range:[1,2000]},
+    {from:'CFM',to:'L/s', f:0.471947, range:[1,3000]},
+    {from:'kg/m\u00b3',to:'lb/ft\u00b3', f:0.062428, range:[1,3000]}
+  ];
+  add('General','wrench', function(){
+    var c = pick(CONV);
+    var v = +rand(c.range[0], c.range[1]).toFixed(c.range[1] > 100 ? 0 : 1);
+    return {text:'Convert <b>'+v+' '+c.from+'</b> to '+c.to+'.', correct:v*c.f, unit:c.to};
+  });
+  add('General','wrench', function(){
+    var c = +rand(-40,120).toFixed(0);
+    return {text:'Convert <b>'+c+' \u00b0C</b> to Fahrenheit.', correct:(c*9/5)+32, unit:'\u00b0F'};
+  });
+  add('General','wrench', function(){
+    var f = +rand(-40,250).toFixed(0);
+    return {text:'Convert <b>'+f+' \u00b0F</b> to Celsius.', correct:(f-32)*5/9, unit:'\u00b0C'};
+  });
+
+  var CATS = ["All","Electrical","Mechanical","HVAC","Civil","Solar","PM","General"];
+  var activeCat = "All";
+  var GAME_SECONDS = 60;
+  var LS_KEY = "ecrQuickfireBest";
+
+  var catsEl = document.getElementById('qfCats');
+  var stageEl = document.getElementById('qfStage');
+
+  function pool(){
+    if (activeCat === "All") return GEN;
+    return GEN.filter(function(g){ return g.cat === activeCat; });
+  }
+
+  function getBest(){
+    try { return parseInt(localStorage.getItem(LS_KEY) || "0", 10) || 0; } catch(e){ return 0; }
+  }
+  function setBest(v){
+    try { localStorage.setItem(LS_KEY, String(v)); } catch(e){}
+  }
+
+  function buildCats(){
+    var html = "";
+    CATS.forEach(function(c){
+      html += '<button class="qf-cat-btn' + (c===activeCat?' active':'') + '" data-cat="' + c + '">' + c + '</button>';
+    });
+    catsEl.innerHTML = html;
+    Array.prototype.forEach.call(catsEl.querySelectorAll('.qf-cat-btn'), function(btn){
+      btn.addEventListener('click', function(){
+        activeCat = btn.getAttribute('data-cat');
+        buildCats();
+        if (!document.getElementById('qfGameCard')) renderStart();
+      });
+    });
+  }
+
+  function renderStart(){
+    var best = getBest();
+    stageEl.innerHTML =
+      '<div class="qf-start">' +
+        (best > 0 ? '<div class="qf-best">Your best: <b>' + best + '</b> pts</div>' : '') +
+        '<button class="qf-start-btn" id="qfStartBtn">Start Quickfire</button>' +
+        '<div class="qf-rules">Unlimited, freshly-generated problems &middot; ' + GAME_SECONDS + ' seconds on the clock<br>Correct answers add time. Wrong answers cost a little.</div>' +
+      '</div>';
+    document.getElementById('qfStartBtn').addEventListener('click', startGame);
+  }
+
+  function startGame(){
+    var gens = pool();
+    var state = {
+      gens: gens,
+      score: 0,
+      streak: 0,
+      correct: 0,
+      answered: 0,
+      timeLeft: GAME_SECONDS,
+      totalTime: GAME_SECONDS,
+      timer: null,
+      locked: false
+    };
+
+    stageEl.innerHTML =
+      '<div id="qfGameCard">' +
+        '<div class="qf-hud">' +
+          '<div class="qf-hud-block"><div class="qf-hud-label">Score</div><div class="qf-hud-val" id="qfScore">0</div></div>' +
+          '<div class="qf-hud-block"><div class="qf-hud-label">Time</div><div class="qf-hud-val" id="qfTime">' + GAME_SECONDS + '</div></div>' +
+          '<div class="qf-hud-block"><div class="qf-hud-label">Streak</div><div class="qf-streak" id="qfStreak">0</div></div>' +
+        '</div>' +
+        '<div class="qf-timebar-track"><div class="qf-timebar-fill" id="qfTimebar" style="width:100%"></div></div>' +
+        '<div class="qf-card">' +
+          '<div class="qf-cat-tag" id="qfCatTag">&mdash;</div>' +
+          '<div class="qf-q" id="qfQ"></div>' +
+          '<div class="qf-options" id="qfOptions"></div>' +
+        '</div>' +
+        '<div class="qf-toast" id="qfToast"></div>' +
+      '</div>';
+
+    function tick(){
+      state.timeLeft -= 0.1;
+      if (state.timeLeft <= 0){
+        state.timeLeft = 0;
+        endGame(state);
+        return;
+      }
+      updateHud(state);
+    }
+    state.timer = setInterval(tick, 100);
+
+    nextQuestion(state);
+  }
+
+  function updateHud(state){
+    document.getElementById('qfScore').textContent = state.score;
+    document.getElementById('qfStreak').textContent = state.streak;
+    var timeEl = document.getElementById('qfTime');
+    var secs = Math.ceil(state.timeLeft);
+    timeEl.textContent = secs;
+    timeEl.classList.toggle('qf-timer-warn', state.timeLeft <= 10);
+    var pct = Math.max(0, Math.min(100, (state.timeLeft / state.totalTime) * 100));
+    var bar = document.getElementById('qfTimebar');
+    if (bar){
+      bar.style.width = pct + '%';
+      bar.classList.toggle('warn', state.timeLeft <= 10);
+    }
+  }
+
+  function nextQuestion(state){
+    state.locked = false;
+    document.getElementById('qfToast').textContent = '';
+    document.getElementById('qfToast').className = 'qf-toast';
+
+    var gen = pick(state.gens);
+    var q = gen.fn();
+    state.currentCorrect = withUnit(q.correct, q.unit);
+
+    document.getElementById('qfCatTag').innerHTML = (ICONS[gen.icon] || '') + '<span>' + gen.cat + '</span>';
+    document.getElementById('qfQ').innerHTML = '<span class="qf-q-inner">' + q.text + '</span>';
+
+    var choices = makeChoices(q.correct, q.unit);
+    var optsEl = document.getElementById('qfOptions');
+    optsEl.innerHTML = '';
+    choices.forEach(function(choiceStr){
+      var btn = document.createElement('button');
+      btn.className = 'qf-opt';
+      btn.textContent = choiceStr;
+      btn.addEventListener('click', function(){
+        handleAnswer(state, btn, choiceStr, optsEl);
+      });
+      optsEl.appendChild(btn);
+    });
+  }
+
+  function handleAnswer(state, btn, chosenStr, optsEl){
+    if (state.locked) return;
+    state.locked = true;
+    state.answered++;
+
+    var toast = document.getElementById('qfToast');
+    var isCorrect = chosenStr === state.currentCorrect;
+
+    Array.prototype.forEach.call(optsEl.querySelectorAll('.qf-opt'), function(b){
+      b.disabled = true;
+      if (b.textContent === state.currentCorrect) b.classList.add('opt-correct');
+      else b.classList.add('opt-faded');
+    });
+
+    if (isCorrect){
+      state.correct++;
+      state.streak++;
+      var bonus = 10 + Math.min(state.streak - 1, 10) * 2;
+      state.score += bonus;
+      state.timeLeft = Math.min(state.totalTime, state.timeLeft + 1.5);
+      toast.textContent = '+' + bonus + (state.streak > 1 ? '  \u00b7  streak ' + state.streak : '');
+      toast.className = 'qf-toast good';
+    } else {
+      btn.classList.remove('opt-faded');
+      btn.classList.add('opt-wrong');
+      state.streak = 0;
+      state.timeLeft = Math.max(0, state.timeLeft - 2);
+      toast.textContent = 'Not quite \u2014 ' + state.currentCorrect;
+      toast.className = 'qf-toast bad';
+    }
+    updateHud(state);
+
+    setTimeout(function(){
+      if (state.timeLeft > 0) nextQuestion(state);
+    }, 650);
+  }
+
+  function endGame(state){
+    clearInterval(state.timer);
+    var best = getBest();
+    var isNew = state.score > best;
+    if (isNew) setBest(state.score);
+    var acc = state.answered > 0 ? Math.round((state.correct / state.answered) * 100) : 0;
+
+    stageEl.innerHTML =
+      '<div class="qf-summary">' +
+        '<div class="qf-summary-eyebrow">Time\u2019s up</div>' +
+        '<div class="qf-summary-score">' + state.score + '</div>' +
+        '<div class="qf-summary-sub">points</div>' +
+        (isNew ? '<div class="qf-summary-new">New best score</div>' : '') +
+        '<div class="qf-summary-stats">' +
+          '<div class="qf-stat"><div class="qf-stat-num">' + state.correct + '/' + state.answered + '</div><div class="qf-stat-lbl">Correct</div></div>' +
+          '<div class="qf-stat"><div class="qf-stat-num">' + acc + '%</div><div class="qf-stat-lbl">Accuracy</div></div>' +
+          '<div class="qf-stat"><div class="qf-stat-num">' + (isNew ? state.score : best) + '</div><div class="qf-stat-lbl">Best</div></div>' +
+        '</div>' +
+        '<button class="qf-restart-btn" id="qfRestartBtn">Play Again</button>' +
+        '<br><a class="qf-again-link" href="quiz.html">Try the daily quiz instead &rarr;</a>' +
+      '</div>';
+    document.getElementById('qfRestartBtn').addEventListener('click', startGame);
+  }
+
+  buildCats();
+  renderStart();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+</body>
+</html>
