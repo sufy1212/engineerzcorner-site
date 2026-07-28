@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automation Comparisons — Engineerz CorneR</title>
+<meta name="description" content="Automation Comparisons — 4-20mA vs 0-10V vs HART, PLC vs DCS vs SCADA, PID vs on-off control, control valve types, and more — part of a free multi-discipline engineering calculator toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/comparisons">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Automation Comparisons — Engineerz CorneR">
+<meta property="og:description" content="Automation Comparisons — 4-20mA vs 0-10V vs HART, PLC vs DCS vs SCADA, PID vs on-off control, control valve types, and more — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/comparisons">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automation Comparisons — Engineerz CorneR">
+<meta name="twitter:description" content="Automation Comparisons — 4-20mA vs 0-10V vs HART, PLC vs DCS vs SCADA, PID vs on-off control, control valve types, and more — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Fix: guide-toc-link pill styling not present in shared stylesheet */
+  .guide-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+  .guide-toc-link{
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.02em;
+    color:var(--ink-dim);background:var(--sheet);border:1px solid var(--line);border-radius:20px;
+    padding:7px 14px;text-decoration:none;white-space:nowrap;transition:border-color .15s ease,color .15s ease;
+  }
+  .guide-toc-link:hover{border-color:var(--amber);color:var(--amber-deep);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Automation",
+      "item": "https://www.engineerzcorner.com/automation/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Comparisons",
+      "item": "https://www.engineerzcorner.com/automation/comparisons"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Comparisons",
+  "description": "Automation Comparisons \u2014 4-20mA vs 0-10V vs HART, PLC vs DCS vs SCADA, PID vs on-off control, control valve types, and more \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/automation/comparisons"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Comparisons</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="index.html" class="current">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-comparisons">
+
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18"></path><path d="M3 8h5M16 8h5M3 16h5M16 16h5"></path></svg></div>
+    <div><h1>Comparisons</h1><div class="hero-sub">Head-to-head instrumentation, signal and control choices — side by side, so the trade-off is visible at a glance</div></div>
+  </div>
+  <div class="intro">
+    Eight common automation/controls decisions, laid out as direct comparisons rather than separate articles — same criteria, side by side, with a plain-language verdict on when each option actually wins. Jump straight to the one you need.
+  </div>
+
+  <div class="guide-toc">
+      <a href="#cmp-atsignal" class="guide-toc-link">1. 4-20mA vs 0-10V vs HART Signals</a>
+      <a href="#cmp-atarch" class="guide-toc-link">2. PLC vs DCS vs SCADA</a>
+      <a href="#cmp-atcontrol" class="guide-toc-link">3. PID vs On-Off (Bang-Bang) Control</a>
+      <a href="#cmp-atvalve" class="guide-toc-link">4. Globe vs Ball vs Butterfly Control Valves</a>
+      <a href="#cmp-attemp" class="guide-toc-link">5. RTD vs Thermocouple Temperature Sensors</a>
+      <a href="#cmp-atlevel" class="guide-toc-link">6. DP vs Ultrasonic vs Radar Level Measurement</a>
+      <a href="#cmp-atlogic" class="guide-toc-link">7. Relay Logic vs PLC Logic</a>
+      <a href="#cmp-atwireless" class="guide-toc-link">8. Wired vs Wireless Instrumentation</a>
+  </div>
+
+  <div class="step" id="cmp-atsignal">
+    <div class="step-head"><span class="step-num">1</span><h2>4-20mA vs 0-10V vs HART Signals</h2></div>
+    <div class="step-desc">The three most common ways an analog field signal actually reaches the controller — and they aren't interchangeable.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>4-20mA Current Loop</th><th>0-10V Voltage Signal</th><th>HART</th></tr></thead>
+        <tbody>
+      <tr><td>Noise immunity over long cable runs</td><td>Excellent — current doesn't drop with cable resistance</td><td>Poor over long runs — voltage drops with cable resistance</td><td>Excellent — same 4-20mA carrier</td></tr>
+      <tr><td>Wire fault detection</td><td>Good — 0mA reads as a clear break/fault, distinct from a real 0% signal</td><td>Poor — 0V can mean either a real zero or a broken wire</td><td>Good — same as 4-20mA, plus digital diagnostics</td></tr>
+      <tr><td>Extra data carried</td><td>None — one variable only</td><td>None — one variable only</td><td>Digital overlay — diagnostics, secondary variables, config</td></tr>
+      <tr><td>Typical distance</td><td>Long runs, hundreds of meters, common</td><td>Short runs — panel-internal or close-coupled</td><td>Same as 4-20mA</td></tr>
+      <tr><td>Typical application</td><td>The default for field transmitter-to-PLC/DCS wiring</td><td>Short local connections, some drive/VFD references</td><td>Smart transmitters needing remote diagnostics/configuration</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">4-20mA is the practical default for field instrumentation specifically because the "live zero" (4mA, not 0mA, represents 0%) lets a broken wire be distinguished from a genuine zero reading — a safety-relevant distinction 0-10V can't make on its own. HART simply layers a digital signal on top of the same 4-20mA current, so existing loops keep working with legacy equipment while newer, HART-capable equipment gets extra diagnostic and configuration data for free. 0-10V mostly survives in short, local connections where cable length and fault detection are less of a concern.</div>
+  </div>
+
+  <div class="step" id="cmp-atarch">
+    <div class="step-head"><span class="step-num">2</span><h2>PLC vs DCS vs SCADA</h2></div>
+    <div class="step-desc">Three overlapping terms for automation architecture, distinguished more by scale and intent than by any hard technical line.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>PLC</th><th>DCS</th><th>SCADA</th></tr></thead>
+        <tbody>
+      <tr><td>Primary role</td><td>Fast, localized discrete/sequential control</td><td>Coordinated, continuous process control across a whole plant</td><td>Supervisory monitoring and control over a wide geographic area</td></tr>
+      <tr><td>Typical scan/control speed</td><td>Very fast — milliseconds</td><td>Fast, plant-optimized for continuous loops</td><td>Slower — polling remote sites, seconds typical</td></tr>
+      <tr><td>Geographic scope</td><td>Single machine or process area</td><td>Single plant/site, tightly integrated</td><td>Can span a wide area — pipelines, water networks, multiple remote sites</td></tr>
+      <tr><td>Redundancy/engineering focus</td><td>Simpler, cost-optimized for the task</td><td>Heavily redundant, engineered for continuous plant uptime</td><td>Focused on reliable remote communication (RTUs, radio, cellular)</td></tr>
+      <tr><td>Typical application</td><td>Machine control, packaging lines, discrete manufacturing</td><td>Refineries, chemical plants, power generation</td><td>Oil & gas pipelines, water/wastewater networks, utility grids</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">A PLC is fundamentally a fast, focused controller — the building block used inside both DCS and SCADA systems, not a separate category of hardware. A DCS is really a PLC-class control philosophy scaled up and engineered for redundancy and tight coordination across many loops in one plant. SCADA solves a different problem — supervising and occasionally controlling assets spread over a wide area where constant, tightly coupled communication isn't practical, leaning on local PLCs/RTUs to handle the real-time control at each remote site.</div>
+  </div>
+
+  <div class="step" id="cmp-atcontrol">
+    <div class="step-head"><span class="step-num">3</span><h2>PID vs On-Off (Bang-Bang) Control</h2></div>
+    <div class="step-desc">The simplest possible control strategy against the one that dominates modern process control — and each has its place.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>On-Off Control</th><th>PID Control</th></tr></thead>
+        <tbody>
+      <tr><td>Final element behavior</td><td>Fully on or fully off only</td><td>Continuously modulated position</td></tr>
+      <tr><td>Steady-state accuracy</td><td>Cycles around setpoint within a deadband</td><td>Can hold very close to setpoint continuously</td></tr>
+      <tr><td>Wear on the final element</td><td>Higher — frequent full-cycle switching</td><td>Lower — smaller, continuous adjustments</td></tr>
+      <tr><td>Tuning complexity</td><td>Simple — mainly deadband width</td><td>More involved — three interacting gains to tune</td></tr>
+      <tr><td>Typical application</td><td>Simple heaters, basic level/pressure switches, refrigeration</td><td>Flow, pressure, temperature, and level loops needing tight, steady control</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">On-off control is the right default wherever cycling around a deadband is genuinely acceptable and simplicity/cost matter more than precision — a household-style thermostat is the classic example. PID control earns its added tuning complexity specifically where a process needs to be held close and steadily at a setpoint, or where cycling a valve or motor fully on/off would cause unacceptable wear, mechanical shock, or product quality issues. Many real loops actually use PID logic with a wide proportional band to approximate simple on-off behavior when that's genuinely all that's needed.</div>
+  </div>
+
+  <div class="step" id="cmp-atvalve">
+    <div class="step-head"><span class="step-num">4</span><h2>Globe vs Ball vs Butterfly Control Valves</h2></div>
+    <div class="step-desc">Three valve bodies, each trading throttling precision against cost, size, and pressure drop differently.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Globe Valve</th><th>Ball Valve</th><th>Butterfly Valve</th></tr></thead>
+        <tbody>
+      <tr><td>Throttling precision</td><td>Best — designed specifically for modulating control</td><td>Good with a characterized (V-notch) ball</td><td>Moderate — best near mid-travel</td></tr>
+      <tr><td>Pressure drop when fully open</td><td>Higher — flow path changes direction internally</td><td>Low — straight-through bore</td><td>Low to moderate — disc remains in the flow path</td></tr>
+      <tr><td>Size/weight for a given line size</td><td>Larger, heavier</td><td>Compact</td><td>Most compact, lightest for large diameters</td></tr>
+      <tr><td>Relative cost at large sizes</td><td>Highest</td><td>Moderate</td><td>Lowest — the usual choice for large-diameter lines</td></tr>
+      <tr><td>Typical application</td><td>Precise process throttling, high pressure drop service</td><td>General throttling and tight shutoff, moderate sizes</td><td>Large-diameter, low-pressure-drop throttling — water, air, HVAC</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Globe valves remain the benchmark wherever precise, repeatable throttling is the priority and the higher inherent pressure drop and cost are acceptable — most classic process control loops default here. Ball valves with a characterized ball trade a little throttling precision for a more compact, lower-pressure-drop package, and offer excellent tight shutoff. Butterfly valves become the economical choice specifically at large diameters and lower pressure-drop service, where a globe valve's size and cost stop being justified.</div>
+  </div>
+
+  <div class="step" id="cmp-attemp">
+    <div class="step-head"><span class="step-num">5</span><h2>RTD vs Thermocouple Temperature Sensors</h2></div>
+    <div class="step-desc">Two dominant temperature sensing technologies, splitting mainly on accuracy versus temperature range.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>RTD</th><th>Thermocouple</th></tr></thead>
+        <tbody>
+      <tr><td>Accuracy</td><td>Higher, more repeatable</td><td>Lower, more prone to drift over time</td></tr>
+      <tr><td>Temperature range</td><td>Moderate — roughly -200°C to 850°C</td><td>Very wide — some types beyond 1700°C</td></tr>
+      <tr><td>Response time</td><td>Slower — more thermal mass</td><td>Faster — smaller sensing junction</td></tr>
+      <tr><td>Output signal</td><td>Resistance change — needs excitation current</td><td>Small self-generated millivolt signal</td></tr>
+      <tr><td>Relative cost</td><td>Higher</td><td>Lower, widely available in many types</td></tr>
+      <tr><td>Typical application</td><td>Process control needing high accuracy, moderate temperatures</td><td>High-temperature service, furnaces, fast-response needs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">RTDs are the default wherever accuracy and long-term stability matter most and the process temperature stays within their moderate range — most general process temperature control loops. Thermocouples take over specifically at high temperatures beyond a practical RTD's range, or where a fast-responding, low-cost, rugged sensor is more important than the last degree of accuracy — furnace and combustion applications are the classic case.</div>
+  </div>
+
+  <div class="step" id="cmp-atlevel">
+    <div class="step-head"><span class="step-num">6</span><h2>DP vs Ultrasonic vs Radar Level Measurement</h2></div>
+    <div class="step-desc">Three ways to infer level, each vulnerable to a different kind of process interference.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Differential Pressure</th><th>Ultrasonic</th><th>Radar</th></tr></thead>
+        <tbody>
+      <tr><td>Measurement principle</td><td>Hydrostatic pressure from fluid head</td><td>Sound wave time-of-flight to the surface</td><td>Microwave time-of-flight to the surface</td></tr>
+      <tr><td>Sensitive to fluid density changes</td><td>Yes — directly affects the pressure/level relationship</td><td>No — measures distance, not pressure</td><td>No — measures distance, not pressure</td></tr>
+      <tr><td>Affected by vapor, foam, or dust</td><td>No</td><td>Yes — can scatter or absorb the sound signal</td><td>Less affected — generally the most robust of the three</td></tr>
+      <tr><td>Contact with process fluid</td><td>Wetted or remote-seal diaphragm in contact</td><td>Non-contact, mounted above the surface</td><td>Non-contact, mounted above the surface</td></tr>
+      <tr><td>Typical application</td><td>Simple liquid tanks, consistent fluid density</td><td>Clean liquids, moderate-accuracy solids/liquid level</td><td>Turbulent, vapor-laden, or high-accuracy applications</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">DP level measurement remains a simple, well-understood default for liquid tanks with a reasonably consistent, known fluid density — its accuracy actually depends on that density assumption staying valid. Ultrasonic level offers a straightforward non-contact option for cleaner applications, but loses reliability where foam, heavy vapor, or dust interferes with the sound path. Radar generally handles those difficult atmospheres better and has become the common choice where DP's density-sensitivity or ultrasonic's vulnerability to vapor/foam would be a real problem.</div>
+  </div>
+
+  <div class="step" id="cmp-atlogic">
+    <div class="step-head"><span class="step-num">7</span><h2>Relay Logic vs PLC Logic</h2></div>
+    <div class="step-desc">The same ladder-logic thinking, but one is wired in hardware and the other is software running on a processor.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Relay Logic</th><th>PLC Logic</th></tr></thead>
+        <tbody>
+      <tr><td>How logic is implemented</td><td>Physical relay contacts and coils, hardwired together</td><td>Software program (typically ladder logic) executed by a processor</td></tr>
+      <tr><td>Making a logic change</td><td>Requires rewiring the physical panel</td><td>Requires only reprogramming — no rewiring</td></tr>
+      <tr><td>Diagnostics/troubleshooting</td><td>Limited — visual inspection and multimeter checks</td><td>Extensive — online monitoring, forcing, fault logging</td></tr>
+      <tr><td>Panel size/complexity for large logic</td><td>Grows large and complex quickly</td><td>Stays compact regardless of logic complexity</td></tr>
+      <tr><td>Typical application today</td><td>Very simple, rarely-changed circuits; legacy installations</td><td>The default for essentially all new discrete/sequential control</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">PLC logic has effectively replaced relay logic as the default for new installations of any meaningful complexity — the ability to change logic in software rather than rewiring a panel, combined with far better diagnostics, outweighs relay logic's simplicity in almost every modern case. Relay logic mostly persists today in very simple, rarely-changed circuits, safety circuits built to a specific hardwired standard, or legacy equipment that hasn't been modernized — understanding it is still valuable for troubleshooting older plants and for basic safety-relay circuits that intentionally stay hardwired.</div>
+  </div>
+
+  <div class="step" id="cmp-atwireless">
+    <div class="step-head"><span class="step-num">8</span><h2>Wired vs Wireless Instrumentation</h2></div>
+    <div class="step-desc">Wireless removes the cable run, but that trade isn't free — it comes with its own constraints.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Wired Instrumentation</th><th>Wireless Instrumentation</th></tr></thead>
+        <tbody>
+      <tr><td>Installation cost, long/difficult runs</td><td>Higher — cable tray, conduit, trenching</td><td>Lower — no cable run needed</td></tr>
+      <tr><td>Signal reliability/latency</td><td>Very high, deterministic</td><td>Good but not deterministic — subject to interference, battery/network issues</td></tr>
+      <tr><td>Update rate</td><td>Continuous, fast</td><td>Typically slower, battery-life-driven reporting intervals</td></tr>
+      <tr><td>Power source</td><td>Loop-powered or externally powered</td><td>Battery, often with multi-year life at low update rates</td></tr>
+      <tr><td>Typical application</td><td>Critical control loops, tight-tolerance continuous control</td><td>Monitoring points, remote/hard-to-cable locations, non-critical trending</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Wired instrumentation remains the default for any loop where control performance, update rate, or reliability genuinely matters — most closed-loop process control. Wireless instrumentation earns its place specifically for monitoring points that are expensive or impractical to cable — remote tanks, rotating equipment, retrofit projects — where a slower update rate and battery-powered operation are an acceptable trade for avoiding a costly cable run. It's rarely the right choice yet for tight, fast-acting control loops.</div>
+  </div>
+
+  <footer><a href="index.html">← Automation Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

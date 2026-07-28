@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automation Engineering Guides — Engineerz CorneR</title>
+<meta name="description" content="Automation Guides — PID tuning, DP level ranging, control valve sizing, reading a P&ID, VFD commissioning, loop troubleshooting, and more — part of a free multi-discipline engineering calculator toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/guides">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Automation Engineering Guides — Engineerz CorneR">
+<meta property="og:description" content="Automation Guides — PID tuning, DP level ranging, control valve sizing, reading a P&ID, VFD commissioning, loop troubleshooting, and more — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/guides">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automation Engineering Guides — Engineerz CorneR">
+<meta name="twitter:description" content="Automation Guides — PID tuning, DP level ranging, control valve sizing, reading a P&ID, VFD commissioning, loop troubleshooting, and more — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Fix: guide-toc-link pill styling not present in shared stylesheet */
+  .guide-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+  .guide-toc-link{
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.02em;
+    color:var(--ink-dim);background:var(--sheet);border:1px solid var(--line);border-radius:20px;
+    padding:7px 14px;text-decoration:none;white-space:nowrap;transition:border-color .15s ease,color .15s ease;
+  }
+  .guide-toc-link:hover{border-color:var(--amber);color:var(--amber-deep);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Automation",
+      "item": "https://www.engineerzcorner.com/automation/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Engineering Guides",
+      "item": "https://www.engineerzcorner.com/automation/guides"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Engineering Guides",
+  "description": "Automation Guides \u2014 PID tuning, DP level ranging, control valve sizing, reading a P&ID, VFD commissioning, loop troubleshooting, and more \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/automation/guides"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Engineering Guides</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="index.html" class="current">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-guides">
+
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></svg></div>
+    <div><h1>Engineering Guides</h1><div class="hero-sub">Step-by-step method guides — how to actually approach each job, not just the calculator behind it</div></div>
+  </div>
+  <div class="intro">
+    Ten practical how-to guides covering the method behind this site's automation calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work. Each guide stands on its own; jump straight to the one you need.
+  </div>
+
+  <div class="guide-toc">
+      <a href="#g-atpid" class="guide-toc-link">1. How to Tune a PID Loop (Reaction Curve Method)</a>
+      <a href="#g-atlevel" class="guide-toc-link">2. How to Range a DP Level Transmitter</a>
+      <a href="#g-atvalve" class="guide-toc-link">3. How to Size a Control Valve (Cv/Kv)</a>
+      <a href="#g-atpid-doc" class="guide-toc-link">4. How to Read a P&amp;ID</a>
+      <a href="#g-atvfd" class="guide-toc-link">5. How to Commission a VFD</a>
+      <a href="#g-atloop" class="guide-toc-link">6. How to Troubleshoot a 4-20mA Current Loop</a>
+      <a href="#g-atarch" class="guide-toc-link">7. Control Loop Architecture Explained</a>
+      <a href="#g-atio" class="guide-toc-link">8. How to Select I/O for a PLC Application</a>
+      <a href="#g-atsis" class="guide-toc-link">9. Safety Instrumented Systems &amp; SIL Basics</a>
+      <a href="#g-atground" class="guide-toc-link">10. How to Ground and Shield Instrumentation Cable</a>
+  </div>
+
+  <div class="step" id="g-atpid">
+    <div class="step-head"><span class="step-num">1</span><h2>How to Tune a PID Loop (Reaction Curve Method)</h2></div>
+    <div class="step-desc">A structured way to get starting gains from an open-loop step test, rather than guessing at P, I, and D by trial and error.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Put the loop in manual and let the process settle</b> at a stable operating point — the reaction curve test needs a known, steady starting condition to be meaningful.</li>
+      <li><b>Make a small step change in controller output</b> and record how the process variable responds over time — the resulting S-shaped curve (for a self-regulating process) contains everything the Ziegler-Nichols reaction curve method needs.</li>
+      <li><b>Extract three parameters from the curve:</b> the process gain (steady-state PV change ÷ output step size), the dead time (delay before the PV starts responding), and the time constant (how quickly it then approaches its new steady value).</li>
+      <li><b>Apply the reaction-curve tuning rules</b> to those three parameters to get starting P, PI, or PID gains — treat these as a starting point, not a final answer; verify the loop's actual closed-loop response and fine-tune from there.</li>
+    </ol>
+    <div class="hint" style="margin:8px 16px 0;">
+      AT.02 on the Automation index runs this calculation directly from process gain, time constant, and dead time, for P, PI, or PID output.
+    </div>
+  </div>
+
+  <div class="step" id="g-atlevel">
+    <div class="step-head"><span class="step-num">2</span><h2>How to Range a DP Level Transmitter</h2></div>
+    <div class="step-desc">The transmitter reads pressure, not level directly — getting the calibration right depends entirely on the fluid density assumption.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Confirm the actual fluid density (specific gravity)</b> at operating temperature — this is the single value that converts a level span into a pressure span, and using the wrong density silently shifts every reading.</li>
+      <li><b>Calculate the hydrostatic pressure span</b> from the level span using pressure = density × g × height (or the equivalent specific-gravity form) — this gives the 4mA and 20mA calibration points in pressure units.</li>
+      <li><b>Account for mounting configuration</b> — a transmitter mounted below the vessel's low tap, a wet leg, or a suppressed/elevated zero all shift the actual calibration points away from the simple textbook case, and need to be corrected for explicitly.</li>
+      <li><b>Verify with a physical or simulated pressure input</b> before commissioning — inject a known pressure and confirm the transmitter output matches the calculated 4-20mA points, rather than trusting the calculation alone.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      AT.04 on the Automation index runs the hydrostatic pressure span and matching 4-20mA calibration points directly from fluid density and level span.
+    </div>
+  </div>
+
+  <div class="step" id="g-atvalve">
+    <div class="step-head"><span class="step-num">3</span><h2>How to Size a Control Valve (Cv/Kv)</h2></div>
+    <div class="step-desc">An undersized valve can't deliver design flow; an oversized valve loses control resolution near its normal operating point.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Establish the actual design flow rate and available pressure drop</b> across the valve at that flow — not the pump's total head, but specifically what's left for the valve to work with once piping and other losses are subtracted.</li>
+      <li><b>Calculate the required flow coefficient (Cv or Kv)</b> from flow rate, pressure drop, and fluid specific gravity — this is the valve's fundamental sizing number, representing how much flow it passes per unit pressure drop.</li>
+      <li><b>Check the calculated Cv/Kv against the valve's rated range at multiple operating points</b>, not just the single design point — a valve that's correctly sized at maximum flow can still be badly oversized (and hard to control precisely) at typical or minimum flow.</li>
+      <li><b>Confirm the valve isn't choked (cavitating or flashing)</b> at the design pressure drop for liquid service — a valve sized purely on the Cv equation without checking for choked flow can be selected into a condition where increasing pressure drop further doesn't increase flow, and can cause damage.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      AT.03 on the Automation index calculates Cv and Kv directly from flow rate, pressure drop, and specific gravity.
+    </div>
+  </div>
+
+  <div class="step" id="g-atpid-doc">
+    <div class="step-head"><span class="step-num">4</span><h2>How to Read a P&amp;ID</h2></div>
+    <div class="step-desc">A Piping and Instrumentation Diagram shows the process and its control philosophy together — reading it means following both at once.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Start with the process flow path</b> — trace the main line from source to destination through every major equipment item, before getting into individual instrument details.</li>
+      <li><b>Identify instrument bubbles and read their tag letters</b> — the first letter is the measured variable (P=pressure, T=temperature, L=level, F=flow), and the following letters describe function (T=transmitter, I=indicator, C=controller, A=alarm).</li>
+      <li><b>Follow the signal lines from each instrument</b> to see what it connects to — a transmitter feeding a controller feeding a control valve traces out one complete control loop, even when the symbols are spread across the drawing.</li>
+      <li><b>Check line and equipment specifications in the legend/notes</b> — line size, material, and service class are usually coded onto the line itself or referenced to a line list, not spelled out in full on the drawing.</li>
+      <li><b>Note the revision block before relying on anything</b> — as with any engineering drawing, working from a superseded P&amp;ID revision is a common and entirely avoidable source of field errors.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-atvfd">
+    <div class="step-head"><span class="step-num">5</span><h2>How to Commission a VFD</h2></div>
+    <div class="step-desc">Getting a drive running is easy; getting the motor, drive, and process parameters all correctly matched is where commissioning actually happens.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Enter the motor nameplate data into the drive</b> first — rated voltage, current, frequency, speed, and power factor — since the drive's internal motor model and protection settings depend entirely on this being accurate.</li>
+      <li><b>Run an autotune if the drive supports it</b>, with the motor uncoupled from the load where possible — this lets the drive measure actual motor characteristics rather than relying on nameplate assumptions alone, improving control performance.</li>
+      <li><b>Set acceleration/deceleration ramp times appropriate to the driven load</b> — too fast a ramp on a high-inertia load can trip on overcurrent or overvoltage; too slow wastes process time and can affect product quality on some applications.</li>
+      <li><b>Verify the speed reference and feedback scaling</b> — confirm the drive's minimum/maximum output frequency actually corresponds to the intended motor speed range, and that any analog or digital speed reference from the control system is scaled correctly at both ends.</li>
+      <li><b>Test at low speed before running at full speed</b>, checking rotation direction, vibration, and current draw — catching a wiring or configuration error at low speed is far cheaper than discovering it at full load.</li>
+    </ol>
+    <div class="hint" style="margin:8px 16px 0;">
+      AT.05 on the Automation index calculates motor speed at a given drive output frequency from the nameplate rated speed and frequency.
+    </div>
+  </div>
+
+  <div class="step" id="g-atloop">
+    <div class="step-head"><span class="step-num">6</span><h2>How to Troubleshoot a 4-20mA Current Loop</h2></div>
+    <div class="step-desc">A current loop has few possible failure points — working through them in a logical order finds the fault faster than guessing.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Read the actual loop current at the controller/PLC input</b> first — a reading stuck at 0mA, pegged at a fixed value, or clearly noisy each point toward a different class of fault.</li>
+      <li><b>A steady 0mA reading usually means a broken circuit</b> — a disconnected wire, blown fuse, or failed power supply — since 4-20mA's "live zero" means a genuinely working loop should never read exactly zero.</li>
+      <li><b>Check loop power supply voltage at the transmitter terminals</b> — a 2-wire (loop-powered) transmitter needs adequate supply voltage after accounting for voltage drop across the entire loop resistance (wiring plus any resistors/barriers), and insufficient voltage headroom is a common, easy-to-miss cause of erratic readings.</li>
+      <li><b>Verify the signal against a known reference</b> — a calibrated milliamp source or the transmitter's own test/simulate mode — to isolate whether the fault is in the transmitter itself, the wiring, or the receiving input card.</li>
+      <li><b>Check for ground loops and shield issues</b> on erratic or noisy (rather than dead) signals — an improperly grounded shield, grounded at both ends, is a classic source of induced noise on an otherwise healthy loop.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-atarch">
+    <div class="step-head"><span class="step-num">7</span><h2>Control Loop Architecture Explained</h2></div>
+    <div class="step-desc">Every closed control loop, however complex the hardware, reduces to the same three functional blocks.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>The sensor/transmitter measures the process variable</b> and converts it into a usable signal — this is the loop's only source of information about what the process is actually doing.</li>
+      <li><b>The controller compares that measurement to a setpoint</b> and calculates an output — whether that's a simple on-off decision or a full PID calculation, the controller's only job is turning an error (setpoint minus measurement) into an output command.</li>
+      <li><b>The final control element acts on the process</b> — a valve, VFD, or damper physically changing something to drive the measured variable back toward setpoint, closing the loop.</li>
+      <li><b>Every component in the loop adds dynamics</b> (delay, lag) that the controller has to be tuned to handle — a slow sensor, a sluggish valve actuator, or significant process dead time all affect how aggressively the controller can be tuned without the loop becoming unstable.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      Recognizing which of the three blocks is actually causing a control problem — a noisy sensor, poor tuning, or a sticking valve — is usually the fastest way to diagnose a poorly performing loop, since each has a different fix.
+    </div>
+  </div>
+
+  <div class="step" id="g-atio">
+    <div class="step-head"><span class="step-num">8</span><h2>How to Select I/O for a PLC Application</h2></div>
+    <div class="step-desc">Getting the I/O count and type right up front avoids an expensive rack expansion or a scramble for spare points later.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>List every field device and classify its signal type</b> — discrete input (switches, proximity sensors), discrete output (solenoids, contactors), analog input (transmitters), or analog output (control valve/VFD reference) — before counting channels.</li>
+      <li><b>Add spare capacity beyond the current count</b> — a common rule of thumb is 20-25% spare I/O of each type, since retrofitting additional I/O modules or cards later is far more disruptive and costly than specifying a little extra up front.</li>
+      <li><b>Match signal type and range to the module, not just the point count</b> — a 4-20mA transmitter needs an analog input card configured for current, not voltage, and a thermocouple needs a dedicated thermocouple input, not a generic analog input.</li>
+      <li><b>Consider distributed I/O versus a central rack</b> for geographically spread equipment — remote I/O on a network segment can significantly reduce field wiring compared to home-running every signal back to a single central panel.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-atsis">
+    <div class="step-head"><span class="step-num">9</span><h2>Safety Instrumented Systems &amp; SIL Basics</h2></div>
+    <div class="step-desc">A safety system is deliberately kept separate from the basic process control system — mixing the two undermines the whole point.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>A Safety Instrumented Function (SIF) exists to bring a process to a safe state</b> on detection of a hazardous condition — distinct from, and independent of, the basic process control system (BPCS) that runs the process day to day.</li>
+      <li><b>Safety Integrity Level (SIL) is a measure of how reliably a SIF performs its safety function on demand</b>, expressed as a target probability of failure on demand — higher SIL ratings (SIL 1 through SIL 4) require increasingly rigorous design, redundancy, and testing.</li>
+      <li><b>Independence from the BPCS is the core design principle</b> — a single fault, whether hardware or software, shouldn't be able to disable both the normal control loop and the safety function meant to catch its failure.</li>
+      <li><b>Proof testing at a defined interval is what actually maintains the claimed SIL</b> over the system's life — a SIF that's never tested can degrade silently, and the calculated SIL rating assumes the specified test interval is actually being followed.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      This is a conceptual overview, not a substitute for IEC 61511/61508-based safety lifecycle engineering, which governs how SIFs are actually specified, designed, and verified on a real project.
+    </div>
+  </div>
+
+  <div class="step" id="g-atground">
+    <div class="step-head"><span class="step-num">10</span><h2>How to Ground and Shield Instrumentation Cable</h2></div>
+    <div class="step-desc">Grounding a shield at both ends is one of the most common and most avoidable sources of loop noise.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Ground the cable shield at one end only</b> — typically at the control room/panel end — so it drains induced noise to ground without creating a path for ground-potential differences to drive current through the shield itself.</li>
+      <li><b>Leave the shield floating (insulated, not connected) at the field end</b> — grounding both ends creates exactly the ground loop the single-ended grounding rule is meant to avoid, and is a very common field wiring mistake.</li>
+      <li><b>Keep instrument signal cable separated from power cable</b> in cable trays and conduit — running low-level analog signal wiring parallel to VFD or motor power cable induces noise, and adequate physical separation (or a dedicated tray) avoids it.</li>
+      <li><b>Use twisted-pair cable for analog signals</b>, and verify the shield is continuous and intact along the full run — a shield that's been nicked, cut, or left unterminated partway along a run provides little of its intended noise protection.</li>
+    </ol>
+  </div>
+
+  <footer><a href="index.html">← Automation Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
