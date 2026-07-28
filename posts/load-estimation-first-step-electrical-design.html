@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Load Estimation: The First Step in Electrical Design | Engineerz CorneR</title>
+<meta name="description" content="Why load estimation comes before anything else in an electrical project, how to calculate it by floor area, NEC VA/m² guide tables, and a full worked transformer-sizing example.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/load-estimation-first-step-electrical-design">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Load Estimation: The First Step in Electrical Design">
+<meta property="og:description" content="Why load estimation comes before anything else in an electrical project, how to calculate it by floor area, NEC VA/m² guide tables, and a full worked transformer-sizing example.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/load-estimation-first-step-electrical-design">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Load Estimation: The First Step in Electrical Design">
+<meta name="twitter:description" content="Why load estimation comes before anything else in an electrical project, how to calculate it by floor area, NEC VA/m² guide tables, and a full worked transformer-sizing example.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1930; --navy-2:#122845; --navy-3:#18325A;
+    --cyan:#5FD3E3; --cyan-dim:#3E8C97;
+    --vellum:#F6F1E4; --vellum-2:#EFE8D4;
+    --amber:#F2B84B;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --font-display:"Space Grotesk",-apple-system,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px 70px;}
+
+  nav.nt-nav{background:var(--navy);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .nt-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .nt-nav-word span{color:var(--cyan);}
+  nav.nt-nav a.nt-back{font-family:var(--font-mono);font-size:11px;color:#9FC2CB;text-decoration:none;}
+  nav.nt-nav a.nt-back:hover{color:#fff;}
+
+  /* hero */
+  .hero{background:var(--navy);background-image:linear-gradient(rgba(95,211,227,.06) 1px, transparent 1px),linear-gradient(90deg, rgba(95,211,227,.06) 1px, transparent 1px);background-size:32px 32px;padding:38px 0 0;}
+  .hero-inner{max-width:760px;margin:0 auto;padding:0 18px 30px;}
+  .post-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--cyan);border-radius:20px;padding:5px 12px;margin-bottom:16px;font-weight:600;}
+  .hero h1{font-family:var(--font-display);font-size:clamp(26px,5.6vw,38px);font-weight:800;line-height:1.18;margin:0 0 12px;color:#F6F1E4;max-width:18ch;}
+  .hero-sub{font-family:var(--font-body);font-size:15.5px;line-height:1.6;color:#B8C9DA;max-width:52ch;margin:0 0 20px;}
+  .post-meta{font-family:var(--font-mono);font-size:11px;color:#7E97AC;display:flex;gap:16px;flex-wrap:wrap;}
+
+  .hero-art{margin:6px 0 0;}
+  .hero-art svg{width:100%;height:auto;display:block;}
+
+  /* highlight cards */
+  .highlights{display:grid;grid-template-columns:1fr;gap:10px;margin:30px 0 6px;}
+  @media(min-width:560px){ .highlights{grid-template-columns:1fr 1fr;} }
+  .hl-card{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--cyan-dim);border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .hl-num{font-family:var(--font-mono);font-size:10.5px;color:var(--cyan-dim);font-weight:600;margin-bottom:6px;}
+  .hl-text{font-size:14px;line-height:1.55;color:var(--ink);}
+
+  /* body */
+  .post-body{font-size:16px;line-height:1.78;color:var(--ink);margin-top:40px;}
+  .post-body p{margin:0 0 18px;}
+  .post-body h2{font-family:var(--font-display);font-size:21px;font-weight:800;margin:44px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;}
+  .post-body h2 .h2-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan-dim);flex:none;}
+  .post-body h2 + .lede{font-size:13.5px;color:var(--ink-dim);margin:0 0 20px;font-family:var(--font-mono);}
+  .post-body h3{font-family:var(--font-display);font-size:16px;font-weight:700;margin:26px 0 10px;}
+
+  /* formula box */
+  .formula-box{background:var(--navy);border-radius:12px;padding:26px 22px;margin:18px 0 28px;overflow-x:auto;}
+  .formula-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);color:#F6F1E4;font-size:13px;min-width:560px;justify-content:center;flex-wrap:nowrap;}
+  .f-chip{background:var(--navy-2);border:1px solid rgba(95,211,227,.28);border-radius:8px;padding:14px 16px;text-align:center;min-width:110px;}
+  .f-chip b{display:block;font-family:var(--font-display);font-size:14px;color:var(--cyan);margin-bottom:4px;}
+  .f-chip span{font-size:10px;color:#9FC2CB;}
+  .f-op{color:var(--cyan);font-size:20px;font-weight:700;}
+  .f-result{background:var(--amber);color:var(--navy);border-radius:8px;padding:14px 18px;text-align:center;min-width:110px;font-weight:700;}
+  .f-result b{display:block;font-family:var(--font-display);font-size:14px;}
+  .f-result span{font-size:10px;}
+  .formula-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:-16px;margin-bottom:26px;}
+
+  /* tables */
+  .tbl-scroll{overflow-x:auto;margin:0 0 26px;border:1px solid var(--line);border-radius:10px;}
+  table.dtable{width:100%;border-collapse:collapse;font-size:13px;min-width:420px;}
+  table.dtable th{background:var(--navy);color:#F3EEDD;text-align:left;padding:9px 12px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+  table.dtable td{padding:8px 12px;border-top:1px solid var(--line);white-space:nowrap;font-family:var(--font-mono);font-size:12.5px;color:var(--ink);}
+  table.dtable tr:nth-child(even) td{background:var(--bg-2);}
+  .tbl-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin:-16px 0 22px;}
+
+  .two-col{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:26px;}
+  @media(min-width:640px){ .two-col{grid-template-columns:1fr 1fr;} }
+
+  .info-strip{display:flex;gap:12px;align-items:flex-start;background:var(--vellum);border-radius:10px;padding:14px 16px;margin:0 0 30px;font-size:13px;color:#4a4130;}
+  .info-strip .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex:none;margin-top:6px;}
+
+  /* worked example */
+  .example-box{background:#0E2A20;border-radius:12px;padding:24px 22px;margin:0 0 30px;color:#E7F5EC;}
+  .example-box h3{font-family:var(--font-display);color:#7FE0A6;margin:0 0 16px;font-size:15px;letter-spacing:.02em;text-transform:uppercase;}
+  .example-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media(min-width:600px){ .example-grid{grid-template-columns:1fr 1fr;} }
+  .example-list{list-style:none;margin:0;padding:0;font-size:13.5px;line-height:1.7;}
+  .example-list li{padding:6px 0;border-bottom:1px solid rgba(231,245,236,.1);}
+  .example-list li:last-child{border-bottom:none;}
+  .result-line{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12.5px;padding:6px 0;border-bottom:1px dashed rgba(231,245,236,.15);}
+  .result-line b{color:#fff;}
+  .result-final{margin-top:10px;background:#7FE0A6;color:#0E2A20;border-radius:8px;padding:12px 14px;font-family:var(--font-display);font-weight:800;font-size:14px;text-align:center;}
+
+  /* takeaways */
+  .takeaways{margin:0 0 10px;list-style:none;padding:0;}
+  .takeaways li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.6;}
+  .takeaways li:first-child{border-top:none;}
+  .tk-check{flex:none;width:20px;height:20px;border-radius:50%;background:var(--cyan-dim);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:2px;}
+
+  .post-related{margin-top:36px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:rgba(127,127,127,.04);}
+  .post-related h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+  .post-related-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6;margin:12px 0 4px;}
+  .post-related-label:first-of-type{margin-top:0;}
+  .post-related ul{list-style:none;margin:0;padding:0;}
+  .post-related li{margin:4px 0;}
+  .post-related a{font-family:var(--font-mono);font-size:13px;color:var(--lime-dim);text-decoration:none;}
+  .post-related a:hover{text-decoration:underline;}
+  .post-foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);}
+  .post-foot a{font-family:var(--font-mono);font-size:12px;color:var(--cyan-dim);text-decoration:none;}
+  .post-foot a:hover{text-decoration:underline;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Load Estimation: The First Step in Electrical Design",
+      "item": "https://www.engineerzcorner.com/posts/load-estimation-first-step-electrical-design"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Load Estimation: The First Step in Electrical Design",
+  "description": "Why load estimation comes before anything else in an electrical project, how to calculate it by floor area, NEC VA/m\u00b2 guide tables, and a full worked transformer-sizing example.",
+  "url": "https://www.engineerzcorner.com/posts/load-estimation-first-step-electrical-design",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/load-estimation-first-step-electrical-design"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Load Estimation: The First Step in Electrical Design</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="index.html">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Design Basics</span>
+    <h1>Load Estimation: The First Step in Electrical Design</h1>
+    <p class="hero-sub">Before a single cable is drawn or a panel is specified, every electrical project starts with one question: how much power will this building actually need? Getting that number right — early — is what load estimation is for.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical Design</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="760" height="190" fill="none"/>
+      <!-- ground line -->
+      <line x1="0" y1="170" x2="760" y2="170" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- pylon -->
+      <g stroke="#3E8C97" stroke-width="2" fill="none">
+        <line x1="650" y1="60" x2="620" y2="170"/>
+        <line x1="690" y1="60" x2="720" y2="170"/>
+        <line x1="620" y1="170" x2="720" y2="170"/>
+        <line x1="628" y1="140" x2="712" y2="140"/>
+        <line x1="634" y1="110" x2="706" y2="110"/>
+        <line x1="640" y1="82" x2="700" y2="82"/>
+        <line x1="600" y1="55" x2="740" y2="55"/>
+      </g>
+      <circle cx="600" cy="55" r="3" fill="#5FD3E3"/>
+      <circle cx="740" cy="55" r="3" fill="#5FD3E3"/>
+      <path d="M600 55 Q 560 90 490 100" stroke="#3E8C97" stroke-width="1.5" fill="none" stroke-dasharray="4 4"/>
+      <!-- building -->
+      <g>
+        <rect x="330" y="40" width="130" height="130" fill="#122845" stroke="#3E8C97" stroke-width="1.5"/>
+        <g fill="#5FD3E3" opacity=".55">
+          <rect x="342" y="52" width="14" height="14"/><rect x="364" y="52" width="14" height="14"/><rect x="386" y="52" width="14" height="14"/><rect x="408" y="52" width="14" height="14"/><rect x="430" y="52" width="14" height="14"/>
+          <rect x="342" y="76" width="14" height="14"/><rect x="364" y="76" width="14" height="14"/><rect x="386" y="76" width="14" height="14"/><rect x="408" y="76" width="14" height="14"/><rect x="430" y="76" width="14" height="14"/>
+          <rect x="342" y="100" width="14" height="14"/><rect x="364" y="100" width="14" height="14"/><rect x="386" y="100" width="14" height="14"/><rect x="408" y="100" width="14" height="14"/><rect x="430" y="100" width="14" height="14"/>
+          <rect x="342" y="124" width="14" height="14"/><rect x="364" y="124" width="14" height="14"/><rect x="386" y="124" width="14" height="14"/><rect x="408" y="124" width="14" height="14"/><rect x="430" y="124" width="14" height="14"/>
+        </g>
+        <rect x="380" y="148" width="30" height="22" fill="#0A1930" stroke="#3E8C97" stroke-width="1"/>
+      </g>
+      <!-- transformer -->
+      <g>
+        <rect x="500" y="120" width="60" height="50" rx="3" fill="#18325A" stroke="#5FD3E3" stroke-width="1.5"/>
+        <line x1="510" y1="120" x2="510" y2="105" stroke="#3E8C97" stroke-width="2"/>
+        <line x1="522" y1="120" x2="522" y2="105" stroke="#3E8C97" stroke-width="2"/>
+        <line x1="534" y1="120" x2="534" y2="105" stroke="#3E8C97" stroke-width="2"/>
+        <path d="M534 133 L524 148 L531 148 L521 165 L540 143 L532 143 Z" fill="#F2B84B"/>
+      </g>
+      <line x1="460" y1="160" x2="500" y2="150" stroke="#3E8C97" stroke-width="2"/>
+      <line x1="560" y1="150" x2="620" y2="160" stroke="#3E8C97" stroke-width="2"/>
+      <!-- small utility box -->
+      <rect x="580" y="145" width="26" height="25" fill="#122845" stroke="#3E8C97" stroke-width="1.2"/>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Estimate total load (kVA) before starting any project.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Reserve required power with the electrical distribution company in advance.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Helps determine transformers, rooms, and equipment requirements.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Include all loads: electrical, HVAC, light current, motors, elevators, etc.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>How load is estimated</h2>
+    <p class="lede">A quick per-floor method for an early-stage estimate</p>
+    <p>At concept stage, before any load schedule exists, total demand can be approximated from the building's geometry and a code-based density figure. The idea is simple: multiply the number of floors by the area of one floor, then by a kVA-per-square-metre figure pulled from code — and that gives a first-pass total load in kVA.</p>
+
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>Floors</b><span>number of floors</span></div>
+        <div class="f-op">&times;</div>
+        <div class="f-chip"><b>Area</b><span>m&sup2; per floor</span></div>
+        <div class="f-op">&times;</div>
+        <div class="f-chip"><b>kVA/m&sup2;</b><span>from code</span></div>
+        <div class="f-op">=</div>
+        <div class="f-result"><b>Total Load</b><span>kVA</span></div>
+      </div>
+    </div>
+    <div class="formula-note">Assumption: each floor is taken as 3 metres in height.</div>
+
+    <h2><span class="h2-dot"></span>General guide (kVA per 100 m&sup2;)</h2>
+    <div class="two-col">
+      <div>
+        <h3>Less than 15 floors</h3>
+        <div class="tbl-scroll">
+          <table class="dtable">
+            <tr><th>Type</th><th>Low</th><th>Medium</th><th>High</th></tr>
+            <tr><td>Residential</td><td>1.5–2</td><td>2.5–4</td><td>6–10</td></tr>
+            <tr><td>Administration</td><td>6–12</td><td>–</td><td>–</td></tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>Greater than 15 floors</h3>
+        <div class="tbl-scroll">
+          <table class="dtable">
+            <tr><th>Type</th><th>kVA/100 m&sup2;</th></tr>
+            <tr><td>Residential</td><td>8–10</td></tr>
+            <tr><td>Administration</td><td>12</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <h3>Worked reference &mdash; example area (Kumira), less than 15 floors</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type</th><th>kVA/100 m&sup2;</th></tr>
+        <tr><td>Residential</td><td>3</td></tr>
+        <tr><td>Administration</td><td>12</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Load estimation according to NEC (VA/m&sup2;)</h2>
+    <p class="lede">Lighting, small power, and A/C density by occupancy type</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Place</th><th>Lighting</th><th>Small Power</th><th>A/C</th></tr>
+        <tr><td>Banks</td><td>20–40</td><td>30</td><td>50–70</td></tr>
+        <tr><td>Cafeteria</td><td>25–45</td><td>5</td><td>60–100</td></tr>
+        <tr><td>Computer Center</td><td>15–25</td><td>15</td><td>120–200</td></tr>
+        <tr><td>Basement Stores</td><td>30–50</td><td>15</td><td>–</td></tr>
+        <tr><td>Office</td><td>15–35</td><td>15</td><td>110–120</td></tr>
+        <tr><td>Hotels</td><td>10–30</td><td>5</td><td>50–80</td></tr>
+        <tr><td>Hospitals</td><td>20–30</td><td>10</td><td>50–70</td></tr>
+        <tr><td>Schools</td><td>15–35</td><td>15</td><td>35–50</td></tr>
+        <tr><td>Shops</td><td>30–50</td><td>10</td><td>50–90</td></tr>
+        <tr><td>Restaurants</td><td>15–25</td><td>2.5</td><td>60–100</td></tr>
+        <tr><td>Library</td><td>15–35</td><td>5</td><td>100–120</td></tr>
+        <tr><td>Theaters</td><td>20–30</td><td>10</td><td>700–1000</td></tr>
+        <tr><td>Garages</td><td>5</td><td>1.5</td><td>–</td></tr>
+        <tr><td>Industrial Building</td><td>10–20</td><td>10</td><td>–</td></tr>
+        <tr><td>Mid Floor</td><td>25–45</td><td>10</td><td>50–70</td></tr>
+        <tr><td>Upper Floor</td><td>20–40</td><td>5</td><td>–</td></tr>
+      </table>
+    </div>
+    <div class="tbl-caption">All values in VA/m&sup2;.</div>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>VA/m&sup2;</strong> is Volt-Ampere per square metre. This table is based on NEC (NFPA 70) standards.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Worked example: residential + admin building</h2>
+    <p>Total area: 600 m&sup2;, made up of 1 basement, 2 admin floors, and 16 residential floors at 5 apartments per floor. Auxiliary loads: 3 elevators at 15 kW each, 3 plumbing motors at 17.5 HP (88% efficiency, 1 held as emergency spare), and 2 sweeping motors at 6.5 HP (87% efficiency, 1 held as emergency spare).</p>
+
+    <div class="example-box">
+      <h3>Building profile &amp; result</h3>
+      <div class="example-grid">
+        <ul class="example-list">
+          <li>Total area: <b>600 m&sup2;</b></li>
+          <li>1 basement + 2 admin floors + 16 residential floors (5 apartments/floor)</li>
+          <li>3 elevators (15 kW each)</li>
+          <li>3 plumbing motors, 17.5 HP, &eta;=88% (1 emergency)</li>
+          <li>2 sweeping motors, 6.5 HP, &eta;=87% (1 emergency)</li>
+        </ul>
+        <div>
+          <div class="result-line"><span>Total building load</span><b>1128 kVA</b></div>
+          <div class="result-line"><span>Other loads</span><b>95 kVA</b></div>
+          <div class="result-line"><span>Total load</span><b>1223 kVA</b></div>
+          <div class="result-line"><span>Assumed transformer loading</span><b>80%</b></div>
+          <div class="result-line"><span>Required transformer</span><b>1223 / 0.8 = 1528.75 kVA</b></div>
+          <div class="result-final">Selected transformer: 2 MVA</div>
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Accurate load estimation ensures smooth project execution and avoids delays.</span></li>
+      <li><span class="tk-check">✓</span><span>Helps in correct sizing of transformers, generators, cables, panels, and protection devices.</span></li>
+      <li><span class="tk-check">✓</span><span>Use code values (NEC) and apply diversity factors (0.6–0.7), since not all loads operate at the same time.</span></li>
+      <li><span class="tk-check">✓</span><span>Estimate early, plan smart, deliver reliable power.</span></li>
+    </ul>
+
+  </div>
+
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/lv-panel-estimate.html">Lv Panel Estimate →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="ansi-relay-numbers-protection-functions.html">ANSI Relay Numbers: Common Protection Relay Functions</a></li><li><a href="breaker-selectivity-discrimination-explained.html">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="index.html">&larr; Back to all posts</a>
+  </div>
+</div>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

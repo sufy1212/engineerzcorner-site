@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts | Engineerz CorneR</title>
+<meta name="description" content="Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/">
+<link rel="alternate" type="application/rss+xml" title="EngineerzCorneR — Posts" href="/feed.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Posts | Engineerz CorneR">
+<meta property="og:description" content="Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Posts | Engineerz CorneR">
+<meta name="twitter:description" content="Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#009999; --teal-dark:#00696D; --petrol:#003D4C; --petrol-2:#00252F;
+    --cyan:#3FE8E8; --amber:#F2B84B;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);overflow-x:hidden;}
+  .wrap{max-width:860px;margin:0 auto;padding:0 18px 70px;position:relative;}
+  a{text-decoration:none;}
+
+  /* progress bar */
+  .scrollbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--teal));width:0%;z-index:100;transition:width .08s linear;box-shadow:0 0 8px rgba(63,232,232,.6);}
+
+  nav.nt-nav{position:sticky;top:0;z-index:50;background:rgba(0,61,76,.92);backdrop-filter:blur(8px);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(63,232,232,.15);}
+  .nt-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .nt-nav-word span{color:var(--cyan);}
+  nav.nt-nav a.nt-back{font-family:var(--font-mono);font-size:11px;color:#B8D9D9;text-decoration:none;transition:color .15s;}
+  nav.nt-nav a.nt-back:hover{color:#fff;}
+
+  /* ===== animated hero ===== */
+  .hero{position:relative;background:linear-gradient(160deg,var(--petrol) 0%,var(--petrol-2) 100%);overflow:hidden;padding:0;}
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:.55;}
+  .hero-glow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(63,232,232,.28),transparent 70%);top:-120px;right:-100px;filter:blur(10px);animation:float 8s ease-in-out infinite;pointer-events:none;}
+  .hero-glow.g2{background:radial-gradient(circle,rgba(0,153,153,.3),transparent 70%);width:260px;height:260px;top:auto;bottom:-100px;left:-80px;right:auto;animation-delay:-4s;}
+  @keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(24px) scale(1.06);}}
+
+  .hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:52px 18px 44px;text-align:center;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:0;animation:riseIn .7s ease forwards;}
+  .eyebrow .pulse-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(63,232,232,.6);animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,232,232,.55);}70%{box-shadow:0 0 0 9px rgba(63,232,232,0);}100%{box-shadow:0 0 0 0 rgba(63,232,232,0);}}
+
+  .hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,7vw,46px);margin:14px 0 12px;color:#fff;letter-spacing:-.02em;}
+  .hero h1 .word{display:inline-block;opacity:0;transform:translateY(16px);animation:riseIn .6s cubic-bezier(.2,.8,.2,1) forwards;}
+  .hero h1 .accent{background:linear-gradient(90deg,var(--cyan),#7FF5D8);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  @keyframes riseIn{to{opacity:1;transform:translateY(0);}}
+
+  .hero p{font-size:14.5px;line-height:1.6;color:#AEC7CC;max-width:52ch;margin:0 auto 26px;opacity:0;animation:riseIn .7s ease .35s forwards;}
+
+  .stat-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;opacity:0;animation:riseIn .7s ease .5s forwards;}
+  .stat-chip{background:rgba(255,255,255,.06);border:1px solid rgba(63,232,232,.22);border-radius:10px;padding:10px 18px;min-width:88px;}
+  .stat-num{font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff;}
+  .stat-num span{color:var(--cyan);}
+  .stat-label{font-family:var(--font-mono);font-size:9.5px;color:#8FB0B6;text-transform:uppercase;letter-spacing:.08em;margin-top:2px;}
+
+  /* ===== grid ===== */
+  .section-label{display:flex;align-items:center;gap:10px;margin:40px 0 18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+  .section-label::after{content:'';flex:1;height:1px;background:var(--line);}
+
+  .nt-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:560px){ .nt-grid{grid-template-columns:1fr 1fr;} }
+
+  .nt-card{
+    position:relative;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px;
+    display:block;overflow:hidden;box-shadow:0 1px 3px rgba(24,27,41,.06);
+    opacity:0;transform:translateY(28px);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease;
+    will-change:transform;
+  }
+  .nt-card.revealed{opacity:1;transform:translateY(0);}
+  .nt-card::before{
+    content:'';position:absolute;inset:0;border-radius:16px;padding:1px;
+    background:linear-gradient(135deg,var(--teal),transparent 40%,transparent 60%,var(--cyan));
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s ease;pointer-events:none;
+  }
+  .nt-card:hover{box-shadow:0 16px 34px rgba(0,105,109,.18);border-color:transparent;}
+  .nt-card:hover::before{opacity:1;}
+  .nt-card:active{transform:scale(.98) translateY(0) !important;}
+
+  .nt-card-glow{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(0,153,153,.14),transparent 70%);top:-60px;right:-60px;pointer-events:none;transition:opacity .3s;opacity:0;}
+  .nt-card:hover .nt-card-glow{opacity:1;}
+
+  .nt-card-tag{position:relative;display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-dark);background:rgba(0,153,153,.1);border-radius:4px;padding:3px 8px;margin-bottom:12px;}
+  .nt-card-tag.featured{color:#8A5B00;background:rgba(242,184,75,.18);}
+  .nt-card-name{position:relative;font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--ink);margin-bottom:8px;line-height:1.32;}
+  .nt-card-desc{position:relative;font-size:12.8px;color:var(--ink-dim);line-height:1.6;margin-bottom:14px;}
+  .nt-card-meta{position:relative;display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);}
+  .nt-card-arrow{display:inline-flex;transition:transform .25s ease;}
+  .nt-card:hover .nt-card-arrow{transform:translateX(5px);}
+
+  .nt-empty{text-align:center;color:var(--ink-dim);font-size:13px;padding:30px 0;}
+
+  .cta-strip{margin-top:44px;text-align:center;padding:28px 20px;border-radius:16px;background:linear-gradient(135deg,var(--petrol),var(--teal-dark));color:#fff;opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
+  .cta-strip.revealed{opacity:1;transform:translateY(0);}
+  .cta-strip h3{font-family:var(--font-display);font-size:16px;margin:0 0 6px;}
+  .cta-strip p{font-size:12.5px;color:#B8D9D9;margin:0;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Posts",
+  "description": "Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.",
+  "url": "https://www.engineerzcorner.com/posts/"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Posts</span></div></nav>
+
+<div class="scrollbar" id="scrollbar"></div>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="../index.html">&larr; Home</a>
+</nav>
+
+<div class="hero">
+  <canvas id="netCanvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-glow g2"></div>
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="pulse-dot"></span>ENGINEERZ CORNER &middot; WRITE-UPS</div>
+    <h1>
+      <span class="word" style="animation-delay:.05s">Standalone</span>
+      <span class="word accent" style="animation-delay:.15s">Posts,</span><br>
+      <span class="word" style="animation-delay:.25s">one</span>
+      <span class="word" style="animation-delay:.32s">idea</span>
+      <span class="word" style="animation-delay:.39s">per</span>
+      <span class="word" style="animation-delay:.46s">page.</span>
+    </h1>
+    <p>Not theory-reference cards like Notes — these are full technical write-ups, each with its own page and its own link.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><div class="stat-num"><span id="statPosts">0</span></div><div class="stat-label">Posts</div></div>
+      <div class="stat-chip"><div class="stat-num"><span id="statDisc">0</span></div><div class="stat-label">Disciplines</div></div>
+      <div class="stat-chip"><div class="stat-num">&infin;</div><div class="stat-label">More coming</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="section-label">All posts</div>
+
+  <div class="nt-grid" id="postsGrid">
+    <a class="nt-card" href="k-rated-transformer-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">K-Rated Transformers: What K-Factor Means and When You Need One</div>
+      <div class="nt-card-desc">What a K-rated transformer actually is, the IEEE C57.110 K-factor scale from K-1 to K-20, how construction differs from a standard transformer, and why K-13 is the common default.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Transformers</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="bms-point-types-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">🔌 Automation</div>
+      <div class="nt-card-name">BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</div>
+      <div class="nt-card-desc">What each BMS point abbreviation means, the signal ranges behind AI/AO/BI/BO/MI/MO, and why the virtual points BV/AV/MV don't correspond to any physical wiring at all.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Automation / BMS</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="harmonics-sources-effects-mitigation.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">Harmonics in Power Systems: Sources, Effects and How to Mitigate Them</div>
+      <div class="nt-card-desc">Where harmonics come from, IEEE 519's voltage THD limits at the PCC, what unmanaged harmonics do to cables and capacitors, and the filter/reactor options to control them.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Power Quality</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="lv-panel-forms-of-construction-iec-61439.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">IEC 61439 Forms of Construction: Form 1 to Form 4 Explained</div>
+      <div class="nt-card-desc">What Form 1 through Form 4 switchboard construction actually separates inside an LV panel, the 2a/2b, 3a/3b and 4a/4b sub-variants, and why the Form number is a deliberate specification choice.</div>
+      <div class="nt-card-meta"><span>Reference &middot; LV Switchgear</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="retaining-wall-design-basics-overturning-sliding-bearing.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">&#127959; Civil</div>
+      <div class="nt-card-name">Retaining Wall Design Basics: Why Overturning, Sliding &amp; Bearing All Have to Pass</div>
+      <div class="nt-card-desc">The three independent stability checks behind every gravity or cantilever retaining wall, and the safety-factor thresholds engineers actually design to.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Retaining Wall Stability</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="solar-panel-tilt-orientation-annual-yield.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">&#9728; Solar</div>
+      <div class="nt-card-name">Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer</div>
+      <div class="nt-card-desc">How tilt angle and azimuth are chosen for fixed solar arrays, and how seasonal weighting shifts the optimum away from the simple latitude rule.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Fixed-Tilt PV Arrays</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="signal-scaling-4-20ma-engineering-units.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">&#128268; Automation</div>
+      <div class="nt-card-name">Signal Scaling: Turning a 4&ndash;20mA Loop Into an Engineering Value</div>
+      <div class="nt-card-desc">The linear scaling formula behind every analog I/O point, live-zero vs. dead loop, and where scaling errors quietly creep in.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Analog Signal Scaling</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="elv-extra-low-voltage-systems-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">&#9889; Electrical</div>
+      <div class="nt-card-name">What Is an ELV System? Types, Components &amp; the BIM Engineer's Role</div>
+      <div class="nt-card-desc">The six ELV categories &mdash; ICT, security, fire alarm, PA/voice evacuation, BMS and more &mdash; how ELV differs from electrical power systems, and where MEP BIM fits in.</div>
+      <div class="nt-card-meta"><span>Reference &middot; ELV / Building Systems</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="plc-vs-ddc-key-differences.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">🔌 Automation</div>
+      <div class="nt-card-name">PLC vs DDC: What Actually Separates Them</div>
+      <div class="nt-card-desc">Why PLCs and DDCs aren't interchangeable &mdash; purpose, communication protocols, programming, I/O handling, and how to pick the right controller for the job.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Automation / BMS</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="is-iec-ieee-electrical-standards-reference.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">IS, IEC &amp; IEEE Codes: The Standards Behind Electrical Engineering</div>
+      <div class="nt-card-desc">What each standards body actually governs, a working reference across wiring, earthing, transformers, switchgear and solar PV, and the codes a solar EPC project reaches for most.</div>
+      <div class="nt-card-meta"><span>Standards &amp; Codes</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="busbar-sizing-thermal-electrodynamic-withstand.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</div>
+      <div class="nt-card-desc">Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force between conductors &mdash; plus enclosure heat dissipation.</div>
+      <div class="nt-card-meta"><span>Busbar &amp; Enclosure Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="transformer-generator-sizing-motor-starting.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load</div>
+      <div class="nt-card-desc">Transformer kVA from connected load and demand factor, and why standby generator sizing is governed by motor-starting voltage dip rather than the running load alone.</div>
+      <div class="nt-card-meta"><span>Transformer &amp; Genset Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="ups-battery-autonomy-sizing-derating-factors.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get</div>
+      <div class="nt-card-desc">Required battery Ah for a UPS from load and backup time, and why depth of discharge, aging, temperature and efficiency all derate the usable capacity well below nameplate.</div>
+      <div class="nt-card-meta"><span>UPS Battery Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="lighting-lumen-method-luminaire-count.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">Lighting Design by the Lumen Method: Why Luminaire Count Isn't Just Lumens &divide; Lux</div>
+      <div class="nt-card-desc">Luminaire count for a target lux level using the lumen method, and why utilization factor and maintenance factor both derate raw lumen output before you get a real number.</div>
+      <div class="nt-card-meta"><span>Lighting Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="lv-panel-estimate-boq-from-incomer.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">LV Panel Estimating: Why a Budgetary BOQ Starts With the Incomer, Not the Steel</div>
+      <div class="nt-card-desc">How an LV panel's busbar size, enclosure dimensions and budgetary BOQ cost all cascade from just two inputs: the incomer rating and the number of outgoing ways.</div>
+      <div class="nt-card-meta"><span>LV Panel Estimating</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="harmonics-thd-k-factor-transformer-derating.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer</div>
+      <div class="nt-card-desc">How current THD and K-factor are calculated from a harmonic spectrum, why K-factor weights higher harmonics more heavily, and why IEEE 519 limits aren't a single flat number.</div>
+      <div class="nt-card-meta"><span>Harmonics &amp; THD</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="conduit-fill-why-the-percentage-limit-exists.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9889; Electrical</div>
+      <div class="nt-card-name">Conduit Fill: Why 40% Isn't an Arbitrary Number</div>
+      <div class="nt-card-desc">What the conduit fill percentage check is actually protecting against &mdash; pulling tension and jamming risk during installation, and heat dissipation once cables are in service.</div>
+      <div class="nt-card-meta"><span>Conduit Fill</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="control-valve-cv-sizing-oversizing-mistake.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#128268; Automation</div>
+      <div class="nt-card-name">Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</div>
+      <div class="nt-card-desc">Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</div>
+      <div class="nt-card-meta"><span>Control Valve Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="vfd-speed-scaling-affinity-laws-energy-savings.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#128268; Automation</div>
+      <div class="nt-card-name">VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings</div>
+      <div class="nt-card-desc">Motor speed scaling with VFD output frequency, and why the pump/fan affinity laws mean modest speed reductions cut power consumption by a much larger percentage.</div>
+      <div class="nt-card-meta"><span>VFD Speed Scaling</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="duct-sizing-velocity-limits-vs-airflow.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9881; Mechanical</div>
+      <div class="nt-card-name">Duct Sizing: Why Velocity Limits Matter as Much as Airflow</div>
+      <div class="nt-card-desc">Sizing ductwork for airflow, velocity and circular-equivalent diameter, and why designing for velocity limits matters as much as hitting the required airflow figure.</div>
+      <div class="nt-card-meta"><span>Duct Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="chiller-capacity-cop-condenser-heat-rejection.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#10052; HVAC</div>
+      <div class="nt-card-name">Chiller Capacity and COP: Where the Compressor's Work Actually Goes</div>
+      <div class="nt-card-desc">Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input, not just the cooling load alone.</div>
+      <div class="nt-card-meta"><span>Chiller Capacity</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="npsh-margin-why-passing-on-paper-can-still-cavitate.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9881; Mechanical</div>
+      <div class="nt-card-name">NPSH Margin: Why 'NPSHa &gt; NPSHr' Isn't Enough on Its Own</div>
+      <div class="nt-card-desc">Pump hydraulic and shaft power sizing, and why an NPSH margin needs a safety factor beyond simply having available head exceed required head.</div>
+      <div class="nt-card-meta"><span>Pump Power &amp; NPSH</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="belt-drive-sizing-speed-ratio-vs-tension.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9881; Mechanical</div>
+      <div class="nt-card-name">Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</div>
+      <div class="nt-card-desc">Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</div>
+      <div class="nt-card-meta"><span>Belt Drive Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="bolt-torque-vs-preload-nut-factor.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9881; Mechanical</div>
+      <div class="nt-card-name">Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</div>
+      <div class="nt-card-desc">Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</div>
+      <div class="nt-card-meta"><span>Bolt Torque</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="pipe-flow-head-loss-reynolds-number-regime.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9881; Mechanical</div>
+      <div class="nt-card-name">Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies</div>
+      <div class="nt-card-desc">Pipe flow velocity, Reynolds number, friction factor and head loss, and why laminar and turbulent flow need genuinely different formulas rather than one general approximation.</div>
+      <div class="nt-card-meta"><span>Pipe Flow &amp; Head Loss</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="pipe-thermal-expansion-why-long-runs-move-more.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">&#9881; Mechanical</div>
+      <div class="nt-card-name">Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess</div>
+      <div class="nt-card-desc">Linear thermal expansion of a pipe run from material, length and temperature change, and why long runs in high-delta-T service need expansion loops, joints, or guided anchoring.</div>
+      <div class="nt-card-meta"><span>Thermal Expansion</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="short-circuit-current-iec-60909-basics.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">Prospective Short-Circuit Current: Why It Falls the Further You Are From Source</div>
+      <div class="nt-card-desc">How fault current is calculated per IEC 60909, why it's highest at the transformer and drops downstream, and what that means for breaker interrupting ratings.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Fault Current</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="voltage-drop-lv-feeders-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number</div>
+      <div class="nt-card-desc">Why voltage drop accumulates through every segment of a feeder chain, the formula behind it, and why a cable sized fine for ampacity can still fail on voltage drop.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Voltage Drop</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="breaker-selectivity-discrimination-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</div>
+      <div class="nt-card-desc">What selectivity between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it, and why overlapping trip curves cause both breakers to open for one fault.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Protection Coordination</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="kw-kva-kvar-difference-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">kW, kVA, and kVAR: What Actually Separates Them</div>
+      <div class="nt-card-desc">Real, apparent, and reactive power explained through the power triangle, why transformers are rated in kVA, and a worked 3-phase example.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Power Fundamentals</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="heat-pump-sizing-basics.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">❄ HVAC</div>
+      <div class="nt-card-name">Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</div>
+      <div class="nt-card-desc">Why heat pump capacity moves with outdoor temperature, what balance point means for backup heat, and a practical sizing sequence.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Heat Pumps</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="pid-controller-tuning-basics.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">🔌 Automation</div>
+      <div class="nt-card-name">PID Controller Tuning Basics: What P, I, and D Actually Do</div>
+      <div class="nt-card-desc">What each term in a PID loop actually corrects for, how to read overshoot and oscillation back to their cause, and a practical manual tuning sequence.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Process Control</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="earthing-grounding-systems-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</div>
+      <div class="nt-card-desc">What an earthing system is protecting against, why grid resistance decides whether it works, and what drives that number on a real site.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Earthing &amp; Protection</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="load-estimation-first-step-electrical-design.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag featured">⚡ Electrical</div>
+      <div class="nt-card-name">Load Estimation: The First Step in Electrical Design</div>
+      <div class="nt-card-desc">Why load estimation comes before anything else, how to calculate it by floor area, NEC VA/m² guide tables, and a full worked transformer-sizing example.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Electrical Design</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="cable-size-current-capacity-guide.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">⚡ Electrical</div>
+      <div class="nt-card-name">Cable Size &amp; Current Capacity: A Practical Selection Guide</div>
+      <div class="nt-card-desc">Approximate current capacity for copper and aluminium cables side by side, common house-wiring sizes by load, core-colour ID, and a selection checklist.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Cables</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="cable-gland-overview-selection-guide.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">⚡ Electrical</div>
+      <div class="nt-card-name">Cable Glands: What They Do and How to Get the Selection Right</div>
+      <div class="nt-card-desc">The four jobs a gland does at once, gland types and their parts, a selection and quality-inspection checklist, an installation walkthrough, and an IP rating reference.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Cable Accessories</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="ansi-relay-numbers-protection-functions.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">⚡ Electrical</div>
+      <div class="nt-card-name">ANSI Relay Numbers: Common Protection Relay Functions</div>
+      <div class="nt-card-desc">A working reference for the ANSI device numbers you'll actually run into &mdash; 50/51, 27/59, 87, 21, 67, 25 and more &mdash; what each does, where it's applied, and how relay technology evolved to get here.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Protection</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="chilled-water-hvac-system-explained.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">❄ HVAC</div>
+      <div class="nt-card-name">Chilled Water HVAC Systems: How the Loop Actually Works</div>
+      <div class="nt-card-desc">Why a chilled water system is really two separate loops &mdash; chilled water and condenser water &mdash; meeting only inside the chiller, plus what each component and zone-level control point actually does.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Central Plant</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="bearing-failure-modes-causes-prevention.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">⚙ Mechanical</div>
+      <div class="nt-card-name">Bearing Failures: Root Causes &amp; Prevention</div>
+      <div class="nt-card-desc">The five ways rolling-element bearings actually fail &mdash; spalling, lubrication breakdown, contamination, electrical erosion and false brinelling &mdash; with the cause, fix and best monitoring method for each.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="pump-cavitation-causes-prevention.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">⚙ Mechanical</div>
+      <div class="nt-card-name">Cavitation in Pumps: Causes, Warning Signs, and Prevention</div>
+      <div class="nt-card-desc">Why local pressure dropping below vapour pressure at the impeller eye erodes pumps, how NPSH available vs. required decides it, and a field checklist to prevent it.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="sensible-vs-latent-heat-cooling-load.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">❄ HVAC</div>
+      <div class="nt-card-name">Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature</div>
+      <div class="nt-card-desc">Why a cooling load has two separate halves, what drives each one, typical sensible/latent splits by space type, and why "cool but clammy" happens.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Psychrometrics</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="soil-bearing-capacity-footing-sizing.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">🏗 Civil</div>
+      <div class="nt-card-name">Soil Bearing Capacity: Why It Decides Your Footing Size</div>
+      <div class="nt-card-desc">Why footing area is set by the weaker of two numbers, typical allowable bearing capacities by soil type, and what shifts them on real sites.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Geotechnical</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="4-20ma-current-loop-basics.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">🔌 Automation</div>
+      <div class="nt-card-name">4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</div>
+      <div class="nt-card-desc">Why current beats voltage over long runs, what live-zero actually protects against, and how to convert a reading back to engineering units.</div>
+      <div class="nt-card-meta"><span>Reference &middot; Instrumentation</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="pv-string-sizing-voltage.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">☀ Solar</div>
+      <div class="nt-card-name">PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</div>
+      <div class="nt-card-desc">Why panel voltage rises as it gets colder, how that can push a cold morning past the inverter's voltage limit, and how to find the safe panel-count range.</div>
+      <div class="nt-card-meta"><span>Reference &middot; PV System Design</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+    <a class="nt-card" href="earned-value-management-basics.html">
+      <div class="nt-card-glow"></div>
+      <div class="nt-card-tag">📊 Project Management</div>
+      <div class="nt-card-name">Earned Value Management: Reading Project Health From Three Numbers</div>
+      <div class="nt-card-desc">What Planned Value, Earned Value and Actual Cost each measure, and how CPI and SPI catch cost and schedule trouble early.</div>
+      <div class="nt-card-meta"><span>Reference &middot; EVM</span><span class="nt-card-arrow">&rarr;</span></div>
+    </a>
+  </div>
+
+  <div class="cta-strip" id="ctaStrip">
+    <h3>Got a topic in mind?</h3>
+    <p>Ask, and a new post gets written and added to this page — its own page, its own link.</p>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  /* ---- scroll progress bar ---- */
+  var bar = document.getElementById('scrollbar');
+  function updateBar(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = (isFinite(scrolled) ? scrolled : 0) + '%';
+  }
+  document.addEventListener('scroll', updateBar, {passive:true});
+  updateBar();
+
+  /* ---- animated network background in hero ---- */
+  var canvas = document.getElementById('netCanvas');
+  var ctx = canvas.getContext('2d');
+  var hero = canvas.parentElement;
+  var W, H, pts = [];
+  function resize(){
+    W = canvas.width = hero.offsetWidth;
+    H = canvas.height = hero.offsetHeight;
+    var count = Math.max(18, Math.floor((W*H)/26000));
+    pts = [];
+    for(var i=0;i<count;i++){
+      pts.push({
+        x: Math.random()*W, y: Math.random()*H,
+        vx: (Math.random()-.5)*.35, vy:(Math.random()-.5)*.35
+      });
+    }
+  }
+  function tick(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<pts.length;i++){
+      var p = pts[i];
+      p.x += p.vx; p.y += p.vy;
+      if(p.x<0||p.x>W) p.vx*=-1;
+      if(p.y<0||p.y>H) p.vy*=-1;
+    }
+    for(var i=0;i<pts.length;i++){
+      for(var j=i+1;j<pts.length;j++){
+        var a=pts[i], b=pts[j];
+        var dx=a.x-b.x, dy=a.y-b.y, d=Math.sqrt(dx*dx+dy*dy);
+        if(d<120){
+          ctx.strokeStyle = 'rgba(63,232,232,' + (1-d/120)*0.35 + ')';
+          ctx.lineWidth=1;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+    }
+    for(var i=0;i<pts.length;i++){
+      ctx.beginPath();
+      ctx.arc(pts[i].x, pts[i].y, 1.6, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(63,232,232,.7)';
+      ctx.fill();
+    }
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    requestAnimationFrame(tick);
+  }
+
+  /* ---- count-up stats ---- */
+  var cards = document.querySelectorAll('#postsGrid .nt-card');
+  var discSet = new Set();
+  cards.forEach(function(c){
+    var tag = c.querySelector('.nt-card-tag');
+    if(tag) discSet.add(tag.textContent.trim());
+  });
+  function countUp(el, target, dur){
+    var start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      el.textContent = Math.floor(p*target);
+      if(p<1) requestAnimationFrame(step); else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  countUp(document.getElementById('statPosts'), cards.length, 900);
+  countUp(document.getElementById('statDisc'), discSet.size, 900);
+
+  /* ---- scroll reveal for cards + cta ---- */
+  var revealTargets = document.querySelectorAll('.nt-card, .cta-strip');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry, idx){
+        if(entry.isIntersecting){
+          var el = entry.target;
+          var delay = Array.prototype.indexOf.call(revealTargets, el) * 70;
+          setTimeout(function(){ el.classList.add('revealed'); }, delay);
+          io.unobserve(el);
+        }
+      });
+    }, {threshold:.15});
+    revealTargets.forEach(function(el){ io.observe(el); });
+  } else {
+    revealTargets.forEach(function(el){ el.classList.add('revealed'); });
+  }
+
+  /* ---- tilt effect on cards (pointer devices only) ---- */
+  if(window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+    cards.forEach(function(card){
+      card.addEventListener('mousemove', function(e){
+        var r = card.getBoundingClientRect();
+        var x = e.clientX - r.left, y = e.clientY - r.top;
+        var rx = ((y / r.height) - .5) * -6;
+        var ry = ((x / r.width) - .5) * 6;
+        card.style.transform = 'perspective(600px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-2px)';
+      });
+      card.addEventListener('mouseleave', function(){
+        card.style.transform = '';
+      });
+    });
+  }
+})();
+</script>
+
+
+
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<div class="nl-box" style="display:block;text-align:left;background-color:#F7F8FC;border:1px solid #E1E3F0;border-left:3px solid #0D9488;border-radius:0 8px 8px 0;padding:18px;margin:22px 16px 0;">
+  <style>
+    .nl-box .sib-form{text-align:left;}
+    .nl-box #sib-container{max-width:420px;background:transparent;border:none;padding:0;}
+    .nl-box .sib-form-block{padding:4px 0 !important;}
+    .nl-box .sib-form-block p{margin:0;}
+    .nl-box input.input{font-family:inherit;font-size:12.5px;padding:8px 10px;border:1px solid #E1E3F0;border-radius:6px;width:100%;box-sizing:border-box;color:#181B29;background:#fff;}
+    .nl-box .sib-form-block__button{font-family:"JetBrains Mono","SF Mono",monospace !important;font-size:12px !important;font-weight:700 !important;padding:8px 16px !important;border-radius:6px !important;background:#0D9488 !important;color:#fff !important;cursor:pointer;margin-top:8px;}
+    .nl-box .entry__specification{display:none;}
+    .nl-box .entry__label{font-family:"Manrope","Arial",sans-serif !important;font-size:13.5px !important;font-weight:700 !important;color:#181B29 !important;}
+    .nl-box .sib-form-message-panel{max-width:100% !important;font-size:11.5px !important;margin-bottom:8px;}
+  </style>
+  <div style="font-family:'Manrope','Arial',sans-serif;font-size:13.5px;font-weight:700;color:#181B29;margin-bottom:2px;">Get notified about new content</div>
+  <div style="font-size:11.5px;color:#8D91AA;margin-bottom:10px;">New calculators, guides, notes &amp; tools — one short email when something ships. No spam, unsubscribe anytime.</div>
+
+  <div class="sib-form" style="text-align:center;">
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+        </div>
+      </div>
+      <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+        </div>
+      </div>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:420px;">
+        <form id="sib-form" method="POST" action="https://5f707dc5.sibforms.com/serve/MUIFAEozin-ZuSQjrJ6Lkt2qH35ZlJXqC-xbUMRbp7XgW2G7EFhuUYuLr22lq9tGRUV0d_7_xm7KyF5QzbKTYWWSZ4dCKbkdHlLUk6gYopHCz9aevP1UymURugquoAQgDDf4DHBOW12LR2DBY2GDPYfF7PUa1miGFfS1-336gBRI26BbyNQr39YglWNTX_wM946cs4z4ga9HIBAO5A==" data-type="subscription">
+          <div style="padding:4px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <div class="entry__field">
+                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="you@email.com" data-required="true" required />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:13px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;"></label>
+              </div>
+            </div>
+          </div>
+          <div style="padding:4px 0;text-align:left;">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:14px;height:14px;display:none;">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              SUBSCRIBE
+            </button>
+          </div>
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+          <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

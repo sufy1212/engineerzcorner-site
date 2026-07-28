@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies | Engineerz CorneR</title>
+<meta name="description" content="Pipe flow velocity, Reynolds number, friction factor and head loss, and why laminar and turbulent flow need genuinely different formulas rather than one general approximation.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies">
+<meta property="og:description" content="Pipe flow velocity, Reynolds number, friction factor and head loss, and why laminar and turbulent flow need genuinely different formulas rather than one general approximation.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies">
+<meta name="twitter:description" content="Pipe flow velocity, Reynolds number, friction factor and head loss, and why laminar and turbulent flow need genuinely different formulas rather than one general approximation.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1930; --navy-2:#122845; --navy-3:#18325A;
+    --gold:#F2B84B; --gold-dim:#C9922D;
+    --peach:#FBE0AE;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --font-display:"Space Grotesk",-apple-system,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px 70px;}
+
+  nav.nt-nav{background:var(--navy);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .nt-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .nt-nav-word span{color:var(--gold);}
+  nav.nt-nav a.nt-back{font-family:var(--font-mono);font-size:11px;color:#9FC2CB;text-decoration:none;}
+  nav.nt-nav a.nt-back:hover{color:#fff;}
+
+  .hero{background:var(--navy);background-image:linear-gradient(rgba(242,184,75,.07) 1px, transparent 1px),linear-gradient(90deg, rgba(242,184,75,.07) 1px, transparent 1px);background-size:32px 32px;padding:38px 0 0;}
+  .hero-inner{max-width:760px;margin:0 auto;padding:0 18px 30px;}
+  .post-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--gold);border-radius:20px;padding:5px 12px;margin-bottom:16px;font-weight:600;}
+  .hero h1{font-family:var(--font-display);font-size:clamp(24px,5.4vw,36px);font-weight:800;line-height:1.2;margin:0 0 12px;color:#F6F1E4;max-width:24ch;}
+  .hero-sub{font-family:var(--font-body);font-size:15.5px;line-height:1.6;color:#B8C9DA;max-width:54ch;margin:0 0 20px;}
+  .post-meta{font-family:var(--font-mono);font-size:11px;color:#7E97AC;display:flex;gap:16px;flex-wrap:wrap;}
+
+  .highlights{display:grid;grid-template-columns:1fr;gap:10px;margin:30px 0 6px;}
+  @media(min-width:560px){ .highlights{grid-template-columns:1fr 1fr;} }
+  .hl-card{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--gold-dim);border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .hl-num{font-family:var(--font-mono);font-size:10.5px;color:var(--gold-dim);font-weight:600;margin-bottom:6px;}
+  .hl-text{font-size:14px;line-height:1.55;color:var(--ink);}
+
+  .post-body{font-size:16px;line-height:1.78;color:var(--ink);margin-top:40px;}
+  .post-body p{margin:0 0 18px;}
+  .post-body h2{font-family:var(--font-display);font-size:21px;font-weight:800;margin:44px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;}
+  .post-body h2 .h2-dot{width:8px;height:8px;border-radius:50%;background:var(--gold-dim);flex:none;}
+  .post-body h3{font-family:var(--font-display);font-size:16px;font-weight:700;margin:26px 0 10px;}
+
+  .formula-box{background:var(--navy);border-radius:12px;padding:22px;margin:18px 0 10px;overflow-x:auto;font-family:var(--font-mono);color:#F6F1E4;font-size:14px;text-align:center;}
+  .formula-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-bottom:26px;}
+
+  .tbl-scroll{overflow-x:auto;margin:0 0 26px;border:1px solid var(--line);border-radius:10px;}
+  table.dtable{width:100%;border-collapse:collapse;font-size:13px;min-width:380px;}
+  table.dtable th{background:var(--navy);color:#F3EEDD;text-align:left;padding:9px 12px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+  table.dtable td{padding:9px 12px;border-top:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px;color:var(--ink);}
+  table.dtable tr:nth-child(even) td{background:var(--bg-2);}
+
+  .signal-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:0 0 28px;}
+  @media(min-width:600px){ .signal-grid{grid-template-columns:1fr 1fr;} }
+  .signal-card{border-radius:10px;padding:16px 18px;}
+  .signal-card.cold{background:#1B2A45;color:#D6E4F5;}
+  .signal-card.hot{background:#3A2010;color:#F5DCC7;}
+  .signal-card b{display:block;font-family:var(--font-display);font-size:13.5px;margin-bottom:6px;}
+  .signal-card span{font-size:13px;line-height:1.55;opacity:.92;}
+
+  .takeaways{margin:0 0 10px;list-style:none;padding:0;}
+  .takeaways li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.6;}
+  .takeaways li:first-child{border-top:none;}
+  .tk-check{flex:none;width:20px;height:20px;border-radius:50%;background:var(--gold-dim);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:2px;}
+
+  .post-related{margin-top:36px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:rgba(127,127,127,.04);}
+  .post-related h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+  .post-related-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6;margin:12px 0 4px;}
+  .post-related-label:first-of-type{margin-top:0;}
+  .post-related ul{list-style:none;margin:0;padding:0;}
+  .post-related li{margin:4px 0;}
+  .post-related a{font-family:var(--font-mono);font-size:13px;color:var(--lime-dim);text-decoration:none;}
+  .post-related a:hover{text-decoration:underline;}
+  .post-foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);display:flex;gap:18px;flex-wrap:wrap;}
+  .post-foot a{font-family:var(--font-mono);font-size:12px;color:var(--gold-dim);text-decoration:none;}
+  .post-foot a:hover{text-decoration:underline;}
+  .try-tool{display:inline-block;background:var(--gold);color:var(--navy)!important;font-weight:700;padding:8px 16px;border-radius:20px;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies", "item": "https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies",
+  "description": "Pipe flow velocity, Reynolds number, friction factor and head loss, and why laminar and turbulent flow need genuinely different formulas rather than one general approximation.",
+  "url": "https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="index.html">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9881; Mechanical &middot; Fluid Systems</span>
+    <h1>Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies</h1>
+    <p class="hero-sub">The formula that gives a correct friction factor for one flow regime gives a confidently wrong answer in the other.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Pipe Flow &amp; Head Loss</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Reynolds number is a dimensionless ratio of inertial to viscous forces in the flow, and it's what actually determines the flow regime, not pipe size or velocity alone.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Below roughly Re 2300, flow is laminar and friction factor has a simple, exact closed-form relationship to Reynolds number.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Above roughly Re 4000, flow is turbulent and friction factor needs the Colebrook equation (or a Moody chart), which also depends on pipe roughness.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Head loss itself follows the same Darcy-Weisbach formula in both regimes &mdash; it's only the friction factor calculation underneath it that changes.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Reynolds number: what actually sets the flow regime</h2>
+    <div class="formula-box">Re &nbsp;=&nbsp; (&rho; &times; V &times; D) &nbsp;/&nbsp; &mu;</div>
+    <div class="formula-note">&rho; = fluid density &middot; V = mean flow velocity &middot; D = pipe internal diameter &middot; &mu; = dynamic viscosity</div>
+    <p>Reynolds number compares inertial forces (which tend to make flow chaotic) to viscous forces (which tend to smooth it out and keep it orderly). It isn't velocity, and it isn't pipe size on its own &mdash; it's the balance between the two, adjusted for the fluid's own viscosity. That balance is what determines whether the flow is laminar (smooth, layered) or turbulent (chaotic, mixing), and the two regimes genuinely behave differently, not just by degree.</p>
+
+    <h2><span class="h2-dot"></span>Two different friction factor formulas</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Regime</th><th>Threshold</th><th>Friction factor</th></tr>
+        <tr><td>Laminar</td><td>Re &lt; ~2300</td><td>f = 64 / Re (exact, closed-form)</td></tr>
+        <tr><td>Transitional</td><td>~2300 &ndash; 4000</td><td>Unpredictable &mdash; avoid designing to operate here</td></tr>
+        <tr><td>Turbulent</td><td>Re &gt; ~4000</td><td>Colebrook equation (implicit, needs pipe roughness)</td></tr>
+      </table>
+    </div>
+    <p>In laminar flow, friction factor has a clean, exact relationship to Reynolds number alone &mdash; pipe roughness doesn't even enter into it, because the flow near the wall is smooth enough that surface texture doesn't disturb it. In turbulent flow, that stops being true: friction factor now depends on both Reynolds number and the pipe's relative roughness, and the relationship (the Colebrook equation, traditionally read off a Moody chart before iterative solvers made it trivial to compute directly) is implicit rather than closed-form. Using the laminar formula on turbulent flow &mdash; or vice versa &mdash; gives a friction factor that's simply wrong for what the fluid is actually doing, not just slightly off.</p>
+
+    <h2><span class="h2-dot"></span>Head loss: same formula, different input</h2>
+    <div class="formula-box">h<sub>f</sub> &nbsp;=&nbsp; f &times; (L/D) &times; (V&sup2;/2g)</div>
+    <div class="formula-note">Darcy-Weisbach equation &mdash; L = pipe length &middot; D = internal diameter &middot; V = velocity &middot; g = gravitational acceleration &middot; f = friction factor from the correct regime above</div>
+    <p>The Darcy-Weisbach head loss formula itself doesn't change between regimes &mdash; what changes is which friction factor formula feeds into it. Most practical piping systems (water at typical service velocities, in pipes above a few millimetres) run turbulent, which is why the Colebrook equation gets used by default in most engineering work; but low-velocity flow in small-diameter tubing, or highly viscous fluids, can genuinely sit in the laminar regime, where the simpler f = 64/Re relationship is the correct one to use instead.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Reynolds number, not velocity or pipe size alone, determines whether flow is laminar or turbulent.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Laminar flow (Re below ~2300) has an exact, closed-form friction factor that doesn't depend on pipe roughness.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Turbulent flow (Re above ~4000) needs the Colebrook equation, which depends on both Reynolds number and pipe roughness.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Darcy-Weisbach head loss uses the same formula in both regimes &mdash; only the friction factor calculation feeding into it differs.</span></li>
+    </ul>
+
+  </div>
+
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../mechanical/pipe-flow-head-loss-calculator.html">Pipe Flow Head Loss Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="bearing-failure-modes-causes-prevention.html">Bearing Failures: Root Causes & Prevention</a></li><li><a href="belt-drive-sizing-speed-ratio-vs-tension.html">Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="index.html">&larr; Back to all posts</a>
+    <a class="try-tool" href="../mechanical/pipe-flow-head-loss-calculator.html">Try the Pipe Flow &amp; Head Loss Calculator &rarr;</a>
+  </div>
+</div>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
