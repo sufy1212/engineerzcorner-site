@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staircase Geometry Check — Engineering Studies Toolkit</title>
+<meta name="description" content="Staircase Geometry Check — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<link rel="canonical" href="https://www.engineerzcorner.com/civil/staircase-geometry">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Staircase Geometry Check — Engineering Studies Toolkit">
+<meta property="og:description" content="Staircase Geometry Check — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/civil/staircase-geometry">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Staircase Geometry Check — Engineering Studies Toolkit">
+<meta name="twitter:description" content="Staircase Geometry Check — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#00696D !important; --amber-deep:#003D4C !important;
+    --blue:#009999 !important; --plate:#003D4C !important; --plate-2:#045566 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #045566 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+    animation:pgFloat 8s ease-in-out infinite;
+  }
+  @keyframes pgFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(10px);}}
+  @media (prefers-reduced-motion: reduce){.pagehero::before{animation:none;}}
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;}
+  .pagehero .hero-sub{color:#C7D6D8 !important;position:relative;z-index:2;}
+  .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);}
+  .intro{border-left-color:var(--blue) !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Civil",
+      "item": "https://www.engineerzcorner.com/civil/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Staircase Geometry Check",
+      "item": "https://www.engineerzcorner.com/civil/staircase-geometry"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Staircase Geometry Check",
+  "description": "Staircase Geometry Check \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
+  "url": "https://www.engineerzcorner.com/civil/staircase-geometry"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Civil</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Staircase Geometry Check</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="index.html" class="current">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-civ-stair">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-4h4v-4h4v-4h4V5h4"></path></svg></div>
+    <div><h1>Staircase Geometry Check</h1><div class="hero-sub">Riser/tread count from floor-to-floor height, checked against the 2R+T rule of thumb</div></div>
+  </div>
+  <div class="mech-tabs">
+    <a href="index.html">Civil Index</a>
+    <a href="beam-bending.html">CV.01 Beam</a>
+    <a href="column-capacity.html">CV.02 Column</a>
+    <a href="footing-sizing.html">CV.03 Footing</a>
+    <a href="retaining-wall.html">CV.04 Wall</a>
+    <a href="concrete-volume-estimator.html">CV.05 Concrete</a>
+    <a href="slab-on-grade-thickness.html">CV.06 Slab</a>
+    <a href="staircase-geometry.html" class="current">CV.07 Stair</a>
+    <a href="notes.html">CV.08 Notes</a>
+  </div>
+
+  <div class="intro">Splits a floor-to-floor height into a whole number of even risers, then checks the resulting riser/tread combination against the common 2R+T comfort rule. Doesn't check headroom, handrail requirements, or your local building code's specific riser/tread limits — those vary by jurisdiction and occupancy.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="cstValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Floor-to-Floor &amp; Target Sizes</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="cstRise">Total floor-to-floor rise <span class="unit">mm</span></label>
+        <input type="number" id="cstRise" value="3000" step="10">
+      </div>
+      <div class="field">
+        <label for="cstTargetRiser">Target riser height <span class="unit">mm</span></label>
+        <input type="number" id="cstTargetRiser" value="175" step="1">
+        <div class="hint">Common comfortable range is roughly 150-180mm — this is a starting target, not the final answer.</div>
+      </div>
+      <div class="field">
+        <label for="cstTread">Tread run <span class="unit">mm</span></label>
+        <input type="number" id="cstTread" value="280" step="5">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">ACTUAL RISER HEIGHT</span>
+      <span class="rval" id="cstActualRiser">0.00 <small>mm</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Number of risers</div><div class="sval" id="cstNrisers">—</div></div>
+      <div class="stat"><div class="slabel">Number of treads</div><div class="sval" id="cstNtreads">—</div></div>
+      <div class="stat"><div class="slabel">Total staircase run</div><div class="sval" id="cstTotalRun">—</div></div>
+      <div class="stat"><div class="slabel">2R + T</div><div class="sval amber" id="cst2rt">—</div></div>
+    </div>
+    <div role="status" aria-live="polite" class="validation-banner neutral" id="cstCheckBanner" style="margin:0 16px 16px;"><span class="vdot"></span><span>—</span></div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">n_risers = round(rise / target riser) &nbsp;·&nbsp; actual riser = rise / n_risers &nbsp;·&nbsp; 2R + T target ≈ 550–700mm</div>
+      <div class="hint" style="margin-top:8px;">The 2R+T (or "rule of thumb") comfort check is a widely used design guideline, not a universal code requirement — always confirm against your specific building code's riser/tread/headroom rules.</div>
+    </details>
+  </div>
+  <footer>Geometry rule-of-thumb only — headroom, handrails and code-specific riser/tread limits need a full stair design check.</footer>
+</div>
+
+<!-- PAGE: CSL SLAB-ON-GRADE QUICK THICKNESS -->
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script>
+(function(){
+  function fieldError(inputEl, message){
+    var wrap = inputEl.closest('.field') || inputEl.closest('.parentField');
+    if(!wrap) return false;
+    var err = wrap.querySelector('.field-error');
+    if(message){
+      wrap.classList.add('has-error');
+      if(!err){ err = document.createElement('div'); err.className='field-error'; wrap.appendChild(err); }
+      err.textContent = '⚠ ' + message;
+      return true;
+    } else {
+      wrap.classList.remove('has-error');
+      if(err) err.remove();
+      return false;
+    }
+  }
+  function updateValidationBanner(bannerId, errorCount){
+    var el = document.getElementById(bannerId);
+    if(!el) return;
+    if(errorCount===0){
+      el.className='validation-banner ok';
+      el.innerHTML='<span class="vdot"></span><span>All inputs valid — calculation below is trustworthy.</span>';
+    } else {
+      el.className='validation-banner bad';
+      el.innerHTML='<span class="vdot"></span><span>'+errorCount+' input issue'+(errorCount>1?'s':'')+' found — see highlighted field'+(errorCount>1?'s':'')+' below for what to change.</span>';
+    }
+  }
+
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  // ---------- Staircase Geometry Check ----------
+  function calcCst(){
+    if(!el('cstRise')) return;
+    var rise=num('cstRise'), targetRiser=num('cstTargetRiser'), tread=num('cstTread');
+    var errs = 0;
+    errs += fieldError(el('cstRise'), (isNaN(rise) || rise<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cstTargetRiser'), (isNaN(targetRiser) || targetRiser<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cstTread'), (isNaN(tread) || tread<=0) ? 'Must be greater than 0.' : null);
+    if(errs>0){ updateValidationBanner('cstValidation', errs); return; }
+
+    var nRisers = Math.max(1, Math.round(rise/targetRiser));
+    var actualRiser = rise/nRisers;
+    var nTreads = nRisers-1;
+    var totalRun = nTreads*tread;
+    var twoRplusT = 2*actualRiser + tread;
+
+    setText('cstActualRiser', fmt(actualRiser,1) + ' <small>mm</small>');
+    setText('cstNrisers', nRisers);
+    setText('cstNtreads', nTreads);
+    setText('cstTotalRun', fmt(totalRun/1000,2) + ' m');
+    setText('cst2rt', fmt(twoRplusT,0) + ' mm');
+
+    var banner = el('cstCheckBanner');
+    if(twoRplusT>=550 && twoRplusT<=700){
+      banner.className = 'validation-banner ok';
+      banner.innerHTML = '<span class="vdot"></span><span>2R+T = '+fmt(twoRplusT,0)+'mm is within the common 550-700mm comfort range.</span>';
+    } else {
+      banner.className = 'validation-banner bad';
+      banner.innerHTML = '<span class="vdot"></span><span>2R+T = '+fmt(twoRplusT,0)+'mm is outside the common 550-700mm comfort range — consider adjusting riser or tread.</span>';
+    }
+    updateValidationBanner('cstValidation', 0);
+  }
+  ['cstRise','cstTargetRiser','cstTread'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcCst); e.addEventListener('change', calcCst); }
+  });
+  calcCst();
+
+  // ---------- Slab-on-Grade Quick Thickness ----------
+  function calcCsl(){
+    if(!el('cslSpan')) return;
+    var span=num('cslSpan'), ratio=parseFloat(el('cslRatio').value);
+    var errs = 0;
+    errs += fieldError(el('cslSpan'), (isNaN(span) || span<=0) ? 'Must be greater than 0.' : null);
+    if(errs>0){ updateValidationBanner('cslValidation', errs); return; }
+
+    var thickness = (span*1000)/ratio;
+    setText('cslThickness', fmt(thickness,0));
+    updateValidationBanner('cslValidation', 0);
+  }
+  ['cslSpan','cslRatio'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcCsl); e.addEventListener('change', calcCsl); }
+  });
+  calcCsl();
+})();
+</script>
+
+<script src="../assets/app.js"></script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

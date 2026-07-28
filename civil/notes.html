@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civil Learning Notes — Theory &amp; Reference</title>
+<meta name="description" content="Civil Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.">
+<link rel="canonical" href="https://www.engineerzcorner.com/civil/notes">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Civil Learning Notes — Theory &amp; Reference">
+<meta property="og:description" content="Civil Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.">
+<meta property="og:url" content="https://www.engineerzcorner.com/civil/notes">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Civil Learning Notes — Theory &amp; Reference">
+<meta name="twitter:description" content="Civil Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23262320'/%3E%3Cpath d='M6 24h20M8 24V13l8-6 8 6v11' fill='none' stroke='%23C9A24B' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --panel:#262320; --panel-2:#302C27; --panel-3:#3A352F;
+    --grid-line: rgba(201,162,75,.07);
+    --led:#C9A24B; --led-dim:#8C7233;
+    --vellum:#F6F1E4; --vellum-2:#EFE8D4; --vellum-line:#DCD2B4;
+    --ink:#241F14; --ink-dim:#6B6250; --ink-faint:#9A9078;
+    --paper-text:#E6DECB; --paper-text-dim:#A79E88;
+    --fault:#D6704A;
+    --font-display:"Oswald","Arial Narrow",-apple-system,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:var(--panel);color:var(--paper-text);font-family:var(--font-body);}
+  body{
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-color:var(--panel);
+  }
+  ::selection{background:rgba(201,162,75,.28);}
+  a{color:var(--led);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+
+  :focus-visible{outline:2px solid var(--led); outline-offset:2px;}
+
+  /* ===== topbar ===== */
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(15,21,18,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,162,75,.20);}
+  .topbar-inner{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.03em;color:#F6F1E4;text-decoration:none;text-transform:uppercase;}
+  .brand .dot{color:var(--led);font-size:14px;}
+  .searchbox{position:relative;flex:none;width:min(280px,60vw);}
+  .searchbox input{
+    width:100%;background:var(--panel-2);border:1px solid rgba(201,162,75,.24);border-radius:5px;
+    color:var(--paper-text);font-family:var(--font-mono);font-size:12.5px;padding:9px 12px 9px 30px;outline:none;
+  }
+  .searchbox input::placeholder{color:var(--paper-text-dim);}
+  .searchbox input:focus{border-color:var(--led);}
+  .searchbox svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--paper-text-dim);pointer-events:none;}
+
+  /* ===== hero ===== */
+  .hero{padding:56px 0 8px;}
+  .eyebrow{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--led);margin-bottom:14px;}
+  h1{font-family:var(--font-display);font-size:clamp(28px,5vw,44px);line-height:1.14;font-weight:700;color:#F6F1E4;margin:0 0 16px;letter-spacing:-.01em;max-width:17ch;text-transform:uppercase;}
+  .hero-sub{font-family:var(--font-body);font-size:16px;line-height:1.65;color:var(--paper-text-dim);max-width:56ch;margin:0 0 22px;}
+  .hero-meta{display:flex;gap:22px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(201,162,75,.16);}
+  .hero-meta .m{font-family:var(--font-mono);font-size:11px;color:var(--paper-text-dim);}
+  .hero-meta .m b{display:block;color:#F6F1E4;font-size:19px;font-family:var(--font-display);font-weight:600;margin-bottom:2px;}
+
+  /* ===== filter board (I/O indicator rack) ===== */
+  .board{margin:44px 0 6px;}
+  .board-label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-text-dim);margin-bottom:18px;}
+  .board-label b{color:var(--led);font-weight:600;}
+  .sld{background:var(--panel-2);border:1px solid rgba(201,162,75,.18);border-radius:8px;padding:22px 22px 18px;overflow-x:auto;}
+  .truss-row{position:relative;height:2px;background:linear-gradient(90deg, transparent, var(--led-dim) 4%, var(--led-dim) 96%, transparent);margin:0 6px 0;min-width:640px;}
+  .joints{display:flex;min-width:640px;padding-top:0;}
+  .joint-btn{
+    flex:1;min-width:64px;background:none;border:none;cursor:pointer;padding:0 4px 4px;
+    display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--paper-text-dim);
+  }
+  .drop{width:2px;height:16px;background:var(--led-dim);}
+  .joint{
+    width:16px;height:16px;border:2px solid var(--led-dim);border-radius:3px;position:relative;background:var(--panel);
+    display:flex;align-items:center;justify-content:center;transition:border-color .15s ease, box-shadow .15s ease;
+    transform:rotate(45deg);
+  }
+  .joint .bolt{width:8px;height:8px;border-radius:50%;background:var(--led-dim);transition:background .18s ease, box-shadow .18s ease;}
+  .joint-btn[aria-pressed="true"] .joint{border-color:var(--led);box-shadow:0 0 10px rgba(201,162,75,.45);}
+  .joint-btn[aria-pressed="true"] .joint .bolt{background:var(--led);box-shadow:0 0 6px rgba(201,162,75,.9);}
+  .joint-btn.is-all[aria-pressed="true"] .joint{border-color:#F0DFA8;box-shadow:0 0 10px rgba(240,223,168,.45);}
+  .joint-btn.is-all[aria-pressed="true"] .joint .bolt{background:#F0DFA8;}
+  .joint-name{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;text-align:center;line-height:1.35;}
+  .joint-count{font-family:var(--font-mono);font-size:9px;color:var(--paper-text-dim);opacity:.8;}
+  .joint-btn:hover .joint-name{color:#F6F1E4;}
+  .joint-btn:hover .joint{border-color:var(--led);}
+
+  /* ===== results meta ===== */
+  .results-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:26px 0 6px;font-family:var(--font-mono);font-size:11px;color:var(--paper-text-dim);flex-wrap:wrap;}
+  .results-meta .clear{background:none;border:1px solid rgba(201,162,75,.32);color:var(--led);border-radius:4px;padding:5px 10px;cursor:pointer;font-family:var(--font-mono);font-size:10.5px;}
+  .results-meta .clear:hover{background:rgba(201,162,75,.1);}
+
+  /* ===== category sections ===== */
+  .catsection{margin-top:38px;}
+  .catsection-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .catdot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .catsection-head h2{font-family:var(--font-display);font-size:15px;font-weight:600;color:#F6F1E4;margin:0;letter-spacing:.01em;text-transform:uppercase;}
+  .catsection-head .catcount{font-family:var(--font-mono);font-size:10.5px;color:var(--paper-text-dim);}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;}
+
+  .note-card{
+    background:var(--vellum);border-radius:6px;border-left:4px solid var(--led);
+    box-shadow:0 2px 10px rgba(0,0,0,.30);overflow:hidden;
+  }
+  .note-head{
+    width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:14px 15px 12px;
+    display:flex;flex-direction:column;gap:8px;font-family:inherit;color:inherit;
+  }
+  .note-toprow{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .note-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .note-time{font-family:var(--font-mono);font-size:9.5px;color:var(--ink-faint);white-space:nowrap;}
+  .note-title{font-family:var(--font-display);font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.35;margin:0;}
+  .note-summary{font-family:var(--font-body);font-size:12.5px;color:var(--ink-dim);line-height:1.55;margin:0;}
+  .note-toggle-hint{font-family:var(--font-mono);font-size:9.5px;color:var(--ink-faint);display:flex;align-items:center;gap:5px;margin-top:2px;}
+  .note-toggle-hint svg{width:9px;height:9px;transition:transform .15s ease;}
+  .note-card.open .note-toggle-hint svg{transform:rotate(180deg);}
+  .note-body{max-height:0;overflow:hidden;transition:max-height .28s ease;}
+  .note-card.open .note-body{max-height:900px;}
+  .note-body-inner{padding:0 15px 16px;border-top:1px solid var(--vellum-line);margin-top:2px;}
+  .note-body-inner p{font-family:var(--font-body);font-size:13px;line-height:1.7;color:var(--ink);margin:12px 0 0;}
+  .note-body-inner p:first-child{margin-top:14px;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .note-body, .joint, .note-card.open .note-toggle-hint svg{transition:none;}
+  }
+
+  .empty-state{
+    grid-column:1/-1;font-family:var(--font-mono);font-size:12px;color:var(--paper-text-dim);
+    border:1px dashed rgba(201,162,75,.28);border-radius:6px;padding:26px;text-align:center;
+  }
+
+  footer{margin:70px 0 40px;padding-top:22px;border-top:1px solid rgba(201,162,75,.18);}
+  .foot-note{font-family:var(--font-mono);font-size:11px;color:var(--paper-text-dim);line-height:1.7;max-width:64ch;}
+  .foot-mark{font-family:var(--font-mono);font-size:10px;color:var(--led-dim);margin-top:16px;}
+
+  @media (max-width:560px){
+    .joint-btn{min-width:52px;}
+    .joint-name{font-size:8.5px;}
+    .sld{padding:18px 14px 14px;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Civil",
+      "item": "https://www.engineerzcorner.com/civil/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Civil Learning Notes",
+      "item": "https://www.engineerzcorner.com/civil/notes"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Civil Learning Notes",
+  "description": "Civil Learning Notes \u2014 Part of Engineerz CorneR, a free multi-discipline engineering toolkit covering Electrical, Mechanical, HVAC, Civil, Automation and Project Management calculators, guides and reference notes.",
+  "url": "https://www.engineerzcorner.com/civil/notes"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Civil</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Notes on how structures actually stand up.</span></div></nav>
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top"><span class="dot">△</span> CIVIL LEARNING NOTES</a>
+    <div class="searchbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="searchInput" placeholder="Search notes…" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<div class="wrap" id="top">
+  <div class="hero">
+    <div class="eyebrow">Personal reference · theory only</div>
+    <h1>Notes on how structures actually stand up.</h1>
+    <p class="hero-sub">A running set of short, plain-language write-ups on core civil and structural engineering concepts — how loads move through a structure and why, not how to size one. There are no calculators or design tools on this page, and nothing here is invented: every note covers established, textbook-level civil engineering theory.</p>
+    <div class="hero-meta">
+      <div class="m"><b id="metaNoteCount">0</b>notes</div>
+      <div class="m"><b id="metaCatCount">0</b>subjects</div>
+      <div class="m"><b>0</b>calculators</div>
+    
+      <div class="notes-crosslinks" style="display:flex;gap:16px;flex-wrap:wrap;width:100%;padding-top:10px;">
+        <a href="../notes/index.html" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--paper-text-dim);text-decoration:underline;">&larr; All discipline notes</a>
+        <a href="../quiz.html" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--paper-text-dim);text-decoration:underline;">Take today's quiz &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="board-label">Filter by subject — <b>bolt a joint</b> to select that subject</div>
+    <div class="sld">
+      <div class="truss-row"></div>
+      <div class="joints" id="jointRow"></div>
+    </div>
+  </div>
+
+  <div class="results-meta">
+    <span id="resultsCount"></span>
+    <button class="clear" id="clearFilters" type="button">Reset filters</button>
+  </div>
+
+  <main id="noteSections"></main>
+
+  <footer>
+    <p class="foot-note">These are summary explanations written for learning and quick reference — they're deliberately simplified and aren't a substitute for the current edition of the relevant code (ACI 318, Eurocode 2/3/7, AISC 360, local building codes, etc.) or for a qualified structural/geotechnical engineer's judgement on a real project. No content on this page is generated per-visit or personalized — what you read is what's written into the page.</p>
+    <div class="foot-mark">— end of foundation —</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+
+  var DATA = [{"id": "structural", "label": "Structural Fundamentals", "color": "#C9A24B", "notes": [{"title": "How Loads Actually Travel Through a Building", "summary": "Every structure is really just a chain of load paths from roof to soil.", "body": ["Every load applied to a building — its own weight, people, furniture, wind, snow — has to travel through a continuous path of structural elements until it finally reaches the ground. A roof load goes into rafters or trusses, those into beams, beams into columns or walls, and columns or walls into footings, which finally spread it into the soil.", "This idea of a continuous load path is the single most useful mental model in structural engineering: a structure fails not because any one member was universally weak, but because somewhere along that chain, one link couldn't carry what arrived at it. Tracing the load path is usually the first step in understanding why a structural element is sized the way it is, or why a renovation that removes one wall can be far more consequential than it looks."]}, {"title": "Dead Load vs Live Load vs Environmental Load", "summary": "Three categories of load, each estimated a completely different way.", "body": ["Dead load is the permanent, unchanging weight of the structure itself and anything permanently attached to it — the concrete slab, the steel frame, finishes, fixed partitions. It's calculated directly from material densities and geometry, and it's present for the life of the structure at essentially the same magnitude.", "Live load is the variable load from occupancy and use — people, furniture, stored goods, vehicles — and it's not calculated from first principles but taken from code-specified minimum values based on the space's use (an office floor and a storage warehouse have very different live load allowances). Environmental loads — wind, snow, seismic, thermal — are different again, derived from statistical analysis of local climate and site data over a long return period, which is why they vary so much by location and why a structure's design load combination almost always considers dead, live and environmental loads acting together, not in isolation."]}, {"title": "Tension, Compression, Bending and Shear", "summary": "Four ways a structural member can be asked to resist force — and each one fails differently.", "body": ["A member in pure tension is being pulled apart, and it fails by the material simply reaching its tensile strength and pulling apart or yielding — a cable or a tie rod is the clearest example. Compression is the opposite, a member being squeezed, and short, stocky compression members fail by crushing while slender ones fail by buckling — suddenly bowing sideways well before the material itself is crushed.", "Bending combines tension and compression in the same member: a beam under load stretches on one face and compresses on the other, with a neutral axis in between carrying neither. Shear is different still — it's the tendency for one part of a member to slide past the adjacent part, and it's usually highest near supports on a loaded beam, which is exactly why beams are often reinforced or thickened near their supports rather than uniformly along their length."]}, {"title": "Factor of Safety and Load Combinations", "summary": "Why a structural calculation is never just 'does it hold the load'.", "body": ["Structural design doesn't simply check whether a member can carry its actual expected load — it deliberately checks against loads inflated by load factors (typically 1.2 to 1.6 depending on load type) and member capacities reduced by resistance factors, building in margin on both sides of the calculation at once. This dual margin absorbs uncertainty in material properties, construction tolerances, and the load estimates themselves.", "Because different load types rarely all peak simultaneously — full snow load and full seismic load hitting at the same instant is vanishingly unlikely — codes specify load combinations that pair different loads at different factored magnitudes (like 1.2×dead + 1.6×live, or 1.2×dead + 1.0×live + 1.0×seismic) and require the structure to be checked against every combination, with the worst case governing the final design."]}]}, {"id": "concrete", "label": "Concrete & Masonry", "color": "#8C7233", "notes": [{"title": "Why Concrete Needs Reinforcement", "summary": "Concrete is excellent in compression and almost useless in tension — steel fixes exactly that gap.", "body": ["Plain concrete is strong in compression but very weak in tension — its tensile strength is typically only about a tenth of its compressive strength, and it cracks at fairly low tensile stress. A concrete beam loaded from above develops tension on its underside, which means unreinforced concrete would crack and fail there at a small fraction of the load it could otherwise carry in pure compression.", "Steel reinforcing bars are placed specifically in the zones expected to see tension, so the concrete handles compression and the steel handles tension — each material doing the job it's actually good at. This is why reinforcement placement matters as much as reinforcement quantity: bars placed on the wrong face of a bending member do almost nothing useful, since they're sitting in the compression zone instead of the tension zone that actually needs them."]}, {"title": "Curing: Why Concrete Needs Time and Moisture, Not Just Time", "summary": "Concrete doesn't dry to gain strength — it reacts chemically, and that reaction needs water.", "body": ["Concrete gains strength through hydration, a chemical reaction between cement and water that continues for weeks after placement, not through simple drying. In fact, letting fresh concrete dry out too early starves that reaction of the water it needs and permanently reduces the strength the concrete would otherwise reach.", "That's why curing — keeping concrete moist (or at least sealed against moisture loss) for a period after placement, commonly around seven days for a substantial share of ultimate strength — is treated as a distinct and critical step, not an afterthought. Concrete that isn't cured properly can look identical to properly cured concrete while being noticeably weaker and more prone to surface cracking and durability problems later."]}, {"title": "Why Masonry Walls Need Lateral Support", "summary": "A masonry wall is strong standing straight up and surprisingly weak pushed sideways.", "body": ["Masonry — brick or block, typically laid up with mortar — is very strong in compression, which is why it works well as a wall carrying vertical load straight down through its own thickness. It's far weaker resisting loads perpendicular to its face, like wind pressure or seismic shaking, because that kind of loading puts the mortar joints into tension, which unreinforced masonry resists poorly.", "This is why masonry walls, especially tall or slender ones, need lateral support at reasonable intervals — from floor and roof diaphragms, pilasters, or steel reinforcement embedded in the wall — to keep that sideways load from simply toppling the wall like a stack of unglued blocks. A wall that's perfectly adequate carrying roof load down to the foundation can still fail under a wind load its designer didn't specifically check for."]}]}, {"id": "geotech", "label": "Geotechnical & Foundations", "color": "#6E93C7", "notes": [{"title": "Why Foundations Are Sized on Bearing Pressure, Not Just Load", "summary": "The same load spread over more area is a completely different problem for the soil underneath.", "body": ["Soil has a limited bearing capacity — a maximum pressure it can sustain before it deforms excessively or fails in shear — and that capacity depends heavily on soil type, density, moisture content and depth. A footing isn't sized simply to hold up a given load; it's sized so that the load, spread over the footing's contact area with the soil, produces a bearing pressure the soil can actually tolerate.", "This is exactly why a heavier building on weak soil needs a much larger footing (or a deep foundation like piles) than the same load on strong bedrock — the load itself hasn't changed, but the soil's ability to accept pressure per unit area has. Allowable bearing pressure is normally established through a geotechnical investigation of the actual site, not assumed generically, because it can vary enormously between soil types and even across one site."]}, {"title": "Settlement: The Failure Mode That Doesn't Look Like Failure", "summary": "A foundation can carry its design load perfectly and still cause real damage by sinking unevenly.", "body": ["Settlement is the gradual downward movement of a foundation as the soil beneath it compresses under load, and some settlement is essentially unavoidable — soil isn't rigid. The real design concern usually isn't total settlement, which a structure can often tolerate if it happens uniformly, but differential settlement: one part of a foundation settling more than another, which twists and distorts the structure above it.", "Differential settlement is what actually cracks walls, jams doors, and tilts floors, often well before any bearing-capacity failure would occur — which is why foundation design checks both bearing capacity (can the soil hold the pressure) and settlement (will the foundation sink unevenly enough to damage the structure) as two separate, both-necessary checks."]}, {"title": "Shallow vs Deep Foundations: Why Sometimes You Skip the Soil Near the Surface Entirely", "summary": "When the ground right under a building isn't good enough, foundations reach past it instead.", "body": ["A shallow foundation — a spread footing or a raft/mat slab — transfers load into the soil relatively close to the ground surface, which works well when that near-surface soil is strong and stable enough to carry the load directly. It's the simpler, cheaper option wherever it's viable.", "A deep foundation — piles or caissons — instead carries load down past weak near-surface soil to reach stronger bearing material at depth, either by bearing directly on that stronger layer (end bearing) or by relying on friction along the pile's length through the soil it passes through (skin friction), or some combination of both. The choice between shallow and deep foundations is driven almost entirely by what a geotechnical investigation finds beneath the specific site — the same building could reasonably use either, depending only on what's actually in the ground."]}, {"title": "Angle of Repose and Why Excavations Cave In", "summary": "Loose soil can only hold a slope so steep before gravity simply wins.", "body": ["The angle of repose is the steepest angle a granular material can maintain in a stable pile or slope without sliding, and it depends on the material's internal friction — coarse, angular material like crushed rock holds a steeper stable angle than fine, rounded material like loose sand. Cut a slope steeper than a soil's stable angle and it will eventually slump or slide to reach one, sometimes suddenly and without warning.", "This is the basic reason unsupported excavation trenches collapse, and why trench safety requirements mandate sloping, benching, or shoring past certain depths — an excavation that looks stable when first dug can lose stability later as vibration, added surface load, or water infiltration reduces the soil's effective friction, which is exactly why trench safety rules apply for the whole time workers are exposed, not just at the moment of digging."]}]}, {"id": "materials-construction", "label": "Materials & Construction", "color": "#4FA88F", "notes": [{"title": "Why Steel and Concrete Work Well Together", "summary": "A coincidence of physics that makes reinforced concrete possible at all.", "body": ["Reinforced concrete only works as a composite material because steel and concrete happen to expand and contract with temperature at almost exactly the same rate — their thermal expansion coefficients are a close match. If they didn't match, temperature swings would cause the steel and surrounding concrete to expand by different amounts, cracking the concrete or breaking the bond between the two materials over repeated thermal cycles.", "That close thermal match, combined with concrete's naturally alkaline environment that helps passivate (protect) embedded steel from corrosion, is what allows steel bars to be embedded directly in concrete and rely on both materials staying bonded together and behaving predictably for decades — a coincidence of chemistry and physics that reinforced concrete construction depends on entirely."]}, {"title": "Why Rebar Corrosion Is a Structural Problem, Not Just Cosmetic", "summary": "Rusting steel doesn't just weaken itself — it physically breaks the concrete around it.", "body": ["When embedded reinforcing steel corrodes, the rust it forms occupies significantly more volume than the original steel — often several times more. That expansion generates enormous internal pressure inside the concrete surrounding the bar, which cracks and eventually spalls (breaks away) the concrete cover protecting it, long before the bar itself has lost much of its actual load-carrying cross-section.", "This is why corrosion damage in reinforced concrete tends to show up first as cracking and spalling near the surface rather than as an invisible internal weakening — and why adequate concrete cover over reinforcement, and control of chloride exposure (from deicing salts or marine environments) that accelerates corrosion, are treated as critical durability requirements, not just workmanship details."]}, {"title": "Formwork: The Temporary Structure That Shapes the Permanent One", "summary": "Before concrete can be a structure, something else has to be a structure first — to hold the wet concrete in shape.", "body": ["Formwork is the temporary mold — typically plywood, engineered panels, or steel forms braced and supported — that holds fresh, wet concrete in the correct shape and position until it gains enough strength to support itself. Fresh concrete behaves essentially as a heavy fluid, exerting real lateral pressure on the formwork that increases with pour height and pour rate.", "Formwork has to be engineered as a genuine temporary structure in its own right, strong and stiff enough to resist that fluid pressure without bulging, leaking or collapsing — a surprising share of concrete construction failures and injuries trace back to inadequate formwork design or premature formwork removal, not a flaw in the concrete mix or the permanent structural design itself."]}]}, {"id": "standards", "label": "Codes & Standards", "color": "#B7A339", "notes": [{"title": "Building Codes vs Design Standards: Two Different Kinds of Document", "summary": "One tells you what's legally required; the other tells you how to actually calculate it.", "body": ["A building code (like the International Building Code, or a national equivalent) is the legally adopted document a jurisdiction enforces, setting minimum requirements for safety, accessibility, fire protection and structural adequacy — it's law, or has the force of law, once adopted locally. Design standards (ACI 318 for concrete, AISC 360 for steel, ASCE 7 for loads) are technical documents, developed by engineering societies, that specify exactly how to calculate loads and design members to meet the code's requirements.", "Building codes typically reference these design standards by name and edition rather than repeating all their technical content directly — which is why a structural calculation package cites both the governing building code and the specific design standard editions used, since the same code edition might reference different standard editions depending on when it was locally adopted."]}, {"title": "Why Structural Drawings Get Independently Reviewed", "summary": "A second set of eyes on a calculation that, if wrong, doesn't announce itself until it's too late.", "body": ["Structural plan review and, on many projects, independent peer review exist because structural errors are unusually dangerous in a specific way: a beam sized slightly too small, or a load path with a hidden gap, can look entirely normal — pass a casual glance, even function fine for years — right up until the specific load combination that exposes the error actually occurs. There's often no visible warning sign along the way.", "Independent review catches transcription errors, missed load cases, and modeling mistakes that the original designer, having built the same mental model of the structure repeatedly, may simply not notice in their own work — the value of a second reviewer is precisely that they come to the drawings without that same set of assumptions already in their head."]}]}, {"id": "surveying", "label": "Surveying & Setting Out", "color": "#7A6BA6", "notes": [{"title": "Benchmarks and Datums: Where 'Zero' Actually Comes From", "summary": "Every elevation on a drawing is measured against a reference point someone had to fix first.", "body": ["A datum is the reference surface every elevation on a project is measured against — commonly mean sea level for a national vertical datum, though a project can also work off its own arbitrary local datum if it never needs to tie into the wider network. A benchmark is a physical point of known, fixed elevation relative to that datum — a brass disk set in concrete, a mark on a permanent structure — that surveyors can return to and re-establish elevations from at any point during a project.", "Every level taken on site ultimately traces back through a chain of benchmarks to that original datum, which is exactly why protecting site benchmarks from disturbance matters as much as it does — a benchmark that's been knocked, buried, or built over silently breaks that chain, and any elevation carried forward from a disturbed benchmark inherits whatever error was introduced without necessarily giving any obvious sign that anything is wrong."]}, {"title": "Levelling: How a Simple Instrument Establishes Elevation", "summary": "A level doesn't measure elevation directly — it measures a horizontal line of sight, and elevation follows from that.", "body": ["A surveyor's level is built around one basic trick: it establishes a perfectly horizontal line of sight through its telescope, using either a spirit bubble or, in a modern automatic level, an internal compensator that self-levels the line of sight within a small tolerance. Reading a graduated staff held vertically at a point, anywhere that horizontal line of sight crosses the staff gives a direct measurement of how far below the instrument's line of sight that point sits.", "Differential levelling chains this simple reading between a known-elevation point and an unknown one: read the staff at the known point, read it again at the unknown point from the same instrument setup, and the difference between the two readings is the difference in elevation between them. Longer runs simply repeat this process station by station, carrying elevation forward turn by turn — and it's exactly why levelling error accumulates with distance and number of setups, which is why a levelling run is normally closed back onto a second known point specifically to check and distribute that accumulated error before it's trusted."]}, {"title": "Total Stations: Measuring Distance and Angle Together", "summary": "A single instrument that replaced separate distance and angle measurement with one combined electronic reading.", "body": ["A total station combines an electronic theodolite, which measures horizontal and vertical angles precisely, with an electronic distance measurement (EDM) unit, which measures distance by timing a reflected infrared or laser signal bounced off a prism (or, on reflectorless models, directly off the target surface). Together, one instrument setup and one sighted point yield a full three-dimensional position — angle and distance from a known instrument location resolve directly into coordinates.", "This combination is what made total stations the standard field instrument for both topographic survey and setting out: the same instrument that can record thousands of existing ground points for a survey can, run in reverse, guide a crew to the exact coordinates a design calls for by displaying how far and which direction to move a target until it matches the stored design point — replacing a great deal of what used to require separate tape measurement and angle turning with a single continuous electronic workflow."]}, {"title": "GNSS Surveying and Why It Needs Correction", "summary": "A standalone GPS receiver isn't accurate enough for construction survey on its own — the corrections are what make it usable.", "body": ["A standalone GNSS (GPS and equivalent satellite systems) receiver, working purely from satellite signals with no additional correction, typically resolves position only to a few metres — nowhere near precise enough for construction layout, where centimetre accuracy is often required. That imprecision comes from atmospheric delay, satellite clock and orbit error, and other effects that a single receiver has no way to isolate on its own.", "Real-time kinematic (RTK) surveying fixes this by using a second, stationary receiver at a precisely known location (a base station, or a network of permanent reference stations) to measure exactly how far the satellite signals are currently being distorted, and broadcasting that correction to a moving rover receiver in real time. Because both receivers see almost the same atmospheric and satellite errors at any given moment, subtracting the base station's known error from the rover's raw reading collapses that few-metre uncertainty down to centimetre-level accuracy — which is exactly why RTK GNSS, not standalone GPS, is what's actually used for construction setting out and topographic survey."]}, {"title": "Setting Out: Turning a Drawing Into Points on the Ground", "summary": "The step that translates a design's coordinates into physical marks a construction crew can actually build from.", "body": ["Setting out is the process of physically marking, on the ground, the exact locations a design drawing specifies only as coordinates and dimensions — column centrelines, building corners, pipe alignments, road centrelines — so that construction crews have a real, physical reference to build against rather than having to interpret a drawing directly. It's typically done with a total station or RTK GNSS rover working from control points whose coordinates are already precisely established, translating design coordinates into a physical mark, stake, or paint line in the field.", "Because every later stage of construction builds on those initial marks, an error introduced during setting out doesn't stay contained to that one point — it propagates into everything built from it, which is exactly why setting out is independently checked before construction proceeds, commonly by re-measuring critical dimensions between set-out points against the drawing's stated dimensions, catching a transposed digit or a misread coordinate before concrete is poured or steel is erected against a mark that was wrong from the start."]}, {"title": "Traversing: Building an Accurate Survey from a Chain of Points", "summary": "Extending survey control across a site by measuring a connected chain of angles and distances between temporary stations.", "body": ["A traverse extends survey control across a site by setting up at a series of connected points in turn, measuring the angle and distance from each station to the next, and using those measurements to calculate the coordinates of every station in the chain relative to a starting known point. It's the standard way of carrying accurate coordinate control into a site where a single instrument setup can't see every point that needs to be established.", "A closed traverse — one that returns to its starting point, or ties into a second known point — allows the accumulated measurement error across the whole chain to be calculated and distributed proportionally across all the stations, rather than letting error simply pile up uncorrected station by station. An open traverse, which doesn't close back onto a known point, has no such check available, which is exactly why open traverses are generally avoided for anything requiring verified accuracy — there's no way to know afterward how much error actually crept in along the way."]}, {"title": "Topographic Surveys: Mapping the Ground As It Actually Is", "summary": "Before anything is designed, a survey has to establish what the site's existing ground actually looks like.", "body": ["A topographic survey records the existing physical features of a site — ground elevation across the whole area, existing structures, trees, utilities, drainage features, and property boundaries — as a set of coordinated points dense enough to reconstruct an accurate model of the site as it currently exists. Every subsequent design decision, from earthworks cut-and-fill balancing to drainage routing to building placement, depends on that existing-ground model being accurate.", "How densely points need to be captured depends on how much the ground actually varies — a flat, featureless field needs comparatively few points to represent accurately, while a site with significant grade changes, existing structures, or complex drainage needs many more closely spaced points to avoid the resulting contour model smoothing over real features that matter to the design. A topographic survey that's too sparse for the site's actual complexity doesn't fail obviously — it simply produces a contour model that looks plausible while quietly missing real variations the design then fails to account for."]}, {"title": "As-Built Surveys: Verifying What Was Actually Built", "summary": "Confirming that a completed structure or installation actually landed where and how the design intended.", "body": ["An as-built survey measures a structure or installation after construction to record its actual final position, elevation, and dimensions, and compares that against the original design — the same basic survey technique used for setting out, applied afterward to verify rather than establish position. Discrepancies between what was set out and what was actually built can creep in during construction for plenty of reasons: formwork that shifted slightly before concrete was poured, a pipe that drifted off its intended line during installation, or a foundation that settled unevenly before it was finished.", "As-built survey data feeds directly into as-built drawings — the record of what was genuinely constructed rather than merely what was designed — and it's also frequently a hard requirement before a structure can be signed off, since it's the objective evidence that construction tolerances were actually met, not just an assumption that following the design drawing correctly produced a result that matches it."]}, {"title": "Coordinate Systems and Why Projects Pick a Local Grid", "summary": "A project's coordinates don't have to mean anything outside the project — as long as everyone on it agrees on the same system.", "body": ["A national or state grid coordinate system ties a project's coordinates to a wider, standardized reference frame, letting a project's survey data be directly compared or combined with other surveys, mapping, and GIS data across an entire region. The trade-off is that these systems introduce their own scale distortion and complexity as a project's true ground distances are projected onto a flat coordinate grid, which for typical construction site sizes is usually negligible but can matter on very large or linear projects like highways and pipelines.", "Many projects instead work on an arbitrary local grid — a coordinate system defined purely for that project, often aligned to a convenient site feature like a building's main grid lines — trading the ability to directly compare against wider regional data for a simpler, more intuitive coordinate system that construction crews find easier to work with day to day. Either choice is workable, but a project has to fix which one it's using from the outset and stay consistent, since mixing grid and local coordinates on the same drawing set, or converting between them incorrectly partway through a project, is a well-documented source of serious setting-out error."]}, {"title": "Survey Tolerance: Why 'Close Enough' Depends on the Job", "summary": "No survey measurement is ever perfectly exact — the real question is always how much error the particular task can actually tolerate.", "body": ["Every survey measurement carries some uncertainty, however small, from the instrument's own precision, atmospheric conditions, and the surveyor's technique — the practical question is never whether a measurement is perfectly exact, since it never is, but whether its uncertainty is small enough for what that measurement is actually being used for. Setting out a column centreline for a steel structure demands a tighter tolerance than establishing an approximate site boundary for early planning, and the survey method and instrument are chosen accordingly.", "This is why different tasks on the same project routinely use different survey methods and accept different tolerances — a topographic survey supporting early earthworks design might reasonably tolerate a few centimetres of vertical error, while setting out for precision equipment foundations might require accuracy an order of magnitude tighter. Applying a survey method's stated accuracy blindly, without checking whether that accuracy is actually adequate for the specific task at hand, is a common and avoidable source of downstream construction error."]}]}, {"id": "water-drainage", "label": "Water, Drainage & Site Works", "color": "#4A90A4", "notes": [{"title": "Why Site Drainage Is Designed for a Storm Event, Not Just Rain", "summary": "A drainage system isn't sized for typical weather — it's sized for the worst storm it's expected to see in its design life.", "body": ["Site and stormwater drainage systems aren't designed around average or typical rainfall — they're sized against a specific design storm, defined by a return period (a 1-in-10-year storm, a 1-in-100-year storm) that expresses how rare an event of that intensity statistically is, not a guarantee it won't happen sooner. A higher return period means a more intense design storm and a more conservative, more expensive system, so the choice of return period is itself a deliberate risk decision, not a fixed physical constant.", "That's also why a drainage system that performs perfectly for years can still be overwhelmed suddenly — it was never designed to handle every possible storm, only storms up to its chosen design return period, and an event that exceeds that intensity will produce flooding by design intent, not by system failure. Critical infrastructure (hospitals, major highways) is typically designed against a much higher return period than a minor site's drainage, precisely because the consequences of exceedance are so different."]}, {"title": "Stormwater vs Sanitary Sewer Systems: Why They're Kept Separate", "summary": "Rainwater and wastewater are different problems, and mixing them creates problems neither system was designed for.", "body": ["A sanitary sewer carries wastewater from toilets, sinks and drains to treatment, and it's sized and designed around a relatively steady, predictable flow that needs full treatment before release. A stormwater system carries rainwater runoff, which is comparatively clean but arrives in huge, brief surges during storms — a completely different flow pattern that would overwhelm a treatment plant if combined with sanitary flow at scale.", "Older cities often built combined sewers carrying both in one pipe, which works until a storm's stormwater surge overwhelms the treatment plant's capacity, forcing an overflow of diluted but still untreated sewage directly into a waterway — a combined sewer overflow. Modern design keeps the two systems physically separate specifically to avoid this, treating sanitary flow fully year-round while letting stormwater discharge separately, generally with less or no treatment, straight to a receiving watercourse or detention system."]}, {"title": "Culverts and Why They're Sized on Peak Flow, Not Average Flow", "summary": "A culvert only has to handle the worst moment of a storm, not the storm's average behavior.", "body": ["A culvert carries a watercourse or drainage channel underneath a road or embankment, and like other drainage infrastructure it's sized against a design storm's peak flow rate — the highest flow the channel is expected to carry during that storm — not an average flow over the storm's duration. Undersizing a culvert doesn't cause a proportional problem; it causes water to back up behind the crossing until it finds another path, which is often over the road itself.", "Culvert sizing also has to account for the watershed feeding it: a larger contributing drainage area concentrates more runoff into the same channel, so the same culvert diameter that's adequate for a small watershed can be badly undersized for a larger one even under an identical design storm. Debris and sediment blockage is a major practical failure mode too — a culvert that's hydraulically adequate on paper can still fail in service if it isn't kept clear."]}, {"title": "Retention vs Detention Ponds: Storing Water vs Slowing It Down", "summary": "One holds water permanently; the other only holds it temporarily, and the distinction changes what each is actually for.", "body": ["A detention pond temporarily stores stormwater runoff and releases it slowly afterward through a controlled outlet, staying dry (or nearly dry) between storms — its purpose is purely to reduce the peak flow rate leaving a site, spreading a sudden surge of runoff out over a longer time so downstream drainage infrastructure isn't overwhelmed. A retention pond, by contrast, permanently holds a standing volume of water even in dry weather, and manages runoff by adding new inflow on top of that permanent pool rather than starting empty.", "The choice between them depends on the design goal: detention addresses peak flow control specifically, while retention ponds, by maintaining a permanent water body, can also provide water quality treatment as sediment settles out over the water's longer residence time, and sometimes double as an amenity feature. Sizing either type still comes back to the same design storm principle — how much volume needs to be stored to bring the peak outflow down to an acceptable rate."]}, {"title": "Why Impervious Surfaces Change a Site's Runoff Behavior", "summary": "Paving over a site doesn't just redirect rainwater — it fundamentally changes how much of it becomes runoff at all.", "body": ["Natural, vegetated ground absorbs a meaningful share of rainfall into the soil and lets some evaporate, so only a fraction of total rainfall actually becomes surface runoff. Impervious surfaces — pavement, roofs, compacted soil — block that infiltration almost entirely, so a much larger share of the same rainfall converts directly to runoff, arriving faster and in greater volume than the same storm would have produced on undeveloped ground.", "This is the core reason development changes a site's drainage requirements even when nothing else about the local climate changes: replacing vegetated ground with impervious surface increases both the volume and the peak rate of runoff leaving the site, which is exactly why many jurisdictions require developed sites to detain and release runoff at no more than the site's pre-development rate — the drainage design isn't just handling rainfall, it's specifically compensating for the runoff increase the development itself causes."]}, {"title": "Erosion and Sediment Control During Construction", "summary": "A construction site is far more vulnerable to erosion than the finished, vegetated site it will eventually become.", "body": ["Bare, disturbed soil at an active construction site erodes far more readily than either undisturbed natural ground or the finished, vegetated or paved surface the project will eventually have — vegetation cover and established soil structure, both temporarily removed during construction, are what normally hold soil in place against rainfall and runoff. That window of exposed soil is when a site is most likely to generate significant sediment-laden runoff.", "Erosion and sediment control measures — silt fencing, sediment basins, stabilized construction entrances, temporary seeding of exposed slopes — exist specifically to manage that temporary vulnerability, trapping sediment before it leaves the site rather than letting it wash into storm drains and downstream waterways, where it degrades water quality and can clog drainage infrastructure well beyond the construction site's own boundary. These measures are typically required by permit and actively inspected, not just recommended good practice, because the risk they address is concentrated in a specific, foreseeable phase of a project."]}, {"title": "Grading: Why the Ground Around a Building Has to Slope Away From It", "summary": "The single most basic drainage decision on any site is also one of the easiest to get wrong.", "body": ["Site grading — shaping the ground surface to control where water flows — is one of the most fundamental drainage decisions on any project, and the most basic rule within it is that finished ground immediately around a building has to slope away from the foundation, not toward it. Water that's allowed to pond against a foundation eventually finds its way through even well-constructed waterproofing, given enough time and hydrostatic pressure.", "Grading design also has to work at the whole-site scale, directing runoff toward intended drainage paths — swales, inlets, detention areas — rather than letting it pool in low spots or sheet uncontrolled across the site. A site can have perfectly adequate pipes and inlets sized for the design storm and still flood locally if the surface grading doesn't actually direct water toward those inlets in the first place; grading and the piped drainage system have to be designed together, not as separate, independent problems."]}]}, {"id": "roads-pavement", "label": "Roads & Pavement", "color": "#A85C32", "notes": [{"title": "Flexible vs Rigid Pavement: Asphalt and Concrete Roads Fail Differently", "summary": "The two common pavement types carry traffic load in fundamentally different ways, which shows up in how each one eventually fails.", "body": ["Flexible pavement — asphalt — carries load by distributing it through layers of increasingly stiff material down to the subgrade, flexing slightly under each wheel load and relying on the combined stiffness of its layered structure rather than any single layer's bending strength. Rigid pavement — concrete — instead relies on the slab's own bending (flexural) strength to bridge over local soft spots in the subgrade, acting more like a beam than a flexible stack of layers.", "This difference in load transfer mechanism is exactly why the two pavement types fail differently: asphalt typically shows progressive rutting and fatigue cracking as its layers gradually deform under repeated loading, while concrete tends to fail more abruptly through slab cracking once its flexural capacity is exceeded, often at joints or where subgrade support is locally inadequate. Maintenance strategy follows from this too — asphalt is comparatively straightforward to mill and resurface, while concrete slab repair or replacement is a more disruptive, less incremental undertaking."]}, {"title": "Subgrade, Subbase and Base: Why Pavement Is Built in Layers", "summary": "A road surface is really the top of a deliberately engineered stack, not a single material laid directly on natural ground.", "body": ["The subgrade is the natural (or engineered-fill) ground the whole pavement structure sits on, and it's rarely strong or uniform enough to directly support traffic loading on its own. Above it, a subbase layer of granular material spreads load over a wider area and improves drainage, and above that, a base layer of higher-quality, more tightly specified material provides most of the structural support just beneath the actual riding surface.", "Each layer in this stack is progressively higher quality and more tightly specified moving upward, which reflects both cost efficiency — using the cheapest adequate material at each depth rather than premium material throughout — and the reality that load and stress from traffic are highest near the surface and diminish with depth, so the subgrade only has to resist the much-reduced stress that's filtered down through the layers above it by the time it reaches that depth."]}, {"title": "California Bearing Ratio and Why Subgrade Strength Matters", "summary": "A single test number that has an outsized influence on how thick a pavement structure ends up being designed.", "body": ["The California Bearing Ratio (CBR) test measures a soil's resistance to a standard plunger being pushed into it, expressed as a percentage relative to a reference crushed-stone material's resistance under the same test — a practical, empirically calibrated way of comparing subgrade strength across very different soil types without needing a full theoretical soil mechanics analysis for every pavement design. A high CBR value means strong subgrade; a low value means weak, poorly draining subgrade that will deform more under load.", "CBR feeds directly into pavement thickness design: a weak subgrade (low CBR) needs a thicker pavement structure above it to spread traffic load down to a stress level the subgrade can actually tolerate, while a strong subgrade (high CBR) needs comparatively less. This is exactly why the same road, carrying identical traffic, can be designed with meaningfully different pavement thicknesses depending purely on what the underlying soil turns out to be — subgrade testing isn't a formality, it's a direct input into how much material the pavement structure actually needs."]}, {"title": "Why Roads Are Crowned and Cambered", "summary": "A road's cross-section isn't flat by accident — the slight peak down its centerline is a deliberate drainage feature.", "body": ["A road's crown (or camber) is the slight convex slope from the centerline down toward each edge, built deliberately into the pavement's cross-section rather than being a construction imperfection. Its entire purpose is drainage: without that cross-slope, water falling on a flat road surface would have no consistent path off the pavement and would pond, and standing water on a road surface both degrades the pavement over time and creates a hazard — reduced friction, hydroplaning risk — for vehicles.", "The magnitude of crown is itself a design trade-off: too little, and water doesn't shed fast enough, encouraging ponding; too much, and the cross-slope becomes noticeable and uncomfortable to drive across, or in extreme cases affects vehicle stability, especially at speed. Superelevation on curves works on the same underlying drainage-plus-vehicle-dynamics principle, but banks the entire road surface toward the inside of the curve instead of crowning it symmetrically, to help counteract the vehicle's cornering forces as well as shed water."]}, {"title": "Traffic Loading and Why Pavement Design Isn't Just About Weight", "summary": "The number of load repetitions a pavement sees over its life matters as much as how heavy any single vehicle is.", "body": ["Pavement design doesn't size a road structure for the heaviest single vehicle it might ever see — it's designed around cumulative traffic loading over the pavement's whole design life, typically expressed in equivalent standard axle loads (ESALs), a standardized unit that converts different vehicle types and axle configurations into an equivalent number of passes of one reference axle load. This matters because pavement damage from traffic isn't linear with load — heavier axles cause disproportionately more damage per pass than lighter ones (often modeled as roughly proportional to the fourth power of axle load), so a small number of heavy trucks can contribute far more cumulative damage than a much larger number of passenger cars.", "That's exactly why a residential street carrying almost no truck traffic can be designed with a comparatively thin pavement structure, while a highway or an industrial access road carrying regular heavy truck traffic needs a substantially thicker structure even if peak instantaneous loads look similar — the design isn't really answering 'how heavy is the heaviest vehicle,' it's answering 'how much cumulative damage will this pavement accumulate over its intended service life.'"]}, {"title": "Potholes: How Water Turns a Small Crack Into Structural Failure", "summary": "A pothole rarely starts as a hole — it starts as a small crack that water then exploits.", "body": ["A pothole typically begins as a minor surface crack, which by itself does relatively little damage. The real damage mechanism starts once water infiltrates through that crack into the underlying pavement layers, where it weakens the base and subgrade material and, in freezing climates, can expand through repeated freeze-thaw cycling — ice forming in that trapped water expands and physically pries the pavement layers apart.", "Once the layers beneath the surface are weakened or separated, traffic loading on the now-unsupported surface layer above rapidly breaks it apart, producing the sudden hole rather than a gradual one — which is exactly why potholes so often seem to appear overnight even though the underlying damage was actually building for a while beforehand. It's also why prompt crack sealing is treated as effective, low-cost preventive maintenance: sealing the entry point for water is often far cheaper than repairing the structural damage that follows once water gets in."]}, {"title": "Compaction: Why Soil and Pavement Layers Are Deliberately Compacted", "summary": "Loosely placed soil or granular material is weak and unstable — compaction is what makes it usable as a structural layer at all.", "body": ["Freshly placed soil or granular fill contains a significant volume of air voids between particles, which makes it comparatively weak, compressible, and prone to further settling under load. Compaction — mechanically compressing the material with rollers or plate compactors — forces particles closer together, driving out much of that air and producing a denser, stronger, less compressible layer that behaves far more predictably under traffic or structural load.", "Compaction is specified and verified against a target density, usually a percentage of the material's maximum achievable density under standard laboratory compaction conditions, and checked in the field with density testing rather than simply assumed to have been achieved by running equipment over the surface some number of times. Under-compacted subgrade or fill is one of the most common root causes of later pavement failure or foundation settlement, precisely because it's an internal property that isn't visible from the finished surface — a layer can look perfectly finished and still be inadequately compacted underneath."]}]}];
+
+  var totalNotes = DATA.reduce(function(sum, cat){ return sum + cat.notes.length; }, 0);
+  document.getElementById('metaNoteCount').textContent = totalNotes;
+  document.getElementById('metaCatCount').textContent = DATA.length;
+
+  function wordCount(paras){
+    return paras.join(' ').trim().split(/\s+/).length;
+  }
+  function readTime(paras){
+    var words = wordCount(paras);
+    var mins = Math.max(1, Math.round(words / 200));
+    return mins + ' min read';
+  }
+
+  var activeCategory = 'all';
+  var searchTerm = '';
+
+  // ---- build joint row ----
+  var jointRow = document.getElementById('jointRow');
+  function makeJoint(id, label, count, isAll){
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'joint-btn' + (isAll ? ' is-all' : '');
+    btn.setAttribute('aria-pressed', String(id === activeCategory));
+    btn.dataset.cat = id;
+
+    var drop = document.createElement('div'); drop.className = 'drop';
+    var jt = document.createElement('div'); jt.className = 'joint';
+    var bolt = document.createElement('div'); bolt.className = 'bolt';
+    jt.appendChild(bolt);
+    var name = document.createElement('div'); name.className = 'joint-name'; name.textContent = label;
+    var cnt = document.createElement('div'); cnt.className = 'joint-count'; cnt.textContent = count + (count===1?' note':' notes');
+
+    btn.appendChild(drop); btn.appendChild(jt); btn.appendChild(name); btn.appendChild(cnt);
+    btn.addEventListener('click', function(){
+      activeCategory = id;
+      render();
+    });
+    return btn;
+  }
+  function renderJoints(){
+    jointRow.innerHTML = '';
+    jointRow.appendChild(makeJoint('all', 'All Subjects', totalNotes, true));
+    DATA.forEach(function(cat){
+      jointRow.appendChild(makeJoint(cat.id, cat.label, cat.notes.length, false));
+    });
+  }
+
+  // ---- build note card ----
+  function makeCard(cat, note){
+    var card = document.createElement('div');
+    card.className = 'note-card';
+    card.style.borderLeftColor = cat.color;
+
+    var head = document.createElement('button');
+    head.type = 'button';
+    head.className = 'note-head';
+    head.setAttribute('aria-expanded', 'false');
+
+    var top = document.createElement('div'); top.className = 'note-toprow';
+    var tag = document.createElement('span'); tag.className = 'note-tag'; tag.textContent = cat.label; tag.style.color = cat.color;
+    var time = document.createElement('span'); time.className = 'note-time'; time.textContent = readTime(note.body);
+    top.appendChild(tag); top.appendChild(time);
+
+    var title = document.createElement('h3'); title.className = 'note-title'; title.textContent = note.title;
+    var summary = document.createElement('p'); summary.className = 'note-summary'; summary.textContent = note.summary;
+
+    var hint = document.createElement('div'); hint.className = 'note-toggle-hint';
+    hint.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+    var hintText = document.createTextNode('Read note');
+    hint.appendChild(hintText);
+
+    head.appendChild(top); head.appendChild(title); head.appendChild(summary); head.appendChild(hint);
+
+    var body = document.createElement('div'); body.className = 'note-body';
+    var bodyInner = document.createElement('div'); bodyInner.className = 'note-body-inner';
+    note.body.forEach(function(paraText){
+      var p = document.createElement('p');
+      p.textContent = paraText;
+      bodyInner.appendChild(p);
+    });
+    body.appendChild(bodyInner);
+
+    head.addEventListener('click', function(){
+      var isOpen = card.classList.toggle('open');
+      head.setAttribute('aria-expanded', String(isOpen));
+      hint.replaceChild(document.createTextNode(isOpen ? 'Collapse' : 'Read note'), hint.lastChild);
+    });
+
+    card.appendChild(head);
+    card.appendChild(body);
+    return card;
+  }
+
+  function matchesSearch(note){
+    if(!searchTerm) return true;
+    var haystack = (note.title + ' ' + note.summary + ' ' + note.body.join(' ')).toLowerCase();
+    return haystack.indexOf(searchTerm) !== -1;
+  }
+
+  function render(){
+    // update joint pressed states
+    Array.prototype.forEach.call(jointRow.children, function(btn){
+      btn.setAttribute('aria-pressed', String(btn.dataset.cat === activeCategory));
+    });
+
+    var sectionsEl = document.getElementById('noteSections');
+    sectionsEl.innerHTML = '';
+    var shown = 0;
+
+    var catsToShow = DATA.filter(function(cat){ return activeCategory === 'all' || activeCategory === cat.id; });
+
+    catsToShow.forEach(function(cat){
+      var visibleNotes = cat.notes.filter(matchesSearch);
+      if(visibleNotes.length === 0) return;
+      shown += visibleNotes.length;
+
+      var section = document.createElement('section');
+      section.className = 'catsection';
+
+      var head = document.createElement('div'); head.className = 'catsection-head';
+      var dot = document.createElement('span'); dot.className = 'catdot'; dot.style.background = cat.color;
+      var h2 = document.createElement('h2'); h2.textContent = cat.label;
+      var count = document.createElement('span'); count.className = 'catcount'; count.textContent = visibleNotes.length + (visibleNotes.length===1?' note':' notes');
+      head.appendChild(dot); head.appendChild(h2); head.appendChild(count);
+
+      var grid = document.createElement('div'); grid.className = 'grid';
+      visibleNotes.forEach(function(note){ grid.appendChild(makeCard(cat, note)); });
+
+      section.appendChild(head);
+      section.appendChild(grid);
+      sectionsEl.appendChild(section);
+    });
+
+    if(shown === 0){
+      var empty = document.createElement('div');
+      empty.className = 'empty-state';
+      empty.textContent = 'No notes match that search. Try a different term, or reset filters below.';
+      sectionsEl.appendChild(empty);
+    }
+
+    document.getElementById('resultsCount').textContent = 'Showing ' + shown + ' of ' + totalNotes + ' notes';
+  }
+
+  document.getElementById('searchInput').addEventListener('input', function(e){
+    searchTerm = e.target.value.trim().toLowerCase();
+    render();
+  });
+  document.getElementById('clearFilters').addEventListener('click', function(){
+    activeCategory = 'all';
+    searchTerm = '';
+    document.getElementById('searchInput').value = '';
+    render();
+  });
+
+  renderJoints();
+  render();
+})();
+</script>
+
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
