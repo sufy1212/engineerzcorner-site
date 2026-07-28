@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Guides — Site Engineer Toolkit</title>
+<meta name="description" content="Twelve step-by-step how-to guides — cable sizing, MCCB selection, IEC 61439, LV panel design and more.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/engineering-guides">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Engineering Guides — Site Engineer Toolkit">
+<meta property="og:description" content="Twelve step-by-step how-to guides — cable sizing, MCCB selection, IEC 61439, LV panel design and more.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/engineering-guides">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Engineering Guides — Site Engineer Toolkit">
+<meta name="twitter:description" content="Twelve step-by-step how-to guides — cable sizing, MCCB selection, IEC 61439, LV panel design and more.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F3F4FA; --sheet:#FFFFFF; --sheet-2:#F7F8FC; --line:#E1E3F0; --line-soft:#ECEEF7;
+    --ink:#181B29; --ink-dim:#565A74; --ink-faint:#8D91AA;
+    --plate:#181B2E; --plate-2:#23273D;
+    --amber:#6C5CE7; --amber-deep:#4C3FC7;
+    --blue:#0D9488; --green:#16A34A; --red:#DC2626;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);}
+  body{
+    background-image:
+      repeating-linear-gradient(115deg, rgba(24,27,41,.025) 0px, rgba(24,27,41,.025) 1px, transparent 1px, transparent 5px);
+    background-color:var(--paper);
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px 60px;}
+  ::selection{background:rgba(108,92,231,.24);}
+
+  :focus-visible{outline:2px solid var(--amber-deep);outline-offset:2px;}
+
+  .skip-link{
+    position:absolute;left:10px;top:-60px;z-index:100;background:var(--plate);color:#F1F0FB;
+    font-family:var(--font-mono);font-size:12px;padding:10px 16px;border-radius:0 0 5px 5px;
+    text-decoration:none;transition:top .15s;
+  }
+  .skip-link:focus{top:0;}
+
+  /* ===== masthead / title block ===== */
+  .masthead{
+    background:linear-gradient(135deg, var(--plate) 0%, var(--plate-2) 100%);
+    border-bottom:none;position:relative;overflow:hidden;
+  }
+  .masthead::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(circle at 12% -10%, rgba(108,92,231,.35), transparent 42%),
+      radial-gradient(circle at 92% 110%, rgba(45,212,191,.22), transparent 45%);
+  }
+  .masthead::after{content:none;}
+  .masthead-inner{max-width:840px;margin:0 auto;padding:26px 18px 18px;position:relative;}
+  .masthead-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;font-weight:600;}
+  .masthead h1{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-.01em;color:#F8F8FF;margin:0;text-transform:none;}
+  .masthead-sub{font-family:var(--font-body);font-size:13px;color:#B8BAD9;margin-top:6px;font-style:normal;line-height:1.55;max-width:56ch;}
+  .masthead-stamps{display:flex;gap:18px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10);flex-wrap:wrap;}
+  .stamp{font-family:var(--font-mono);font-size:9.5px;color:#8F92B8;letter-spacing:.06em;}
+  .stamp b{display:block;color:#E5E4F5;font-size:11px;margin-top:1px;font-weight:600;}
+  .masthead-credit{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:flex-end;align-items:center;gap:6px;}
+  .masthead-credit .mc-spark{color:#2DD4BF;font-size:11px;line-height:1;animation:mcTwinkle 2.2s ease-in-out infinite;}
+  @keyframes mcTwinkle{
+    0%,100%{opacity:.5;transform:scale(.85);}
+    50%{opacity:1;transform:scale(1.15);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .masthead-credit .mc-spark{animation:none;opacity:1;transform:none;}
+  }
+  .masthead-credit .mc-text{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.05em;color:#8F92B8;}
+  .masthead-credit .mc-name{
+    font-family:var(--font-display);font-weight:800;font-size:12.5px;letter-spacing:.01em;margin-left:2px;
+    background:linear-gradient(90deg,#8B7CF6 0%,#2DD4BF 22%,#F8F8FF 40%,#2DD4BF 58%,#8B7CF6 80%,#2DD4BF 100%);
+    background-size:250% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:mcShine 4.5s linear infinite;
+    filter:drop-shadow(0 0 6px rgba(139,124,246,.35));
+  }
+  @keyframes mcShine{
+    0%{background-position:0% 50%;}
+    100%{background-position:250% 50%;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .masthead-credit .mc-name{animation:none;background-position:0% 50%;filter:none;}
+  }
+
+  .topnav-outer{position:sticky;top:0;z-index:30;background:rgba(24,27,46,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(108,92,231,.25);}
+  .disc-pills{display:flex;gap:6px;max-width:840px;margin:0 auto;padding:10px 18px 0;overflow-x:auto;}
+  .disc-pill{
+    flex:none;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+    color:#9A9CC0;font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+    padding:6px 12px;border-radius:20px;white-space:nowrap;text-decoration:none;transition:all .15s ease;
+  }
+  .disc-pill svg{width:13px;height:13px;flex:none;}
+  .disc-pill:hover{color:#F1F0FB;border-color:rgba(108,92,231,.4);}
+  .disc-pill.active{color:#fff;background:linear-gradient(135deg, var(--amber), var(--blue));border-color:transparent;box-shadow:0 2px 10px rgba(108,92,231,.4);}
+  .topnav{display:flex;gap:4px;max-width:840px;margin:0 auto;padding:8px 18px 0;overflow-x:auto;align-items:flex-end;flex-wrap:nowrap;}
+  .topnav-tabs{display:flex;gap:4px;overflow-x:auto;flex:1;align-items:flex-end;}
+  .navtab{
+    flex:none;display:flex;align-items:center;gap:0;background:rgba(255,255,255,.03);border:1px solid transparent;
+    border-bottom:none;color:#9A9CC0;font-family:var(--font-mono);font-size:11px;font-weight:600;
+    letter-spacing:.03em;text-transform:uppercase;
+    padding:9px 14px;cursor:pointer;white-space:nowrap;border-radius:5px 5px 0 0;text-decoration:none;
+  }
+  .navtab svg{display:none;}
+  .navtab:hover{color:#F1F0FB;background:rgba(255,255,255,.06);}
+  .navtab.active{color:var(--amber-deep);background:var(--sheet);border-color:var(--line);box-shadow:0 -2px 6px rgba(0,0,0,.12);}
+  .page{display:none;}
+  .page.active{display:block;}
+  .page.active.page-enter{animation:pageFadeIn .38s cubic-bezier(.22,.9,.34,1);}
+  @keyframes pageFadeIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .page.active.page-enter{animation:none;}
+  }
+
+  /* ===== page hero ===== */
+  .pagehero{display:flex;align-items:center;gap:14px;margin:20px 0 2px;flex-wrap:wrap;}
+  .pagehero .hero-icon{
+    display:flex;align-items:center;justify-content:center;flex:none;
+    width:48px;height:48px;background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;border-radius:12px;
+    box-shadow:0 4px 14px rgba(108,92,231,.35);
+    animation:heroPop .5s cubic-bezier(.22,.9,.34,1);
+  }
+  @keyframes heroPop{
+    from{transform:scale(.6) rotate(-8deg);opacity:0;}
+    to{transform:scale(1) rotate(0);opacity:1;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pagehero .hero-icon{animation:none;}
+  }
+  .pagehero .hero-icon svg{width:23px;height:23px;}
+  h1{font-family:var(--font-display);font-size:23px;margin:0;color:var(--ink);font-weight:800;letter-spacing:-.01em;}
+  .hero-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.05em;}
+
+  .intro{
+    background:var(--sheet);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;
+    padding:13px 16px;font-size:13px;color:var(--ink-dim);line-height:1.65;margin:10px 0 18px;
+    box-shadow:0 1px 3px rgba(24,27,41,.05);
+  }
+  .intro b{color:var(--ink);}
+
+  /* ===== step = drawing sheet, with a title-block header bar ===== */
+  .step{background:var(--sheet);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(24,27,41,.05);transition:box-shadow .2s ease;}
+  .step:hover{box-shadow:0 4px 16px rgba(24,27,41,.08);}
+  .step-head{
+    display:flex;align-items:center;gap:10px;background:linear-gradient(135deg, var(--plate), var(--plate-2));border-left:none;
+    padding:12px 16px;margin:0;
+  }
+  .step-num{
+    font-family:var(--font-mono);font-size:10.5px;color:#fff;background:linear-gradient(135deg, var(--amber), var(--blue));border:none;
+    padding:2px 8px;border-radius:50%;flex:none;font-weight:700;letter-spacing:.04em;
+  }
+  .step h2{font-family:var(--font-display);font-size:13.5px;margin:0;color:#F1F0FB;font-weight:600;letter-spacing:.03em;text-transform:uppercase;}
+  .step-desc{font-size:12.5px;color:var(--ink-faint);margin:0;padding:10px 16px 4px;line-height:1.55;}
+
+  .field{margin:0 0 16px;padding-top:2px;}
+  .step > .field, .step > .radiorow{margin-left:16px;margin-right:16px;}
+  .step > .row2{margin:0;}
+  .field label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;font-weight:600;}
+  .field label .unit{color:var(--amber-deep);font-family:var(--font-mono);font-size:9.5px;font-weight:700;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  input[type=number], input[type=text], select{
+    width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--line);color:var(--ink);
+    font-family:var(--font-mono);font-size:14.5px;padding:6px 2px 8px;outline:none;border-radius:0;
+  }
+  input:hover, select:hover{border-bottom-color:var(--ink-faint);}
+  input:focus, select:focus{border-bottom-color:var(--blue);border-bottom-width:2px;padding-bottom:7px;}
+  select{cursor:pointer;}
+  .radiorow{display:flex;gap:18px;padding:14px 16px 6px;flex-wrap:wrap;}
+  .radiorow label{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-dim);cursor:pointer;font-weight:600;}
+  .radiorow input{accent-color:var(--amber-deep);width:15px;height:15px;}
+  .hint{font-size:11px;color:var(--ink-faint);margin-top:6px;line-height:1.5;}
+  details{margin:10px 16px 14px;}
+  details > .field, details > .adv-grid{margin-left:0;margin-right:0;}
+  summary{cursor:pointer;font-size:10.5px;color:var(--ink-faint);font-family:var(--font-mono);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;}
+  summary:hover{color:var(--blue);}
+  .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px;}
+
+  .result-line{
+    position:relative;
+    display:flex;align-items:center;justify-content:space-between;
+    background:linear-gradient(135deg, rgba(24,27,46,.88), rgba(35,39,61,.82));
+    backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+    border:1px solid rgba(255,255,255,.14);border-top-color:rgba(255,255,255,.28);
+    box-shadow:0 8px 28px rgba(24,27,46,.22), inset 0 1px 0 rgba(255,255,255,.08);
+    border-radius:14px;
+    padding:13px 16px;margin:0 16px 16px;font-family:var(--font-mono);
+  }
+  .result-line .rlabel{font-size:10px;color:#B8BAD9;letter-spacing:.08em;font-weight:700;text-transform:uppercase;}
+  .result-line .rval{font-size:22px;font-weight:800;background:linear-gradient(135deg, var(--amber), var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+  .result-line .rval small{font-size:11px;color:#8F92B8;font-weight:400;margin-left:2px;-webkit-text-fill-color:#8F92B8;}
+
+  /* ===== schedule entries (formerly "db-card") ===== */
+  #dbList, #vdList, #selList, #csList{display:flex;flex-direction:column;gap:0;margin:0 16px 4px;}
+  .db-card{
+    background:var(--sheet-2);border:1px solid var(--line-soft);border-left:3px solid var(--blue);border-radius:0 5px 5px 0;
+    padding:13px 15px 15px;margin-bottom:12px;
+  }
+  .db-card-head{display:flex;align-items:center;gap:9px;margin-bottom:12px;border-bottom:1px solid var(--line-soft);padding-bottom:10px;}
+  .db-card-head::before{content:none;}
+  .db-card-head input[type=text]{font-family:var(--font-display);font-weight:700;font-size:13.5px;flex:1;border-bottom-color:var(--line);}
+  .removeBtn{
+    background:transparent;border:1px solid var(--line);color:var(--ink-faint);border-radius:4px;
+    width:28px;height:28px;cursor:pointer;font-size:13px;flex:none;
+  }
+  .removeBtn:hover{border-color:var(--red);color:var(--red);}
+  .parentField{background:transparent;border:1px dashed var(--line);border-radius:4px;padding:9px 12px;margin-bottom:14px;}
+  .parentField label{color:var(--blue);}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;background:transparent;}
+  .stat{
+    background:rgba(255,255,255,.55);backdrop-filter:blur(10px) saturate(160%);-webkit-backdrop-filter:blur(10px) saturate(160%);
+    border:1px solid rgba(255,255,255,.6);border-radius:10px;
+    box-shadow:0 4px 16px rgba(24,27,46,.08), inset 0 1px 0 rgba(255,255,255,.5);
+    padding:10px 13px;
+  }
+  .stat .slabel{font-family:var(--font-mono);font-size:9px;color:var(--ink-faint);letter-spacing:.07em;text-transform:uppercase;font-weight:600;}
+  .stat .sval{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--ink);margin-top:3px;}
+  .stat .sval.amber{color:var(--amber-deep);}
+
+  .status-banner{display:flex;align-items:center;gap:9px;padding:9px 13px;border-radius:4px;font-size:12px;font-weight:700;margin-top:11px;border:1px solid;font-family:var(--font-mono);}
+  .status-banner.ok{background:#ECFDF5;border-color:#A7E8C7;color:var(--green);}
+  .status-banner.bad{background:#FEF2F2;border-color:#FCA5A5;color:var(--red);}
+  .status-banner.neutral{background:var(--sheet);border-color:var(--line);color:var(--ink-faint);}
+  .status-dot{width:6px;height:6px;flex:none;}
+  .status-banner.ok .status-dot{background:var(--green);}
+  .status-banner.bad .status-dot{background:var(--red);}
+  .status-banner.neutral .status-dot{background:var(--ink-faint);}
+
+  #addDbBtn, #vdAddBtn, #selAddBtn, #csAddBtn{
+    width:calc(100% - 32px);margin-left:16px;margin-right:16px;border-radius:5px;
+    background:transparent;border:1.5px dashed var(--blue);color:var(--blue);
+    font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:12px;cursor:pointer;margin-top:2px;margin-bottom:16px;
+  }
+  #addDbBtn:hover, #vdAddBtn:hover, #selAddBtn:hover, #csAddBtn:hover{background:rgba(61,107,99,.08);}
+
+  /* ===== project-management dynamic tables ===== */
+  .pm-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;margin:0 16px 12px;}
+  table.pm-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:560px;}
+  table.pm-table th{background:var(--plate);color:#F3EEDD;font-family:var(--font-mono);font-size:9px;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left;white-space:nowrap;}
+  table.pm-table td{padding:5px 8px;border-bottom:1px solid var(--line-soft);vertical-align:middle;}
+  table.pm-table tr:last-child td{border-bottom:none;}
+  table.pm-table input[type="text"], table.pm-table input[type="date"], table.pm-table input[type="email"], table.pm-table input[type="tel"], table.pm-table select{
+    width:100%;border:1px solid transparent;background:transparent;font-family:var(--font-body);font-size:12.5px;color:var(--ink);
+    padding:6px 6px;border-radius:3px;
+  }
+  table.pm-table input:focus, table.pm-table select:focus{border-color:var(--blue);background:var(--sheet);outline:none;}
+  table.pm-table td.pm-rm{width:34px;text-align:center;}
+  .pm-add-btn{
+    width:calc(100% - 32px);margin-left:16px;margin-right:16px;border-radius:5px;
+    background:transparent;border:1.5px dashed var(--blue);color:var(--blue);
+    font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:12px;cursor:pointer;margin-top:2px;margin-bottom:16px;
+  }
+  .pm-add-btn:hover{background:rgba(61,107,99,.08);}
+  .pm-badge{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 8px;border-radius:20px;white-space:nowrap;}
+  .pm-badge.low{background:#ECFDF5;color:var(--green);}
+  .pm-badge.medium{background:#FFFBEB;color:#B45309;}
+  .pm-badge.high{background:#FEF2F2;color:var(--red);}
+  .pm-badge.neutral{background:var(--sheet-2);color:var(--ink-faint);}
+  tr.pm-overdue td{background:#FEF2F2;}
+  .pm-gen-btn{background:var(--plate);color:#F3EEDD;border:none;border-radius:5px;padding:10px 16px;font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;}
+  .pm-copy-btn{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:10px 16px;font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;}
+
+  .permit-checklist{margin:0 16px 16px;display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .permit-check-item{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--sheet);font-size:13px;}
+  .permit-check-item:nth-child(even){background:var(--sheet-2);}
+  .permit-check-item input[type="checkbox"]{width:16px;height:16px;flex:none;accent-color:var(--amber-deep);}
+  .permit-check-item label{cursor:pointer;}
+
+  .failure-meta{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;margin:-6px 0 10px;}
+  .failure-lesson{margin:10px 0 4px;padding:10px 14px;background:var(--sheet-2);border-left:3px solid var(--amber-deep);border-radius:0 5px 5px 0;font-size:12.5px;line-height:1.55;}
+  .failure-lesson b{color:var(--ink);}
+
+  .tree{font-family:var(--font-mono);font-size:13px;margin:0 16px 16px;}
+  .tree-row{display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line-soft);}
+  .tree-row:last-child{border-bottom:none;}
+  .tree-branch{color:var(--ink-faint);white-space:pre;}
+  .tree-name{font-family:var(--font-display);font-weight:700;font-size:13px;flex:1;color:var(--ink);}
+  .tree-name.leaf-last{color:var(--amber-deep);}
+  .tree-ik{color:var(--amber-deep);font-weight:700;}
+  .tree-ip{color:var(--ink-faint);font-size:11.5px;}
+
+  .field.has-error input, .field.has-error select{border-bottom-color:var(--red);border-bottom-width:2px;}
+  .field-error{color:var(--red);font-size:11px;margin-top:6px;line-height:1.4;font-weight:700;font-family:var(--font-mono);}
+  .parentField.has-error select{border-color:var(--red);}
+  .parentField .field-error{margin-top:6px;}
+
+  .validation-banner{
+    display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:5px;
+    font-size:12.5px;font-weight:700;margin:10px 0 18px;border:1px solid;font-family:var(--font-mono);
+    letter-spacing:.02em;
+  }
+  .validation-banner.ok{background:#ECFDF5;border-color:#A7E8C7;color:var(--green);}
+  .validation-banner.bad{background:#FEF2F2;border-color:#FCA5A5;color:var(--red);}
+  .validation-banner.neutral{background:var(--sheet-2);border-color:var(--line);color:var(--ink-faint);}
+  .validation-banner .vdot{width:8px;height:8px;border-radius:50%;flex:none;}
+  .validation-banner.ok .vdot{background:var(--green);}
+  .validation-banner.bad .vdot{background:var(--red);}
+  .validation-banner.neutral .vdot{background:var(--ink-faint);}
+
+  .list-empty{
+    display:flex;align-items:center;gap:10px;margin:0 16px 14px;padding:14px 15px;
+    background:transparent;border:1.5px dashed var(--line);border-radius:5px;
+    color:var(--ink-faint);font-size:12px;line-height:1.5;
+  }
+  .list-empty svg{flex:none;width:18px;height:18px;opacity:.6;}
+
+  .formula-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:var(--sheet-2);border:1px dashed var(--line);border-radius:5px;padding:12px 14px;margin:8px 16px 0;line-height:1.75;}
+  .formula-note b{color:var(--blue);}
+  footer{margin:22px 16px 0;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);border-top:1px solid var(--line-soft);padding:14px 0 18px;line-height:1.6;}
+
+  .tcc-chart-wrap{background:var(--sheet);border:1px solid var(--line);padding:14px;overflow-x:auto;margin:0 16px;}
+  .tcc-svg{display:block;min-width:560px;}
+  .tcc-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:12px 16px 0;font-family:var(--font-mono);font-size:11.5px;}
+  .tcc-legend-item{display:flex;align-items:center;gap:6px;}
+  .tcc-swatch{width:14px;height:3px;flex:none;}
+  .coord-line{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;padding:9px 4px;border-bottom:1px solid var(--line-soft);font-family:var(--font-mono);}
+  .coord-line:last-child{border-bottom:none;}
+  .coord-margin{font-family:var(--font-mono);font-weight:700;}
+  .coord-margin.ok{color:var(--green);} .coord-margin.bad{color:var(--red);}
+  #coordResults{margin:0 16px 16px;}
+
+  .topnav a.navtab{text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
+  .topnav a.navtab svg{display:inline;width:15px;height:15px;flex:none;}
+  .home-link{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;margin-bottom:0;color:#9A9CC0;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid transparent;border-bottom:none;border-radius:5px 5px 0 0;white-space:nowrap;}
+  .home-link:hover{color:#F1F0FB;background:rgba(255,255,255,.06);}
+  .home-link.active{color:var(--amber-deep);background:var(--sheet);border-color:var(--line);box-shadow:0 -2px 6px rgba(0,0,0,.12);}
+  .tool-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0 30px;}
+  .tool-card{background:var(--sheet);border:1px solid var(--line);border-radius:12px;border-left:none;
+    padding:16px 18px 18px;text-decoration:none;display:block;transition:all .18s cubic-bezier(.22,.9,.34,1);box-shadow:0 1px 3px rgba(24,27,41,.06);}
+  .tool-card:hover{background:var(--sheet-2);transform:translateY(-3px);box-shadow:0 10px 24px rgba(108,92,231,.16);}
+  .tool-card-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .tool-card-icon{width:36px;height:36px;border-radius:10px;flex:none;background:linear-gradient(135deg, var(--amber), var(--blue));display:flex;align-items:center;justify-content:center;color:#fff;}
+  .tool-card-icon svg{width:18px;height:18px;}
+  .tool-card-num{font-family:var(--font-mono);font-size:10px;color:var(--amber-deep);letter-spacing:.08em;font-weight:700;text-transform:uppercase;}
+  .tool-card-title{font-family:var(--font-display);font-size:15.5px;font-weight:700;color:var(--ink);margin:1px 0 0;}
+  .tool-card-desc{font-size:12.5px;color:var(--ink-dim);line-height:1.6;margin:0 0 0 46px;}
+
+  /* ===== symbol library (dense grid) ===== */
+  .symbol-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:6px;margin:16px 0 14px;
+  }
+  .symbol-tile{
+    background:var(--sheet);border:1px solid var(--line);border-radius:6px;cursor:pointer;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    padding:8px 4px 7px;transition:border-color .12s, background .12s, transform .12s;
+  }
+  .symbol-tile:hover{border-color:var(--amber);transform:translateY(-1px);}
+  .symbol-tile.active{border-color:var(--amber);background:var(--sheet-2);box-shadow:inset 0 0 0 1px var(--amber);}
+  .symbol-tile svg{width:26px;height:26px;stroke-width:1.6;color:var(--ink);flex:none;shape-rendering:geometricPrecision;}
+  .symbol-tile-label{
+    font-family:var(--font-mono);font-size:8.5px;line-height:1.25;text-align:center;color:var(--ink-dim);
+    letter-spacing:.01em;max-width:100%;overflow-wrap:break-word;
+  }
+  @media (min-width:640px){ .symbol-grid{grid-template-columns:repeat(auto-fill,minmax(84px,1fr));} .symbol-tile svg{width:28px;height:28px;} .symbol-tile-label{font-size:9px;} }
+
+  .symbol-detail{display:none;background:var(--plate);border-radius:8px;padding:18px 20px;margin:4px 0 14px;gap:18px;align-items:flex-start;flex-wrap:wrap;}
+  .symbol-detail.show{display:flex;}
+  .symbol-detail-icon{flex:none;width:64px;height:64px;background:var(--sheet);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--ink);}
+  .symbol-detail-icon svg{width:36px;height:36px;stroke-width:1.5;}
+  .symbol-detail-text{flex:1;min-width:200px;}
+  .sd-cat{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);margin-bottom:3px;}
+  .sd-name{font-family:var(--font-display);font-size:16px;font-weight:600;color:#F3EEDD;text-transform:uppercase;letter-spacing:.01em;margin-bottom:8px;}
+  .sd-desc{font-family:var(--font-body);font-size:13px;color:#D9D0BC;line-height:1.6;margin:0 0 8px;}
+  .sd-usage{font-family:var(--font-mono);font-size:11px;color:#A79E88;line-height:1.6;padding-top:8px;border-top:1px solid rgba(255,255,255,.1);}
+  .symbol-empty-hint{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);border:1px dashed var(--line);border-radius:6px;padding:14px 16px;margin:4px 0 14px;text-align:center;}
+  .home-intro{background:var(--sheet);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;
+    padding:13px 16px;font-size:13px;color:var(--ink-dim);line-height:1.65;margin:16px 0 20px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+
+  /* ===== single-line diagram (home page signature graphic) ===== */
+  .sld{background:var(--plate);border-radius:8px;padding:22px 18px 18px;margin:0 0 26px;box-shadow:0 4px 16px rgba(24,27,41,.15);}
+  .sld-label{font-family:var(--font-mono);font-size:9.5px;color:#8F92B8;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
+  .sld svg{display:block;width:100%;height:auto;}
+  .sld-line{fill:none;stroke:#5A5D78;stroke-width:2;}
+  .sld-live{fill:none;stroke:var(--amber);stroke-width:2;stroke-dasharray:5 4;animation:sld-flow 1.6s linear infinite;}
+  @keyframes sld-flow{to{stroke-dashoffset:-18;}}
+  .sld-node{fill:#15172A;stroke:#5A5D78;stroke-width:1.4;}
+  .sld-node.hot{stroke:var(--amber);}
+  .sld-txt{font-family:var(--font-mono);font-size:9px;fill:#B8BAD9;letter-spacing:.03em;}
+  .sld-txt.hi{fill:var(--amber);font-weight:700;}
+  @media (prefers-reduced-motion: reduce){.sld-live{animation:none;}}
+
+  /* ===== home page results dashboard ===== */
+  .dash-wrap{margin:0 0 26px;}
+  .dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+  .dash-card{
+    display:flex;flex-direction:column;gap:3px;background:var(--sheet);border:1px solid var(--line);
+    border-radius:6px;padding:10px 12px;text-decoration:none;box-shadow:0 1px 3px rgba(24,27,41,.05);
+    transition:all .15s;position:relative;
+  }
+  .dash-card:hover{border-color:var(--blue);background:var(--sheet-2);transform:translateY(-1px);}
+  .dash-dot{position:absolute;top:11px;right:11px;width:7px;height:7px;border-radius:50%;background:var(--ink-faint);}
+  .dash-dot.ok{background:var(--green);}
+  .dash-dot.bad{background:var(--red);}
+  .dash-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);padding-right:14px;}
+  .dash-val{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+  @media (min-width:560px){ .dash-grid{grid-template-columns:repeat(4,1fr);} }
+
+  .page{display:none;}
+  .page.active{display:block;}
+
+  /* ===== v2 additions: dark mode, toolbars, toast, unit hints ===== */
+  html[data-theme="dark"]{
+    --paper:#15172A; --sheet:#1A1D33; --sheet-2:#20233A; --line:#3A3D5A; --line-soft:#2A2E4A;
+    --ink:#F2F2FA; --ink-dim:#C7C9E5; --ink-faint:#8688AC;
+    --plate:#12142A; --plate-2:#15172A; --blue:#2DD4BF; --amber:#8B7FF0;
+  }
+  html[data-theme="dark"] body{background-image:repeating-linear-gradient(115deg, rgba(240,234,219,.02) 0px, rgba(240,234,219,.02) 1px, transparent 1px, transparent 5px);}
+  .site-toolbar{background:var(--sheet);border-bottom:1px solid var(--line);}
+  .site-toolbar-inner{max-width:800px;margin:0 auto;padding:7px 18px;display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap;}
+  .site-toolbar button{background:transparent;border:1px solid var(--line);border-radius:4px;color:var(--ink-dim);font-family:var(--font-mono);font-size:10.5px;padding:5px 10px;cursor:pointer;letter-spacing:.02em;white-space:nowrap;}
+  .site-toolbar button:hover{border-color:var(--blue);color:var(--blue);}
+  .masthead-logo{max-height:34px;max-width:160px;display:none;margin-bottom:6px;}
+
+  /* ===== private contact ===== */
+  .contact-fab{
+    position:fixed;right:20px;bottom:24px;z-index:150;
+    display:flex;align-items:center;gap:9px;
+    background:linear-gradient(135deg, var(--amber) 0%, var(--amber-deep) 100%);
+    color:#fff;border:none;border-radius:999px;padding:14px 20px 14px 16px;cursor:pointer;
+    font-family:var(--font-display);font-weight:700;font-size:13.5px;letter-spacing:.01em;
+    box-shadow:0 8px 24px rgba(76,63,199,.4), 0 2px 8px rgba(76,63,199,.3);
+    animation:fabPulse 2.6s ease-in-out infinite;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .contact-fab:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 30px rgba(76,63,199,.48), 0 4px 10px rgba(76,63,199,.35);animation-play-state:paused;}
+  .contact-fab svg{width:19px;height:19px;flex:none;}
+  .contact-fab-label{white-space:nowrap;}
+  @keyframes fabPulse{
+    0%, 100%{box-shadow:0 8px 24px rgba(76,63,199,.4), 0 0 0 0 rgba(108,92,231,.45);}
+    50%{box-shadow:0 8px 24px rgba(76,63,199,.4), 0 0 0 10px rgba(108,92,231,0);}
+  }
+  @media (prefers-reduced-motion: reduce){ .contact-fab{animation:none;} }
+  @media (max-width:520px){
+    .contact-fab{right:14px;bottom:18px;padding:14px;border-radius:50%;}
+    .contact-fab-label{display:none;}
+  }
+  .contact-overlay{position:fixed;inset:0;background:rgba(15,16,26,.6);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;z-index:200;padding:20px;animation:cxFadeIn .18s ease;}
+  .contact-overlay[hidden]{display:none;}
+  @keyframes cxFadeIn{from{opacity:0;}to{opacity:1;}}
+  .contact-modal{background:var(--sheet);border-radius:16px;max-width:460px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 24px 70px rgba(0,0,0,.4);animation:cxRise .2s cubic-bezier(.22,.9,.34,1);}
+  @keyframes cxRise{from{opacity:0;transform:translateY(12px) scale(.98);}to{opacity:1;transform:translateY(0) scale(1);}}
+  .contact-modal-head{padding:20px 22px 14px;border-bottom:1px solid var(--line);background:linear-gradient(135deg, var(--plate) 0%, var(--amber-deep) 130%);border-radius:16px 16px 0 0;}
+  .contact-modal-head h2{font-family:var(--font-display);font-size:18px;font-weight:800;color:#fff;margin:0 0 6px;}
+  .contact-modal-sub{font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.55;}
+  .contact-privacy-note{display:flex;gap:8px;align-items:flex-start;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:10px 12px;margin-top:12px;font-size:11.5px;color:rgba(255,255,255,.85);line-height:1.5;}
+  .contact-privacy-note svg{flex:none;width:15px;height:15px;color:#8CE0B0;margin-top:1px;}
+  .contact-modal-body{padding:16px 22px 22px;}
+  .contact-field{margin-bottom:14px;}
+  .contact-field label{display:block;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:6px;}
+  .contact-field input, .contact-field textarea{
+    width:100%;border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-family:var(--font-body);
+    font-size:13.5px;color:var(--ink);background:var(--sheet-2);resize:vertical;
+  }
+  .contact-field input:focus, .contact-field textarea:focus{outline:2px solid var(--amber-deep);outline-offset:1px;border-color:transparent;}
+  .contact-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px;flex-wrap:wrap;}
+  .contact-send-btn{background:linear-gradient(135deg, var(--amber) 0%, var(--amber-deep) 100%);color:#fff;border:none;border-radius:7px;padding:10px 18px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;}
+  .contact-send-btn:hover{filter:brightness(1.08);}
+  .contact-cancel-btn{background:none;border:none;color:var(--ink-faint);font-size:12.5px;cursor:pointer;padding:6px 4px;}
+  .contact-cancel-btn:hover{color:var(--ink);}
+  .contact-error{font-size:11.5px;color:var(--red);margin-top:-6px;margin-bottom:12px;display:none;}
+  .contact-error.show{display:block;}
+
+  .masthead h1[contenteditable="true"], .masthead-sub[contenteditable="true"]{outline:1px dashed var(--amber);cursor:text;padding:2px 4px;margin:-2px -4px;}
+  .sheet-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0 4px;padding:10px 14px;background:var(--sheet-2);border:1px dashed var(--line);border-radius:5px;}
+  .sheet-actions button{background:var(--sheet);border:1px solid var(--line);border-radius:4px;color:var(--ink-dim);font-family:var(--font-mono);font-size:11px;padding:7px 11px;cursor:pointer;letter-spacing:.02em;}
+  .sheet-actions button:hover{border-color:var(--blue);color:var(--blue);}
+  .sheet-actions .tip{font-size:10.5px;color:var(--ink-faint);font-family:var(--font-mono);flex:1 1 100%;margin-top:2px;}
+  .unit-hint{font-family:var(--font-mono);font-size:10px;color:var(--ink-faint);margin-top:4px;}
+  .sval, .rval, .tree-ik{cursor:pointer;}
+  .sval:hover, .rval:hover, .tree-ik:hover{text-decoration:underline dotted;text-underline-offset:3px;}
+  #appToast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--plate);color:#fff;border-radius:0 5px 5px 0;
+    font-family:var(--font-mono);font-size:12px;padding:10px 16px;border-left:3px solid var(--amber);opacity:0;pointer-events:none;
+    transition:all .18s;z-index:200;max-width:90vw;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+  #appToast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  @media print{
+    .site-toolbar,.topnav-outer,.sheet-actions,#addDbBtn,#vdAddBtn,#selAddBtn,#csAddBtn,#estOutAddBtn,.removeBtn,#appToast,.masthead-stamps,.disc-bar,.wn-ticker{display:none !important;}
+    body{background:#fff;}
+  }
+
+  /* ===== discipline breadcrumb bar (always visible, above masthead) ===== */
+  .disc-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.1);}
+  .disc-bar-inner{max-width:840px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;}
+  .disc-bar a{color:#8F92B8;text-decoration:none;display:inline-flex;align-items:center;gap:5px;}
+  .disc-bar a:hover{color:var(--amber);}
+  .disc-bar .disc-sep{color:#5A5D78;}
+  .disc-bar .disc-current{color:var(--amber);text-transform:uppercase;font-weight:600;}
+
+  /* ===== discipline index (root landing page) ===== */
+  .discipline-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0 30px;}
+
+  /* ===== technical badge generator ===== */
+  .badge-tool{
+    background:var(--sheet);border:1px solid var(--line);border-radius:14px;
+    padding:20px;margin:0 0 24px;box-shadow:0 1px 3px rgba(24,27,41,.06);
+  }
+  .badge-tool-head{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+  .badge-tool-head svg{width:20px;height:20px;color:var(--amber-deep);flex:none;}
+  .badge-tool-head h2{font-family:var(--font-display);font-size:16px;font-weight:800;margin:0;color:var(--ink);}
+  .badge-tool-desc{font-size:12.5px;color:var(--ink-dim);margin:2px 0 16px;line-height:1.55;}
+  .badge-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media (min-width:760px){ .badge-grid{grid-template-columns:1fr 1fr;align-items:start;} }
+  .badge-fields .field{margin-bottom:12px;}
+  .badge-fields label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:4px;}
+  .badge-fields input, .badge-fields select{
+    width:100%;box-sizing:border-box;padding:9px 11px;border:1px solid var(--line);border-radius:7px;
+    font-family:var(--font-body);font-size:14px;color:var(--ink);background:var(--sheet-2);
+  }
+  .badge-fields input:focus, .badge-fields select:focus{outline:2px solid var(--amber-deep);outline-offset:1px;}
+  .badge-swatches{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+  .badge-swatch{
+    width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;flex:none;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);
+  }
+  .badge-swatch.active{border-color:var(--ink);box-shadow:0 0 0 2px var(--sheet), 0 0 0 4px var(--ink);}
+  .badge-preview-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .badge-preview-wrap svg{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 8px 20px rgba(24,27,41,.18));}
+  .badge-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
+  .badge-actions button{
+    font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:9px 16px;border-radius:7px;border:1px solid var(--line);background:var(--sheet-2);color:var(--ink-dim);
+    cursor:pointer;transition:all .15s ease;
+  }
+  .badge-actions button:hover{background:var(--sheet);color:var(--ink);border-color:var(--amber-deep);}
+  .badge-actions button.primary{background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;border-color:transparent;}
+  .badge-actions button.primary:hover{filter:brightness(1.08);}
+
+  /* ===== Calendar & Date Converter ===== */
+  .cal-tool{
+    background:var(--sheet);border:1px solid var(--line);border-radius:16px;
+    margin:0 0 24px;box-shadow:0 4px 18px rgba(24,27,41,.08);overflow:hidden;
+  }
+
+  /* ---- hero band: big "today" display ---- */
+  .cal-hero{
+    background:linear-gradient(135deg, var(--plate) 0%, var(--plate-2) 100%);
+    position:relative;overflow:hidden;padding:22px 22px 20px;
+  }
+  .cal-hero::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(circle at 10% -20%, rgba(108,92,231,.45), transparent 45%),
+      radial-gradient(circle at 95% 120%, rgba(45,212,191,.28), transparent 48%);
+  }
+  .cal-hero-content{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;}
+  .cal-hero-left{display:flex;align-items:center;gap:14px;}
+  .cal-hero-eyebrow{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:#A9AEDB;margin-bottom:4px;}
+  .cal-hero-date{display:flex;align-items:baseline;gap:12px;}
+  .cal-hero-daynum{
+    font-family:var(--font-display);font-size:52px;font-weight:800;line-height:.85;
+    background:linear-gradient(135deg,#fff,#C9C4FF 60%,#8FF0E0);-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 2px 10px rgba(108,92,231,.5));
+  }
+  .cal-hero-daytext{display:flex;flex-direction:column;gap:1px;}
+  .cal-hero-weekday{font-family:var(--font-display);font-size:15px;font-weight:700;color:#fff;}
+  .cal-hero-month{font-family:var(--font-mono);font-size:11px;color:#B7BEDB;}
+  .cal-hero-pills{display:flex;gap:10px;flex-wrap:wrap;}
+  .cal-hero-pill{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;
+    padding:8px 13px;backdrop-filter:blur(4px);min-width:108px;
+  }
+  .cal-hero-pill-label{display:block;font-family:var(--font-mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#9EA4D0;margin-bottom:3px;}
+  .cal-hero-pill-val{display:block;font-family:var(--font-display);font-size:12.5px;font-weight:700;color:#EDECFB;}
+
+  /* ---- body ---- */
+  .cal-body{padding:20px;}
+  .cal-tool-head{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+  .cal-tool-head svg{width:20px;height:20px;color:var(--amber-deep);flex:none;}
+  .cal-tool-head h2{font-family:var(--font-display);font-size:16px;font-weight:800;margin:0;color:var(--ink);}
+  .cal-tool-desc{font-size:12.5px;color:var(--ink-dim);margin:2px 0 16px;line-height:1.6;}
+  .cal-tool-desc b{color:var(--ink);}
+
+  .cal-layout{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media (min-width:800px){ .cal-layout{grid-template-columns:290px 1fr;align-items:start;} }
+
+  .cal-month-card{
+    background:var(--sheet-2);border:1px solid var(--line);border-radius:14px;padding:16px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .cal-month-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+  .cal-month-nav button{
+    background:var(--sheet);border:1px solid var(--line);border-radius:8px;width:28px;height:28px;
+    color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;justify-content:center;
+    font-size:14px;transition:all .15s ease;
+  }
+  .cal-month-nav button:hover{border-color:transparent;background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;transform:scale(1.08);}
+  .cal-month-label{font-family:var(--font-display);font-size:14px;font-weight:800;color:var(--ink);}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+  .cal-wd{font-family:var(--font-mono);font-size:9px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-faint);
+    text-align:center;padding-bottom:6px;font-weight:700;}
+  .cal-day{
+    aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;
+    font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);cursor:pointer;border:1.5px solid transparent;
+    background:none;transition:all .15s cubic-bezier(.22,.9,.34,1);
+  }
+  .cal-day:hover{border-color:var(--amber-deep);color:var(--ink);transform:scale(1.12);}
+  .cal-day.cal-empty{cursor:default;}
+  .cal-day.cal-empty:hover{border-color:transparent;transform:none;}
+  .cal-day.cal-today{
+    background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;font-weight:800;
+    box-shadow:0 3px 10px rgba(108,92,231,.5), 0 0 0 3px rgba(108,92,231,.15);
+  }
+  .cal-day.cal-today:hover{transform:scale(1.15);}
+  .cal-day.cal-selected:not(.cal-today){background:var(--sheet);border-color:var(--amber-deep);color:var(--ink);font-weight:800;box-shadow:0 2px 6px rgba(108,92,231,.2);}
+
+  .cal-convert{display:flex;flex-direction:column;gap:14px;}
+  .cal-picker-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+  .cal-picker-row label{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;}
+  .cal-picker-row input[type="date"]{
+    padding:9px 11px;border:1px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:13px;
+    color:var(--ink);background:var(--sheet-2);
+  }
+  .cal-today-btn{
+    font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+    padding:8px 13px;border-radius:8px;border:1px solid var(--line);background:var(--sheet-2);color:var(--ink-dim);cursor:pointer;
+    transition:all .15s ease;
+  }
+  .cal-today-btn:hover{border-color:transparent;background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;}
+
+  .cal-result-grid{display:grid;grid-template-columns:1fr;gap:12px;}
+  @media (min-width:560px){ .cal-result-grid{grid-template-columns:1fr 1fr 1fr;} }
+  .cal-result-card{
+    border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:var(--sheet-2);
+    position:relative;overflow:hidden;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cal-result-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(24,27,41,.1);}
+  .cal-result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+  .cal-result-card.cal-greg::before{background:linear-gradient(90deg, var(--amber), #8B7CF6);}
+  .cal-result-card.cal-hijri::before{background:linear-gradient(90deg,#8B7CF6,#2DD4BF);}
+  .cal-result-card.cal-kr::before{background:linear-gradient(90deg,#C0392B,#2D5BFF);}
+  .cal-result-icon{font-size:16px;line-height:1;margin-bottom:6px;display:block;}
+  .cal-result-eyebrow{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:5px;}
+  .cal-result-main{font-family:var(--font-display);font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.3;}
+  .cal-result-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);margin-top:4px;}
+  .cal-result-card.cal-hijri .cal-result-main{
+    background:linear-gradient(90deg,#8B7CF6,#2DD4BF);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .cal-note{font-size:11px;color:var(--ink-faint);line-height:1.6;margin-top:2px;}
+
+  @media (prefers-reduced-motion: reduce){
+    .cal-day, .cal-month-nav button, .cal-today-btn, .cal-result-card{transition:none;}
+  }
+
+  .discipline-card{background:var(--sheet);border:1px solid var(--line);border-radius:14px;border-left:none;
+    padding:18px 20px 20px;text-decoration:none;display:block;transition:all .18s cubic-bezier(.22,.9,.34,1);box-shadow:0 1px 3px rgba(24,27,41,.06);position:relative;}
+  .discipline-card:hover{background:var(--sheet-2);transform:translateY(-3px);box-shadow:0 12px 28px rgba(108,92,231,.18);}
+  .discipline-card.is-planned{cursor:default;}
+  .discipline-card.is-planned:hover{background:var(--sheet);transform:none;box-shadow:0 1px 3px rgba(24,27,41,.06);}
+  .discipline-card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
+  .discipline-card-title{display:flex;align-items:center;gap:12px;}
+  .discipline-card-icon{width:40px;height:40px;border-radius:11px;flex:none;background:linear-gradient(135deg, var(--amber), var(--blue));display:flex;align-items:center;justify-content:center;color:#fff;}
+  .discipline-card.is-planned .discipline-card-icon{background:var(--sheet-2);color:var(--ink-faint);}
+  .discipline-card-icon svg{width:20px;height:20px;}
+  .discipline-card-name{font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--ink);text-transform:none;letter-spacing:-.01em;}
+  .discipline-status{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:20px;flex:none;}
+  .discipline-status.active{color:#fff;background:linear-gradient(135deg, var(--amber), var(--blue));}
+  .discipline-status.planned{color:var(--ink-faint);background:var(--sheet-2);border:1px solid var(--line);}
+  .discipline-card-desc{font-size:12.5px;color:var(--ink-dim);line-height:1.6;margin:0 0 0 52px;}
+  .discipline-empty{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-faint);border:1px dashed var(--line);border-radius:6px;padding:26px;text-align:center;background:var(--sheet);margin:18px 0 30px;}
+
+  /* ===== engagement row: streak + daily note (disciplines home) ===== */
+  .engage-row{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 28px;}
+  .streak-card{flex:1 1 200px;background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 1px 3px rgba(24,27,41,.06);}
+  .streak-card .streak-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
+  .streak-card .streak-num{font-family:var(--font-display);font-size:34px;font-weight:800;color:var(--ink);line-height:1;}
+  .streak-card .streak-num span{font-size:16px;color:var(--ink-dim);font-weight:600;margin-left:6px;}
+  .streak-card .streak-best{font-size:12px;color:var(--ink-dim);margin-top:8px;}
+  .daily-note-card{flex:2 1 320px;background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 1px 3px rgba(24,27,41,.06);text-decoration:none;display:block;transition:all .18s cubic-bezier(.22,.9,.34,1);}
+  .fun-card{cursor:default;}
+  .fun-joke-text{font-weight:600;font-size:14px;line-height:1.5;color:var(--ink);margin-bottom:12px;min-height:44px;}
+  .fun-reroll-btn{font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;border:1px solid var(--line);background:var(--sheet-2);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer;transition:background .15s ease;}
+  .fun-reroll-btn:hover{background:var(--line);}
+  #otdSummary{margin-bottom:12px;}
+  .daily-note-card:hover{background:var(--sheet-2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(108,92,231,.14);}
+  .daily-note-card .dn-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+  .daily-note-card .dn-badge{background:var(--plate);color:#fff;border-radius:20px;padding:2px 9px;font-size:9px;letter-spacing:.04em;}
+  .daily-note-card .dn-title{font-family:var(--font-display);font-size:16px;font-weight:800;color:var(--ink);line-height:1.3;margin:0 0 6px;}
+  .daily-note-card .dn-summary{font-size:12.5px;color:var(--ink-dim);line-height:1.55;margin:0 0 10px;}
+  .daily-note-card .dn-cta{font-family:var(--font-mono);font-size:10.5px;color:var(--amber);font-weight:600;}
+
+  /* ===== daily quiz ===== */
+  .quiz-teaser-card{border-color:var(--line);}
+  .quiz-teaser-card .dn-eyebrow{color:var(--blue);}
+  .quiz-teaser-card .dn-cta{color:var(--blue);}
+
+  .share-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:28px 0 0;padding:18px 20px;background:var(--sheet);border:1px solid var(--line);border-radius:14px;}
+  .share-row-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-right:2px;}
+  .share-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--sheet-2);color:var(--ink-dim);text-decoration:none;transition:all .15s ease;cursor:pointer;}
+  .share-btn svg{width:16px;height:16px;}
+  .share-btn:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-1px);}
+  .share-btn.copied{border-color:var(--green);color:var(--green);}
+
+  .quiz-shell{max-width:640px;margin:0 auto;}
+  .quiz-progress{display:flex;gap:6px;justify-content:center;margin:6px 0 22px;}
+  .quiz-dot{width:9px;height:9px;border-radius:50%;background:var(--line);transition:background .25s, transform .25s;}
+  .quiz-dot.done-correct{background:var(--green);}
+  .quiz-dot.done-wrong{background:var(--red);}
+  .quiz-dot.current{transform:scale(1.35);background:var(--amber);}
+
+  .quiz-card{
+    background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:26px 24px;
+    box-shadow:0 1px 3px rgba(24,27,41,.06);
+    animation:quizCardIn .38s cubic-bezier(.22,.9,.34,1);
+  }
+  @keyframes quizCardIn{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+
+  .quiz-badge{
+    display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--plate);color:#F3EEDD;border-radius:20px;padding:3px 11px;margin-bottom:14px;
+  }
+  .quiz-q{font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--ink);line-height:1.4;margin:0 0 20px;}
+
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{
+    text-align:left;font-family:var(--font-body,inherit);font-size:14.5px;color:var(--ink);
+    background:var(--sheet-2,#fff);border:1.5px solid var(--line);border-radius:10px;
+    padding:13px 16px;cursor:pointer;transition:all .15s ease;position:relative;
+  }
+  .quiz-opt:hover:not(:disabled){border-color:var(--blue);background:rgba(61,107,99,.06);}
+  .quiz-opt:disabled{cursor:default;}
+  .quiz-opt.opt-correct{
+    border-color:var(--green);background:rgba(63,122,79,.12);font-weight:700;
+    animation:quizPulseGreen .5s ease;
+  }
+  .quiz-opt.opt-wrong{
+    border-color:var(--red);background:rgba(178,58,46,.1);
+    animation:quizShake .4s ease;
+  }
+  .quiz-opt.opt-faded{opacity:.5;}
+  @keyframes quizPulseGreen{ 0%{transform:scale(1);} 40%{transform:scale(1.02);box-shadow:0 0 0 4px rgba(63,122,79,.18);} 100%{transform:scale(1);} }
+  @keyframes quizShake{ 0%,100%{transform:translateX(0);} 25%{transform:translateX(-6px);} 50%{transform:translateX(5px);} 75%{transform:translateX(-3px);} }
+
+  .quiz-explain{
+    margin-top:16px;padding:13px 15px;border-radius:8px;background:var(--sheet);border-left:3px solid var(--blue);
+    font-size:13px;color:var(--ink-dim);line-height:1.55;
+    animation:quizExplainIn .3s ease;
+  }
+  @keyframes quizExplainIn{ from{opacity:0; max-height:0;} to{opacity:1; max-height:200px;} }
+
+  .quiz-next-row{margin-top:18px;text-align:right;}
+  .quiz-next-btn{
+    font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--plate);color:#F3EEDD;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;
+    transition:transform .15s ease;
+  }
+  .quiz-next-btn:hover{transform:translateY(-1px);}
+
+  .quiz-summary{text-align:center;padding:10px 0;}
+  .quiz-score-ring{
+    width:120px;height:120px;margin:0 auto 18px;position:relative;
+  }
+  .quiz-score-ring svg{transform:rotate(-90deg);}
+  .quiz-score-ring circle{fill:none;stroke-width:9;}
+  .quiz-score-ring .qsr-bg{stroke:var(--line);}
+  .quiz-score-ring .qsr-fg{stroke:var(--green);stroke-linecap:round;transition:stroke-dashoffset 1s cubic-bezier(.22,.9,.34,1);}
+  .quiz-score-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--ink);}
+  .quiz-summary-title{font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--ink);margin:0 0 6px;}
+  .quiz-summary-sub{font-size:13px;color:var(--ink-dim);margin:0 0 20px;}
+  .quiz-already-done{
+    text-align:center;padding:30px 20px;background:var(--sheet);border:1px solid var(--line);border-radius:14px;
+  }
+
+  /* ===== what's new ===== */
+  .wn-ticker{
+    display:flex;align-items:center;gap:0;background:#14151F;border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden;position:relative;
+  }
+  .wn-ticker-label{
+    flex:none;display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:9.5px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;color:#F3EEDD;background:linear-gradient(135deg,#6C5CE7,#2DD4BF);
+    padding:7px 14px;z-index:2;white-space:nowrap;
+  }
+  .wn-ticker-label .wn-dot{width:6px;height:6px;border-radius:50%;background:#F3EEDD;animation:wnDotBlink 1.6s ease-in-out infinite;}
+  @keyframes wnDotBlink{ 0%,100%{opacity:1;} 50%{opacity:.25;} }
+  .wn-ticker-track-wrap{flex:1 1 auto;overflow:hidden;position:relative;}
+  .wn-ticker-track{
+    display:flex;align-items:center;white-space:nowrap;width:max-content;
+    animation:wnTickerScroll 32s linear infinite;
+  }
+  .wn-ticker-track:hover{animation-play-state:paused;}
+  .wn-ticker-item{
+    display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:#C7C9E8;
+    text-decoration:none;padding:7px 22px;white-space:nowrap;
+  }
+  .wn-ticker-item:hover{color:#F3EEDD;}
+  .wn-ticker-item b{color:#2DD4BF;font-weight:700;}
+  .wn-ticker-sep{color:#4A4C6A;padding:0 2px;}
+  @keyframes wnTickerScroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){
+    .wn-ticker-track{animation:none;overflow-x:auto;}
+    .wn-ticker-label .wn-dot{animation:none;}
+  }
+
+  .wn-timeline{max-width:720px;margin:0 auto;position:relative;padding-left:28px;}
+  .wn-timeline::before{
+    content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+    background:linear-gradient(180deg,var(--blue),var(--line));
+  }
+  .wn-entry{position:relative;margin-bottom:30px;opacity:0;animation:wnEntryIn .5s ease forwards;}
+  .wn-entry:nth-child(1){animation-delay:.05s;}
+  .wn-entry:nth-child(2){animation-delay:.15s;}
+  .wn-entry:nth-child(3){animation-delay:.25s;}
+  .wn-entry:nth-child(4){animation-delay:.35s;}
+  @keyframes wnEntryIn{ from{opacity:0; transform:translateX(-8px);} to{opacity:1; transform:translateX(0);} }
+  @media (prefers-reduced-motion: reduce){ .wn-entry{animation:none; opacity:1;} }
+
+  .wn-dot{
+    position:absolute;left:-28px;top:4px;width:16px;height:16px;border-radius:50%;
+    background:var(--sheet);border:3px solid var(--blue);z-index:1;
+  }
+  .wn-entry.wn-latest .wn-dot{border-color:#6C5CE7;box-shadow:0 0 0 4px rgba(108,92,231,.15);}
+
+  .wn-card{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:0 1px 3px rgba(24,27,41,.06);}
+  .wn-tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+  .wn-tag{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
+    border-radius:14px;padding:3px 10px;background:var(--plate);color:#F3EEDD;}
+  .wn-tag.wn-tag-latest{background:linear-gradient(135deg,#6C5CE7,#2DD4BF);}
+  .wn-title{font-family:var(--font-display);font-size:17px;font-weight:800;color:var(--ink);margin:0 0 8px;}
+  .wn-desc{font-size:13.5px;color:var(--ink-dim);line-height:1.6;margin:0 0 12px;}
+  .wn-links{display:flex;gap:10px;flex-wrap:wrap;}
+  .wn-links a{font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--blue);text-decoration:none;
+    border:1px solid var(--line);border-radius:16px;padding:5px 12px;transition:all .15s ease;}
+  .wn-links a:hover{border-color:var(--blue);background:rgba(61,107,99,.06);}
+
+
+  .mech-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 4px;}
+  .mech-tabs a{
+    font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;font-weight:700;
+    color:var(--ink-dim);background:var(--sheet);border:1px solid var(--line);border-radius:20px;
+    padding:6px 13px;text-decoration:none;white-space:nowrap;
+  }
+  .mech-tabs a:hover{border-color:var(--blue);color:var(--blue);}
+
+  /* ===== Reference Tables ===== */
+  .reftable-jump{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 26px;}
+  .reftable-jump a{
+    font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;color:var(--ink-dim);
+    background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:5px 10px;text-decoration:none;
+  }
+  .reftable-jump a:hover{border-color:var(--blue);color:var(--blue);}
+  .reftable-section{margin:0 0 34px;scroll-margin-top:90px;}
+  .reftable-section h2{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--ink);margin:0 0 4px;letter-spacing:.01em;}
+  .reftable-note{font-size:11.5px;color:var(--ink-faint);margin:0 0 12px;font-family:var(--font-mono);line-height:1.6;}
+  .reftable-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;}
+  table.reftable{width:100%;border-collapse:collapse;font-size:12.5px;min-width:340px;}
+  table.reftable th{background:var(--plate);color:#F3EEDD;font-family:var(--font-mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;padding:8px 12px;text-align:left;white-space:nowrap;}
+  table.reftable td{padding:7px 12px;border-bottom:1px solid var(--line-soft);color:var(--ink-dim);font-family:var(--font-body);}
+  table.reftable tr:last-child td{border-bottom:none;}
+  table.reftable td:first-child{font-family:var(--font-mono);color:var(--ink);font-weight:600;white-space:nowrap;}
+  table.reftable tr:nth-child(even) td{background:var(--sheet-2);}
+  .mech-tabs a.current{background:var(--plate);color:#F1F0FB;border-color:var(--plate);}
+
+  /* ===== hub hero graphics (mechanical / hvac / automation / civil) ===== */
+  .hero-graphic{background:var(--plate);border-radius:14px;padding:22px 20px 16px;margin:18px 0 4px;overflow:hidden;}
+  .hero-graphic-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#9A9CC0;margin-bottom:10px;}
+  .hero-graphic svg{display:block;width:100%;height:auto;max-height:150px;}
+
+  @keyframes spinCW{to{transform:rotate(360deg);}}
+  @keyframes spinCCW{to{transform:rotate(-360deg);}}
+  .gear-a{transform-origin:64px 70px;animation:spinCW 9s linear infinite;}
+  .gear-b{transform-origin:118px 70px;animation:spinCCW 9s linear infinite;}
+  .gear-c{transform-origin:172px 100px;animation:spinCW 6.4s linear infinite;}
+
+  .duct-flow{stroke-dasharray:7 6;animation:sld-flow 1.3s linear infinite;}
+
+  @keyframes ledPulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+  .led-a{animation:ledPulse 1.6s ease-in-out infinite;}
+  .led-b{animation:ledPulse 1.6s ease-in-out infinite .35s;}
+  .led-c{animation:ledPulse 1.6s ease-in-out infinite .7s;}
+  .signal-dot{animation:signalMove 2.6s linear infinite;}
+  @keyframes signalMove{
+    0%{offset-distance:0%;opacity:0;}
+    6%{opacity:1;}
+    94%{opacity:1;}
+    100%{offset-distance:100%;opacity:0;}
+  }
+
+  @keyframes dashPulse{0%,100%{opacity:.35;}50%{opacity:.9;}}
+  .civil-dash{stroke-dasharray:4 4;animation:dashPulse 2.6s ease-in-out infinite;}
+
+  .tool-card-icon, .discipline-card-icon{transition:transform .22s cubic-bezier(.22,.9,.34,1);}
+  .tool-card:hover .tool-card-icon{transform:scale(1.1) rotate(-6deg);}
+  .discipline-card:hover .discipline-card-icon{transform:scale(1.08) rotate(-4deg);}
+
+  @media (prefers-reduced-motion: reduce){
+    .gear-a, .gear-b, .gear-c, .duct-flow, .led-a, .led-b, .led-c, .signal-dot, .civil-dash{animation:none;}
+    .tool-card:hover .tool-card-icon, .discipline-card:hover .discipline-card-icon{transform:none;}
+  }
+
+  /* ===== Engineering Guides — jump-to table of contents ===== */
+  .guide-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+  .guide-toc-link{
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.02em;
+    color:var(--ink-dim);background:var(--sheet);border:1px solid var(--line);border-radius:20px;
+    padding:7px 14px;text-decoration:none;white-space:nowrap;transition:border-color .15s ease,color .15s ease;
+  }
+  .guide-toc-link:hover{border-color:var(--amber);color:var(--amber-deep);}
+
+  /* ===== Comparisons — head-to-head equipment/technology tables ===== */
+  .cmp-table-wrap{margin:0 16px 4px;overflow-x:auto;border:1px solid var(--line);border-radius:6px;}
+  .cmp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:480px;}
+  .cmp-table thead th{
+    background:var(--plate);color:#F3EEDD;font-family:var(--font-mono);font-size:10.5px;
+    letter-spacing:.03em;text-transform:uppercase;text-align:left;padding:9px 12px;white-space:nowrap;
+  }
+  .cmp-table thead th:first-child{color:var(--amber);}
+  .cmp-table tbody td{padding:9px 12px;border-top:1px solid var(--line);color:var(--ink-dim);vertical-align:top;line-height:1.5;}
+  .cmp-table tbody td:first-child{font-weight:600;color:var(--ink);white-space:nowrap;}
+  .cmp-table tbody tr:nth-child(even){background:var(--sheet-2);}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electrical",
+      "item": "https://www.engineerzcorner.com/electrical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Engineering Guides",
+      "item": "https://www.engineerzcorner.com/electrical/engineering-guides"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Engineering Guides",
+  "description": "Twelve step-by-step how-to guides \u2014 cable sizing, MCCB selection, IEC 61439, LV panel design and more.",
+  "url": "https://www.engineerzcorner.com/electrical/engineering-guides"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Engineering Guides</span></div></nav>
+
+<a href="index.html" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-guides">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></svg></div>
+    <div><h1>Engineering Guides</h1><div class="hero-sub">Step-by-step method guides — how to actually approach each job, not just the calculator behind it</div></div>
+  </div>
+  <div class="intro">
+    Twelve practical how-to guides covering the method behind this site's calculators — what order to check things in, what's easy to get wrong by hand, and what a standard like IEC 61439 actually requires. Each guide stands on its own; jump straight to the one you need.
+  </div>
+
+  <div class="guide-toc">
+      <a href="#g-cable" class="guide-toc-link">1. How to Size a Cable</a>
+      <a href="#g-mccb" class="guide-toc-link">2. How to Select an MCCB</a>
+      <a href="#g-vdrop" class="guide-toc-link">3. How to Calculate Voltage Drop</a>
+      <a href="#g-transformer" class="guide-toc-link">4. How to Size a Transformer</a>
+      <a href="#g-iec61439" class="guide-toc-link">5. IEC 61439 Explained</a>
+      <a href="#g-panel" class="guide-toc-link">6. LV Panel Design Guide</a>
+      <a href="#g-genset" class="guide-toc-link">7. How to Size a Standby Generator</a>
+      <a href="#g-earthing" class="guide-toc-link">8. Earthing System Design Guide</a>
+      <a href="#g-pfc" class="guide-toc-link">9. Power Factor Correction Guide</a>
+      <a href="#g-derating" class="guide-toc-link">10. Cable Derating Factors Explained</a>
+      <a href="#g-selectivity" class="guide-toc-link">11. Selectivity & Discrimination Basics</a>
+      <a href="#g-sld" class="guide-toc-link">12. Reading a Single Line Diagram</a>
+  </div>
+
+  <div class="step" id="g-cable">
+    <div class="step-head"><span class="step-num">1</span><h2>How to Size a Cable</h2></div>
+    <div class="step-desc">Three separate checks, not one — a cable has to pass all three to be correctly sized.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      Sizing a cable is really three independent checks stacked on top of each other. A cable that passes only two of the three is undersized, even if it looks fine on the check you happened to run.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Current-carrying capacity (ampacity).</b> Start from the design load current, then apply derating factors for ambient temperature, grouping with other circuits, and installation method (clipped direct, in conduit, buried, in a tray) to get a corrected tabulated current rating. Pick the smallest cable whose derated ampacity still exceeds the design current. This is the step most people do first — and the one most likely to get silently wrong if a grouping or ambient factor is skipped.</li>
+      <li><b>Voltage drop.</b> A cable that carries the current fine can still drop too much voltage over its length, especially on long runs. Check cumulative drop against your governing limit (commonly around 3% for lighting circuits and 5% for power circuits under IEC 60364-5-52 guidance, though your local code may differ) — see the voltage drop guide below for the actual calculation.</li>
+      <li><b>Short-circuit thermal withstand.</b> The cable also has to survive the fault current that would flow through it for as long as its upstream protective device takes to clear that fault, without its conductor or insulation exceeding a safe withstand temperature. This is the check most often skipped by hand — it only becomes obviously necessary on cables protected by devices with a slow clearing time, or on cables carrying high prospective fault current.</li>
+    </ol>
+    <div class="formula-note">Thermal withstand check: I²t ≤ k²S² — where I is fault current, t is clearing time, S is conductor CSA, and k is a constant set by conductor and insulation material (IEC 60364-5-54).</div>
+    <div class="hint" style="margin:10px 16px 0;">
+      In practice: run the ampacity check first to get a candidate size, check voltage drop at that size over the actual route length, then confirm thermal withstand against the actual upstream device's clearing time. Whichever of the three checks demands the largest cable is the one that governs — round up to that size, not to whichever check you finished last.
+    </div>
+  </div>
+  <div class="step" id="g-mccb">
+    <div class="step-head"><span class="step-num">2</span><h2>How to Select an MCCB</h2></div>
+    <div class="step-desc">Rated current is only the starting point — breaking capacity, curve type and discrimination all matter just as much.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      An MCCB (moulded case circuit breaker) selection has to satisfy several independent requirements at once. Getting the rated current right but missing one of the others produces a breaker that's technically installed but not actually correctly protecting the circuit.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>In (rated current).</b> Choose a frame and trip setting so the breaker's continuous rating sits comfortably above the design load current, but not so far above it that it fails to protect the downstream cable's ampacity — the breaker's rating has to sit between the load's actual demand and the cable's maximum safe current.</li>
+      <li><b>Icu / Ics (breaking capacity).</b> The breaker's rated breaking capacity has to exceed the prospective fault current at its point of installation — this is exactly the number your short-circuit study (SH.01 on this site) is calculating. Icu is the ultimate breaking capacity (verified once, breaker may not be reusable after); Ics is the service breaking capacity (the breaker remains usable afterward) — for anything other than a purely one-off fault-clearing role, size against Ics, not just Icu.</li>
+      <li><b>Trip curve / settings.</b> Adjustable-trip MCCBs let you set long-time (overload), short-time (delayed short-circuit), instantaneous, and sometimes ground-fault pickup points. These settings are what actually create selectivity with upstream and downstream devices — see the selectivity guide below.</li>
+      <li><b>Discrimination with adjacent devices.</b> A correctly rated breaker that isn't coordinated with the breaker upstream or downstream of it can still cause a wider outage than necessary when a fault occurs, because the wrong device trips first.</li>
+    </ol>
+    <div class="hint" style="margin:10px 16px 0;">
+      A practical order to work through it: confirm the prospective fault current at the panel first (this sets your minimum Icu/Ics), pick a frame size that covers your load current with margin for future growth, then tune the trip curve settings last, specifically to coordinate with the devices immediately upstream and downstream — settings are the easiest part to adjust later; frame size and breaking capacity are not.
+    </div>
+  </div>
+  <div class="step" id="g-vdrop">
+    <div class="step-head"><span class="step-num">3</span><h2>How to Calculate Voltage Drop</h2></div>
+    <div class="step-desc">One formula, but the resistance and reactance values you feed into it are where the real work is.</div>
+    <div class="formula-note">Vd = √3 · I · L · (R·cosφ + X·sinφ)  &nbsp;(three-phase)<br>Vd = 2 · I · L · (R·cosφ + X·sinφ)  &nbsp;(single-phase)</div>
+    <div class="hint" style="margin:8px 16px 10px;">
+      I is design current (A), L is one-way route length (km), R and X are the cable's resistance and reactance per km at operating temperature (Ω/km, from the cable manufacturer's data — not the DC resistance at 20°C, which understates actual operating resistance), and cosφ/sinφ come from the load's power factor.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li>Pull R and X per km for your specific conductor size and material at its expected operating temperature — not the cold DC value, since a conductor running near its rated temperature has noticeably higher resistance than one at 20°C.</li>
+      <li>Use the actual one-way route length, including any vertical runs, not just the straight-line distance between two points on a layout drawing.</li>
+      <li>On a feeder chain (source → panel → sub-panel → final circuit), add up the drop through <i>every</i> section in the path, not just the final circuit's own cable — a final circuit can pass its own local check while the cumulative drop from source still exceeds the limit.</li>
+      <li>Check the cumulative result against your governing limit — commonly around 3% for lighting and 5% for power under IEC 60364-5-52 guidance, though always confirm your specific project's applicable code and any stricter client specification.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      Cumulative drop is the trap most hand calculations miss — it's easy to check each segment against the full allowable limit individually and pass every one, while the total drop stacked end-to-end still exceeds it. SH.02 on this site is built specifically to carry drop through a full feeder chain rather than checking each segment in isolation.
+    </div>
+  </div>
+  <div class="step" id="g-transformer">
+    <div class="step-head"><span class="step-num">4</span><h2>How to Size a Transformer</h2></div>
+    <div class="step-desc">Start from actual demand, not connected load — the two are rarely the same number.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Total the connected load.</b> Sum the nameplate rating of every piece of equipment the transformer will ultimately supply.</li>
+      <li><b>Apply a demand factor.</b> Not everything runs simultaneously at full nameplate rating — a demand factor (commonly derived from load diversity studies, standard tables, or historical metering on similar facilities) scales connected load down to a realistic maximum demand. Skipping this step and sizing directly off connected load is the single most common cause of a badly oversized transformer.</li>
+      <li><b>Add planned growth margin.</b> A transformer sized exactly to today's calculated demand leaves no room for a future extension, and up-sizing a transformer later is far more disruptive than specifying reasonable spare capacity now — 15–25% margin above calculated demand is a common allowance, though this should reflect your project's actual known or likely growth, not a blind default.</li>
+      <li><b>Round up to a standard kVA rating.</b> Transformers are manufactured in standard rating steps (e.g. 500, 630, 800, 1000, 1250 kVA) — round your calculated requirement up to the next standard size rather than specifying a non-standard rating that costs more and takes longer to procure.</li>
+      <li><b>Check impedance and fault-current implications.</b> A transformer's percentage impedance (ukr, commonly 4–8% for distribution transformers) directly sets the prospective fault current on its secondary side — a lower-impedance transformer gives less voltage drop at load but a higher fault current downstream, which then has to be within the breaking capacity of every downstream device. Sizing and impedance selection aren't fully independent decisions.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      For motor-heavy loads, also check the voltage dip a large motor's starting current would cause on the transformer — a transformer sized adequately for steady-state demand can still produce an unacceptable voltage sag for the rest of the installation during a large motor's direct-on-line start. SH.06 on this site includes this check alongside standard kVA sizing.
+    </div>
+  </div>
+  <div class="step" id="g-iec61439">
+    <div class="step-head"><span class="step-num">5</span><h2>IEC 61439 Explained</h2></div>
+    <div class="step-desc">The standard that governs how a low-voltage switchgear and controlgear assembly is actually verified, not just how it's wired.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      IEC 61439 (which superseded IEC 60439) covers low-voltage switchgear and controlgear assemblies — panels, MCCs, distribution boards — and defines how their ratings are established and verified, not the ratings of the individual components inside them. A panel built entirely from correctly-rated breakers and busbars still isn't automatically a compliant assembly until the assembly itself has been verified as a whole.
+    </div>
+    <div class="step-desc" style="padding:0 16px;margin-top:10px;"><b>Original manufacturer vs assembly manufacturer</b></div>
+    <div class="hint" style="margin:0 16px 10px;">
+      The standard distinguishes the <b>original equipment manufacturer</b> (who designs the assembly and carries out or specifies the required verifications) from the <b>assembly manufacturer</b> (who may be a different party actually building a specific panel to that design) — responsibility for the assembly's compliance sits with whoever takes on the original manufacturer role for that specific design, which isn't always the company physically building it.</div>
+    <div class="step-desc" style="padding:0 16px;margin-top:10px;"><b>Design verification: tested vs calculated vs by-comparison</b></div>
+    <div class="hint" style="margin:0 16px 10px;">
+      Key ratings — temperature rise, short-circuit withstand, protective conductor continuity, clearances and creepage distances, degree of protection, mechanical operation — have to be verified by one of three routes: physical testing of a representative sample, calculation against defined rules, or comparison with a previously tested reference design that's genuinely similar enough for the comparison to be valid. Not every route is available for every rating — short-circuit withstand, for instance, is far more commonly tested than calculated, because the calculation methods available cover a narrower range of configurations reliably.
+    </div>
+    <div class="step-desc" style="padding:0 16px;margin-top:10px;"><b>Form of separation</b></div>
+    <div class="hint" style="margin:0 16px 0;">
+      Form (1 through 4, with sub-variants like 4b) describes how thoroughly busbars, functional units and outgoing terminals are separated from each other inside the assembly, which directly affects how safely the panel can be worked on while still energized — Form 1 has no internal separation at all, while Form 4 fully separates busbars, each functional unit, and its own terminals, meaning one outgoing way can be worked on with the rest of the panel still live and effectively isolated from that work. Higher forms cost more and take more panel space, so the specified form should reflect how the panel will actually be operated and maintained, not simply the highest form available.
+    </div>
+  </div>
+  <div class="step" id="g-panel">
+    <div class="step-head"><span class="step-num">6</span><h2>LV Panel Design Guide</h2></div>
+    <div class="step-desc">The decisions that shape a panel before a single component gets selected.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Establish the single line diagram and load schedule first.</b> Every downstream decision — busbar rating, incomer size, form of separation, enclosure dimensions — depends on knowing the full list of outgoing ways and their individual ratings before physical layout begins.</li>
+      <li><b>Size the busbar for both continuous current and fault withstand.</b> A busbar rated adequately for normal load current can still fail electrodynamically or thermally during a short circuit if it wasn't separately checked against the panel's prospective fault current — see SH.07 on this site for both checks together.</li>
+      <li><b>Choose IP and IK ratings to match the installation environment.</b> IP (ingress protection against solids and liquids) and IK (impact resistance) both need to match where the panel will actually sit — an indoor clean electrical room has very different requirements from an outdoor or washdown-exposed location, and over-specifying either adds cost without benefit, while under-specifying creates a real reliability and safety gap.</li>
+      <li><b>Decide the form of separation deliberately, not by default.</b> As covered in the IEC 61439 guide above, this is as much an operational decision (how will this panel actually be maintained, and by whom, while energized) as a technical one.</li>
+      <li><b>Plan cable entry, gland plates and internal clearances early.</b> Cable bending radius, gland plate space, and internal working clearance around busbars and terminals are frequently underestimated in early layout, only to force a costly redesign once actual cable sizes are confirmed later in the project.</li>
+      <li><b>Check enclosure heat dissipation.</b> A fully populated panel generates real heat from I²R losses in every conductor and connection — an undersized or poorly ventilated enclosure can push internal temperature high enough to degrade component life or trigger nuisance thermal trips, even though every individual component inside is correctly rated on paper.</li>
+      <li><b>Confirm arc flash and safe operating clearances.</b> Working distances, PPE category, and any arc-resistant construction requirements should be established as part of the design, not added as an afterthought once the panel is already built.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      These decisions aren't sequential in practice — busbar sizing affects enclosure dimensions, which affects heat dissipation, which can feed back into busbar or component derating — so a first pass through all seven, then a second pass reconciling the conflicts between them, is generally faster than trying to finalize each one in strict order.
+    </div>
+  </div>
+  <div class="step" id="g-genset">
+    <div class="step-head"><span class="step-num">7</span><h2>How to Size a Standby Generator</h2></div>
+    <div class="step-desc">Steady-state kVA is the easy part — the motor-starting voltage dip is usually what actually sets the size.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>List the essential load only.</b> A standby generator typically doesn't need to carry the full connected load of the facility — only the load that's actually essential during a utility outage. Sizing against total connected load rather than essential load is the most common cause of an oversized, underutilized genset.</li>
+      <li><b>Size for steady-state kVA</b> the same way you would a transformer — total essential load, apply a realistic demand factor, add margin, round to a standard set size.</li>
+      <li><b>Check the largest motor's starting current against the set's voltage-dip tolerance.</b> A generator's relatively "soft" source impedance (compared to a stiff utility grid) means a large motor starting direct-on-line can cause a much larger momentary voltage dip on a generator than the same motor would cause on utility power — a set sized adequately for steady-state load can still be unable to start a large motor without an unacceptable dip large enough to trip sensitive downstream equipment or stall the motor itself.</li>
+      <li><b>Consider staggered or soft-starting for large motors</b> if the voltage-dip check fails — sequencing motor starts, or adding soft starters/VFDs to the largest motors, is often more cost-effective than up-sizing the entire generator set just to cover one large motor's brief starting transient.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      SH.06 on this site runs both checks together — standby kVA from essential load and demand factor, then a motor-starting voltage-dip check against the largest motor on the essential bus — specifically because sizing on steady-state kVA alone routinely produces a generator that can't actually start its own connected load reliably.
+    </div>
+  </div>
+  <div class="step" id="g-earthing">
+    <div class="step-head"><span class="step-num">8</span><h2>Earthing System Design Guide</h2></div>
+    <div class="step-desc">Which system (TN, TT, IT) you're designing for changes almost every subsequent decision.</div>
+    <div class="step-desc" style="padding:0 16px;"><b>Start with the earthing system type</b></div>
+    <div class="hint" style="margin:0 16px 10px;">
+      TN systems (TN-S, TN-C-S) bond the supply neutral to earth at the source and rely on a low-impedance metallic path back to that source to clear an earth fault quickly through overcurrent protection. TT systems have no such shared metallic path — each installation has its own independent earth electrode, and because that electrode's resistance is typically far higher than a TN system's fault-loop impedance, fault clearance normally relies on an RCD rather than overcurrent protection alone. IT systems keep the source deliberately unearthed (or earthed through a high impedance), so a single earth fault doesn't immediately trip the supply — appropriate where continuity of supply through a first fault matters more than immediate disconnection, but requiring insulation monitoring to detect that first fault before a second one creates a genuinely dangerous double-fault condition.</div>
+    <div class="step-desc" style="padding:0 16px;margin-top:10px;"><b>Size the earth electrode arrangement</b></div>
+    <div class="hint" style="margin:0 16px 10px;">
+      A single driven rod (see SH.08 on this site) is rarely sufficient on its own — soil resistivity, required maximum earth resistance, and available space typically drive a design toward multiple rods, an earth grid, or a combination, with the specific arrangement chosen to reach the target resistance reliably even accounting for seasonal soil moisture variation.</div>
+    <div class="step-desc" style="padding:0 16px;margin-top:10px;"><b>Verify fault-loop impedance, not just electrode resistance</b></div>
+    <div class="hint" style="margin:0 16px 0;">
+      For a TN system in particular, the number that actually determines whether protection will operate correctly is the full earth fault loop impedance — source, line conductor, fault path, and return path all in series — not the earth electrode resistance in isolation. A design can have an excellent electrode and still fail to clear a fault fast enough if the loop impedance elsewhere in the circuit is too high, which is why fault-loop impedance is measured directly during commissioning rather than inferred from electrode resistance alone.
+    </div>
+  </div>
+  <div class="step" id="g-pfc">
+    <div class="step-head"><span class="step-num">9</span><h2>Power Factor Correction Guide</h2></div>
+    <div class="step-desc">Why a low power factor costs money even when every device is working exactly as intended.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      A load with a lagging power factor draws more apparent power (kVA) than its actual real power (kW) would suggest, because part of the current is reactive — doing no useful work, just circulating between source and load. That extra current still has to be supplied, still causes I²R losses in cables and transformers, and on many commercial and industrial tariffs, is directly billed as a power factor penalty.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Establish existing and target power factor</b> — typically from utility billing data (which often states power factor directly) or from metered kW and kVAR.</li>
+      <li><b>Calculate the required capacitor kVAR</b> using Qc = P·(tanφ₁ − tanφ₂) — see SH.09 on this site for this calculation with your own numbers.</li>
+      <li><b>Decide between bulk and distributed correction.</b> A single capacitor bank at the main incomer corrects the utility-facing power factor and any billing penalty, but doesn't reduce internal cable and transformer loading upstream of individual loads — distributed correction at or near large individual loads addresses both, at higher installation cost and complexity.</li>
+      <li><b>Check for harmonic resonance risk before finalizing bank size.</b> A capacitor bank can form a resonant circuit with the facility's inductive impedance at a frequency close to a harmonic already present from variable-frequency drives or other nonlinear loads — an under-checked bank can amplify existing harmonic distortion rather than simply improving power factor. Facilities with significant VFD or other nonlinear load should have this checked explicitly, and may need detuned (reactor-protected) capacitor banks rather than plain capacitors.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      Correcting to unity (PF = 1.00) is rarely the actual target — most utility tariffs only penalize below a threshold (commonly around 0.90–0.95), and overcorrecting past unity into a leading power factor can itself cause problems, so the target is usually set just above the penalty threshold with some margin, not pushed to the theoretical maximum.
+    </div>
+  </div>
+  <div class="step" id="g-derating">
+    <div class="step-head"><span class="step-num">10</span><h2>Cable Derating Factors Explained</h2></div>
+    <div class="step-desc">The tabulated ampacity on a cable data sheet assumes one specific installation condition — almost no real installation matches it exactly.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      Manufacturer and standard ampacity tables are built around a defined reference installation condition (a specific ambient temperature, a single cable in free air or a specific standard installation method). Real installations deviate from that reference in predictable ways, and each deviation gets its own correction (derating) factor, multiplied together to reach the corrected ampacity actually available in your specific installation.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Ambient temperature factor (Ca).</b> Tables are normally based on a defined reference ambient (commonly 30°C for cables in air, 20°C for buried cables) — a hotter actual ambient reduces the safe current, since the cable has less thermal margin before reaching its maximum operating temperature.</li>
+      <li><b>Grouping factor (Cg).</b> Multiple loaded cables installed close together each contribute heat to their shared surroundings, reducing each individual cable's safe current compared to a single cable in isolation — the more cables grouped together, and the closer their spacing, the larger this reduction.</li>
+      <li><b>Installation method factor.</b> The base tables themselves already differentiate by installation method (clipped direct, in conduit on a wall, buried direct, in trench with other circuits), since each method affects how effectively the cable can dissipate heat to its surroundings.</li>
+      <li><b>Soil thermal resistivity factor (buried cables).</b> For direct-buried cables, soil type significantly affects how well heat conducts away from the cable — dry sandy soil is a much worse conductor of heat than wet clay, which is why buried cable ampacity tables reference a specific soil thermal resistivity and provide a correction factor for soils that differ from it.</li>
+      <li><b>Harmonic derating for the neutral conductor</b> on circuits with significant triplen harmonic content (common with certain nonlinear loads), where neutral current can actually exceed phase current rather than the near-zero level assumed in a balanced linear-load design — this can require a full-sized neutral conductor to be treated as an additional loaded conductor for grouping purposes, rather than ignored.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      All applicable factors multiply together, not add — a 0.87 ambient factor and a 0.80 grouping factor together give 0.696, not a combined "13% + 20% = 33%" reduction. Applying factors additively instead of multiplicatively is a common hand-calculation error that quietly under-derates a cable.
+    </div>
+  </div>
+  <div class="step" id="g-selectivity">
+    <div class="step-head"><span class="step-num">11</span><h2>Selectivity & Discrimination Basics</h2></div>
+    <div class="step-desc">The goal isn't just that a fault gets cleared — it's that only the closest upstream device clears it.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      Selectivity (also called discrimination) means that when a fault occurs, only the protective device immediately upstream of the fault operates, leaving every other part of the installation — including other circuits fed from the same upstream device further back — still energized. Without it, a fault on one final circuit can trip a much larger upstream breaker, blacking out far more of the installation than the actual fault required.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Current (amplitude) discrimination</b> relies purely on the upstream device having a meaningfully higher current rating than the downstream device, so it simply doesn't see enough current to trip for a fault the downstream device can clear on its own. Effective mainly at lower fault current levels, where the difference in trip thresholds is still meaningful.</li>
+      <li><b>Time discrimination</b> deliberately introduces a delay in the upstream device's tripping characteristic, giving the downstream device a head start to clear the fault first — common on devices with adjustable short-time delay settings. This works well but means fault current flows for longer if the downstream device fails to clear, so it has to be checked against both devices' short-circuit withstand ratings for that extended duration.</li>
+      <li><b>Zone selective interlocking (ZSI)</b> uses a communication signal between devices — an upstream device that "hears" a downstream device also seeing the fault holds off tripping, on the basis the downstream device will clear it; if it doesn't hear that signal, it trips immediately without the usual time delay. This gets the benefit of time discrimination's selectivity without the full fixed delay penalty for faults that genuinely are on the upstream device's own zone.</li>
+      <li><b>Energy discrimination</b> relies on a downstream device limiting let-through energy so effectively (current-limiting breakers) that the upstream device never sees enough let-through energy to begin tripping at all — manufacturer-published discrimination tables for specific device pairs are usually required to confirm this, since it depends on the specific let-through characteristics of the actual devices involved, not a general rule.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      SH.03 on this site plots the time-current characteristics of a device chain directly, which is the most reliable way to actually verify discrimination between two specific devices rather than relying on rules of thumb — overlap between two curves on a TCC chart means a lack of guaranteed selectivity at whatever current range the curves overlap.
+    </div>
+  </div>
+  <div class="step" id="g-sld">
+    <div class="step-head"><span class="step-num">12</span><h2>Reading a Single Line Diagram</h2></div>
+    <div class="step-desc">A simplified map of an electrical system's structure, deliberately stripped of the physical wiring detail that would obscure it.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      A single line diagram (SLD) represents a three-phase system with one line, deliberately omitting the physical detail of individual phase conductors, neutral, and earth that a full wiring diagram would show — the goal is showing how the system is structured (what feeds what, in what order) rather than how it's physically wired.
+    </div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Follow the power flow from source to load.</b> Start at the utility or generation source on one side and trace forward through each transformation and distribution point — transformer, main switchboard, distribution boards, final circuits — to understand the overall hierarchy before focusing on any one section in detail.</li>
+      <li><b>Read the equipment symbols.</b> Standard symbols represent transformers, circuit breakers, disconnect switches, fuses, motors, and generators — learning the standard symbol set (largely consistent across IEC and similar conventions, with some regional variation) is what makes an unfamiliar SLD readable at a glance rather than needing a legend consulted line by line.</li>
+      <li><b>Check the ratings annotated at each device.</b> A well-drawn SLD annotates each major device with its key rating — breaker frame and trip setting, transformer kVA and impedance, cable size and length — directly on the diagram, which is what turns it from a purely structural diagram into one that also supports the kind of calculations this site's tools perform.</li>
+      <li><b>Identify the earthing system and any interconnections.</b> Bonding points, earth electrode connections, and any bus-tie or interconnection breakers between otherwise separate sections of the system are critical to understanding actual fault current paths and aren't always obvious from load-flow alone.</li>
+      <li><b>Note revision and status information.</b> An SLD used for as-built reference has to be the current revision — an out-of-date SLD used for fault-finding or planning work can be actively misleading if the installation has since changed, which is why revision control on SLDs matters as much as on any other engineering drawing.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      The single line diagram on this site's own Electrical Index page is exactly this kind of structural map — it's the network the SH.01–SH.09 calculators are all working against, with each sheet corresponding to a specific calculation performed at a specific point on that same diagram.
+    </div>
+  </div>
+
+  <footer><a href="index.html">← Electrical Index</a></footer>
+</div>
+
+<!-- PAGE: COMPARISONS -->
+
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
