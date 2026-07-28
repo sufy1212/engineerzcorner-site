@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231B2340'/%3E%3Cpath d='M8 20l16-12-6 12 6 4-16-4z' fill='%23C79A3E'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter — Study Abroad Budget Tool</title>
+<meta name="description" content="Convert between two currencies using today's live exchange rate, fetched automatically — or override it by hand.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Currency Converter — Study Abroad Budget Tool">
+<meta property="og:description" content="Convert between two currencies using today's live exchange rate.">
+<meta property="og:url" content="https://www.engineerzcorner.com/study-abroad/currency-converter">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Currency Converter — Study Abroad Budget Tool">
+<meta name="twitter:description" content="Convert between two currencies using today's live exchange rate.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="canonical" href="https://www.engineerzcorner.com/study-abroad/currency-converter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#B8863D !important; --amber-deep:#8C6425 !important;
+    --blue:#3D5A99 !important; --plate:#1B2340 !important; --plate-2:#2A335C !important;
+  }
+  html,body{background:#F4F1E7 !important;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(184,134,61,.22) !important;}
+  .site-nav a.current{color:#E8C97A !important;}
+
+  /* ===== boarding-pass ticket theme ===== */
+  .sa-ticket-eyebrow{
+    background:linear-gradient(155deg,#1B2340,#2A335C);color:#7FCBB0;
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+    padding:14px 20px 0;border-radius:12px 12px 0 0;margin:16px 0 0;display:flex;align-items:center;gap:8px;
+  }
+  .sa-ticket-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:#7FCBB0;box-shadow:0 0 0 4px rgba(127,203,176,.18);}
+  .pagehero{
+    background:linear-gradient(155deg,#1B2340 0%,#2A335C 100%);
+    border-radius:0 0 12px 12px;padding:14px 20px 26px;margin:0 0 4px;
+    position:relative;overflow:hidden;gap:14px;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;
+    background:linear-gradient(135deg,#E8C97A,#B8863D);opacity:.22;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero::after{
+    content:'';position:absolute;left:0;right:0;bottom:-1px;height:11px;
+    background-image:radial-gradient(circle at 12px 6px, #F4F1E7 6px, transparent 7px);
+    background-size:24px 12px;background-repeat:repeat-x;
+  }
+  .pagehero .hero-icon{background:linear-gradient(135deg,#E8C97A,#B8863D) !important;box-shadow:0 6px 16px rgba(184,134,61,.35);position:relative;z-index:2;}
+  .pagehero h1{color:#F8F4E8 !important;font-family:"Space Grotesk",sans-serif !important;font-weight:700 !important;position:relative;z-index:2;}
+  .pagehero .hero-sub{color:#AEB6D6 !important;position:relative;z-index:2;}
+
+  .mech-tabs{gap:8px;margin:18px 0 4px;}
+  .mech-tabs a{
+    font-family:"IBM Plex Mono",monospace !important;font-size:10.5px !important;letter-spacing:.04em;
+    background:#FBF8EF;border:1px solid #E3DBC0 !important;border-radius:20px !important;
+    padding:7px 13px !important;color:#6B5F3E !important;
+  }
+  .mech-tabs a:hover{border-color:#B8863D !important;color:#8C6425 !important;}
+  .mech-tabs a.current{background:linear-gradient(135deg,#1B2340,#2A335C) !important;color:#F1EFDF !important;border-color:#1B2340 !important;}
+
+  .step{background:#FBF8EF !important;}
+
+  .sa-barcode-footer{display:flex;gap:2px;align-items:flex-end;height:18px;margin:26px 0 6px;opacity:.35;}
+  .sa-barcode-footer span{width:2px;background:#1B2340;display:block;}
+  .swap-btn{
+    display:flex;align-items:center;justify-content:center;gap:6px;margin:0 16px 16px;
+    background:var(--sheet-2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;
+    font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);cursor:pointer;width:calc(100% - 32px);
+  }
+  .swap-btn:hover{border-color:var(--blue);color:var(--blue);}
+</style>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+  {"@type":"ListItem","position":2,"name":"Study Abroad","item":"https://www.engineerzcorner.com/study-abroad/"},
+  {"@type":"ListItem","position":3,"name":"Currency Converter","item":"https://www.engineerzcorner.com/study-abroad/currency-converter"}
+]}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Study Abroad</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Currency Converter</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="index.html" class="current">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-sa-currency">
+
+  <div class="sa-ticket-eyebrow">Study Abroad &middot; Gate SA.06</div>
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9 8h4a2 2 0 0 1 0 4H9m0 0h5m-5 0v4m0-4V8"></path></svg></div>
+    <div><h1>Currency Converter</h1><div class="hero-sub">Live rate fetched automatically — convert any amount both ways</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Study Abroad Index</a>
+    <a href="score-calculator.html">SA.01 Score Calculator</a>
+    <a href="cost-of-living-calculator.html">SA.02 Cost of Living</a>
+    <a href="education-loan-emi-calculator.html">SA.03 Loan EMI</a>
+    <a href="visa-points-calculator.html">SA.04 Visa Points</a>
+    <a href="university-fee-comparison.html">SA.05 Fee Comparison</a>
+    <a href="currency-converter.html" class="current">SA.06 Currency Converter</a>
+    <a href="sop-word-checker.html">SA.07 SOP Word Checker</a>
+    <a href="application-timeline-planner.html">SA.08 Timeline Planner</a>
+    <a href="notes.html">Notes</a>
+  </div>
+
+  <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+    <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Set the exchange rate</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="fxFrom">From currency (code)</label>
+        <input type="text" id="fxFrom" maxlength="6" value="USD" style="text-transform:uppercase;">
+      </div>
+      <div class="field">
+        <label for="fxTo">To currency (code)</label>
+        <input type="text" id="fxTo" maxlength="6" value="INR" style="text-transform:uppercase;">
+      </div>
+    </div>
+    <div class="field">
+      <label for="fxRate">Rate — 1 <span id="fxFromLabel1">USD</span> = how many <span id="fxToLabel1">INR</span>?</label>
+      <input type="number" id="fxRate" min="0" step="0.0001" value="83.20">
+    </div>
+    <div id="fxLiveStatus" class="hint" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+      <span id="fxLiveStatusText">Fetching today's rate…</span>
+      <button type="button" id="fxRefreshBtn" class="swap-btn" style="width:auto;margin:0;padding:5px 11px;font-size:10.5px;">↻ Refresh</button>
+    </div>
+    <div class="hint">Rate loads automatically and updates when you change the currency codes. You can still overwrite the number above by hand — useful if your bank or card gives a different rate, since that's usually a bit off the market mid-rate anyway.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Convert an amount</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="fxAmountFrom">Amount in <span id="fxFromLabel2">USD</span></label>
+        <input type="number" id="fxAmountFrom" min="0" step="0.01" value="1000">
+      </div>
+      <div class="field">
+        <label for="fxAmountTo">Amount in <span id="fxToLabel2">INR</span></label>
+        <input type="number" id="fxAmountTo" min="0" step="0.01" value="">
+      </div>
+    </div>
+    <div class="hint">Edit either amount field — the other converts automatically using the rate above.</div>
+  </div>
+
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">i</span><h2>About this converter</h2></div>
+<p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">This tool pulls a live mid-market exchange rate and converts in both directions, which is useful for sanity-checking a tuition figure, a scholarship amount, or a cost-of-living estimate quoted in a currency you don't think in day to day. The mid-market rate is the reference rate banks and services use among themselves — it's the number you'll see quoted in the news, not necessarily the number you'll actually get.</p><p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">In practice, banks and remittance services add a margin on top of the mid-market rate, and that margin varies a lot between providers — sometimes several percent, which adds up quickly on a tuition-sized transfer. When it's time to actually move money for a deposit, tuition payment, or living expenses, it's worth comparing the effective rate (including fees) across two or three transfer services rather than assuming your regular bank offers the best deal by default.</p>
+  </div>
+
+  <div class="sa-barcode-footer" id="saBarcodeFooter" aria-hidden="true"></div>
+  <footer>Live rates come from the European Central Bank's daily reference feed (via frankfurter.app) and update once a day — the rate your bank or card actually applies almost always includes a margin over this market mid-rate, so treat this as a planning estimate, not a quote for an actual transfer.</footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Study Abroad Tools — reference calculators and estimates, used at your own judgement; always confirm against the official test body, lender, or immigration authority.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var _bc = document.getElementById('saBarcodeFooter');
+  if(_bc){ for(var _i=0;_i<40;_i++){ var _b=document.createElement('span'); _b.style.height=(4+Math.random()*14)+'px'; _b.style.opacity=0.3+Math.random()*0.6; _bc.appendChild(_b); } }
+
+  var fromEl = document.getElementById('fxFrom'), toEl = document.getElementById('fxTo'),
+      rateEl = document.getElementById('fxRate'), amtFrom = document.getElementById('fxAmountFrom'),
+      amtTo = document.getElementById('fxAmountTo'), statusText = document.getElementById('fxLiveStatusText'),
+      refreshBtn = document.getElementById('fxRefreshBtn');
+  var labels = [document.getElementById('fxFromLabel1'), document.getElementById('fxFromLabel2')];
+  var labelsTo = [document.getElementById('fxToLabel1'), document.getElementById('fxToLabel2')];
+  var fetchToken = 0;
+
+  function updateLabels(){
+    var f = (fromEl.value || 'USD').toUpperCase(), t = (toEl.value || '???').toUpperCase();
+    labels.forEach(function(l){ l.textContent = f; });
+    labelsTo.forEach(function(l){ l.textContent = t; });
+  }
+
+  function fromToAmount(){
+    var rate = parseFloat(rateEl.value), a = parseFloat(amtFrom.value);
+    if(isNaN(rate) || isNaN(a)) return;
+    amtTo.value = (a*rate).toFixed(2);
+  }
+  function toToAmount(){
+    var rate = parseFloat(rateEl.value), a = parseFloat(amtTo.value);
+    if(isNaN(rate) || rate===0 || isNaN(a)) return;
+    amtFrom.value = (a/rate).toFixed(2);
+  }
+
+  // Multiple providers, tried in order — if one is down, blocked, or slow, the next takes over.
+  var FX_PROVIDERS = [
+    {
+      name: 'frankfurter.dev',
+      url: function(f,t){ return 'https://api.frankfurter.dev/v1/latest?base=' + encodeURIComponent(f) + '&symbols=' + encodeURIComponent(t); },
+      parse: function(data,t){ return data && data.rates && data.rates[t]; },
+      date: function(data){ return data && data.date; }
+    },
+    {
+      name: 'frankfurter.app',
+      url: function(f,t){ return 'https://api.frankfurter.app/latest?from=' + encodeURIComponent(f) + '&to=' + encodeURIComponent(t); },
+      parse: function(data,t){ return data && data.rates && data.rates[t]; },
+      date: function(data){ return data && data.date; }
+    },
+    {
+      name: 'exchangerate-api',
+      url: function(f){ return 'https://open.er-api.com/v6/latest/' + encodeURIComponent(f); },
+      parse: function(data,t){ return data && data.rates && data.rates[t]; },
+      date: function(data){ return data && data.time_last_update_utc ? data.time_last_update_utc.slice(0,16) : null; }
+    }
+  ];
+  var FETCH_TIMEOUT_MS = 8000;
+  var AUTO_REFRESH_MS = 10 * 60 * 1000; // re-check every 10 minutes
+  var autoRefreshTimer = null;
+
+  function fetchWithTimeout(url){
+    var controller = ('AbortController' in window) ? new AbortController() : null;
+    var opts = controller ? { signal: controller.signal } : {};
+    var timeoutId = controller ? setTimeout(function(){ controller.abort(); }, FETCH_TIMEOUT_MS) : null;
+    return fetch(url, opts).finally(function(){ if(timeoutId) clearTimeout(timeoutId); });
+  }
+
+  function tryProvider(idx, f, t, myToken){
+    if(idx >= FX_PROVIDERS.length){
+      if(myToken !== fetchToken) return;
+      statusText.textContent = 'Couldn\u2019t reach any live rate feed — enter today\u2019s rate manually above instead.';
+      return;
+    }
+    var provider = FX_PROVIDERS[idx];
+    fetchWithTimeout(provider.url(f, t))
+      .then(function(res){ if(!res.ok) throw new Error('bad response'); return res.json(); })
+      .then(function(data){
+        if(myToken !== fetchToken) return; // a newer request superseded this one
+        var rate = provider.parse(data, t);
+        if(typeof rate !== 'number') throw new Error('no rate in response');
+        rateEl.value = rate;
+        fromToAmount();
+        var d = provider.date(data);
+        statusText.textContent = 'Live rate as of ' + (d || 'today') + ' — 1 ' + f + ' = ' + rate + ' ' + t + '.';
+      })
+      .catch(function(){
+        if(myToken !== fetchToken) return;
+        tryProvider(idx + 1, f, t, myToken); // this provider failed — fall through to the next
+      });
+  }
+
+  function fetchLiveRate(){
+    var f = (fromEl.value || '').trim().toUpperCase(), t = (toEl.value || '').trim().toUpperCase();
+    if(f.length !== 3 || t.length !== 3){
+      statusText.textContent = 'Enter two 3-letter currency codes (e.g. USD, INR) to fetch a live rate.';
+      return;
+    }
+    if(f === t){
+      rateEl.value = '1';
+      fromToAmount();
+      statusText.textContent = 'Same currency on both sides — rate is 1.';
+      return;
+    }
+    var myToken = ++fetchToken;
+    statusText.textContent = 'Fetching today\u2019s ' + f + '\u2192' + t + ' rate\u2026';
+    refreshBtn.disabled = true;
+    tryProvider(0, f, t, myToken);
+    // refreshBtn re-enables once this token's chain settles (success or all providers exhausted)
+    var reEnableCheck = setInterval(function(){
+      if(myToken !== fetchToken || statusText.textContent.indexOf('Fetching') !== 0){
+        refreshBtn.disabled = false;
+        clearInterval(reEnableCheck);
+      }
+    }, 250);
+  }
+
+  function scheduleAutoRefresh(){
+    if(autoRefreshTimer) clearInterval(autoRefreshTimer);
+    autoRefreshTimer = setInterval(function(){
+      if(document.visibilityState === 'hidden') return; // skip while tab is backgrounded
+      fetchLiveRate();
+    }, AUTO_REFRESH_MS);
+  }
+
+  [fromEl,toEl].forEach(function(el){
+    el.addEventListener('input', updateLabels);
+    el.addEventListener('change', fetchLiveRate);
+  });
+  refreshBtn.addEventListener('click', fetchLiveRate);
+  rateEl.addEventListener('input', fromToAmount);
+  amtFrom.addEventListener('input', fromToAmount);
+  amtTo.addEventListener('input', toToAmount);
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'visible') fetchLiveRate();
+  });
+
+  updateLabels();
+  fromToAmount();
+  fetchLiveRate();
+  scheduleAutoRefresh();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

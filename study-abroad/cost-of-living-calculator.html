@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231B2340'/%3E%3Cpath d='M8 20l16-12-6 12 6 4-16-4z' fill='%23C79A3E'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost of Living Calculator — Study Abroad Budget Estimator</title>
+<meta name="description" content="Estimate a monthly student budget abroad — rent, food, transport and utilities — by city, accommodation type and lifestyle.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Cost of Living Calculator — Study Abroad Budget Estimator">
+<meta property="og:description" content="Estimate a monthly student budget abroad by city, accommodation type and lifestyle.">
+<meta property="og:url" content="https://www.engineerzcorner.com/study-abroad/cost-of-living-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cost of Living Calculator — Study Abroad Budget Estimator">
+<meta name="twitter:description" content="Estimate a monthly student budget abroad by city, accommodation type and lifestyle.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="canonical" href="https://www.engineerzcorner.com/study-abroad/cost-of-living-calculator">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#B8863D !important; --amber-deep:#8C6425 !important;
+    --blue:#3D5A99 !important; --plate:#1B2340 !important; --plate-2:#2A335C !important;
+  }
+  html,body{background:#F4F1E7 !important;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(184,134,61,.22) !important;}
+  .site-nav a.current{color:#E8C97A !important;}
+
+  /* ===== boarding-pass ticket theme ===== */
+  .sa-ticket-eyebrow{
+    background:linear-gradient(155deg,#1B2340,#2A335C);color:#7FCBB0;
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+    padding:14px 20px 0;border-radius:12px 12px 0 0;margin:16px 0 0;display:flex;align-items:center;gap:8px;
+  }
+  .sa-ticket-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:#7FCBB0;box-shadow:0 0 0 4px rgba(127,203,176,.18);}
+  .pagehero{
+    background:linear-gradient(155deg,#1B2340 0%,#2A335C 100%);
+    border-radius:0 0 12px 12px;padding:14px 20px 26px;margin:0 0 4px;
+    position:relative;overflow:hidden;gap:14px;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;
+    background:linear-gradient(135deg,#E8C97A,#B8863D);opacity:.22;
+    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+  .pagehero::after{
+    content:'';position:absolute;left:0;right:0;bottom:-1px;height:11px;
+    background-image:radial-gradient(circle at 12px 6px, #F4F1E7 6px, transparent 7px);
+    background-size:24px 12px;background-repeat:repeat-x;
+  }
+  .pagehero .hero-icon{background:linear-gradient(135deg,#E8C97A,#B8863D) !important;box-shadow:0 6px 16px rgba(184,134,61,.35);position:relative;z-index:2;}
+  .pagehero h1{color:#F8F4E8 !important;font-family:"Space Grotesk",sans-serif !important;font-weight:700 !important;position:relative;z-index:2;}
+  .pagehero .hero-sub{color:#AEB6D6 !important;position:relative;z-index:2;}
+
+  .mech-tabs{gap:8px;margin:18px 0 4px;}
+  .mech-tabs a{
+    font-family:"IBM Plex Mono",monospace !important;font-size:10.5px !important;letter-spacing:.04em;
+    background:#FBF8EF;border:1px solid #E3DBC0 !important;border-radius:20px !important;
+    padding:7px 13px !important;color:#6B5F3E !important;
+  }
+  .mech-tabs a:hover{border-color:#B8863D !important;color:#8C6425 !important;}
+  .mech-tabs a.current{background:linear-gradient(135deg,#1B2340,#2A335C) !important;color:#F1EFDF !important;border-color:#1B2340 !important;}
+
+  .step{background:#FBF8EF !important;}
+
+  .sa-barcode-footer{display:flex;gap:2px;align-items:flex-end;height:18px;margin:26px 0 6px;opacity:.35;}
+  .sa-barcode-footer span{width:2px;background:#1B2340;display:block;}
+  .breakdown{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:13px;margin-top:6px;}
+  .breakdown td{padding:8px 4px;border-bottom:1px solid var(--line);}
+  .breakdown td:last-child{text-align:right;font-weight:600;}
+  .breakdown tr.total td{border-top:2px solid var(--ink);border-bottom:none;padding-top:12px;font-size:15px;}
+  .bar-wrap{background:var(--line-soft);border-radius:4px;height:8px;overflow:hidden;margin-top:4px;}
+  .bar{height:100%;background:linear-gradient(90deg,var(--amber),var(--blue));}
+</style>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+  {"@type":"ListItem","position":2,"name":"Study Abroad","item":"https://www.engineerzcorner.com/study-abroad/"},
+  {"@type":"ListItem","position":3,"name":"Cost of Living Calculator","item":"https://www.engineerzcorner.com/study-abroad/cost-of-living-calculator"}
+]}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Study Abroad</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Cost of Living Calculator</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="index.html" class="current">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-sa-col">
+
+  <div class="sa-ticket-eyebrow">Study Abroad &middot; Gate SA.02</div>
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"></path></svg></div>
+    <div><h1>Cost of Living Calculator</h1><div class="hero-sub">A monthly student budget, by city and lifestyle</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Study Abroad Index</a>
+    <a href="score-calculator.html">SA.01 Score Calculator</a>
+    <a href="cost-of-living-calculator.html" class="current">SA.02 Cost of Living</a>
+    <a href="education-loan-emi-calculator.html">SA.03 Loan EMI</a>
+    <a href="visa-points-calculator.html">SA.04 Visa Points</a>
+    <a href="university-fee-comparison.html">SA.05 Fee Comparison</a>
+    <a href="currency-converter.html">SA.06 Currency Converter</a>
+    <a href="sop-word-checker.html">SA.07 SOP Word Checker</a>
+    <a href="application-timeline-planner.html">SA.08 Timeline Planner</a>
+    <a href="notes.html">Notes</a>
+  </div>
+
+  <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+    <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>City, accommodation &amp; lifestyle</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="colCity">City</label>
+        <select id="colCity">
+          <option value="toronto">Toronto, Canada</option>
+          <option value="vancouver">Vancouver, Canada</option>
+          <option value="london">London, UK</option>
+          <option value="sydney">Sydney, Australia</option>
+          <option value="melbourne">Melbourne, Australia</option>
+          <option value="nyc">New York, USA</option>
+          <option value="berlin">Berlin, Germany</option>
+          <option value="dublin">Dublin, Ireland</option>
+          <option value="singapore">Singapore</option>
+          <option value="auckland">Auckland, New Zealand</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="colAccom">Accommodation type</label>
+        <select id="colAccom">
+          <option value="shared">Shared room</option>
+          <option value="studio" selected>Studio / 1-bed</option>
+          <option value="onebhk">1BHK (own apartment)</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="colLifestyle">Lifestyle</label>
+      <select id="colLifestyle">
+        <option value="0.8">Budget</option>
+        <option value="1" selected>Moderate</option>
+        <option value="1.3">Comfortable</option>
+      </select>
+    </div>
+    <div class="hint">Figures are rough planning estimates in USD, not live pricing data — actual costs vary by neighbourhood and season. Use this to compare cities relative to each other, not as a precise quote.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Estimated monthly budget</h2></div>
+    <table class="breakdown" id="colTable">
+      <tbody></tbody>
+    </table>
+    <div class="bar-wrap"><div class="bar" id="colBar" style="width:0%"></div></div>
+  </div>
+
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">i</span><h2>About this estimate</h2></div>
+<p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">The monthly figures here are rough planning estimates built from typical rent, food, transport and utility costs per city, adjusted by accommodation type and a lifestyle multiplier — they're meant to give a realistic ballpark, not a precise budget. Actual costs vary a lot within any one city depending on neighbourhood, how far from campus you're willing to live, and whether housing is arranged through the university or found independently on the open market.</p><p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">This figure is also worth treating as a floor rather than a ceiling: it doesn't include one-off costs like a security deposit, initial furnishing, flights, or health insurance, all of which land in the first month or two and can be substantial. Because many visa applications require proof of funds against a specific published cost-of-living figure — sometimes higher than what a student would actually spend day to day — always check the university's or immigration authority's own official minimum funds requirement rather than relying on this estimate alone for that purpose.</p>
+  </div>
+
+  <div class="sa-barcode-footer" id="saBarcodeFooter" aria-hidden="true"></div>
+  <footer>Cost of living is one input among many — always cross-check against a university's own published living-cost estimate for the visa application, since some countries set a required minimum funds figure.</footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Study Abroad Tools — reference calculators and estimates, used at your own judgement; always confirm against the official test body, lender, or immigration authority.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var _bc = document.getElementById('saBarcodeFooter');
+  if(_bc){ for(var _i=0;_i<40;_i++){ var _b=document.createElement('span'); _b.style.height=(4+Math.random()*14)+'px'; _b.style.opacity=0.3+Math.random()*0.6; _bc.appendChild(_b); } }
+
+  // Base monthly costs in USD — moderate lifestyle, studio accommodation. Rough planning estimates.
+  var CITIES = {
+    toronto:   {label:'Toronto, Canada',      rent:{shared:650,studio:1350,onebhk:1900}, food:400, transport:110, utilities:140},
+    vancouver: {label:'Vancouver, Canada',    rent:{shared:750,studio:1550,onebhk:2200}, food:420, transport:100, utilities:130},
+    london:    {label:'London, UK',           rent:{shared:800,studio:1650,onebhk:2300}, food:380, transport:170, utilities:180},
+    sydney:    {label:'Sydney, Australia',    rent:{shared:700,studio:1500,onebhk:2100}, food:420, transport:140, utilities:150},
+    melbourne: {label:'Melbourne, Australia', rent:{shared:600,studio:1350,onebhk:1850}, food:400, transport:130, utilities:140},
+    nyc:       {label:'New York, USA',        rent:{shared:1100,studio:2400,onebhk:3200}, food:500, transport:130, utilities:170},
+    berlin:    {label:'Berlin, Germany',      rent:{shared:500,studio:1050,onebhk:1450}, food:330, transport:80,  utilities:160},
+    dublin:    {label:'Dublin, Ireland',      rent:{shared:750,studio:1550,onebhk:2100}, food:380, transport:110, utilities:170},
+    singapore: {label:'Singapore',            rent:{shared:700,studio:1600,onebhk:2400}, food:400, transport:90,  utilities:140},
+    auckland:  {label:'Auckland, New Zealand',rent:{shared:600,studio:1300,onebhk:1800}, food:390, transport:110, utilities:140}
+  };
+
+  var citySel = document.getElementById('colCity'), accomSel = document.getElementById('colAccom'),
+      lifeSel = document.getElementById('colLifestyle'), tbody = document.querySelector('#colTable tbody'),
+      bar = document.getElementById('colBar');
+
+  function fmt(n){ return '$' + Math.round(n).toLocaleString(); }
+
+  function calc(){
+    var c = CITIES[citySel.value];
+    var accom = accomSel.value;
+    var mult = parseFloat(lifeSel.value);
+
+    var rent = c.rent[accom];
+    var food = c.food * mult;
+    var transport = c.transport * mult;
+    var utilities = c.utilities * mult;
+    var misc = (rent + food + transport + utilities) * 0.1; // rough incidentals allowance
+    var total = rent + food + transport + utilities + misc;
+
+    var rows = [
+      ['Rent', rent],
+      ['Food & groceries', food],
+      ['Transport', transport],
+      ['Utilities & internet', utilities],
+      ['Incidentals (~10%)', misc]
+    ];
+    tbody.innerHTML = '';
+    rows.forEach(function(r){
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>'+r[0]+'</td><td>'+fmt(r[1])+'</td>';
+      tbody.appendChild(tr);
+    });
+    var totalTr = document.createElement('tr');
+    totalTr.className = 'total';
+    totalTr.innerHTML = '<td>Estimated monthly total — ' + c.label + '</td><td>' + fmt(total) + '</td>';
+    tbody.appendChild(totalTr);
+
+    var pct = Math.min(100, (total/4000)*100);
+    bar.style.width = pct + '%';
+  }
+
+  [citySel, accomSel, lifeSel].forEach(function(el){ el.addEventListener('change', calc); });
+  calc();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
