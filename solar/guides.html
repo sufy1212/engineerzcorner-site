@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Engineering Guides — Engineerz CorneR</title>
+<meta name="description" content="Solar Guides — array sizing, battery sizing, inverter sizing, module datasheets, string voltage, system losses, net metering, grounding, single-line diagrams, battery cycle life — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Solar Engineering Guides — Engineerz CorneR">
+<meta property="og:description" content="Array sizing, battery sizing, inverter sizing, string voltage, system losses, net metering, grounding, and single-line diagrams.">
+<meta property="og:url" content="https://www.engineerzcorner.com/solar/guides">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solar Engineering Guides — Engineerz CorneR">
+<meta name="twitter:description" content="Array sizing, battery sizing, inverter sizing, string voltage, system losses, net metering, grounding, and single-line diagrams.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="canonical" href="https://www.engineerzcorner.com/solar/guides">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23151A24'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23F0B429'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Fix: guide-toc-link pill styling not present in shared stylesheet */
+  .guide-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+  .guide-toc-link{
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.02em;
+    color:var(--ink-dim);background:var(--sheet);border:1px solid var(--line);border-radius:20px;
+    padding:7px 14px;text-decoration:none;white-space:nowrap;transition:border-color .15s ease,color .15s ease;
+  }
+  .guide-toc-link:hover{border-color:var(--amber);color:var(--amber-deep);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solar",
+      "item": "https://www.engineerzcorner.com/solar/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solar Engineering Guides",
+      "item": "https://www.engineerzcorner.com/solar/guides"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Solar Engineering Guides",
+  "description": "Solar Guides \u2014 array sizing, battery sizing, inverter sizing, module datasheets, string voltage, system losses, net metering, grounding, single-line diagrams, battery cycle life \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/solar/guides"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Solar</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Engineering Guides</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="index.html" class="current">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-solar-guides">
+
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></svg></div>
+    <div><h1>Engineering Guides</h1><div class="hero-sub">Step-by-step method guides — how to actually approach each job, not just the calculator behind it</div></div>
+  </div>
+  <div class="intro">
+    Ten practical how-to guides covering the method behind this site's solar calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work. Each guide stands on its own; jump straight to the one you need.
+  </div>
+
+  <div class="guide-toc">
+      <a href="#g-soarray" class="guide-toc-link">1. How to Size a Solar Array</a>
+      <a href="#g-sobatt" class="guide-toc-link">2. How to Size Battery Storage</a>
+      <a href="#g-soinv" class="guide-toc-link">3. How to Size an Inverter (DC:AC Ratio)</a>
+      <a href="#g-sodatasheet" class="guide-toc-link">4. How to Read a PV Module Datasheet</a>
+      <a href="#g-sostring" class="guide-toc-link">5. String Sizing: Voltage &amp; Temperature Considerations</a>
+      <a href="#g-soloss" class="guide-toc-link">6. How to Calculate System Losses &amp; Derating</a>
+      <a href="#g-sometering" class="guide-toc-link">7. Net Metering vs Self-Consumption Explained</a>
+      <a href="#g-soground" class="guide-toc-link">8. Grounding &amp; Bonding for PV Systems</a>
+      <a href="#g-sosld" class="guide-toc-link">9. How to Read a PV Single-Line Diagram</a>
+      <a href="#g-sodod" class="guide-toc-link">10. Battery Depth of Discharge &amp; Cycle Life Explained</a>
+  </div>
+
+  <div class="step" id="g-soarray">
+    <div class="step-head"><span class="step-num">1</span><h2>How to Size a Solar Array</h2></div>
+    <div class="step-desc">Everything starts from the daily energy target — the array exists to meet it, at your site's actual sun availability.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Establish the daily energy need</b> in kWh/day — from utility bill history for a grid-tied offset, or a load calculation for an off-grid system, since every subsequent step scales from this number.</li>
+      <li><b>Get the site's average peak sun hours</b>, not just general sunniness — this represents the equivalent hours per day of full-intensity sun the array actually sees, and varies significantly by location and season.</li>
+      <li><b>Apply a realistic system loss/derate factor</b> — wiring losses, soiling, temperature effects, and inverter efficiency together commonly total 15-25%, and skipping this step overstates real-world output.</li>
+      <li><b>Divide required array output by peak sun hours and derate</b> to get the array size in kWp, then divide by a standard panel's rated wattage to get the panel count, rounding up to a practical, buildable array.</li>
+    </ol>
+    <div class="hint" style="margin:8px 16px 0;">
+      SO.01 on the Solar index runs this calculation directly from daily energy need, peak sun hours, system losses, and panel rating.
+    </div>
+  </div>
+
+  <div class="step" id="g-sobatt">
+    <div class="step-head"><span class="step-num">2</span><h2>How to Size Battery Storage</h2></div>
+    <div class="step-desc">A battery bank has to cover the load for the autonomy period chosen, without over-discharging past its usable limit.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Define the load to be covered and the autonomy period</b> — how many hours or days the battery needs to supply power without solar input, which is a design decision, not a fixed number, and depends heavily on whether the system is off-grid or hybrid backup.</li>
+      <li><b>Calculate the required usable energy</b> (load × autonomy period, in kWh) — this is the energy the battery actually needs to deliver, before accounting for how much of its rated capacity is usable.</li>
+      <li><b>Divide by the usable depth of discharge</b> for the chosen battery chemistry to get the total rated capacity needed — a battery with a lower usable DoD (like lead-acid) needs a larger rated capacity to deliver the same usable energy as one with a higher DoD (like lithium).</li>
+      <li><b>Convert to amp-hours at the system's DC bus voltage</b> if sizing physical battery units, and check the result against available battery module sizes, rounding up to a practical configuration.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      SO.01 on the Solar index calculates battery storage in kWh and Ah directly from load, autonomy period, and depth of discharge.
+    </div>
+  </div>
+
+  <div class="step" id="g-soinv">
+    <div class="step-head"><span class="step-num">3</span><h2>How to Size an Inverter (DC:AC Ratio)</h2></div>
+    <div class="step-desc">An inverter is deliberately undersized relative to the array's peak DC rating far more often than it's oversized.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Understand why the DC:AC ratio isn't 1:1</b> — an array's peak DC rating (STC) is a lab condition rarely reached in the field, so pairing it with an inverter of equal AC capacity leaves the inverter under-utilized most of the year.</li>
+      <li><b>Apply a typical DC:AC oversizing ratio</b>, commonly in the 1.1-1.3 range — this lets the inverter run closer to full capacity more of the time, improving its utilization and overall system economics, at the cost of minor clipping during the very highest-output moments.</li>
+      <li><b>Check the inverter's maximum input voltage and current ratings</b> against the array's series string voltage and parallel string current — sizing the inverter's AC output capacity alone isn't enough; the DC input side has separate hard limits that must also be respected.</li>
+      <li><b>Confirm clipping losses are acceptable</b> — a well-chosen DC:AC ratio clips only a small percentage of annual energy during brief peak-output periods, but an excessively high ratio starts clipping meaningfully, and the point where oversizing stops paying off is a real economic trade-off worth checking.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      SO.01 on the Solar index calculates inverter kVA sizing directly from array capacity and a chosen DC:AC ratio.
+    </div>
+  </div>
+
+  <div class="step" id="g-sodatasheet">
+    <div class="step-head"><span class="step-num">4</span><h2>How to Read a PV Module Datasheet</h2></div>
+    <div class="step-desc">The headline wattage is measured at lab conditions that rarely match the roof — the rest of the datasheet fills in the real picture.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Understand STC (Standard Test Conditions) ratings</b> — the headline wattage, voltage, and current figures are measured at a fixed 1000 W/m² irradiance and 25°C cell temperature, conditions a real rooftop rarely holds for long.</li>
+      <li><b>Check the NOCT rating</b> for a more realistic operating estimate — Nominal Operating Cell Temperature figures reflect a more typical outdoor condition and generally show lower power than STC.</li>
+      <li><b>Note the temperature coefficient of power</b> — how much output drops per degree above 25°C — since real cell temperatures on a hot roof commonly reach 50-65°C, and this coefficient directly predicts the resulting output loss.</li>
+      <li><b>Record Voc and Isc (open-circuit voltage and short-circuit current)</b> — these are the values used for string sizing and equipment voltage/current limit checks, not the STC operating voltage/current.</li>
+      <li><b>Check the temperature coefficient of Voc specifically</b> when string sizing — open-circuit voltage rises as temperature drops, and this is the figure that determines a string's maximum voltage in cold weather, a critical safety check covered in the string sizing guide below.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-sostring">
+    <div class="step-head"><span class="step-num">5</span><h2>String Sizing: Voltage &amp; Temperature Considerations</h2></div>
+    <div class="step-desc">A string sized correctly on a warm day can exceed equipment voltage limits on the coldest morning of the year.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Get the module's Voc temperature coefficient</b> from its datasheet — module open-circuit voltage rises as cell temperature drops below the 25°C STC reference, and this coefficient quantifies exactly how much.</li>
+      <li><b>Find the site's record low temperature</b> (a code-specified design minimum, not just a typical winter low) — this is the worst-case condition the string voltage calculation needs to be checked against.</li>
+      <li><b>Calculate the corrected maximum string voltage</b> at that record low temperature, using the module's Voc and its temperature coefficient — this corrected value, not the STC Voc, is what must stay under the inverter or charge controller's maximum input voltage rating.</li>
+      <li><b>Check the minimum string voltage at high temperature too</b> — module voltage drops as temperature rises, and the string's minimum operating voltage at the hottest expected condition must stay above the inverter's minimum MPPT voltage window for the inverter to track and operate correctly.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      Exceeding an inverter or charge controller's maximum voltage rating on a cold morning isn't a performance problem — it's a real equipment damage and safety risk, which is why this check is a code requirement, not just good practice.
+    </div>
+  </div>
+
+  <div class="step" id="g-soloss">
+    <div class="step-head"><span class="step-num">6</span><h2>How to Calculate System Losses &amp; Derating</h2></div>
+    <div class="step-desc">A dozen small losses stack up between a panel's rated output and the energy actually delivered — none huge alone, but significant together.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Account for temperature losses</b> — real cell temperatures well above the 25°C STC reference reduce output according to the module's temperature coefficient, often the single largest loss category in hot climates.</li>
+      <li><b>Account for soiling</b> — dust, pollen, and dirt accumulation reduce output between cleanings, with the impact varying significantly by climate and cleaning frequency.</li>
+      <li><b>Account for DC and AC wiring losses</b> — resistive losses in conductors between modules, combiner, inverter, and the point of interconnection, generally kept to a small percentage each by adequate conductor sizing.</li>
+      <li><b>Account for inverter efficiency</b> — modern inverters are highly efficient, but converting DC to AC still isn't lossless, and this figure is on the inverter's own datasheet.</li>
+      <li><b>Combine losses multiplicatively, not by simple addition</b> — a system with several 3-5% individual losses compounds to a combined derate commonly in the 15-25% range overall, which is why a single "system losses" percentage is used as a practical shortcut in sizing calculations.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-sometering">
+    <div class="step-head"><span class="step-num">7</span><h2>Net Metering vs Self-Consumption Explained</h2></div>
+    <div class="step-desc">How exported solar energy is credited (or not) fundamentally changes what system size and battery strategy actually makes economic sense.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Net metering credits exported energy</b>, commonly at or near the retail rate, effectively using the grid as free storage — under a strong net metering policy, oversizing the array to export during the day and draw back at night can make good economic sense.</li>
+      <li><b>Self-consumption prioritizes using solar energy directly as it's generated</b>, minimizing export — this matters most where export compensation is low, absent, or where policy has shifted toward time-of-use or net billing structures that value self-consumed energy more highly than exported energy.</li>
+      <li><b>Battery storage shifts the economics from net metering toward self-consumption</b> — storing midday excess for evening use directly, rather than exporting it, becomes more attractive specifically where export credit is weak relative to retail electricity price.</li>
+      <li><b>Check the actual local policy before sizing a system around either strategy</b> — net metering rules, export limits, and time-of-use structures vary enormously by utility and jurisdiction, and change over time, so a design optimized for one policy can perform quite differently under another.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-soground">
+    <div class="step-head"><span class="step-num">8</span><h2>Grounding &amp; Bonding for PV Systems</h2></div>
+    <div class="step-desc">A PV system has both equipment grounding and, on some systems, functional grounding — and they solve different problems.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Equipment grounding bonds all non-current-carrying metal parts</b> — module frames, racking, and enclosures — together and to ground, so a fault doesn't leave exposed metal energized and dangerous to touch.</li>
+      <li><b>Bonding jumpers must maintain continuity across every mechanical connection</b> in the racking system — modules and rails are often bonded to each other and to the racking through listed bonding hardware, not assumed to be continuous just because they're physically connected.</li>
+      <li><b>Some inverter topologies require functional (system) grounding</b> of a current-carrying DC conductor, while transformerless inverters typically do not — this is inverter-specific, and the wrong assumption here is both a code violation and a real safety issue.</li>
+      <li><b>Ground fault protection monitors the DC system for unintended current to ground</b> and interrupts it — this is a separate function from equipment grounding, specifically watching for insulation faults developing in service, not just providing a safe path during an already-occurred fault.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      This is a conceptual overview — actual grounding and bonding design must follow the applicable electrical code (e.g. NEC Article 690) and the specific equipment manufacturer's listed installation instructions.
+    </div>
+  </div>
+
+  <div class="step" id="g-sosld">
+    <div class="step-head"><span class="step-num">9</span><h2>How to Read a PV Single-Line Diagram</h2></div>
+    <div class="step-desc">A single-line diagram shows the electrical path from sunlight to the grid connection — one line standing in for what may be many parallel conductors.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Trace the DC side first</b> — modules grouped into strings, strings combined at a combiner box (if used), through DC disconnects and protection devices, into the inverter or charge controller input.</li>
+      <li><b>Follow the DC-to-AC conversion point</b> — the inverter symbol, noting its type (string, micro, central) since that affects how the DC side of the diagram is structured upstream of it.</li>
+      <li><b>Trace the AC side</b> — from the inverter output through the AC disconnect, production meter (if present), to the point of interconnection with the building's electrical system or directly with the utility.</li>
+      <li><b>Check equipment ratings noted alongside each symbol</b> — voltage, current, and capacity ratings are typically labeled directly on or near each symbol, confirming the diagram reflects an actual equipment selection, not just a conceptual layout.</li>
+      <li><b>Cross-reference the string/array configuration notes</b> — the number of modules per string and strings in parallel is usually called out in text near the array symbol, since the single-line symbol itself doesn't show every individual module.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-sodod">
+    <div class="step-head"><span class="step-num">10</span><h2>Battery Depth of Discharge &amp; Cycle Life Explained</h2></div>
+    <div class="step-desc">How deeply a battery is routinely discharged has a direct, and often underestimated, effect on how long it actually lasts.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Depth of discharge (DoD) is the percentage of rated capacity used</b> in a given cycle — an 80% DoD cycle uses 80% of rated capacity and leaves 20% in reserve, and is a different, more demanding cycle than a 30% DoD cycle.</li>
+      <li><b>Cycle life is rated at a specific DoD</b>, not as a single universal number — a manufacturer's cycle life figure (say, 4000 cycles) is only valid at the DoD it was tested at, and using the battery at a deeper routine DoD than that reduces the achievable cycle count.</li>
+      <li><b>Shallower routine discharge generally extends total battery life</b> — a battery cycled to 50% DoD every day will generally achieve many more cycles (and years) of service than the same battery cycled to 90% DoD daily, even though each individual shallow cycle delivers less usable energy.</li>
+      <li><b>Sizing a battery bank larger than the bare minimum</b> keeps routine DoD shallower for a given daily energy need, trading higher upfront cost for extended battery life — this is a real design lever, not just a safety margin.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      Lithium (LiFePO4) chemistries generally tolerate deeper routine DoD with far less life impact than lead-acid — see the battery comparison above for how that difference plays out in practice.
+    </div>
+  </div>
+
+  <footer><a href="index.html">← Solar Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Comparisons — Engineerz CorneR</title>
+<meta name="description" content="Solar Comparisons — monocrystalline vs polycrystalline vs thin-film, string vs micro inverters, lead-acid vs lithium batteries, grid-tied vs off-grid systems, and more — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Solar Comparisons — Engineerz CorneR">
+<meta property="og:description" content="Monocrystalline vs polycrystalline vs thin-film, string vs micro inverters, lead-acid vs lithium batteries, grid-tied vs off-grid systems, and more.">
+<meta property="og:url" content="https://www.engineerzcorner.com/solar/comparisons">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solar Comparisons — Engineerz CorneR">
+<meta name="twitter:description" content="Monocrystalline vs polycrystalline vs thin-film, string vs micro inverters, lead-acid vs lithium batteries, grid-tied vs off-grid systems, and more.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="canonical" href="https://www.engineerzcorner.com/solar/comparisons">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23151A24'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23F0B429'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Fix: guide-toc-link pill styling not present in shared stylesheet */
+  .guide-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+  .guide-toc-link{
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.02em;
+    color:var(--ink-dim);background:var(--sheet);border:1px solid var(--line);border-radius:20px;
+    padding:7px 14px;text-decoration:none;white-space:nowrap;transition:border-color .15s ease,color .15s ease;
+  }
+  .guide-toc-link:hover{border-color:var(--amber);color:var(--amber-deep);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solar",
+      "item": "https://www.engineerzcorner.com/solar/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solar Comparisons",
+      "item": "https://www.engineerzcorner.com/solar/comparisons"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Solar Comparisons",
+  "description": "Solar Comparisons \u2014 monocrystalline vs polycrystalline vs thin-film, string vs micro inverters, lead-acid vs lithium batteries, grid-tied vs off-grid systems, and more \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/solar/comparisons"
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Solar</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Comparisons</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="../automation/index.html">Automation</a>
+    <a href="index.html" class="current">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-solar-comparisons">
+
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18"></path><path d="M3 8h5M16 8h5M3 16h5M16 16h5"></path></svg></div>
+    <div><h1>Comparisons</h1><div class="hero-sub">Head-to-head equipment and system choices — side by side, so the trade-off is visible at a glance</div></div>
+  </div>
+  <div class="intro">
+    Eight common solar PV equipment and system decisions, laid out as direct comparisons rather than separate articles — same criteria, side by side, with a plain-language verdict on when each option actually wins. Jump straight to the one you need.
+  </div>
+
+  <div class="guide-toc">
+      <a href="#cmp-socell" class="guide-toc-link">1. Monocrystalline vs Polycrystalline vs Thin-Film Cells</a>
+      <a href="#cmp-soinv" class="guide-toc-link">2. String vs Micro vs Power Optimizer Inverters</a>
+      <a href="#cmp-sobatt" class="guide-toc-link">3. Lead-Acid vs Lithium (LiFePO4) Batteries</a>
+      <a href="#cmp-sosys" class="guide-toc-link">4. Grid-Tied vs Off-Grid vs Hybrid Systems</a>
+      <a href="#cmp-socc" class="guide-toc-link">5. MPPT vs PWM Charge Controllers</a>
+      <a href="#cmp-sowire" class="guide-toc-link">6. Series vs Parallel Module Wiring</a>
+      <a href="#cmp-somount" class="guide-toc-link">7. Fixed-Tilt vs Single-Axis Tracking Mounts</a>
+      <a href="#cmp-soinstall" class="guide-toc-link">8. Roof-Mount vs Ground-Mount Installation</a>
+  </div>
+
+  <div class="step" id="cmp-socell">
+    <div class="step-head"><span class="step-num">1</span><h2>Monocrystalline vs Polycrystalline vs Thin-Film Cells</h2></div>
+    <div class="step-desc">The three dominant PV cell technologies trade efficiency, cost, and appearance against each other differently.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Monocrystalline</th><th>Polycrystalline</th><th>Thin-Film</th></tr></thead>
+        <tbody>
+      <tr><td>Typical efficiency</td><td>Highest, roughly 19-22%</td><td>Moderate, roughly 15-17%</td><td>Lowest, roughly 10-13%</td></tr>
+      <tr><td>Space required for a given output</td><td>Least</td><td>More than mono for the same output</td><td>Most — needs the largest area</td></tr>
+      <tr><td>Relative cost</td><td>Highest per watt</td><td>Moderate, generally cheaper than mono</td><td>Lowest per watt, but more area needed offsets some savings</td></tr>
+      <tr><td>Temperature performance</td><td>Good, degrades less in high heat</td><td>Slightly more heat-sensitive than mono</td><td>Often the best high-temperature performance</td></tr>
+      <tr><td>Typical application</td><td>Space-constrained residential/commercial roofs</td><td>Budget-conscious installations with adequate space</td><td>Large ground-mount or unconventional/flexible surfaces</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Monocrystalline is the practical default wherever roof space is limited and the higher cost per watt is worth maximizing output from a fixed area — the large majority of residential installations. Polycrystalline remains a reasonable lower-cost choice where space isn't as constrained. Thin-film's lower efficiency is rarely competitive for rooftop use, but its low cost per watt, lighter weight, and better heat tolerance keep it relevant for large ground-mount arrays or specialized flexible/lightweight applications where mono/poly panels don't fit.</div>
+  </div>
+
+  <div class="step" id="cmp-soinv">
+    <div class="step-head"><span class="step-num">2</span><h2>String vs Micro vs Power Optimizer Inverters</h2></div>
+    <div class="step-desc">Where the DC-to-AC conversion (or DC optimization) happens changes how the system handles shading and monitoring.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>String Inverter</th><th>Microinverter</th><th>Power Optimizer</th></tr></thead>
+        <tbody>
+      <tr><td>Shading tolerance</td><td>Poor — one shaded module drags down the whole string</td><td>Excellent — each module operates independently</td><td>Good — each module's DC output is optimized independently</td></tr>
+      <tr><td>Monitoring granularity</td><td>String or array level</td><td>Per-module</td><td>Per-module</td></tr>
+      <tr><td>Relative upfront cost</td><td>Lowest</td><td>Highest — one unit per module</td><td>Moderate — optimizer per module plus one string inverter</td></tr>
+      <tr><td>Where AC/DC conversion happens</td><td>Centrally, at one inverter</td><td>At each module, on the roof</td><td>Centrally — optimizers only condition DC, don't invert</td></tr>
+      <tr><td>Typical application</td><td>Simple, unshaded roofs, cost-sensitive projects</td><td>Complex roofs with partial shading or multiple orientations</td><td>Shaded/complex roofs wanting per-module data at lower cost than micros</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">A string inverter remains the simplest, lowest-cost choice for a straightforward, unshaded roof with a single orientation. Microinverters earn their higher cost specifically where shading, multiple roof orientations, or per-module monitoring meaningfully improve production or diagnostics — since one shaded module no longer drags down the rest of the string. Power optimizers land in between, delivering much of the per-module benefit of micros at a lower incremental cost by keeping the actual DC-to-AC inversion centralized in one string inverter.</div>
+  </div>
+
+  <div class="step" id="cmp-sobatt">
+    <div class="step-head"><span class="step-num">3</span><h2>Lead-Acid vs Lithium (LiFePO4) Batteries</h2></div>
+    <div class="step-desc">The two dominant off-grid/hybrid storage chemistries differ enormously in usable capacity and lifespan.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Lead-Acid (Flooded/AGM)</th><th>Lithium (LiFePO4)</th></tr></thead>
+        <tbody>
+      <tr><td>Usable depth of discharge</td><td>Typically 50%, to protect cycle life</td><td>Typically 80-100%</td></tr>
+      <tr><td>Cycle life</td><td>Shorter, roughly 300-1000 cycles depending on DoD</td><td>Much longer, often 2000-6000+ cycles</td></tr>
+      <tr><td>Weight for a given usable capacity</td><td>Heaviest</td><td>Significantly lighter for the same usable energy</td></tr>
+      <tr><td>Upfront cost per usable kWh</td><td>Lower upfront</td><td>Higher upfront, often lower over the system's life</td></tr>
+      <tr><td>Maintenance</td><td>Flooded types need regular watering/equalization; AGM is sealed</td><td>Effectively maintenance-free</td></tr>
+      <tr><td>Typical application</td><td>Budget-constrained or legacy off-grid systems</td><td>Most new off-grid and hybrid battery installations</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Lithium (LiFePO4) has become the default for most new battery installations — its deeper usable discharge, much longer cycle life, and lower weight generally offset the higher upfront cost once compared on a per-usable-kWh, per-cycle basis over the system's life. Lead-acid persists mainly in budget-constrained new installations, legacy systems being maintained rather than replaced, or applications where its lower upfront cost outweighs lithium's lifecycle advantages for a shorter planned system life.</div>
+  </div>
+
+  <div class="step" id="cmp-sosys">
+    <div class="step-head"><span class="step-num">4</span><h2>Grid-Tied vs Off-Grid vs Hybrid Systems</h2></div>
+    <div class="step-desc">Whether and how the system connects to the utility grid defines almost everything else about its design.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Grid-Tied</th><th>Off-Grid</th><th>Hybrid</th></tr></thead>
+        <tbody>
+      <tr><td>Grid connection</td><td>Always connected, no battery required</td><td>No grid connection at all</td><td>Grid-connected, with battery backup</td></tr>
+      <tr><td>Power during a grid outage</td><td>None — shuts down for safety (anti-islanding)</td><td>Unaffected, runs entirely on its own system</td><td>Continues from battery, seamlessly or with brief switchover</td></tr>
+      <tr><td>Relative system cost</td><td>Lowest — no battery bank needed</td><td>Higher — battery bank sized for full autonomy</td><td>Higher than grid-tied — battery sized for backup, not full autonomy</td></tr>
+      <tr><td>Sizing philosophy</td><td>Sized to offset annual consumption</td><td>Sized for worst-case autonomy with no grid backup</td><td>Sized to offset consumption, with battery sized for backup duration, not full autonomy</td></tr>
+      <tr><td>Typical application</td><td>Grid-connected homes/businesses, no backup requirement</td><td>Remote sites with no practical grid access</td><td>Grid-connected sites wanting resilience during outages</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Grid-tied is the simplest and lowest-cost option wherever grid power is reliably available and backup during an outage isn't a requirement — the grid effectively acts as unlimited, free storage. Off-grid is a necessity, not a preference, where grid connection genuinely isn't practical or economical to bring to a site. Hybrid systems have grown popular specifically for grid-connected sites that still want resilience — the battery only needs to cover expected outage duration, not the deeper year-round autonomy a true off-grid system requires, which keeps the battery bank smaller and more affordable than a comparable off-grid design.</div>
+  </div>
+
+  <div class="step" id="cmp-socc">
+    <div class="step-head"><span class="step-num">5</span><h2>MPPT vs PWM Charge Controllers</h2></div>
+    <div class="step-desc">Both keep a battery from overcharging, but only one actually extracts the array's full available power.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>PWM</th><th>MPPT</th></tr></thead>
+        <tbody>
+      <tr><td>How it regulates charging</td><td>Rapidly switches the array on/off, pulling array voltage down to battery voltage</td><td>Actively tracks the array's maximum power point and converts voltage to match the battery</td></tr>
+      <tr><td>Efficiency, array vs battery voltage mismatch</td><td>Lower — wastes the difference between array and battery voltage</td><td>Higher — captures and converts that voltage difference into extra charging current</td></tr>
+      <tr><td>Array voltage flexibility</td><td>Array voltage must closely match battery voltage</td><td>Array voltage can be significantly higher than battery voltage</td></tr>
+      <tr><td>Relative cost</td><td>Lower</td><td>Higher</td></tr>
+      <tr><td>Typical application</td><td>Small, simple systems, closely matched array/battery voltage</td><td>Larger systems, or any array voltage higher than the battery bank</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">MPPT has become the default for anything beyond a small, simple system — its ability to accept a higher array voltage than the battery bank, then convert that extra voltage into usable charging current, typically recovers 10-30% more energy than PWM from the same array, which usually justifies its higher cost. PWM remains viable specifically for small systems where the array is deliberately sized to closely match battery voltage, and the simpler, lower-cost controller is an acceptable trade for the efficiency it leaves on the table.</div>
+  </div>
+
+  <div class="step" id="cmp-sowire">
+    <div class="step-head"><span class="step-num">6</span><h2>Series vs Parallel Module Wiring</h2></div>
+    <div class="step-desc">The same modules wired differently produce very different voltage and current combinations — with real safety and efficiency consequences.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Series Wiring</th><th>Parallel Wiring</th></tr></thead>
+        <tbody>
+      <tr><td>Combined effect</td><td>Voltages add, current stays the same as one module</td><td>Currents add, voltage stays the same as one module</td></tr>
+      <tr><td>Conductor sizing implication</td><td>Lower current allows smaller conductors, over longer runs</td><td>Higher current needs larger conductors for the same distance</td></tr>
+      <tr><td>Shading/mismatch impact</td><td>One shaded/mismatched module limits the whole string's current</td><td>A shaded module mainly reduces its own contribution, less impact on others</td></tr>
+      <tr><td>Voltage limit consideration</td><td>String voltage must stay within inverter/controller and code limits, especially in cold temperatures</td><td>Voltage stays low regardless of module count, current limits become the concern instead</td></tr>
+      <tr><td>Typical application</td><td>The default for grid-tied string inverter systems, reaching operating voltage efficiently</td><td>Low-voltage off-grid systems, or combining strings after each is already series-wired</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Series wiring within a string is the near-universal default for grid-tied systems — it reaches the inverter's required operating voltage efficiently with smaller conductors, at the cost of the whole string's current being limited by its weakest (most shaded) module. Parallel wiring is used both in low-voltage off-grid systems that need higher current at a fixed low voltage, and structurally, in combining multiple already-series-wired strings together at a combiner box — most real arrays actually use a series-parallel combination, not one or the other exclusively.</div>
+  </div>
+
+  <div class="step" id="cmp-somount">
+    <div class="step-head"><span class="step-num">7</span><h2>Fixed-Tilt vs Single-Axis Tracking Mounts</h2></div>
+    <div class="step-desc">Tracking increases annual energy yield, but adds cost, moving parts, and maintenance that fixed mounts don't have.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Fixed-Tilt</th><th>Single-Axis Tracking</th></tr></thead>
+        <tbody>
+      <tr><td>Annual energy yield</td><td>Baseline</td><td>Typically 15-25% higher for the same module count</td></tr>
+      <tr><td>Moving parts / maintenance</td><td>None</td><td>Motors, bearings and controls require ongoing maintenance</td></tr>
+      <tr><td>Upfront cost</td><td>Lowest</td><td>Higher — mounting structure and drive system</td></tr>
+      <tr><td>Site suitability</td><td>Works on virtually any site, including rooftops</td><td>Best suited to ground-mount installations with adequate spacing</td></tr>
+      <tr><td>Typical application</td><td>Most rooftop and many ground-mount systems</td><td>Utility-scale and larger ground-mount installations where the yield gain justifies the added cost/complexity</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Fixed-tilt remains the default for the large majority of installations — rooftop systems can't track at all, and for smaller ground-mount systems the simplicity and lower cost usually outweigh the yield gain from tracking. Single-axis tracking earns its added cost and maintenance mainly at utility scale, where the meaningful annual yield increase, spread across a large enough array, offsets the tracker hardware and upkeep cost over the system's life.</div>
+  </div>
+
+  <div class="step" id="cmp-soinstall">
+    <div class="step-head"><span class="step-num">8</span><h2>Roof-Mount vs Ground-Mount Installation</h2></div>
+    <div class="step-desc">The choice is often dictated by available space and roof condition more than by engineering preference alone.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Roof-Mount</th><th>Ground-Mount</th></tr></thead>
+        <tbody>
+      <tr><td>Land/space use</td><td>Uses existing roof area, no extra land needed</td><td>Requires dedicated open land area</td></tr>
+      <tr><td>Installation cost</td><td>Generally lower — existing structure to mount to</td><td>Higher — needs its own foundation/racking structure</td></tr>
+      <tr><td>Access for cleaning/maintenance</td><td>More difficult, often needs specific roof access</td><td>Easier ground-level access</td></tr>
+      <tr><td>Orientation/tilt flexibility</td><td>Constrained by existing roof pitch and orientation</td><td>Fully flexible — can be optimized for maximum production</td></tr>
+      <tr><td>Roof condition dependency</td><td>Roof must be structurally sound and not near end-of-life</td><td>Not applicable — independent structure</td></tr>
+      <tr><td>Typical application</td><td>Residential and commercial buildings with suitable roof space</td><td>Sites with available land, aging roofs, or wanting optimal orientation</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Roof-mount is the default wherever a structurally sound roof with reasonable orientation is available — it avoids using separate land and is typically the lower-cost installation. Ground-mount becomes the better (or only) choice where the roof can't support the array, its orientation is poor, available land is not a constraint, or the project specifically wants full control over tilt and orientation to maximize production — the added foundation and racking cost is the trade for that flexibility.</div>
+  </div>
+
+  <footer><a href="index.html">← Solar Index</a></footer>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

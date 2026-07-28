@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Tilt &amp; Orientation Calculator — Engineering Studies Toolkit</title>
+<meta name="description" content="Recommended solar panel tilt angle and azimuth from site latitude, using year-round, winter- or summer-weighted rules of thumb.">
+<link rel="canonical" href="https://www.engineerzcorner.com/solar/panel-tilt-orientation-calculator">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Panel Tilt &amp; Orientation Calculator">
+<meta property="og:description" content="Recommended solar panel tilt angle and azimuth from site latitude, using year-round, winter- or summer-weighted rules of thumb.">
+<meta property="og:url" content="https://www.engineerzcorner.com/solar/panel-tilt-orientation-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Panel Tilt &amp; Orientation Calculator">
+<meta name="twitter:description" content="Recommended solar panel tilt angle and azimuth from site latitude, using year-round, winter- or summer-weighted rules of thumb.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23151A24'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23F0B429'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#F0B429 !important; --amber-deep:#B9860A !important;
+    --blue:#FFDD8A !important; --plate:#151A24 !important; --plate-2:#1E2536 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(240,180,41,.22) !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Solar", "item": "https://www.engineerzcorner.com/solar/" },
+    { "@type": "ListItem", "position": 3, "name": "Panel Tilt & Orientation Calculator", "item": "https://www.engineerzcorner.com/solar/panel-tilt-orientation-calculator" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Panel Tilt & Orientation Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Recommended solar panel tilt angle and azimuth from site latitude, using year-round, winter- or summer-weighted rules of thumb.",
+  "url": "https://www.engineerzcorner.com/solar/panel-tilt-orientation-calculator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Solar</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Panel Tilt &amp; Orientation Calculator</span></div></nav>
+
+<style>
+.ec-related-post{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-related-post-inner{max-width:900px;margin:0 auto;padding:7px 18px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;}
+.ec-related-post-inner a{color:#8B7FF0;text-decoration:none;}
+.ec-related-post-inner a:hover{text-decoration:underline;}
+</style>
+<div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/solar-panel-tilt-orientation-annual-yield">Solar Panel Tilt & Orientation: Why Latitude Isn't the Whole Answer</a></div></div>
+<main id="mainContent" class="wrap">
+  <p style="margin:18px 0 0;"><a href="../index.html">&larr; Back to full toolkit</a></p>
+<div class="page active" id="page-panel-tilt">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></div>
+    <div><h1>Panel Tilt &amp; Orientation Calculator</h1><div class="hero-sub">Rule-of-thumb tilt angle and azimuth from site latitude</div></div>
+  </div>
+  <div class="mech-tabs">
+    <a href="index.html">Solar Index</a>
+    <a href="solar-sizing-calculator.html">SO.01 Sizing Tools</a>
+    <a href="panel-tilt-orientation-calculator.html" class="current">SO.07 Tilt &amp; Orientation</a>
+    <a href="notes.html">SO.02 Notes</a>
+  </div>
+  <div class="intro">A fixed-tilt array's best angle depends on latitude and what time of year matters most for the load it's serving. These are widely used rules of thumb for a quick first pass — for a few percent more annual yield, a proper simulation (PVGIS, PVWatts, or a manufacturer's tool) using your actual site's weather file will beat any rule of thumb.</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Site &amp; Goal</h2></div>
+    <div class="step-desc">Latitude is positive for the Northern Hemisphere, negative for the Southern Hemisphere.</div>
+    <div class="row2">
+      <div class="field"><label>Site latitude <span class="unit">degrees, + N / − S</span></label><input type="number" id="ptLat" value="34" step="0.5"></div>
+      <div class="field"><label>Optimization goal</label>
+        <select id="ptGoal">
+          <option value="year">Year-round balanced output</option>
+          <option value="winter">Winter-weighted (boost low sun-angle months)</option>
+          <option value="summer">Summer-weighted (boost high sun-angle months)</option>
+        </select>
+      </div>
+    </div>
+    <div class="result-line"><span class="rlabel">Recommended Tilt</span><span class="rval" id="ptTilt">0.0 <small>°</small></span></div>
+    <div class="result-line"><span class="rlabel">Recommended Azimuth</span><span class="rval" id="ptAzimuth">— <small>° from true N</small></span></div>
+    <div class="hint" id="ptNote" style="margin:0 16px 12px;">—</div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Year-round: <b>tilt ≈ |latitude|</b> &nbsp;·&nbsp;
+        Winter-weighted: <b>tilt ≈ |latitude| + 15°</b> &nbsp;·&nbsp;
+        Summer-weighted: <b>tilt ≈ |latitude| − 15°</b> &nbsp;·&nbsp;
+        clamped to 0–90°. Azimuth: true south (180°) in the Northern Hemisphere, true north (0°) in the Southern Hemisphere.
+      </div>
+      <div class="hint" style="margin-top:8px;">Azimuth here is true (geographic) north/south, not magnetic — check your local magnetic declination if you're aiming with a compass. Roof orientation, shading and racking constraints often override the theoretical optimum in practice; a tilt within about 10–15° of the ideal, facing within 30–45° of true south/north, typically costs only a few percent of annual yield versus the perfect angle.</div>
+    </details>
+  </div>
+
+  <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+    <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+  </div>
+
+  <footer>Tilt &amp; orientation — rule-of-thumb first-pass guidance, not a substitute for a site-specific irradiance simulation (PVGIS, PVWatts) that accounts for local weather and shading. <a href="index.html">&larr; Solar Index</a></footer>
+</div>
+</main>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?1:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  function calc(){
+    var lat = num('ptLat');
+    var goal = el('ptGoal').value;
+
+    if(!isFinite(lat)){
+      setText('ptTilt','0.0 <small>°</small>');
+      setText('ptAzimuth','— <small>° from true N</small>');
+      setText('ptNote','—');
+      return;
+    }
+
+    var absLat = Math.abs(lat);
+    var tilt = absLat;
+    if(goal==='winter') tilt = absLat + 15;
+    if(goal==='summer') tilt = absLat - 15;
+    tilt = Math.max(0, Math.min(90, tilt));
+
+    var isNorth = lat >= 0;
+    var azimuth = isNorth ? 180 : 0;
+    var azimuthLabel = isNorth ? 'True South' : 'True North';
+
+    setText('ptTilt', fmt(tilt,1) + ' <small>°</small>');
+    setText('ptAzimuth', fmt(azimuth,0) + ' <small>° (' + azimuthLabel + ')</small>');
+
+    var goalText = goal==='winter' ? 'weighted toward winter output (steeper tilt, catches more low-angle winter sun, sheds snow better)'
+                 : goal==='summer' ? 'weighted toward summer output (shallower tilt, matches the sun\'s higher summer path)'
+                 : 'balanced across the whole year';
+    setText('ptNote', 'At ' + fmt(absLat,1) + '° latitude (' + (isNorth?'Northern':'Southern') + ' Hemisphere), a ' + fmt(tilt,1) + '° tilt facing ' + azimuthLabel + ' is ' + goalText + '.');
+  }
+
+  ['ptLat','ptGoal'].forEach(function(id){
+    var e = el(id);
+    if(e){ e.addEventListener('input', calc); e.addEventListener('change', calc); }
+  });
+  calc();
+})();
+</script>
+
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<div class="nl-box" style="display:block;text-align:left;background-color:#F7F8FC;border:1px solid #E1E3F0;border-left:3px solid #0D9488;border-radius:0 8px 8px 0;padding:18px;margin:22px 16px 0;">
+  <style>
+    .nl-box .sib-form{text-align:left;}
+    .nl-box #sib-container{max-width:420px;background:transparent;border:none;padding:0;}
+    .nl-box .sib-form-block{padding:4px 0 !important;}
+    .nl-box .sib-form-block p{margin:0;}
+    .nl-box input.input{font-family:inherit;font-size:12.5px;padding:8px 10px;border:1px solid #E1E3F0;border-radius:6px;width:100%;box-sizing:border-box;color:#181B29;background:#fff;}
+    .nl-box .sib-form-block__button{font-family:"JetBrains Mono","SF Mono",monospace !important;font-size:12px !important;font-weight:700 !important;padding:8px 16px !important;border-radius:6px !important;background:#0D9488 !important;color:#fff !important;cursor:pointer;margin-top:8px;}
+    .nl-box .entry__specification{display:none;}
+    .nl-box .entry__label{font-family:"Manrope","Arial",sans-serif !important;font-size:13.5px !important;font-weight:700 !important;color:#181B29 !important;}
+    .nl-box .sib-form-message-panel{max-width:100% !important;font-size:11.5px !important;margin-bottom:8px;}
+  </style>
+  <div style="font-family:'Manrope','Arial',sans-serif;font-size:13.5px;font-weight:700;color:#181B29;margin-bottom:2px;">Get notified about new content</div>
+  <div style="font-size:11.5px;color:#8D91AA;margin-bottom:10px;">New calculators, guides, notes &amp; tools — one short email when something ships. No spam, unsubscribe anytime.</div>
+
+  <div class="sib-form" style="text-align:center;">
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+        </div>
+      </div>
+      <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:14px;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:3px;max-width:540px;padding:8px 10px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+        </div>
+      </div>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:420px;">
+        <form id="sib-form" method="POST" action="https://5f707dc5.sibforms.com/serve/MUIFAEozin-ZuSQjrJ6Lkt2qH35ZlJXqC-xbUMRbp7XgW2G7EFhuUYuLr22lq9tGRUV0d_7_xm7KyF5QzbKTYWWSZ4dCKbkdHlLUk6gYopHCz9aevP1UymURugquoAQgDDf4DHBOW12LR2DBY2GDPYfF7PUa1miGFfS1-336gBRI26BbyNQr39YglWNTX_wM946cs4z4ga9HIBAO5A==" data-type="subscription">
+          <div style="padding:4px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <div class="entry__field">
+                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="you@email.com" data-required="true" required />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:13px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;"></label>
+              </div>
+            </div>
+          </div>
+          <div style="padding:4px 0;text-align:left;">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:14px;height:14px;display:none;">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              SUBSCRIBE
+            </button>
+          </div>
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+          <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
