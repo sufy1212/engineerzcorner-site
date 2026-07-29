@@ -289,6 +289,14 @@
           ]
         },
         {
+          title:"Sensible Heat Ratio (SHR): The Slope of a Cooling Process Line",
+          summary:"One number that tells you whether a coil is mostly cooling the air or mostly drying it.",
+          body:[
+            "Sensible Heat Ratio is the fraction of a cooling coil's total capacity that goes toward sensible cooling, calculated as sensible load divided by total (sensible plus latent) load. An SHR near 1.0 means the load is almost entirely sensible — the coil is mostly dropping temperature with little moisture removal. A lower SHR, more common in humid climates or high-occupancy spaces like gyms and restaurants, means a larger share of the coil's work is condensing moisture out of the air.",
+            "On a psychrometric chart, SHR is literally the slope of the process line from entering to leaving air condition — protractor scales printed on most chart editions let you set that slope directly. Selecting equipment against the wrong SHR is a common source of comfort complaints: a coil sized for a high-SHR (dry) load but installed in a low-SHR (humid) space will hit its sensible target and cycle off before it's removed enough moisture, leaving the space cool but clammy."
+          ]
+        },
+        {
           title:"Reading a Psychrometric Chart",
           summary:"A single chart that shows every state moist air can be in, and every process that moves it there.",
           body:[
@@ -396,6 +404,14 @@
     {
       id:'iaq', label:'Ventilation & Indoor Air Quality', color:'#6E93C7',
       notes:[
+        {
+          title:"Air Changes per Hour: What It Measures and What It Doesn't",
+          summary:"A single averaged number for how much air moved — not proof of where it actually went.",
+          body:[
+            "Air changes per hour (ACH) is the ratio of a space's supply (or extract) airflow to its volume, expressed as how many times that volume would be fully replaced in one hour if the air mixed perfectly. It's a convenient shorthand for comparing ventilation intensity across very different rooms, and it's the number most codes and design guides set minimums against — offices around 4–6 ACH, classrooms 6–8, bathrooms and kitchens 10–15, operating theatres 20–25.",
+            "The catch is the 'perfectly mixed' assumption baked into the formula. A room can hit its target ACH on paper while air short-circuits from a supply diffuser straight to a nearby return grille, barely sweeping the occupied zone, or while corners and areas behind furniture sit well below the room average. ACH is a sizing and code-compliance metric, not a guarantee of air quality at any specific point — diffuser placement, throw pattern, and return location decide whether the nominal ACH actually reaches people."
+          ]
+        },
         {
           title:"Why Ventilation Standards Specify Outside Air, Not Just Total Airflow",
           summary:"Recirculating a lot of air isn't the same as diluting what's building up inside it.",
