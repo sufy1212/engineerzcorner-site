@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Phase Fault &amp; Protection Coordination Simulator — Site Engineer Toolkit</title>
+<meta name="description" content="Interactive single-line diagram simulator. Set a source, main breaker and three feeders, click a fault point, and watch which breaker trips first and whether coordination holds.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/three-phase-fault-simulator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="3-Phase Fault &amp; Protection Coordination Simulator — Site Engineer Toolkit">
+<meta property="og:description" content="Interactive single-line diagram simulator. Click a fault point and watch which breaker trips first and whether coordination holds.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/three-phase-fault-simulator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="3-Phase Fault &amp; Protection Coordination Simulator — Site Engineer Toolkit">
+<meta name="twitter:description" content="Interactive single-line diagram simulator. Click a fault point and watch which breaker trips first and whether coordination holds.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F3F4FA; --sheet:#FFFFFF; --sheet-2:#F7F8FC; --line:#E1E3F0; --line-soft:#ECEEF7;
+    --ink:#181B29; --ink-dim:#565A74; --ink-faint:#8D91AA;
+    --plate:#181B2E; --plate-2:#23273D;
+    --amber:#6C5CE7; --amber-deep:#4C3FC7;
+    --blue:#0D9488; --green:#16A34A; --red:#DC2626;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);}
+  body{background-image:repeating-linear-gradient(115deg, rgba(24,27,41,.025) 0px, rgba(24,27,41,.025) 1px, transparent 1px, transparent 5px);background-color:var(--paper);}
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px 60px;}
+  ::selection{background:rgba(108,92,231,.24);}
+  :focus-visible{outline:2px solid var(--amber-deep);outline-offset:2px;}
+
+  .ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+  .ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+  .ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+  .ec-crumb-inner a:hover{color:#8B7FF0;}
+  .ec-crumb-sep{color:#4A4D68;}
+  .ec-crumb-current{color:#8B7FF0;font-weight:600;}
+  .back-link{color:#8F92B8;font-family:var(--font-mono);font-size:11px;text-decoration:none;}
+  .back-link:hover{color:var(--amber-deep);}
+
+  .pagehero{display:flex;align-items:center;gap:14px;margin:20px 0 2px;flex-wrap:wrap;}
+  .pagehero .hero-icon{display:flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(108,92,231,.35);}
+  .pagehero .hero-icon svg{width:23px;height:23px;}
+  h1{font-family:var(--font-display);font-size:23px;margin:0;color:var(--ink);font-weight:800;letter-spacing:-.01em;}
+  .hero-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.05em;}
+
+  .intro{background:var(--sheet);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:13px 16px;font-size:13px;color:var(--ink-dim);line-height:1.65;margin:10px 0 18px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .intro b{color:var(--ink);}
+
+  .step{background:var(--sheet);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .step-head{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg, var(--plate), var(--plate-2));padding:12px 16px;margin:0;}
+  .step-num{font-family:var(--font-mono);font-size:10.5px;color:#fff;background:linear-gradient(135deg, var(--amber), var(--blue));padding:2px 8px;border-radius:50%;flex:none;font-weight:700;letter-spacing:.04em;}
+  .step h2{font-family:var(--font-display);font-size:13.5px;margin:0;color:#F1F0FB;font-weight:600;letter-spacing:.03em;text-transform:uppercase;}
+  .step-desc{font-size:12.5px;color:var(--ink-faint);margin:0;padding:10px 16px 4px;line-height:1.55;}
+
+  .field{margin:0 0 16px;padding-top:2px;}
+  .step > .field, .step > .radiorow{margin-left:16px;margin-right:16px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  @media(max-width:520px){.row3{grid-template-columns:1fr 1fr;}}
+  .field label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;font-weight:600;}
+  .field label .unit{color:var(--amber-deep);font-family:var(--font-mono);font-size:9.5px;font-weight:700;}
+  input[type=number], input[type=text], select{width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--line);color:var(--ink);font-family:var(--font-mono);font-size:14.5px;padding:6px 2px 8px;outline:none;border-radius:0;}
+  input:hover, select:hover{border-bottom-color:var(--ink-faint);}
+  input:focus, select:focus{border-bottom-color:var(--blue);border-bottom-width:2px;padding-bottom:7px;}
+  select{cursor:pointer;}
+  .radiorow{display:flex;gap:18px;padding:14px 16px 6px;flex-wrap:wrap;}
+  .radiorow label{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-dim);cursor:pointer;font-weight:600;}
+  .radiorow input{accent-color:var(--amber-deep);width:15px;height:15px;}
+  .hint{font-size:11px;color:var(--ink-faint);margin-top:6px;line-height:1.5;}
+  details{margin:10px 16px 14px;}
+  summary{cursor:pointer;font-size:10.5px;color:var(--ink-faint);font-family:var(--font-mono);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;}
+  summary:hover{color:var(--blue);}
+  .formula-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:var(--sheet-2);border:1px dashed var(--line);border-radius:5px;padding:12px 14px;margin:8px 16px 0;line-height:1.75;}
+  .formula-note b{color:var(--blue);}
+  footer{margin:22px 16px 0;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);border-top:1px solid var(--line-soft);padding:14px 0 18px;line-height:1.6;}
+
+  .fdr-card{background:var(--sheet-2);border:1px solid var(--line-soft);border-left:3px solid var(--blue);border-radius:0 5px 5px 0;padding:13px 15px 6px;margin:0 16px 12px;}
+  .fdr-card-head{font-family:var(--font-display);font-weight:700;font-size:13.5px;color:var(--ink);margin-bottom:2px;display:flex;align-items:center;gap:8px;}
+  .fdr-card-head .fdr-dot{width:9px;height:9px;border-radius:50%;flex:none;}
+
+  /* ===== diagram ===== */
+  .sim-wrap{background:var(--plate);border-radius:10px;padding:16px 12px 12px;margin:0 16px 14px;box-shadow:0 4px 16px rgba(24,27,41,.18);}
+  .sim-svg{display:block;width:100%;height:auto;}
+  .sld-line{fill:none;stroke:#5A5D78;stroke-width:2.2;}
+  .sld-line.energized{stroke:#2DD4BF;}
+  .sld-line.faulted{stroke:var(--red);stroke-width:3;stroke-dasharray:6 4;animation:sld-flow .7s linear infinite;}
+  @keyframes sld-flow{to{stroke-dashoffset:-20;}}
+  .sld-node{fill:#15172A;stroke:#5A5D78;stroke-width:1.6;}
+  .sld-node.open{stroke:var(--red);}
+  .sld-node.closed-hot{stroke:#2DD4BF;}
+  .brk-gap{stroke:var(--red);stroke-width:3;stroke-linecap:round;opacity:0;}
+  .brk-gap.show{opacity:1;}
+  .sld-txt{font-family:var(--font-mono);font-size:9.5px;fill:#B8BAD9;letter-spacing:.02em;}
+  .sld-txt.hi{fill:#2DD4BF;font-weight:700;}
+  .sld-txt.warn{fill:var(--red);font-weight:700;}
+  .fault-x{cursor:pointer;}
+  .fault-x circle{fill:rgba(220,38,38,.12);stroke:#DC2626;stroke-width:1.4;}
+  .fault-x:hover circle{fill:rgba(220,38,38,.28);}
+  .fault-x path{stroke:#DC2626;stroke-width:1.8;stroke-linecap:round;}
+  .fault-x-lbl{font-family:var(--font-mono);font-size:8px;fill:#DC2626;text-anchor:middle;}
+
+  .fault-btns{display:flex;gap:8px;flex-wrap:wrap;margin:0 16px 14px;}
+  .fault-btn{flex:1 1 auto;min-width:130px;background:var(--sheet);border:1.5px solid var(--red);color:var(--red);font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.02em;padding:10px 10px;border-radius:6px;cursor:pointer;text-align:center;}
+  .fault-btn:hover{background:#FEF2F2;}
+  .fault-btn.reset{border-color:var(--line);color:var(--ink-dim);flex:0 0 auto;min-width:90px;}
+  .fault-btn.reset:hover{background:var(--sheet-2);}
+
+  .result-panel{margin:0 16px 16px;}
+  .status-banner{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:5px;font-size:12.5px;font-weight:700;margin-bottom:12px;border:1px solid;font-family:var(--font-mono);}
+  .status-banner.ok{background:#ECFDF5;border-color:#A7E8C7;color:var(--green);}
+  .status-banner.bad{background:#FEF2F2;border-color:#FCA5A5;color:var(--red);}
+  .status-banner.neutral{background:var(--sheet-2);border-color:var(--line);color:var(--ink-faint);}
+  .status-dot{width:7px;height:7px;border-radius:50%;flex:none;}
+  .status-banner.ok .status-dot{background:var(--green);}
+  .status-banner.bad .status-dot{background:var(--red);}
+  .status-banner.neutral .status-dot{background:var(--ink-faint);}
+
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+  .stat{background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.6);border-radius:10px;box-shadow:0 4px 16px rgba(24,27,46,.08);padding:10px 13px;}
+  .stat .slabel{font-family:var(--font-mono);font-size:9px;color:var(--ink-faint);letter-spacing:.07em;text-transform:uppercase;font-weight:600;}
+  .stat .sval{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--ink);margin-top:3px;}
+  .stat .sval.amber{color:var(--amber-deep);}
+  .stat .sval.red{color:var(--red);}
+
+  .trip-table{width:100%;border-collapse:collapse;font-size:12.5px;font-family:var(--font-mono);}
+  .trip-table th{background:var(--plate);color:#F3EEDD;font-size:9px;text-transform:uppercase;letter-spacing:.05em;padding:7px 9px;text-align:left;}
+  .trip-table td{padding:7px 9px;border-bottom:1px solid var(--line-soft);}
+  .trip-table tr:last-child td{border-bottom:none;}
+  .trip-table td.first{color:var(--green);font-weight:700;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "3-Phase Fault & Protection Coordination Simulator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Interactive single-line diagram simulator. Set a source, main breaker and three feeders, click a fault point, and watch which breaker trips first and whether coordination holds.",
+  "url": "https://www.engineerzcorner.com/electrical/three-phase-fault-simulator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">3-Phase Fault Simulator</span></div></nav>
+
+<a href="index.html" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to Electrical toolkit</a>
+<div class="wrap">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-14h-7z"></path></svg></div>
+    <div><h1>3-Phase Fault &amp; Coordination Simulator</h1><div class="hero-sub">Interactive SLD · fault current · TCC trip logic</div></div>
+  </div>
+  <div class="intro">
+    Set the source, main breaker and three feeders below, then click a <b>fault point</b> on the diagram. The tool computes the fault current at that point from source + cable impedance, runs each affected breaker's LT/ST/instantaneous trip curve, and animates which one opens first — flagging it if the margin is too tight for selective tripping.
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Source &amp; Transformer</h2></div>
+    <div class="step-desc">Used to derive the upstream fault impedance at the main bus.</div>
+    <div class="row3">
+      <div class="field"><label>System voltage, V<sub>LL</sub> <span class="unit">V</span></label>
+        <select id="simV"><option value="400" selected>400</option><option value="415">415</option><option value="690">690</option></select>
+      </div>
+      <div class="field"><label>Transformer rating <span class="unit">kVA</span></label><input type="number" id="simKVA" value="1000" step="50"></div>
+      <div class="field"><label>Impedance, %Z <span class="unit">%</span></label><input type="number" id="simZ" value="6" step="0.1"></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Main Breaker</h2></div>
+    <div class="step-desc">Sits between the transformer and the main LV bus.</div>
+    <div class="row3">
+      <div class="field"><label>In <span class="unit">A</span></label><input type="number" id="mIn" value="1600" step="10"></div>
+      <div class="field"><label>Ir <span class="unit">×In</span></label><input type="number" id="mIr" value="1.0" step="0.05"></div>
+      <div class="field"><label>tr <span class="unit">s</span></label><input type="number" id="mTr" value="8" step="0.5"></div>
+      <div class="field"><label>Isd <span class="unit">×Ir</span></label><input type="number" id="mIsd" value="6" step="0.5"></div>
+      <div class="field"><label>tsd <span class="unit">s</span></label><input type="number" id="mTsd" value="0.3" step="0.05"></div>
+      <div class="field"><label>Ii <span class="unit">×In</span></label><input type="number" id="mIi" value="10" step="0.5"></div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Feeders</h2></div>
+    <div class="step-desc">Three fixed feeders off the main bus, each with its own cable impedance and breaker settings.</div>
+
+    <div class="fdr-card">
+      <div class="fdr-card-head"><span class="fdr-dot" style="background:#F59E0B"></span>Feeder 1 — Motor</div>
+      <div class="row3">
+        <div class="field"><label>Cable Z <span class="unit">mΩ</span></label><input type="number" id="f1Z" value="15" step="1"></div>
+        <div class="field"><label>In <span class="unit">A</span></label><input type="number" id="f1In" value="250" step="5"></div>
+        <div class="field"><label>Ir <span class="unit">×In</span></label><input type="number" id="f1Ir" value="1.0" step="0.05"></div>
+        <div class="field"><label>tr <span class="unit">s</span></label><input type="number" id="f1Tr" value="4" step="0.5"></div>
+        <div class="field"><label>Isd <span class="unit">×Ir</span></label><input type="number" id="f1Isd" value="6" step="0.5"></div>
+        <div class="field"><label>tsd <span class="unit">s</span></label><input type="number" id="f1Tsd" value="0.1" step="0.05"></div>
+        <div class="field"><label>Ii <span class="unit">×In</span></label><input type="number" id="f1Ii" value="10" step="0.5"></div>
+      </div>
+    </div>
+
+    <div class="fdr-card">
+      <div class="fdr-card-head"><span class="fdr-dot" style="background:#38BDF8"></span>Feeder 2 — Panel A</div>
+      <div class="row3">
+        <div class="field"><label>Cable Z <span class="unit">mΩ</span></label><input type="number" id="f2Z" value="10" step="1"></div>
+        <div class="field"><label>In <span class="unit">A</span></label><input type="number" id="f2In" value="400" step="5"></div>
+        <div class="field"><label>Ir <span class="unit">×In</span></label><input type="number" id="f2Ir" value="1.0" step="0.05"></div>
+        <div class="field"><label>tr <span class="unit">s</span></label><input type="number" id="f2Tr" value="6" step="0.5"></div>
+        <div class="field"><label>Isd <span class="unit">×Ir</span></label><input type="number" id="f2Isd" value="6" step="0.5"></div>
+        <div class="field"><label>tsd <span class="unit">s</span></label><input type="number" id="f2Tsd" value="0.2" step="0.05"></div>
+        <div class="field"><label>Ii <span class="unit">×In</span></label><input type="number" id="f2Ii" value="10" step="0.5"></div>
+      </div>
+    </div>
+
+    <div class="fdr-card">
+      <div class="fdr-card-head"><span class="fdr-dot" style="background:#A78BFA"></span>Feeder 3 — Panel B</div>
+      <div class="row3">
+        <div class="field"><label>Cable Z <span class="unit">mΩ</span></label><input type="number" id="f3Z" value="20" step="1"></div>
+        <div class="field"><label>In <span class="unit">A</span></label><input type="number" id="f3In" value="250" step="5"></div>
+        <div class="field"><label>Ir <span class="unit">×In</span></label><input type="number" id="f3Ir" value="1.0" step="0.05"></div>
+        <div class="field"><label>tr <span class="unit">s</span></label><input type="number" id="f3Tr" value="6" step="0.5"></div>
+        <div class="field"><label>Isd <span class="unit">×Ir</span></label><input type="number" id="f3Isd" value="6" step="0.5"></div>
+        <div class="field"><label>tsd <span class="unit">s</span></label><input type="number" id="f3Tsd" value="0.2" step="0.05"></div>
+        <div class="field"><label>Ii <span class="unit">×In</span></label><input type="number" id="f3Ii" value="10" step="0.5"></div>
+      </div>
+    </div>
+
+    <div class="field" style="margin:0 16px 16px;">
+      <label>Minimum grading margin required <span class="unit">ms</span></label>
+      <input type="number" id="simMargin" value="100" step="10">
+    </div>
+  </div>
+
+  <!-- STEP 4: DIAGRAM -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">4</span><h2>Single-Line Diagram</h2></div>
+    <div class="step-desc">Click a fault point to run the simulation.</div>
+
+    <div class="sim-wrap">
+      <svg class="sim-svg" id="simSvg" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- source -->
+        <circle cx="320" cy="24" r="14" fill="none" stroke="#5A5D78" stroke-width="2"></circle>
+        <path d="M313 20l7 8 7-8" fill="none" stroke="#5A5D78" stroke-width="1.6"></path>
+        <text x="320" y="8" text-anchor="middle" class="sld-txt">UTILITY SOURCE</text>
+        <!-- source to xfmr -->
+        <line id="segSrc" class="sld-line" x1="320" y1="38" x2="320" y2="60"></line>
+        <!-- transformer -->
+        <circle cx="320" cy="72" r="12" fill="none" stroke="#5A5D78" stroke-width="1.6"></circle>
+        <circle cx="320" cy="84" r="12" fill="none" stroke="#5A5D78" stroke-width="1.6"></circle>
+        <text x="345" y="82" class="sld-txt" id="txtXfmr">T1</text>
+        <!-- xfmr to main breaker -->
+        <line id="segMainIn" class="sld-line" x1="320" y1="96" x2="320" y2="126"></line>
+        <!-- main breaker -->
+        <rect id="brMain" class="sld-node" x="304" y="126" width="32" height="20" rx="3"></rect>
+        <line id="brMainGap" class="brk-gap" x1="312" y1="136" x2="328" y2="136"></line>
+        <text x="345" y="140" class="sld-txt" id="txtMain">CB-M</text>
+        <!-- main to bus fault marker -->
+        <line id="segBus" class="sld-line" x1="320" y1="146" x2="320" y2="176"></line>
+        <g class="fault-x" data-fault="bus" transform="translate(320,178)">
+          <circle r="11"></circle><path d="M-5 -5l10 10M5 -5l-10 10"></path>
+          <text class="fault-x-lbl" y="22">BUS</text>
+        </g>
+        <!-- bus -->
+        <line class="sld-line" x1="120" y1="200" x2="520" y2="200"></line>
+        <line id="segBusDrop" class="sld-line" x1="320" y1="189" x2="320" y2="200"></line>
+
+        <!-- feeder drops: F1 x=180, F2 x=320, F3 x=460 -->
+        <!-- Feeder 1 -->
+        <line id="segF1a" class="sld-line" x1="180" y1="200" x2="180" y2="222"></line>
+        <rect id="brF1" class="sld-node" x="164" y="222" width="32" height="20" rx="3"></rect>
+        <line id="brF1Gap" class="brk-gap" x1="172" y1="232" x2="188" y2="232"></line>
+        <text x="120" y="238" class="sld-txt" id="txtF1">CB-1</text>
+        <line id="segF1b" class="sld-line" x1="180" y1="242" x2="180" y2="300"></line>
+        <g class="fault-x" data-fault="f1" transform="translate(180,302)">
+          <circle r="11"></circle><path d="M-5 -5l10 10M5 -5l-10 10"></path>
+          <text class="fault-x-lbl" y="22">F1</text>
+        </g>
+        <circle cx="180" cy="340" r="16" fill="none" stroke="#5A5D78" stroke-width="1.6"></circle>
+        <text x="180" y="345" text-anchor="middle" class="sld-txt">M</text>
+        <text x="180" y="368" text-anchor="middle" class="sld-txt">MOTOR</text>
+
+        <!-- Feeder 2 -->
+        <line id="segF2a" class="sld-line" x1="320" y1="200" x2="320" y2="222"></line>
+        <rect id="brF2" class="sld-node" x="304" y="222" width="32" height="20" rx="3"></rect>
+        <line id="brF2Gap" class="brk-gap" x1="312" y1="232" x2="328" y2="232"></line>
+        <text x="345" y="238" class="sld-txt" id="txtF2">CB-2</text>
+        <line id="segF2b" class="sld-line" x1="320" y1="242" x2="320" y2="300"></line>
+        <g class="fault-x" data-fault="f2" transform="translate(320,302)">
+          <circle r="11"></circle><path d="M-5 -5l10 10M5 -5l-10 10"></path>
+          <text class="fault-x-lbl" y="22">F2</text>
+        </g>
+        <rect x="302" y="326" width="36" height="28" rx="2" fill="none" stroke="#5A5D78" stroke-width="1.6"></rect>
+        <text x="320" y="365" text-anchor="middle" class="sld-txt">PANEL A</text>
+
+        <!-- Feeder 3 -->
+        <line id="segF3a" class="sld-line" x1="460" y1="200" x2="460" y2="222"></line>
+        <rect id="brF3" class="sld-node" x="444" y="222" width="32" height="20" rx="3"></rect>
+        <line id="brF3Gap" class="brk-gap" x1="452" y1="232" x2="468" y2="232"></line>
+        <text x="485" y="238" class="sld-txt" id="txtF3">CB-3</text>
+        <line id="segF3b" class="sld-line" x1="460" y1="242" x2="460" y2="300"></line>
+        <g class="fault-x" data-fault="f3" transform="translate(460,302)">
+          <circle r="11"></circle><path d="M-5 -5l10 10M5 -5l-10 10"></path>
+          <text class="fault-x-lbl" y="22">F3</text>
+        </g>
+        <rect x="442" y="326" width="36" height="28" rx="2" fill="none" stroke="#5A5D78" stroke-width="1.6"></rect>
+        <text x="460" y="365" text-anchor="middle" class="sld-txt">PANEL B</text>
+      </svg>
+    </div>
+
+    <div class="fault-btns">
+      <button class="fault-btn" data-fault="bus">⚡ Fault at Main Bus</button>
+      <button class="fault-btn" data-fault="f1">⚡ Fault at Feeder 1 end</button>
+      <button class="fault-btn" data-fault="f2">⚡ Fault at Feeder 2 end</button>
+      <button class="fault-btn" data-fault="f3">⚡ Fault at Feeder 3 end</button>
+      <button class="fault-btn reset" id="simReset">↺ Reset</button>
+    </div>
+
+    <div class="result-panel">
+      <div role="status" aria-live="polite" class="status-banner neutral" id="simBanner"><span class="status-dot"></span><span>Click a fault point above to run the simulation.</span></div>
+      <div class="stat-grid" id="simStats" style="display:none;">
+        <div class="stat"><div class="slabel">Fault current, Ik''</div><div class="sval red" id="statIk">–</div></div>
+        <div class="stat"><div class="slabel">Loop impedance</div><div class="sval amber" id="statZ">–</div></div>
+      </div>
+      <div id="tripTableWrap" style="display:none;">
+        <table class="trip-table">
+          <thead><tr><th>Breaker</th><th>Zone</th><th>Trip time</th><th>Order</th></tr></thead>
+          <tbody id="tripTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Transformer impedance: <b>Zt = (%Z/100) × V<sub>LL</sub>² / (S<sub>kVA</sub>×1000)</b>, in Ω.<br>
+        Bus fault: <b>Ik'' = V<sub>LL</sub> / (√3 × Zt)</b>.<br>
+        Feeder-end fault: <b>Ik'' = V<sub>LL</sub> / (√3 × (Zt + Zcable))</b> — seen by both the main breaker and that feeder's breaker in series.<br>
+        Trip time zones per breaker: long-time <b>t = tr·(Ir·In/I)²</b> for Ir·In ≤ I &lt; Isd·Ir·In; short-time <b>t = tsd</b> (flat) for Isd·Ir·In ≤ I &lt; Ii·In; instantaneous <b>t ≈ 0</b> for I ≥ Ii·In.<br>
+        Selective if the upstream breaker's trip time exceeds the downstream breaker's by at least the minimum margin set above, and the fault stays below the upstream breaker's own Ii pickup.
+      </div>
+      <div class="hint" style="margin-top:8px;">Simplified single operating-point model for teaching/visualization — magnitude-only impedance (X/R ignored), no manufacturer tolerance bands. For contractual studies, use the Short Circuit and Selectivity/TCC calculators with real datasheet curves.</div>
+    </details>
+
+    <footer>Fault current per simplified transformer-impedance method; trip logic follows IEC 60947-2 ETU LT/ST/Inst zones.</footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ return parseFloat(document.getElementById(id).value) || 0; }
+
+  function breakerFromInputs(prefix){
+    return {
+      In: num(prefix+'In'), Ir: num(prefix+'Ir'), tr: num(prefix+'Tr'),
+      Isd: num(prefix+'Isd'), tsd: num(prefix+'Tsd'), Ii: num(prefix+'Ii')
+    };
+  }
+
+  function tripTime(I, br){
+    var IrA = br.In*br.Ir, IsdA = IrA*br.Isd, IiA = br.In*br.Ii;
+    if(I < IrA) return {t: Infinity, zone: 'no trip'};
+    if(I < IsdA) return {t: br.tr*Math.pow(IrA/I,2), zone: 'long-time'};
+    if(I < IiA) return {t: br.tsd, zone: 'short-time'};
+    return {t: 0.03, zone: 'instantaneous'};
+  }
+
+  function fmtT(t){
+    if(t === Infinity) return 'no trip';
+    if(t < 0.05) return '<40 ms (inst.)';
+    if(t < 1) return (t*1000).toFixed(0)+' ms';
+    return t.toFixed(2)+' s';
+  }
+  function fmtA(a){
+    if(a >= 1000) return (a/1000).toFixed(2)+' kA';
+    return a.toFixed(0)+' A';
+  }
+
+  var segIds = ['segSrc','segMainIn','segBus','segBusDrop','segF1a','segF1b','segF2a','segF2b','segF3a','segF3b'];
+  var brIds = {main:'brMain', f1:'brF1', f2:'brF2', f3:'brF3'};
+  var gapIds = {main:'brMainGap', f1:'brF1Gap', f2:'brF2Gap', f3:'brF3Gap'};
+  var txtIds = {main:'txtMain', f1:'txtF1', f2:'txtF2', f3:'txtF3'};
+
+  function clearDiagram(){
+    segIds.forEach(function(id){ var el=document.getElementById(id); el.classList.remove('energized','faulted'); });
+    Object.keys(brIds).forEach(function(k){
+      document.getElementById(brIds[k]).classList.remove('open','closed-hot');
+      document.getElementById(gapIds[k]).classList.remove('show');
+      document.getElementById(txtIds[k]).classList.remove('hi','warn');
+    });
+  }
+
+  function energize(ids){
+    ids.forEach(function(id){ document.getElementById(id).classList.add('energized','faulted'); });
+  }
+
+  function openBreaker(key, warn){
+    document.getElementById(brIds[key]).classList.add('open');
+    document.getElementById(gapIds[key]).classList.add('show');
+    document.getElementById(txtIds[key]).classList.add(warn ? 'warn' : 'hi');
+  }
+
+  var feederMeta = {
+    f1: {label:'Feeder 1 (Motor)', Zid:'f1Z', prefix:'f1', segs:['segSrc','segMainIn','segBus','segBusDrop','segF1a','segF1b']},
+    f2: {label:'Feeder 2 (Panel A)', Zid:'f2Z', prefix:'f2', segs:['segSrc','segMainIn','segBus','segBusDrop','segF2a','segF2b']},
+    f3: {label:'Feeder 3 (Panel B)', Zid:'f3Z', prefix:'f3', segs:['segSrc','segMainIn','segBus','segBusDrop','segF3a','segF3b']}
+  };
+
+  function runFault(point){
+    clearDiagram();
+    var V = num('simV'), kVA = num('simKVA'), Zpct = num('simZ');
+    var Zt = (Zpct/100) * (V*V) / (kVA*1000); // ohm
+    var margin = num('simMargin')/1000; // s
+
+    var results = []; // {key,label,t,zone}
+    var Itotal, Ztotal, energizeSegs;
+
+    if(point === 'bus'){
+      Ztotal = Zt;
+      Itotal = V/(Math.sqrt(3)*Ztotal);
+      energizeSegs = ['segSrc','segMainIn','segBus'];
+      var mainBr = breakerFromInputs('m');
+      var r = tripTime(Itotal, mainBr);
+      results.push({key:'main', label:'CB-M (Main)', t:r.t, zone:r.zone});
+    } else {
+      var meta = feederMeta[point];
+      var Zc = num(meta.Zid)/1000; // mΩ -> Ω
+      Ztotal = Zt + Zc;
+      Itotal = V/(Math.sqrt(3)*Ztotal);
+      energizeSegs = meta.segs;
+      var mainBr2 = breakerFromInputs('m');
+      var fdrBr = breakerFromInputs(meta.prefix);
+      var rm = tripTime(Itotal, mainBr2);
+      var rf = tripTime(Itotal, fdrBr);
+      results.push({key:'main', label:'CB-M (Main)', t:rm.t, zone:rm.zone});
+      results.push({key:point, label:meta.label.replace('Feeder','CB').split(' (')[0]+' — '+meta.label.match(/\(([^)]+)\)/)[1], t:rf.t, zone:rf.zone});
+    }
+
+    energize(energizeSegs);
+
+    results.sort(function(a,b){ return a.t - b.t; });
+    var fastest = results[0];
+    openBreaker(fastest.key, false);
+
+    var banner = document.getElementById('simBanner');
+    var selective = true, warnMsg = '';
+    if(results.length === 2){
+      var main = results.filter(function(r){return r.key==='main';})[0];
+      var fdr = results.filter(function(r){return r.key!=='main';})[0];
+      var gap = main.t - fdr.t;
+      if(fdr.key !== fastest.key || gap < margin){
+        selective = false;
+        openBreaker('main', true);
+        warnMsg = 'Loss of selectivity: main breaker trips within '+(gap*1000).toFixed(0)+' ms of the feeder — both open, wider outage than necessary.';
+      }
+    }
+
+    banner.className = 'status-banner ' + (results.length===1 ? 'neutral' : (selective ? 'ok' : 'bad'));
+    if(results.length === 1){
+      banner.innerHTML = '<span class="status-dot"></span><span>Bus fault: main breaker clears it in '+fmtT(fastest.t)+'. No downstream selectivity to check at this point.</span>';
+    } else if(selective){
+      banner.innerHTML = '<span class="status-dot"></span><span>Selective: feeder breaker clears the fault in '+fmtT(fastest.t)+', main breaker stays closed. Margin ≥ '+(margin*1000).toFixed(0)+' ms required.</span>';
+    } else {
+      banner.innerHTML = '<span class="status-dot"></span><span>'+warnMsg+'</span>';
+    }
+
+    document.getElementById('simStats').style.display = 'grid';
+    document.getElementById('statIk').textContent = fmtA(Itotal);
+    document.getElementById('statZ').textContent = (Ztotal*1000).toFixed(1)+' mΩ';
+
+    var tbody = document.getElementById('tripTableBody');
+    tbody.innerHTML = '';
+    results.forEach(function(r, i){
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>'+r.label+'</td><td>'+r.zone+'</td><td>'+fmtT(r.t)+'</td><td'+(i===0?' class="first"':'')+'>'+(i===0?'1st (trips)':'2nd')+'</td>';
+      tbody.appendChild(tr);
+    });
+    document.getElementById('tripTableWrap').style.display = 'block';
+  }
+
+  document.querySelectorAll('.fault-btn[data-fault]').forEach(function(btn){
+    btn.addEventListener('click', function(){ runFault(btn.getAttribute('data-fault')); });
+  });
+  document.querySelectorAll('.fault-x[data-fault]').forEach(function(el){
+    el.addEventListener('click', function(){ runFault(el.getAttribute('data-fault')); });
+  });
+  document.getElementById('simReset').addEventListener('click', function(){
+    clearDiagram();
+    document.getElementById('simStats').style.display = 'none';
+    document.getElementById('tripTableWrap').style.display = 'none';
+    var banner = document.getElementById('simBanner');
+    banner.className = 'status-banner neutral';
+    banner.innerHTML = '<span class="status-dot"></span><span>Click a fault point above to run the simulation.</span>';
+  });
+})();
+</script>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
