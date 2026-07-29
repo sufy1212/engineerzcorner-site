@@ -1239,6 +1239,22 @@ footer::before,footer::after{color:var(--c-line) !important;}
   background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
   animation:tcShine 5s linear infinite;
 }
+.chero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 16px 7px 12px;border-radius:999px;
+  border:1px solid rgba(63,232,232,.55);
+  background:rgba(2,20,24,.55);
+  backdrop-filter:blur(2px);
+  box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 4px 14px rgba(0,0,0,.25);
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:#F2FFFF;font-weight:700;margin-bottom:18px;
+  opacity:0;transform:translateY(10px);
+  animation:cheroLineIn .7s cubic-bezier(.16,.84,.44,1) forwards;animation-delay:.0s;
+}
+.chero-badge-dot{
+  width:6px;height:6px;flex:none;border-radius:50%;background:#3FE8E8;
+  box-shadow:0 0 9px rgba(63,232,232,.9);animation:tcTwinkle 2.4s ease-in-out infinite;
+}
 /* ================================================================
    BODY POLISH — animated reveals, card lift, accent dividers, footer
    ================================================================ */
@@ -1318,6 +1334,54 @@ footer::before,footer::after{content:none !important;}
   padding:28px 20px !important;text-align:center !important;
 }
 .site-footer a{color:#3FE8E8 !important;}
+
+/* ---- mega footer ---- */
+.sf-mega{
+  background:linear-gradient(155deg, var(--c-petrol,#003D4C) 0%, #052f3a 60%, var(--c-teal-dark,#00696D) 100%);
+  color:#CFE3E4;margin-top:48px;padding:48px 20px 0;
+}
+.sf-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1.15fr;gap:30px;padding-bottom:36px;}
+@media (max-width:900px){.sf-inner{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.sf-inner{grid-template-columns:1fr;}}
+.sf-brand-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.sf-logo{
+  width:44px;height:44px;border-radius:11px;flex:none;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  display:flex;align-items:center;justify-content:center;color:#3FE8E8;
+}
+.sf-logo svg{width:21px;height:21px;}
+.sf-brand-name{font-family:var(--font-display,"Manrope",sans-serif);font-weight:800;font-size:19px;color:#fff;}
+.sf-brand-tag{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;color:#7FDCDC;margin-top:3px;}
+.sf-brand-desc{font-size:13px;line-height:1.65;color:#B9D3D4;max-width:36ch;margin:0 0 18px;}
+.sf-heart{color:#FF6B9D;}
+.sf-social{display:flex;gap:10px;}
+.sf-social a{
+  width:34px;height:34px;border-radius:50%;flex:none;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  display:flex;align-items:center;justify-content:center;color:#CFE3E4;
+  transition:background .15s ease,color .15s ease,transform .15s ease;
+}
+.sf-social a svg{width:15px;height:15px;}
+.sf-social a:hover{background:#3FE8E8;color:#003D4C;transform:translateY(-2px);}
+.sf-col-title{font-family:var(--font-display,"Manrope",sans-serif);font-weight:800;font-size:13.5px;color:#fff;margin:0 0 14px;}
+.sf-col{display:flex;flex-direction:column;gap:10px;min-width:0;}
+.sf-col a{color:#B9D3D4;text-decoration:none;font-size:13px;transition:color .15s ease;}
+.sf-col a:hover{color:#3FE8E8;}
+.sf-newsletter-text{font-size:12.5px;color:#B9D3D4;line-height:1.6;margin:0 0 14px;}
+.sf-newsletter-btn{
+  display:inline-flex;align-items:center;gap:6px;width:fit-content;
+  background:#3FE8E8;color:#003D4C;font-weight:800;font-size:12.5px;
+  padding:9px 16px;border-radius:6px;text-decoration:none;transition:background .15s ease;
+}
+.sf-newsletter-btn:hover{background:#fff;}
+.sf-bottom{
+  max-width:1060px;margin:0 auto;border-top:1px solid rgba(255,255,255,.14);padding:18px 0;
+  display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;
+  font-family:var(--font-mono);font-size:10.5px;color:#8FB6B8;
+}
+.sf-bottom a{color:#8FB6B8;text-decoration:none;}
+.sf-bottom a:hover{color:#3FE8E8;}
+.sf-bottom-links a{margin-left:10px;}
 
 /* ================================================================
    CARD RICHNESS — gradient tint, icon badges, pill CTAs, watermark
@@ -1485,6 +1549,7 @@ footer::before,footer::after{content:none !important;}
   <div class="chero-shape s3"></div>
   <div class="chero-grid"></div>
   <div class="chero-inner">
+    <div class="chero-badge"><span class="chero-badge-dot"></span>Built for Engineers, by an Engineer</div>
     <div class="chero-eyebrow">Multi-Discipline Engineering Reference</div>
     <h1 class="chero-title">
       <span class="chero-line chero-line1">Solve it.</span>
@@ -1852,6 +1917,7 @@ footer::before,footer::after{content:none !important;}
       <div class="discipline-card-desc">Quickfire calc sprints, a daily engineering quiz, symbol flashcard drills, and troubleshooting games — Fault Finder, Defect Finder, Signal Chain, and Machine Fixer — free and no signup.</div>
     </a>
   </div>
+
   <div class="share-row" id="shareRow">
     <span class="share-row-label">Share this toolkit</span>
     <a class="share-btn" id="shareTwitter" href="#" target="_blank" rel="noopener" aria-label="Share on X (Twitter)" title="Share on X">
@@ -1876,10 +1942,73 @@ footer::before,footer::after{content:none !important;}
     <p class="site-disclaimer-text">All calculators, formulas and reference figures on this site are provided for quick estimation and learning purposes only. They are not a substitute for a qualified engineer's review, detailed design calculations, or the applicable local codes and standards. Always verify results independently and have final designs checked/approved by a licensed professional before using them for construction, procurement, or safety-critical decisions. This site accepts no liability for losses or damages arising from reliance on these results.</p>
   </div>
 
-  <footer>Pick a discipline above to get started. &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms &amp; Disclaimer</a></footer>
+  <div class="sf-mega" role="contentinfo">
+    <div class="sf-inner">
+      <div>
+        <div class="sf-brand-row">
+          <div class="sf-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"></polygon></svg></div>
+          <div>
+            <div class="sf-brand-name">EngineerzCorner</div>
+            <div class="sf-brand-tag">CALCULATE · LEARN · ENGINEER</div>
+          </div>
+        </div>
+        <p class="sf-brand-desc">Your all-in-one platform for engineering calculators, tools, standards and learning resources. Built with <span class="sf-heart">♥</span> for engineers.</p>
+        <div class="sf-social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.46 1.49-1.46H16.5V4.36C16.24 4.32 15.35 4.25 14.31 4.25c-2.17 0-3.66 1.32-3.66 3.75V10.5H8v3h2.65V21h2.85Z"/></svg></a>
+          <a href="#" aria-label="Twitter / X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.6L23.3 22h-6.9l-5.4-6.6L4.8 22H1.7l8-9.2L1 2h7l4.9 6.1L18.9 2Zm-1.2 18h1.9L7.4 4H5.4l12.3 16Z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21h-4V9Z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="#" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2.02c-.77-.8-1.63-.8-2.02-.85C16.06 4.9 12 4.9 12 4.9h-.01s-4.06 0-6.98.23c-.39.05-1.25.05-2.02.85-.6.62-.8 2.02-.8 2.02S2 9.64 2 11.28v1.44c0 1.64.2 3.28.2 3.28s.2 1.4.8 2.02c.77.8 1.78.78 2.23.86 1.62.16 6.77.21 6.77.21s4.06-.01 6.98-.24c.39-.05 1.25-.05 2.02-.85.6-.62.8-2.02.8-2.02s.2-1.64.2-3.28v-1.44c0-1.64-.2-3.28-.2-3.28ZM9.8 14.9V8.9l5.6 3-5.6 3Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="sf-col">
+        <h4 class="sf-col-title">Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="#disciplines">Calculators</a>
+        <a href="posts/index.html">Resources</a>
+        <a href="posts/is-iec-ieee-electrical-standards-reference.html">Standards</a>
+        <a href="notes/index.html">Learn</a>
+        <a href="general/index.html">Tools</a>
+        <a href="about.html">About Us</a>
+      </div>
+
+      <div class="sf-col">
+        <h4 class="sf-col-title">Popular Categories</h4>
+        <a href="electrical/index.html">Electrical Calculators</a>
+        <a href="civil/index.html">Civil Calculators</a>
+        <a href="mechanical/index.html">Mechanical Calculators</a>
+        <a href="hvac/index.html">HVAC Calculators</a>
+        <a href="solar/index.html">Solar Calculators</a>
+        <a href="automation/index.html">Automation Calculators</a>
+      </div>
+
+      <div class="sf-col">
+        <h4 class="sf-col-title">Support</h4>
+        <a href="about.html#contact">Contact Us</a>
+        <a href="about.html#contact">Suggest a Calculator</a>
+        <a href="about.html#contact">Report an Issue</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+
+      <div class="sf-col sf-newsletter">
+        <h4 class="sf-col-title">Stay Updated</h4>
+        <p class="sf-newsletter-text">Get the latest calculators, articles and engineering updates.</p>
+        <a href="#stayUpdated" class="sf-newsletter-btn">Subscribe →</a>
+      </div>
+    </div>
+
+    <div class="sf-bottom">
+      <span>© <span id="sfYear">2026</span> EngineerzCorner. All rights reserved.</span>
+      <span class="sf-bottom-links"><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+  <script>document.getElementById('sfYear').textContent=new Date().getFullYear();</script>
 
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-<div class="nl-box reveal">
+<div class="nl-box reveal" id="stayUpdated">
   <style>
     .nl-box{display:flex;gap:14px;align-items:flex-start;text-align:left;background:var(--sheet-2, #F7F8FC);border:1px solid var(--line, #E1E3F0);border-radius:14px;padding:20px;margin:26px 16px 0;position:relative;overflow:hidden;transition:transform .25s cubic-bezier(.22,.9,.34,1), box-shadow .25s ease, border-color .25s ease;}
     .nl-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, var(--amber,#6C5CE7), var(--blue,#0D9488));opacity:0;transition:opacity .25s ease;pointer-events:none;}
