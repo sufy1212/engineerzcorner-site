@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Air Changes per Hour: What ACH Actually Tells You (and Doesn't)</title>
+    <link>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</guid>
+    <description>What air changes per hour (ACH) measures, the airflow ÷ volume formula behind it, typical ACH targets by space type, and why short-circuiting or dead zones can hit the number on paper without actually ventilating the room.</description>
+    <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Reading a Psychrometric Chart: The Five Lines That Matter</title>
+    <link>https://www.engineerzcorner.com/posts/psychrometric-chart-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/psychrometric-chart-basics.html</guid>
+    <description>How dry-bulb temperature, humidity ratio, relative humidity, wet-bulb temperature and enthalpy combine on a psychrometric chart, and how to trace a cooling or dehumidification process across it.</description>
+    <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>K-Rated Transformers: What K-Factor Means and When You Need One</title>
     <link>https://www.engineerzcorner.com/posts/k-rated-transformer-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/k-rated-transformer-explained.html</guid>
