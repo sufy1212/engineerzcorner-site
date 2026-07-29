@@ -31,7 +31,7 @@
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#F3F4FA; --sheet:#FFFFFF; --sheet-2:#F7F8FC; --line:#E1E3F0; --line-soft:#ECEEF7;
@@ -1198,34 +1198,43 @@ footer::before,footer::after{color:var(--c-line) !important;}
   color:#7FDCDC;font-weight:700;margin-bottom:16px;
 }
 .chero-title{
-  font-weight:800;letter-spacing:-.02em;color:#fff;margin:0;line-height:1.14;
-  font-size:clamp(32px,6.4vw,54px);
-  display:flex;flex-direction:column;gap:.14em;
+  font-family:"Unbounded",var(--font-display),sans-serif;
+  font-weight:800;letter-spacing:-.01em;color:#fff;margin:0;line-height:1.28;
+  font-size:clamp(26px,5.4vw,48px);
+  display:block;
 }
 .chero-line{
+  display:inline-block;
   opacity:0;transform:translateY(16px);
   animation:cheroLineIn .8s cubic-bezier(.16,.84,.44,1) forwards;
 }
 .chero-line1{animation-delay:.2s;}
-.chero-line2{animation-delay:1.15s;}
-.chero-line3{animation-delay:2.1s;}
 @keyframes cheroLineIn{
   0%{opacity:0;transform:translateY(16px);}
   100%{opacity:1;transform:translateY(0);}
 }
 .chero-hl{
-  color:#3FE8E8;
-  text-shadow:0 0 22px rgba(63,232,232,.35);
+  position:relative;display:inline-block;
+  background:#FFB800;color:#003D4C;font-weight:900;
+  padding:2px 12px;border-radius:3px;
+  opacity:0;transform:rotate(4deg) scale(.85);
+  animation:chHlPop .55s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:.85s;
 }
+@keyframes chHlPop{
+  0%{opacity:0;transform:rotate(4deg) scale(.85);}
+  60%{opacity:1;transform:rotate(-3deg) scale(1.04);}
+  100%{opacity:1;transform:rotate(-1.5deg) scale(1);box-shadow:0 0 26px rgba(255,184,0,.35);}
+}
+@media (prefers-reduced-motion: reduce){.chero-hl{animation:none !important;opacity:1;transform:rotate(-1.5deg) scale(1);}}
 .chero-sub{
   color:#CFE3E4;font-size:15px;line-height:1.65;max-width:56ch;margin:18px 0 0;
-  opacity:0;animation:cheroLineIn .8s cubic-bezier(.16,.84,.44,1) forwards;animation-delay:2.9s;
+  opacity:0;animation:cheroLineIn .8s cubic-bezier(.16,.84,.44,1) forwards;animation-delay:1.55s;
 }
 .chero-cta{
   display:inline-block;margin-top:26px;background:#3FE8E8;color:#003D4C;font-weight:800;
   padding:14px 26px;border-radius:2px;text-decoration:none;font-size:14.5px;letter-spacing:.01em;
   transition:background .15s;
-  opacity:0;animation:cheroLineIn .8s cubic-bezier(.16,.84,.44,1) forwards;animation-delay:3.35s;
+  opacity:0;animation:cheroLineIn .8s cubic-bezier(.16,.84,.44,1) forwards;animation-delay:2s;
 }
 .chero-cta:hover{background:#fff;}
 .chero-credit{
@@ -1552,9 +1561,8 @@ footer::before,footer::after{content:none !important;}
     <div class="chero-badge"><span class="chero-badge-dot"></span>Built for Engineers, by an Engineer</div>
     <div class="chero-eyebrow">Multi-Discipline Engineering Reference</div>
     <h1 class="chero-title">
-      <span class="chero-line chero-line1">Solve it.</span>
-      <span class="chero-line chero-line2">Understand it.</span>
-      <span class="chero-line chero-line3 chero-hl">Never forget it.</span>
+      <span class="chero-line chero-line1">Stop guessing.</span>
+      <span class="chero-hl">Start estimating.</span>
     </h1>
     <p class="chero-sub" id="cheroSub">Calculators, guides, symbol libraries, quizzes, and flashcards across Electrical, Mechanical, HVAC, Automation, Civil, Solar, and Project Management — built to get you the answer, and make it stick.</p>
     <a href="#disciplines" class="chero-cta">Explore disciplines</a>
