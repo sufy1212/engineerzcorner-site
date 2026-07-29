@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sitemap — Engineering Studies Toolkit</title>
+<meta name="description" content="A full page-by-page index of every calculator, guide, note, blog post and tool on Engineerz Corner.">
+<link rel="canonical" href="https://www.engineerzcorner.com/sitemap.html">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Sitemap — Engineering Studies Toolkit">
+<meta property="og:description" content="A full page-by-page index of every calculator, guide, note, blog post and tool on Engineerz Corner.">
+<meta property="og:url" content="https://www.engineerzcorner.com/sitemap.html">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sitemap — Engineering Studies Toolkit">
+<meta name="twitter:description" content="A full page-by-page index of every calculator, guide, note, blog post and tool on Engineerz Corner.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .hero-band{
+    position:relative; overflow:hidden; margin:0 0 26px;
+    background:
+      radial-gradient(ellipse 640px 320px at 18% 0%, rgba(108,92,231,.35), transparent 60%),
+      radial-gradient(ellipse 520px 300px at 88% 100%, rgba(13,148,136,.30), transparent 60%),
+      linear-gradient(160deg, var(--plate), var(--plate-2));
+    padding:56px 28px 40px; border-radius:18px; margin-top:22px;
+    box-shadow:0 14px 34px rgba(24,27,46,.22);
+  }
+  .hero-band::before{
+    content:''; position:absolute; inset:0; opacity:.5; pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+    background-size:34px 34px;
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), transparent 92%);
+    mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), transparent 92%);
+  }
+  .hero-band-inner{position:relative; max-width:820px; margin:0 auto;}
+  .hero-kicker{
+    display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono);
+    font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#B8BEEA;
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
+    border-radius:20px; padding:5px 12px 5px 10px; margin:0 0 16px;
+  }
+  .hero-kicker::before{content:''; width:6px; height:6px; border-radius:50%; background:#3FE8C8; box-shadow:0 0 8px #3FE8C8;}
+  .hero-band h1{
+    font-family:var(--font-display); font-weight:800; letter-spacing:-.01em;
+    font-size:clamp(28px,4.4vw,42px); color:#F5F6FB; margin:0 0 8px; line-height:1.12;
+  }
+  .hero-band-sub{font-size:14px; color:#BFC3DE; max-width:56ch; line-height:1.6;}
+  @media (max-width:640px){ .hero-band{padding:40px 18px 30px;} }
+  @media (prefers-reduced-motion:no-preference){
+    .hero-band::after{
+      content:''; position:absolute; width:280px; height:280px; border-radius:50%;
+      background:radial-gradient(circle, rgba(63,232,200,.20), transparent 70%);
+      top:-90px; right:-60px; animation:heroDrift 9s ease-in-out infinite alternate;
+    }
+    @keyframes heroDrift{ from{transform:translateY(0);} to{transform:translateY(22px);} }
+  }
+</style>
+<style>
+  .article-page .intro{
+    border-left-color:var(--amber); font-size:14px; line-height:1.75;
+  }
+  .article-page .step{
+    background:var(--sheet); border:1px solid var(--line-soft); border-radius:14px;
+    box-shadow:0 1px 2px rgba(24,27,41,.04); overflow:visible;
+  }
+  .article-page .step-head{
+    background:none; padding:22px 26px 0; align-items:flex-start; gap:0;
+  }
+  .article-page .step h2{
+    font-family:var(--font-display); text-transform:none; letter-spacing:-.005em;
+    font-size:18px; font-weight:800; color:var(--ink); position:relative;
+    padding-left:18px;
+  }
+  .article-page .step h2::before{
+    content:''; position:absolute; left:0; top:3px; bottom:3px; width:4px;
+    border-radius:3px; background:linear-gradient(180deg, var(--amber), var(--blue));
+  }
+  .sm-grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:2px 18px; padding:14px 26px 26px;
+  }
+  .sm-grid a{
+    font-size:14px; line-height:2; color:var(--ink-dim); text-decoration:none;
+    border-bottom:1px solid transparent; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .sm-grid a:hover{color:var(--blue); border-bottom-color:rgba(13,148,136,.35);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sitemap",
+      "item": "https://www.engineerzcorner.com/sitemap.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sitemap",
+  "description": "A full page-by-page index of every calculator, guide, note, blog post and tool on Engineerz Corner.",
+  "url": "https://www.engineerzcorner.com/sitemap.html"
+}
+</script>
+<link rel="stylesheet" href="assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Sitemap</span></div></nav>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="index.html">Home</a>
+    <a href="electrical/index.html">Electrical</a>
+    <a href="mechanical/index.html">Mechanical</a>
+    <a href="hvac/index.html">HVAC</a>
+    <a href="civil/index.html">Civil</a>
+    <a href="automation/index.html">Automation</a>
+    <a href="solar/index.html">Solar</a>
+    <a href="pm/index.html">Project Management</a>
+    <a href="general/index.html">General Tools</a>
+    <a href="study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+<main id="mainContent">
+<div class="wrap page active article-page">
+  <div class="hero-band"><div class="hero-band-inner">
+    <span class="hero-kicker">Engineering Studies Toolkit</span>
+    <h1>Sitemap</h1>
+    <div class="hero-band-sub">Every page on Engineerz Corner, grouped by section — for anything the nav doesn't surface directly.</div>
+  </div></div>
+
+  <div class="step">
+    <div class="step-head"><h2>Site</h2></div>
+    <div class="sm-grid">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="games.html">Technical Games</a>
+      <a href="quiz.html">Daily Engineering Quiz</a>
+      <a href="quickfire.html">Quickfire</a>
+      <a href="flashcards.html">Symbol Flashcards</a>
+      <a href="fault-finder.html">Fault Finder</a>
+      <a href="defect-finder.html">Defect Finder</a>
+      <a href="machine-fixer.html">Machine Fixer</a>
+      <a href="signal-chain.html">Signal Chain</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Disclaimer</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Electrical</h2></div>
+    <div class="sm-grid">
+      <a href="electrical/index.html">Electrical Engineering Toolkit</a>
+      <a href="electrical/arc-flash-incident-energy.html">Arc Flash Incident Energy</a>
+      <a href="electrical/busbar-enclosure-sizing.html">Busbar / Enclosure Sizing</a>
+      <a href="electrical/cable-schedule-builder.html">Cable Schedule Builder</a>
+      <a href="electrical/cable-sizing-calculator.html">Cable Sizing Calculator</a>
+      <a href="electrical/comparisons.html">Equipment Comparisons</a>
+      <a href="electrical/conduit-fill-calculator.html">Conduit Fill Calculator</a>
+      <a href="electrical/earthing-grid-resistance.html">Earthing Grid Resistance</a>
+      <a href="electrical/earthing-rod-resistance.html">Earthing Rod Resistance</a>
+      <a href="electrical/energy-cost-calculator.html">Energy Cost / kWh Bill Estimator</a>
+      <a href="electrical/engineering-guides.html">Engineering Guides</a>
+      <a href="electrical/harmonics-thd-estimate.html">Harmonics / THD Estimate</a>
+      <a href="electrical/lighting-illumination-sizing.html">Lighting / Illumination Sizing</a>
+      <a href="electrical/lv-panel-estimate.html">LV Panel Estimate</a>
+      <a href="electrical/motor-flc-starting-current.html">Motor FLC / Starting Current</a>
+      <a href="electrical/notes.html">Electrical Learning Notes</a>
+      <a href="electrical/panel-ga-maker.html">Panel GA Maker</a>
+      <a href="electrical/power-factor-correction.html">Power Factor Correction</a>
+      <a href="electrical/selectivity-coordination-calculator.html">Selectivity / TCC Coordination</a>
+      <a href="electrical/short-circuit-calculator.html">Short Circuit Calculator</a>
+      <a href="electrical/sld-creator.html">Single Line Diagram Creator</a>
+      <a href="electrical/symbol-library.html">Electrical Symbol Library</a>
+      <a href="electrical/three-phase-power-calculator.html">Three-Phase Power &amp; Current Calculator</a>
+      <a href="electrical/transformer-generator-sizing.html">Transformer / Genset Sizing</a>
+      <a href="electrical/ups-battery-autonomy-sizing.html">Battery / UPS Autonomy Sizing</a>
+      <a href="electrical/voltage-drop-calculator.html">Voltage Drop Calculator</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Mechanical</h2></div>
+    <div class="sm-grid">
+      <a href="mechanical/index.html">Mechanical Index</a>
+      <a href="mechanical/belt-drive-calculator.html">Belt Drive Calculator</a>
+      <a href="mechanical/bolt-torque-calculator.html">Bolt Torque Calculator</a>
+      <a href="mechanical/comparisons.html">Mechanical Comparisons</a>
+      <a href="mechanical/duct-sizing-calculator.html">Duct Sizing Calculator</a>
+      <a href="mechanical/guides.html">Mechanical Engineering Guides</a>
+      <a href="mechanical/heat-load-calculator.html">Heat Load Calculator</a>
+      <a href="mechanical/notes.html">Mechanical Learning Notes</a>
+      <a href="mechanical/pipe-flow-head-loss-calculator.html">Pipe Flow &amp; Head Loss Calculator</a>
+      <a href="mechanical/pump-fan-affinity-laws-calculator.html">Pump/Fan Affinity Laws Calculator</a>
+      <a href="mechanical/pump-power-npsh-calculator.html">Pump Power &amp; NPSH Calculator</a>
+      <a href="mechanical/symbols.html">Mechanical &amp; P&amp;ID Symbols Reference</a>
+      <a href="mechanical/thermal-expansion-calculator.html">Pipe Thermal Expansion Calculator</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>HVAC</h2></div>
+    <div class="sm-grid">
+      <a href="hvac/index.html">HVAC Index</a>
+      <a href="hvac/chiller-capacity-calculator.html">Chiller Capacity Calculator</a>
+      <a href="hvac/comparisons.html">HVAC Comparisons</a>
+      <a href="hvac/cooling-load-calculator.html">Sensible + Latent Cooling Load Calculator</a>
+      <a href="hvac/duct-sizing-calculator.html">Duct Sizing &amp; Air Changes Calculator</a>
+      <a href="hvac/guides.html">HVAC Engineering Guides</a>
+      <a href="hvac/notes.html">HVAC Learning Notes</a>
+      <a href="hvac/pipe-insulation-heat-loss-calculator.html">Pipe Insulation Heat Loss Calculator</a>
+      <a href="hvac/sensible-heat-airflow-calculator.html">Sensible Heat / Supply Airflow Calculator</a>
+      <a href="hvac/symbols.html">HVAC Symbol Library</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Civil</h2></div>
+    <div class="sm-grid">
+      <a href="civil/index.html">Civil Index</a>
+      <a href="civil/beam-bending.html">Beam Bending</a>
+      <a href="civil/column-capacity.html">Column Capacity</a>
+      <a href="civil/comparisons.html">Civil Engineering Comparisons</a>
+      <a href="civil/concrete-volume-estimator.html">Concrete Volume &amp; Material Estimator</a>
+      <a href="civil/footing-sizing.html">Footing Sizing</a>
+      <a href="civil/guides.html">Civil Engineering Guides</a>
+      <a href="civil/notes.html">Civil Learning Notes</a>
+      <a href="civil/retaining-wall.html">Retaining Wall</a>
+      <a href="civil/slab-on-grade-thickness.html">Slab-on-Grade Quick Thickness</a>
+      <a href="civil/staircase-geometry.html">Staircase Geometry Check</a>
+      <a href="civil/symbols.html">Civil Symbol Library</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Automation</h2></div>
+    <div class="sm-grid">
+      <a href="automation/index.html">Automation Index</a>
+      <a href="automation/comparisons.html">Automation Comparisons</a>
+      <a href="automation/guides.html">Automation Engineering Guides</a>
+      <a href="automation/level-transmitter.html">DP Level Transmitter</a>
+      <a href="automation/notes.html">Automation Learning Notes</a>
+      <a href="automation/pid-tuning.html">PID Tuning</a>
+      <a href="automation/signal-scaling.html">Signal Scaling</a>
+      <a href="automation/symbols.html">Automation Symbol Library</a>
+      <a href="automation/valve-sizing.html">Control Valve Sizing</a>
+      <a href="automation/vfd-scaling.html">VFD Speed Scaling</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Solar</h2></div>
+    <div class="sm-grid">
+      <a href="solar/index.html">Solar Index</a>
+      <a href="solar/charge-controller-sizing-calculator.html">Charge Controller Sizing Calculator</a>
+      <a href="solar/co2-offset-calculator.html">CO2 Offset &amp; Environmental Savings Calculator</a>
+      <a href="solar/comparisons.html">Solar Comparisons</a>
+      <a href="solar/dc-cable-voltage-drop-calculator.html">DC Cable Sizing &amp; Voltage Drop Calculator</a>
+      <a href="solar/guides.html">Solar Engineering Guides</a>
+      <a href="solar/notes.html">Solar Learning Notes</a>
+      <a href="solar/panel-tilt-orientation-calculator.html">Panel Tilt &amp; Orientation Calculator</a>
+      <a href="solar/pv-string-sizing-calculator.html">PV String Sizing &amp; Voltage Calculator</a>
+      <a href="solar/row-spacing-calculator.html">Row Spacing &amp; Self-Shading Calculator</a>
+      <a href="solar/solar-payback-calculator.html">Solar Payback &amp; ROI Calculator</a>
+      <a href="solar/solar-sizing-calculator.html">Solar Sizing Calculator</a>
+      <a href="solar/symbols.html">Solar Symbol Library</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Project Management</h2></div>
+    <div class="sm-grid">
+      <a href="pm/index.html">Project Management Index</a>
+      <a href="pm/commercial-terms.html">Commercial Terms Reference</a>
+      <a href="pm/evm.html">Earned Value Management</a>
+      <a href="pm/glossary.html">PM Glossary</a>
+      <a href="pm/incoterms.html">Incoterms Reference</a>
+      <a href="pm/meeting-minutes.html">Meeting Minutes &amp; Action Items</a>
+      <a href="pm/permit-to-work.html">Permit to Work / LOTO Checklist</a>
+      <a href="pm/pmp-pmbok-reference.html">PMP / PMBOK Reference</a>
+      <a href="pm/punch-list.html">Punch List / Snag Tracker</a>
+      <a href="pm/raci-matrix.html">RACI Matrix Builder</a>
+      <a href="pm/risk-register.html">Risk Register</a>
+      <a href="pm/task-tracker.html">Action / Task Tracker</a>
+      <a href="pm/team-directory.html">Team Directory</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>General Tools</h2></div>
+    <div class="sm-grid">
+      <a href="general/index.html">General Tools Index</a>
+      <a href="general/base-converter.html">Number Base Converter</a>
+      <a href="general/date-calculator.html">Date / Business-Day Calc</a>
+      <a href="general/fraction-decimal.html">Fraction / Decimal</a>
+      <a href="general/markup-margin.html">Markup / Margin</a>
+      <a href="general/percentage-calculator.html">Percentage Calculator</a>
+      <a href="general/term-translator.html">Site Term Translator</a>
+      <a href="general/time-duration-calculator.html">Time Duration Calculator</a>
+      <a href="general/unit-converter.html">Unit Converter</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Study Abroad</h2></div>
+    <div class="sm-grid">
+      <a href="study-abroad/index.html">Study Abroad Tools</a>
+      <a href="study-abroad/application-timeline-planner.html">Application Timeline Planner</a>
+      <a href="study-abroad/cost-of-living-calculator.html">Cost of Living Calculator</a>
+      <a href="study-abroad/currency-converter.html">Currency Converter</a>
+      <a href="study-abroad/education-loan-emi-calculator.html">Education Loan EMI Calculator</a>
+      <a href="study-abroad/notes.html">Study Abroad Notes</a>
+      <a href="study-abroad/score-calculator.html">Score Calculator</a>
+      <a href="study-abroad/sop-word-checker.html">SOP / Essay Word Checker</a>
+      <a href="study-abroad/university-fee-comparison.html">University Fee Comparison</a>
+      <a href="study-abroad/visa-points-calculator.html">Visa Points Calculator</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Interview Prep</h2></div>
+    <div class="sm-grid">
+      <a href="interview/index.html">Engineering Interview Questions</a>
+      <a href="interview/automation.html">Automation &amp; Instrumentation Interview Questions</a>
+      <a href="interview/civil.html">Civil Engineering Interview Questions</a>
+      <a href="interview/electrical.html">Electrical Engineering Interview Questions</a>
+      <a href="interview/general.html">General &amp; Behavioral Engineering Interview Questions</a>
+      <a href="interview/hvac.html">HVAC Engineering Interview Questions</a>
+      <a href="interview/mechanical.html">Mechanical Engineering Interview Questions</a>
+      <a href="interview/pm.html">Project Management Interview Questions</a>
+      <a href="interview/solar.html">Solar Engineering Interview Questions</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Blog</h2></div>
+    <div class="sm-grid">
+      <a href="posts/index.html">Posts</a>
+      <a href="posts/4-20ma-current-loop-basics.html">4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</a>
+      <a href="posts/ansi-relay-numbers-protection-functions.html">ANSI Relay Numbers: Common Protection Relay Functions</a>
+      <a href="posts/bearing-failure-modes-causes-prevention.html">Bearing Failures: Root Causes &amp; Prevention</a>
+      <a href="posts/belt-drive-sizing-speed-ratio-vs-tension.html">Belt Drive Sizing: Why the Speed Ratio Alone Doesn&#x27;t Tell You the Tension</a>
+      <a href="posts/bms-point-types-explained.html">BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</a>
+      <a href="posts/bolt-torque-vs-preload-nut-factor.html">Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</a>
+      <a href="posts/breaker-selectivity-discrimination-explained.html">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a>
+      <a href="posts/busbar-sizing-thermal-electrodynamic-withstand.html">Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</a>
+      <a href="posts/cable-gland-overview-selection-guide.html">Cable Glands: What They Do and How to Get the Selection Right</a>
+      <a href="posts/cable-size-current-capacity-guide.html">Cable Size &amp; Current Capacity: A Practical Selection Guide</a>
+      <a href="posts/chilled-water-hvac-system-explained.html">Chilled Water HVAC Systems: How the Loop Actually Works</a>
+      <a href="posts/chiller-capacity-cop-condenser-heat-rejection.html">Chiller Capacity and COP: Where the Compressor&#x27;s Work Actually Goes</a>
+      <a href="posts/conduit-fill-why-the-percentage-limit-exists.html">Conduit Fill: Why 40% Isn&#x27;t an Arbitrary Number</a>
+      <a href="posts/control-valve-cv-sizing-oversizing-mistake.html">Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</a>
+      <a href="posts/duct-sizing-velocity-limits-vs-airflow.html">Duct Sizing: Why Velocity Limits Matter as Much as Airflow</a>
+      <a href="posts/earned-value-management-basics.html">Earned Value Management: Reading Project Health From Three Numbers</a>
+      <a href="posts/earthing-grounding-systems-explained.html">Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</a>
+      <a href="posts/elv-extra-low-voltage-systems-explained.html">What Is an ELV System? Types, Components &amp; the BIM Engineer&#x27;s Role</a>
+      <a href="posts/harmonics-sources-effects-mitigation.html">Harmonics in Power Systems: Sources, Effects and How to Mitigate Them</a>
+      <a href="posts/harmonics-thd-k-factor-transformer-derating.html">Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer</a>
+      <a href="posts/heat-pump-sizing-basics.html">Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</a>
+      <a href="posts/is-iec-ieee-electrical-standards-reference.html">IS, IEC &amp; IEEE Codes: The Standards Behind Electrical Engineering</a>
+      <a href="posts/k-rated-transformer-explained.html">K-Rated Transformers: What K-Factor Means and When You Need One</a>
+      <a href="posts/kw-kva-kvar-difference-explained.html">kW, kVA, and kVAR: What Actually Separates Them</a>
+      <a href="posts/lighting-lumen-method-luminaire-count.html">Lighting Design by the Lumen Method: Why Luminaire Count Isn&#x27;t Just Lumens ÷ Lux</a>
+      <a href="posts/load-estimation-first-step-electrical-design.html">Load Estimation: The First Step in Electrical Design</a>
+      <a href="posts/lv-panel-estimate-boq-from-incomer.html">LV Panel Estimating: Why a Budgetary BOQ Starts With the Incomer, Not the Steel</a>
+      <a href="posts/lv-panel-forms-of-construction-iec-61439.html">IEC 61439 Forms of Construction: Form 1 to Form 4 Explained</a>
+      <a href="posts/npsh-margin-why-passing-on-paper-can-still-cavitate.html">NPSH Margin: Why &#x27;NPSHa &gt; NPSHr&#x27; Isn&#x27;t Enough on Its Own</a>
+      <a href="posts/pid-controller-tuning-basics.html">PID Controller Tuning Basics: What P, I, and D Actually Do</a>
+      <a href="posts/pipe-flow-head-loss-reynolds-number-regime.html">Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies</a>
+      <a href="posts/pipe-thermal-expansion-why-long-runs-move-more.html">Pipe Thermal Expansion: Why a 100m Run Moves More Than You&#x27;d Guess</a>
+      <a href="posts/plc-vs-ddc-key-differences.html">PLC vs DDC: What Actually Separates Them</a>
+      <a href="posts/pump-cavitation-causes-prevention.html">Cavitation in Pumps: Causes, Warning Signs, and Prevention</a>
+      <a href="posts/pv-string-sizing-voltage.html">PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</a>
+      <a href="posts/retaining-wall-design-basics-overturning-sliding-bearing.html">Retaining Wall Design Basics: Why Overturning, Sliding &amp; Bearing All Have to Pass</a>
+      <a href="posts/sensible-vs-latent-heat-cooling-load.html">Sensible vs. Latent Heat: Why Cooling Load Isn&#x27;t Just Temperature</a>
+      <a href="posts/short-circuit-current-iec-60909-basics.html">Prospective Short-Circuit Current: Why It Falls the Further You Are From Source</a>
+      <a href="posts/signal-scaling-4-20ma-engineering-units.html">Signal Scaling: Turning a 4–20mA Loop Into an Engineering Value</a>
+      <a href="posts/soil-bearing-capacity-footing-sizing.html">Soil Bearing Capacity: Why It Decides Your Footing Size, Not Just Column Load</a>
+      <a href="posts/solar-panel-tilt-orientation-annual-yield.html">Solar Panel Tilt &amp; Orientation: Why Latitude Isn&#x27;t the Whole Answer</a>
+      <a href="posts/transformer-generator-sizing-motor-starting.html">Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load</a>
+      <a href="posts/ups-battery-autonomy-sizing-derating-factors.html">UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get</a>
+      <a href="posts/vfd-speed-scaling-affinity-laws-energy-savings.html">VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings</a>
+      <a href="posts/voltage-drop-lv-feeders-explained.html">Voltage Drop in LV Feeders: Why It&#x27;s a Chain, Not a Single Number</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><h2>Learning Notes</h2></div>
+    <div class="sm-grid">
+      <a href="notes/index.html">Learning Notes</a>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div>Engineering Studies Toolkit — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="about.html">About</a> &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+</body>
+</html>
