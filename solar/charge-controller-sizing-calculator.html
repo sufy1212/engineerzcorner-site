@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charge Controller Sizing Calculator | Engineering Studies Toolkit</title>
+<meta name="description" content="Solar charge controller sizing for both PWM (current-based) and MPPT (voltage and current checked) controller types, from array Isc, Voc and power.">
+<link rel="canonical" href="https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator.html">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Charge Controller Sizing Calculator — PWM &amp; MPPT">
+<meta property="og:description" content="Solar charge controller sizing for both PWM (current-based) and MPPT (voltage and current checked) controller types, from array Isc, Voc and power.">
+<meta property="og:url" content="https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator.html">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Charge Controller Sizing Calculator — PWM &amp; MPPT">
+<meta name="twitter:description" content="Solar charge controller sizing for both PWM (current-based) and MPPT (voltage and current checked) controller types, from array Isc, Voc and power.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23151A24'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23F0B429'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  :root{
+    --amber:#F0B429 !important; --amber-deep:#B9860A !important;
+    --blue:#FFDD8A !important; --plate:#151A24 !important; --plate-2:#1E2536 !important;
+  }
+  html,body{background:#FFFFFF !important;overflow-x:hidden;}
+  body{background-image:none !important;}
+  ::selection{background:rgba(240,180,41,.22) !important;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solar",
+      "item": "https://www.engineerzcorner.com/solar/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Charge Controller Sizing Calculator",
+      "item": "https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Charge Controller Sizing Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Solar charge controller sizing for both PWM (current-based) and MPPT (voltage and current checked) controller types, from array Isc, Voc and power.",
+  "url": "https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator.html",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Solar</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Charge Controller Sizing Calculator</span></div></nav>
+
+<main id="mainContent" class="wrap">
+  <p style="margin:18px 0 0;"><a href="../index.html">&larr; Back to full toolkit</a></p>
+<div class="page active" id="page-charge-controller-sizing">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"></rect><line x1="22" y1="10" x2="22" y2="14"></line><line x1="6" y1="10" x2="6" y2="14"></line><line x1="10" y1="10" x2="10" y2="14"></line></svg></div>
+    <div><h1>Charge Controller Sizing Calculator</h1><div class="hero-sub">PWM current rating and MPPT voltage/current checks, side by side</div></div>
+  </div>
+  <div class="mech-tabs">
+    <a href="index.html">Solar Index</a>
+    <a href="solar-sizing-calculator.html">SO.01 Sizing Tools</a>
+    <a href="charge-controller-sizing-calculator.html" class="current">SO.12 Charge Controller</a>
+    <a href="notes.html">SO.02 Notes</a>
+  </div>
+  <div class="intro">PWM and MPPT controllers are sized differently — PWM is a straightforward current check against the array's short-circuit current, while MPPT also needs the array's cold-weather Voc checked against the controller's maximum input voltage rating. Use whichever step matches your controller type.</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>PWM Controller Sizing</h2></div>
+    <div class="step-desc">PWM controllers connect the array near-directly to the battery bank, so they're sized on current alone, with a standard safety margin for the array's short-circuit current.</div>
+    <div class="row2">
+      <div class="field"><label>Array short-circuit current (Isc) <span class="unit">A</span></label><input type="number" id="ccIsc" value="9.5" step="0.1"></div>
+      <div class="field"><label>Safety factor <span class="unit">typically 1.25</span></label><input type="number" id="ccPwmFactor" value="1.25" step="0.05"></div>
+    </div>
+    <div class="result-line"><span class="rlabel">Minimum PWM Controller Rating</span><span class="rval" id="ccPwmRating">0.00 <small>A</small></span></div>
+    <div class="hint" style="margin:0 16px 12px;">PWM controllers need the array's nominal voltage to roughly match the battery bank voltage — they can't step voltage down.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>MPPT Controller Sizing</h2></div>
+    <div class="step-desc">MPPT controllers can accept a higher array voltage than the battery bank and convert it down, so they're checked on both maximum input voltage and output current.</div>
+    <div class="row2">
+      <div class="field"><label>Array power (STC) <span class="unit">W</span></label><input type="number" id="ccArrayW" value="2000" step="50"></div>
+      <div class="field"><label>Battery bank voltage <span class="unit">V</span></label><input type="number" id="ccBattVolt" value="48" step="1"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>Array cold-adjusted Voc <span class="unit">V</span></label><input type="number" id="ccVoc" value="185" step="1"></div>
+      <div class="field"><label>Controller max input voltage <span class="unit">V (from datasheet)</span></label><input type="number" id="ccMaxVin" value="250" step="1"></div>
+    </div>
+    <div class="result-line"><span class="rlabel">Minimum MPPT Output Current</span><span class="rval" id="ccMpptRating">0.00 <small>A</small></span></div>
+    <div class="hint" style="margin:0 16px 12px;" id="ccVocNote">—</div>
+  </div>
+
+
+  <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+    <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+  </div>
+
+  <footer>Charge controller sizing — a first-pass check using common safety-factor rules of thumb, not a substitute for the specific manufacturer's datasheet and installation manual. <a href="index.html">&larr; Solar Index</a></footer>
+</div>
+</main>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  function calcPwm(){
+    var isc = num('ccIsc');
+    var factor = num('ccPwmFactor');
+    var rating = isc * factor;
+    setText('ccPwmRating', fmt(rating,2)+' <small>A</small>');
+  }
+
+  function calcMppt(){
+    var arrayW = num('ccArrayW');
+    var battV = num('ccBattVolt');
+    var voc = num('ccVoc');
+    var maxVin = num('ccMaxVin');
+
+    var rating = (battV>0) ? (arrayW/battV) * 1.25 : NaN;
+    setText('ccMpptRating', fmt(rating,2)+' <small>A</small>');
+
+    if(isFinite(voc) && isFinite(maxVin)){
+      if(voc > maxVin){
+        setText('ccVocNote', 'Cold-adjusted Voc ('+fmt(voc,1)+'V) exceeds the controller\'s max input voltage ('+fmt(maxVin,1)+'V) — reduce panels in series or pick a higher-voltage controller.');
+      } else {
+        setText('ccVocNote', 'Cold-adjusted Voc ('+fmt(voc,1)+'V) is within the controller\'s max input voltage ('+fmt(maxVin,1)+'V), with '+fmt(maxVin-voc,1)+'V of headroom.');
+      }
+    } else {
+      setText('ccVocNote', '—');
+    }
+  }
+
+  ['ccIsc','ccPwmFactor'].forEach(function(id){
+    var e = el(id);
+    e.addEventListener('input', calcPwm);
+    e.addEventListener('change', calcPwm);
+  });
+  ['ccArrayW','ccBattVolt','ccVoc','ccMaxVin'].forEach(function(id){
+    var e = el(id);
+    e.addEventListener('input', calcMppt);
+    e.addEventListener('change', calcMppt);
+  });
+
+  calcPwm();
+  calcMppt();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
