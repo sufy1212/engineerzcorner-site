@@ -49,12 +49,14 @@
     border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
   }
   .pagehero::before{
-    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    /* diamond tile that flips like a calculator/converter digit */
+    content:'';position:absolute;top:-20px;right:-16px;width:120px;height:120px;
     background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
-    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
-    animation:pgDrift 11s ease-in-out infinite;
+    clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation:pgFlip 5.2s ease-in-out infinite;
+    perspective:400px;
   }
-  @keyframes pgDrift{0%,100%{transform:translate(0,0);}50%{transform:translate(-8px,8px);}}
+  @keyframes pgFlip{0%,42%{transform:rotateY(0deg);}50%{transform:rotateY(90deg);}58%,100%{transform:rotateY(180deg);}}
   @media (prefers-reduced-motion: reduce){.pagehero::before{animation:none;}}
   .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;}
   .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);}
