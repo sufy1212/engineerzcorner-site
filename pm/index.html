@@ -62,6 +62,10 @@
 
   .home-intro{border-left-color:var(--blue) !important;}
 
+  .pm-today{animation:pmTodaySweep 5s ease-in-out infinite;}
+  @keyframes pmTodaySweep{0%,100%{transform:translateX(0);}50%{transform:translateX(120px);}}
+  @media (prefers-reduced-motion: reduce){.pm-today{animation:none;}}
+
   /* tool cards — tint, watermark, teal shadow on hover */
   .tool-card{
     background:linear-gradient(160deg,#FFFFFF 0%,#F2FAFA 100%) !important;
@@ -159,6 +163,22 @@
   <div class="pagehero">
     <h1>Project Management — Index</h1>
   </div>
+
+  <div class="hero-graphic">
+    <div class="hero-graphic-label">Fig. P1 — Tasks against the schedule line</div>
+    <svg viewBox="0 0 240 110" fill="none" stroke="#8B93B8" stroke-width="2">
+      <rect x="30" y="18" width="110" height="14" rx="4" fill="var(--blue)" fill-opacity=".3" stroke="var(--blue)"></rect>
+      <rect x="30" y="44" width="150" height="14" rx="4" fill="var(--amber)" fill-opacity=".3" stroke="var(--amber)"></rect>
+      <rect x="30" y="70" width="80" height="14" rx="4" fill="var(--blue)" fill-opacity=".3" stroke="var(--blue)"></rect>
+      <circle class="an-pulse" cx="140" cy="25" r="5" fill="#F3EEDD"></circle>
+      <g class="pm-today">
+        <line x1="30" y1="10" x2="30" y2="92" stroke="#F3EEDD" stroke-width="1.6" stroke-dasharray="4 3"></line>
+        <circle cx="30" cy="10" r="3" fill="#F3EEDD"></circle>
+      </g>
+      <text x="30" y="102" fill="#B7BEDB" font-size="8" font-family="monospace">today —&gt;</text>
+    </svg>
+  </div>
+
   <div class="home-intro">Twelve standalone tools for running the team and commercial side of a project, not the engineering side — who's doing what, what could go wrong, what's overdue, what got said in the last meeting, how the budget and schedule are actually tracking, the contract vocabulary that ties it together, and the PMBOK structure it all maps back to. Pick one below.</div>
 
   <div class="tool-grid">
