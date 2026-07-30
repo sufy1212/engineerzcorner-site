@@ -50,6 +50,21 @@
     background:radial-gradient(circle, rgba(240,180,41,.14) 0%, transparent 70%);pointer-events:none;
   }
   .tool-card:hover{box-shadow:0 10px 24px rgba(240,180,41,.20) !important;}
+
+  /* contained gold banner behind the page title — a slow-turning sunburst */
+  .pagehero{
+    background:linear-gradient(155deg, var(--plate) 0%, #B9860A 100%);
+    border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
+  }
+  .pagehero::before{
+    content:'';position:absolute;top:-34px;right:-34px;width:150px;height:150px;
+    background:linear-gradient(135deg,#FFE9A8,#F0B429);opacity:.32;
+    clip-path:polygon(50% 0%,61% 35%,95% 25%,71% 52%,95% 79%,61% 69%,50% 100%,39% 69%,5% 79%,29% 52%,5% 25%,39% 35%);
+    animation:pgSunburst 16s linear infinite;
+  }
+  @keyframes pgSunburst{ to{ transform:rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){.pagehero::before{animation:none;}}
+  .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;}
 </style>
 <script type="application/ld+json">
 {
@@ -127,6 +142,27 @@
 
   <div class="pagehero">
     <h1>Solar — Calculator Index</h1>
+  </div>
+
+  <div class="hero-graphic">
+    <div class="hero-graphic-label">Fig. S1 — Sun to panel to battery, one string</div>
+    <svg viewBox="0 0 240 110" fill="none" stroke="#8B93B8" stroke-width="2">
+      <circle cx="28" cy="32" r="10" fill="var(--amber)" fill-opacity=".22" stroke="var(--amber)"></circle>
+      <g class="an-pulse" stroke="var(--amber)" stroke-width="1.6">
+        <path d="M28 14v-6M28 50v6M10 32h-6M46 32h6M15 19l-4-4M41 19l4-4M15 45l-4 4M41 45l4 4"></path>
+      </g>
+      <g transform="translate(62,20) rotate(-6)">
+        <rect x="0" y="0" width="72" height="44" rx="2" stroke="var(--blue)"></rect>
+        <path d="M0 15h72M0 29h72M24 0v44M48 0v44" stroke="#4A5170" stroke-width="1"></path>
+      </g>
+      <path class="an-flow" d="M142 46 H176" stroke="#F3EEDD" stroke-width="1.6" stroke-dasharray="6 5"></path>
+      <rect x="180" y="28" width="26" height="46" rx="2" stroke="var(--blue)"></rect>
+      <path d="M188 22h10v6h-10z" fill="var(--blue)" stroke="var(--blue)"></path>
+      <rect class="an-pulse" x="185" y="52" width="16" height="16" fill="var(--amber)" fill-opacity=".4" stroke="none"></rect>
+      <text x="8" y="55" fill="#B7BEDB" font-size="8" font-family="monospace">sun</text>
+      <text x="86" y="76" fill="#B7BEDB" font-size="8" font-family="monospace">PV array</text>
+      <text x="180" y="88" fill="#B7BEDB" font-size="8" font-family="monospace">batt</text>
+    </svg>
   </div>
 
   <div class="home-intro">Array sizing, battery storage and inverter sizing, chained together on one sheet — plus PV string voltage checks, a payback/ROI calculator, tilt &amp; orientation guidance, a learning-notes reference, a click-to-explore symbol library, step-by-step engineering guides, and head-to-head equipment comparisons. First-pass sizing for budgeting and layout; always confirm against a manufacturer's design tool and your site's actual irradiance data before ordering equipment.</div>
