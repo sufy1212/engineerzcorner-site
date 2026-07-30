@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231E2226'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23D68A4C' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D68A4C'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Load / Cooling Simulator — Live Sizing — Mechanical Toolkit</title>
+<meta name="description" content="Interactive cooling load simulator. Drag sliders for occupancy, floor area and outdoor design temperature and watch the load breakdown and tonnage update live.">
+<link rel="canonical" href="https://www.engineerzcorner.com/mechanical/heat-load-simulator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Heat Load / Cooling Simulator — Live Sizing — Mechanical Toolkit">
+<meta property="og:description" content="Drag sliders for occupancy, floor area and outdoor design temperature and watch the cooling load breakdown update live.">
+<meta property="og:url" content="https://www.engineerzcorner.com/mechanical/heat-load-simulator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heat Load / Cooling Simulator — Live Sizing — Mechanical Toolkit">
+<meta name="twitter:description" content="Drag sliders for occupancy, floor area and outdoor design temperature and watch the cooling load breakdown update live.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F3F4FA; --sheet:#FFFFFF; --sheet-2:#F7F8FC; --line:#E1E3F0; --line-soft:#ECEEF7;
+    --ink:#181B29; --ink-dim:#565A74; --ink-faint:#8D91AA;
+    --plate:#181B2E; --plate-2:#23273D;
+    --amber:#D68A4C; --amber-deep:#B8672A;
+    --blue:#0D9488; --green:#16A34A; --red:#DC2626;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);}
+  body{background-image:repeating-linear-gradient(115deg, rgba(24,27,41,.025) 0px, rgba(24,27,41,.025) 1px, transparent 1px, transparent 5px);background-color:var(--paper);}
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px 60px;}
+  ::selection{background:rgba(214,138,76,.24);}
+  :focus-visible{outline:2px solid var(--amber-deep);outline-offset:2px;}
+
+  .ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+  .ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+  .ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+  .ec-crumb-inner a:hover{color:#E8B278;}
+  .ec-crumb-sep{color:#4A4D68;}
+  .ec-crumb-current{color:#E8B278;font-weight:600;}
+  .back-link{color:#8F92B8;font-family:var(--font-mono);font-size:11px;text-decoration:none;}
+  .back-link:hover{color:var(--amber-deep);}
+
+  .pagehero{display:flex;align-items:center;gap:14px;margin:20px 0 2px;flex-wrap:wrap;}
+  .pagehero .hero-icon{display:flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;background:linear-gradient(135deg, var(--amber), var(--amber-deep));color:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(214,138,76,.35);}
+  .pagehero .hero-icon svg{width:23px;height:23px;}
+  h1{font-family:var(--font-display);font-size:23px;margin:0;color:var(--ink);font-weight:800;letter-spacing:-.01em;}
+  .hero-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.05em;}
+
+  .intro{background:var(--sheet);border:1px solid var(--line);border-left:3px solid var(--amber-deep);border-radius:0 6px 6px 0;padding:13px 16px;font-size:13px;color:var(--ink-dim);line-height:1.65;margin:10px 0 18px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .intro b{color:var(--ink);}
+
+  .step{background:var(--sheet);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .step-head{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg, var(--plate), var(--plate-2));padding:12px 16px;margin:0;}
+  .step-num{font-family:var(--font-mono);font-size:10.5px;color:#fff;background:linear-gradient(135deg, var(--amber), var(--amber-deep));padding:2px 8px;border-radius:50%;flex:none;font-weight:700;letter-spacing:.04em;}
+  .step h2{font-family:var(--font-display);font-size:13.5px;margin:0;color:#F1F0FB;font-weight:600;letter-spacing:.03em;text-transform:uppercase;}
+  .step-desc{font-size:12.5px;color:var(--ink-faint);margin:0;padding:10px 16px 4px;line-height:1.55;}
+
+  .field{margin:0 0 16px;padding-top:2px;}
+  .step > .field, .step > .radiorow{margin-left:16px;margin-right:16px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  @media(max-width:520px){.row3{grid-template-columns:1fr 1fr;}}
+  .field label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;font-weight:600;}
+  .field label .unit{color:var(--amber-deep);font-family:var(--font-mono);font-size:9.5px;font-weight:700;}
+  input[type=number], input[type=text], select{width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--line);color:var(--ink);font-family:var(--font-mono);font-size:14.5px;padding:6px 2px 8px;outline:none;border-radius:0;}
+  input:hover, select:hover{border-bottom-color:var(--ink-faint);}
+  input:focus, select:focus{border-bottom-color:var(--amber-deep);border-bottom-width:2px;padding-bottom:7px;}
+  select{cursor:pointer;}
+  .hint{font-size:11px;color:var(--ink-faint);margin-top:6px;line-height:1.5;}
+  details{margin:10px 16px 14px;}
+  summary{cursor:pointer;font-size:10.5px;color:var(--ink-faint);font-family:var(--font-mono);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;}
+  summary:hover{color:var(--amber-deep);}
+  .formula-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:var(--sheet-2);border:1px dashed var(--line);border-radius:5px;padding:12px 14px;margin:8px 16px 0;line-height:1.75;}
+  .formula-note b{color:var(--amber-deep);}
+  footer{margin:22px 16px 0;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);border-top:1px solid var(--line-soft);padding:14px 0 18px;line-height:1.6;}
+
+  /* ===== sliders ===== */
+  .slider-card{margin:0 16px 12px;background:var(--sheet-2);border:1px solid var(--line-soft);border-radius:10px;padding:12px 16px;}
+  .slider-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+  .slider-head .slabel{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;}
+  .slider-head .sval{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--amber-deep);}
+  input[type=range]{width:100%;accent-color:var(--amber-deep);height:5px;cursor:pointer;}
+
+  /* ===== breakdown bars ===== */
+  .chart-wrap{background:var(--plate);border-radius:10px;padding:16px 14px 12px;margin:0 16px 14px;box-shadow:0 4px 16px rgba(24,27,41,.18);}
+  .chart-title{font-family:var(--font-mono);font-size:10px;color:#B8BAD9;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin:0 2px 10px;}
+  .bar-row{display:grid;grid-template-columns:110px 1fr 70px;align-items:center;gap:10px;margin-bottom:9px;}
+  .bar-name{font-family:var(--font-mono);font-size:10.5px;color:#D6D8ED;}
+  .bar-track{background:#23253D;border-radius:4px;height:16px;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:4px;transition:width .25s ease;}
+  .bar-val{font-family:var(--font-mono);font-size:10.5px;color:#F3EEDD;text-align:right;}
+
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 16px 14px;}
+  @media(max-width:520px){.stat-grid{grid-template-columns:1fr 1fr;}}
+  .stat{background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.6);border-radius:10px;box-shadow:0 4px 16px rgba(24,27,46,.08);padding:12px 14px;}
+  .stat .slabel2{font-family:var(--font-mono);font-size:9px;color:var(--ink-faint);letter-spacing:.07em;text-transform:uppercase;font-weight:600;}
+  .stat .sval2{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--ink);margin-top:3px;}
+  .stat .sval2.amber{color:var(--amber-deep);}
+
+  .status-banner{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:5px;font-size:12.5px;font-weight:700;margin:0 16px 14px;border:1px solid;font-family:var(--font-mono);background:var(--sheet-2);border-color:var(--line);color:var(--ink-dim);}
+  .status-dot{width:7px;height:7px;border-radius:50%;flex:none;background:var(--amber-deep);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Heat Load / Cooling Simulator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Interactive cooling load simulator with live sliders for occupancy, floor area and outdoor design temperature, showing a live load breakdown by source and resulting tonnage.",
+  "url": "https://www.engineerzcorner.com/mechanical/heat-load-simulator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Mechanical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Heat Load Simulator</span></div></nav>
+
+<a href="index.html" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to Mechanical toolkit</a>
+<div class="wrap">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></div>
+    <div><h1>Heat Load / Cooling Simulator</h1><div class="hero-sub">Live sizing · drag sliders, watch the breakdown</div></div>
+  </div>
+  <div class="intro">
+    Drag the sliders for occupancy, floor area and outdoor design temperature — or tune the fields below — and the load breakdown, total tonnage and BTU/hr update instantly, source by source.
+  </div>
+
+  <!-- STEP 1: SLIDERS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Live Controls</h2></div>
+
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Floor area</span><span class="sval" id="hlAreaVal">80 m²</span></div>
+      <input type="range" id="hlArea" min="10" max="500" step="5" value="80">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Occupants</span><span class="sval" id="hlOccVal">12 people</span></div>
+      <input type="range" id="hlOcc" min="0" max="150" step="1" value="12">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Outdoor design temp.</span><span class="sval" id="hlToutVal">42 °C</span></div>
+      <input type="range" id="hlTout" min="25" max="50" step="1" value="42">
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Internal &amp; Envelope Loads</h2></div>
+    <div class="row3">
+      <div class="field"><label>Indoor setpoint <span class="unit">°C</span></label><input type="number" id="hlTin" value="24" step="0.5"></div>
+      <div class="field"><label>Equipment load <span class="unit">W/m²</span></label><input type="number" id="hlEquip" value="15" step="1"></div>
+      <div class="field"><label>Lighting load <span class="unit">W/m²</span></label><input type="number" id="hlLight" value="10" step="1"></div>
+      <div class="field"><label>Glazing area <span class="unit">m²</span></label><input type="number" id="hlGlass" value="15" step="1"></div>
+      <div class="field"><label>Solar gain factor <span class="unit">W/m² glass</span></label><input type="number" id="hlSolar" value="150" step="10"></div>
+      <div class="field"><label>Envelope U-value <span class="unit">W/m²K</span></label><input type="number" id="hlU" value="0.5" step="0.05"></div>
+      <div class="field"><label>Envelope area <span class="unit">m²</span></label><input type="number" id="hlEnv" value="120" step="5"></div>
+      <div class="field"><label>Fresh air rate <span class="unit">L/s per person</span></label><input type="number" id="hlFA" value="8" step="1"></div>
+      <div class="field"><label>Safety margin <span class="unit">%</span></label><input type="number" id="hlSafety" value="10" step="5"></div>
+    </div>
+  </div>
+
+  <!-- STEP 3: RESULTS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Live Load Breakdown</h2></div>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Cooling load by source</div>
+      <div id="hlBars"></div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="slabel2">Total load</div><div class="sval2 amber" id="hlKW">–</div></div>
+      <div class="stat"><div class="slabel2">Refrigeration tons</div><div class="sval2" id="hlTons">–</div></div>
+      <div class="stat"><div class="slabel2">BTU/hr</div><div class="sval2" id="hlBTU">–</div></div>
+    </div>
+    <div class="status-banner" id="hlBanner"><span class="status-dot"></span><span id="hlBannerText">Adjust the controls above — updates live.</span></div>
+
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        People: <b>130 W/person</b> (sensible + latent, typical office activity).<br>
+        Equipment / Lighting: entered W/m² × floor area.<br>
+        Solar gain: glazing area × solar gain factor (W/m²), reduced by any shading you build into the factor.<br>
+        Transmission: <b>U × Envelope area × (T<sub>out</sub> − T<sub>in</sub>)</b>.<br>
+        Fresh air (sensible): <b>1.2 × (L/s per person × occupants) × (T<sub>out</sub> − T<sub>in</sub>)</b> watts.<br>
+        Total = sum of sources × (1 + safety margin). Tons = kW / 3.517. BTU/hr = kW × 3412.
+      </div>
+      <div class="hint" style="margin-top:8px;">Simplified single design-point ASHRAE-style rule-of-thumb model — no latent-load split, hour-by-hour solar profile, or infiltration term. For a full load calculation use Manual J / CLTD methods or dedicated HVAC load software.</div>
+    </details>
+
+    <footer>Rule-of-thumb sensible cooling load estimate for quick sizing and teaching — not a substitute for a full Manual J / CLTD study.</footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ return parseFloat(document.getElementById(id).value) || 0; }
+
+  var COLORS = {people:'#F59E0B', equip:'#38BDF8', light:'#A78BFA', solar:'#F472B6', trans:'#22C55E', fresh:'#EAB308'};
+
+  function render(){
+    var area=num('hlArea'), occ=num('hlOcc'), Tout=num('hlTout'), Tin=num('hlTin');
+    var equipWm2=num('hlEquip'), lightWm2=num('hlLight'), glass=num('hlGlass'), solarWm2=num('hlSolar');
+    var U=num('hlU'), env=num('hlEnv'), faLs=num('hlFA'), safetyPct=num('hlSafety');
+
+    document.getElementById('hlAreaVal').textContent = area+' m²';
+    document.getElementById('hlOccVal').textContent = occ+' people';
+    document.getElementById('hlToutVal').textContent = Tout+' °C';
+
+    var dT = Math.max(0, Tout-Tin);
+
+    var qPeople = occ*130;
+    var qEquip = equipWm2*area;
+    var qLight = lightWm2*area;
+    var qSolar = glass*solarWm2;
+    var qTrans = U*env*dT;
+    var qFresh = 1.2*(faLs*occ)*dT;
+
+    var sources = [
+      {name:'People', val:qPeople, c:COLORS.people},
+      {name:'Equipment', val:qEquip, c:COLORS.equip},
+      {name:'Lighting', val:qLight, c:COLORS.light},
+      {name:'Solar gain', val:qSolar, c:COLORS.solar},
+      {name:'Transmission', val:qTrans, c:COLORS.trans},
+      {name:'Fresh air', val:qFresh, c:COLORS.fresh}
+    ];
+
+    var subtotal = sources.reduce(function(s,x){return s+x.val;},0);
+    var total = subtotal*(1+safetyPct/100);
+    var maxVal = Math.max.apply(null, sources.map(function(s){return s.val;}));
+
+    var barsEl = document.getElementById('hlBars');
+    barsEl.innerHTML='';
+    sources.forEach(function(s){
+      var pct = maxVal>0 ? (s.val/maxVal)*100 : 0;
+      var row=document.createElement('div');
+      row.className='bar-row';
+      row.innerHTML = '<div class="bar-name">'+s.name+'</div>'+
+        '<div class="bar-track"><div class="bar-fill" style="width:'+pct.toFixed(1)+'%;background:'+s.c+'"></div></div>'+
+        '<div class="bar-val">'+(s.val/1000).toFixed(2)+' kW</div>';
+      barsEl.appendChild(row);
+    });
+
+    var kW = total/1000;
+    var tons = kW/3.517;
+    var btu = kW*3412;
+
+    document.getElementById('hlKW').textContent = kW.toFixed(2)+' kW';
+    document.getElementById('hlTons').textContent = tons.toFixed(2)+' TR';
+    document.getElementById('hlBTU').textContent = Math.round(btu).toLocaleString()+' BTU/hr';
+
+    var wPerM2 = area>0 ? kW*1000/area : 0;
+    document.getElementById('hlBannerText').textContent =
+      'Load density ≈ '+wPerM2.toFixed(0)+' W/m² · dominant source: '+
+      sources.reduce(function(a,b){return b.val>a.val?b:a;}).name+
+      ' · '+safetyPct+'% safety margin included.';
+  }
+
+  document.querySelectorAll('input,select').forEach(function(el){
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

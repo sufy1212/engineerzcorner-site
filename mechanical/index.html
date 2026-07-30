@@ -81,6 +81,7 @@
     pointer-events:none;
   }
   .tool-card:hover{box-shadow:0 10px 24px rgba(214,138,76,.18) !important;}
+  .tool-card-badge{position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:8.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#DC2626,#EA580C);padding:3px 7px;border-radius:20px;z-index:2;}
 
   /* scroll-reveal */
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
@@ -269,6 +270,17 @@
         </div>
       </div>
       <div class="tool-card-desc">Tightening torque for a target bolt preload, by grade and nut factor.</div>
+    </a>
+    <a class="tool-card reveal" href="heat-load-simulator.html">
+      <span class="tool-card-badge">Simulator</span>
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">MH.11</div>
+          <div class="tool-card-title">Heat Load Simulator</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Drag sliders for occupancy, floor area and outdoor design temperature — watch the load breakdown and tonnage update live.</div>
     </a>
     <a class="tool-card reveal" href="guides.html">
       <div class="tool-card-head">
