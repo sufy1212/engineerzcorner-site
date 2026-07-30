@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>MPPT vs PWM Solar Charge Controllers: What Actually Changes</title>
+    <link>https://www.engineerzcorner.com/posts/mppt-vs-pwm-solar-charge-controllers.html</link>
+    <guid>https://www.engineerzcorner.com/posts/mppt-vs-pwm-solar-charge-controllers.html</guid>
+    <description>Why an MPPT controller can pull 20-30% more power than PWM from the same panel, when PWM is still the right call, and how to actually size either one against your battery voltage.</description>
+    <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</guid>
+    <description>The STC nameplate rating on a solar panel assumes lab conditions no rooftop ever sees. A walk through every real-world derate factor and typical loss ranges for each.</description>
+    <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Flame Retardant vs Flame Resistant Cables: Know the Difference</title>
     <link>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables.html</link>
     <guid>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables.html</guid>
