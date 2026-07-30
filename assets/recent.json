@@ -1,17 +1,17 @@
 [
   {
+    "t": "MPPT vs PWM Solar Charge Controllers: What Actually Changes",
+    "u": "posts/mppt-vs-pwm-solar-charge-controllers.html",
+    "d": "2026-07-31"
+  },
+  {
+    "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
+    "u": "posts/solar-panel-derating-factors-explained.html",
+    "d": "2026-07-31"
+  },
+  {
     "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
     "u": "posts/flame-retardant-vs-flame-resistant-cables.html",
-    "d": "2026-07-30"
-  },
-  {
-    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
-    "u": "posts/air-changes-per-hour-ventilation-explained.html",
-    "d": "2026-07-30"
-  },
-  {
-    "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
-    "u": "posts/psychrometric-chart-basics.html",
     "d": "2026-07-30"
   }
 ]
