@@ -43,7 +43,7 @@ const CONTENT_DIRS = [
 // individually "shipped" items.
 const SKIP_FILES = new Set([
   'index.html', 'notes.html', 'guides.html', 'comparisons.html',
-  'symbols.html', 'engineering-guides.html', 'symbol-library.html'
+  'symbols.html', 'guides.html', 'symbol-library.html'
 ]);
 
 const MAX_ITEMS = 3;
