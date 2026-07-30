@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Select a Digital Protection Relay: An 8-Step Guide | Engineerz CorneR</title>
+<meta name="description" content="A step-by-step working method for selecting a digital protection relay — from identifying the protected equipment through CT/VT matching, I/O sizing, communications, and coordination — with a worked 11 kV feeder example.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="How to Select a Digital Protection Relay: An 8-Step Guide">
+<meta property="og:description" content="A step-by-step working method for selecting a digital protection relay, from protected equipment through CT/VT matching, I/O, comms, and coordination, with a worked example.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Select a Digital Protection Relay: An 8-Step Guide">
+<meta name="twitter:description" content="A step-by-step working method for selecting a digital protection relay, with a worked 11 kV feeder example.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1930; --navy-2:#122845; --navy-3:#18325A;
+    --cyan:#5FD3E3; --cyan-dim:#3E8C97;
+    --steel:#D9782E; --steel-dim:#B85F1F;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --lime-dim:#4E8C6A;
+    --font-display:"Space Grotesk",-apple-system,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px 70px;}
+
+  nav.nt-nav{background:var(--navy);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .nt-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .nt-nav-word span{color:var(--cyan);}
+  nav.nt-nav a.nt-back{font-family:var(--font-mono);font-size:11px;color:#9FC2CB;text-decoration:none;}
+  nav.nt-nav a.nt-back:hover{color:#fff;}
+
+  .hero{background:var(--navy);background-image:linear-gradient(rgba(217,120,46,.07) 1px, transparent 1px),linear-gradient(90deg, rgba(217,120,46,.07) 1px, transparent 1px);background-size:32px 32px;padding:38px 0 0;}
+  .hero-inner{max-width:760px;margin:0 auto;padding:0 18px 30px;}
+  .post-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--steel);border-radius:20px;padding:5px 12px;margin-bottom:16px;font-weight:600;}
+  .hero h1{font-family:var(--font-display);font-size:clamp(26px,5.6vw,38px);font-weight:800;line-height:1.18;margin:0 0 12px;color:#F6F1E4;max-width:22ch;}
+  .hero-sub{font-family:var(--font-body);font-size:15.5px;line-height:1.6;color:#B8C9DA;max-width:54ch;margin:0 0 20px;}
+  .post-meta{font-family:var(--font-mono);font-size:11px;color:#7E97AC;display:flex;gap:16px;flex-wrap:wrap;}
+
+  .hero-art{margin:6px 0 0;}
+  .hero-art svg{width:100%;height:auto;display:block;}
+
+  .highlights{display:grid;grid-template-columns:1fr;gap:10px;margin:30px 0 6px;}
+  @media(min-width:560px){ .highlights{grid-template-columns:1fr 1fr;} }
+  .hl-card{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--steel);border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .hl-num{font-family:var(--font-mono);font-size:10.5px;color:var(--steel-dim);font-weight:600;margin-bottom:6px;}
+  .hl-text{font-size:14px;line-height:1.55;color:var(--ink);}
+
+  .post-body{font-size:16px;line-height:1.78;color:var(--ink);margin-top:40px;}
+  .post-body p{margin:0 0 18px;}
+  .post-body h2{font-family:var(--font-display);font-size:21px;font-weight:800;margin:44px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;}
+  .post-body h2 .h2-dot{width:8px;height:8px;border-radius:50%;background:var(--steel);flex:none;}
+  .post-body h2 + .lede{font-size:13.5px;color:var(--ink-dim);margin:0 0 20px;font-family:var(--font-mono);}
+  .post-body h3{font-family:var(--font-display);font-size:16px;font-weight:700;margin:26px 0 10px;}
+
+  .step-card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px;display:flex;gap:16px;align-items:flex-start;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .step-card svg{flex:none;width:64px;height:64px;}
+  .step-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--steel);color:#fff;font-family:var(--font-mono);font-size:11px;font-weight:700;margin-right:8px;flex:none;}
+  .step-card h3{font-family:var(--font-display);font-size:16.5px;font-weight:800;margin:0 0 8px;display:flex;align-items:center;}
+  .step-list{margin:0 0 0;padding:0;list-style:none;}
+  .step-list li{font-size:13.5px;color:var(--ink-dim);line-height:1.5;padding:3px 0 3px 18px;position:relative;}
+  .step-list li::before{content:"→";position:absolute;left:0;color:var(--cyan-dim);font-weight:700;font-size:12px;}
+
+  .ansi-chip{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:22px;padding:0 6px;border-radius:5px;background:var(--navy);color:#F6F1E4;font-family:var(--font-mono);font-weight:700;font-size:12px;}
+
+  .tbl-scroll{overflow-x:auto;margin:0 0 26px;border:1px solid var(--line);border-radius:10px;}
+  table.dtable{width:100%;border-collapse:collapse;font-size:13px;min-width:420px;}
+  table.dtable th{background:var(--navy);color:#F3EEDD;text-align:left;padding:9px 12px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+  table.dtable td{padding:9px 12px;border-top:1px solid var(--line);font-family:var(--font-mono);font-size:12px;color:var(--ink);vertical-align:top;}
+  table.dtable tr:nth-child(even) td{background:var(--bg-2);}
+
+  .mon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 26px;}
+  @media(max-width:680px){ .mon-grid{grid-template-columns:repeat(2,1fr);} }
+  .mon-card{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:14px 8px;text-align:center;}
+  .mon-card svg{width:40px;height:40px;margin:0 auto 8px;display:block;}
+  .mon-card b{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);line-height:1.4;}
+
+  .checklist{margin:0 0 26px;list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 18px;}
+  @media(max-width:560px){ .checklist{grid-template-columns:1fr;} }
+  .checklist li{display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;}
+  .checklist li:nth-child(1),.checklist li:nth-child(2){border-top:none;}
+  .chk-tick{flex:none;width:18px;height:18px;border-radius:5px;background:var(--lime-dim);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:1px;}
+
+  .ex-box{background:var(--navy);border-radius:12px;padding:20px 22px;margin:0 0 26px;color:#EAF1F5;}
+  .ex-box h3{font-family:var(--font-display);font-size:15px;font-weight:800;margin:0 0 12px;color:var(--cyan);}
+  .ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:0 0 14px;}
+  @media(max-width:560px){ .ex-grid{grid-template-columns:1fr;} }
+  .ex-row{display:flex;justify-content:space-between;gap:10px;font-family:var(--font-mono);font-size:12.5px;padding:6px 0;border-top:1px solid rgba(255,255,255,.1);}
+  .ex-grid .ex-row:nth-child(1),.ex-grid .ex-row:nth-child(2){border-top:none;}
+  .ex-row span:first-child{color:#8FB0B6;}
+  .ex-row span:last-child{color:#F6F1E4;font-weight:600;}
+  .ex-calc{background:rgba(255,255,255,.06);border-radius:8px;padding:12px 14px;font-family:var(--font-mono);font-size:12.5px;line-height:1.7;color:#DCEBF0;}
+  .ex-calc b{color:var(--cyan);}
+  .ex-note{margin-top:8px;font-family:var(--font-mono);font-size:11px;color:#D9782E;}
+
+  .takeaways{margin:0 0 10px;list-style:none;padding:0;}
+  .takeaways li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.6;}
+  .takeaways li:first-child{border-top:none;}
+  .tk-check{flex:none;width:20px;height:20px;border-radius:50%;background:var(--cyan-dim);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:2px;}
+
+  .post-related{margin-top:36px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:rgba(127,127,127,.04);}
+  .post-related h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+  .post-related-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6;margin:12px 0 4px;}
+  .post-related-label:first-of-type{margin-top:0;}
+  .post-related ul{list-style:none;margin:0;padding:0;}
+  .post-related li{margin:4px 0;}
+  .post-related a{font-family:var(--font-mono);font-size:13px;color:var(--lime-dim);text-decoration:none;}
+  .post-related a:hover{text-decoration:underline;}
+  .post-foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);}
+  .post-foot a{font-family:var(--font-mono);font-size:12px;color:var(--cyan-dim);text-decoration:none;}
+  .post-foot a:hover{text-decoration:underline;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Select a Digital Protection Relay",
+      "item": "https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Select a Digital Protection Relay: An 8-Step Guide",
+  "description": "A step-by-step working method for selecting a digital protection relay, from protected equipment through CT/VT matching, I/O, comms, and coordination, with a worked example.",
+  "url": "https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">How to Select a Digital Protection Relay</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="index.html">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Protection</span>
+    <h1>How to Select a Digital Protection Relay</h1>
+    <p class="hero-sub">Picking the right relay isn't a catalog lookup &mdash; it's a sequence: know the equipment, gather the system data, match the inputs, then check everything else fits. Here's the working order engineers actually use.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Guide &middot; Electrical / Protection</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="170" x2="760" y2="170" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="330" y="34" width="100" height="130" rx="8" fill="#122845" stroke="#3E8C97" stroke-width="2"/>
+      <rect x="342" y="46" width="76" height="56" rx="3" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.4"/>
+      <text x="380" y="63" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">I L1 320.4A</text>
+      <text x="380" y="75" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">I L2 315.7A</text>
+      <text x="380" y="87" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">I L3 318.9A</text>
+      <circle cx="352" cy="112" r="4" fill="#0A1930" stroke="#4E8C6A" stroke-width="1"/>
+      <circle cx="366" cy="112" r="4" fill="#0A1930" stroke="#D9782E" stroke-width="1"/>
+      <circle cx="380" cy="112" r="4" fill="#0A1930" stroke="#B02E2E" stroke-width="1"/>
+      <circle cx="394" cy="112" r="4" fill="#0A1930" stroke="#B7A339" stroke-width="1"/>
+      <rect x="350" y="126" width="60" height="16" rx="2" fill="#18325A" stroke="#3E8C97" stroke-width="1"/>
+      <line x1="150" y1="100" x2="330" y2="100" stroke="#3E8C97" stroke-width="3"/>
+      <line x1="430" y1="100" x2="610" y2="100" stroke="#3E8C97" stroke-width="3"/>
+      <path d="M150 60 l0 80 M175 60 l0 80 M200 60 l0 80" stroke="#1E3A5C" stroke-width="6"/>
+      <path d="M610 60 l0 80 M635 60 l0 80 M660 60 l0 80" stroke="#1E3A5C" stroke-width="6"/>
+      <text x="90" y="60" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">SOURCE</text>
+      <text x="600" y="60" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">FEEDER</text>
+      <text x="322" y="180" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">DIGITAL PROTECTION RELAY</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Relay selection starts with the equipment being protected, not the relay catalog &mdash; the equipment decides which ANSI functions are actually required.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">CT and VT inputs must match the relay on secondary current/voltage, connection, ratio, and burden &mdash; a mismatch here undermines everything downstream.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">I/O, trip circuits, and communications are frequently the parts that get underspecified, even when the protection functions themselves are chosen correctly.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The selection only finishes with a coordination study &mdash; pickup and time settings that are sensitive, selective, and reliable against neighboring devices.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why relay selection is a sequence, not a spec sheet</h2>
+    <p>It's tempting to shop for a protection relay the way you'd shop for any other panel component &mdash; by price, brand, or a familiar model number. But a relay that's wrong for its application doesn't just underperform, it can fail to trip when it should, or trip when it shouldn't &mdash; either one is a real problem on live equipment. The safer approach is to work through the same eight steps every time: identify what's being protected, gather the system data, match the input signals, select the functions, size the I/O and trip circuits, pick the communications, verify the operating environment, and finally run the coordination study. Skipping a step early tends to surface as a mismatch much later, once the relay is already installed.</p>
+
+    <h2><span class="h2-dot"></span>Step 1 &mdash; Identify the protected equipment</h2>
+    <p class="lede">Different equipment types need different ANSI protection functions from the start.</p>
+
+    <div class="step-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="34" width="40" height="40" rx="3" fill="#122845" stroke="#3E8C97" stroke-width="2"/>
+        <path d="M40 34 v-8 M60 34 v-8" stroke="#5FD3E3" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="40" cy="22" r="3.5" fill="none" stroke="#D9782E" stroke-width="1.6"/>
+        <circle cx="60" cy="22" r="3.5" fill="none" stroke="#D9782E" stroke-width="1.6"/>
+        <line x1="50" y1="74" x2="50" y2="88" stroke="#5FD3E3" stroke-width="2.2"/>
+        <line x1="38" y1="88" x2="62" y2="88" stroke="#3E8C97" stroke-width="2.2"/>
+      </svg>
+      <div>
+        <h3><span class="step-num">1</span>Define equipment &amp; required functions</h3>
+        <ul class="step-list">
+          <li>Feeder: 50/51, 50N/51N, 46, 49, 50BF</li>
+          <li>Transformer: 87T, 64REF, 50/51, 49, 24</li>
+          <li>Motor: 49, 48/51LR, 50/51, 46, 37</li>
+          <li>Generator: 87G, 32, 40, 46, 24, 27/59, 81</li>
+          <li>Busbar: 87B, 50BF, arc flash</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Step 2 &mdash; Collect system information</h2>
+    <p class="lede">The data that shapes every downstream decision.</p>
+    <ul class="checklist">
+      <li><span class="chk-tick">✓</span><span>Single line diagram</span></li>
+      <li><span class="chk-tick">✓</span><span>System voltage, frequency &amp; grounding</span></li>
+      <li><span class="chk-tick">✓</span><span>Max load current, inrush / starting current</span></li>
+      <li><span class="chk-tick">✓</span><span>Max / min 3-phase &amp; earth fault current</span></li>
+      <li><span class="chk-tick">✓</span><span>CT / VT ratios, classes &amp; burden</span></li>
+      <li><span class="chk-tick">✓</span><span>Breaker details (opening time, trip coil)</span></li>
+      <li><span class="chk-tick">✓</span><span>Coordination requirements</span></li>
+      <li><span class="chk-tick">✓</span><span>DC supply (24/48/110/125/220 VDC)</span></li>
+      <li><span class="chk-tick">✓</span><span>Communication &amp; SCADA requirements</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Step 3 &mdash; Match input signals</h2>
+    <p class="lede">CT and VT inputs have to match the relay, not the other way around.</p>
+
+    <div class="step-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="26" fill="none" stroke="#3E8C97" stroke-width="4"/>
+        <circle cx="50" cy="50" r="14" fill="none" stroke="#D9782E" stroke-width="2.4"/>
+        <line x1="50" y1="12" x2="50" y2="24" stroke="#5FD3E3" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="50" y1="76" x2="50" y2="88" stroke="#5FD3E3" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h3><span class="step-num">A</span>Current inputs</h3>
+        <ul class="step-list">
+          <li>Match relay input with CT secondary (1 A or 5 A)</li>
+          <li>3-phase CT inputs + 1 earth CT input</li>
+          <li>Check burden, accuracy, saturation, continuous &amp; short-time current</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="28" y="30" width="20" height="40" rx="2" fill="#122845" stroke="#3E8C97" stroke-width="2"/>
+        <rect x="52" y="30" width="20" height="40" rx="2" fill="#122845" stroke="#3E8C97" stroke-width="2"/>
+        <line x1="38" y1="30" x2="38" y2="20" stroke="#D9782E" stroke-width="2.2"/>
+        <line x1="62" y1="30" x2="62" y2="20" stroke="#D9782E" stroke-width="2.2"/>
+        <path d="M20 78 h60" stroke="#5FD3E3" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h3><span class="step-num">B</span>Voltage inputs (if required)</h3>
+        <ul class="step-list">
+          <li>Match VT secondary (e.g. 100 V or 110 V)</li>
+          <li>3-phase or 3-phase-to-earth connection</li>
+          <li>Residual / open-delta VT if needed</li>
+          <li>Frequency: 50 Hz or 60 Hz</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Step 4 &mdash; Select protection functions</h2>
+    <p>Start from a basic function set and add on top of it as the application demands &mdash; not the reverse. A typical baseline is 50/51, 50N/51N, 46, 49, and 74TCS (trip circuit supervision), with 27/59 and 81U/81O added when undervoltage, overvoltage, or frequency conditions matter, 67/67N added for non-radial or bidirectional systems, and any equipment-specific functions (transformer, motor, generator, busbar, capacitor bank) layered in from Step 1's list.</p>
+
+    <h2><span class="h2-dot"></span>Step 5 &mdash; Check I/O &amp; trip circuits</h2>
+    <p class="lede">The part that's easiest to underspec even after the protection functions are right.</p>
+    <ul class="checklist">
+      <li><span class="chk-tick">✓</span><span>Sufficient digital inputs (52a, 52b, interlocks, etc.)</span></li>
+      <li><span class="chk-tick">✓</span><span>Trip output for breaker &mdash; check contact rating</span></li>
+      <li><span class="chk-tick">✓</span><span>Close output if required</span></li>
+      <li><span class="chk-tick">✓</span><span>Trip circuit supervision (74TCS)</span></li>
+      <li><span class="chk-tick">✓</span><span>Lockout (86) and alarm contacts</span></li>
+      <li><span class="chk-tick">✓</span><span>Arc flash / temperature / Buchholz inputs if required</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Step 6 &mdash; Select communication</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="18" width="30" height="20" rx="2" fill="none" stroke="#D9782E" stroke-width="2.2"/><line x1="18" y1="38" x2="18" y2="42" stroke="#D9782E" stroke-width="2.2"/><line x1="32" y1="38" x2="32" y2="42" stroke="#D9782E" stroke-width="2.2"/><line x1="14" y1="42" x2="36" y2="42" stroke="#D9782E" stroke-width="2.2"/></svg>
+        <b>IEC 61850, Modbus TCP/RTU, DNP3, IEC 60870-5-103/104</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="25" r="6" fill="none" stroke="#5FD3E3" stroke-width="2.2"/><circle cx="33" cy="25" r="6" fill="none" stroke="#5FD3E3" stroke-width="2.2"/><line x1="23" y1="25" x2="27" y2="25" stroke="#5FD3E3" stroke-width="2.2"/></svg>
+        <b>Redundant Ethernet (PRP/HSR) if required</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="15" fill="none" stroke="#B7A339" stroke-width="2.2"/><path d="M25 16 L25 25 L31 29" fill="none" stroke="#B7A339" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <b>Time sync: SNTP / PTP / IRIG-B</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M10 32 L18 24 L26 30 L40 14" fill="none" stroke="#4E8C6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>GOOSE &amp; Sampled Values for digital substations</b>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Step 7 &mdash; Verify performance &amp; environment</h2>
+    <ul class="checklist">
+      <li><span class="chk-tick">✓</span><span>Operating temperature, humidity, vibration, EMC</span></li>
+      <li><span class="chk-tick">✓</span><span>Insulation level, IP protection</span></li>
+      <li><span class="chk-tick">✓</span><span>Accuracy, operating time</span></li>
+      <li><span class="chk-tick">✓</span><span>Event &amp; disturbance recording</span></li>
+      <li><span class="chk-tick">✓</span><span>Auxiliary supply range</span></li>
+      <li><span class="chk-tick">✓</span><span>Compliance with IEC 60255 series</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Step 8 &mdash; Perform protection coordination</h2>
+    <p>The final step ties every earlier decision together: calculate pickup currents and time settings, coordinate with upstream and downstream devices, and confirm the scheme is sensitive enough to catch real faults, selective enough to isolate only the faulted section, and reliable enough to operate every time it's called on &mdash; while allowing for CT, relay, and breaker tolerances in the calculation.</p>
+
+    <h2><span class="h2-dot"></span>Worked example &mdash; 11 kV radial feeder</h2>
+    <div class="ex-box">
+      <h3>System data</h3>
+      <div class="ex-grid">
+        <div class="ex-row"><span>System</span><span>11 kV, 50 Hz</span></div>
+        <div class="ex-row"><span>Max load current</span><span>420 A</span></div>
+        <div class="ex-row"><span>CT ratio</span><span>600/1 A</span></div>
+        <div class="ex-row"><span>Max fault current</span><span>12.5 kA</span></div>
+        <div class="ex-row"><span>Min earth fault current</span><span>800 A</span></div>
+        <div class="ex-row"><span>Breaker trip supply</span><span>110 VDC</span></div>
+        <div class="ex-row"><span>SCADA protocol</span><span>IEC 61850</span></div>
+      </div>
+      <h3>Initial phase overcurrent pickup</h3>
+      <div class="ex-calc">
+        I pickup &asymp; <b>1.2 &times; 420 A = 504 A</b> (primary)<br>
+        I pickup (secondary) = 504 / 600 = <b>0.84 A</b>
+      </div>
+      <div class="ex-note">Note: validate by a full coordination study before committing to final settings.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>What "the right relay" actually buys you</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M25 6 L40 12 V24 c0 11 -7 18 -15 22 c-8 -4 -15 -11 -15 -22 V12 z" fill="none" stroke="#D9782E" stroke-width="2.4"/></svg>
+        <b>Right Protection &mdash; protects equipment and people</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="17" fill="none" stroke="#5FD3E3" stroke-width="2.2"/><path d="M25 15 L25 25 L33 30" fill="none" stroke="#5FD3E3" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <b>Right Reliability &mdash; fast, selective and secure</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="17" r="6" fill="none" stroke="#3E8C97" stroke-width="2"/><circle cx="33" cy="17" r="6" fill="none" stroke="#3E8C97" stroke-width="2"/><circle cx="25" cy="33" r="6" fill="none" stroke="#3E8C97" stroke-width="2"/><line x1="20" y1="21" x2="21" y2="28" stroke="#3E8C97" stroke-width="1.6"/><line x1="30" y1="21" x2="29" y2="28" stroke="#3E8C97" stroke-width="1.6"/></svg>
+        <b>Right Integration &mdash; seamless with SCADA and substation</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M8 38 L18 26 L26 32 L42 12" fill="none" stroke="#4E8C6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 12 h8 v8" fill="none" stroke="#4E8C6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>Right Investment &mdash; optimal cost and long-term value</b>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Start from the protected equipment, not the relay catalog &mdash; the equipment determines which ANSI functions are actually required.</span></li>
+      <li><span class="tk-check">✓</span><span>CT/VT ratio, connection, burden and accuracy class must match the relay's rated inputs, or every downstream setting inherits the error.</span></li>
+      <li><span class="tk-check">✓</span><span>I/O count, trip contact rating, and trip circuit supervision are as important as the protection functions themselves &mdash; and easy to underspec.</span></li>
+      <li><span class="tk-check">✓</span><span>Selection isn't finished until a coordination study confirms the settings are sensitive, selective, and reliable against neighboring devices.</span></li>
+    </ul>
+
+  </div>
+
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/selectivity-coordination-calculator.html">Selectivity Coordination Calculator →</a></li><li><a href="../electrical/short-circuit-calculator.html">Short-Circuit Current Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="ansi-relay-numbers-protection-functions.html">ANSI Relay Numbers: Common Protection Relay Functions</a></li><li><a href="breaker-selectivity-discrimination-explained.html">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="index.html">&larr; Back to all posts</a>
+  </div>
+</div>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
