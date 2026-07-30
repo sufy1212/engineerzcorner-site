@@ -80,6 +80,7 @@
     pointer-events:none;
   }
   .tool-card:hover{box-shadow:0 10px 24px rgba(90,169,214,.18) !important;}
+  .tool-card-badge{position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:8.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#DC2626,#EA580C);padding:3px 7px;border-radius:20px;z-index:2;}
 
   /* scroll-reveal */
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
@@ -218,6 +219,17 @@
         </div>
       </div>
       <div class="tool-card-desc">Compressor input power and condenser heat rejection from a cooling duty and COP, plus a refrigerant-side mass flow estimate.</div>
+    </a>
+    <a class="tool-card reveal" href="psychrometric-chart-simulator.html">
+      <span class="tool-card-badge">Simulator</span>
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s7 8.5 7 13a7 7 0 0 1-14 0c0-4.5 7-13 7-13z"></path></svg></div>
+        <div>
+          <div class="tool-card-num">HV.10</div>
+          <div class="tool-card-title">Psychrometric Chart Simulator</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Drag sliders for dry-bulb temperature, relative humidity and altitude — watch the state point, humidity ratio, wet-bulb, dew point and enthalpy update live.</div>
     </a>
     <a class="tool-card reveal" href="symbols.html">
       <div class="tool-card-head">
