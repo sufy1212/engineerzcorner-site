@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>How to Select a Digital Protection Relay</title>
+    <link>https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay.html</link>
+    <guid>https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay.html</guid>
+    <description>An 8-step working method for selecting a digital protection relay — identify the protected equipment, gather system data, match CT/VT inputs, select functions, size I/O, pick comms, verify environment, and coordinate — with a worked 11 kV feeder example.</description>
+    <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Air Changes per Hour: What ACH Actually Tells You (and Doesn't)</title>
     <link>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</guid>
