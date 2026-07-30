@@ -33,6 +33,29 @@ const { execSync } = require('child_process');
 const ROOT = path.join(__dirname, '..');
 const SITE_URL = 'https://www.engineerzcorner.com';
 
+// -----------------------------------------------------------------------
+// Safety guard: this script relies on `git log` to get each page's real
+// last-modified date. If it's run somewhere with no .git folder (e.g. a
+// plain zip export, a copy without history), git silently fails and every
+// page would fall back to filesystem mtime — which, right after unzipping
+// or copying, is "now" for every file. That would stamp today's date on
+// every URL in sitemap.xml/feed.xml, falsely telling Google the entire
+// site changed today. So: refuse to run at all in that situation, loudly,
+// instead of producing quietly-wrong dates.
+// -----------------------------------------------------------------------
+if (!fs.existsSync(path.join(ROOT, '.git'))) {
+  console.error(
+    '\n✗ ABORTING: no .git folder found at the project root.\n' +
+    '  This script needs real git history to compute accurate lastmod\n' +
+    '  dates. Running it from a zip export or a copy without .git would\n' +
+    '  silently stamp today\'s date on every page — so it refuses to run.\n\n' +
+    '  Fix: run this from your actual git checkout / Cloudflare Pages\n' +
+    '  build environment (which clones the repo with full history),\n' +
+    '  not from an extracted zip.\n'
+  );
+  process.exit(1);
+}
+
 // Folders to scan for content pages. Edit this list as the site grows.
 const CONTENT_DIRS = [
   'electrical', 'mechanical', 'hvac', 'civil', 'automation', 'solar',
@@ -70,6 +93,11 @@ function gitDate(relPath) {
 function fileDate(relPath) {
   const g = gitDate(relPath);
   if (g) return g;
+  // No git history for this specific file (e.g. it's brand new and hasn't
+  // been committed yet). Falling back to mtime is reasonable here — but
+  // say so out loud, so a "today" date in the sitemap always has a paper
+  // trail instead of appearing silently.
+  console.warn(`  ⚠ No git history for ${relPath} — using file mtime instead (commit it to get a real date).`);
   const stat = fs.statSync(path.join(ROOT, relPath));
   return stat.mtime.toISOString();
 }
