@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231E2226'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23D68A4C' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D68A4C'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pump System Curve Simulator — Operating Point Live — Mechanical Toolkit</title>
+<meta name="description" content="Interactive pump vs system curve simulator. Drag sliders for VFD speed, static head and system friction and watch the operating point, flow, head and hydraulic power update live on the curve chart.">
+<link rel="canonical" href="https://www.engineerzcorner.com/mechanical/pump-system-curve-simulator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pump System Curve Simulator — Operating Point Live — Mechanical Toolkit">
+<meta property="og:description" content="Drag sliders for VFD speed, static head and system friction and watch the pump/system curve intersection, flow, head and power update live.">
+<meta property="og:url" content="https://www.engineerzcorner.com/mechanical/pump-system-curve-simulator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pump System Curve Simulator — Operating Point Live — Mechanical Toolkit">
+<meta name="twitter:description" content="Drag sliders for VFD speed, static head and system friction and watch the pump/system curve intersection, flow, head and power update live.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F3F4FA; --sheet:#FFFFFF; --sheet-2:#F7F8FC; --line:#E1E3F0; --line-soft:#ECEEF7;
+    --ink:#181B29; --ink-dim:#565A74; --ink-faint:#8D91AA;
+    --plate:#181B2E; --plate-2:#23273D;
+    --amber:#D68A4C; --amber-deep:#B8672A;
+    --blue:#0D9488; --green:#16A34A; --red:#DC2626;
+    --pump:#38BDF8; --sys:#F472B6; --op:#F59E0B;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);}
+  body{background-image:repeating-linear-gradient(115deg, rgba(24,27,41,.025) 0px, rgba(24,27,41,.025) 1px, transparent 1px, transparent 5px);background-color:var(--paper);}
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px 60px;}
+  ::selection{background:rgba(214,138,76,.24);}
+  :focus-visible{outline:2px solid var(--amber-deep);outline-offset:2px;}
+
+  .ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+  .ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+  .ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+  .ec-crumb-inner a:hover{color:#E8B278;}
+  .ec-crumb-sep{color:#4A4D68;}
+  .ec-crumb-current{color:#E8B278;font-weight:600;}
+  .back-link{color:#8F92B8;font-family:var(--font-mono);font-size:11px;text-decoration:none;}
+  .back-link:hover{color:var(--amber-deep);}
+
+  .pagehero{display:flex;align-items:center;gap:14px;margin:20px 0 2px;flex-wrap:wrap;}
+  .pagehero .hero-icon{display:flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;background:linear-gradient(135deg, var(--amber), var(--amber-deep));color:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(214,138,76,.35);}
+  .pagehero .hero-icon svg{width:23px;height:23px;}
+  h1{font-family:var(--font-display);font-size:23px;margin:0;color:var(--ink);font-weight:800;letter-spacing:-.01em;}
+  .hero-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.05em;}
+
+  .intro{background:var(--sheet);border:1px solid var(--line);border-left:3px solid var(--amber-deep);border-radius:0 6px 6px 0;padding:13px 16px;font-size:13px;color:var(--ink-dim);line-height:1.65;margin:10px 0 18px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .intro b{color:var(--ink);}
+
+  .step{background:var(--sheet);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .step-head{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg, var(--plate), var(--plate-2));padding:12px 16px;margin:0;}
+  .step-num{font-family:var(--font-mono);font-size:10.5px;color:#fff;background:linear-gradient(135deg, var(--amber), var(--amber-deep));padding:2px 8px;border-radius:50%;flex:none;font-weight:700;letter-spacing:.04em;}
+  .step h2{font-family:var(--font-display);font-size:13.5px;margin:0;color:#F1F0FB;font-weight:600;letter-spacing:.03em;text-transform:uppercase;}
+  .step-desc{font-size:12.5px;color:var(--ink-faint);margin:0;padding:10px 16px 4px;line-height:1.55;}
+
+  .field{margin:0 0 16px;padding-top:2px;}
+  .step > .field, .step > .radiorow{margin-left:16px;margin-right:16px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  @media(max-width:520px){.row3{grid-template-columns:1fr 1fr;}}
+  .field label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;font-weight:600;}
+  .field label .unit{color:var(--amber-deep);font-family:var(--font-mono);font-size:9.5px;font-weight:700;}
+  input[type=number], input[type=text], select{width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--line);color:var(--ink);font-family:var(--font-mono);font-size:14.5px;padding:6px 2px 8px;outline:none;border-radius:0;}
+  input:hover, select:hover{border-bottom-color:var(--ink-faint);}
+  input:focus, select:focus{border-bottom-color:var(--amber-deep);border-bottom-width:2px;padding-bottom:7px;}
+  select{cursor:pointer;}
+  .hint{font-size:11px;color:var(--ink-faint);margin-top:6px;line-height:1.5;}
+  details{margin:10px 16px 14px;}
+  summary{cursor:pointer;font-size:10.5px;color:var(--ink-faint);font-family:var(--font-mono);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;}
+  summary:hover{color:var(--amber-deep);}
+  .formula-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:var(--sheet-2);border:1px dashed var(--line);border-radius:5px;padding:12px 14px;margin:8px 16px 0;line-height:1.75;}
+  .formula-note b{color:var(--amber-deep);}
+  footer{margin:22px 16px 0;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);border-top:1px solid var(--line-soft);padding:14px 0 18px;line-height:1.6;}
+
+  /* ===== sliders ===== */
+  .slider-card{margin:0 16px 12px;background:var(--sheet-2);border:1px solid var(--line-soft);border-radius:10px;padding:12px 16px;}
+  .slider-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+  .slider-head .slabel{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;}
+  .slider-head .sval{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--amber-deep);}
+  input[type=range]{width:100%;accent-color:var(--amber-deep);height:5px;cursor:pointer;}
+
+  /* ===== chart ===== */
+  .chart-wrap{background:var(--plate);border-radius:10px;padding:14px 12px 8px;margin:0 16px 14px;box-shadow:0 4px 16px rgba(24,27,41,.18);}
+  .chart-title{font-family:var(--font-mono);font-size:10px;color:#B8BAD9;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin:0 4px 6px;}
+  .chart-svg{display:block;width:100%;height:auto;}
+  .chart-axis{stroke:#3E4160;stroke-width:1;}
+  .chart-grid{stroke:#2A2C46;stroke-width:1;}
+  .chart-tick{font-family:var(--font-mono);font-size:8.5px;fill:#8083A3;}
+  .curve{fill:none;stroke-width:2.4;}
+  .curve.pump{stroke:var(--pump);}
+  .curve.sys{stroke:var(--sys);}
+  .op-dot{fill:var(--op);stroke:#1a1c2e;stroke-width:1.5;}
+  .op-cross{stroke:var(--op);stroke-width:1;stroke-dasharray:3 3;}
+  .op-label{font-family:var(--font-mono);font-size:9.5px;fill:var(--op);font-weight:700;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;padding:8px 4px 4px;}
+  .legend-item{display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;color:#D6D8ED;}
+  .legend-swatch{width:16px;height:3px;border-radius:2px;flex:none;}
+  .legend-swatch.pump{background:var(--pump);}
+  .legend-swatch.sys{background:var(--sys);}
+  .legend-swatch.op{background:var(--op);width:8px;height:8px;border-radius:50%;}
+
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 16px 14px;}
+  @media(max-width:520px){.stat-grid{grid-template-columns:1fr 1fr;}}
+  .stat{background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.6);border-radius:10px;box-shadow:0 4px 16px rgba(24,27,46,.08);padding:12px 14px;}
+  .stat .slabel2{font-family:var(--font-mono);font-size:9px;color:var(--ink-faint);letter-spacing:.07em;text-transform:uppercase;font-weight:600;}
+  .stat .sval2{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--ink);margin-top:3px;}
+  .stat .sval2.amber{color:var(--amber-deep);}
+
+  .status-banner{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:5px;font-size:12.5px;font-weight:700;margin:0 16px 14px;border:1px solid;font-family:var(--font-mono);}
+  .status-banner.ok{background:#ECFDF5;border-color:#A7E8C7;color:var(--green);}
+  .status-banner.warn{background:#FFFBEB;border-color:#FDE1A8;color:#B8672A;}
+  .status-banner.bad{background:#FEF2F2;border-color:#FCA5A5;color:var(--red);}
+  .status-dot{width:7px;height:7px;border-radius:50%;flex:none;}
+  .status-banner.ok .status-dot{background:var(--green);}
+  .status-banner.warn .status-dot{background:#B8672A;}
+  .status-banner.bad .status-dot{background:var(--red);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pump System Curve Simulator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Interactive pump-versus-system curve simulator with live sliders for VFD speed, static head and system friction, showing the operating point, flow, head, hydraulic power and BEP proximity live on a chart.",
+  "url": "https://www.engineerzcorner.com/mechanical/pump-system-curve-simulator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Mechanical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pump System Curve Simulator</span></div></nav>
+
+<a href="index.html" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to Mechanical toolkit</a>
+<div class="wrap">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18c3-8 6 6 9-2s6-6 9-2"></path><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"></circle></svg></div>
+    <div><h1>Pump System Curve Simulator</h1><div class="hero-sub">Live operating point · pump curve &times; system curve</div></div>
+  </div>
+  <div class="intro">
+    Drag the sliders for VFD speed, static lift and system friction — or edit the pump curve and fluid fields below — and the chart redraws the pump and system curves live, marking where they cross: the actual <b>operating point</b> the pump will run at, with flow, head and hydraulic power.
+  </div>
+
+  <!-- STEP 1: SLIDERS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Live Controls</h2></div>
+
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Pump / VFD speed</span><span class="sval" id="pcSpeedVal">100 %</span></div>
+      <input type="range" id="pcSpeed" min="40" max="110" step="1" value="100">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Static lift head</span><span class="sval" id="pcStaticVal">20 m</span></div>
+      <input type="range" id="pcStatic" min="0" max="60" step="1" value="20">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">System friction loss (at BEP flow)</span><span class="sval" id="pcFricVal">15 m</span></div>
+      <input type="range" id="pcFric" min="0" max="40" step="1" value="15">
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Pump Curve &amp; Fluid</h2></div>
+    <div class="step-desc">From the pump datasheet — three points define the curve shape: shutoff, best efficiency point (BEP), and runout.</div>
+    <div class="row3">
+      <div class="field"><label>Shutoff head <span class="unit">m @ 100% speed</span></label><input type="number" id="pcH0" value="45" step="1"></div>
+      <div class="field"><label>BEP flow <span class="unit">L/s</span></label><input type="number" id="pcQbep" value="30" step="1"></div>
+      <div class="field"><label>BEP head <span class="unit">m</span></label><input type="number" id="pcHbep" value="32" step="1"></div>
+      <div class="field"><label>Runout flow <span class="unit">L/s @ H=0</span></label><input type="number" id="pcQmax" value="55" step="1"></div>
+      <div class="field"><label>BEP efficiency <span class="unit">%</span></label><input type="number" id="pcEff" value="72" step="1"></div>
+      <div class="field"><label>Fluid density <span class="unit">kg/m&sup3;</span></label><input type="number" id="pcRho" value="1000" step="10"></div>
+    </div>
+  </div>
+
+  <!-- STEP 3: RESULTS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Live Curve &amp; Operating Point</h2></div>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Head (m) vs Flow (L/s)</div>
+      <svg class="chart-svg" id="pcChart" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch pump"></span>Pump curve</span>
+        <span class="legend-item"><span class="legend-swatch sys"></span>System curve</span>
+        <span class="legend-item"><span class="legend-swatch op"></span>Operating point</span>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="slabel2">Operating flow</div><div class="sval2 amber" id="pcQ">–</div></div>
+      <div class="stat"><div class="slabel2">Operating head</div><div class="sval2" id="pcHead">–</div></div>
+      <div class="stat"><div class="slabel2">Hydraulic power</div><div class="sval2" id="pcPower">–</div></div>
+    </div>
+    <div role="status" aria-live="polite" class="status-banner ok" id="pcBanner"><span class="status-dot"></span><span id="pcBannerText">Adjust the controls above — updates live.</span></div>
+
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Pump curve (100% speed): quadratic <b>H(Q) = H&#8320; − aQ − bQ&sup2;</b> fitted through shutoff (0, H&#8320;), BEP (Q<sub>bep</sub>, H<sub>bep</sub>) and runout (Q<sub>max</sub>, 0).<br>
+        Speed scaling (affinity laws), for speed ratio r = speed% / 100: <b>H(Q) = r&sup2;H&#8320; − arQ − bQ&sup2;</b>.<br>
+        System curve: <b>H<sub>sys</sub>(Q) = H<sub>static</sub> + KQ&sup2;</b>, with K = (friction loss at BEP flow) / Q<sub>bep</sub>&sup2;.<br>
+        Operating point: solved analytically where the two curves intersect, (b+K)Q&sup2; + arQ + (H<sub>static</sub> − r&sup2;H&#8320;) = 0.<br>
+        Efficiency at the operating point: a parabola peaking at BEP efficiency, η(Q) = η<sub>bep</sub>·[1 − ((Q−Q<sub>bep</sub>)/Q<sub>bep</sub>)&sup2;], floored near zero.<br>
+        Hydraulic power: <b>P = ρgQH / η</b> (Q in m&sup3;/s), shown in kW.
+      </div>
+      <div class="hint" style="margin-top:8px;">Simplified quadratic pump-curve fit and parabolic efficiency model for quick sizing/teaching, not a substitute for manufacturer curve data and a full system hydraulic study (fittings, elevation profile, control valve losses).</div>
+    </details>
+
+    <footer>Rule-of-thumb pump/system curve intersection for quick VFD trim and operating-point checks — verify against the manufacturer's certified curve before final selection.</footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ return parseFloat(document.getElementById(id).value) || 0; }
+
+  function fitPumpCurve(H0, Qbep, Hbep, Qmax){
+    // H(Q) = H0 - a*Q - b*Q^2, solved through (Qbep,Hbep) and (Qmax,0)
+    // Hbep = H0 - a*Qbep - b*Qbep^2
+    // 0    = H0 - a*Qmax - b*Qmax^2
+    var d = (Qbep*Qmax*Qmax - Qmax*Qbep*Qbep);
+    if(Math.abs(d) < 1e-9 || Qmax<=0 || Qbep<=0 || Qbep>=Qmax){
+      return {a:0, b: Qmax>0 ? H0/(Qmax*Qmax) : 0};
+    }
+    // From eq2: a = (H0 - b*Qmax^2)/Qmax
+    // Sub into eq1: Hbep = H0 - Qbep*(H0 - b*Qmax^2)/Qmax - b*Qbep^2
+    // Hbep = H0 - (Qbep/Qmax)*H0 + b*Qbep*Qmax - b*Qbep^2
+    // Hbep = H0*(1-Qbep/Qmax) + b*(Qbep*Qmax - Qbep^2)
+    var rhs = Hbep - H0*(1 - Qbep/Qmax);
+    var b = rhs / (Qbep*Qmax - Qbep*Qbep);
+    var a = (H0 - b*Qmax*Qmax)/Qmax;
+    return {a:a, b:b};
+  }
+
+  function buildSVGChart(svgEl, series, xMax, yMax, opPoint){
+    var W=600,H=220,padL=38,padR=10,padT=10,padB=22;
+    var innerW=W-padL-padR, innerH=H-padT-padB;
+    function sx(x){ return padL + (x/xMax)*innerW; }
+    function sy(y){ return padT + innerH - (Math.max(0,y)/yMax)*innerH; }
+
+    var svgNS='http://www.w3.org/2000/svg';
+    while(svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
+
+    for(var gi=0;gi<=4;gi++){
+      var gx = xMax*gi/4;
+      var l=document.createElementNS(svgNS,'line');
+      l.setAttribute('x1',sx(gx));l.setAttribute('x2',sx(gx));l.setAttribute('y1',padT);l.setAttribute('y2',padT+innerH);
+      l.setAttribute('class','chart-grid'); svgEl.appendChild(l);
+      var t=document.createElementNS(svgNS,'text');
+      t.setAttribute('x',sx(gx));t.setAttribute('y',H-6);t.setAttribute('text-anchor','middle');t.setAttribute('class','chart-tick');
+      t.textContent=Math.round(gx); svgEl.appendChild(t);
+    }
+    for(var gj=0;gj<=4;gj++){
+      var gy=yMax*gj/4;
+      var l2=document.createElementNS(svgNS,'line');
+      l2.setAttribute('x1',padL);l2.setAttribute('x2',padL+innerW);l2.setAttribute('y1',sy(gy));l2.setAttribute('y2',sy(gy));
+      l2.setAttribute('class','chart-grid'); svgEl.appendChild(l2);
+      var t2=document.createElementNS(svgNS,'text');
+      t2.setAttribute('x',padL-5);t2.setAttribute('y',sy(gy)+3);t2.setAttribute('text-anchor','end');t2.setAttribute('class','chart-tick');
+      t2.textContent=Math.round(gy); svgEl.appendChild(t2);
+    }
+    var ax=document.createElementNS(svgNS,'line');
+    ax.setAttribute('x1',padL);ax.setAttribute('x2',padL+innerW);ax.setAttribute('y1',padT+innerH);ax.setAttribute('y2',padT+innerH);
+    ax.setAttribute('class','chart-axis'); svgEl.appendChild(ax);
+    var ay=document.createElementNS(svgNS,'line');
+    ay.setAttribute('x1',padL);ay.setAttribute('x2',padL);ay.setAttribute('y1',padT);ay.setAttribute('y2',padT+innerH);
+    ay.setAttribute('class','chart-axis'); svgEl.appendChild(ay);
+
+    series.forEach(function(s){
+      var d = s.points.map(function(p,i){ return (i===0?'M':'L')+sx(p.x).toFixed(1)+' '+sy(p.y).toFixed(1); }).join(' ');
+      var path=document.createElementNS(svgNS,'path');
+      path.setAttribute('d',d); path.setAttribute('class','curve '+s.cls);
+      svgEl.appendChild(path);
+    });
+
+    if(opPoint){
+      var ox=sx(opPoint.x), oy=sy(opPoint.y);
+      var vx=document.createElementNS(svgNS,'line');
+      vx.setAttribute('x1',ox);vx.setAttribute('x2',ox);vx.setAttribute('y1',padT);vx.setAttribute('y2',oy);
+      vx.setAttribute('class','op-cross'); svgEl.appendChild(vx);
+      var hy=document.createElementNS(svgNS,'line');
+      hy.setAttribute('x1',padL);hy.setAttribute('x2',ox);hy.setAttribute('y1',oy);hy.setAttribute('y2',oy);
+      hy.setAttribute('class','op-cross'); svgEl.appendChild(hy);
+      var dot=document.createElementNS(svgNS,'circle');
+      dot.setAttribute('cx',ox);dot.setAttribute('cy',oy);dot.setAttribute('r',5);
+      dot.setAttribute('class','op-dot'); svgEl.appendChild(dot);
+      var lbl=document.createElementNS(svgNS,'text');
+      lbl.setAttribute('x',Math.min(ox+8,W-70));lbl.setAttribute('y',Math.max(oy-8,padT+10));
+      lbl.setAttribute('class','op-label');
+      lbl.textContent='OP '+opPoint.x.toFixed(1)+' L/s';
+      svgEl.appendChild(lbl);
+    }
+  }
+
+  function render(){
+    var speedPct=num('pcSpeed'), staticHead=num('pcStatic'), fricLoss=num('pcFric');
+    var H0=num('pcH0'), Qbep=num('pcQbep'), Hbep=num('pcHbep'), Qmax=num('pcQmax');
+    var effBep=num('pcEff'), rho=num('pcRho');
+
+    document.getElementById('pcSpeedVal').textContent = speedPct+' %';
+    document.getElementById('pcStaticVal').textContent = staticHead+' m';
+    document.getElementById('pcFricVal').textContent = fricLoss+' m';
+
+    var r = speedPct/100;
+    var fit = fitPumpCurve(H0, Qbep, Hbep, Qmax);
+    var a=fit.a, b=fit.b;
+    var K = Qbep>0 ? fricLoss/(Qbep*Qbep) : 0;
+
+    // Solve (b+K)Q^2 + a*r*Q + (staticHead - r^2*H0) = 0
+    var A = b+K, B = a*r, C = staticHead - r*r*H0;
+    var Qop=0, Hop=0, solved=false;
+    if(Math.abs(A) < 1e-9){
+      if(Math.abs(B) > 1e-9){ Qop = -C/B; solved = Qop>0; }
+    } else {
+      var disc = B*B - 4*A*C;
+      if(disc >= 0){
+        var sq = Math.sqrt(disc);
+        var q1 = (-B+sq)/(2*A), q2=(-B-sq)/(2*A);
+        var cands = [q1,q2].filter(function(q){ return q>0 && isFinite(q); });
+        if(cands.length){ Qop = Math.min.apply(null, cands); solved=true; }
+      }
+    }
+    if(solved){ Hop = staticHead + K*Qop*Qop; }
+
+    var qMaxScaled = Math.max(Qmax*r*1.15, Qop*1.3, Qbep*r*1.4, 1);
+    var hMaxScaled = Math.max(H0*r*r*1.15, Hop*1.3, staticHead+fricLoss*1.3, 5);
+
+    var pumpPts=[], n=60;
+    for(var i=0;i<=n;i++){
+      var Q = qMaxScaled*i/n;
+      var Hp = r*r*H0 - a*r*Q - b*Q*Q;
+      pumpPts.push({x:Q, y:Hp});
+    }
+    var sysPts=[];
+    for(var j=0;j<=n;j++){
+      var Qs = qMaxScaled*j/n;
+      sysPts.push({x:Qs, y: staticHead + K*Qs*Qs});
+    }
+
+    buildSVGChart(document.getElementById('pcChart'), [
+      {points:pumpPts, cls:'pump'},
+      {points:sysPts, cls:'sys'}
+    ], qMaxScaled, hMaxScaled, solved ? {x:Qop, y:Hop} : null);
+
+    var banner=document.getElementById('pcBanner');
+    if(!solved || Qop<=0){
+      document.getElementById('pcQ').textContent='–';
+      document.getElementById('pcHead').textContent='–';
+      document.getElementById('pcPower').textContent='–';
+      banner.className='status-banner bad';
+      banner.innerHTML='<span class="status-dot"></span><span>No valid intersection — static head exceeds the pump\'s shutoff head at this speed. Increase speed or reduce static lift.</span>';
+      return;
+    }
+
+    var effAtOp = effBep>0 ? Math.max(5, effBep*(1-Math.pow((Qop-Qbep)/Qbep,2))) : 50;
+    var Qm3s = Qop/1000;
+    var powerKW = (rho*9.81*Qm3s*Hop)/(1000*(effAtOp/100));
+
+    document.getElementById('pcQ').textContent = Qop.toFixed(1)+' L/s';
+    document.getElementById('pcHead').textContent = Hop.toFixed(1)+' m';
+    document.getElementById('pcPower').textContent = powerKW.toFixed(2)+' kW';
+
+    var pctOfBep = Qbep>0 ? (Qop/Qbep)*100 : 0;
+    if(pctOfBep >= 70 && pctOfBep <= 115){
+      banner.className='status-banner ok';
+      banner.innerHTML='<span class="status-dot"></span><span>Operating point is '+pctOfBep.toFixed(0)+'% of BEP flow ('+effAtOp.toFixed(0)+'% est. efficiency) — good match, close to best efficiency.</span>';
+    } else if(pctOfBep > 115 && pctOfBep <= 135){
+      banner.className='status-banner warn';
+      banner.innerHTML='<span class="status-dot"></span><span>Operating point is '+pctOfBep.toFixed(0)+'% of BEP flow — running right of BEP, watch NPSH margin and motor loading.</span>';
+    } else if(pctOfBep > 135){
+      banner.className='status-banner bad';
+      banner.innerHTML='<span class="status-dot"></span><span>Operating point is '+pctOfBep.toFixed(0)+'% of BEP flow — well right of BEP (runout risk): check NPSHa margin and motor overload.</span>';
+    } else {
+      banner.className='status-banner warn';
+      banner.innerHTML='<span class="status-dot"></span><span>Operating point is only '+pctOfBep.toFixed(0)+'% of BEP flow — running well left of BEP: risk of recirculation, heat build-up and bearing wear at low flow.</span>';
+    }
+  }
+
+  document.querySelectorAll('input,select').forEach(function(el){
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
