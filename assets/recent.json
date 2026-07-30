@@ -1,5 +1,10 @@
 [
   {
+    "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
+    "u": "posts/flame-retardant-vs-flame-resistant-cables.html",
+    "d": "2026-07-30"
+  },
+  {
     "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
     "u": "posts/air-changes-per-hour-ventilation-explained.html",
     "d": "2026-07-30"
@@ -8,10 +13,5 @@
     "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
     "u": "posts/psychrometric-chart-basics.html",
     "d": "2026-07-30"
-  },
-  {
-    "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
-    "u": "posts/bms-point-types-explained.html",
-    "d": "2026-07-27"
   }
 ]
