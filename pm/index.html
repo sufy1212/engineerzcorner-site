@@ -49,12 +49,13 @@
     border-radius:12px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden;
   }
   .pagehero::before{
-    content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;
+    /* pennant / flag — slides like a progress marker moving along a Gantt bar */
+    content:'';position:absolute;top:-22px;right:-30px;width:150px;height:120px;
     background:linear-gradient(135deg,#3FE8E8,#009999);opacity:.3;
-    clip-path:polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
-    animation:pgSlide 7s ease-in-out infinite;
+    clip-path:polygon(0% 0%, 78% 0%, 100% 50%, 78% 100%, 0% 100%);
+    animation:pgSlide 6s ease-in-out infinite;
   }
-  @keyframes pgSlide{0%,100%{transform:translateX(0);}50%{transform:translateX(-14px);}}
+  @keyframes pgSlide{0%,100%{transform:translateX(0);}50%{transform:translateX(-18px);}}
   @media (prefers-reduced-motion: reduce){.pagehero::before{animation:none;}}
   .pagehero h1{color:#fff !important;font-weight:800;position:relative;z-index:2;}
   .pagehero .hero-icon{box-shadow:0 6px 16px rgba(0,153,153,.35);}
