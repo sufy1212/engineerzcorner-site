@@ -171,15 +171,21 @@
   <div class="hero-graphic">
     <div class="hero-graphic-label">Fig. H1 — Fan, damper and diffuser, one duct run</div>
     <svg viewBox="0 0 240 110" fill="none" stroke="#8B93B8" stroke-width="2">
-      <path d="M40 30h60a20 20 0 0 1 20 20v0a20 20 0 0 1-20 20H40" stroke="#4A5170"></path>
-      <path d="M40 30V70" stroke="#4A5170"></path>
-      <circle class="led-a" cx="40" cy="30" r="12" fill="var(--blue)" fill-opacity=".15" stroke="var(--blue)"></circle>
-      <circle class="led-b" cx="120" cy="20" r="12" fill="var(--amber)" fill-opacity=".15" stroke="var(--amber)"></circle>
-      <circle class="led-c" cx="40" cy="70" r="12" fill="#4FA88F" fill-opacity=".15" stroke="#4FA88F"></circle>
-      <circle class="signal-dot" r="3.5" fill="#F3EEDD" style="offset-path:path('M40 30h60a20 20 0 0 1 20 20v0a20 20 0 0 1-20 20H40V30');"></circle>
-      <text x="12" y="34" fill="#B7BEDB" font-size="8" font-family="monospace">F</text>
-      <text x="112" y="24" fill="#B7BEDB" font-size="8" font-family="monospace">D</text>
-      <text x="12" y="74" fill="#B7BEDB" font-size="8" font-family="monospace">O</text>
+      <circle cx="34" cy="55" r="17" stroke="var(--blue)"></circle>
+      <g class="an-rotate">
+        <path d="M34 55 L34 40 M34 55 L47 63 M34 55 L21 63" stroke="var(--blue)" stroke-width="2.4"></path>
+      </g>
+      <rect x="60" y="40" width="120" height="30" rx="3" stroke="var(--amber)"></rect>
+      <path class="an-flow" d="M68 48 H172" stroke="#F3EEDD" stroke-width="1.6" stroke-dasharray="8 6"></path>
+      <path class="an-flow" d="M68 55 H172" stroke="#F3EEDD" stroke-width="1.6" stroke-dasharray="8 6"></path>
+      <path class="an-flow" d="M68 62 H172" stroke="#F3EEDD" stroke-width="1.6" stroke-dasharray="8 6"></path>
+      <path class="an-sway" d="M120 42v26" stroke="#4A5170" stroke-width="3"></path>
+      <g class="an-pulse" stroke="var(--blue)">
+        <path d="M180 42 L206 30 M180 48 L210 44 M180 62 L210 66 M180 68 L206 80"></path>
+      </g>
+      <text x="12" y="59" fill="#B7BEDB" font-size="8" font-family="monospace">F</text>
+      <text x="116" y="34" fill="#B7BEDB" font-size="8" font-family="monospace">D</text>
+      <text x="200" y="24" fill="#B7BEDB" font-size="8" font-family="monospace">O</text>
     </svg>
   </div>
 
