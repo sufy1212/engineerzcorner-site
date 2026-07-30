@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor Starting Simulator — DOL vs Star-Delta vs VFD — Site Engineer Toolkit</title>
+<meta name="description" content="Interactive motor starting simulator. Compare DOL, star-delta and VFD current-limited starts against your load's torque curve — see peak current, starting torque, and star-delta stall risk.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/motor-starting-simulator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Motor Starting Simulator — DOL vs Star-Delta vs VFD — Site Engineer Toolkit">
+<meta property="og:description" content="Compare DOL, star-delta and VFD starting methods against your load's torque curve — peak current, starting torque, stall risk.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/motor-starting-simulator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Motor Starting Simulator — DOL vs Star-Delta vs VFD — Site Engineer Toolkit">
+<meta name="twitter:description" content="Compare DOL, star-delta and VFD starting methods against your load's torque curve — peak current, starting torque, stall risk.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F3F4FA; --sheet:#FFFFFF; --sheet-2:#F7F8FC; --line:#E1E3F0; --line-soft:#ECEEF7;
+    --ink:#181B29; --ink-dim:#565A74; --ink-faint:#8D91AA;
+    --plate:#181B2E; --plate-2:#23273D;
+    --amber:#6C5CE7; --amber-deep:#4C3FC7;
+    --blue:#0D9488; --green:#16A34A; --red:#DC2626;
+    --dol:#F59E0B; --sd:#38BDF8; --vfd:#22C55E; --load:#EC4899;
+    --font-display:"Manrope","Arial",-apple-system,sans-serif;
+    --font-body:"Inter",-apple-system,Arial,sans-serif;
+    --font-mono:"JetBrains Mono","Cascadia Mono","SF Mono","Consolas",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);}
+  body{background-image:repeating-linear-gradient(115deg, rgba(24,27,41,.025) 0px, rgba(24,27,41,.025) 1px, transparent 1px, transparent 5px);background-color:var(--paper);}
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px 60px;}
+  ::selection{background:rgba(108,92,231,.24);}
+  :focus-visible{outline:2px solid var(--amber-deep);outline-offset:2px;}
+
+  .ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+  .ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+  .ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+  .ec-crumb-inner a:hover{color:#8B7FF0;}
+  .ec-crumb-sep{color:#4A4D68;}
+  .ec-crumb-current{color:#8B7FF0;font-weight:600;}
+  .back-link{color:#8F92B8;font-family:var(--font-mono);font-size:11px;text-decoration:none;}
+  .back-link:hover{color:var(--amber-deep);}
+
+  .pagehero{display:flex;align-items:center;gap:14px;margin:20px 0 2px;flex-wrap:wrap;}
+  .pagehero .hero-icon{display:flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;background:linear-gradient(135deg, var(--amber), var(--blue));color:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(108,92,231,.35);}
+  .pagehero .hero-icon svg{width:23px;height:23px;}
+  h1{font-family:var(--font-display);font-size:23px;margin:0;color:var(--ink);font-weight:800;letter-spacing:-.01em;}
+  .hero-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.05em;}
+
+  .intro{background:var(--sheet);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:13px 16px;font-size:13px;color:var(--ink-dim);line-height:1.65;margin:10px 0 18px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .intro b{color:var(--ink);}
+
+  .step{background:var(--sheet);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .step-head{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg, var(--plate), var(--plate-2));padding:12px 16px;margin:0;}
+  .step-num{font-family:var(--font-mono);font-size:10.5px;color:#fff;background:linear-gradient(135deg, var(--amber), var(--blue));padding:2px 8px;border-radius:50%;flex:none;font-weight:700;letter-spacing:.04em;}
+  .step h2{font-family:var(--font-display);font-size:13.5px;margin:0;color:#F1F0FB;font-weight:600;letter-spacing:.03em;text-transform:uppercase;}
+  .step-desc{font-size:12.5px;color:var(--ink-faint);margin:0;padding:10px 16px 4px;line-height:1.55;}
+
+  .field{margin:0 0 16px;padding-top:2px;}
+  .step > .field, .step > .radiorow{margin-left:16px;margin-right:16px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  .row4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px 18px;padding:14px 16px 2px;}
+  @media(max-width:520px){.row3,.row4{grid-template-columns:1fr 1fr;}}
+  .field label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;font-weight:600;}
+  .field label .unit{color:var(--amber-deep);font-family:var(--font-mono);font-size:9.5px;font-weight:700;}
+  input[type=number], input[type=text], select{width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--line);color:var(--ink);font-family:var(--font-mono);font-size:14.5px;padding:6px 2px 8px;outline:none;border-radius:0;}
+  input:hover, select:hover{border-bottom-color:var(--ink-faint);}
+  input:focus, select:focus{border-bottom-color:var(--blue);border-bottom-width:2px;padding-bottom:7px;}
+  select{cursor:pointer;}
+  .radiorow{display:flex;gap:18px;padding:14px 16px 6px;flex-wrap:wrap;}
+  .radiorow label{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-dim);cursor:pointer;font-weight:600;}
+  .radiorow input{accent-color:var(--amber-deep);width:15px;height:15px;}
+  .hint{font-size:11px;color:var(--ink-faint);margin-top:6px;line-height:1.5;}
+  details{margin:10px 16px 14px;}
+  summary{cursor:pointer;font-size:10.5px;color:var(--ink-faint);font-family:var(--font-mono);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 0;}
+  summary:hover{color:var(--blue);}
+  .formula-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-dim);background:var(--sheet-2);border:1px dashed var(--line);border-radius:5px;padding:12px 14px;margin:8px 16px 0;line-height:1.75;}
+  .formula-note b{color:var(--blue);}
+  footer{margin:22px 16px 0;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);border-top:1px solid var(--line-soft);padding:14px 0 18px;line-height:1.6;}
+
+  /* ===== charts ===== */
+  .chart-wrap{background:var(--plate);border-radius:10px;padding:14px 12px 8px;margin:0 16px 14px;box-shadow:0 4px 16px rgba(24,27,41,.18);}
+  .chart-title{font-family:var(--font-mono);font-size:10px;color:#B8BAD9;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin:0 4px 6px;}
+  .chart-svg{display:block;width:100%;height:auto;}
+  .chart-axis{stroke:#3E4160;stroke-width:1;}
+  .chart-grid{stroke:#2A2C46;stroke-width:1;}
+  .chart-tick{font-family:var(--font-mono);font-size:8.5px;fill:#8083A3;}
+  .curve{fill:none;stroke-width:2.4;}
+  .curve.dol{stroke:var(--dol);}
+  .curve.sd{stroke:var(--sd);}
+  .curve.vfd{stroke:var(--vfd);}
+  .curve.load{stroke:var(--load);stroke-dasharray:5 3;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;padding:8px 4px 4px;}
+  .legend-item{display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;color:#D6D8ED;cursor:pointer;user-select:none;}
+  .legend-item input{accent-color:var(--amber-deep);}
+  .legend-swatch{width:16px;height:3px;border-radius:2px;flex:none;}
+  .legend-swatch.dol{background:var(--dol);}
+  .legend-swatch.sd{background:var(--sd);}
+  .legend-swatch.vfd{background:var(--vfd);}
+  .legend-swatch.load{background:var(--load);}
+
+  .result-panel{margin:0 16px 16px;}
+  .status-banner{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:5px;font-size:12.5px;font-weight:700;margin-bottom:12px;border:1px solid;font-family:var(--font-mono);}
+  .status-banner.ok{background:#ECFDF5;border-color:#A7E8C7;color:var(--green);}
+  .status-banner.bad{background:#FEF2F2;border-color:#FCA5A5;color:var(--red);}
+  .status-banner.neutral{background:var(--sheet-2);border-color:var(--line);color:var(--ink-faint);}
+  .status-dot{width:7px;height:7px;border-radius:50%;flex:none;}
+  .status-banner.ok .status-dot{background:var(--green);}
+  .status-banner.bad .status-dot{background:var(--red);}
+  .status-banner.neutral .status-dot{background:var(--ink-faint);}
+
+  .trip-table{width:100%;border-collapse:collapse;font-size:12.5px;font-family:var(--font-mono);}
+  .trip-table th{background:var(--plate);color:#F3EEDD;font-size:9px;text-transform:uppercase;letter-spacing:.05em;padding:7px 9px;text-align:left;}
+  .trip-table td{padding:7px 9px;border-bottom:1px solid var(--line-soft);}
+  .trip-table tr:last-child td{border-bottom:none;}
+  .trip-table td.best{color:var(--green);font-weight:700;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Motor Starting Simulator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Interactive motor starting simulator comparing DOL, star-delta and VFD current-limited starts against a load torque curve, with peak current, starting torque, and star-delta stall-risk check.",
+  "url": "https://www.engineerzcorner.com/electrical/motor-starting-simulator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155210015179361" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Motor Starting Simulator</span></div></nav>
+
+<a href="index.html" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to Electrical toolkit</a>
+<div class="wrap">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+    <div><h1>Motor Starting Simulator</h1><div class="hero-sub">DOL vs star-delta vs VFD · torque &amp; current curves</div></div>
+  </div>
+  <div class="intro">
+    Enter your motor's nameplate characteristics and pick a load type, then compare all three starting methods on the same torque-speed and current-speed curves. The tool flags whether <b>star-delta has enough torque to accelerate your load</b> before the star-to-delta transition — the classic star-delta failure mode.
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Motor Nameplate</h2></div>
+    <div class="step-desc">Standard induction motor ratings.</div>
+    <div class="row4">
+      <div class="field"><label>Voltage <span class="unit">V</span></label><input type="number" id="mV" value="400" step="5"></div>
+      <div class="field"><label>Full load current <span class="unit">A</span></label><input type="number" id="mFLC" value="45" step="1"></div>
+      <div class="field"><label>Poles</label>
+        <select id="mPoles"><option value="2">2</option><option value="4" selected>4</option><option value="6">6</option><option value="8">8</option></select>
+      </div>
+      <div class="field"><label>Rated slip <span class="unit">%</span></label><input type="number" id="mSlip" value="3" step="0.5"></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Torque &amp; Current Characteristics</h2></div>
+    <div class="step-desc">From the motor datasheet — typical NEMA Design B defaults are pre-filled.</div>
+    <div class="row4">
+      <div class="field"><label>Locked rotor current <span class="unit">×FLC</span></label><input type="number" id="mILR" value="6.5" step="0.1"></div>
+      <div class="field"><label>Locked rotor torque <span class="unit">%FLT</span></label><input type="number" id="mLRT" value="150" step="5"></div>
+      <div class="field"><label>Pull-up (min) torque <span class="unit">%FLT</span></label><input type="number" id="mPUT" value="130" step="5"></div>
+      <div class="field"><label>Breakdown torque <span class="unit">%FLT</span></label><input type="number" id="mBDT" value="225" step="5"></div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Driven Load</h2></div>
+    <div class="step-desc">Determines the load torque curve the motor must overcome to accelerate.</div>
+    <div class="radiorow">
+      <label><input type="radio" name="loadType" value="constant" checked> Constant torque (conveyor, crusher, mixer)</label>
+      <label><input type="radio" name="loadType" value="variable"> Variable torque — fan/pump (T ∝ speed²)</label>
+    </div>
+    <div class="field" style="margin:0 16px 16px;">
+      <label>Load torque at rated speed <span class="unit">%FLT</span></label>
+      <input type="number" id="mLoadPct" value="100" step="5">
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">4</span><h2>Starting Method Settings</h2></div>
+    <div class="row2">
+      <div class="field"><label>Star-delta transition speed <span class="unit">% of sync</span></label><input type="number" id="mSDtrans" value="75" step="5"></div>
+      <div class="field"><label>VFD current limit <span class="unit">×FLC</span></label><input type="number" id="mVFDlim" value="1.2" step="0.1"></div>
+    </div>
+  </div>
+
+  <!-- STEP 5: CHARTS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">5</span><h2>Comparison Charts</h2></div>
+    <div class="step-desc">Curves update live as you edit values above. Toggle a curve off via the legend.</div>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Torque vs Speed (% of synchronous)</div>
+      <svg class="chart-svg" id="torqueChart" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="legend">
+        <label class="legend-item"><input type="checkbox" data-curve="dol" checked><span class="legend-swatch dol"></span>DOL</label>
+        <label class="legend-item"><input type="checkbox" data-curve="sd" checked><span class="legend-swatch sd"></span>Star-Delta</label>
+        <label class="legend-item"><input type="checkbox" data-curve="vfd" checked><span class="legend-swatch vfd"></span>VFD (current-limited)</label>
+        <label class="legend-item"><input type="checkbox" data-curve="load" checked><span class="legend-swatch load"></span>Load torque</label>
+      </div>
+    </div>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Current vs Speed (×FLC)</div>
+      <svg class="chart-svg" id="currentChart" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="legend">
+        <label class="legend-item"><input type="checkbox" data-curve="dol" checked><span class="legend-swatch dol"></span>DOL</label>
+        <label class="legend-item"><input type="checkbox" data-curve="sd" checked><span class="legend-swatch sd"></span>Star-Delta</label>
+        <label class="legend-item"><input type="checkbox" data-curve="vfd" checked><span class="legend-swatch vfd"></span>VFD (current-limited)</label>
+      </div>
+    </div>
+
+    <div class="result-panel">
+      <div role="status" aria-live="polite" class="status-banner neutral" id="motorBanner"><span class="status-dot"></span><span>Adjust values above — the check runs automatically.</span></div>
+      <table class="trip-table">
+        <thead><tr><th>Method</th><th>Peak current</th><th>Starting torque</th><th>Note</th></tr></thead>
+        <tbody id="motorTableBody"></tbody>
+      </table>
+    </div>
+
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Torque-speed curve: a smooth spline through (0%, LRT), (25%, pull-up), (80%, breakdown), (rated speed, 100%FLT), (100%, 0) — the standard datasheet presentation, so it needs no motor equivalent-circuit data.<br>
+        Current-speed curve: a smooth spline from locked-rotor current down to FLC, staying high until near rated speed (typical induction-motor shape).<br>
+        <b>Star-delta:</b> torque and current both scale by 1/3 below the transition speed (line voltage reduced to 1/√3 in star), then jump to the full DOL curve above it.<br>
+        <b>VFD:</b> current held flat at the set current limit up to rated speed; available torque is approximated as proportional to current at constant flux (T% ≈ I×FLC%) — a first-order approximation valid in the constant-torque (below base speed) region.<br>
+        Load torque — constant: flat at the entered %FLT. Variable (fan/pump): scales with (speed/100)².<br>
+        <b>Stall check:</b> flags star-delta if the load torque exceeds the star-phase motor torque anywhere below the transition speed — the motor can't accelerate past that point in star.
+      </div>
+      <div class="hint" style="margin-top:8px;">Simplified single-operating-point model for comparison and teaching — no thermal, inertia, or transient-spike calculation. For contractual studies, use manufacturer torque-speed data and a full time-domain start-up study.</div>
+    </details>
+
+    <footer>Torque-speed shape per typical NEMA Design B presentation; star-delta and VFD scaling per standard reduced-voltage / current-limited start theory.</footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ return parseFloat(document.getElementById(id).value) || 0; }
+  function checked(sel){ return document.querySelector(sel).checked; }
+
+  // Catmull-Rom interpolation through sorted control points {x,y}
+  function crY(pts, xq){
+    if(xq<=pts[0].x) return pts[0].y;
+    if(xq>=pts[pts.length-1].x) return pts[pts.length-1].y;
+    var i=0;
+    for(;i<pts.length-2;i++){ if(xq<pts[i+1].x) break; }
+    var p0=pts[Math.max(i-1,0)], p1=pts[i], p2=pts[i+1], p3=pts[Math.min(i+2,pts.length-1)];
+    var t=(xq-p1.x)/(p2.x-p1.x), t2=t*t, t3=t2*t;
+    return 0.5*((2*p1.y) + (-p0.y+p2.y)*t + (2*p0.y-5*p1.y+4*p2.y-p3.y)*t2 + (-p0.y+3*p1.y-3*p2.y+p3.y)*t3);
+  }
+
+  function sampleCurve(pts, n){
+    var out=[];
+    for(var i=0;i<=n;i++){ var x=i*(100/n); out.push({x:x, y:crY(pts,x)}); }
+    return out;
+  }
+
+  function buildSVGChart(svgEl, series, yMax, yUnit){
+    var W=600,H=220,padL=36,padR=8,padT=10,padB=22;
+    var innerW=W-padL-padR, innerH=H-padT-padB;
+    function sx(x){ return padL + (x/100)*innerW; }
+    function sy(y){ return padT + innerH - (y/yMax)*innerH; }
+
+    var svgNS='http://www.w3.org/2000/svg';
+    while(svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
+
+    // grid + axes
+    for(var gx=0;gx<=100;gx+=25){
+      var l=document.createElementNS(svgNS,'line');
+      l.setAttribute('x1',sx(gx));l.setAttribute('x2',sx(gx));l.setAttribute('y1',padT);l.setAttribute('y2',padT+innerH);
+      l.setAttribute('class','chart-grid'); svgEl.appendChild(l);
+      var t=document.createElementNS(svgNS,'text');
+      t.setAttribute('x',sx(gx));t.setAttribute('y',H-6);t.setAttribute('text-anchor','middle');t.setAttribute('class','chart-tick');
+      t.textContent=gx+'%'; svgEl.appendChild(t);
+    }
+    var steps=4;
+    for(var gi=0;gi<=steps;gi++){
+      var gy=yMax*gi/steps;
+      var l2=document.createElementNS(svgNS,'line');
+      l2.setAttribute('x1',padL);l2.setAttribute('x2',padL+innerW);l2.setAttribute('y1',sy(gy));l2.setAttribute('y2',sy(gy));
+      l2.setAttribute('class','chart-grid'); svgEl.appendChild(l2);
+      var t2=document.createElementNS(svgNS,'text');
+      t2.setAttribute('x',padL-5);t2.setAttribute('y',sy(gy)+3);t2.setAttribute('text-anchor','end');t2.setAttribute('class','chart-tick');
+      t2.textContent=Math.round(gy)+(yUnit||''); svgEl.appendChild(t2);
+    }
+    var ax=document.createElementNS(svgNS,'line');
+    ax.setAttribute('x1',padL);ax.setAttribute('x2',padL+innerW);ax.setAttribute('y1',padT+innerH);ax.setAttribute('y2',padT+innerH);
+    ax.setAttribute('class','chart-axis'); svgEl.appendChild(ax);
+    var ay=document.createElementNS(svgNS,'line');
+    ay.setAttribute('x1',padL);ay.setAttribute('x2',padL);ay.setAttribute('y1',padT);ay.setAttribute('y2',padT+innerH);
+    ay.setAttribute('class','chart-axis'); svgEl.appendChild(ay);
+
+    series.forEach(function(s){
+      if(!s.on) return;
+      var d = s.points.map(function(p,i){ return (i===0?'M':'L')+sx(p.x).toFixed(1)+' '+sy(Math.max(0,Math.min(p.y,yMax))).toFixed(1); }).join(' ');
+      var path=document.createElementNS(svgNS,'path');
+      path.setAttribute('d',d); path.setAttribute('class','curve '+s.cls);
+      svgEl.appendChild(path);
+    });
+  }
+
+  function compute(){
+    var FLC=num('mFLC'), ILR=num('mILR'), LRT=num('mLRT'), PUT=num('mPUT'), BDT=num('mBDT');
+    var slip=num('mSlip'), ratedSpeed=100-slip;
+    var sdTrans=num('mSDtrans'), vfdLim=num('mVFDlim');
+    var loadType=document.querySelector('input[name="loadType"]:checked').value;
+    var loadPct=num('mLoadPct');
+
+    // DOL torque curve control points
+    var torquePts=[{x:0,y:LRT},{x:25,y:PUT},{x:80,y:BDT},{x:ratedSpeed,y:100},{x:100,y:0}];
+    var dolTorque=sampleCurve(torquePts,50);
+
+    // DOL current curve control points
+    var currPts=[{x:0,y:ILR},{x:70,y:ILR*0.9},{x:90,y:ILR*0.6},{x:ratedSpeed,y:1.3},{x:100,y:1.0}];
+    var dolCurrent=sampleCurve(currPts,50);
+
+    // Star-delta: 1/3 scaling below transition, DOL above
+    var sdTorque=dolTorque.map(function(p){ return {x:p.x, y: p.x<sdTrans ? p.y/3 : p.y}; });
+    var sdCurrent=dolCurrent.map(function(p){ return {x:p.x, y: p.x<sdTrans ? p.y/3 : p.y}; });
+
+    // VFD: current flat at limit up to rated speed, torque ~ proportional to current (approx)
+    var vfdCurrent=sampleCurve([{x:0,y:vfdLim},{x:90,y:vfdLim},{x:ratedSpeed,y:vfdLim},{x:100,y:1.0}],50);
+    var vfdTorque=sampleCurve([{x:0,y:vfdLim*100},{x:90,y:vfdLim*100},{x:ratedSpeed,y:100},{x:100,y:0}],50);
+
+    // Load torque curve
+    var loadTorque=[];
+    for(var i=0;i<=50;i++){
+      var x=i*2;
+      var y = loadType==='constant' ? loadPct : loadPct*Math.pow(x/100,2);
+      loadTorque.push({x:x,y:y});
+    }
+
+    return {FLC:FLC, dolTorque:dolTorque, dolCurrent:dolCurrent, sdTorque:sdTorque, sdCurrent:sdCurrent,
+             vfdTorque:vfdTorque, vfdCurrent:vfdCurrent, loadTorque:loadTorque, sdTrans:sdTrans, loadType:loadType, loadPct:loadPct, ILR:ILR, LRT:LRT, vfdLim:vfdLim};
+  }
+
+  function render(){
+    var r = compute();
+    var onDolT=checked('.legend-item input[data-curve="dol"]');
+    var onSdT=document.querySelectorAll('.legend-item input[data-curve="sd"]')[0].checked;
+    var onVfdT=document.querySelectorAll('.legend-item input[data-curve="vfd"]')[0].checked;
+    var onLoadT=document.querySelectorAll('.legend-item input[data-curve="load"]')[0].checked;
+    var onDolC=document.querySelectorAll('.legend-item input[data-curve="dol"]')[1].checked;
+    var onSdC=document.querySelectorAll('.legend-item input[data-curve="sd"]')[1].checked;
+    var onVfdC=document.querySelectorAll('.legend-item input[data-curve="vfd"]')[1].checked;
+
+    var tMax=Math.ceil(Math.max(r.LRT, 250)/50)*50;
+    buildSVGChart(document.getElementById('torqueChart'), [
+      {points:r.loadTorque, cls:'load', on:onLoadT},
+      {points:r.dolTorque, cls:'dol', on:onDolT},
+      {points:r.sdTorque, cls:'sd', on:onSdT},
+      {points:r.vfdTorque, cls:'vfd', on:onVfdT}
+    ], tMax, '%');
+
+    var cMax=Math.ceil(Math.max(r.ILR, r.vfdLim)/1)+1;
+    buildSVGChart(document.getElementById('currentChart'), [
+      {points:r.dolCurrent, cls:'dol', on:onDolC},
+      {points:r.sdCurrent, cls:'sd', on:onSdC},
+      {points:r.vfdCurrent, cls:'vfd', on:onVfdC}
+    ], cMax, 'x');
+
+    // stall check: any point below sdTrans where load torque > star torque
+    var stall=false, worstMargin=Infinity;
+    for(var i=0;i<r.sdTorque.length;i++){
+      if(r.sdTorque[i].x >= r.sdTrans) break;
+      var loadAtX = r.loadType==='constant' ? r.loadPct : r.loadPct*Math.pow(r.sdTorque[i].x/100,2);
+      var margin = r.sdTorque[i].y - loadAtX;
+      if(margin < worstMargin) worstMargin = margin;
+      if(margin < 0) stall = true;
+    }
+
+    var banner=document.getElementById('motorBanner');
+    if(stall){
+      banner.className='status-banner bad';
+      banner.innerHTML='<span class="status-dot"></span><span>Star-delta risk: load torque exceeds star-phase motor torque before the transition speed (margin '+worstMargin.toFixed(0)+'%FLT) — motor may stall or hang up in star.</span>';
+    } else {
+      banner.className='status-banner ok';
+      banner.innerHTML='<span class="status-dot"></span><span>Star-delta OK: motor torque stays above the load curve through the star phase (worst-case margin '+worstMargin.toFixed(0)+'%FLT).</span>';
+    }
+
+    var rows=[
+      {name:'DOL', peakA:r.ILR, peakPct:(r.ILR*r.FLC).toFixed(0)+' A ('+r.ILR.toFixed(1)+'×FLC)', startT:r.LRT.toFixed(0)+'%', note:'Highest inrush, full torque'},
+      {name:'Star-Delta', peakA:r.ILR/3, peakPct:((r.ILR/3)*r.FLC).toFixed(0)+' A ('+(r.ILR/3).toFixed(1)+'×FLC)', startT:(r.LRT/3).toFixed(0)+'%', note: stall ? 'Stall risk — see banner' : 'Reduced current, reduced torque'},
+      {name:'VFD (limited)', peakA:r.vfdLim, peakPct:(r.vfdLim*r.FLC).toFixed(0)+' A ('+r.vfdLim.toFixed(1)+'×FLC)', startT:(r.vfdLim*100).toFixed(0)+'%', note:'Smoothest, current-limited throughout'}
+    ];
+    var best = rows.reduce(function(a,b){ return b.peakA<a.peakA?b:a; });
+    var tbody=document.getElementById('motorTableBody');
+    tbody.innerHTML='';
+    rows.forEach(function(row){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td>'+row.name+'</td><td'+(row===best?' class="best"':'')+'>'+row.peakPct+'</td><td>'+row.startT+'</td><td>'+row.note+'</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  document.querySelectorAll('input,select').forEach(function(el){
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

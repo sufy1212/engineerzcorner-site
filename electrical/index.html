@@ -361,6 +361,8 @@
   .tool-card-num{font-family:var(--font-mono);font-size:10px;color:var(--amber-deep);letter-spacing:.08em;font-weight:700;text-transform:uppercase;}
   .tool-card-title{font-family:var(--font-display);font-size:15.5px;font-weight:700;color:var(--ink);margin:1px 0 0;}
   .tool-card-desc{font-size:12.5px;color:var(--ink-dim);line-height:1.6;margin:0 0 0 46px;}
+  .tool-card{position:relative;}
+  .tool-card-badge{position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:8.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#DC2626,#EA580C);padding:3px 7px;border-radius:20px;}
 
   /* ===== symbol library (dense grid) ===== */
   .symbol-grid{
@@ -1317,6 +1319,7 @@
       <div class="tool-card-desc">Estimate monthly and annual electricity cost from load power, runtime, and a flat or tiered rate.</div>
     </a>
     <a class="tool-card" href="three-phase-fault-simulator.html">
+      <span class="tool-card-badge">Simulator</span>
       <div class="tool-card-head">
         <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-14h-7z"></path></svg></div>
         <div>
@@ -1325,6 +1328,17 @@
         </div>
       </div>
       <div class="tool-card-desc">Interactive single-line diagram — click a fault point and watch which breaker trips first, with a loss-of-selectivity warning if the margin is too tight.</div>
+    </a>
+    <a class="tool-card" href="motor-starting-simulator.html">
+      <span class="tool-card-badge">Simulator</span>
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+        <div>
+          <div class="tool-card-num">SH.26</div>
+          <div class="tool-card-title">Motor Starting Simulator</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Compare DOL, star-delta and VFD starts against your load's torque curve — peak current, starting torque, and a star-delta stall-risk check.</div>
     </a>
     <a class="tool-card" href="notes.html">
       <div class="tool-card-head">
