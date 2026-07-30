@@ -98,6 +98,19 @@ function escapeXml(str) {
     .replace(/>/g, '&gt;');
 }
 
+// Cloudflare Pages serves .html files without their extension and
+// folder/index.html as folder/ — every canonical URL on the site (sitemap
+// entries, <link rel="canonical">, og:url, breadcrumb JSON-LD) must match
+// that same clean form, or Google sees a redirect on every URL it tries to
+// crawl. This is the single source of truth for that mapping — used both
+// for generating sitemap.xml and for self-healing per-page meta tags below.
+function cleanPathFor(rel) {
+  const base = path.basename(rel);
+  if (rel === 'index.html') return '';
+  if (base === 'index.html') return rel.slice(0, -'index.html'.length);
+  return rel.slice(0, -'.html'.length);
+}
+
 // Every .html file on the site (excluding the ones passed in skipDirs),
 // used for the sitemap. 404 pages are never included in a sitemap.
 function listAllHtmlFiles() {
@@ -174,14 +187,7 @@ const sitemapEntries = allPages.map(rel => {
   // folder/index.html as folder/ — sitemap URLs must match that canonical
   // form (same form used in each page's <link rel="canonical">), or Google
   // sees a redirect on every URL it tries to crawl from this sitemap.
-  let cleanPath;
-  if (rel === 'index.html') {
-    cleanPath = '';
-  } else if (base === 'index.html') {
-    cleanPath = rel.slice(0, -'index.html'.length);
-  } else {
-    cleanPath = rel.slice(0, -'.html'.length);
-  }
+  const cleanPath = cleanPathFor(rel);
   return `  <url><loc>${SITE_URL}/${cleanPath}</loc><lastmod>${fileDate(rel).slice(0,10)}</lastmod><priority>${priority}</priority></url>`;
 }).sort();
 
@@ -234,3 +240,76 @@ if (fs.existsSync(postsIndexPath)) {
     console.warn(`  (posts/index.html card text is hand-written, so this script won't add\n   cards automatically — just a heads-up so nothing gets missed.)\n`);
   }
 }
+
+// -----------------------------------------------------------------------
+// Canonical URL self-heal — every page's own <link rel="canonical">,
+// og:url meta tag, and breadcrumb JSON-LD "item" field are hand-authored
+// (usually by copy-pasting an existing page as a starting template), so a
+// stale ".html" left over from an old template silently creates a
+// duplicate-content / redirect problem for Google that nothing else here
+// catches. This pass rewrites any of the three that don't match the same
+// clean URL used in sitemap.xml, straight on disk, every build.
+// -----------------------------------------------------------------------
+let healedFiles = 0;
+allPages.forEach(rel => {
+  const abs = path.join(ROOT, rel);
+  const clean = cleanPathFor(rel);
+  const correctUrl = `${SITE_URL}/${clean}`;
+  let html = fs.readFileSync(abs, 'utf8');
+  let changed = false;
+
+  html = html.replace(
+    /(<link rel="canonical" href=")([^"]+)(")/,
+    (m, pre, url, post) => {
+      if (url !== correctUrl) { changed = true; return pre + correctUrl + post; }
+      return m;
+    }
+  );
+  html = html.replace(
+    /(property="og:url" content=")([^"]+)(")/,
+    (m, pre, url, post) => {
+      if (url !== correctUrl) { changed = true; return pre + correctUrl + post; }
+      return m;
+    }
+  );
+  // Breadcrumb JSON-LD: only the LAST "item" in each BreadcrumbList block is
+  // this page itself (earlier items are ancestor pages, which are correct
+  // as-is) — so only touch an "item" line whose URL's basename/dir matches
+  // this file, never blanket-replace every breadcrumb item in the page.
+  const selfBreadcrumbRe = new RegExp(
+    `("item":\\s*")https://www\\.engineerzcorner\\.com/${rel.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')}(")`
+  );
+  html = html.replace(selfBreadcrumbRe, (m, pre, post) => {
+    changed = true;
+    return pre + correctUrl + post;
+  });
+
+  if (changed) {
+    fs.writeFileSync(abs, html);
+    healedFiles++;
+    console.warn(`⚠ Fixed stale canonical/og:url/breadcrumb URL in ${rel}`);
+  }
+});
+if (healedFiles) {
+  console.warn(`\n⚠ Self-healed ${healedFiles} page(s) with a stale canonical/og:url/breadcrumb URL.\n`);
+}
+
+// -----------------------------------------------------------------------
+// sitemap.html check — the human-readable sitemap page lists every post
+// by hand-written title text, same as posts/index.html, so it can't be
+// safely auto-generated without risking mangled titles. This just warns
+// (like the orphan-post check above) if a post is missing from it.
+// -----------------------------------------------------------------------
+const sitemapHtmlPath = path.join(ROOT, 'sitemap.html');
+if (fs.existsSync(sitemapHtmlPath)) {
+  const sitemapHtmlContent = fs.readFileSync(sitemapHtmlPath, 'utf8');
+  const missingFromSitemapHtml = postFiles
+    .map(rel => path.basename(rel))
+    .filter(name => !sitemapHtmlContent.includes(name));
+  if (missingFromSitemapHtml.length) {
+    console.warn(`\n⚠ ${missingFromSitemapHtml.length} post(s) exist but aren't linked from sitemap.html yet:`);
+    missingFromSitemapHtml.forEach(name => console.warn(`  - posts/${name}`));
+    console.warn(`  (sitemap.html link text is hand-written, so this script won't add\n   entries automatically — just a heads-up so nothing gets missed.)\n`);
+  }
+}
+
