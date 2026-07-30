@@ -234,4 +234,109 @@
     <description>What an earthing system is actually protecting against, why grid resistance is the number that matters, the factors that drive it, and a practical checklist for getting it right on site.</description>
     <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
   </item>
+  <item>
+    <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
+    <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
+    <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units, and where the standard still wins over digital buses.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Bearing Failures: Root Causes &amp; Prevention</title>
+    <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
+    <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling — with the root cause and prevention for each.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
+    <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
+    <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
+    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
+    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
+    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force between conductors &amp;mdash; plus enclosure heat dissipation.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Glands: What They Do and How to Get the Selection Right</title>
+    <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
+    <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist, an installation walkthrough, and an IP rating quick reference.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</title>
+    <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
+    <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
+    <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>IS, IEC &amp; IEEE Codes: The Standards Behind Electrical Engineering</title>
+    <link>https://www.engineerzcorner.com/posts/is-iec-ieee-electrical-standards-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/is-iec-ieee-electrical-standards-reference.html</guid>
+    <description>What IS, IEC and IEEE standards each actually govern, a working reference list across wiring, earthing, transformers, switchgear and solar PV, and the codes an EPC solar project reaches for most often.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>kW, kVA, and kVAR: What Actually Separates Them</title>
+    <link>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained.html</guid>
+    <description>Real power, apparent power, and reactive power explained through the power triangle — why a transformer is rated in kVA and not kW, and a worked 3-phase example tying kW, kVA, and kVAR together.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>LV Panel Estimating: Why a Budgetary BOQ Starts With the Incomer, Not the Steel</title>
+    <link>https://www.engineerzcorner.com/posts/lv-panel-estimate-boq-from-incomer.html</link>
+    <guid>https://www.engineerzcorner.com/posts/lv-panel-estimate-boq-from-incomer.html</guid>
+    <description>How an LV panel's busbar size, enclosure dimensions and budgetary BOQ cost all cascade from just two inputs: the incomer rating and the number of outgoing ways.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation in Pumps: Causes, Warning Signs, and Prevention</title>
+    <link>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention.html</guid>
+    <description>What pump cavitation actually is, why NPSH available has to beat NPSH required, the field symptoms that give it away, and a practical prevention checklist.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Signal Scaling: Turning a 4&amp;ndash;20mA Loop Into an Engineering Value</title>
+    <link>https://www.engineerzcorner.com/posts/signal-scaling-4-20ma-engineering-units.html</link>
+    <guid>https://www.engineerzcorner.com/posts/signal-scaling-4-20ma-engineering-units.html</guid>
+    <description>How a PLC or DCS converts a raw 4-20mA transmitter signal into an engineering unit like level, pressure, or flow — the linear scaling formula, span vs. zero, and why untidy ranges cause quiet errors.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Soil Bearing Capacity: Why It Decides Your Footing Size, Not Just Column Load</title>
+    <link>https://www.engineerzcorner.com/posts/soil-bearing-capacity-footing-sizing.html</link>
+    <guid>https://www.engineerzcorner.com/posts/soil-bearing-capacity-footing-sizing.html</guid>
+    <description>Why footing area is set by the weaker of two numbers — column load and what the soil beneath it can safely carry — plus typical allowable bearing capacities and the factors that move them.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield.html</guid>
+    <description>How tilt angle and azimuth are chosen for fixed solar arrays, why the 'tilt equals latitude' rule of thumb only gets you to a starting point, and how seasonal weighting changes the answer.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load</title>
+    <link>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting.html</link>
+    <guid>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting.html</guid>
+    <description>Transformer kVA from connected load and demand factor, and why standby generator sizing is governed by motor-starting voltage dip rather than the running load alone.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
+  <item>
+    <title>Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number</title>
+    <link>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained.html</guid>
+    <description>Why voltage drop accumulates through every segment of a feeder chain, the formula behind it, and why a cable sized fine for ampacity can still fail on voltage drop.</description>
+    <pubDate>Sun, 26 Jul 2026 21:24:28 GMT</pubDate>
+  </item>
 </channel></rss>
