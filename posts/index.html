@@ -86,6 +86,16 @@
   .section-label{display:flex;align-items:center;gap:10px;margin:40px 0 18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
   .section-label::after{content:'';flex:1;height:1px;background:var(--line);}
 
+  /* category filter bar */
+  .filter-bar{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 14px;margin:-4px 0 4px;-ms-overflow-style:none;scrollbar-width:none;}
+  .filter-bar::-webkit-scrollbar{display:none;}
+  .filter-pill{flex:none;display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--ink-dim);background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:7px 14px;cursor:pointer;user-select:none;transition:background .15s,color .15s,border-color .15s;white-space:nowrap;}
+  .filter-pill:hover{border-color:var(--teal);color:var(--teal-dark);}
+  .filter-pill.active{background:var(--petrol);border-color:var(--petrol);color:#F3EEDD;}
+  .filter-pill .fp-count{opacity:.6;font-size:10.5px;}
+  .filter-status{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin:0 0 16px;}
+  .nt-card.fp-hidden{display:none;}
+
   .nt-grid{display:grid;grid-template-columns:1fr;gap:16px;}
   @media (min-width:560px){ .nt-grid{grid-template-columns:1fr 1fr;} }
 
@@ -207,6 +217,9 @@
 <div class="wrap">
 
   <div class="section-label">All posts</div>
+
+  <div class="filter-bar" id="filterBar"></div>
+  <div class="filter-status" id="filterStatus"></div>
 
   <div class="nt-grid" id="postsGrid">
     <a class="nt-card" href="air-changes-per-hour-ventilation-explained.html">
@@ -635,6 +648,63 @@
   }
   countUp(document.getElementById('statPosts'), cards.length, 900);
   countUp(document.getElementById('statDisc'), discSet.size, 900);
+
+  /* ---- category filter bar: builds itself from whatever .nt-card-tag
+     values already exist on the page, so a newly added post with a new
+     category needs zero extra wiring here — it just shows up as a pill. ---- */
+  (function(){
+    var counts = {};
+    var order = [];
+    cards.forEach(function(c){
+      var tag = c.querySelector('.nt-card-tag');
+      if(!tag) return;
+      var label = tag.textContent.trim();
+      c.setAttribute('data-cat', label);
+      if(!(label in counts)) order.push(label);
+      counts[label] = (counts[label]||0) + 1;
+    });
+    order.sort(function(a,b){ return counts[b]-counts[a]; });
+
+    var bar = document.getElementById('filterBar');
+    var status = document.getElementById('filterStatus');
+    if(!bar) return;
+
+    function makePill(label, count, isAll){
+      var pill = document.createElement('div');
+      pill.className = 'filter-pill' + (isAll ? ' active' : '');
+      pill.setAttribute('data-filter', isAll ? '__all__' : label);
+      pill.innerHTML = (isAll ? 'All' : label) + ' <span class="fp-count">' + count + '</span>';
+      return pill;
+    }
+
+    bar.appendChild(makePill('All', cards.length, true));
+    order.forEach(function(label){ bar.appendChild(makePill(label, counts[label], false)); });
+
+    function applyFilter(filter){
+      var shown = 0;
+      cards.forEach(function(c){
+        var match = filter === '__all__' || c.getAttribute('data-cat') === filter;
+        c.classList.toggle('fp-hidden', !match);
+        if(match) shown++;
+      });
+      if(status){
+        status.textContent = filter === '__all__'
+          ? 'Showing all ' + cards.length + ' posts'
+          : 'Showing ' + shown + ' of ' + cards.length + ' posts \u2014 ' + filter.replace(/^[^\w]*\s*/, '');
+      }
+      Array.prototype.forEach.call(bar.children, function(p){
+        p.classList.toggle('active', p.getAttribute('data-filter') === filter);
+      });
+    }
+
+    bar.addEventListener('click', function(e){
+      var pill = e.target.closest('.filter-pill');
+      if(!pill) return;
+      applyFilter(pill.getAttribute('data-filter'));
+    });
+
+    applyFilter('__all__');
+  })();
 
   /* ---- scroll reveal for cards + cta ---- */
   var revealTargets = document.querySelectorAll('.nt-card, .cta-strip');
