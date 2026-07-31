@@ -12,21 +12,21 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer | Engineerz CorneR</title>
-<meta name="description" content="How tilt angle and azimuth are chosen for fixed solar arrays, why the 'tilt equals latitude' rule of thumb only gets you to a starting point, and how seasonal weighting changes the answer.">
-<link rel="canonical" href="https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield">
+<title>Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP | Engineerz CorneR</title>
+<meta name="description" content="How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve, and why the system curve's intersection point (not the datasheet number) decides where a pump actually operates.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Engineerz CorneR">
-<meta property="og:title" content="Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer">
-<meta property="og:description" content="How tilt angle and azimuth are chosen for fixed solar arrays, why the 'tilt equals latitude' rule of thumb only gets you to a starting point, and how seasonal weighting changes the answer.">
-<meta property="og:url" content="https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield">
+<meta property="og:title" content="Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP">
+<meta property="og:description" content="How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve, and why the system curve's intersection point decides where a pump actually operates.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained">
 <meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer">
-<meta name="twitter:description" content="How tilt angle and azimuth are chosen for fixed solar arrays, why the 'tilt equals latitude' rule of thumb only gets you to a starting point, and how seasonal weighting changes the answer.">
+<meta name="twitter:title" content="Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP">
+<meta name="twitter:description" content="How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve, and why the system curve's intersection point decides where a pump actually operates.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,10 +61,6 @@
 
   .hero-art{margin:6px 0 0;}
   .hero-art svg{width:100%;height:auto;display:block;}
-  @keyframes sunSweep{ 0%{transform:rotate(-18deg);} 50%{transform:rotate(18deg);} 100%{transform:rotate(-18deg);} }
-  .hero-art .sun-rays{animation:sunSweep 6s ease-in-out infinite;transform-origin:600px 40px;}
-  @keyframes sunGlow{ 0%,100%{opacity:.6;} 50%{opacity:1;} }
-  .hero-art .sun-core{animation:sunGlow 3s ease-in-out infinite;}
 
   .highlights{display:grid;grid-template-columns:1fr;gap:10px;margin:30px 0 6px;}
   @media(min-width:560px){ .highlights{grid-template-columns:1fr 1fr;} }
@@ -125,7 +121,7 @@
   .post-foot a.try-tool:hover{text-decoration:none;background:var(--navy-2);}
 
   @media (prefers-reduced-motion: reduce){
-    .hl-card, .hero-art .sun-rays, .hero-art .sun-core{opacity:1;animation:none;}
+    .hl-card{opacity:1;animation:none;}
   }
 </style>
 <script type="application/ld+json">
@@ -135,7 +131,7 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
     { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
-    { "@type": "ListItem", "position": 3, "name": "Solar Panel Tilt & Orientation: Why Latitude Isn't the Whole Answer", "item": "https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield" }
+    { "@type": "ListItem", "position": 3, "name": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency & the BEP", "item": "https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained" }
   ]
 }
 </script>
@@ -143,16 +139,16 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Solar Panel Tilt & Orientation: Why Latitude Isn't the Whole Answer",
-  "description": "How tilt angle and azimuth are chosen for fixed solar arrays, why the 'tilt equals latitude' rule of thumb only gets you to a starting point, and how seasonal weighting changes the answer.",
-  "url": "https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield",
+  "headline": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency & the BEP",
+  "description": "How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve, and why the system curve's intersection point decides where a pump actually operates.",
+  "url": "https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained",
   "author": { "@type": "Organization", "name": "Engineerz CorneR" },
   "publisher": {
     "@type": "Organization",
     "name": "Engineerz CorneR",
     "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
   },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/solar-panel-tilt-orientation-annual-yield" }
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained" }
 }
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
@@ -167,7 +163,7 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Solar Panel Tilt &amp; Orientation: Why Latitude Isn&#x27;t the Whole Answer</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</span></div></nav>
 
 <nav class="nt-nav">
   <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
@@ -176,31 +172,28 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <span class="post-tag">&#9728; Solar &middot; PV Design</span>
-    <h1>Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer</h1>
-    <p class="hero-sub">"Set the tilt to your latitude" is a fine starting point and a poor final answer &mdash; the best fixed tilt depends on whether you're optimizing for annual yield, winter performance, or summer peak shaving.</p>
-    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Fixed-Tilt PV Arrays</span></div>
+    <span class="post-tag">&#9881; Mechanical &middot; Rotating Equipment</span>
+    <h1>Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</h1>
+    <p class="hero-sub">A pump's datasheet flow rate isn't a promise &mdash; it's one point on a curve. Where the pump actually operates is decided by where that curve crosses the system it's connected to.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Mechanical / Rotating Equipment</span></div>
   </div>
   <div class="hero-art">
-    <svg viewBox="0 0 780 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0" y1="150" x2="780" y2="150" stroke="#1E3A5C" stroke-width="1"/>
-      <!-- sun -->
-      <g class="sun-rays">
-        <circle class="sun-core" cx="620" cy="40" r="16" fill="#F2B84B"/>
-        <line x1="620" y1="10" x2="620" y2="2" stroke="#F2B84B" stroke-width="2"/>
-        <line x1="648" y1="20" x2="654" y2="14" stroke="#F2B84B" stroke-width="2"/>
-        <line x1="592" y1="20" x2="586" y2="14" stroke="#F2B84B" stroke-width="2"/>
-        <line x1="590" y1="60" x2="200" y2="115" stroke="#F2B84B" stroke-width="1" stroke-dasharray="3 4" opacity=".5"/>
-      </g>
-      <!-- tilted panel on ground mount -->
-      <rect x="130" y="130" width="14" height="20" fill="#18325A"/>
-      <line x1="137" y1="130" x2="230" y2="90" stroke="#5FD3E3" stroke-width="7" stroke-linecap="round"/>
-      <line x1="137" y1="130" x2="230" y2="90" stroke="#0A1930" stroke-width="1"/>
-      <path d="M137 133 L137 148" stroke="#5FD3E3" stroke-width="1" stroke-dasharray="2 3"/>
-      <path d="M100 130 A 40 40 0 0 1 137 108" fill="none" stroke="#7E97AC" stroke-width="1"/>
-      <text x="90" y="105" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">tilt (&beta;)</text>
-      <text x="250" y="70" font-family="IBM Plex Mono" font-size="9" fill="#F2B84B">azimuth toward equator</text>
-      <text x="60" y="30" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">FIXED-TILT ARRAY</text>
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="140" x2="700" y2="140" stroke="#2A3F5C" stroke-width="1"/>
+      <line x1="60" y1="20" x2="60" y2="140" stroke="#2A3F5C" stroke-width="1"/>
+      <text x="20" y="30" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">H</text>
+      <text x="690" y="155" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">Q</text>
+      <!-- pump curve (falling) -->
+      <path d="M75 40 Q 300 55 450 100 T 660 138" fill="none" stroke="#5FD3E3" stroke-width="2.5"/>
+      <text x="480" y="70" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">PUMP CURVE</text>
+      <!-- system curve (rising) -->
+      <path d="M75 132 Q 300 128 450 100 T 620 40" fill="none" stroke="#F2B84B" stroke-width="2.5"/>
+      <text x="500" y="45" font-family="IBM Plex Mono" font-size="9" fill="#F2B84B">SYSTEM CURVE</text>
+      <!-- BEP / operating point -->
+      <circle cx="450" cy="100" r="6" fill="#D9782E" stroke="#fff" stroke-width="1.5"/>
+      <text x="462" y="97" font-family="IBM Plex Mono" font-size="9" fill="#D9782E" font-weight="600">OPERATING POINT</text>
+      <line x1="450" y1="100" x2="450" y2="140" stroke="#4A5D7A" stroke-width="1" stroke-dasharray="2 3"/>
+      <line x1="60" y1="100" x2="450" y2="100" stroke="#4A5D7A" stroke-width="1" stroke-dasharray="2 3"/>
     </svg>
   </div>
 </div>
@@ -208,56 +201,46 @@
 <div class="wrap">
 
   <div class="highlights">
-    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A fixed panel captures the most annual energy when it faces true equator-facing azimuth and tilts at roughly the site's latitude &mdash; but "roughly" hides a real design choice.</div></div>
-    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Tilt flatter than latitude favours summer output; tilt steeper than latitude favours winter output &mdash; the sun's elevation angle swings with the seasons, not just the day.</div></div>
-    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Azimuth error costs less energy than most people expect near due-equator, but the penalty accelerates fast past about 30&deg; off-axis.</div></div>
-    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Roof-constrained arrays often trade a small annual yield loss for a tilt/azimuth that matches the existing roof pitch and orientation &mdash; and that's usually the right call.</div></div>
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A pump curve plots head against flow across the pump's whole operating range &mdash; not a single guaranteed value. Head falls as flow rises, for a fixed pump speed and impeller diameter.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The pump only ever operates where its head-capacity curve intersects the system curve &mdash; the resistance curve of the actual pipe network it's connected to. Change the system, and the operating point moves along the same pump curve.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Efficiency is plotted as contour "islands" on the same chart &mdash; the Best Efficiency Point (BEP) is the flow where the pump is most efficient, and operating far from it accelerates wear even when performance still looks acceptable.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The NPSH-required curve, plotted against the same flow axis, rises with flow &mdash; meaning a pump needs more suction head available as it moves more water, which is where cavitation risk concentrates at high flow.</div></div>
   </div>
 
   <div class="post-body">
 
-    <h2><span class="h2-dot"></span>The starting rule of thumb</h2>
-    <p>For a fixed (non-tracking) array optimized for maximum annual energy yield, the classic starting point is: face the array toward the equator (due south in the northern hemisphere, due north in the southern hemisphere), and tilt it at an angle roughly equal to the site's latitude.</p>
-    <div class="formula-box">&beta;<sub>annual</sub> &asymp; &phi;</div>
-    <div class="formula-note">&beta; = panel tilt angle from horizontal &middot; &phi; = site latitude &mdash; this approximation gets you close to the annual-optimum tilt for most latitudes, not the exact one</div>
-    <p>This rule works because it roughly balances the sun's path across the whole year: in summer the sun tracks high and the panel is "under-tilted" for those months, while in winter the sun tracks low and the same panel is closer to perpendicular to the winter sun &mdash; the two seasons partially cancel out over a full year.</p>
+    <h2><span class="h2-dot"></span>The head-capacity curve</h2>
+    <p>The main curve on any pump datasheet plots total head (usually in meters or feet) on the vertical axis against flow rate (capacity, in L/s, m&sup3;/h, or GPM) on the horizontal axis. For a fixed-speed centrifugal pump, this curve falls from left to right: at zero flow (a fully closed valve, "shutoff head") the pump produces its maximum head, and head drops as flow increases, because more of the pump's energy goes into moving fluid rather than building pressure.</p>
+    <p>Manufacturers often print several curves on one chart for a pump family &mdash; different impeller diameters (trims) at the same casing and speed, each shifted up or down. Selecting a pump usually means picking the trim whose curve passes closest to the required duty point.</p>
 
-    <h2><span class="h2-dot"></span>Optimizing for a season instead of the whole year</h2>
+    <h2><span class="h2-dot"></span>Where the pump actually operates: the system curve</h2>
+    <div class="formula-box">H<sub>system</sub> = H<sub>static</sub> + k &middot; Q&sup2;</div>
+    <div class="formula-note">H<sub>static</sub> = fixed elevation/pressure the pump must overcome regardless of flow &middot; k = system resistance coefficient (pipe friction, fittings, valves) &middot; Q = flow rate</div>
+    <p>The system curve represents the head the piping network demands at each flow rate &mdash; it rises with the square of flow because friction losses grow with velocity squared. The pump's actual operating point is wherever the pump curve and the system curve cross; neither curve alone determines the answer. Change a valve position, add a strainer, or resize a pipe, and the system curve shifts, moving the operating point to a different spot on the same, unchanged pump curve.</p>
+
+    <h2><span class="h2-dot"></span>Efficiency islands and the Best Efficiency Point</h2>
     <div class="signal-grid">
-      <div class="signal-card a"><b>Annual yield</b><span>Tilt &asymp; latitude. Balances summer and winter sun angles for the highest total kWh across 12 months.</span></div>
-      <div class="signal-card b"><b>Winter-weighted</b><span>Tilt &asymp; latitude + 10&ndash;15&deg;. Steeper angle faces a lower winter sun more directly, useful where winter demand or grid value is higher.</span></div>
-      <div class="signal-card c"><b>Summer-weighted</b><span>Tilt &asymp; latitude &minus; 10&ndash;15&deg;. Flatter angle suits a higher summer sun, common for cooling-dominated loads.</span></div>
+      <div class="signal-card a"><b>At the BEP</b><span>Lowest radial shaft loading, quietest operation, longest bearing/seal life, and the pump's rated efficiency is achieved &mdash; the ideal long-term operating flow.</span></div>
+      <div class="signal-card b"><b>Right of BEP</b><span>Higher flow than optimal; increases NPSH required and risk of cavitation, plus higher motor loading &mdash; watch for motor overload on pumps selected too small.</span></div>
+      <div class="signal-card c"><b>Left of BEP</b><span>Lower flow than optimal; increases radial thrust on the shaft and can cause internal recirculation damage over time, even though power draw is lower.</span></div>
     </div>
-    <p>Which of these matters depends on what the system is actually offsetting. A site with a strong summer air-conditioning load and net metering that pays less for winter export often does better tilted flatter than latitude, even though that lowers the theoretical annual total by a small margin.</p>
+    <p>Efficiency is shown as closed contour lines ("islands") overlaid on the head-capacity curve, each ring representing a band of efficiency (e.g. 70%, 75%, 80%). The BEP sits at the center of the highest-efficiency island. A good selection lands the design operating point inside or very close to that island &mdash; not just anywhere the head-capacity curve happens to satisfy the duty requirement.</p>
 
-    <h2><span class="h2-dot"></span>Azimuth: how much does facing off-equator cost?</h2>
-    <div class="tbl-scroll">
-      <table class="dtable">
-        <tr><th>Azimuth offset from equator-facing</th><th>Typical annual yield impact</th></tr>
-        <tr><td>0&deg; (due equator)</td><td>Reference (100%)</td></tr>
-        <tr><td>&plusmn;15&deg;</td><td>~1&ndash;2% loss</td></tr>
-        <tr><td>&plusmn;30&deg;</td><td>~3&ndash;5% loss</td></tr>
-        <tr><td>&plusmn;45&deg;</td><td>~8&ndash;12% loss</td></tr>
-        <tr><td>&plusmn;90&deg; (due east/west)</td><td>~20&ndash;25% loss</td></tr>
-      </table>
-    </div>
-    <p>These figures vary with latitude and local weather, but the shape holds everywhere: azimuth error is forgiving near zero and increasingly expensive as it grows, which is why a modest roof orientation mismatch is rarely worth re-engineering the mounting structure over.</p>
-
-    <h2><span class="h2-dot"></span>Real installations rarely hit the theoretical optimum</h2>
+    <h2><span class="h2-dot"></span>Reading the curve: a practical checklist</h2>
     <ul class="checklist">
-      <li><span class="ck-mark">1</span><span>Roof pitch is fixed &mdash; a rooftop array typically follows the existing roof angle rather than an independently engineered tilt.</span></li>
-      <li><span class="ck-mark">2</span><span>Ground-mount racking has a limited set of manufactured tilt angles, not a continuous range.</span></li>
-      <li><span class="ck-mark">3</span><span>Wind loading increases with tilt angle, so very steep fixed tilts may need heavier structural bracing.</span></li>
-      <li><span class="ck-mark">4</span><span>Row-to-row shading on ground-mount arrays limits how steep the tilt can go before rows start shading each other in low winter sun.</span></li>
-      <li><span class="ck-mark">5</span><span>Snow shedding favours steeper tilts in snow-prone climates, sometimes overriding the pure-yield optimum.</span></li>
+      <li><span class="ck-mark">1</span><span>Plot the actual system curve (static head + friction losses vs. flow) before picking a pump &mdash; a pump selected against a guessed duty point often lands well off its BEP once installed.</span></li>
+      <li><span class="ck-mark">2</span><span>Check where the operating point falls relative to the efficiency islands, not just whether the head-capacity curve passes through the required duty point.</span></li>
+      <li><span class="ck-mark">3</span><span>Cross-reference the NPSH-required curve at the actual operating flow against the system's NPSH available &mdash; both change with flow, so check them at the real operating point, not just at rated flow.</span></li>
+      <li><span class="ck-mark">4</span><span>For multi-trim pump families, prefer a trim that lands the duty point near the BEP over one that merely "fits" &mdash; oversized trims commonly get throttled, wasting the affinity-law energy savings a smaller trim would have kept.</span></li>
+      <li><span class="ck-mark">5</span><span>Recheck the operating point any time the system changes &mdash; a new strainer, a partially closed valve, or pipe fouling all shift the system curve and move the pump off its original design point.</span></li>
     </ul>
 
     <h2><span class="h2-dot"></span>Key takeaways</h2>
     <ul class="takeaways">
-      <li><span class="tk-check">✓</span><span>Tilt &asymp; latitude is a solid starting point for annual yield, not a fixed law &mdash; adjust &plusmn;10&ndash;15&deg; to weight toward summer or winter production.</span></li>
-      <li><span class="tk-check">✓</span><span>Equator-facing azimuth is the annual-yield optimum; small deviations cost little, but the penalty accelerates past ~30&deg; off-axis.</span></li>
-      <li><span class="tk-check">✓</span><span>What the system needs to offset &mdash; summer cooling load, winter heating, or flat year-round demand &mdash; should drive the tilt choice, not yield alone.</span></li>
-      <li><span class="tk-check">✓</span><span>Roof pitch, racking limits, wind load, row shading, and snow all constrain the "ideal" tilt in practice.</span></li>
+      <li><span class="tk-check">✓</span><span>A pump curve is a range of possible operating points, not a single guaranteed flow &mdash; the actual operating point is set by where it crosses the system curve.</span></li>
+      <li><span class="tk-check">✓</span><span>The Best Efficiency Point isn't just about energy cost &mdash; operating far from it increases mechanical wear even when flow and head both look acceptable.</span></li>
+      <li><span class="tk-check">✓</span><span>NPSH required rises with flow, so cavitation risk from insufficient suction head concentrates at the high-flow end of the curve.</span></li>
+      <li><span class="tk-check">✓</span><span>Any change to the piping system moves the operating point along the same pump curve &mdash; re-verify against the curve whenever the system changes.</span></li>
     </ul>
 
   </div>
@@ -266,14 +249,14 @@
   <div class="post-related">
     <h2>Related</h2>
     <p class="post-related-label">Try the calculator</p>
-    <ul><li><a href="../solar/panel-tilt-orientation-calculator.html">Panel Tilt Orientation Calculator →</a></li></ul>
+    <ul><li><a href="../mechanical/pump-power-npsh-calculator.html">Pump Power &amp; NPSH Calculator →</a></li></ul>
     <p class="post-related-label">Related reading</p>
-    <ul><li><a href="pv-string-sizing-voltage.html">PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</a></li></ul>
+    <ul><li><a href="pump-fan-affinity-laws-explained.html">Pump &amp; Fan Affinity Laws: Why Speed Changes Cube the Power</a></li></ul>
   </div>
 
   <div class="post-foot">
     <a href="index.html">&larr; Back to all posts</a>
-    <a class="try-tool" href="../solar/panel-tilt-orientation-calculator.html">Try the Panel Tilt &amp; Orientation Calculator &rarr;</a>
+    <a class="try-tool" href="../mechanical/pump-power-npsh-calculator.html">Try the Pump Power &amp; NPSH Calculator &rarr;</a>
   </div>
 </div>
 
