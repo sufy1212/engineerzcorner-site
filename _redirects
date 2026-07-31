@@ -1,4 +1,5 @@
 /mechanical/mechanical.html /mechanical/notes.html 301
+/electrical/engineering-guides.html /electrical/guides.html 301
 
 # Note: no rules needed to collapse /dir, /dir/, /page.html onto canonical
 # URLs — Cloudflare Pages already does that automatically at the platform
