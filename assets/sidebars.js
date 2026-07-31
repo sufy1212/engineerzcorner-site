@@ -368,11 +368,36 @@
 
     placeBelowHeader();
     // recompute after full load (webfonts can shift header height after
-    // DOMContentLoaded), a short delay after that as a final safety net,
-    // and on resize — not on scroll, since absolute positioning already
-    // scrolls with the page on its own
+    // DOMContentLoaded), and on resize — not on scroll, since absolute
+    // positioning already scrolls with the page on its own
     window.addEventListener("load", placeBelowHeader);
-    setTimeout(placeBelowHeader, 400);
     window.addEventListener("resize", placeBelowHeader);
+
+    // ---- keep watching the header/hero/ad-slot elements themselves, since
+    // any of them can change height AFTER the above fires (AdSense iframes
+    // filling in async, webfonts swapping late) — a one-time measurement
+    // goes stale the moment that happens and the rails end up overlapping
+    // content that shifted underneath them. ResizeObserver on the actual
+    // elements (not document.body) means it only recomputes when something
+    // that affects header/hero height genuinely changes, so it can't loop
+    // against the rails' own position. ----
+    if (window.ResizeObserver) {
+      var reflowQueued = false;
+      var ro = new ResizeObserver(function(){
+        if (reflowQueued) return;
+        reflowQueued = true;
+        requestAnimationFrame(function(){ reflowQueued = false; placeBelowHeader(); });
+      });
+      var watched = [];
+      HEADER_SELECTORS.forEach(function(sel){
+        document.querySelectorAll(sel).forEach(function(elm){ watched.push(elm); });
+      });
+      document.querySelectorAll("[class*='ad-slot']").forEach(function(elm){ watched.push(elm); });
+      watched.forEach(function(elm){ ro.observe(elm); });
+    } else {
+      // fallback for older browsers without ResizeObserver: a few staggered
+      // re-checks catch most late-loading ads/fonts without an observer
+      [400, 1000, 2000, 3500].forEach(function(t){ setTimeout(placeBelowHeader, t); });
+    }
   });
 })();
