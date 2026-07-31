@@ -110,55 +110,71 @@
     display:flex; flex-wrap:wrap; gap:8px; margin:0 0 26px;
   }
   .sm-chip{
-    display:inline-flex; align-items:center; gap:6px; font-family:var(--font-body);
-    font-size:12.5px; font-weight:600; color:var(--ink-dim); text-decoration:none;
-    background:var(--sheet); border:1px solid var(--line); border-radius:20px;
-    padding:6px 12px 6px 10px; transition:transform .15s, border-color .15s, color .15s, box-shadow .15s;
+    display:inline-flex; align-items:center; gap:7px; font-family:var(--font-body);
+    font-size:12.5px; font-weight:700; color:var(--ink-dim); text-decoration:none;
+    background:var(--sheet); border:1.5px solid var(--line); border-radius:22px;
+    padding:7px 14px 7px 11px; transition:transform .18s ease, border-color .18s, color .18s, box-shadow .18s, background .18s;
   }
-  .sm-chip svg{width:13px; height:13px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; opacity:.75;}
-  .sm-chip:hover{transform:translateY(-1px); border-color:var(--chip-accent,var(--amber)); color:var(--chip-accent,var(--amber)); box-shadow:0 4px 10px rgba(24,27,41,.08);}
-  .sm-chip-n{
-    font-family:var(--font-mono); font-size:10px; color:var(--ink-faint);
-    background:var(--sheet-2); border-radius:8px; padding:1px 6px;
+  .sm-chip svg{width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; opacity:.8; transition:transform .18s ease;}
+  .sm-chip:hover{
+    transform:translateY(-2px);
+    border-color:var(--chip-accent,var(--amber));
+    color:var(--chip-accent,var(--amber));
+    background:color-mix(in srgb, var(--chip-accent,var(--amber)) 9%, var(--sheet));
+    box-shadow:0 8px 16px -4px color-mix(in srgb, var(--chip-accent,var(--amber)) 45%, transparent);
   }
+  .sm-chip:hover svg{transform:scale(1.12);}
 
   /* ---- Section cards ---- */
   .sm-card{
-    background:var(--sheet); border:1px solid var(--line-soft); border-radius:16px;
-    margin:0 0 18px; overflow:hidden; scroll-margin-top:80px;
+    position:relative; background:var(--sheet); border:1px solid var(--line-soft); border-radius:16px;
+    margin:0 0 20px; overflow:hidden; scroll-margin-top:80px;
     box-shadow:0 1px 2px rgba(24,27,41,.04);
+    transition:box-shadow .25s ease, transform .25s ease;
+  }
+  .sm-card::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg, var(--card-accent,var(--amber)), color-mix(in srgb, var(--card-accent,var(--amber)) 30%, transparent));
+  }
+  .sm-card:hover{
+    box-shadow:0 14px 30px -12px color-mix(in srgb, var(--card-accent,var(--amber)) 40%, rgba(24,27,41,.12));
+    transform:translateY(-2px);
   }
   .sm-card-head{
-    display:flex; align-items:center; gap:12px; padding:18px 22px;
+    display:flex; align-items:center; gap:13px; padding:19px 22px 17px;
     border-bottom:1px solid var(--line-soft);
-    background:linear-gradient(90deg, var(--card-accent,var(--amber)) 0%, transparent 0%);
+    background:linear-gradient(135deg, color-mix(in srgb, var(--card-accent,var(--amber)) 6%, var(--sheet)), var(--sheet) 65%);
   }
   .sm-card-icon{
-    flex:none; width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center;
-    background:color-mix(in srgb, var(--card-accent,var(--amber)) 15%, transparent);
+    flex:none; width:38px; height:38px; border-radius:11px; display:flex; align-items:center; justify-content:center;
+    background:color-mix(in srgb, var(--card-accent,var(--amber)) 16%, transparent);
+    box-shadow:0 0 0 1px color-mix(in srgb, var(--card-accent,var(--amber)) 22%, transparent) inset;
   }
-  .sm-card-icon svg{width:18px; height:18px; fill:none; stroke:var(--card-accent,var(--amber)); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
+  .sm-card-icon svg{width:19px; height:19px; fill:none; stroke:var(--card-accent,var(--amber)); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
   .sm-card-head h2{
-    font-family:var(--font-display); font-size:16.5px; font-weight:800; color:var(--ink);
+    font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--ink);
     margin:0; flex:1; letter-spacing:-.005em;
-  }
-  .sm-card-count{
-    font-family:var(--font-mono); font-size:11px; color:var(--ink-faint);
-    background:var(--sheet-2); border:1px solid var(--line-soft); border-radius:8px; padding:2px 8px;
   }
   .sm-card-grid{
     display:grid; grid-template-columns:repeat(auto-fill,minmax(228px,1fr));
     gap:1px; background:var(--line-soft);
   }
   .sm-card-grid a{
-    display:block; font-size:13.5px; line-height:1.4; color:var(--ink-dim); text-decoration:none;
-    background:var(--sheet); padding:10px 14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    border-left:2px solid transparent; transition:background .12s, color .12s, border-color .12s, padding-left .12s;
+    position:relative; display:flex; align-items:center; gap:9px;
+    font-size:13.5px; line-height:1.4; color:var(--ink-dim); text-decoration:none;
+    background:var(--sheet); padding:10px 14px 10px 16px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    transition:background .15s, color .15s, padding-left .15s;
+  }
+  .sm-card-grid a::before{
+    content:''; flex:none; width:4px; height:4px; border-radius:50%;
+    background:color-mix(in srgb, var(--card-accent,var(--amber)) 55%, var(--ink-faint));
+    opacity:.6; transition:opacity .15s, transform .15s;
   }
   .sm-card-grid a:hover{
     background:color-mix(in srgb, var(--card-accent,var(--amber)) 8%, var(--sheet));
-    color:var(--card-accent,var(--amber)); border-left-color:var(--card-accent,var(--amber)); padding-left:18px;
+    color:var(--card-accent,var(--amber)); padding-left:20px;
   }
+  .sm-card-grid a:hover::before{opacity:1; transform:scale(1.6);}
   .sm-card-grid a.sm-hide{display:none;}
   .sm-card.sm-hide{display:none;}
   .sm-empty{
@@ -248,26 +264,25 @@
   </div>
 
   <nav class="sm-chips" aria-label="Jump to section">
-      <a href="#sm-site" class="sm-chip" data-accent="#8B7FF0"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg>Site<span class="sm-chip-n">14</span></a>
-      <a href="#sm-electrical" class="sm-chip" data-accent="#6C5CE7"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Electrical<span class="sm-chip-n">29</span></a>
-      <a href="#sm-mechanical" class="sm-chip" data-accent="#0D9488"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1.1a7 7 0 0 1 2.1.9l.8-.8a2 2 0 1 1 2.9 2.9l-.8.8a7 7 0 0 1 .9 2.1H21a2 2 0 1 1 0 4h-1.1a7 7 0 0 1-.9 2.1l.8.8a2 2 0 1 1-2.9 2.9l-.8-.8a7 7 0 0 1-2.1.9V21a2 2 0 1 1-4 0v-1.1a7 7 0 0 1-2.1-.9l-.8.8a2 2 0 1 1-2.9-2.9l.8-.8a7 7 0 0 1-.9-2.1H3a2 2 0 1 1 0-4h1.1a7 7 0 0 1 .9-2.1l-.8-.8a2 2 0 1 1 2.9-2.9l.8.8a7 7 0 0 1 2.1-.9V4a2 2 0 0 1 2-2z"/></svg>Mechanical<span class="sm-chip-n">15</span></a>
-      <a href="#sm-hvac" class="sm-chip" data-accent="#C1662B"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>HVAC<span class="sm-chip-n">11</span></a>
-      <a href="#sm-civil" class="sm-chip" data-accent="#16A34A"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>Civil<span class="sm-chip-n">12</span></a>
-      <a href="#sm-automation" class="sm-chip" data-accent="#4C3FC7"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 6a2 2 0 1 0 0-.01M4 12h10m6 0a2 2 0 1 0 0-.01M4 18h16m-6 0a2 2 0 1 0 0-.01"/></svg>Automation<span class="sm-chip-n">10</span></a>
-      <a href="#sm-solar" class="sm-chip" data-accent="#E0A526"><svg viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4.9 4.9 3.5 3.5M20.5 20.5l-1.4-1.4M4.9 19.1l-1.4 1.4M20.5 3.5l-1.4 1.4M2 12H4M20 12h2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>Solar<span class="sm-chip-n">13</span></a>
-      <a href="#sm-pm" class="sm-chip" data-accent="#B7A339"><svg viewBox="0 0 24 24"><path d="M8 3h8v4H8zM6 7h12v14H6zM9 12h6M9 16h6"/></svg>Project Management<span class="sm-chip-n">13</span></a>
-      <a href="#sm-general" class="sm-chip" data-accent="#565A74"><svg viewBox="0 0 24 24"><path d="M9.5 2.5 12 5l2.5-2.5L17 5l-2.5 2.5L17 10l-2.5 2.5L17 15l-2.5 2.5L17 20l-2.5 2.5L12 20l-2.5 2.5L7 20l2.5-2.5L7 15l2.5-2.5L7 10l2.5-2.5L7 5z"/></svg>General Tools<span class="sm-chip-n">9</span></a>
-      <a href="#sm-study-abroad" class="sm-chip" data-accent="#0EA5E9"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 8-4v6M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Study Abroad<span class="sm-chip-n">10</span></a>
-      <a href="#sm-interview" class="sm-chip" data-accent="#DB2777"><svg viewBox="0 0 24 24"><path d="M9 18h6M8 21h8M12 3a5 5 0 0 0-3 9c.6.5 1 1.2 1 2h4c0-.8.4-1.5 1-2a5 5 0 0 0-3-9z"/></svg>Interview Prep<span class="sm-chip-n">9</span></a>
-      <a href="#sm-blog" class="sm-chip" data-accent="#2563EB"><svg viewBox="0 0 24 24"><path d="M4 5h16v3H4zM4 11h10v8H4zM16 11h4v8h-4z"/></svg>Blog<span class="sm-chip-n">50</span></a>
-      <a href="#sm-notes" class="sm-chip" data-accent="#0F9E7A"><svg viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4zM17 4v4h3M8 12h8M8 16h5"/></svg>Learning Notes<span class="sm-chip-n">1</span></a>
+      <a href="#sm-site" class="sm-chip" data-accent="#8B7FF0"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg>Site</a>
+      <a href="#sm-electrical" class="sm-chip" data-accent="#6C5CE7"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Electrical</a>
+      <a href="#sm-mechanical" class="sm-chip" data-accent="#0D9488"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1.1a7 7 0 0 1 2.1.9l.8-.8a2 2 0 1 1 2.9 2.9l-.8.8a7 7 0 0 1 .9 2.1H21a2 2 0 1 1 0 4h-1.1a7 7 0 0 1-.9 2.1l.8.8a2 2 0 1 1-2.9 2.9l-.8-.8a7 7 0 0 1-2.1.9V21a2 2 0 1 1-4 0v-1.1a7 7 0 0 1-2.1-.9l-.8.8a2 2 0 1 1-2.9-2.9l.8-.8a7 7 0 0 1-.9-2.1H3a2 2 0 1 1 0-4h1.1a7 7 0 0 1 .9-2.1l-.8-.8a2 2 0 1 1 2.9-2.9l.8.8a7 7 0 0 1 2.1-.9V4a2 2 0 0 1 2-2z"/></svg>Mechanical</a>
+      <a href="#sm-hvac" class="sm-chip" data-accent="#C1662B"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>HVAC</a>
+      <a href="#sm-civil" class="sm-chip" data-accent="#16A34A"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>Civil</a>
+      <a href="#sm-automation" class="sm-chip" data-accent="#4C3FC7"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 6a2 2 0 1 0 0-.01M4 12h10m6 0a2 2 0 1 0 0-.01M4 18h16m-6 0a2 2 0 1 0 0-.01"/></svg>Automation</a>
+      <a href="#sm-solar" class="sm-chip" data-accent="#E0A526"><svg viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4.9 4.9 3.5 3.5M20.5 20.5l-1.4-1.4M4.9 19.1l-1.4 1.4M20.5 3.5l-1.4 1.4M2 12H4M20 12h2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>Solar</a>
+      <a href="#sm-pm" class="sm-chip" data-accent="#B7A339"><svg viewBox="0 0 24 24"><path d="M8 3h8v4H8zM6 7h12v14H6zM9 12h6M9 16h6"/></svg>Project Management</a>
+      <a href="#sm-general" class="sm-chip" data-accent="#565A74"><svg viewBox="0 0 24 24"><path d="M9.5 2.5 12 5l2.5-2.5L17 5l-2.5 2.5L17 10l-2.5 2.5L17 15l-2.5 2.5L17 20l-2.5 2.5L12 20l-2.5 2.5L7 20l2.5-2.5L7 15l2.5-2.5L7 10l2.5-2.5L7 5z"/></svg>General Tools</a>
+      <a href="#sm-study-abroad" class="sm-chip" data-accent="#0EA5E9"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 8-4v6M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Study Abroad</a>
+      <a href="#sm-interview" class="sm-chip" data-accent="#DB2777"><svg viewBox="0 0 24 24"><path d="M9 18h6M8 21h8M12 3a5 5 0 0 0-3 9c.6.5 1 1.2 1 2h4c0-.8.4-1.5 1-2a5 5 0 0 0-3-9z"/></svg>Interview Prep</a>
+      <a href="#sm-blog" class="sm-chip" data-accent="#2563EB"><svg viewBox="0 0 24 24"><path d="M4 5h16v3H4zM4 11h10v8H4zM16 11h4v8h-4z"/></svg>Blog</a>
+      <a href="#sm-notes" class="sm-chip" data-accent="#0F9E7A"><svg viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4zM17 4v4h3M8 12h8M8 16h5"/></svg>Learning Notes</a>
   </nav>
 
-  <section class="sm-card" id="sm-site" data-accent="#8B7FF0" data-count="14">
+  <section class="sm-card" id="sm-site" data-accent="#8B7FF0">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg></span>
       <h2>Site</h2>
-      <span class="sm-card-count">14</span>
     </div>
     <div class="sm-card-grid">
       <a href="index.html" data-label="home">Home</a>
@@ -287,11 +302,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-electrical" data-accent="#6C5CE7" data-count="29">
+  <section class="sm-card" id="sm-electrical" data-accent="#6C5CE7">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
       <h2>Electrical</h2>
-      <span class="sm-card-count">29</span>
     </div>
     <div class="sm-card-grid">
       <a href="electrical/index.html" data-label="electrical engineering toolkit">Electrical Engineering Toolkit</a>
@@ -326,11 +340,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-mechanical" data-accent="#0D9488" data-count="15">
+  <section class="sm-card" id="sm-mechanical" data-accent="#0D9488">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1.1a7 7 0 0 1 2.1.9l.8-.8a2 2 0 1 1 2.9 2.9l-.8.8a7 7 0 0 1 .9 2.1H21a2 2 0 1 1 0 4h-1.1a7 7 0 0 1-.9 2.1l.8.8a2 2 0 1 1-2.9 2.9l-.8-.8a7 7 0 0 1-2.1.9V21a2 2 0 1 1-4 0v-1.1a7 7 0 0 1-2.1-.9l-.8.8a2 2 0 1 1-2.9-2.9l.8-.8a7 7 0 0 1-.9-2.1H3a2 2 0 1 1 0-4h1.1a7 7 0 0 1 .9-2.1l-.8-.8a2 2 0 1 1 2.9-2.9l.8.8a7 7 0 0 1 2.1-.9V4a2 2 0 0 1 2-2z"/></svg></span>
       <h2>Mechanical</h2>
-      <span class="sm-card-count">15</span>
     </div>
     <div class="sm-card-grid">
       <a href="mechanical/index.html" data-label="mechanical index">Mechanical Index</a>
@@ -351,11 +364,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-hvac" data-accent="#C1662B" data-count="11">
+  <section class="sm-card" id="sm-hvac" data-accent="#C1662B">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
       <h2>HVAC</h2>
-      <span class="sm-card-count">11</span>
     </div>
     <div class="sm-card-grid">
       <a href="hvac/index.html" data-label="hvac index">HVAC Index</a>
@@ -372,11 +384,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-civil" data-accent="#16A34A" data-count="12">
+  <section class="sm-card" id="sm-civil" data-accent="#16A34A">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg></span>
       <h2>Civil</h2>
-      <span class="sm-card-count">12</span>
     </div>
     <div class="sm-card-grid">
       <a href="civil/index.html" data-label="civil index">Civil Index</a>
@@ -394,11 +405,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-automation" data-accent="#4C3FC7" data-count="10">
+  <section class="sm-card" id="sm-automation" data-accent="#4C3FC7">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 6a2 2 0 1 0 0-.01M4 12h10m6 0a2 2 0 1 0 0-.01M4 18h16m-6 0a2 2 0 1 0 0-.01"/></svg></span>
       <h2>Automation</h2>
-      <span class="sm-card-count">10</span>
     </div>
     <div class="sm-card-grid">
       <a href="automation/index.html" data-label="automation index">Automation Index</a>
@@ -414,11 +424,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-solar" data-accent="#E0A526" data-count="13">
+  <section class="sm-card" id="sm-solar" data-accent="#E0A526">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4.9 4.9 3.5 3.5M20.5 20.5l-1.4-1.4M4.9 19.1l-1.4 1.4M20.5 3.5l-1.4 1.4M2 12H4M20 12h2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></span>
       <h2>Solar</h2>
-      <span class="sm-card-count">13</span>
     </div>
     <div class="sm-card-grid">
       <a href="solar/index.html" data-label="solar index">Solar Index</a>
@@ -437,11 +446,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-pm" data-accent="#B7A339" data-count="13">
+  <section class="sm-card" id="sm-pm" data-accent="#B7A339">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M8 3h8v4H8zM6 7h12v14H6zM9 12h6M9 16h6"/></svg></span>
       <h2>Project Management</h2>
-      <span class="sm-card-count">13</span>
     </div>
     <div class="sm-card-grid">
       <a href="pm/index.html" data-label="project management index">Project Management Index</a>
@@ -460,11 +468,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-general" data-accent="#565A74" data-count="9">
+  <section class="sm-card" id="sm-general" data-accent="#565A74">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M9.5 2.5 12 5l2.5-2.5L17 5l-2.5 2.5L17 10l-2.5 2.5L17 15l-2.5 2.5L17 20l-2.5 2.5L12 20l-2.5 2.5L7 20l2.5-2.5L7 15l2.5-2.5L7 10l2.5-2.5L7 5z"/></svg></span>
       <h2>General Tools</h2>
-      <span class="sm-card-count">9</span>
     </div>
     <div class="sm-card-grid">
       <a href="general/index.html" data-label="general tools index">General Tools Index</a>
@@ -479,11 +486,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-study-abroad" data-accent="#0EA5E9" data-count="10">
+  <section class="sm-card" id="sm-study-abroad" data-accent="#0EA5E9">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 8-4v6M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></span>
       <h2>Study Abroad</h2>
-      <span class="sm-card-count">10</span>
     </div>
     <div class="sm-card-grid">
       <a href="study-abroad/index.html" data-label="study abroad tools">Study Abroad Tools</a>
@@ -499,11 +505,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-interview" data-accent="#DB2777" data-count="9">
+  <section class="sm-card" id="sm-interview" data-accent="#DB2777">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M8 21h8M12 3a5 5 0 0 0-3 9c.6.5 1 1.2 1 2h4c0-.8.4-1.5 1-2a5 5 0 0 0-3-9z"/></svg></span>
       <h2>Interview Prep</h2>
-      <span class="sm-card-count">9</span>
     </div>
     <div class="sm-card-grid">
       <a href="interview/index.html" data-label="engineering interview questions">Engineering Interview Questions</a>
@@ -518,11 +523,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-blog" data-accent="#2563EB" data-count="50">
+  <section class="sm-card" id="sm-blog" data-accent="#2563EB">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v3H4zM4 11h10v8H4zM16 11h4v8h-4z"/></svg></span>
       <h2>Blog</h2>
-      <span class="sm-card-count">50</span>
     </div>
     <div class="sm-card-grid">
       <a href="posts/index.html" data-label="posts">Posts</a>
@@ -578,11 +582,10 @@
     </div>
   </section>
 
-  <section class="sm-card" id="sm-notes" data-accent="#0F9E7A" data-count="1">
+  <section class="sm-card" id="sm-notes" data-accent="#0F9E7A">
     <div class="sm-card-head">
       <span class="sm-card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4zM17 4v4h3M8 12h8M8 16h5"/></svg></span>
       <h2>Learning Notes</h2>
-      <span class="sm-card-count">1</span>
     </div>
     <div class="sm-card-grid">
       <a href="notes/index.html" data-label="learning notes">Learning Notes</a>
