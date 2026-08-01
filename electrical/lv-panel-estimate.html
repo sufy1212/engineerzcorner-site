@@ -1340,6 +1340,15 @@ function updateValidationBanner(bannerId, errorCount){
       });
   });
 
+  function ecrSaveDash(key, text){
+    try{
+      var raw = localStorage.getItem('ecr_electrical_dash');
+      var data = raw ? JSON.parse(raw) : {};
+      data[key] = {val:text, ts:Date.now()};
+      localStorage.setItem('ecr_electrical_dash', JSON.stringify(data));
+    }catch(e){}
+  }
+
   function estCalcAll(){
     var errCount = 0;
     var inEl = document.getElementById('estIncomerIn');
@@ -1493,6 +1502,7 @@ function updateValidationBanner(bannerId, errorCount){
     bd.innerHTML = rows;
 
     updateValidationBanner('estValidation', errCount);
+    if(grandTotal>0) ecrSaveDash('est', fmt(grandTotal*fxSafe,0)+' '+cur);
   }
 
   // start with two outgoing groups so the page isn't empty

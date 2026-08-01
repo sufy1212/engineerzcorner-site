@@ -1384,11 +1384,22 @@ function updateValidationBanner(bannerId, errorCount){
     return errCount;
   }
 
+  function ecrSaveDash(key, text){
+    try{
+      var raw = localStorage.getItem('ecr_electrical_dash');
+      var data = raw ? JSON.parse(raw) : {};
+      data[key] = {val:text, ts:Date.now()};
+      localStorage.setItem('ecr_electrical_dash', JSON.stringify(data));
+    }catch(e){}
+  }
+
   function calcAllBz(){
     var e1 = calcBusbarRating();
     var e2 = calcScWithstand();
     var e3 = calcEnclosure();
     updateValidationBanner('bzValidation', e1+e2+e3);
+    var sizeEl = document.getElementById('bzStdSize');
+    if(sizeEl && sizeEl.textContent) ecrSaveDash('bz', sizeEl.textContent + ((e1+e2+e3)===0 ? ' OK' : ''));
   }
 
   ['bzIn','bzBars','bzDensity','bzIk','bzTime','bzMaterial','bzIp','bzSpacing','bzSpan','bzBracketRating',

@@ -1442,6 +1442,40 @@
   </div>
 </div>
 <script>
+(function(){
+  var KEY = 'ecr_electrical_dash';
+  var MAP = {
+    sc:  {dot:'dashDotSc',  val:'dashValSc'},
+    vd:  {dot:'dashDotVd',  val:'dashValVd'},
+    sel: {dot:'dashDotSel', val:'dashValSel'},
+    cs:  {dot:'dashDotCs',  val:'dashValCs'},
+    est: {dot:'dashDotEst', val:'dashValEst'},
+    tr:  {dot:'dashDotTr',  val:'dashValTr'},
+    bz:  {dot:'dashDotBz',  val:'dashValBz'}
+  };
+  function paint(){
+    var data = {};
+    try{ data = JSON.parse(localStorage.getItem(KEY) || '{}'); }catch(e){ data = {}; }
+    Object.keys(MAP).forEach(function(k){
+      var dotEl = document.getElementById(MAP[k].dot), valEl = document.getElementById(MAP[k].val);
+      if(!valEl) return;
+      var entry = data[k];
+      if(entry && entry.val){
+        valEl.textContent = entry.val;
+        if(dotEl) dotEl.classList.add('ok');
+      } else {
+        valEl.textContent = '—';
+        if(dotEl) dotEl.classList.remove('ok');
+      }
+    });
+  }
+  paint();
+  window.addEventListener('storage', function(e){ if(!e.key || e.key===KEY) paint(); });
+  document.addEventListener('visibilitychange', function(){ if(document.visibilityState==='visible') paint(); });
+})();
+</script>
+
+<script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
   window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
