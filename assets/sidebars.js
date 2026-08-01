@@ -16,22 +16,22 @@
   };
 
   var exploreLinks = [
-    ["Electrical", "/electrical/index.html", "bolt"],
-    ["Mechanical", "/mechanical/index.html", "cog"],
-    ["HVAC", "/hvac/index.html", "snow"],
-    ["Automation", "/automation/index.html", "cpu"],
-    ["Civil", "/civil/index.html", "building"],
-    ["General Tools", "/general/index.html", "wrench"],
-    ["Project Management", "/pm/index.html", "clipboard"]
+    ["Electrical", "/electrical/", "bolt"],
+    ["Mechanical", "/mechanical/", "cog"],
+    ["HVAC", "/hvac/", "snow"],
+    ["Automation", "/automation/", "cpu"],
+    ["Civil", "/civil/", "building"],
+    ["General Tools", "/general/", "wrench"],
+    ["Project Management", "/pm/", "clipboard"]
   ];
 
   var popularLinks = [
-    ["Latest Posts", "/posts/index.html", "doc"],
-    ["Notes & Study Guides", "/notes/index.html", "book"],
-    ["Flashcards", "/flashcards.html", "cards"],
-    ["Quickfire (game)", "/quickfire.html", "cards"],
-    ["Technical Games", "/games.html", "cards"],
-    ["About Engineerz Corner", "/about.html", "info"]
+    ["Latest Posts", "/posts/", "doc"],
+    ["Notes & Study Guides", "/notes/", "book"],
+    ["Flashcards", "/flashcards", "cards"],
+    ["Quickfire (game)", "/quickfire", "cards"],
+    ["Technical Games", "/games", "cards"],
+    ["About Engineerz Corner", "/about", "info"]
   ];
 
   var tips = [
@@ -149,7 +149,7 @@
     var shuffleBtn = el("button", "ec-flip-btn", "Shuffle");
     shuffleBtn.type = "button";
     var moreLink = el("a", "ec-flip-btn ec-flip-btn--link", "All flashcards \u2192");
-    moreLink.href = "/flashcards.html";
+    moreLink.href = "/flashcards";
 
     function render(){
       var item = FLASH_TERMS[idx];
