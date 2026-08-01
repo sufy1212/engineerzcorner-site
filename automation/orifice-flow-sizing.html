@@ -70,22 +70,22 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Orifice Plate (DP Flow Element) Sizing</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Orifice Plate (DP Flow Element) Sizing</span></div></nav>
 
 
 <a class="skip-link" href="#mainContent">Skip to sheet content</a>
 
 <nav class="site-nav" aria-label="Main navigation">
   <div class="site-nav-inner">
-    <a href="../index.html">Home</a>
-    <a href="../electrical/index.html">Electrical</a>
-    <a href="../mechanical/index.html">Mechanical</a>
-    <a href="../hvac/index.html">HVAC</a>
-    <a href="../civil/index.html">Civil</a>
-    <a href="index.html" class="current">Automation</a>
-    <a href="../solar/index.html">Solar</a>
-    <a href="../general/index.html">General Tools</a>
-    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="./" class="current">Automation</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
   </div>
 </nav>
 
@@ -107,23 +107,23 @@
 <text x="686" y="92" text-anchor="end" class="illo-label">DP</text></svg></div>
 
   <div class="mech-tabs">
-    <a href="index.html">Automation Index</a>
-    <a href="signal-scaling.html">AT.01 Signal Scaling</a>
-    <a href="pid-tuning.html">AT.02 PID Tuning</a>
-    <a href="valve-sizing.html">AT.03 Valve Sizing</a>
-    <a href="level-transmitter.html">AT.04 Level Ranging</a>
-    <a href="vfd-scaling.html">AT.05 VFD Scaling</a>
-    <a href="notes.html">AT.06 Notes</a>
-    <a href="symbols.html">AT.07 Symbols</a>
-    <a href="guides.html">AT.08 Guides</a>
-    <a href="comparisons.html">AT.09 Comparisons</a>
-    <a href="deadband-hysteresis.html">AT.10 Deadband/Hysteresis</a>
-    <a href="rtd-conversion.html">AT.11 RTD Conversion</a>
-    <a href="relay-coil-sizing.html">AT.12 Relay Coil Sizing</a>
-    <a href="modbus-timing.html">AT.13 Modbus Timing</a>
-    <a href="alarm-setpoints.html">AT.14 Alarm Setpoints</a>
-    <a href="thermocouple-reference.html">AT.15 Thermocouple Reference</a>
-    <a href="orifice-flow-sizing.html" class="current">AT.16 Orifice Flow Sizing</a>
+    <a href="./">Automation Index</a>
+    <a href="signal-scaling">AT.01 Signal Scaling</a>
+    <a href="pid-tuning">AT.02 PID Tuning</a>
+    <a href="valve-sizing">AT.03 Valve Sizing</a>
+    <a href="level-transmitter">AT.04 Level Ranging</a>
+    <a href="vfd-scaling">AT.05 VFD Scaling</a>
+    <a href="notes">AT.06 Notes</a>
+    <a href="symbols">AT.07 Symbols</a>
+    <a href="guides">AT.08 Guides</a>
+    <a href="comparisons">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints">AT.14 Alarm Setpoints</a>
+    <a href="thermocouple-reference">AT.15 Thermocouple Reference</a>
+    <a href="orifice-flow-sizing" class="current">AT.16 Orifice Flow Sizing</a>
   </div>
   <div class="intro">A simplified square-edge orifice plate flow calculation — flow rate from a known bore and measured differential pressure, or the bore needed to produce a target differential pressure at a design flow. For a quick field check or preliminary sizing, not a substitute for a full ISO 5167 / AGA-3 calculation on a fiscal-metering or high-accuracy application.</div>
 <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
@@ -196,14 +196,14 @@
       <div class="hint" style="margin-top:8px;">This uses the standard square-edge orifice equation with the velocity-of-approach (1−β⁴) correction, expansibility factor ε taken as 1 (valid for liquids; gas/steam service needs an ε correction below about 1, which this sheet doesn't apply). Bore sizing solves the same equation iteratively for d. In practice β is normally kept between about 0.2 and 0.75 for accurate, well-characterized measurement — outside that range, discharge coefficient and uncertainty depart from the simple constant-Cd assumption used here, and a full standard (ISO 5167, AGA-3) calculation with Reynolds-number-dependent Cd is needed.</div>
     </details>
   </div>
-  <footer>Simplified square-edge (thin-plate, flange- or corner-tap) orifice equation, constant Cd assumption — for preliminary sizing and field checks only. Fiscal metering, custody transfer, or high-accuracy applications must use the full ISO 5167 (liquids/gas) or AGA Report No. 3 (natural gas) calculation with Reynolds-number-dependent discharge coefficient and, for compressible fluids, the expansibility factor. <a href="index.html">← Automation Index</a></footer>
+  <footer>Simplified square-edge (thin-plate, flange- or corner-tap) orifice equation, constant Cd assumption — for preliminary sizing and field checks only. Fiscal metering, custody transfer, or high-accuracy applications must use the full ISO 5167 (liquids/gas) or AGA Report No. 3 (natural gas) calculation with Reynolds-number-dependent discharge coefficient and, for compressible fluids, the expansibility factor. <a href="./">← Automation Index</a></footer>
 
 </div>
 </main>
 
 <footer class="site-footer">
   <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
-  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
 </footer>
 
 <script src="../assets/app.js"></script>
@@ -267,7 +267,7 @@
 .ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
 .ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
 </style>
-<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
   <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
   <span class="ecr-home-fab-label">Home</span>
 </a>

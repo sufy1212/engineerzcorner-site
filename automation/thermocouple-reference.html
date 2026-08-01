@@ -70,22 +70,22 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Thermocouple (Type K) Reference</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Thermocouple (Type K) Reference</span></div></nav>
 
 
 <a class="skip-link" href="#mainContent">Skip to sheet content</a>
 
 <nav class="site-nav" aria-label="Main navigation">
   <div class="site-nav-inner">
-    <a href="../index.html">Home</a>
-    <a href="../electrical/index.html">Electrical</a>
-    <a href="../mechanical/index.html">Mechanical</a>
-    <a href="../hvac/index.html">HVAC</a>
-    <a href="../civil/index.html">Civil</a>
-    <a href="index.html" class="current">Automation</a>
-    <a href="../solar/index.html">Solar</a>
-    <a href="../general/index.html">General Tools</a>
-    <a href="../study-abroad/index.html">Study Abroad</a>
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="./" class="current">Automation</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
   </div>
 </nav>
 
@@ -106,23 +106,23 @@
 <text x="686" y="92" text-anchor="end" class="illo-label">Type K</text></svg></div>
 
   <div class="mech-tabs">
-    <a href="index.html">Automation Index</a>
-    <a href="signal-scaling.html">AT.01 Signal Scaling</a>
-    <a href="pid-tuning.html">AT.02 PID Tuning</a>
-    <a href="valve-sizing.html">AT.03 Valve Sizing</a>
-    <a href="level-transmitter.html">AT.04 Level Ranging</a>
-    <a href="vfd-scaling.html">AT.05 VFD Scaling</a>
-    <a href="notes.html">AT.06 Notes</a>
-    <a href="symbols.html">AT.07 Symbols</a>
-    <a href="guides.html">AT.08 Guides</a>
-    <a href="comparisons.html">AT.09 Comparisons</a>
-    <a href="deadband-hysteresis.html">AT.10 Deadband/Hysteresis</a>
-    <a href="rtd-conversion.html">AT.11 RTD Conversion</a>
-    <a href="relay-coil-sizing.html">AT.12 Relay Coil Sizing</a>
-    <a href="modbus-timing.html">AT.13 Modbus Timing</a>
-    <a href="alarm-setpoints.html">AT.14 Alarm Setpoints</a>
-    <a href="thermocouple-reference.html" class="current">AT.15 Thermocouple Reference</a>
-    <a href="orifice-flow-sizing.html">AT.16 Orifice Flow Sizing</a>
+    <a href="./">Automation Index</a>
+    <a href="signal-scaling">AT.01 Signal Scaling</a>
+    <a href="pid-tuning">AT.02 PID Tuning</a>
+    <a href="valve-sizing">AT.03 Valve Sizing</a>
+    <a href="level-transmitter">AT.04 Level Ranging</a>
+    <a href="vfd-scaling">AT.05 VFD Scaling</a>
+    <a href="notes">AT.06 Notes</a>
+    <a href="symbols">AT.07 Symbols</a>
+    <a href="guides">AT.08 Guides</a>
+    <a href="comparisons">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints">AT.14 Alarm Setpoints</a>
+    <a href="thermocouple-reference" class="current">AT.15 Thermocouple Reference</a>
+    <a href="orifice-flow-sizing">AT.16 Orifice Flow Sizing</a>
   </div>
   <div class="intro">Convert between millivolt output and temperature for a Type K thermocouple using the NIST ITS-90 reference polynomial, and correct a measured mV reading for a non-zero cold-junction (reference) temperature — the correction every transmitter's internal CJC sensor is doing automatically.</div>
 <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
@@ -179,14 +179,14 @@
       <div class="hint" style="margin-top:8px;">A thermocouple only measures the temperature <em>difference</em> between its two junctions, not an absolute value. A bare thermocouple's leads are themselves a second, unwanted thermocouple junction wherever they land on a terminal block — so the raw mV reading is actually the EMF for (hot junction temperature − terminal block temperature), not (hot junction − 0°C). Adding back the EMF the terminal block temperature would itself generate against a 0°C reference recovers the equivalent 0°C-referenced EMF, which then converts to the true hot-junction temperature using the same Step 2 curve. This is exactly what a transmitter's built-in cold-junction sensor (usually an RTD or IC sensor right at the terminals) does automatically — this calculator does it manually for a check, a legacy analog display, or a DIY DAQ input with no CJC of its own.</div>
     </details>
   </div>
-  <footer>NIST ITS-90 Type K polynomial, valid 0°C to 1372°C, standard (not extended/sub-zero) range. A real thermocouple's tolerance class (Standard ±2.2°C or ±0.75%, Special ±1.1°C or ±0.4%, per ASTM E230/IEC 60584) adds an additional ± error band on top of this reference curve. <a href="index.html">← Automation Index</a></footer>
+  <footer>NIST ITS-90 Type K polynomial, valid 0°C to 1372°C, standard (not extended/sub-zero) range. A real thermocouple's tolerance class (Standard ±2.2°C or ±0.75%, Special ±1.1°C or ±0.4%, per ASTM E230/IEC 60584) adds an additional ± error band on top of this reference curve. <a href="./">← Automation Index</a></footer>
 
 </div>
 </main>
 
 <footer class="site-footer">
   <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
-  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
 </footer>
 
 <script src="../assets/app.js"></script>
@@ -269,7 +269,7 @@
 .ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
 .ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
 </style>
-<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
   <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
   <span class="ecr-home-fab-label">Home</span>
 </a>
