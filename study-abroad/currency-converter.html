@@ -244,7 +244,22 @@
   }
 
   // Multiple providers, tried in order — if one is down, blocked, or slow, the next takes over.
+  // jsdelivr/pages.dev first: served off a CDN with wildcard CORS and no rate limits, so it's
+  // the least likely to be blocked by corporate/campus networks or CORS quirks that can trip up
+  // direct API-domain calls. The others remain as fallbacks.
   var FX_PROVIDERS = [
+    {
+      name: 'currency-api (jsdelivr)',
+      url: function(f,t){ return 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/' + encodeURIComponent(f.toLowerCase()) + '.min.json'; },
+      parse: function(data,t){ var base = data && Object.keys(data).filter(function(k){return k!=='date';})[0]; return base && data[base] && data[base][t.toLowerCase()]; },
+      date: function(data){ return data && data.date; }
+    },
+    {
+      name: 'currency-api (pages.dev)',
+      url: function(f,t){ return 'https://latest.currency-api.pages.dev/v1/currencies/' + encodeURIComponent(f.toLowerCase()) + '.min.json'; },
+      parse: function(data,t){ var base = data && Object.keys(data).filter(function(k){return k!=='date';})[0]; return base && data[base] && data[base][t.toLowerCase()]; },
+      date: function(data){ return data && data.date; }
+    },
     {
       name: 'frankfurter.dev',
       url: function(f,t){ return 'https://api.frankfurter.dev/v1/latest?base=' + encodeURIComponent(f) + '&symbols=' + encodeURIComponent(t); },
