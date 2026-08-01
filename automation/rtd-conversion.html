@@ -11,20 +11,20 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Control Valve Sizing — Engineerz CorneR</title>
-<meta name="description" content="Control Valve Sizing — part of Engineerz CorneR's free engineering toolkit.">
-<link rel="canonical" href="https://www.engineerzcorner.com/automation/valve-sizing">
+<title>RTD (Pt100) Temperature ↔ Resistance — Engineerz CorneR</title>
+<meta name="description" content="RTD (Pt100) Temperature ↔ Resistance — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/rtd-conversion">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
-<meta property="og:title" content="Control Valve Sizing — Engineerz CorneR">
-<meta property="og:description" content="Control Valve Sizing — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
-<meta property="og:url" content="https://www.engineerzcorner.com/automation/valve-sizing">
+<meta property="og:title" content="RTD (Pt100) Temperature ↔ Resistance — Engineerz CorneR">
+<meta property="og:description" content="RTD (Pt100) Temperature ↔ Resistance — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/rtd-conversion">
 <meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Control Valve Sizing — Engineerz CorneR">
-<meta name="twitter:description" content="Control Valve Sizing — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta name="twitter:title" content="RTD (Pt100) Temperature ↔ Resistance — Engineerz CorneR">
+<meta name="twitter:description" content="RTD (Pt100) Temperature ↔ Resistance — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,24 +36,9 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.engineerzcorner.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Automation",
-      "item": "https://www.engineerzcorner.com/automation/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Control Valve Sizing",
-      "item": "https://www.engineerzcorner.com/automation/valve-sizing"
-    }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Automation", "item": "https://www.engineerzcorner.com/automation/" },
+    { "@type": "ListItem", "position": 3, "name": "RTD (Pt100) Temperature ↔ Resistance", "item": "https://www.engineerzcorner.com/automation/rtd-conversion" }
   ]
 }
 </script>
@@ -61,11 +46,11 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Control Valve Sizing",
+  "name": "RTD (Pt100) Temperature ↔ Resistance",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (runs in browser)",
-  "description": "Control Valve Sizing \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
-  "url": "https://www.engineerzcorner.com/automation/valve-sizing",
+  "description": "RTD (Pt100) Temperature ↔ Resistance \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
+  "url": "https://www.engineerzcorner.com/automation/rtd-conversion",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -85,16 +70,9 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Control Valve Sizing</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">RTD (Pt100) Temperature ↔ Resistance</span></div></nav>
 
 
-<style>
-.ec-related-post{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
-.ec-related-post-inner{max-width:900px;margin:0 auto;padding:7px 18px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;}
-.ec-related-post-inner a{color:#8B7FF0;text-decoration:none;}
-.ec-related-post-inner a:hover{text-decoration:underline;}
-</style>
-<div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/control-valve-cv-sizing-oversizing-mistake">Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</a></div></div>
 <a class="skip-link" href="#mainContent">Skip to sheet content</a>
 
 <nav class="site-nav" aria-label="Main navigation">
@@ -116,27 +94,22 @@
 </div>
 
 <main id="mainContent">
-<div class="wrap page active" id="page-auto-valve">
+<div class="wrap page active" id="page-auto-rtd">
 
   <div class="pagehero">
-    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 8l8 8M16 8l-8 8"></path></svg></div>
-    <div><h1>Control Valve Sizing</h1><div class="hero-sub">Flow coefficient — Kv (metric) and Cv (US)</div></div>
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"></path></svg></div>
+    <div><h1>RTD (Pt100) Temperature ↔ Resistance</h1><div class="hero-sub">IEC 60751 Callendar-Van Dusen conversion, both directions</div></div>
   </div>
 <div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
-  <line x1="40" y1="50" x2="290" y2="50" class="illo-line illo-blue an-flow" stroke-width="4"/>
-  <polygon points="290,25 350,50 290,75" class="illo-line illo-dim" stroke-width="2" fill="none"/>
-  <polygon points="410,25 350,50 410,75" class="illo-line illo-dim" stroke-width="2" fill="none"/>
-  <g style="transform-origin:350px 50px; animation:illoSway 1.4s ease-in-out infinite;">
-    <line x1="350" y1="20" x2="350" y2="80" class="illo-line illo-amber" stroke-width="4"/>
-  </g>
-  <line x1="410" y1="50" x2="660" y2="50" class="illo-line illo-blue an-flow" stroke-width="4" style="animation-delay:.2s"/>
-<text x="686" y="92" text-anchor="end" class="illo-label">CONTROL VALVE</text></svg></div>
+  <line x1="60" y1="70" x2="640" y2="70" class="illo-line illo-dim" stroke-width="2"/>
+  <path d="M60 65 C 200 60, 300 45, 400 35 C 500 25, 560 20, 640 15" class="illo-line illo-green an-draw" stroke-width="3"/>
+<text x="686" y="92" text-anchor="end" class="illo-label">Pt100</text></svg></div>
 
   <div class="mech-tabs">
     <a href="index.html">Automation Index</a>
     <a href="signal-scaling.html">AT.01 Signal Scaling</a>
     <a href="pid-tuning.html">AT.02 PID Tuning</a>
-    <a href="valve-sizing.html" class="current">AT.03 Valve Sizing</a>
+    <a href="valve-sizing.html">AT.03 Valve Sizing</a>
     <a href="level-transmitter.html">AT.04 Level Ranging</a>
     <a href="vfd-scaling.html">AT.05 VFD Scaling</a>
     <a href="notes.html">AT.06 Notes</a>
@@ -149,50 +122,44 @@
     <a href="modbus-timing.html">AT.13 Modbus Timing</a>
     <a href="alarm-setpoints.html">AT.14 Alarm Setpoints</a>
   </div>
-  <div class="intro">Basic incompressible-flow valve sizing — for a quick check of an existing valve or a first pass at selecting one. Doesn't account for choked flow, cavitation or gas/steam service; use the manufacturer's full sizing method (e.g. IEC 60534) for a final selection.</div>
-  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/control-valve-cv-sizing-oversizing-mistake.html" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why an oversized valve is harder to control, not safer &rarr;</a></div>
+  <div class="intro">Convert between temperature and resistance for a standard Pt100 RTD (α = 0.00385 Ω/Ω/°C) using the IEC 60751 Callendar-Van Dusen equation. Valid from −200°C to 850°C.</div>
 <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
   <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
 </div>
-  <div role="status" aria-live="polite" class="validation-banner neutral" id="cvValidation"><span class="vdot"></span><span>Calculating…</span></div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">1</span><h2>Flow &amp; Pressure Drop</h2></div>
+    <div class="step-head"><span class="step-num">1</span><h2>Temperature → Resistance</h2></div>
     <div class="row2">
       <div class="field">
-        <label for="cvQ">Flow rate, Q <span class="unit">m³/h</span></label>
-        <input type="number" id="cvQ" value="20" step="0.5">
+        <label for="rtdTempIn">Temperature <span class="unit">°C</span></label>
+        <input type="number" id="rtdTempIn" value="25" step="0.1" min="-200" max="850">
       </div>
-      <div class="field">
-        <label for="cvDp">Pressure drop across valve, ΔP <span class="unit">bar</span></label>
-        <input type="number" id="cvDp" value="1.0" step="0.1">
-      </div>
-      <div class="field">
-        <label for="cvSg">Specific gravity, SG</label>
-        <input type="number" id="cvSg" value="1.0" step="0.01">
-        <div class="hint">1.0 for water at room temperature; use the fluid's density ÷ 1000 kg/m³ for other liquids.</div>
-      </div>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">RESISTANCE</span>
+      <span class="rval" id="rtdResOut">—</span>
     </div>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
-    <div class="result-line">
-      <span class="rlabel">Kv (METRIC)</span>
-      <span class="rval" id="cvKv">0.00</span>
+    <div class="step-head"><span class="step-num">2</span><h2>Resistance → Temperature</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="rtdResIn">Resistance <span class="unit">Ω</span></label>
+        <input type="number" id="rtdResIn" value="109.73" step="0.01" min="0">
+      </div>
     </div>
-    <div class="stat-grid" style="margin:0 16px 16px;">
-      <div class="stat"><div class="slabel">Cv (US/imperial)</div><div class="sval amber" id="cvCv">—</div></div>
+    <div class="result-line">
+      <span class="rlabel">TEMPERATURE</span>
+      <span class="rval" id="rtdTempOut">—</span>
     </div>
     <details>
       <summary>How this is calculated</summary>
-      <div class="formula-note">
-        Kv = Q(m³/h) · √(SG/ΔP(bar)) &nbsp;·&nbsp; Cv ≈ 1.156 · Kv
-      </div>
-      <div class="hint" style="margin-top:8px;">This is the standard incompressible turbulent-flow formula — it gives the flow coefficient the valve needs, not a specific valve model or trim. Cross-check against the manufacturer's Cv/Kv table and confirm the valve isn't choked or cavitating at this ΔP.</div>
+      <div class="formula-note">T≥0°C: R = R₀(1 + AT + BT²) &nbsp;·&nbsp; T&lt;0°C: R = R₀(1 + AT + BT² + C(T−100)T³)<br>R₀ = 100Ω, A = 3.9083×10⁻³, B = −5.775×10⁻⁷, C = −4.183×10⁻¹²</div>
+      <div class="hint" style="margin-top:8px;">Resistance→temperature is solved numerically (Newton-Raphson) against the same equation, so both directions stay consistent. This is the standard curve — a real RTD's tolerance class (A/B/AA per IEC 60751) adds an additional ± error band on top.</div>
     </details>
   </div>
-  <footer>Sizing coefficient only — final valve selection also needs trim characteristic, rangeability and cavitation/noise checks.</footer>
+  <footer>IEC 60751 standard Pt100 curve (α = 0.00385) — not for RTD types with a different alpha (e.g. Pt100 α = 0.003916 to old JIS/DIN variants) without adjusting the coefficients.</footer>
 
 </div>
 </main>
@@ -203,6 +170,55 @@
 </footer>
 
 <script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function fmt(n, d){ if(!isFinite(n)) return '—'; return n.toLocaleString('en-US', {minimumFractionDigits:d===undefined?2:d, maximumFractionDigits:d===undefined?2:d}); }
+
+  var R0 = 100, A = 3.9083e-3, B = -5.775e-7, C = -4.183e-12;
+
+  function resistanceFromTemp(T){
+    if(T >= 0){ return R0*(1 + A*T + B*T*T); }
+    return R0*(1 + A*T + B*T*T + C*(T-100)*T*T*T);
+  }
+
+  function tempFromResistance(R){
+    var T = (R - R0) / (R0 * A); // linear initial guess
+    for(var i=0; i<25; i++){
+      var f = resistanceFromTemp(T) - R;
+      var h = 0.001;
+      var fp = (resistanceFromTemp(T+h) - resistanceFromTemp(T-h)) / (2*h);
+      if(fp === 0) break;
+      var step = f/fp;
+      T -= step;
+      if(Math.abs(step) < 1e-7) break;
+    }
+    return T;
+  }
+
+  function calcForward(){
+    var t = num('rtdTempIn');
+    if(isNaN(t) || t < -200 || t > 850){ setText('rtdResOut','—'); return; }
+    setText('rtdResOut', fmt(resistanceFromTemp(t),3) + ' Ω');
+  }
+  el('rtdTempIn').addEventListener('input', calcForward);
+  el('rtdTempIn').addEventListener('change', calcForward);
+
+  function calcReverse(){
+    var r = num('rtdResIn');
+    if(isNaN(r) || r <= 0){ setText('rtdTempOut','—'); return; }
+    var t = tempFromResistance(r);
+    if(t < -200 || t > 850){ setText('rtdTempOut','Out of range'); return; }
+    setText('rtdTempOut', fmt(t,2) + ' °C');
+  }
+  el('rtdResIn').addEventListener('input', calcReverse);
+  el('rtdResIn').addEventListener('change', calcReverse);
+
+  calcForward(); calcReverse();
+})();
+</script>
 
 <style>
 .ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}

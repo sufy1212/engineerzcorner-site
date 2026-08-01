@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alarm Setpoint Band Calculator — Engineerz CorneR</title>
+<meta name="description" content="Alarm Setpoint Band Calculator — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/alarm-setpoints">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Alarm Setpoint Band Calculator — Engineerz CorneR">
+<meta property="og:description" content="Alarm Setpoint Band Calculator — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/alarm-setpoints">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alarm Setpoint Band Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Alarm Setpoint Band Calculator — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Automation", "item": "https://www.engineerzcorner.com/automation/" },
+    { "@type": "ListItem", "position": 3, "name": "Alarm Setpoint Band Calculator", "item": "https://www.engineerzcorner.com/automation/alarm-setpoints" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Alarm Setpoint Band Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Alarm Setpoint Band Calculator \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
+  "url": "https://www.engineerzcorner.com/automation/alarm-setpoints",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Alarm Setpoint Band Calculator</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="index.html" class="current">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-alarm">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12" y2="17"></line></svg></div>
+    <div><h1>Alarm Setpoint Band Calculator</h1><div class="hero-sub">High/High-High and Low/Low-Low setpoints with reset deadband, from %FS positions</div></div>
+  </div>
+<div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
+  <line x1="60" y1="80" x2="640" y2="80" class="illo-line illo-dim" stroke-width="2"/>
+  <line x1="60" y1="20" x2="640" y2="20" class="illo-line illo-red" stroke-width="2"/>
+  <line x1="60" y1="35" x2="640" y2="35" class="illo-line illo-amber" stroke-width="2"/>
+  <line x1="60" y1="60" x2="640" y2="60" class="illo-line illo-amber" stroke-width="2"/>
+  <line x1="60" y1="72" x2="640" y2="72" class="illo-line illo-red" stroke-width="2"/>
+<text x="686" y="92" text-anchor="end" class="illo-label">ALARM BAND</text></svg></div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Automation Index</a>
+    <a href="signal-scaling.html">AT.01 Signal Scaling</a>
+    <a href="pid-tuning.html">AT.02 PID Tuning</a>
+    <a href="valve-sizing.html">AT.03 Valve Sizing</a>
+    <a href="level-transmitter.html">AT.04 Level Ranging</a>
+    <a href="vfd-scaling.html">AT.05 VFD Scaling</a>
+    <a href="notes.html">AT.06 Notes</a>
+    <a href="symbols.html">AT.07 Symbols</a>
+    <a href="guides.html">AT.08 Guides</a>
+    <a href="comparisons.html">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis.html">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion.html">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing.html">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing.html">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints.html">AT.14 Alarm Setpoints</a>
+  </div>
+  <div class="intro">Enter the process signal's engineering range and the four alarm positions as %FS (High, High-High, Low, Low-Low), plus a reset deadband. Get each alarm's trip point and reset point in engineering units.</div>
+<div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Signal Range</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="alRangeLo">Range — low <span class="unit">EU</span></label>
+        <input type="number" id="alRangeLo" value="0" step="0.1">
+      </div>
+      <div class="field">
+        <label for="alRangeHi">Range — high <span class="unit">EU</span></label>
+        <input type="number" id="alRangeHi" value="100" step="0.1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Alarm Positions (%FS) &amp; Deadband</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="alHHPct">High-High <span class="unit">%FS</span></label>
+        <input type="number" id="alHHPct" value="90" step="0.5" min="0" max="100">
+      </div>
+      <div class="field">
+        <label for="alHighPct">High <span class="unit">%FS</span></label>
+        <input type="number" id="alHighPct" value="80" step="0.5" min="0" max="100">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="alLowPct">Low <span class="unit">%FS</span></label>
+        <input type="number" id="alLowPct" value="20" step="0.5" min="0" max="100">
+      </div>
+      <div class="field">
+        <label for="alLLPct">Low-Low <span class="unit">%FS</span></label>
+        <input type="number" id="alLLPct" value="10" step="0.5" min="0" max="100">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="alDeadbandPct">Reset deadband <span class="unit">%FS</span></label>
+        <input type="number" id="alDeadbandPct" value="2" step="0.25" min="0">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Setpoints</h2></div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">High-High trip</div><div class="sval amber" id="alHHTrip">—</div></div>
+      <div class="stat"><div class="slabel">High-High reset</div><div class="sval" id="alHHReset">—</div></div>
+      <div class="stat"><div class="slabel">High trip</div><div class="sval" id="alHighTrip">—</div></div>
+      <div class="stat"><div class="slabel">High reset</div><div class="sval" id="alHighReset">—</div></div>
+      <div class="stat"><div class="slabel">Low trip</div><div class="sval" id="alLowTrip">—</div></div>
+      <div class="stat"><div class="slabel">Low reset</div><div class="sval" id="alLowReset">—</div></div>
+      <div class="stat"><div class="slabel">Low-Low trip</div><div class="sval amber" id="alLLTrip">—</div></div>
+      <div class="stat"><div class="slabel">Low-Low reset</div><div class="sval" id="alLLReset">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">Trip (EU) = range_lo + %FS/100 × (range_hi − range_lo)<br>High-type reset = trip − deadband &nbsp;·&nbsp; Low-type reset = trip + deadband</div>
+      <div class="hint" style="margin-top:8px;">ISA-18.2 alarm management practice: HH should sit further from normal than H (and LL further than L), with enough deadband that the alarm doesn't re-trigger on process noise right at the trip point.</div>
+    </details>
+  </div>
+  <footer>Positions and deadband entered here are a starting configuration — validate against your process's actual noise band and site alarm-philosophy document before commissioning.</footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function fmt(n, d){ if(!isFinite(n)) return '—'; return n.toLocaleString('en-US', {minimumFractionDigits:d===undefined?2:d, maximumFractionDigits:d===undefined?2:d}); }
+
+  function calc(){
+    var lo = num('alRangeLo'), hi = num('alRangeHi');
+    var hhPct = num('alHHPct'), hPct = num('alHighPct'), lPct = num('alLowPct'), llPct = num('alLLPct');
+    var dbPct = num('alDeadbandPct');
+    var ids = ['alHHTrip','alHHReset','alHighTrip','alHighReset','alLowTrip','alLowReset','alLLTrip','alLLReset'];
+    if(isNaN(lo) || isNaN(hi) || hi===lo || isNaN(hhPct) || isNaN(hPct) || isNaN(lPct) || isNaN(llPct) || isNaN(dbPct)){
+      ids.forEach(function(id){ setText(id,'—'); });
+      return;
+    }
+    var span = hi - lo;
+    var db = dbPct/100*span;
+
+    function eu(pct){ return lo + pct/100*span; }
+
+    var hhTrip = eu(hhPct), hTrip = eu(hPct), lTrip = eu(lPct), llTrip = eu(llPct);
+    setText('alHHTrip', fmt(hhTrip,2));
+    setText('alHHReset', fmt(hhTrip-db,2));
+    setText('alHighTrip', fmt(hTrip,2));
+    setText('alHighReset', fmt(hTrip-db,2));
+    setText('alLowTrip', fmt(lTrip,2));
+    setText('alLowReset', fmt(lTrip+db,2));
+    setText('alLLTrip', fmt(llTrip,2));
+    setText('alLLReset', fmt(llTrip+db,2));
+  }
+  ['alRangeLo','alRangeHi','alHHPct','alHighPct','alLowPct','alLLPct','alDeadbandPct'].forEach(function(id){
+    var e=el(id); if(e){ e.addEventListener('input',calc); e.addEventListener('change',calc); }
+  });
+  calc();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

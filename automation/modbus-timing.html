@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modbus RTU Timing / Baud Rate Calculator — Engineerz CorneR</title>
+<meta name="description" content="Modbus RTU Timing / Baud Rate Calculator — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/modbus-timing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Modbus RTU Timing / Baud Rate Calculator — Engineerz CorneR">
+<meta property="og:description" content="Modbus RTU Timing / Baud Rate Calculator — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/modbus-timing">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modbus RTU Timing / Baud Rate Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Modbus RTU Timing / Baud Rate Calculator — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Automation", "item": "https://www.engineerzcorner.com/automation/" },
+    { "@type": "ListItem", "position": 3, "name": "Modbus RTU Timing / Baud Rate Calculator", "item": "https://www.engineerzcorner.com/automation/modbus-timing" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Modbus RTU Timing / Baud Rate Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Modbus RTU Timing / Baud Rate Calculator \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
+  "url": "https://www.engineerzcorner.com/automation/modbus-timing",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Modbus RTU Timing / Baud Rate Calculator</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="index.html" class="current">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-modbus">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><line x1="6" y1="10" x2="6" y2="14"></line><line x1="10" y1="10" x2="10" y2="14"></line><line x1="14" y1="10" x2="14" y2="14"></line><line x1="18" y1="10" x2="18" y2="14"></line></svg></div>
+    <div><h1>Modbus RTU Timing / Baud Rate Calculator</h1><div class="hero-sub">Character time, inter-character and inter-frame gaps per the Modbus spec</div></div>
+  </div>
+<div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
+  <line x1="60" y1="55" x2="640" y2="55" class="illo-line illo-dim" stroke-width="2"/>
+  <rect x="150" y="40" width="18" height="30" class="illo-line illo-amber" stroke-width="2" fill="none"/>
+  <rect x="180" y="40" width="18" height="30" class="illo-line illo-amber" stroke-width="2" fill="none"/>
+  <rect x="210" y="40" width="18" height="30" class="illo-line illo-amber" stroke-width="2" fill="none"/>
+<text x="686" y="92" text-anchor="end" class="illo-label">MODBUS RTU</text></svg></div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Automation Index</a>
+    <a href="signal-scaling.html">AT.01 Signal Scaling</a>
+    <a href="pid-tuning.html">AT.02 PID Tuning</a>
+    <a href="valve-sizing.html">AT.03 Valve Sizing</a>
+    <a href="level-transmitter.html">AT.04 Level Ranging</a>
+    <a href="vfd-scaling.html">AT.05 VFD Scaling</a>
+    <a href="notes.html">AT.06 Notes</a>
+    <a href="symbols.html">AT.07 Symbols</a>
+    <a href="guides.html">AT.08 Guides</a>
+    <a href="comparisons.html">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis.html">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion.html">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing.html">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing.html">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints.html">AT.14 Alarm Setpoints</a>
+  </div>
+  <div class="intro">Enter the serial settings for a Modbus RTU link to get character time and the inter-character (t1.5) and inter-frame (t3.5) silent-interval timing the spec requires — plus the total transmission time for a message of a given length.</div>
+<div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Serial Settings</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="mbBaud">Baud rate</label>
+        <select id="mbBaud">
+          <option value="1200">1200</option>
+          <option value="2400">2400</option>
+          <option value="4800">4800</option>
+          <option value="9600" selected>9600</option>
+          <option value="19200">19200</option>
+          <option value="38400">38400</option>
+          <option value="57600">57600</option>
+          <option value="115200">115200</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mbParity">Parity</label>
+        <select id="mbParity">
+          <option value="none">None (2 stop bits)</option>
+          <option value="even" selected>Even (1 stop bit)</option>
+          <option value="odd">Odd (1 stop bit)</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="mbBytes">Message length <span class="unit">bytes</span></label>
+        <input type="number" id="mbBytes" value="8" step="1" min="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Timing</h2></div>
+    <div class="result-line">
+      <span class="rlabel">CHARACTER TIME</span>
+      <span class="rval" id="mbCharTime">—</span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Bits per character</div><div class="sval" id="mbCharBits">—</div></div>
+      <div class="stat"><div class="slabel">Inter-character gap, t1.5</div><div class="sval" id="mbT1_5">—</div></div>
+      <div class="stat"><div class="slabel">Inter-frame gap, t3.5</div><div class="sval amber" id="mbT3_5">—</div></div>
+      <div class="stat"><div class="slabel">Frame transmit time</div><div class="sval" id="mbFrameTime">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">Bits/char = 1 start + 8 data + parity bit(s) + stop bit(s)<br>Char time = bits / baud<br>≤19200 baud: t1.5 = 1.5×char time, t3.5 = 3.5×char time<br>&gt;19200 baud (per spec addendum): t1.5 fixed at 750µs, t3.5 fixed at 1750µs</div>
+      <div class="hint" style="margin-top:8px;">A gap exceeding t1.5 between characters is treated as a framing error by RTU receivers; a gap exceeding t3.5 marks the end of a frame. Many real UART/USB-serial adapters can't hold to these tightly at low baud rates — some master/slave stacks use a fixed ~3.5–5ms minimum instead.</div>
+    </details>
+  </div>
+  <footer>Modbus RTU spec (Modbus.org, Modbus Serial Line Protocol) — timing intervals for standard 8-N-2 / 8-E-1 / 8-O-1 framing.</footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function fmt(n, d){ if(!isFinite(n)) return '—'; return n.toLocaleString('en-US', {minimumFractionDigits:d===undefined?2:d, maximumFractionDigits:d===undefined?2:d}); }
+
+  function calc(){
+    var baud = num('mbBaud');
+    var parity = el('mbParity').value;
+    var bytes = num('mbBytes');
+    if(isNaN(baud) || isNaN(bytes)){ return; }
+
+    var stopBits = parity === 'none' ? 2 : 1;
+    var parityBits = parity === 'none' ? 0 : 1;
+    var totalBits = 1 + 8 + parityBits + stopBits;
+    setText('mbCharBits', totalBits);
+
+    var charTimeS = totalBits / baud;
+    setText('mbCharTime', fmt(charTimeS*1e6,1) + ' µs');
+
+    var t15, t35;
+    if(baud > 19200){
+      t15 = 750; t35 = 1750; // µs, fixed per spec
+    } else {
+      t15 = charTimeS * 1.5 * 1e6;
+      t35 = charTimeS * 3.5 * 1e6;
+    }
+    setText('mbT1_5', fmt(t15,1) + ' µs');
+    setText('mbT3_5', fmt(t35,1) + ' µs');
+
+    var frameTimeMs = bytes * charTimeS * 1000;
+    setText('mbFrameTime', fmt(frameTimeMs,2) + ' ms');
+  }
+  ['mbBaud','mbParity','mbBytes'].forEach(function(id){ var e=el(id); if(e){ e.addEventListener('input',calc); e.addEventListener('change',calc); } });
+  calc();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
