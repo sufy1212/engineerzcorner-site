@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cut &amp; Fill Volume: How the Average End Area Method Actually Works | Engineerz CorneR</title>
+<meta name="description" content="How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Cut &amp; Fill Volume: How the Average End Area Method Actually Works">
+<meta property="og:description" content="How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cut &amp; Fill Volume: How the Average End Area Method Actually Works">
+<meta name="twitter:description" content="How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1930; --navy-2:#122845; --navy-3:#18325A;
+    --clay:#C08A4E; --clay-dim:#9C6E38;
+    --sand:#E4C99A;
+    --ink:#1A1F26; --ink-dim:#5B6470; --ink-faint:#8C94A0;
+    --line:#E3E6E9; --bg:#FFFFFF; --bg-2:#F5F7F8;
+    --font-display:"Space Grotesk",-apple-system,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-2);color:var(--ink);font-family:var(--font-body);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px 70px;}
+
+  nav.nt-nav{background:var(--navy);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+  .nt-nav-word{font-family:var(--font-display);font-weight:800;font-size:15px;color:#F3EEDD;letter-spacing:-.01em;}
+  .nt-nav-word span{color:var(--clay);}
+  nav.nt-nav a.nt-back{font-family:var(--font-mono);font-size:11px;color:#9FC2CB;text-decoration:none;}
+  nav.nt-nav a.nt-back:hover{color:#fff;}
+
+  .hero{background:var(--navy);background-image:linear-gradient(rgba(192,138,78,.08) 1px, transparent 1px),linear-gradient(90deg, rgba(192,138,78,.08) 1px, transparent 1px);background-size:32px 32px;padding:38px 0 0;}
+  .hero-inner{max-width:760px;margin:0 auto;padding:0 18px 30px;}
+  .post-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--clay);border-radius:20px;padding:5px 12px;margin-bottom:16px;font-weight:600;}
+  .hero h1{font-family:var(--font-display);font-size:clamp(24px,5.4vw,36px);font-weight:800;line-height:1.2;margin:0 0 12px;color:#F6F1E4;max-width:22ch;}
+  .hero-sub{font-family:var(--font-body);font-size:15.5px;line-height:1.6;color:#B8C9DA;max-width:54ch;margin:0 0 20px;}
+  .post-meta{font-family:var(--font-mono);font-size:11px;color:#7E97AC;display:flex;gap:16px;flex-wrap:wrap;}
+
+  .hero-art{margin:6px 0 0;}
+  .hero-art svg{width:100%;height:auto;display:block;}
+
+  .highlights{display:grid;grid-template-columns:1fr;gap:10px;margin:30px 0 6px;}
+  @media(min-width:560px){ .highlights{grid-template-columns:1fr 1fr;} }
+  .hl-card{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--clay-dim);border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(24,27,41,.05);}
+  .hl-num{font-family:var(--font-mono);font-size:10.5px;color:var(--clay-dim);font-weight:600;margin-bottom:6px;}
+  .hl-text{font-size:14px;line-height:1.55;color:var(--ink);}
+
+  .post-body{font-size:16px;line-height:1.78;color:var(--ink);margin-top:40px;}
+  .post-body p{margin:0 0 18px;}
+  .post-body h2{font-family:var(--font-display);font-size:21px;font-weight:800;margin:44px 0 6px;color:var(--ink);display:flex;align-items:center;gap:10px;}
+  .post-body h2 .h2-dot{width:8px;height:8px;border-radius:50%;background:var(--clay-dim);flex:none;}
+  .post-body h2 + .lede{font-size:13.5px;color:var(--ink-dim);margin:0 0 20px;font-family:var(--font-mono);}
+  .post-body h3{font-family:var(--font-display);font-size:16px;font-weight:700;margin:26px 0 10px;}
+
+  .formula-box{background:var(--navy);border-radius:12px;padding:26px 22px;margin:18px 0 10px;overflow-x:auto;}
+  .formula-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);color:#F6F1E4;font-size:13px;min-width:460px;justify-content:center;flex-wrap:nowrap;}
+  .f-chip{background:var(--navy-2);border:1px solid rgba(192,138,78,.32);border-radius:8px;padding:14px 16px;text-align:center;min-width:130px;}
+  .f-chip b{display:block;font-family:var(--font-display);font-size:14px;color:var(--clay);margin-bottom:4px;}
+  .f-chip span{font-size:10px;color:#9FC2CB;}
+  .f-op{color:var(--clay);font-size:20px;font-weight:700;}
+  .f-result{background:var(--sand);color:var(--navy);border-radius:8px;padding:14px 18px;text-align:center;min-width:130px;font-weight:700;}
+  .f-result b{display:block;font-family:var(--font-display);font-size:13px;}
+  .f-result span{font-size:10px;}
+  .formula-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-bottom:26px;}
+
+  .tbl-scroll{overflow-x:auto;margin:0 0 26px;border:1px solid var(--line);border-radius:10px;}
+  table.dtable{width:100%;border-collapse:collapse;font-size:13px;min-width:380px;}
+  table.dtable th{background:var(--navy);color:#F3EEDD;text-align:left;padding:9px 12px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+  table.dtable td{padding:9px 12px;border-top:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px;color:var(--ink);}
+  table.dtable tr:nth-child(even) td{background:var(--bg-2);}
+
+  .info-strip{display:flex;gap:12px;align-items:flex-start;background:#FBF2E4;border-radius:10px;padding:14px 16px;margin:0 0 30px;font-size:13px;color:#5A4425;}
+  .info-strip .dot{width:8px;height:8px;border-radius:50%;background:var(--clay);flex:none;margin-top:6px;}
+
+  .takeaways{margin:0 0 10px;list-style:none;padding:0;}
+  .takeaways li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.6;}
+  .takeaways li:first-child{border-top:none;}
+  .tk-check{flex:none;width:20px;height:20px;border-radius:50%;background:var(--clay-dim);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:2px;}
+
+  .post-related{margin-top:36px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:rgba(127,127,127,.04);}
+  .post-related h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+  .post-related-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6;margin:12px 0 4px;}
+  .post-related-label:first-of-type{margin-top:0;}
+  .post-related ul{list-style:none;margin:0;padding:0;}
+  .post-related li{margin:4px 0;}
+  .post-related a{font-family:var(--font-mono);font-size:13px;color:var(--lime-dim);text-decoration:none;}
+  .post-related a:hover{text-decoration:underline;}
+  .post-share{margin-top:36px;padding:18px 20px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg, rgba(242,184,75,.06), rgba(242,184,75,.02));}
+  .post-share-label{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--ink);margin:0 0 12px;}
+  .post-share-links{display:flex;flex-wrap:wrap;gap:8px;}
+  .post-share-links a{font-family:var(--font-mono);font-size:12px;color:var(--ink);text-decoration:none;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:7px 14px;transition:border-color .15s,color .15s;}
+  .post-share-links a:hover{border-color:var(--gold-dim);color:var(--gold-dim);}
+  .post-foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);}
+  .post-foot a{font-family:var(--font-mono);font-size:12px;color:var(--clay-dim);text-decoration:none;}
+  .post-foot a:hover{text-decoration:underline;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cut & Fill Volume: How the Average End Area Method Actually Works",
+      "item": "https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cut & Fill Volume: How the Average End Area Method Actually Works",
+      "datePublished": "2026-08-01",
+      "dateModified": "2026-08-01",
+  "description": "How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.",
+  "url": "https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Cut &amp; Fill Volume…</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="index.html">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">🏗 Civil</span>
+    <h1>Cut &amp; Fill Volume: How the Average End Area Method Actually Works</h1>
+    <p class="hero-sub">Earthwork volume isn't measured directly — it's estimated from cross-sections, and the method behind that estimate has real limits worth knowing.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Civil / Structural</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 140 L100 60 L160 60 L160 140 Z" fill="none" stroke="#E4C99A" stroke-width="3"/>
+      <path d="M600 140 L600 90 L660 90 L660 140 Z" fill="none" stroke="#E4C99A" stroke-width="3"/>
+      <path d="M100 60 L600 90" stroke="#C08A4E" stroke-width="1.4" stroke-dasharray="4 3"/>
+      <path d="M160 60 L660 90" stroke="#C08A4E" stroke-width="1.4" stroke-dasharray="4 3"/>
+      <line x1="130" y1="150" x2="130" y2="160" stroke="#C08A4E" stroke-width="1.2"/>
+      <line x1="630" y1="150" x2="630" y2="160" stroke="#C08A4E" stroke-width="1.2"/>
+      <line x1="130" y1="155" x2="630" y2="155" stroke="#C08A4E" stroke-width="1.2"/>
+      <text x="340" y="150" font-family="IBM Plex Mono" font-size="10" fill="#B8C9DA">STATION SPACING L</text>
+      <text x="90" y="45" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">A1</text>
+      <text x="605" y="80" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">A2</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+    <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Earthwork volume is estimated from cross-section areas, not measured directly.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The average end area method treats the ground between two sections as a uniform prismoid.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Closer section spacing always improves accuracy — the trade-off is survey and computation effort.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The method loses accuracy fast where ground shape changes sharply between sections.</div></div>
+  </div>
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why volume gets estimated, not measured</h2>
+    <p>There's no practical way to directly measure the volume of earth to be cut or filled across a real, irregular site. Instead, the site is surveyed at a series of cross-sections (stations) spaced along the alignment, the cut or fill area at each section is calculated, and the volume between consecutive sections is estimated from those areas. Average end area is the simplest and most widely used way to do that last step.</p>
+
+    <h2><span class="h2-dot"></span>The formula</h2>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>Volume</b><span>between two sections</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-chip"><b>(A1 + A2) &divide; 2</b><span>average cross-section area</span></div>
+        <div class="f-op">&times;</div>
+        <div class="f-result"><b>L</b><span>station spacing</span></div>
+      </div>
+    </div>
+    <div class="formula-note">A1 and A2 are the cut (or fill) areas at consecutive stations, L is the distance between them. Total volume for a run is just the sum of this calculation across every consecutive pair of stations.</div>
+    <p>Geometrically, this treats the earth between the two sections as if it were a uniform prism with a constant average cross-section — it isn't exactly that shape in reality, which is exactly where the method's accuracy limits come from.</p>
+
+    <h2><span class="h2-dot"></span>What controls accuracy</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Factor</th><th>Effect on accuracy</th></tr>
+        <tr><td>Closer station spacing</td><td>Improves accuracy — the ground between sections is more nearly uniform</td></tr>
+        <tr><td>Rapidly changing terrain between stations</td><td>Reduces accuracy — average end area assumes gradual change</td></tr>
+        <tr><td>Large difference between A1 and A2</td><td>Reduces accuracy — the method tends to overestimate volume when areas differ sharply</td></tr>
+        <tr><td>Consistent alignment (no sharp horizontal curves)</td><td>Improves accuracy — the method assumes a straight prismoid between stations</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>When the method overestimates</h2>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Where one section has a large area and the very next has a much smaller one — a peak or ridge falling entirely between the two stations — average end area tends to overestimate the true volume. The prismoidal formula (which accounts for a mid-section area too) corrects for this, at the cost of needing a third area to compute. For most routine earthwork it's not needed; for large, irregular cuts it's worth the extra step.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Average end area estimates volume from surveyed cross-sections — it's a method, not a direct measurement.</span></li>
+      <li><span class="tk-check">✓</span><span>Tighter station spacing is the single biggest lever for accuracy.</span></li>
+      <li><span class="tk-check">✓</span><span>The method tends to overestimate volume where cross-section areas change sharply between stations.</span></li>
+      <li><span class="tk-check">✓</span><span>For irregular terrain, the prismoidal formula is a more accurate (if more work) alternative.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Cut%20%26%20Fill%20Volume%3A%20How%20the%20Average%20End%20Area%20Method%20Actually%20Works%20%E2%80%94%20How%20earthwork%20volume%20between%20two%20cross-sections%20is%20estimated%20by%20averaging%20their%20areas%2C%20why%20section%20spacing%20controls%20accuracy%2C%20and%20where%20the%20method%20breaks%20down.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcut-fill-volume-average-end-area-method-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcut-fill-volume-average-end-area-method-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Cut%20%26%20Fill%20Volume%3A%20How%20the%20Average%20End%20Area%20Method%20Actually%20Works&text=How%20earthwork%20volume%20between%20two%20cross-sections%20is%20estimated%20by%20averaging%20their%20areas%2C%20why%20section%20spacing%20controls%20accuracy%2C%20and%20where%20the%20method%20breaks%20down.%0A%0Ahttps%3A//www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Cut%20%26%20Fill%20Volume%3A%20How%20the%20Average%20End%20Area%20Method%20Actually%20Works&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACut%20%26%20Fill%20Volume%3A%20How%20the%20Average%20End%20Area%20Method%20Actually%20Works%0AHow%20earthwork%20volume%20between%20two%20cross-sections%20is%20estimated%20by%20averaging%20their%20areas%2C%20why%20section%20spacing%20controls%20accuracy%2C%20and%20where%20the%20method%20breaks%20down.%0A%0Ahttps%3A//www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../civil/cut-fill-volume.html">Cut &amp; Fill Volume (Average End Area) &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="soil-bearing-capacity-footing-sizing.html">Soil Bearing Capacity: Why It Decides Your Footing Size, Not Just Column Load</a></li>
+<li><a href="grade-slope-percent-ratio-degrees-explained.html">Grade &amp; Slope: Why Percent, Ratio and Degrees Aren&#x27;t the Same Number</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="index.html">&larr; Back to all posts</a>
+  </div>
+</div>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
