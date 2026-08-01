@@ -83,6 +83,10 @@
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
   .reveal.in-view{opacity:1;transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .cta-strip{margin-top:28px;text-align:center;padding:26px 20px;border-radius:16px;background:linear-gradient(135deg,var(--plate),var(--amber));color:#fff;}
+  .cta-strip h3{font-family:var(--font-display);font-size:16px;margin:0 0 6px;color:#fff;}
+  .cta-strip p{font-size:12.5px;color:#CFEEEE;margin:0;}
+
   .site-nav a.current{color:#3FE8E8 !important;}
 </style>
 <script type="application/ld+json">
@@ -241,6 +245,11 @@
       <tr><td>What would make you suspect a neutral is overloaded in a three-phase system with single-phase loads?</td><td>Significant phase imbalance (especially with non-linear loads like LED drivers or electronics generating triplen harmonics that add rather than cancel in the neutral) can push neutral current above what's expected — worth measuring neutral current directly rather than assuming it's always low.</td></tr>
       <tr><td>How would you plan an electrical shutdown/outage on a live facility?</td><td>Identify everything affected (not just the obvious circuit), sequence isolation to avoid backfeeds, notify stakeholders with enough lead time, prepare a rollback plan if something doesn't go as expected, and confirm re-energization checks before restoring supply.</td></tr>
     </table></div>
+  </div>
+
+  <div class="cta-strip reveal">
+    <h3>Contact me</h3>
+    <p>Got a topic or a discipline you'd like added? Ask, and a new question set gets written and added here.</p>
   </div>
 
   <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>

@@ -83,6 +83,10 @@
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
   .reveal.in-view{opacity:1;transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .cta-strip{margin-top:28px;text-align:center;padding:26px 20px;border-radius:16px;background:linear-gradient(135deg,var(--plate),var(--amber));color:#fff;}
+  .cta-strip h3{font-family:var(--font-display);font-size:16px;margin:0 0 6px;color:#fff;}
+  .cta-strip p{font-size:12.5px;color:#CFEEEE;margin:0;}
+
   .site-nav a.current{color:#3FE8E8 !important;}
 </style>
 <script type="application/ld+json">
@@ -241,6 +245,11 @@
       <tr><td>What would you do if a process safety valve (PSV) lifts unexpectedly during normal operation?</td><td>Treat it as an abnormal event requiring investigation, not just a reset — check for an upstream control failure, blocked outlet, or process upset that caused overpressure, and don't assume the valve itself is faulty until the process cause is ruled out.</td></tr>
       <tr><td>How do you approach validating a new automation sequence before it goes live on a running process?</td><td>Test it in a simulated or offline environment first if possible, review the logic against the functional design/cause-and-effect matrix with operations, and plan a controlled first live run with extra monitoring rather than switching over unmonitored.</td></tr>
     </table></div>
+  </div>
+
+  <div class="cta-strip reveal">
+    <h3>Contact me</h3>
+    <p>Got a topic or a discipline you'd like added? Ask, and a new question set gets written and added here.</p>
   </div>
 
   <footer>Model answers are a starting point, not a script — say them in your own words and back them up with an example from your own work where you can. <a href="index.html">← Interview Index</a></footer>
