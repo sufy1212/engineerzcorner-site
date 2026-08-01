@@ -151,12 +151,12 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="index.html">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Quickfire</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="./">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Quickfire</span></div></nav>
 
 
 <nav class="qf-nav">
   <div class="qf-nav-word">Engineerz<span>CorneR</span></div>
-  <a class="qf-back" href="games.html">&larr; Games</a>
+  <a class="qf-back" href="games">&larr; Games</a>
 </nav>
 
 <div class="wrap">
@@ -170,7 +170,7 @@
 
   <div class="qf-stage" id="qfStage"></div>
 
-  <div class="qf-footer">Prefer flashcards? <a href="flashcards.html">Study drawing symbols untimed →</a> Or take the <a href="quiz.html">daily engineering quiz →</a></div>
+  <div class="qf-footer">Prefer flashcards? <a href="flashcards">Study drawing symbols untimed →</a> Or take the <a href="quiz">daily engineering quiz →</a></div>
 </div>
 
 <script>
@@ -578,7 +578,7 @@
           '<div class="qf-stat"><div class="qf-stat-num">' + (isNew ? state.score : best) + '</div><div class="qf-stat-lbl">Best</div></div>' +
         '</div>' +
         '<button class="qf-restart-btn" id="qfRestartBtn">Play Again</button>' +
-        '<br><a class="qf-again-link" href="quiz.html">Try the daily quiz instead &rarr;</a>' +
+        '<br><a class="qf-again-link" href="quiz">Try the daily quiz instead &rarr;</a>' +
       '</div>';
     document.getElementById('qfRestartBtn').addEventListener('click', startGame);
   }
@@ -595,7 +595,7 @@
 .ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
 .ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
 </style>
-<a href="index.html" class="ecr-home-fab" aria-label="Go to homepage">
+<a href="./" class="ecr-home-fab" aria-label="Go to homepage">
   <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
   <span class="ecr-home-fab-label">Home</span>
 </a>
