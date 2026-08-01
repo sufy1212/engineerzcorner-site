@@ -162,7 +162,7 @@ CONTENT_DIRS.forEach(dir => {
   listHtmlFiles(dir).forEach(relPath => {
     items.push({
       t: extractTitle(relPath),
-      u: relPath.split(path.sep).join('/'),
+      u: cleanPathFor(relPath.split(path.sep).join('/')),
       d: fileDate(relPath).slice(0, 10) // YYYY-MM-DD
     });
   });
