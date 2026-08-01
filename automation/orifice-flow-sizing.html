@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XD2HFL7ZME');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orifice Plate (DP Flow Element) Sizing — Engineerz CorneR</title>
+<meta name="description" content="Orifice Plate (DP Flow Element) Sizing — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/orifice-flow-sizing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Orifice Plate (DP Flow Element) Sizing — Engineerz CorneR">
+<meta property="og:description" content="Orifice Plate (DP Flow Element) Sizing — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/orifice-flow-sizing">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orifice Plate (DP Flow Element) Sizing — Engineerz CorneR">
+<meta name="twitter:description" content="Orifice Plate (DP Flow Element) Sizing — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Automation", "item": "https://www.engineerzcorner.com/automation/" },
+    { "@type": "ListItem", "position": 3, "name": "Orifice Plate (DP Flow Element) Sizing", "item": "https://www.engineerzcorner.com/automation/orifice-flow-sizing" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Orifice Plate (DP Flow Element) Sizing",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Orifice Plate (DP Flow Element) Sizing \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
+  "url": "https://www.engineerzcorner.com/automation/orifice-flow-sizing",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#8B7FF0;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#8B7FF0;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Orifice Plate (DP Flow Element) Sizing</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="../electrical/index.html">Electrical</a>
+    <a href="../mechanical/index.html">Mechanical</a>
+    <a href="../hvac/index.html">HVAC</a>
+    <a href="../civil/index.html">Civil</a>
+    <a href="index.html" class="current">Automation</a>
+    <a href="../solar/index.html">Solar</a>
+    <a href="../general/index.html">General Tools</a>
+    <a href="../study-abroad/index.html">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
+</div>
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-orifice">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h6"></path><path d="M16 12h6"></path><path d="M8 6c0 3-2 4-2 6s2 3 2 6"></path><path d="M16 6c0 3 2 4 2 6s-2 3-2 6"></path></svg></div>
+    <div><h1>Orifice Plate (DP Flow) Sizing</h1><div class="hero-sub">Volumetric flow from differential pressure, or required bore for a target flow</div></div>
+  </div>
+<div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
+  <line x1="60" y1="50" x2="300" y2="50" class="illo-line illo-dim" stroke-width="4"/>
+  <path d="M300 30 L300 70 M310 20 L310 80 M310 20 L340 20 M310 80 L340 80" class="illo-line illo-green an-draw" stroke-width="3" fill="none"/>
+  <line x1="340" y1="50" x2="640" y2="50" class="illo-line illo-dim" stroke-width="4"/>
+<text x="686" y="92" text-anchor="end" class="illo-label">DP</text></svg></div>
+
+  <div class="mech-tabs">
+    <a href="index.html">Automation Index</a>
+    <a href="signal-scaling.html">AT.01 Signal Scaling</a>
+    <a href="pid-tuning.html">AT.02 PID Tuning</a>
+    <a href="valve-sizing.html">AT.03 Valve Sizing</a>
+    <a href="level-transmitter.html">AT.04 Level Ranging</a>
+    <a href="vfd-scaling.html">AT.05 VFD Scaling</a>
+    <a href="notes.html">AT.06 Notes</a>
+    <a href="symbols.html">AT.07 Symbols</a>
+    <a href="guides.html">AT.08 Guides</a>
+    <a href="comparisons.html">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis.html">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion.html">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing.html">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing.html">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints.html">AT.14 Alarm Setpoints</a>
+    <a href="thermocouple-reference.html">AT.15 Thermocouple Reference</a>
+    <a href="orifice-flow-sizing.html" class="current">AT.16 Orifice Flow Sizing</a>
+  </div>
+  <div class="intro">A simplified square-edge orifice plate flow calculation — flow rate from a known bore and measured differential pressure, or the bore needed to produce a target differential pressure at a design flow. For a quick field check or preliminary sizing, not a substitute for a full ISO 5167 / AGA-3 calculation on a fiscal-metering or high-accuracy application.</div>
+<div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
+</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Common Inputs</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="orPipeID">Pipe internal diameter, D <span class="unit">mm</span></label>
+        <input type="number" id="orPipeID" value="150" step="1" min="1">
+      </div>
+      <div class="field">
+        <label for="orDensity">Fluid density, ρ <span class="unit">kg/m³</span></label>
+        <input type="number" id="orDensity" value="998" step="1" min="0.01">
+      </div>
+      <div class="field">
+        <label for="orCd">Discharge coefficient, Cd</label>
+        <input type="number" id="orCd" value="0.61" step="0.01" min="0.1" max="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Flow Rate from Bore &amp; ΔP</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="orBore">Orifice bore, d <span class="unit">mm</span></label>
+        <input type="number" id="orBore" value="90" step="1" min="1">
+      </div>
+      <div class="field">
+        <label for="orDP">Differential pressure, ΔP <span class="unit">kPa</span></label>
+        <input type="number" id="orDP" value="25" step="0.1" min="0">
+      </div>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">β (d/D)</span>
+      <span class="rval" id="orBetaOut">—</span>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">VOLUMETRIC FLOW</span>
+      <span class="rval" id="orQOut">—</span>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Required Bore for Target Flow &amp; ΔP</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="orTargetQ">Design flow rate, Q <span class="unit">m³/h</span></label>
+        <input type="number" id="orTargetQ" value="120" step="1" min="0.01">
+      </div>
+      <div class="field">
+        <label for="orTargetDP">Design ΔP at max flow <span class="unit">kPa</span></label>
+        <input type="number" id="orTargetDP" value="25" step="0.1" min="0.01">
+      </div>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">β REQUIRED</span>
+      <span class="rval" id="orBetaReqOut">—</span>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">REQUIRED BORE, d</span>
+      <span class="rval" id="orBoreReqOut">—</span>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">Q = Cd · (π/4)·d² · √( 2ΔP / (ρ·(1−β⁴)) ) &nbsp;·&nbsp; β = d/D</div>
+      <div class="hint" style="margin-top:8px;">This uses the standard square-edge orifice equation with the velocity-of-approach (1−β⁴) correction, expansibility factor ε taken as 1 (valid for liquids; gas/steam service needs an ε correction below about 1, which this sheet doesn't apply). Bore sizing solves the same equation iteratively for d. In practice β is normally kept between about 0.2 and 0.75 for accurate, well-characterized measurement — outside that range, discharge coefficient and uncertainty depart from the simple constant-Cd assumption used here, and a full standard (ISO 5167, AGA-3) calculation with Reynolds-number-dependent Cd is needed.</div>
+    </details>
+  </div>
+  <footer>Simplified square-edge (thin-plate, flange- or corner-tap) orifice equation, constant Cd assumption — for preliminary sizing and field checks only. Fiscal metering, custody transfer, or high-accuracy applications must use the full ISO 5167 (liquids/gas) or AGA Report No. 3 (natural gas) calculation with Reynolds-number-dependent discharge coefficient and, for compressible fluids, the expansibility factor. <a href="index.html">← Automation Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about.html">About</a> &nbsp;·&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function fmt(n, d){ if(!isFinite(n)) return '—'; return n.toLocaleString('en-US', {minimumFractionDigits:d===undefined?2:d, maximumFractionDigits:d===undefined?2:d}); }
+
+  function calcFlow(){
+    var D = num('orPipeID')/1000, d = num('orBore')/1000, dp = num('orDP')*1000, rho = num('orDensity'), Cd = num('orCd');
+    if(isNaN(D)||isNaN(d)||isNaN(dp)||isNaN(rho)||isNaN(Cd)||D<=0||d<=0||d>=D||rho<=0||dp<0){
+      setText('orBetaOut','—'); setText('orQOut','—'); return;
+    }
+    var beta = d/D;
+    var area = Math.PI/4*d*d;
+    var Q = Cd*area*Math.sqrt(2*dp/(rho*(1-Math.pow(beta,4)))); // m3/s
+    setText('orBetaOut', fmt(beta,3));
+    setText('orQOut', fmt(Q*3600,2) + ' m³/h &nbsp;(' + fmt(Q*1000,2) + ' L/s)');
+  }
+  ['orPipeID','orBore','orDP','orDensity','orCd'].forEach(function(id){
+    el(id).addEventListener('input', calcFlow);
+    el(id).addEventListener('change', calcFlow);
+  });
+
+  function calcBore(){
+    var D = num('orPipeID')/1000, Qh = num('orTargetQ'), dp = num('orTargetDP')*1000, rho = num('orDensity'), Cd = num('orCd');
+    if(isNaN(D)||isNaN(Qh)||isNaN(dp)||isNaN(rho)||isNaN(Cd)||D<=0||Qh<=0||rho<=0||dp<=0){
+      setText('orBetaReqOut','—'); setText('orBoreReqOut','—'); return;
+    }
+    var Q = Qh/3600; // m3/s
+    // iterate on beta since (1-beta^4) depends on d too
+    var beta = 0.5;
+    for(var i=0;i<60;i++){
+      var d = beta*D;
+      var area = Math.PI/4*d*d;
+      var Qcalc = Cd*area*Math.sqrt(2*dp/(rho*(1-Math.pow(beta,4))));
+      var ratio = Q/Qcalc;
+      beta = beta*Math.sqrt(ratio);
+      if(beta <= 0.05) beta = 0.05;
+      if(beta >= 0.95) beta = 0.95;
+    }
+    var dReq = beta*D;
+    setText('orBetaReqOut', fmt(beta,3) + (beta>0.75?' (above typical 0.75 max — consider a larger ΔP or a different element)':(beta<0.2?' (below typical 0.2 min — consider a smaller ΔP)':''))  );
+    setText('orBoreReqOut', fmt(dReq*1000,2) + ' mm');
+  }
+  ['orPipeID','orTargetQ','orTargetDP','orDensity','orCd'].forEach(function(id){
+    el(id).addEventListener('input', calcBore);
+    el(id).addEventListener('change', calcBore);
+  });
+
+  calcFlow(); calcBore();
+})();
+</script>
+
+<style>
+.ecr-home-fab{position:fixed;left:18px;bottom:18px;z-index:99999;display:flex;align-items:center;height:44px;border-radius:22px;background:#0A1930;color:#5FD3E3;text-decoration:none;box-shadow:0 6px 18px rgba(10,25,48,.4);overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,monospace;transition:box-shadow .25s,transform .25s;}
+.ecr-home-fab:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,25,48,.5);}
+.ecr-home-fab-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;}
+.ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
+.ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
+</style>
+<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
