@@ -12,21 +12,21 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deadband &amp; Hysteresis Explained | Engineerz CorneR</title>
-<meta name="description" content="Why a switch needs two trip points instead of one — how deadband and hysteresis stop a control loop from chattering right at the setpoint.">
-<link rel="canonical" href="https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter">
+<title>Alarm Setpoint Bands Explained | Engineerz CorneR</title>
+<meta name="description" content="Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Engineerz CorneR">
-<meta property="og:title" content="Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough">
-<meta property="og:description" content="Why a switch needs two trip points instead of one — how deadband and hysteresis stop a control loop from chattering right at the setpoint.">
-<meta property="og:url" content="https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter">
+<meta property="og:title" content="Alarm Setpoint Bands: Why High and High-High Are Different Alarms">
+<meta property="og:description" content="Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained">
 <meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough">
-<meta name="twitter:description" content="Why a switch needs two trip points instead of one — how deadband and hysteresis stop a control loop from chattering right at the setpoint.">
+<meta name="twitter:title" content="Alarm Setpoint Bands: Why High and High-High Are Different Alarms">
+<meta name="twitter:description" content="Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -137,8 +137,8 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Deadband & Hysteresis: Why a Single Setpoint Isn't Enough",
-      "item": "https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter"
+      "name": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+      "item": "https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained"
     }
   ]
 }
@@ -147,11 +147,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Deadband & Hysteresis: Why a Single Setpoint Isn't Enough",
+  "headline": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
       "datePublished": "2026-08-01",
       "dateModified": "2026-08-01",
-  "description": "Why a switch needs two trip points instead of one \u2014 how deadband and hysteresis stop a control loop from chattering right at the setpoint.",
-  "url": "https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter",
+  "description": "Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.",
+  "url": "https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained",
   "author": {
     "@type": "Organization",
     "name": "Engineerz CorneR"
@@ -166,7 +166,7 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter"
+    "@id": "https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained"
   }
 }
 </script>
@@ -182,7 +182,7 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Deadband & Hysteresis: Why a Single Setpoint Isn't Enough</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Alarm Setpoint Bands: Why High and High-High Are Different…</span></div></nav>
 
 <nav class="nt-nav">
   <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
@@ -191,21 +191,24 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <span class="post-tag">🔌 Automation &middot; Instrumentation</span>
-    <h1>Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough</h1>
-    <p class="hero-sub">A switch that trips on and off at exactly the same value will chatter the moment the signal sits right on that line. Two trip points fix it.</p>
-    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Automation / Instrumentation</span></div>
+    <span class="post-tag">🔌 Automation &middot; Alarms</span>
+    <h1>Alarm Setpoint Bands: Why High and High-High Are Different Alarms</h1>
+    <p class="hero-sub">A four-level alarm band isn't redundancy — High and High-High trigger different responses, and each needs its own reset point to avoid flooding the alarm list.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Automation / Alarms</span></div>
   </div>
   <div class="hero-art">
     <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-      <line x1="30" y1="130" x2="730" y2="130" stroke="#18325A" stroke-width="1"/>
-      <line x1="30" y1="20" x2="30" y2="150" stroke="#18325A" stroke-width="1"/>
-      <line x1="30" y1="70" x2="730" y2="70" stroke="#C08A4E" stroke-width="1.4" stroke-dasharray="4 4"/>
-      <line x1="30" y1="100" x2="730" y2="100" stroke="#5FD3E3" stroke-width="1.4" stroke-dasharray="4 4"/>
-      <path d="M40 140 C160 40, 280 40, 380 85 S 560 150, 660 60 S 700 40, 720 45" fill="none" stroke="#E4C99A" stroke-width="3"/>
-      <text x="732" y="73" font-family="IBM Plex Mono" font-size="9" fill="#C08A4E">TRIP HIGH</text>
-      <text x="732" y="103" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">TRIP LOW</text>
-      <text x="34" y="16" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">PROCESS SIGNAL vs. TIME</text>
+      <line x1="60" y1="140" x2="700" y2="140" stroke="#18325A" stroke-width="1"/>
+      <line x1="60" y1="30" x2="700" y2="30" stroke="#D9534F" stroke-width="1.6"/>
+      <line x1="60" y1="52" x2="700" y2="52" stroke="#C08A4E" stroke-width="1.6"/>
+      <line x1="60" y1="100" x2="700" y2="100" stroke="#C08A4E" stroke-width="1.6"/>
+      <line x1="60" y1="122" x2="700" y2="122" stroke="#D9534F" stroke-width="1.6"/>
+      <text x="704" y="34" font-family="IBM Plex Mono" font-size="9" fill="#D9534F">HIGH-HIGH</text>
+      <text x="704" y="56" font-family="IBM Plex Mono" font-size="9" fill="#C08A4E">HIGH</text>
+      <text x="704" y="104" font-family="IBM Plex Mono" font-size="9" fill="#C08A4E">LOW</text>
+      <text x="704" y="126" font-family="IBM Plex Mono" font-size="9" fill="#D9534F">LOW-LOW</text>
+      <path d="M70 90 C160 60, 260 30, 340 45 S 460 130, 540 118 S 640 60, 690 78" fill="none" stroke="#E4C99A" stroke-width="3"/>
+      <text x="64" y="16" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">FOUR-LEVEL ALARM BAND</text>
     </svg>
   </div>
 </div>
@@ -213,62 +216,63 @@
 <div class="wrap">
 
   <div class="highlights">
-    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A single trip point makes a switch chatter every time a noisy signal crosses it.</div></div>
-    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Deadband separates the "switch on" and "switch off" points so the signal has to move past both.</div></div>
-    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Hysteresis is the same idea applied to a control action, not just an alarm or a relay.</div></div>
-    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Wider deadband cuts chatter but adds lag before the switch reacts to a real change.</div></div>
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">High and High-High are two separate alarms with different responses, not one alarm with a safety margin.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Each alarm needs its own reset deadband, or it clears and re-triggers as the signal hovers near the trip point.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Low/Low-Low mirrors High/High-High on the other end of the range.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Setpoints are usually configured as %FS of the signal's engineering range, then converted to real units.</div></div>
   </div>
 
   <div class="post-body">
 
-    <h2><span class="h2-dot"></span>The problem with one trip point</h2>
-    <p>Set a single setpoint &mdash; say a pump starts when tank level drops below 40% &mdash; and the moment the level sits right at 40%, any small ripple in the signal flips the pump on, then off, then on again. That's chatter: rapid on/off cycling driven by noise sitting on top of a signal that's genuinely hovering near the trip point.</p>
-    <p>Chatter isn't just annoying. It wears out relay contacts, hammers motor starters with repeated inrush current, and can make an alarm screen unreadable during exactly the moment an operator most needs a clean signal.</p>
+    <h2><span class="h2-dot"></span>One alarm isn't enough for a real process</h2>
+    <p>A tank running high on level is a warning. A tank about to overflow is an emergency. Using a single "High" alarm for both means either the warning fires too late to matter, or the emergency response fires on every routine high reading. Splitting the band into High and High-High &mdash; and Low and Low-Low on the other side &mdash; lets each threshold carry its own meaning and its own response, from "notify the operator" up to "trip the interlock."</p>
 
-    <h2><span class="h2-dot"></span>Two trip points instead of one</h2>
+    <h2><span class="h2-dot"></span>From %FS to engineering units</h2>
     <div class="formula-box">
       <div class="formula-row">
-        <div class="f-chip"><b>Trip ON</b><span>e.g. level below 38%</span></div>
-        <div class="f-op">&larr;</div>
-        <div class="f-result"><b>Deadband</b><span>gap between the two</span></div>
-        <div class="f-op">&rarr;</div>
-        <div class="f-chip"><b>Trip OFF</b><span>e.g. level above 42%</span></div>
+        <div class="f-chip"><b>Alarm Setpoint</b><span>in engineering units</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-chip"><b>Range Low</b><span>EU</span></div>
+        <div class="f-op">&plus;</div>
+        <div class="f-result"><b>%FS &times; Span</b><span>Span = Range High &minus; Range Low</span></div>
       </div>
     </div>
-    <div class="formula-note">Deadband width is the difference between the two trip points. The signal has to cross the entire gap &mdash; not just tick over a single line &mdash; before the output changes state again.</div>
+    <div class="formula-note">Setpoints are configured as a percentage of full scale so they stay meaningful if the transmitter's range is ever re-calibrated &mdash; the %FS positions don't need to change, only the EU output does.</div>
 
-    <h2><span class="h2-dot"></span>Deadband vs. hysteresis</h2>
+    <h2><span class="h2-dot"></span>Why each alarm needs its own reset point</h2>
+    <p>Without a reset deadband, an alarm that trips at exactly 80% and clears at exactly 80% will chatter on and off as the signal hovers around that line &mdash; the same chattering problem a simple on/off switch has. A reset deadband gives each alarm a lower point it has to drop back through before it clears, separate from the point that tripped it in the first place.</p>
     <div class="tbl-scroll">
       <table class="dtable">
-        <tr><th>Term</th><th>Where it's usually used</th><th>What it does</th></tr>
-        <tr><td>Deadband</td><td>Alarms, on/off switches, relays</td><td>Separates the trip and reset points around a single setpoint</td></tr>
-        <tr><td>Hysteresis</td><td>Control loops, sensors, actuator logic</td><td>Same separation, applied to a control action rather than a binary alarm</td></tr>
+        <tr><th>Alarm</th><th>Trips when signal rises above</th><th>Clears when signal falls below</th></tr>
+        <tr><td>High</td><td>High setpoint</td><td>High setpoint &minus; deadband</td></tr>
+        <tr><td>High-High</td><td>High-High setpoint</td><td>High-High setpoint &minus; deadband</td></tr>
+        <tr><td>Low</td><td>Low setpoint (falling)</td><td>Low setpoint &plus; deadband</td></tr>
+        <tr><td>Low-Low</td><td>Low-Low setpoint (falling)</td><td>Low-Low setpoint &plus; deadband</td></tr>
       </table>
     </div>
-    <p>In practice the two terms describe the same mechanism from different angles: a gap between the point that triggers an action and the point that releases it, so the signal has to move a meaningful amount &mdash; not just cross a hairline &mdash; to flip state again.</p>
 
     <div class="info-strip">
       <div class="dot"></div>
-      <div>An alarm setpoint band (High, High-High, with a reset deadband on each) is the same principle applied to a multi-level alarm rather than a single on/off switch &mdash; wider bands trade responsiveness for fewer nuisance alarms.</div>
+      <div>This is the same deadband/hysteresis mechanism used for any single switch, applied four times &mdash; once per alarm level. A High-High alarm typically drives a hard interlock or shutdown, so its deadband and response logic usually get more scrutiny than the informational High alarm.</div>
     </div>
 
-    <h2><span class="h2-dot"></span>Choosing a deadband width</h2>
+    <h2><span class="h2-dot"></span>What moves the numbers</h2>
     <div class="tbl-scroll">
       <table class="dtable">
-        <tr><th>Deadband set too narrow</th><th>Deadband set too wide</th></tr>
-        <tr><td>Chatter returns as soon as noise exceeds the gap</td><td>Real changes take longer to register and act on</td></tr>
-        <tr><td>Contact/relay wear from rapid cycling</td><td>Process can drift further from setpoint before correction starts</td></tr>
-        <tr><td>Alarm floods during noisy or transitional conditions</td><td>Slower alarm response, masking a genuine excursion</td></tr>
+        <tr><th>Factor</th><th>Typical effect</th></tr>
+        <tr><td>High and High-High set too close together</td><td>Both alarms tend to fire almost simultaneously, defeating the escalation</td></tr>
+        <tr><td>Deadband set narrower than signal noise</td><td>Alarm chatters and floods the operator's alarm list</td></tr>
+        <tr><td>Deadband set too wide</td><td>Alarm stays active longer than necessary after the condition clears</td></tr>
+        <tr><td>Range re-calibrated without updating %FS positions</td><td>Actual engineering-unit trip points shift even though %FS stays the same</td></tr>
       </table>
     </div>
-    <p>The right width comes from the signal's actual noise level, not a round number picked by habit &mdash; a deadband narrower than the signal's normal noise band will always chatter, no matter how it's tuned elsewhere.</p>
 
     <h2><span class="h2-dot"></span>Key takeaways</h2>
     <ul class="takeaways">
-      <li><span class="tk-check">✓</span><span>Chatter happens when a noisy signal repeatedly crosses a single trip point.</span></li>
-      <li><span class="tk-check">✓</span><span>Deadband and hysteresis both fix it by separating the "on" and "off" trip points into a gap.</span></li>
-      <li><span class="tk-check">✓</span><span>Widening the gap trades responsiveness for stability &mdash; there's no free lunch either direction.</span></li>
-      <li><span class="tk-check">✓</span><span>Size the deadband against the signal's real noise level, not an arbitrary round number.</span></li>
+      <li><span class="tk-check">✓</span><span>High/High-High and Low/Low-Low are four distinct alarms, each with its own response, not one alarm repeated.</span></li>
+      <li><span class="tk-check">✓</span><span>Each alarm needs its own reset deadband to avoid chattering near its trip point.</span></li>
+      <li><span class="tk-check">✓</span><span>Setpoints configured as %FS survive a re-ranging of the transmitter without needing to be re-tuned.</span></li>
+      <li><span class="tk-check">✓</span><span>Spacing High and High-High too closely defeats the point of having an escalation at all.</span></li>
     </ul>
 
   </div>
@@ -277,22 +281,21 @@
     <div class="post-share">
     <div class="post-share-label">Found this useful? Share it —</div>
     <div class="post-share-links">
-      <a href="https://twitter.com/intent/tweet?text=Deadband%20%26%20Hysteresis%3A%20Why%20a%20Single%20Setpoint%20Isn%27t%20Enough%20%E2%80%94%20Why%20a%20switch%20needs%20two%20trip%20points%20instead%20of%20one%20to%20stop%20chatter.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdeadband-hysteresis-why-controls-dont-chatter" target="_blank" rel="noopener">X / Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdeadband-hysteresis-why-controls-dont-chatter" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.reddit.com/submit?selftext=true&title=Deadband%20%26%20Hysteresis%3A%20Why%20a%20Single%20Setpoint%20Isn%27t%20Enough&text=Why%20a%20switch%20needs%20two%20trip%20points%20instead%20of%20one%20to%20stop%20chatter.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdeadband-hysteresis-why-controls-dont-chatter" target="_blank" rel="noopener">Reddit</a>
-      <a href="mailto:?subject=Deadband%20%26%20Hysteresis%3A%20Why%20a%20Single%20Setpoint%20Isn%27t%20Enough&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ADeadband%20%26%20Hysteresis%3A%20Why%20a%20Single%20Setpoint%20Isn%27t%20Enough%0AWhy%20a%20switch%20needs%20two%20trip%20points%20instead%20of%20one%20to%20stop%20chatter.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdeadband-hysteresis-why-controls-dont-chatter">Email</a>
+      <a href="https://twitter.com/intent/tweet?text=Alarm%20Setpoint%20Bands%3A%20Why%20High%20and%20High-High%20Are%20Different%20Alarms%20%E2%80%94%20Why%20alarms%20come%20in%20pairs%2C%20not%20single%20trip%20points%2C%20and%20how%20a%20reset%20deadband%20keeps%20the%20alarm%20list%20from%20flooding.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Falarm-setpoint-bands-high-highhigh-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Falarm-setpoint-bands-high-highhigh-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Alarm%20Setpoint%20Bands%3A%20Why%20High%20and%20High-High%20Are%20Different%20Alarms&text=Why%20alarms%20come%20in%20pairs%2C%20not%20single%20trip%20points%2C%20and%20how%20a%20reset%20deadband%20keeps%20the%20alarm%20list%20from%20flooding.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Falarm-setpoint-bands-high-highhigh-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Alarm%20Setpoint%20Bands%3A%20Why%20High%20and%20High-High%20Are%20Different%20Alarms&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AAlarm%20Setpoint%20Bands%3A%20Why%20High%20and%20High-High%20Are%20Different%20Alarms%0AWhy%20alarms%20come%20in%20pairs%2C%20not%20single%20trip%20points%2C%20and%20how%20a%20reset%20deadband%20keeps%20the%20alarm%20list%20from%20flooding.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Falarm-setpoint-bands-high-highhigh-explained">Email</a>
     </div>
   </div>
 
   <div class="post-related">
     <h2>Related</h2>
     <p class="post-related-label">Try the calculator</p>
-    <ul><li><a href="../automation/deadband-hysteresis.html">Deadband / Hysteresis Calculator →</a></li></ul>
+    <ul><li><a href="../automation/alarm-setpoints.html">Alarm Setpoint Band Calculator →</a></li></ul>
     <p class="post-related-label">Related reading</p>
     <ul>
+      <li><a href="deadband-hysteresis-why-controls-dont-chatter.html">Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough</a></li>
       <li><a href="pid-controller-tuning-basics.html">PID Controller Tuning Basics</a></li>
-      <li><a href="4-20ma-current-loop-basics.html">4-20mA Current Loop Basics</a></li>
-      <li><a href="alarm-setpoint-bands-high-highhigh-explained.html">Alarm Setpoint Bands: Why High and High-High Are Different Alarms</a></li>
     </ul>
   </div>
 
