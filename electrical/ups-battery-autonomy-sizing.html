@@ -990,7 +990,7 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Battery / UPS Autonomy Sizing</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Battery / UPS Autonomy Sizing</span></div></nav>
 
 <style>
 .ec-related-post{background:#15172A;border-bottom:1px solid rgba(255,255,255,.08);}
@@ -999,14 +999,14 @@
 .ec-related-post-inner a:hover{text-decoration:underline;}
 </style>
 <div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/ups-battery-autonomy-sizing-derating-factors">UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get</a></div></div>
-<a href="index.html" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
 <div class="wrap page active" id="page-ups">
   <div class="pagehero">
     <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="16" rx="1"></rect><path d="M10 4h4v3h-4z"></path><path d="M12 12v4M10 14h4"></path></svg></div>
     <div><h1>Battery / UPS Autonomy Sizing</h1><div class="hero-sub">Required battery capacity and string configuration for a given backup time</div></div>
   </div>
   <div class="intro">Estimates the battery Ah capacity needed to carry a UPS or DC load for a stated backup time, working back from the load through inverter efficiency, depth of discharge, an aging allowance, a temperature correction and a design margin. This is a simplified constant-power method — a full IEEE 485 sizing exercise uses the battery manufacturer's actual discharge-rate tables rather than a flat Ah figure, and should be used to confirm the final selection.</div>
-  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/ups-battery-autonomy-sizing-derating-factors.html" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why UPS battery Ah sizing needs more than load &times; backup time &rarr;</a></div>
+  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/ups-battery-autonomy-sizing-derating-factors" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why UPS battery Ah sizing needs more than load &times; backup time &rarr;</a></div>
   <div role="status" aria-live="polite" class="validation-banner neutral" id="upsValidation"><span class="vdot"></span><span>Calculating…</span></div>
 
   <div class="step">
@@ -1088,7 +1088,7 @@
       <div class="hint" style="margin-top:8px;">Assumes a constant power draw over the backup period rather than the battery's actual voltage-sag discharge curve, so treat the Ah figure as a first-pass sizing number. Confirm against the battery manufacturer's rate-of-discharge table for the actual runtime and end-of-discharge voltage before ordering.</div>
     </details>
   </div>
-  <footer>First-pass sizing only — final battery selection needs the manufacturer's discharge-rate table, end-of-discharge voltage and float/boost charging requirements. <a href="index.html">← Electrical Index</a></footer>
+  <footer>First-pass sizing only — final battery selection needs the manufacturer's discharge-rate table, end-of-discharge voltage and float/boost charging requirements. <a href="./">← Electrical Index</a></footer>
 </div>
 
 <!-- PAGE: CABLE SCHEDULE BUILDER -->
@@ -1184,7 +1184,7 @@ function updateValidationBanner(bannerId, errorCount){
 .ecr-home-fab-label{max-width:0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;opacity:0;transition:max-width .3s ease,opacity .25s ease,padding .3s ease;}
 .ecr-home-fab:hover .ecr-home-fab-label,.ecr-home-fab:focus .ecr-home-fab-label{max-width:70px;opacity:1;padding-right:16px;}
 </style>
-<a href="../index.html" class="ecr-home-fab" aria-label="Go to homepage">
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
   <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
   <span class="ecr-home-fab-label">Home</span>
 </a>
