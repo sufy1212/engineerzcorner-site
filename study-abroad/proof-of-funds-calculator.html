@@ -12,21 +12,21 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Application Timeline Planner</title>
-<meta name="description" content="Enter your program start date and get a backward-planned timeline — test dates, application deadline, visa filing, accommodation and flights.">
+<title>Proof of Funds Calculator — Student Visa Financial Requirement Estimate</title>
+<meta name="description" content="Estimate the total funds a student visa application typically needs to show — tuition, living costs, dependents, one-time costs and a safety buffer, added up.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
-<meta property="og:title" content="Application Timeline Planner — Study Abroad Deadline Calculator">
-<meta property="og:description" content="Enter your program start date and get a backward-planned timeline of key deadlines.">
-<meta property="og:url" content="https://www.engineerzcorner.com/study-abroad/application-timeline-planner">
+<meta property="og:title" content="Proof of Funds Calculator — Student Visa Financial Requirement Estimate">
+<meta property="og:description" content="Estimate the total funds a student visa application typically needs to show.">
+<meta property="og:url" content="https://www.engineerzcorner.com/study-abroad/proof-of-funds-calculator">
 <meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Application Timeline Planner — Study Abroad Deadline Calculator">
-<meta name="twitter:description" content="Enter your program start date and get a backward-planned timeline of key deadlines.">
+<meta name="twitter:title" content="Proof of Funds Calculator — Student Visa Financial Requirement Estimate">
+<meta name="twitter:description" content="Estimate the total funds a student visa application typically needs to show.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
-<link rel="canonical" href="https://www.engineerzcorner.com/study-abroad/application-timeline-planner">
+<link rel="canonical" href="https://www.engineerzcorner.com/study-abroad/proof-of-funds-calculator">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
@@ -80,25 +80,17 @@
 
   .sa-barcode-footer{display:flex;gap:2px;align-items:flex-end;height:18px;margin:26px 0 6px;opacity:.35;}
   .sa-barcode-footer span{width:2px;background:#1B2340;display:block;}
-  .timeline{list-style:none;margin:10px 16px 16px;padding:0;border-left:2px solid var(--line);}
-  .timeline li{position:relative;padding:0 0 18px 20px;}
-  .timeline li::before{
-    content:'';position:absolute;left:-6.5px;top:3px;width:11px;height:11px;border-radius:50%;
-    background:var(--amber);border:2px solid #fff;box-shadow:0 0 0 1px var(--amber);
-  }
-  .timeline li.past::before{background:var(--ink-faint);box-shadow:0 0 0 1px var(--ink-faint);}
-  .tl-date{font-family:var(--font-mono);font-size:11px;color:var(--amber-deep);font-weight:700;letter-spacing:.02em;}
-  .tl-title{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink);margin-top:2px;}
-  .tl-weeks{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-left:6px;}
-  .milestone-editor{display:grid;grid-template-columns:1fr 90px;gap:8px;align-items:center;margin:0 16px 8px;}
-  .milestone-editor span{font-size:12.5px;color:var(--ink-dim);}
-  .milestone-editor input{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:5px;font-family:var(--font-mono);font-size:12.5px;}
+  .pof-breakdown{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:12.5px;margin-top:10px;}
+  .pof-breakdown th,.pof-breakdown td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:left;}
+  .pof-breakdown th{color:var(--ink-faint);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.04em;}
+  .pof-breakdown td:last-child, .pof-breakdown th:last-child{text-align:right;}
+  .pof-breakdown tr.total td{font-weight:700;color:var(--amber-deep);border-top:2px solid var(--amber-deep);border-bottom:none;font-size:14px;}
 </style>
 <script type="application/ld+json">
 { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
   {"@type":"ListItem","position":2,"name":"Study Abroad","item":"https://www.engineerzcorner.com/study-abroad/"},
-  {"@type":"ListItem","position":3,"name":"Application Timeline Planner","item":"https://www.engineerzcorner.com/study-abroad/application-timeline-planner"}
+  {"@type":"ListItem","position":3,"name":"Proof of Funds Calculator","item":"https://www.engineerzcorner.com/study-abroad/proof-of-funds-calculator"}
 ]}
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
@@ -113,7 +105,7 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Study Abroad</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Application Timeline Planner</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Study Abroad</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Proof of Funds Calculator</span></div></nav>
 
 
 <a class="skip-link" href="#mainContent">Skip to sheet content</a>
@@ -137,12 +129,12 @@
 </div>
 
 <main id="mainContent">
-<div class="wrap page active" id="page-sa-timeline">
+<div class="wrap page active" id="page-sa-pof">
 
-  <div class="sa-ticket-eyebrow">Study Abroad &middot; Gate SA.08</div>
+  <div class="sa-ticket-eyebrow">Study Abroad &middot; Gate SA.10</div>
   <div class="pagehero">
-    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg></div>
-    <div><h1>Application Timeline Planner</h1><div class="hero-sub">Work backward from your program start date to every earlier deadline</div></div>
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path><path d="M6 15h4"></path></svg></div>
+    <div><h1>Proof of Funds Calculator</h1><div class="hero-sub">Tuition + living costs + dependents + one-time costs + buffer</div></div>
   </div>
 
   <div class="mech-tabs">
@@ -154,9 +146,9 @@
     <a href="university-fee-comparison.html">SA.05 Fee Comparison</a>
     <a href="currency-converter.html">SA.06 Currency Converter</a>
     <a href="sop-word-checker.html">SA.07 SOP Word Checker</a>
-    <a href="application-timeline-planner.html" class="current">SA.08 Timeline Planner</a>
+    <a href="application-timeline-planner.html">SA.08 Timeline Planner</a>
     <a href="gpa-converter.html">SA.09 GPA/CGPA Converter</a>
-    <a href="proof-of-funds-calculator.html">SA.10 Proof of Funds</a>
+    <a href="proof-of-funds-calculator.html" class="current">SA.10 Proof of Funds</a>
     <a href="notes.html">Notes</a>
   </div>
 
@@ -165,33 +157,76 @@
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">1</span><h2>Program start date</h2></div>
-    <div class="field">
-      <label for="tlStart">Intake / semester start date</label>
-      <input type="date" id="tlStart" value="">
+    <div class="step-head"><span class="step-num">1</span><h2>Tuition &amp; living costs</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="pofTuition">First-year tuition <span class="unit">any currency</span></label>
+        <input type="number" id="pofTuition" min="0" step="100" value="20000">
+      </div>
+      <div class="field">
+        <label for="pofTuitionPaid">Tuition already paid / covered by scholarship?</label>
+        <select id="pofTuitionPaid">
+          <option value="no">No — must be shown as available funds</option>
+          <option value="yes">Yes — exclude from funds to show</option>
+        </select>
+      </div>
     </div>
-    <div class="hint">Milestones below are calculated backward from this date using the lead times you set — edit any lead time to match your own program's deadlines.</div>
+    <div class="row2">
+      <div class="field">
+        <label for="pofMonthly">Monthly living cost estimate <span class="unit">same currency</span></label>
+        <input type="number" id="pofMonthly" min="0" step="10" value="1200">
+      </div>
+      <div class="field">
+        <label for="pofMonths">Months of living costs required</label>
+        <input type="number" id="pofMonths" min="1" max="48" step="1" value="12">
+      </div>
+    </div>
+    <div class="hint">Some visa categories require living-cost proof for a fixed 9–12 month period regardless of actual program length; others require the full program duration up to a cap. Use your program/visa page's stated figure here — the <a href="cost-of-living-calculator.html">Cost of Living Calculator</a> can help estimate the monthly amount for a specific city.</div>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">2</span><h2>Lead times (weeks before start)</h2></div>
-    <div id="tlEditor"></div>
-    <div class="hint" style="margin:8px 16px 16px;">These are typical planning lead times, not fixed rules — some universities open applications a year ahead, others just a few months.</div>
+    <div class="step-head"><span class="step-num">2</span><h2>Dependents &amp; one-time costs</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="pofDependents">Accompanying dependents</label>
+        <input type="number" id="pofDependents" min="0" max="10" step="1" value="0">
+      </div>
+      <div class="field">
+        <label for="pofDepMonthly">Additional living cost per dependent <span class="unit">/month</span></label>
+        <input type="number" id="pofDepMonthly" min="0" step="10" value="500">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="pofOneTime">One-time costs <span class="unit">flights, visa fees, insurance, deposits</span></label>
+        <input type="number" id="pofOneTime" min="0" step="50" value="1500">
+      </div>
+      <div class="field">
+        <label for="pofBuffer">Safety buffer <span class="unit">%</span></label>
+        <input type="number" id="pofBuffer" min="0" max="50" step="1" value="10">
+      </div>
+    </div>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">3</span><h2>Your timeline</h2></div>
-    <ul class="timeline" id="tlList"></ul>
-  </div>
-
-
-  <div class="step">
-    <div class="step-head"><span class="step-num">i</span><h2>About this planner</h2></div>
-<p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">This tool works backward from a program's intake date, since most of the deadlines that actually matter during a study-abroad application don't get set by the applicant — they get set by other parties, each on their own schedule. A scholarship committee, a visa office, and a university admissions office rarely share a calendar, and the applicant is the one who has to reconcile all three into a single working timeline.</p><p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">The rough sequence used here — English test booking, transcript and recommendation requests, SOP drafting, application submission, offer, financial documentation, and visa lodgement — reflects a typical order, not a fixed rule. Some steps run in parallel rather than strictly in sequence (a scholarship application often needs to go in before an offer is even confirmed, for instance), and visa processing times in particular vary widely by country and by season. Treat the generated dates as a planning buffer, not a guarantee, and always cross-check the specific deadlines published by the university and the relevant visa authority directly.</p>
+    <div class="step-head"><span class="step-num">3</span><h2>Estimated funds required</h2></div>
+    <table class="pof-breakdown" id="pofTable" aria-label="Funds breakdown">
+      <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="result-line" style="margin-top:14px;">
+      <span class="rlabel">RECOMMENDED FUNDS TO HAVE AVAILABLE</span>
+      <span class="rval" id="pofFinalOut">—</span>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">Total = Tuition(if not already covered) + (Monthly living × Months) + (Dependents × Dependent monthly × Months) + One-time costs<br>Recommended = Total × (1 + Buffer%)</div>
+      <div class="hint" style="margin-top:8px;">This is a general-purpose arithmetic estimate, not a lookup of any specific country's official minimum funds rule — those rules (fixed amounts, blocked-account requirements, bank statement duration/seasoning rules, sponsor-affidavit formats) vary by destination and change periodically. Use this to sanity-check whether your own numbers add up to something reasonable, then confirm the exact required amount and acceptable proof format on the actual visa/immigration page for your destination.</div>
+    </details>
   </div>
 
   <div class="sa-barcode-footer" id="saBarcodeFooter" aria-hidden="true"></div>
-  <footer>Always cross-check against the actual deadlines published by the university, test body, and visa office — this planner gives sensible defaults, not official dates.</footer>
+  <footer>A planning estimate only — official student-visa financial requirements (fixed minimums, blocked accounts, bank-statement seasoning rules) are set by each country's immigration authority and change periodically. Always confirm the exact current requirement on the official visa page before applying.</footer>
 
 </div>
 </main>
@@ -207,64 +242,52 @@
   var _bc = document.getElementById('saBarcodeFooter');
   if(_bc){ for(var _i=0;_i<40;_i++){ var _b=document.createElement('span'); _b.style.height=(4+Math.random()*14)+'px'; _b.style.opacity=0.3+Math.random()*0.6; _bc.appendChild(_b); } }
 
-  var MILESTONES = [
-    {id:'test',     label:'Take IELTS/PTE/TOEFL',        weeks:24},
-    {id:'apply',    label:'Submit university applications', weeks:20},
-    {id:'offer',    label:'Receive & accept offer',       weeks:14},
-    {id:'funds',    label:'Arrange loan / proof of funds', weeks:12},
-    {id:'visa',     label:'Apply for student visa',       weeks:10},
-    {id:'housing',  label:'Arrange accommodation',        weeks:6},
-    {id:'flights',  label:'Book flights',                 weeks:3},
-    {id:'arrival',  label:'Arrive / orientation',          weeks:1}
-  ];
+  function el(id){ return document.getElementById(id); }
+  function num(id){ var v = parseFloat(el(id).value); return isNaN(v) ? 0 : v; }
+  function fmt(n){ if(!isFinite(n)) return '—'; return n.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0}); }
 
-  var startEl = document.getElementById('tlStart'), editor = document.getElementById('tlEditor'), list = document.getElementById('tlList');
+  var tbody = document.querySelector('#pofTable tbody');
 
-  // build editor rows
-  MILESTONES.forEach(function(m){
-    var row = document.createElement('div');
-    row.className = 'milestone-editor';
-    row.innerHTML = '<span>' + m.label + '</span><input type="number" min="0" step="1" value="' + m.weeks + '" data-id="' + m.id + '">';
-    editor.appendChild(row);
-  });
+  function calc(){
+    var tuition = num('pofTuition');
+    var tuitionPaid = el('pofTuitionPaid').value === 'yes';
+    var monthly = num('pofMonthly');
+    var months = Math.max(1, num('pofMonths'));
+    var deps = Math.max(0, num('pofDependents'));
+    var depMonthly = num('pofDepMonthly');
+    var oneTime = num('pofOneTime');
+    var bufferPct = Math.max(0, num('pofBuffer'));
 
-  function todayISO(){
-    var d = new Date();
-    var future = new Date(d.getFullYear(), d.getMonth()+7, 1); // default: ~7 months out
-    return future.toISOString().slice(0,10);
-  }
-  startEl.value = todayISO();
+    var tuitionLine = tuitionPaid ? 0 : tuition;
+    var livingLine = monthly * months;
+    var depLine = deps * depMonthly * months;
+    var subtotal = tuitionLine + livingLine + depLine + oneTime;
+    var buffered = subtotal * (1 + bufferPct/100);
 
-  function render(){
-    var startVal = startEl.value;
-    if(!startVal) return;
-    var start = new Date(startVal + 'T00:00:00');
-    var now = new Date();
-
-    list.innerHTML = '';
-    var rows = editor.querySelectorAll('input[data-id]');
-    var weeksMap = {};
-    rows.forEach(function(inp){ weeksMap[inp.dataset.id] = parseFloat(inp.value) || 0; });
-
-    MILESTONES.forEach(function(m){
-      var weeks = weeksMap[m.id];
-      var d = new Date(start.getTime() - weeks*7*24*60*60*1000);
-      var li = document.createElement('li');
-      if(d < now) li.className = 'past';
-      var dateStr = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
-      li.innerHTML = '<div class="tl-date">' + dateStr + '<span class="tl-weeks">— ' + weeks + ' wks before start</span></div><div class="tl-title">' + m.label + '</div>';
-      list.appendChild(li);
+    var rows = [
+      ['Tuition' + (tuitionPaid ? ' (already covered — excluded)' : ' (to be shown)'), fmt(tuitionLine)],
+      ['Living costs (' + fmt(monthly) + ' × ' + months + ' months)', fmt(livingLine)],
+      ['Dependents (' + deps + ' × ' + fmt(depMonthly) + ' × ' + months + ' months)', fmt(depLine)],
+      ['One-time costs (flights, visa fees, insurance)', fmt(oneTime)],
+      ['Subtotal', fmt(subtotal)],
+    ];
+    tbody.innerHTML = '';
+    rows.forEach(function(r, i){
+      var tr = document.createElement('tr');
+      if(i === rows.length-1) tr.className = 'total';
+      tr.innerHTML = '<td>' + r[0] + '</td><td>' + r[1] + '</td>';
+      tbody.appendChild(tr);
     });
 
-    var startLi = document.createElement('li');
-    var startDateStr = start.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
-    startLi.innerHTML = '<div class="tl-date">' + startDateStr + '</div><div class="tl-title">Program starts</div>';
-    list.appendChild(startLi);
+    el('pofFinalOut').textContent = fmt(buffered) + ' (incl. ' + bufferPct + '% buffer)';
   }
 
-  startEl.addEventListener('input', render);
-  editor.addEventListener('input', render);
-  render();
+  ['pofTuition','pofTuitionPaid','pofMonthly','pofMonths','pofDependents','pofDepMonthly','pofOneTime','pofBuffer'].forEach(function(id){
+    el(id).addEventListener('input', calc);
+    el(id).addEventListener('change', calc);
+  });
+
+  calc();
 })();
 </script>
 

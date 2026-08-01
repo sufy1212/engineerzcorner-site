@@ -12,21 +12,21 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Application Timeline Planner</title>
-<meta name="description" content="Enter your program start date and get a backward-planned timeline — test dates, application deadline, visa filing, accommodation and flights.">
+<title>GPA / CGPA Converter — Percentage ⇄ 4.0 ⇄ 4.3 ⇄ 10-Point Scale</title>
+<meta name="description" content="Convert your percentage or CGPA into a 4.0 or 4.3 US-style GPA scale, and back — for university applications that ask for a scale you weren't graded on.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
-<meta property="og:title" content="Application Timeline Planner — Study Abroad Deadline Calculator">
-<meta property="og:description" content="Enter your program start date and get a backward-planned timeline of key deadlines.">
-<meta property="og:url" content="https://www.engineerzcorner.com/study-abroad/application-timeline-planner">
+<meta property="og:title" content="GPA / CGPA Converter — Percentage ⇄ 4.0 ⇄ 4.3 ⇄ 10-Point Scale">
+<meta property="og:description" content="Convert your percentage or CGPA into a 4.0 or 4.3 US-style GPA scale, and back.">
+<meta property="og:url" content="https://www.engineerzcorner.com/study-abroad/gpa-converter">
 <meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Application Timeline Planner — Study Abroad Deadline Calculator">
-<meta name="twitter:description" content="Enter your program start date and get a backward-planned timeline of key deadlines.">
+<meta name="twitter:title" content="GPA / CGPA Converter — Percentage ⇄ 4.0 ⇄ 4.3 ⇄ 10-Point Scale">
+<meta name="twitter:description" content="Convert your percentage or CGPA into a 4.0 or 4.3 US-style GPA scale, and back.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
-<link rel="canonical" href="https://www.engineerzcorner.com/study-abroad/application-timeline-planner">
+<link rel="canonical" href="https://www.engineerzcorner.com/study-abroad/gpa-converter">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
@@ -80,25 +80,16 @@
 
   .sa-barcode-footer{display:flex;gap:2px;align-items:flex-end;height:18px;margin:26px 0 6px;opacity:.35;}
   .sa-barcode-footer span{width:2px;background:#1B2340;display:block;}
-  .timeline{list-style:none;margin:10px 16px 16px;padding:0;border-left:2px solid var(--line);}
-  .timeline li{position:relative;padding:0 0 18px 20px;}
-  .timeline li::before{
-    content:'';position:absolute;left:-6.5px;top:3px;width:11px;height:11px;border-radius:50%;
-    background:var(--amber);border:2px solid #fff;box-shadow:0 0 0 1px var(--amber);
-  }
-  .timeline li.past::before{background:var(--ink-faint);box-shadow:0 0 0 1px var(--ink-faint);}
-  .tl-date{font-family:var(--font-mono);font-size:11px;color:var(--amber-deep);font-weight:700;letter-spacing:.02em;}
-  .tl-title{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink);margin-top:2px;}
-  .tl-weeks{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-left:6px;}
-  .milestone-editor{display:grid;grid-template-columns:1fr 90px;gap:8px;align-items:center;margin:0 16px 8px;}
-  .milestone-editor span{font-size:12.5px;color:var(--ink-dim);}
-  .milestone-editor input{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:5px;font-family:var(--font-mono);font-size:12.5px;}
+  .concordance{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:12px;margin-top:10px;}
+  .concordance th,.concordance td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;}
+  .concordance th{color:var(--ink-faint);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.04em;}
+  .concordance tr.hit{background:rgba(184,134,61,.1);}
 </style>
 <script type="application/ld+json">
 { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
   {"@type":"ListItem","position":2,"name":"Study Abroad","item":"https://www.engineerzcorner.com/study-abroad/"},
-  {"@type":"ListItem","position":3,"name":"Application Timeline Planner","item":"https://www.engineerzcorner.com/study-abroad/application-timeline-planner"}
+  {"@type":"ListItem","position":3,"name":"GPA / CGPA Converter","item":"https://www.engineerzcorner.com/study-abroad/gpa-converter"}
 ]}
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
@@ -113,7 +104,7 @@
 .ec-crumb-current{color:#8B7FF0;font-weight:600;}
 @media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
 </style>
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Study Abroad</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Application Timeline Planner</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../index.html">Home</a><span class="ec-crumb-sep">/</span><a href="index.html">Study Abroad</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">GPA / CGPA Converter</span></div></nav>
 
 
 <a class="skip-link" href="#mainContent">Skip to sheet content</a>
@@ -137,12 +128,12 @@
 </div>
 
 <main id="mainContent">
-<div class="wrap page active" id="page-sa-timeline">
+<div class="wrap page active" id="page-sa-gpa">
 
-  <div class="sa-ticket-eyebrow">Study Abroad &middot; Gate SA.08</div>
+  <div class="sa-ticket-eyebrow">Study Abroad &middot; Gate SA.09</div>
   <div class="pagehero">
-    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg></div>
-    <div><h1>Application Timeline Planner</h1><div class="hero-sub">Work backward from your program start date to every earlier deadline</div></div>
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h4"></path></svg></div>
+    <div><h1>GPA / CGPA Converter</h1><div class="hero-sub">Percentage ⇄ 10-point CGPA ⇄ 4.0 GPA ⇄ 4.3 GPA</div></div>
   </div>
 
   <div class="mech-tabs">
@@ -154,8 +145,8 @@
     <a href="university-fee-comparison.html">SA.05 Fee Comparison</a>
     <a href="currency-converter.html">SA.06 Currency Converter</a>
     <a href="sop-word-checker.html">SA.07 SOP Word Checker</a>
-    <a href="application-timeline-planner.html" class="current">SA.08 Timeline Planner</a>
-    <a href="gpa-converter.html">SA.09 GPA/CGPA Converter</a>
+    <a href="application-timeline-planner.html">SA.08 Timeline Planner</a>
+    <a href="gpa-converter.html" class="current">SA.09 GPA/CGPA Converter</a>
     <a href="proof-of-funds-calculator.html">SA.10 Proof of Funds</a>
     <a href="notes.html">Notes</a>
   </div>
@@ -165,33 +156,43 @@
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">1</span><h2>Program start date</h2></div>
-    <div class="field">
-      <label for="tlStart">Intake / semester start date</label>
-      <input type="date" id="tlStart" value="">
+    <div class="step-head"><span class="step-num">1</span><h2>Enter a grade in any one scale</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="gpaPct">Percentage <span class="unit">%</span></label>
+        <input type="number" id="gpaPct" min="0" max="100" step="0.1" value="78">
+      </div>
+      <div class="field">
+        <label for="gpaCgpa">CGPA <span class="unit">10-point scale</span></label>
+        <input type="number" id="gpaCgpa" min="0" max="10" step="0.01" value="">
+      </div>
     </div>
-    <div class="hint">Milestones below are calculated backward from this date using the lead times you set — edit any lead time to match your own program's deadlines.</div>
+    <div class="row2">
+      <div class="field">
+        <label for="gpa40">GPA <span class="unit">4.0 scale (US unweighted)</span></label>
+        <input type="number" id="gpa40" min="0" max="4" step="0.01" value="">
+      </div>
+      <div class="field">
+        <label for="gpa43">GPA <span class="unit">4.3 scale (Canada common)</span></label>
+        <input type="number" id="gpa43" min="0" max="4.3" step="0.01" value="">
+      </div>
+    </div>
+    <div class="hint">Change any field — the other three update. Uses the widely-referenced linear approximation percentage/9.5 = CGPA (an AIU/common Indian-university convention) and CGPA×10 = percentage for the reverse, then percentage-band letter-grade thresholds (90%+ = A/4.0, 80–89% = A-/3.7, and so on) for the US/Canada scales.</div>
+
+    <table class="concordance" id="gpaTable" aria-label="Grade scale reference table">
+      <thead><tr><th>Percentage</th><th>CGPA (10)</th><th>GPA (4.0)</th><th>GPA (4.3)</th><th>US Letter</th></tr></thead>
+      <tbody></tbody>
+    </table>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">2</span><h2>Lead times (weeks before start)</h2></div>
-    <div id="tlEditor"></div>
-    <div class="hint" style="margin:8px 16px 16px;">These are typical planning lead times, not fixed rules — some universities open applications a year ahead, others just a few months.</div>
-  </div>
-
-  <div class="step">
-    <div class="step-head"><span class="step-num">3</span><h2>Your timeline</h2></div>
-    <ul class="timeline" id="tlList"></ul>
-  </div>
-
-
-  <div class="step">
-    <div class="step-head"><span class="step-num">i</span><h2>About this planner</h2></div>
-<p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">This tool works backward from a program's intake date, since most of the deadlines that actually matter during a study-abroad application don't get set by the applicant — they get set by other parties, each on their own schedule. A scholarship committee, a visa office, and a university admissions office rarely share a calendar, and the applicant is the one who has to reconcile all three into a single working timeline.</p><p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">The rough sequence used here — English test booking, transcript and recommendation requests, SOP drafting, application submission, offer, financial documentation, and visa lodgement — reflects a typical order, not a fixed rule. Some steps run in parallel rather than strictly in sequence (a scholarship application often needs to go in before an offer is even confirmed, for instance), and visa processing times in particular vary widely by country and by season. Treat the generated dates as a planning buffer, not a guarantee, and always cross-check the specific deadlines published by the university and the relevant visa authority directly.</p>
+    <div class="step-head"><span class="step-num">i</span><h2>Why this needs a converter at all</h2></div>
+<p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">Grading scales aren't standardized internationally, and there's no single official formula that every university, WES-style credential evaluator, and immigration point system agrees on for converting between them — a percentage-marked transcript, a 10-point CGPA, and a 4.0 or 4.3 GPA all describe academic performance differently, and the same underlying result can convert to a noticeably different number depending on which approximation is used.</p>
+<p style="margin:0 16px 14px;line-height:1.65;color:var(--ink-dim);font-size:14.5px;">This converter uses commonly published approximations as a planning estimate — useful for gauging roughly where you'd land before submitting an application, or for filling in an optional GPA field on a form built for a different grading system. It is not a substitute for an official credential evaluation (WES, ECE, or a university's own admissions office conversion), which several universities and most immigration point systems specifically require rather than accepting a self-calculated conversion.</p>
   </div>
 
   <div class="sa-barcode-footer" id="saBarcodeFooter" aria-hidden="true"></div>
-  <footer>Always cross-check against the actual deadlines published by the university, test body, and visa office — this planner gives sensible defaults, not official dates.</footer>
+  <footer>Grade-scale conversions are approximate — universities, credential evaluators (WES/ECE) and immigration point systems each use their own method, so always confirm which one a specific application actually requires.</footer>
 
 </div>
 </main>
@@ -207,64 +208,93 @@
   var _bc = document.getElementById('saBarcodeFooter');
   if(_bc){ for(var _i=0;_i<40;_i++){ var _b=document.createElement('span'); _b.style.height=(4+Math.random()*14)+'px'; _b.style.opacity=0.3+Math.random()*0.6; _bc.appendChild(_b); } }
 
-  var MILESTONES = [
-    {id:'test',     label:'Take IELTS/PTE/TOEFL',        weeks:24},
-    {id:'apply',    label:'Submit university applications', weeks:20},
-    {id:'offer',    label:'Receive & accept offer',       weeks:14},
-    {id:'funds',    label:'Arrange loan / proof of funds', weeks:12},
-    {id:'visa',     label:'Apply for student visa',       weeks:10},
-    {id:'housing',  label:'Arrange accommodation',        weeks:6},
-    {id:'flights',  label:'Book flights',                 weeks:3},
-    {id:'arrival',  label:'Arrive / orientation',          weeks:1}
+  // Reference band table (approximate, widely-referenced conventions)
+  var ROWS = [
+    {pct:100, cgpa:10.0, g40:4.00, g43:4.30, letter:'A+'},
+    {pct:95,  cgpa:9.5,  g40:4.00, g43:4.30, letter:'A+'},
+    {pct:90,  cgpa:9.0,  g40:4.00, g43:4.30, letter:'A'},
+    {pct:85,  cgpa:8.5,  g40:3.85, g43:4.00, letter:'A'},
+    {pct:80,  cgpa:8.0,  g40:3.70, g43:3.70, letter:'A-'},
+    {pct:75,  cgpa:7.5,  g40:3.30, g43:3.30, letter:'B+'},
+    {pct:70,  cgpa:7.0,  g40:3.00, g43:3.00, letter:'B'},
+    {pct:65,  cgpa:6.5,  g40:2.70, g43:2.70, letter:'B-'},
+    {pct:60,  cgpa:6.0,  g40:2.30, g43:2.30, letter:'C+'},
+    {pct:55,  cgpa:5.5,  g40:2.00, g43:2.00, letter:'C'},
+    {pct:50,  cgpa:5.0,  g40:1.70, g43:1.70, letter:'C-'},
+    {pct:45,  cgpa:4.5,  g40:1.30, g43:1.30, letter:'D+'},
+    {pct:40,  cgpa:4.0,  g40:1.00, g43:1.00, letter:'D'}
   ];
 
-  var startEl = document.getElementById('tlStart'), editor = document.getElementById('tlEditor'), list = document.getElementById('tlList');
+  function el(id){ return document.getElementById(id); }
+  var pctEl = el('gpaPct'), cgpaEl = el('gpaCgpa'), g40El = el('gpa40'), g43El = el('gpa43'), tbody = document.querySelector('#gpaTable tbody');
 
-  // build editor rows
-  MILESTONES.forEach(function(m){
-    var row = document.createElement('div');
-    row.className = 'milestone-editor';
-    row.innerHTML = '<span>' + m.label + '</span><input type="number" min="0" step="1" value="' + m.weeks + '" data-id="' + m.id + '">';
-    editor.appendChild(row);
-  });
-
-  function todayISO(){
-    var d = new Date();
-    var future = new Date(d.getFullYear(), d.getMonth()+7, 1); // default: ~7 months out
-    return future.toISOString().slice(0,10);
+  function interp(x, xKey, yKey){
+    // ROWS sorted descending by pct; linear interpolate on chosen key
+    for(var i=0;i<ROWS.length-1;i++){
+      var a = ROWS[i], b = ROWS[i+1];
+      if(x <= a[xKey] && x >= b[xKey]){
+        var t = (x - b[xKey]) / (a[xKey] - b[xKey]);
+        return b[yKey] + t*(a[yKey]-b[yKey]);
+      }
+    }
+    if(x > ROWS[0][xKey]) return ROWS[0][yKey];
+    return ROWS[ROWS.length-1][yKey];
   }
-  startEl.value = todayISO();
+  function letterFor(pct){
+    for(var i=0;i<ROWS.length;i++){ if(pct >= ROWS[i].pct) return ROWS[i].letter; }
+    return 'F';
+  }
+  function fmt(n,d){ if(!isFinite(n)) return '—'; return n.toFixed(d); }
 
-  function render(){
-    var startVal = startEl.value;
-    if(!startVal) return;
-    var start = new Date(startVal + 'T00:00:00');
-    var now = new Date();
-
-    list.innerHTML = '';
-    var rows = editor.querySelectorAll('input[data-id]');
-    var weeksMap = {};
-    rows.forEach(function(inp){ weeksMap[inp.dataset.id] = parseFloat(inp.value) || 0; });
-
-    MILESTONES.forEach(function(m){
-      var weeks = weeksMap[m.id];
-      var d = new Date(start.getTime() - weeks*7*24*60*60*1000);
-      var li = document.createElement('li');
-      if(d < now) li.className = 'past';
-      var dateStr = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
-      li.innerHTML = '<div class="tl-date">' + dateStr + '<span class="tl-weeks">— ' + weeks + ' wks before start</span></div><div class="tl-title">' + m.label + '</div>';
-      list.appendChild(li);
+  function renderTable(activePct){
+    tbody.innerHTML = '';
+    ROWS.forEach(function(r){
+      var tr = document.createElement('tr');
+      if(activePct !== undefined && Math.abs(activePct - r.pct) < 2.5) tr.className = 'hit';
+      tr.innerHTML = '<td>' + r.pct + '%</td><td>' + r.cgpa.toFixed(1) + '</td><td>' + r.g40.toFixed(2) + '</td><td>' + r.g43.toFixed(2) + '</td><td>' + r.letter + '</td>';
+      tbody.appendChild(tr);
     });
-
-    var startLi = document.createElement('li');
-    var startDateStr = start.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
-    startLi.innerHTML = '<div class="tl-date">' + startDateStr + '</div><div class="tl-title">Program starts</div>';
-    list.appendChild(startLi);
   }
 
-  startEl.addEventListener('input', render);
-  editor.addEventListener('input', render);
-  render();
+  function fromPct(pct){
+    if(isNaN(pct)) return;
+    pct = Math.max(0, Math.min(100, pct));
+    cgpaEl.value = fmt(pct/9.5, 2);
+    g40El.value = fmt(interp(pct,'pct','g40'), 2);
+    g43El.value = fmt(interp(pct,'pct','g43'), 2);
+    renderTable(pct);
+  }
+  function fromCgpa(cgpa){
+    if(isNaN(cgpa)) return;
+    var pct = Math.max(0, Math.min(100, cgpa*9.5));
+    pctEl.value = fmt(pct,1);
+    g40El.value = fmt(interp(pct,'pct','g40'), 2);
+    g43El.value = fmt(interp(pct,'pct','g43'), 2);
+    renderTable(pct);
+  }
+  function fromG40(g){
+    if(isNaN(g)) return;
+    var pct = interp(g,'g40','pct');
+    pctEl.value = fmt(pct,1);
+    cgpaEl.value = fmt(pct/9.5, 2);
+    g43El.value = fmt(interp(pct,'pct','g43'), 2);
+    renderTable(pct);
+  }
+  function fromG43(g){
+    if(isNaN(g)) return;
+    var pct = interp(g,'g43','pct');
+    pctEl.value = fmt(pct,1);
+    cgpaEl.value = fmt(pct/9.5, 2);
+    g40El.value = fmt(interp(pct,'pct','g40'), 2);
+    renderTable(pct);
+  }
+
+  pctEl.addEventListener('input', function(){ fromPct(parseFloat(pctEl.value)); });
+  cgpaEl.addEventListener('input', function(){ fromCgpa(parseFloat(cgpaEl.value)); });
+  g40El.addEventListener('input', function(){ fromG40(parseFloat(g40El.value)); });
+  g43El.addEventListener('input', function(){ fromG43(parseFloat(g43El.value)); });
+
+  fromPct(parseFloat(pctEl.value));
 })();
 </script>
 
