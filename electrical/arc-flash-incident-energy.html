@@ -142,9 +142,9 @@
     errs += fieldError(el('afD'), (isNaN(D) || D<=0) ? 'Must be greater than 0.' : null);
     if(errs>0){ updateValidationBanner('afValidation', errs); return; }
 
-    var K = 2.142e6;
-    var E = (K*V*Ibf*t)/(D*D);
-    var boundary = Math.sqrt((K*V*Ibf*t)/1.2);
+    var K = 2.142e6; // IEEE 1584 / modified-Lee constant — returns J/cm²
+    var E = (K*V*Ibf*t)/(D*D)/4.184; // convert J/cm² to cal/cm²
+    var boundary = Math.sqrt((K*V*Ibf*t)/(1.2*4.184));
 
     var cat = 'Below 4 — no PPE cat. beyond arc-rated daily wear';
     if(E>40) cat = 'Exceeds Cat. 4 — dangerous, review the system';
