@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Escape Room — Timed Puzzle Game | Engineerz CorneR</title>
+<meta name="description" content="Engineering Escape Room: pick a scenario — reactor room, flooding pipe gallery, chiller freeze alarm, or substation blackout — and solve real engineering problems against the clock to unlock every door before time runs out.">
+<link rel="canonical" href="https://www.engineerzcorner.com/escape-room">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Engineering Escape Room — Timed Puzzle Game | Engineerz CorneR">
+<meta property="og:description" content="Reactor meltdown, flooding gallery, chiller freeze alarm, substation blackout — solve real engineering problems to unlock every door before the clock runs out.">
+<meta property="og:url" content="https://www.engineerzcorner.com/escape-room">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Engineering Escape Room — Timed Puzzle Game | Engineerz CorneR">
+<meta name="twitter:description" content="Solve real engineering problems to unlock every door before the clock runs out.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="escape-room.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
+<link rel="stylesheet" href="assets/sidebars.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+    {"@type":"ListItem","position":2,"name":"Escape Room","item":"https://www.engineerzcorner.com/escape-room"}
+  ]
+}
+</script>
+</head>
+<body>
+<link rel="stylesheet" href="assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="./">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Escape Room</span></div></nav>
+
+
+<nav class="er-nav">
+  <span class="er-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="er-back" href="games">← All games</a>
+</nav>
+
+<div class="er-arena">
+<div class="er-arena-grid"></div>
+<div class="wrap">
+
+  <div class="er-hero">
+    <div class="er-hero-inner">
+      <div class="er-eyebrow"><span class="er-eyebrow-dot"></span> Timed puzzle game</div>
+      <h1 class="er-title">Engineering <span class="glow">Escape Room</span></h1>
+      <p class="er-sub">Pick a scenario, read the brief, and clear five locked doors before the clock hits zero. Every door is a real engineering problem — get it wrong and the clock keeps burning.</p>
+    </div>
+  </div>
+
+  <!-- SCENARIO SELECT SCREEN -->
+  <div class="er-card" id="startScreen">
+    <div class="er-section-title">Choose a scenario</div>
+    <div class="er-scenario-grid" id="scenarioGrid"></div>
+    <ul class="er-how">
+      <li><span class="er-how-num">1</span><span>Each scenario has <b>5 locked doors</b>. Answer the engineering question behind each one to unlock it.</span></li>
+      <li><span class="er-how-num">2</span><span>One shared clock runs for the whole room. A <b>wrong answer costs time</b> — the door stays shut and you try again.</span></li>
+      <li><span class="er-how-num">3</span><span>Clear all five doors before time runs out to escape. Hit zero first, and you're <b>trapped</b>.</span></li>
+    </ul>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="er-card">
+      <div class="er-hud">
+        <div class="er-hud-group">
+          <div class="er-hud-item er-clock" id="clockVal">00:00</div>
+          <div class="er-hud-item">Wrong tries <b id="missVal">0</b></div>
+        </div>
+        <div class="er-doors" id="doorsRow"></div>
+      </div>
+      <div class="er-timerbar-track"><div class="er-timerbar-fill" id="timerFill"></div></div>
+
+      <div class="er-brief" id="briefBox"></div>
+
+      <span class="er-qtag" id="doorTag">Door 1 of 5</span>
+      <p class="er-question" id="questionText">—</p>
+
+      <div class="er-options" id="optionsArea"></div>
+
+      <div class="er-footrow">
+        <button class="er-hint-btn" id="hintBtn">🔍 Eliminate one (−15s)</button>
+        <span class="er-hud-item">Best: <b id="bestVal">--:--</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESCAPED SCREEN -->
+  <div class="hidden" id="winScreen">
+    <div class="er-card">
+      <div class="er-over-title er-win">You escaped!</div>
+      <div class="er-over-score" id="winTime">00:00</div>
+      <div class="er-over-grid">
+        <span class="er-chip">Wrong tries <b id="winMisses">0</b></span>
+        <span class="er-chip">Hints used <b id="winHints">0</b></span>
+        <span class="er-chip">Best <b id="winBest">--:--</b></span>
+      </div>
+      <button class="er-btn" id="againBtnWin">Play again</button>
+      <div style="height:10px;"></div>
+      <button class="ecs-share-btn ecs-dark" id="shareBtnWin" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/></svg>Share result</button>
+      <div style="height:10px;"></div>
+      <button class="er-btn ghost" id="backBtnWin">Back to scenarios</button>
+    </div>
+  </div>
+
+  <!-- TRAPPED SCREEN -->
+  <div class="hidden" id="loseScreen">
+    <div class="er-card">
+      <div class="er-over-title er-lose">Trapped</div>
+      <p class="er-lose-sub" id="loseSub">Time ran out at door 1 of 5.</p>
+      <div class="er-over-grid">
+        <span class="er-chip">Wrong tries <b id="loseMisses">0</b></span>
+        <span class="er-chip">Hints used <b id="loseHints">0</b></span>
+      </div>
+      <button class="er-btn" id="againBtnLose">Try again</button>
+      <div style="height:10px;"></div>
+      <button class="er-btn ghost" id="backBtnLose">Back to scenarios</button>
+    </div>
+  </div>
+
+  <div class="er-footer">More reference material lives in the <a href="./">discipline hubs</a>.</div>
+
+</div>
+</div>
+
+<div class="er-toast" id="toast"></div>
+
+<script src="escape-room.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtnWin"), function () {
+    var time = document.getElementById("winTime").textContent;
+    var misses = document.getElementById("winMisses").textContent;
+    return {
+      title: "Engineering Escape Room — Engineerz CorneR",
+      text: "I escaped in " + time + " with " + misses + " wrong tries in the Engineering Escape Room \uD83D\uDD10 Can you beat me?",
+      url: "https://www.engineerzcorner.com/escape-room"
+    };
+  });
+});
+</script>
+
+
+<a href="./" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="about">About</a> &nbsp;·&nbsp; <a href="contact">Contact</a> &nbsp;·&nbsp; <a href="privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
