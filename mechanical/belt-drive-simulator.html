@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23181B2E'/%3E%3Ccircle cx='11' cy='20' r='6' fill='none' stroke='%236C5CE7' stroke-width='2'/%3E%3Ccircle cx='23' cy='12' r='4' fill='none' stroke='%230D9488' stroke-width='2'/%3E%3Cpath d='M6 15l2-8M28 8l-2 8' stroke='%23f0b429' stroke-width='1.6' fill='none'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belt &amp; Pulley Drive Simulator — Mechanical Toolkit</title>
+<meta name="description" content="Interactive animated belt and pulley drive simulator. Watch two pulleys spin live as you change diameters, driver RPM and load — see the driven RPM update, the tight/slack belt sides, and slip appear when load exceeds belt capacity.">
+<link rel="canonical" href="https://www.engineerzcorner.com/mechanical/belt-drive-simulator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Belt &amp; Pulley Drive Simulator — Live Animated — Mechanical Toolkit">
+<meta property="og:description" content="Watch two pulleys spin live as you change diameters, driver RPM and load — see the driven RPM update in real time and slip appear when load exceeds belt capacity.">
+<meta property="og:url" content="https://www.engineerzcorner.com/mechanical/belt-drive-simulator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Belt &amp; Pulley Drive Simulator — Live Animated — Mechanical Toolkit">
+<meta name="twitter:description" content="Watch two pulleys spin live as you change diameters, driver RPM and load — see slip appear when load exceeds belt capacity.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="belt-drive-simulator.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Belt & Pulley Drive Simulator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Interactive animated belt and pulley drive simulator — two spinning pulleys connected by a belt, live driven-RPM readout from the diameter ratio, tight/slack belt-side highlighting, an open/crossed drive toggle, and a slip warning when load torque exceeds belt capacity.",
+  "url": "https://www.engineerzcorner.com/mechanical/belt-drive-simulator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Mechanical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Belt &amp; Pulley Drive Simulator</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to Mechanical toolkit</a>
+<div class="wrap">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"></circle><circle cx="18" cy="8" r="3.4"></circle><path d="M4 11 6 4M21 5l-2 6"></path></svg></div>
+    <div><h1>Belt &amp; Pulley Drive Simulator</h1><div class="hero-sub">Live animated pulleys &middot; RPM ratio &middot; slip warning</div></div>
+  </div>
+
+  <div class="intro">
+    A live mechanical mimic, not a graph. Drag the diameters and driver RPM and watch both pulleys spin at the correct ratio in real time — then push the load slider past belt capacity and watch the driven pulley stutter as the belt starts to slip.
+  </div>
+  <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+    <div class="ad-slot-inner"><span class="ad-slot-label">Advertisement</span><span class="ad-slot-id">in-content</span></div>
+  </div>
+
+  <!-- STEP 1: THE MIMIC -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Live Drive Mimic</h2></div>
+    <div class="step-desc">Pulley rotation speed on screen is scaled for visibility — it tracks the real RPM ratio, not real-time angular speed.</div>
+
+    <div class="bds-stage">
+      <svg id="bdsSvg" viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated belt and pulley drive diagram">
+        <!-- belt strands (drawn first, under pulleys) -->
+        <line id="bdsBeltTop" class="bds-belt bds-belt-tight"></line>
+        <line id="bdsBeltBot" class="bds-belt bds-belt-slack"></line>
+
+        <!-- driver pulley -->
+        <g id="bdsDriver" transform="translate(150,160)">
+          <circle id="bdsDriverRim" r="45" class="bds-pulley-rim"></circle>
+          <circle r="6" class="bds-pulley-hub"></circle>
+          <g id="bdsDriverSpokes">
+            <line x1="0" y1="0" x2="0" y2="-38" class="bds-spoke"></line>
+            <line x1="0" y1="0" x2="33" y2="19" class="bds-spoke"></line>
+            <line x1="0" y1="0" x2="-33" y2="19" class="bds-spoke"></line>
+          </g>
+        </g>
+        <text x="150" y="222" text-anchor="middle" class="bds-txt">Driver</text>
+        <text x="150" y="236" text-anchor="middle" class="bds-txt-sm" id="bdsN1Txt">0 RPM</text>
+
+        <!-- driven pulley -->
+        <g id="bdsDriven" transform="translate(420,160)">
+          <circle id="bdsDrivenRim" r="30" class="bds-pulley-rim bds-pulley-rim-driven"></circle>
+          <circle r="5" class="bds-pulley-hub"></circle>
+          <g id="bdsDrivenSpokes">
+            <line x1="0" y1="0" x2="0" y2="-24" class="bds-spoke"></line>
+            <line x1="0" y1="0" x2="21" y2="12" class="bds-spoke"></line>
+            <line x1="0" y1="0" x2="-21" y2="12" class="bds-spoke"></line>
+          </g>
+        </g>
+        <text x="420" y="222" text-anchor="middle" class="bds-txt">Driven</text>
+        <text x="420" y="236" text-anchor="middle" class="bds-txt-sm" id="bdsN2Txt">0 RPM</text>
+
+        <!-- slip lamp -->
+        <g transform="translate(300,262)">
+          <circle r="7" class="bds-slip-lamp" id="bdsSlipLamp"></circle>
+          <text x="14" y="4" class="bds-txt-sm">Belt slip</text>
+        </g>
+      </svg>
+
+      <div class="bds-controls">
+        <button type="button" id="bdsPlayBtn" class="bds-btn bds-btn-primary">&#9654; Start</button>
+        <button type="button" id="bdsResetBtn" class="bds-btn">&#8635; Reset</button>
+        <label class="bds-toggle"><input type="checkbox" id="bdsCrossed"> Crossed belt (reverses driven direction)</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: LIVE CONTROLS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Diameters, Speed &amp; Load — Live</h2></div>
+    <div class="step-desc">Drag any slider while running — the diagram and the ratio update immediately.</div>
+
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Driver pulley diameter</span><span class="sval" id="bdsD1Val">150 mm</span></div>
+      <input type="range" id="bdsD1" min="50" max="400" step="5" value="150">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Driven pulley diameter</span><span class="sval" id="bdsD2Val">100 mm</span></div>
+      <input type="range" id="bdsD2" min="50" max="400" step="5" value="100">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Driver RPM</span><span class="sval" id="bdsN1Val">300 RPM</span></div>
+      <input type="range" id="bdsN1" min="0" max="1800" step="10" value="300">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Load torque</span><span class="sval" id="bdsLoadVal">20 Nm</span></div>
+      <input type="range" id="bdsLoad" min="0" max="100" step="1" value="20">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Belt torque capacity</span><span class="sval" id="bdsCapVal">70 Nm</span></div>
+      <input type="range" id="bdsCap" min="10" max="100" step="1" value="70">
+    </div>
+  </div>
+
+  <!-- STEP 3: STATUS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Drive Status</h2></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="slabel">Speed ratio (N1:N2)</div><div class="sval" id="bdsStatRatio">–</div></div>
+      <div class="stat"><div class="slabel">Ideal driven RPM</div><div class="sval" id="bdsStatIdeal">–</div></div>
+      <div class="stat"><div class="slabel">Actual driven RPM</div><div class="sval" id="bdsStatActual">–</div></div>
+      <div class="stat"><div class="slabel">Belt speed</div><div class="sval" id="bdsStatBeltSpeed">–</div></div>
+    </div>
+    <div role="status" aria-live="polite" class="status-banner neutral" id="bdsBanner"><span class="status-dot"></span><span id="bdsBannerText">Press Start to spin up the drive.</span></div>
+
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Speed ratio (no slip): <b>N2 = N1 &times; (D1 / D2)</b> — the classic inverse-diameter belt-drive relationship, independent of belt speed.<br>
+        Belt (pitch line) speed: <b>v = &pi;&middot;D1&middot;N1 / 60</b>, converted from mm/min to m/s.<br>
+        <b>Slip:</b> whenever load torque exceeds the entered belt torque capacity, the driven pulley's actual RPM is derated below the ideal value in proportion to the overload — modelling a slipping belt losing grip, not a hard cutoff.<br>
+        <b>Open vs crossed:</b> an open (uncrossed) belt drives both pulleys in the same rotational direction; a crossed belt reverses the driven pulley — toggle it above to see both.<br>
+        The top belt strand is shown as the tight (power-transmitting) side and the bottom as the slack return side — a simplification; which side is actually tight depends on rotation direction and layout in a real installation.
+      </div>
+      <div class="hint" style="margin-top:8px;">A simplified single-stage open/crossed belt drive for visualising ratio and slip behaviour — not a substitute for a proper belt selection calc (see MH.05) covering wrap angle, belt type and service factors.</div>
+    </details>
+
+    <footer>Illustrative pulley-ratio and slip model for visualising belt drive behaviour — for actual belt sizing use MH.05 Belt / Pulley Drive.</footer>
+  </div>
+</div>
+
+<script src="belt-drive-simulator.inline.js"></script>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
