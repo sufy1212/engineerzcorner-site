@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC &amp; Plumbing Default Design Values: The Quick Reference | Engineerz CorneR</title>
+<meta name="description" content="Common default design values for HVAC and plumbing — duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and slopes — for a first-pass sizing check.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="HVAC &amp; Plumbing Default Design Values: The Quick Reference">
+<meta property="og:description" content="Common default design values for HVAC and plumbing — duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and slopes — for a first-pass sizing check.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HVAC &amp; Plumbing Default Design Values: The Quick Reference">
+<meta name="twitter:description" content="Common default design values for HVAC and plumbing — duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and slopes — for a first-pass sizing check.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="hvac-plumbing-default-design-values.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "HVAC & Plumbing Default Design Values: The Quick Reference", "item": "https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HVAC & Plumbing Default Design Values: The Quick Reference",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+  "description": "Common default design values for HVAC and plumbing — duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and slopes — for a first-pass sizing check.",
+  "url": "https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">HVAC &amp; Plumbing Default Design Values: The Quick Reference</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">❄ HVAC &middot; Plumbing Reference</span>
+    <h1>HVAC &amp; Plumbing Default Design Values: The Quick Reference</h1>
+    <p class="hero-sub">The velocities, pressure drops, temperatures and ACH figures that show up in almost every design, gathered in one place for a fast first-pass sizing check &mdash; not a substitute for code and manufacturer data.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Design Defaults</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <rect x="70" y="40" width="90" height="60" rx="4" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.5"/>
+      <line x1="86" y1="56" x2="144" y2="56" stroke="#5FD3E3" stroke-width="1.2"/>
+      <line x1="86" y1="68" x2="144" y2="68" stroke="#5FD3E3" stroke-width="1.2"/>
+      <line x1="86" y1="80" x2="144" y2="80" stroke="#5FD3E3" stroke-width="1.2"/>
+      <text x="72" y="34" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">DUCT</text>
+      <line x1="200" y1="70" x2="320" y2="70" stroke="#7e97ac" stroke-width="6"/>
+      <path d="M300 60 L320 70 L300 80" fill="none" stroke="#F2B84B" stroke-width="2"/>
+      <text x="200" y="55" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">PIPE VELOCITY</text>
+      <g transform="translate(400,70)">
+        <circle cx="0" cy="0" r="30" fill="#122845" stroke="#F2B84B" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="-20" stroke="#5FD3E3" stroke-width="2"/>
+        <line x1="0" y1="0" x2="14" y2="8" stroke="#5FD3E3" stroke-width="2"/>
+      </g>
+      <text x="374" y="112" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">PRESSURE</text>
+      <rect x="470" y="44" width="60" height="52" rx="3" fill="none" stroke="#7e97ac" stroke-width="1.5"/>
+      <path d="M476 96 L476 106 M524 96 L524 106" stroke="#7e97ac" stroke-width="1.5"/>
+      <text x="470" y="34" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">TEMP &Delta;T</text>
+      <g transform="translate(600,50)">
+        <path d="M0 0 C 20 0 20 30 0 30" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+        <path d="M14 -6 C 34 -6 34 24 14 24" fill="none" stroke="#F2B84B" stroke-width="2"/>
+      </g>
+      <text x="596" y="98" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">DRAIN SLOPE</text>
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#18325A" stroke-width="1"/>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">These are common defaults used at concept and first-pass design &mdash; the actual number for a project still has to be checked against ASHRAE, SMACNA, CIBSE, local code, and the manufacturer's data.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Velocity ranges exist to balance two failure modes: too low wastes duct/pipe size and money, too high creates noise, erosion, or excessive pressure drop.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">ACH and fresh air rates are occupancy- and use-driven &mdash; a kitchen or toilet needs far more air changes than an office for the same reason: odour and contaminant removal, not just comfort.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Plumbing follows the same logic as HVAC: minimum velocity keeps drains self-cleaning, maximum velocity avoids noise and water hammer.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>HVAC</h2>
+
+    <h3>1&ndash;4. Air &amp; water velocities</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Duct air velocity</th><th>m/s</th></tr>
+        <tr><td>Main duct</td><td>6 &ndash; 8</td></tr>
+        <tr><td>Branch duct</td><td>4 &ndash; 6</td></tr>
+        <tr><td>Final branch</td><td>2.5 &ndash; 4</td></tr>
+        <tr><td>Flexible duct</td><td>2 &ndash; 4</td></tr>
+        <tr><td>Return air</td><td>3 &ndash; 5</td></tr>
+        <tr><td>Exhaust air</td><td>4 &ndash; 6</td></tr>
+        <tr><td>Toilet exhaust</td><td>5 &ndash; 7</td></tr>
+        <tr><td>Kitchen exhaust</td><td>8 &ndash; 12</td></tr>
+        <tr><td>Fresh air</td><td>4 &ndash; 6</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Chilled water pipe velocity</th><th>m/s</th></tr>
+        <tr><td>Main pipe</td><td>1.5 &ndash; 2.5</td></tr>
+        <tr><td>Branch pipe</td><td>1 &ndash; 2</td></tr>
+        <tr><td>FCU connection</td><td>0.6 &ndash; 1.2</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Other water/refrigerant velocities</th><th>m/s</th></tr>
+        <tr><td>Condenser water</td><td>1.5 &ndash; 2.5</td></tr>
+        <tr><td>Refrigerant &mdash; suction line</td><td>4 &ndash; 8</td></tr>
+        <tr><td>Refrigerant &mdash; discharge line</td><td>8 &ndash; 15</td></tr>
+      </table>
+    </div>
+    <p class="fine">On a vertical refrigerant riser, bias toward the higher end of the range &mdash; velocity has to stay high enough to carry oil back up to the compressor, or it pools in the riser instead.</p>
+
+    <h3>5&ndash;7. Pressure drop &amp; air changes</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Pressure drop</th><th>Value</th></tr>
+        <tr><td>Pipe pressure drop</td><td>30 &ndash; 50 Pa/m (&asymp; 3&ndash;5 m per 100 m)</td></tr>
+        <tr><td>Duct pressure drop (economical)</td><td>0.8 &ndash; 1.2 Pa/m</td></tr>
+        <tr><td>Duct pressure drop (small spaces)</td><td>up to 1.5 Pa/m</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Air Changes per Hour (ACH)</th><th>ACH</th></tr>
+        <tr><td>Office</td><td>4 &ndash; 8</td></tr>
+        <tr><td>Bedroom</td><td>4 &ndash; 6</td></tr>
+        <tr><td>Classroom</td><td>6 &ndash; 8</td></tr>
+        <tr><td>Toilet</td><td>10 &ndash; 15</td></tr>
+        <tr><td>Kitchen</td><td>15 &ndash; 30</td></tr>
+        <tr><td>Car park</td><td>6 &ndash; 10</td></tr>
+        <tr><td>Electrical room</td><td>6 &ndash; 10</td></tr>
+      </table>
+    </div>
+
+    <h3>8&ndash;12. Noise, fresh air, cooling coil &amp; system temperatures</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Noise Criteria (NC)</th><th>NC</th></tr>
+        <tr><td>Bedroom</td><td>25 &ndash; 30</td></tr>
+        <tr><td>Office</td><td>35 &ndash; 40</td></tr>
+        <tr><td>Restaurant</td><td>35 &ndash; 45</td></tr>
+        <tr><td>Lobby / Reception</td><td>40 &ndash; 45</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Fresh air (outdoor air)</th><th>L/s per person</th></tr>
+        <tr><td>Office</td><td>10</td></tr>
+        <tr><td>Meeting room</td><td>10 &ndash; 15</td></tr>
+        <tr><td>Restaurant</td><td>15 &ndash; 20</td></tr>
+      </table>
+    </div>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Cooling coil &Delta;T</b><span>5&ndash;6 &deg;C (supply &minus; return). Example: CHWS = 6 &deg;C, CHWR = 12 &deg;C.</span></div>
+      <div class="signal-card hot"><b>Chilled &amp; condenser water temps</b><span>CHWS/CHWR: 6&ndash;7 / 11&ndash;12 &deg;C. CWS/CWR: 29&ndash;30 / 34&ndash;35 &deg;C.</span></div>
+    </div>
+
+    <h3>13&ndash;14. Indoor design conditions &amp; static pressure</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Indoor design conditions (Summer)</th><th>Value</th></tr>
+        <tr><td>Temperature</td><td>24 &deg;C</td></tr>
+        <tr><td>Relative humidity</td><td>50 &ndash; 60%</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Typical external static pressure (ESP)</th><th>Pa</th></tr>
+        <tr><td>FCU</td><td>30 &ndash; 100</td></tr>
+        <tr><td>AHU</td><td>250 &ndash; 750</td></tr>
+      </table>
+    </div>
+
+    <div class="ref-box">
+      <b>Quick HVAC reference</b>
+      <ul class="plain">
+        <li>Duct velocity = 4&ndash;8 m/s</li>
+        <li>CHW = 6/12 &deg;C</li>
+        <li>CW = 30/35 &deg;C</li>
+        <li>Office = 24 &deg;C, RH 50%</li>
+        <li>Fresh air = 10 L/s per person</li>
+        <li>Toilet exhaust = 10&ndash;15 ACH</li>
+        <li>Kitchen exhaust = 15&ndash;30 ACH</li>
+      </ul>
+    </div>
+
+    <h2><span class="h2-dot"></span>Plumbing</h2>
+
+    <h3>1&ndash;4. Velocities &amp; drainage</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Cold water velocity</th><th>m/s</th></tr>
+        <tr><td>Main</td><td>1.5 &ndash; 2.5</td></tr>
+        <tr><td>Branch</td><td>1 &ndash; 2</td></tr>
+        <tr><td>Final</td><td>0.6 &ndash; 1.5</td></tr>
+      </table>
+    </div>
+    <p class="fine">Hot water velocity: 0.6&ndash;1.5 m/s throughout &mdash; kept lower than cold water to limit erosion and noise on the hotter, often smaller-bore, distribution runs.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Drainage pipe slope</th><th>Slope</th></tr>
+        <tr><td>50 mm</td><td>1:40</td></tr>
+        <tr><td>75 mm</td><td>1:60</td></tr>
+        <tr><td>100 mm</td><td>1:80</td></tr>
+        <tr><td>150 mm</td><td>1:100</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Drainage velocity</th><th>m/s</th></tr>
+        <tr><td>Minimum</td><td>0.75</td></tr>
+        <tr><td>Ideal</td><td>1 &ndash; 2</td></tr>
+      </table>
+    </div>
+    <p class="fine">Larger drainage pipes get a flatter slope, not a steeper one &mdash; a bigger pipe carries the same flow at lower velocity for a given gradient, so the slope has to compensate to keep the pipe self-cleaning.</p>
+
+    <h3>5&ndash;8. Pressure, temperature, testing &amp; supports</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Water pressure</th><th>Value</th></tr>
+        <tr><td>Minimum at fixture</td><td>1 bar</td></tr>
+        <tr><td>Preferred</td><td>2 &ndash; 3 bar</td></tr>
+        <tr><td>Maximum in building</td><td>5 bar (use PRV if higher)</td></tr>
+      </table>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Domestic water temperature</th><th>&deg;C</th></tr>
+        <tr><td>Cold water</td><td>&le; 25</td></tr>
+        <tr><td>Hot water storage</td><td>60</td></tr>
+        <tr><td>Distribution</td><td>55</td></tr>
+        <tr><td>Return</td><td>&asymp; 50</td></tr>
+      </table>
+    </div>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Hydrostatic test</b><span>1.5 &times; working pressure, held for 2 hours &mdash; as per code and specification.</span></div>
+      <div class="signal-card hot"><b>Pipe supports (general)</b><span>Up to 25 mm: 1.5&ndash;2 m. 32&ndash;50 mm: 2&ndash;2.5 m. Above 50 mm: 2.5&ndash;3 m max spacing.</span></div>
+    </div>
+
+    <div class="ref-box">
+      <b>Quick plumbing reference</b>
+      <ul class="plain">
+        <li>Water velocity = 1&ndash;2 m/s</li>
+        <li>Water pressure = 2&ndash;3 bar</li>
+        <li>Hot water temp = 55 &deg;C (distribution)</li>
+        <li>Hot water velocity = 0.6&ndash;1.5 m/s</li>
+        <li>Hydro test = 1.5 &times; working pressure</li>
+        <li>Drainage slope = 1:40 to 1:100 (depends on size)</li>
+        <li>Minimum drain velocity = 0.75 m/s</li>
+      </ul>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why these ranges exist, not just what they are</h2>
+    <p>Every range above is a balance between two opposing costs. Push velocity too low and the duct or pipe has to be oversized to move the same flow &mdash; more material, more space, more cost, and for drainage specifically, not enough velocity to keep solids moving, which leads to blockages. Push it too high and the system gets noisy, erosion and water hammer risk climb, and pressure drop (and therefore fan or pump energy) rises sharply, since pressure loss scales with roughly the square of velocity. The "default" ranges in the tables above sit in the middle of that trade-off for typical applications &mdash; which is also exactly why an unusual application (very long runs, unusual noise sensitivity, corrosive fluid) can legitimately need a value outside them.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Treat every value here as a starting point for concept design, then verify against ASHRAE, SMACNA, CIBSE, local code, and manufacturer data for the actual project.</span></li>
+      <li><span class="tk-check">✓</span><span>Velocity ranges balance sizing cost against noise, erosion, and pressure drop &mdash; not arbitrary numbers.</span></li>
+      <li><span class="tk-check">✓</span><span>ACH and fresh air requirements scale with contaminant load and occupancy, which is why kitchens and toilets sit far above offices.</span></li>
+      <li><span class="tk-check">✓</span><span>Plumbing drainage slope decreases as pipe diameter increases, to keep velocity &mdash; not just flow &mdash; adequate for self-cleaning.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=HVAC%20%26%20Plumbing%20Default%20Design%20Values%3A%20The%20Quick%20Reference%20%E2%80%94%20Common%20default%20values%20for%20HVAC%20and%20plumbing%20design%2C%20gathered%20in%20one%20place.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhvac-plumbing-default-design-values" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhvac-plumbing-default-design-values" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=HVAC%20%26%20Plumbing%20Default%20Design%20Values%3A%20The%20Quick%20Reference&amp;text=Common%20default%20values%20for%20HVAC%20and%20plumbing%20design%2C%20gathered%20in%20one%20place.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhvac-plumbing-default-design-values" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=HVAC%20%26%20Plumbing%20Default%20Design%20Values%3A%20The%20Quick%20Reference&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AHVAC%20%26%20Plumbing%20Default%20Design%20Values%3A%20The%20Quick%20Reference%0ACommon%20default%20values%20for%20HVAC%20and%20plumbing%20design%2C%20gathered%20in%20one%20place.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhvac-plumbing-default-design-values">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../hvac/duct-sizing-calculator">Duct Sizing Calculator →</a></li><li><a href="../hvac/air-changes-per-hour-calculator">Air Changes per Hour Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="chilled-water-hvac-system-explained">Chilled Water HVAC System Explained</a></li><li><a href="air-changes-per-hour-ventilation-explained">Air Changes per Hour: What ACH Actually Tells You (and Doesn't)</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../hvac/duct-sizing-calculator">Try the Duct Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
