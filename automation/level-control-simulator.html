@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23181B2E'/%3E%3Crect x='9' y='9' width='14' height='16' rx='1' fill='none' stroke='%236C5CE7' stroke-width='2'/%3E%3Crect x='10' y='17' width='12' height='7' fill='%230D9488'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level Control Loop Simulator — Automation Toolkit</title>
+<meta name="description" content="Interactive animated level control loop simulator. Watch a tank fill and drain live as a PID controller drives the inlet valve, reject a disturbance, and see HH/LL alarms trip in real time — a moving process mimic, not a chart.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/level-control-simulator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Level Control Loop Simulator — Live Animated Tank &amp; PID — Automation Toolkit">
+<meta property="og:description" content="Watch a tank fill and drain live as a PID controller drives the inlet valve, kick a disturbance, and see HH/LL alarms trip — an animated process mimic diagram, not a static chart.">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/level-control-simulator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Level Control Loop Simulator — Live Animated Tank &amp; PID — Automation Toolkit">
+<meta name="twitter:description" content="Watch a tank fill and drain live as a PID controller drives the inlet valve, kick a disturbance, and see HH/LL alarms trip in real time.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="level-control-simulator.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Level Control Loop Simulator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Interactive animated level control loop simulator — a live process mimic diagram with a filling/draining tank, a PID-driven inlet valve, an adjustable outlet disturbance, and HH/LL alarm lamps, running a discrete-time simulation in the browser.",
+  "url": "https://www.engineerzcorner.com/automation/level-control-simulator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Level Control Loop Simulator</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to Automation toolkit</a>
+<div class="wrap">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"></rect><path d="M5 13h14"></path></svg></div>
+    <div><h1>Level Control Loop Simulator</h1><div class="hero-sub">Live animated tank &middot; PID-driven valve &middot; disturbance &amp; alarms</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="./">Automation Index</a>
+    <a href="signal-scaling">AT.01 Signal Scaling</a>
+    <a href="pid-tuning">AT.02 PID Tuning</a>
+    <a href="valve-sizing">AT.03 Valve Sizing</a>
+    <a href="level-transmitter">AT.04 Level Ranging</a>
+    <a href="vfd-scaling">AT.05 VFD Scaling</a>
+    <a href="notes">AT.06 Notes</a>
+    <a href="symbols">AT.07 Symbols</a>
+    <a href="guides">AT.08 Guides</a>
+    <a href="comparisons">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints">AT.14 Alarm Setpoints</a>
+    <a href="thermocouple-reference">AT.15 Thermocouple Reference</a>
+    <a href="orifice-flow-sizing">AT.16 Orifice Flow Sizing</a>
+    <a href="level-control-simulator" class="current">AT.17 Level Control Simulator</a>
+  </div>
+
+  <div class="intro">
+    A live process mimic, not a graph. Press <b>Start</b> and watch the tank fill toward setpoint as the PID controller opens and closes the inlet valve — then hit <b>Kick Disturbance</b> to jump the outlet demand and watch the loop fight back to recover. Drag the gains live, mid-run, and see the response change in the diagram itself.
+  </div>
+  <div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+    <div class="ad-slot-inner"><span class="ad-slot-label">Advertisement</span><span class="ad-slot-id">in-content</span></div>
+  </div>
+
+  <!-- STEP 1: THE MIMIC -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Live Process Mimic</h2></div>
+    <div class="step-desc">Runs an accelerated discrete-time simulation in your browser — the clock in the corner is simulation time, not real seconds.</div>
+
+    <div class="lcs-stage">
+      <svg id="lcsSvg" viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated tank level control loop diagram">
+        <!-- inlet pipe -->
+        <line x1="70" y1="40" x2="70" y2="80" class="lcs-pipe"></line>
+        <line x1="70" y1="80" x2="230" y2="80" class="lcs-pipe"></line>
+        <line x1="230" y1="80" x2="230" y2="106" class="lcs-pipe"></line>
+        <line x1="72" y1="42" x2="72" y2="78" class="lcs-flow" id="lcsInFlow1"></line>
+        <line x1="74" y1="80" x2="228" y2="80" class="lcs-flow" id="lcsInFlow2"></line>
+        <text x="30" y="34" class="lcs-txt">Supply</text>
+
+        <!-- inlet valve -->
+        <g id="lcsValveIn" transform="translate(70,60)">
+          <circle r="15" class="lcs-valve-body"></circle>
+          <g id="lcsValveInGate">
+            <line x1="-10" y1="0" x2="10" y2="0" class="lcs-valve-gate"></line>
+          </g>
+        </g>
+        <text x="40" y="105" class="lcs-txt">FV-101</text>
+        <text x="26" y="118" class="lcs-txt-sm" id="lcsValveInPct">0%</text>
+
+        <!-- controller box -->
+        <g transform="translate(300,10)">
+          <rect x="0" y="0" width="150" height="66" rx="8" class="lcs-ctrl-box"></rect>
+          <text x="12" y="18" class="lcs-ctrl-label">LIC-101 · PID</text>
+          <text x="12" y="37" class="lcs-ctrl-val" id="lcsPvTxt">PV 0.0%</text>
+          <text x="12" y="53" class="lcs-ctrl-val-sm" id="lcsOutTxt">OUT 0%</text>
+          <circle cx="136" cy="16" r="5" class="lcs-lamp" id="lcsLampRun"></circle>
+        </g>
+        <line x1="230" y1="43" x2="300" y2="43" class="lcs-signal" id="lcsSigPv"></line>
+        <line x1="300" y1="43" x2="230" y2="60" class="lcs-signal" id="lcsSigOut"></line>
+
+        <!-- tank -->
+        <g transform="translate(210,106)">
+          <rect x="0" y="0" width="120" height="160" rx="4" class="lcs-tank-shell"></rect>
+          <clipPath id="lcsTankClip"><rect x="3" y="3" width="114" height="154" rx="2"></rect></clipPath>
+          <rect id="lcsLiquid" x="3" y="157" width="114" height="0" class="lcs-liquid" clip-path="url(#lcsTankClip)"></rect>
+          <line x1="0" y1="0" x2="120" y2="0" id="lcsSpLine" class="lcs-sp-line"></line>
+          <line x1="0" y1="0" x2="120" y2="0" id="lcsHHLine" class="lcs-hh-line"></line>
+          <line x1="0" y1="0" x2="120" y2="0" id="lcsLLLine" class="lcs-ll-line"></line>
+          <text x="124" y="4" class="lcs-txt-sm" id="lcsSpTxt">SP</text>
+        </g>
+
+        <!-- alarm lamps -->
+        <g transform="translate(345,120)">
+          <circle r="7" class="lcs-alarm-lamp" id="lcsHHLamp"></circle>
+          <text x="14" y="4" class="lcs-txt-sm">LAH-101 HH</text>
+        </g>
+        <g transform="translate(345,146)">
+          <circle r="7" class="lcs-alarm-lamp" id="lcsLLLamp"></circle>
+          <text x="14" y="4" class="lcs-txt-sm">LAL-101 LL</text>
+        </g>
+
+        <!-- outlet pipe + disturbance valve -->
+        <line x1="270" y1="266" x2="270" y2="290" class="lcs-pipe"></line>
+        <line x1="270" y1="290" x2="420" y2="290" class="lcs-pipe"></line>
+        <line x1="272" y1="268" x2="272" y2="288" class="lcs-flow" id="lcsOutFlow1"></line>
+        <line x1="274" y1="290" x2="418" y2="290" class="lcs-flow" id="lcsOutFlow2"></line>
+        <g id="lcsValveOut" transform="translate(270,278)">
+          <circle r="12" class="lcs-valve-body lcs-valve-body-out"></circle>
+          <g id="lcsValveOutGate"><line x1="-8" y1="0" x2="8" y2="0" class="lcs-valve-gate"></line></g>
+        </g>
+        <text x="430" y="294" class="lcs-txt">Demand / Drain</text>
+
+        <!-- sim clock -->
+        <text x="600" y="312" text-anchor="end" class="lcs-clock" id="lcsClock">t = 0.0 s</text>
+      </svg>
+
+      <div class="lcs-controls">
+        <button type="button" id="lcsPlayBtn" class="lcs-btn lcs-btn-primary">&#9654; Start</button>
+        <button type="button" id="lcsResetBtn" class="lcs-btn">&#8635; Reset</button>
+        <button type="button" id="lcsKickBtn" class="lcs-btn lcs-btn-kick">&#9889; Kick Disturbance</button>
+        <span class="lcs-speed-label">Sim speed</span>
+        <input type="range" id="lcsSpeed" min="0.5" max="4" step="0.5" value="1" class="lcs-speed">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: LIVE GAINS + SETUP -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Setpoint, Gains &amp; Alarms — Live</h2></div>
+    <div class="step-desc">Drag any slider while the simulation is running — the diagram responds immediately, no restart needed.</div>
+
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Setpoint</span><span class="sval" id="lcsSpVal">55 %</span></div>
+      <input type="range" id="lcsSp" min="10" max="90" step="1" value="55">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Proportional gain (Kp)</span><span class="sval" id="lcsKpVal">4.0</span></div>
+      <input type="range" id="lcsKp" min="0" max="15" step="0.1" value="4">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Integral gain (Ki)</span><span class="sval" id="lcsKiVal">0.60</span></div>
+      <input type="range" id="lcsKi" min="0" max="3" step="0.05" value="0.6">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Derivative gain (Kd)</span><span class="sval" id="lcsKdVal">0.0</span></div>
+      <input type="range" id="lcsKd" min="0" max="5" step="0.1" value="0">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Baseline outlet demand</span><span class="sval" id="lcsQoutVal">30 %valve</span></div>
+      <input type="range" id="lcsQout" min="0" max="60" step="1" value="30">
+    </div>
+    <div class="slider-card">
+      <div class="slider-head"><span class="slabel">Disturbance kick size</span><span class="sval" id="lcsKickVal">+35 %valve</span></div>
+      <input type="range" id="lcsKickSize" min="10" max="60" step="5" value="35">
+    </div>
+
+    <div class="row2">
+      <div class="field"><label>HH alarm <span class="unit">% level</span></label><input type="number" id="lcsHH" value="88" step="1" min="60" max="100"></div>
+      <div class="field"><label>LL alarm <span class="unit">% level</span></label><input type="number" id="lcsLL" value="15" step="1" min="0" max="40"></div>
+    </div>
+  </div>
+
+  <!-- STEP 3: STATUS -->
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Loop Status</h2></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="slabel">Level (PV)</div><div class="sval" id="lcsStatPv">0.0 %</div></div>
+      <div class="stat"><div class="slabel">Error</div><div class="sval" id="lcsStatErr">0.0 %</div></div>
+      <div class="stat"><div class="slabel">Valve output</div><div class="sval" id="lcsStatOut">0 %</div></div>
+      <div class="stat"><div class="slabel">Time in band (&plusmn;3%)</div><div class="sval" id="lcsStatBand">0.0 s</div></div>
+    </div>
+    <div role="status" aria-live="polite" class="status-banner neutral" id="lcsBanner"><span class="status-dot"></span><span id="lcsBannerText">Press Start — the loop begins from an empty tank.</span></div>
+
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Each simulation tick: <b>error = setpoint &minus; level</b>, and a standard PID computes valve output <b>u = Kp&middot;error + Ki&middot;&int;error&middot;dt + Kd&middot;d(error)/dt</b>, clamped to 0&ndash;100% and applied as the inlet valve position (with a simple first-order valve-travel lag, so it doesn't snap open/closed instantly).<br>
+        Tank level changes by <b>&Delta;level = (inflow &minus; outflow)&middot;dt</b>, with inflow proportional to the inlet valve position and outflow proportional to the outlet valve position (baseline demand, or the kicked value while a disturbance is active) — a fixed reference tank size, tuned so the response speed feels realistic on screen.<br>
+        <b>Kick Disturbance</b> steps the outlet valve open by the kick size for a fixed duration, then returns it to baseline — a classic load-disturbance rejection test.<br>
+        HH/LL lamps light the instant level crosses the entered alarm bands; the status banner turns red on either trip.
+      </div>
+      <div class="hint" style="margin-top:8px;">A single-tank, single-loop teaching model with simplified first-order valve and flow dynamics — not a substitute for a real dynamic process simulation package when tuning an actual loop.</div>
+    </details>
+
+    <footer>Illustrative single-capacity tank + PID model for visualising loop behaviour and disturbance rejection — gains here are a teaching aid, not a substitute for a proper reaction-curve tuning study (see AT.02).</footer>
+  </div>
+</div>
+
+<script src="level-control-simulator.inline.js"></script>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
