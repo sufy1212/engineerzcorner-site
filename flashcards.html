@@ -27,6 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="flashcards.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,6 +74,7 @@
     <div class="fc-hero-eyebrow">Symbol Flashcard Drill</div>
     <h1 id="fcCount">Drawing Symbols</h1>
     <p class="fc-hero-sub">Click a card to flip it, then use Next/Previous to work through the set. Filter by discipline below.</p>
+    <button class="ecs-share-btn" id="shareBtn" type="button" style="width:auto;padding:10px 16px;margin-top:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/></svg>Share this drill</button>
   </div>
 
   <div class="fc-filters" id="fcFilters"></div>
@@ -103,6 +105,18 @@
 </div>
 
 <script src="flashcards.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtn"), function () {
+    return {
+      title: "Symbol Flashcard Drill — Engineerz CorneR",
+      text: "Drilling electrical & engineering symbols with this free flashcard tool \uD83D\uDCC7",
+      url: "https://www.engineerzcorner.com/flashcards"
+    };
+  });
+});
+</script>
 
 
 <a href="./" class="ecr-home-fab" aria-label="Go to homepage">

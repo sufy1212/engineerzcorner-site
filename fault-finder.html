@@ -27,6 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="fault-finder.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
 <link rel="stylesheet" href="assets/sidebars.css">
 <script type="application/ld+json">
 {
@@ -112,6 +113,8 @@
       </div>
       <button class="ff-btn" id="againBtn">Play again</button>
       <div style="height:10px;"></div>
+      <button class="ecs-share-btn" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/></svg>Share result</button>
+      <div style="height:10px;"></div>
       <button class="ff-btn ghost" id="backBtn">Back to games</button>
     </div>
   </div>
@@ -124,6 +127,20 @@
 <div class="ff-toast" id="toast"></div>
 
 <script src="fault-finder.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtn"), function () {
+    var score = document.getElementById("finalScore").textContent;
+    var rounds = document.getElementById("finalRounds").textContent;
+    return {
+      title: "Fault Finder — Engineerz CorneR",
+      text: "I scored " + score + " pts and solved " + rounds + " circuits in Fault Finder ⚡ Can you beat me?",
+      url: "https://www.engineerzcorner.com/fault-finder"
+    };
+  });
+});
+</script>
 
 
 <a href="./" class="ecr-home-fab" aria-label="Go to homepage">
