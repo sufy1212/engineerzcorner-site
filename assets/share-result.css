@@ -1,3 +1,4 @@
+/* Light theme (default) — used on Quiz, Quickfire, Flashcards */
 .ecs-share-btn {
   display: inline-flex;
   align-items: center;
@@ -7,16 +8,16 @@
   box-sizing: border-box;
   padding: 12px 18px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
-  color: #ededed;
+  border: 1px solid #E1E3F0;
+  background: #F7F8FC;
+  color: #181B29;
   font: 600 14px/1 Inter, system-ui, sans-serif;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
 }
 .ecs-share-btn:hover {
-  background: rgba(193, 102, 43, 0.14);
-  border-color: #c1662b;
+  background: #EFE6FB;
+  border-color: #6C5CE7;
 }
 .ecs-share-btn svg {
   width: 16px;
@@ -26,12 +27,12 @@
 
 .ecs-pop {
   z-index: 9999;
-  background: #1b1d1f;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #FFFFFF;
+  border: 1px solid #E1E3F0;
   border-radius: 12px;
   padding: 6px;
   min-width: 190px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 32px rgba(24, 27, 41, 0.18);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -44,7 +45,7 @@
   box-sizing: border-box;
   padding: 9px 10px;
   border-radius: 8px;
-  color: #ededed;
+  color: #181B29;
   text-decoration: none;
   font: 500 13.5px/1 Inter, system-ui, sans-serif;
   background: none;
@@ -53,11 +54,34 @@
   text-align: left;
 }
 .ecs-pop-item:hover {
-  background: rgba(255, 255, 255, 0.07);
+  background: #F3F4FA;
 }
 .ecs-pop-ic {
   width: 20px;
   text-align: center;
   font-size: 14px;
   flex: none;
+}
+
+/* Dark theme — used on Fault Finder, Defect Finder, HVAC Doctor,
+   Machine Fixer, Signal Chain, Load Stack (add class="ecs-dark") */
+.ecs-share-btn.ecs-dark {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #EDEDED;
+}
+.ecs-share-btn.ecs-dark:hover {
+  background: rgba(193, 102, 43, 0.16);
+  border-color: #C1662B;
+}
+.ecs-pop.ecs-dark {
+  background: #16181B;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+.ecs-pop.ecs-dark .ecs-pop-item {
+  color: #EDEDED;
+}
+.ecs-pop.ecs-dark .ecs-pop-item:hover {
+  background: rgba(255, 255, 255, 0.08);
 }

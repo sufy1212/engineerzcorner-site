@@ -40,7 +40,7 @@
     var shareStr = (text + " " + url).trim();
 
     var pop = document.createElement("div");
-    pop.className = "ecs-pop";
+    pop.className = "ecs-pop" + (anchor.classList.contains("ecs-dark") ? " ecs-dark" : "");
     pop.innerHTML =
       '<a class="ecs-pop-item" target="_blank" rel="noopener" href="https://wa.me/?text=' +
       encodeURIComponent(shareStr) +
