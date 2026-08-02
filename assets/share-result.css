@@ -1,0 +1,63 @@
+.ecs-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ededed;
+  font: 600 14px/1 Inter, system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.ecs-share-btn:hover {
+  background: rgba(193, 102, 43, 0.14);
+  border-color: #c1662b;
+}
+.ecs-share-btn svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.ecs-pop {
+  z-index: 9999;
+  background: #1b1d1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 6px;
+  min-width: 190px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ecs-pop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: #ededed;
+  text-decoration: none;
+  font: 500 13.5px/1 Inter, system-ui, sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.ecs-pop-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+.ecs-pop-ic {
+  width: 20px;
+  text-align: center;
+  font-size: 14px;
+  flex: none;
+}
