@@ -1,17 +1,17 @@
 [
   {
-    "t": "MPPT vs PWM Solar Charge Controllers: What Actually Changes",
-    "u": "posts/mppt-vs-pwm-solar-charge-controllers",
-    "d": "2026-07-31"
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
+    "d": "2026-08-02"
   },
   {
-    "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
-    "u": "posts/solar-panel-derating-factors-explained",
-    "d": "2026-07-31"
+    "t": "Belt &amp; Pulley Drive Simulator",
+    "u": "mechanical/belt-drive-simulator",
+    "d": "2026-08-02"
   },
   {
-    "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
-    "u": "posts/flame-retardant-vs-flame-resistant-cables",
-    "d": "2026-07-30"
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
+    "d": "2026-08-02"
   }
 ]
