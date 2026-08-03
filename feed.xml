@@ -4,11 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Wind Turbines Explained: How Wind Becomes Electricity</title>
+    <title>Power Transformers Explained: Construction and How They Actually Work</title>
+    <link>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
+    <description>How a power transformer steps voltage up or down with no moving parts — core, windings, oil, cooling, tap changer, and the protection gear around them.</description>
+    <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Wind Turbines Explained: How Wind Becomes Electricity, Component by Component</title>
     <link>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</link>
     <guid>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</guid>
-    <description>How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path to the grid.</description>
-    <pubDate>Mon, 03 Aug 2026 18:14:24 GMT</pubDate>
+    <description>How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path from nacelle to grid.</description>
+    <pubDate>Mon, 03 Aug 2026 14:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
@@ -211,6 +218,13 @@
     <link>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow.html</link>
     <guid>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow.html</guid>
     <description>Sizing ductwork for airflow, velocity and circular-equivalent diameter, and why designing for velocity limits matters as much as hitting the required airflow figure.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Earned Value Management: Reading Project Health From Three Numbers</title>
+    <link>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</guid>
+    <description>Why 'on budget' and 'on schedule' need separate proof, what Planned Value, Earned Value and Actual Cost each measure.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
