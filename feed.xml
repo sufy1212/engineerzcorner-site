@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</title>
+    <link>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</guid>
+    <description>MCB, MCCB, ACB, VCB, SF6 breakers, RCCB, RCBO, ELCB, isolators, contactors, relays, fuses, SPDs and busbars — what each device does, how it differs, and where it's used.</description>
+    <pubDate>Mon, 03 Aug 2026 21:20:32 GMT</pubDate>
+  </item>
+  <item>
     <title>Power Transformers Explained: Construction &amp; Working Principle</title>
     <link>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</guid>
     <description>How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough</title>
-    <link>https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter.html</link>
-    <guid>https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter.html</guid>
-    <description>Why a switch needs two trip points instead of one — how deadband and hysteresis stop a control loop from chattering right at the setpoint.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
