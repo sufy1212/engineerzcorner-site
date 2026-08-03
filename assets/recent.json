@@ -1,5 +1,10 @@
 [
   {
+    "t": "Power Transformers Explained: Construction &amp; Working Principle",
+    "u": "posts/power-transformer-construction-working-principle",
+    "d": "2026-08-03"
+  },
+  {
     "t": "Wind Turbines Explained: How Wind Becomes Electricity",
     "u": "posts/wind-turbine-components-working-principle",
     "d": "2026-08-03"
@@ -42,11 +47,6 @@
   {
     "t": "Deadband / Hysteresis Calculator",
     "u": "automation/deadband-hysteresis",
-    "d": "2026-08-02"
-  },
-  {
-    "t": "DP Level Transmitter Ranging",
-    "u": "automation/level-transmitter",
     "d": "2026-08-02"
   }
 ]

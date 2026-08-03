@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Power Transformers Explained: Construction &amp; Working Principle</title>
+    <link>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
+    <description>How a power transformer steps voltage up or down with no moving parts — core, windings, oil, cooling, tap changer, and the protection gear around them.</description>
+    <pubDate>Mon, 03 Aug 2026 18:26:25 GMT</pubDate>
+  </item>
+  <item>
     <title>Wind Turbines Explained: How Wind Becomes Electricity</title>
     <link>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</link>
     <guid>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter.html</link>
     <guid>https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter.html</guid>
     <description>Why a switch needs two trip points instead of one — how deadband and hysteresis stop a control loop from chattering right at the setpoint.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Duct Sizing: Why Velocity Limits Matter as Much as Airflow</title>
-    <link>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow.html</link>
-    <guid>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow.html</guid>
-    <description>Sizing ductwork for airflow, velocity and circular-equivalent diameter, and why designing for velocity limits matters as much as hitting the required airflow figure.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
