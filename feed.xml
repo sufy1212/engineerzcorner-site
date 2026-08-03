@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
+    <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
+    <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
+    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of starting current, torque, cost and complexity.</description>
+    <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>HVAC &amp; Plumbing Default Design Values: The Quick Reference</title>
     <link>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</link>
     <guid>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</guid>

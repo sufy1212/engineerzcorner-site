@@ -53,8 +53,8 @@
   <url><loc>https://www.engineerzcorner.com/electrical/harmonics-thd-estimate</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/lighting-illumination-sizing</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/lv-panel-estimate</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/motor-flc-starting-current</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/motor-starting-simulator</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/motor-flc-starting-current</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/motor-starting-simulator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/notes</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/panel-ga-maker</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/power-factor-correction</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
@@ -178,6 +178,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/is-iec-ieee-electrical-standards-reference</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/k-rated-transformer-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lighting-lumen-method-luminaire-count</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/load-estimation-first-step-electrical-design</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
