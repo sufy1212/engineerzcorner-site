@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD | Engineerz CorneR</title>
+<meta name="description" content="Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of current, torque, cost and complexity.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared">
+<meta property="og:description" content="Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of starting current, torque, cost and complexity to help you pick the right one.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared">
+<meta name="twitter:description" content="Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of starting current, torque, cost and complexity to help you pick the right one.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="motor-starting-methods-dol-star-delta-vfd-compared.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared", "item": "https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+  "description": "Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of starting current, torque, cost and complexity to help you pick the right one.",
+  "url": "https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Motors &amp; Drives</span>
+    <h1>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</h1>
+    <p class="hero-sub">Every induction motor pulls several times its rated current the instant it's switched on. The four common starting methods don't change that fact of physics &mdash; they just decide how much of it the supply, the breaker, and the driven load actually have to survive.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Motor Starting</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="150" x2="720" y2="150" stroke="#3a4a5e" stroke-width="1.5"/>
+      <line x1="40" y1="150" x2="40" y2="20" stroke="#3a4a5e" stroke-width="1.5"/>
+      <text x="4" y="24" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">I</text>
+      <text x="700" y="164" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">t</text>
+      <line x1="40" y1="112" x2="720" y2="112" stroke="#7e97ac" stroke-width="1" stroke-dasharray="3 4"/>
+      <text x="46" y="108" font-family="IBM Plex Mono" font-size="8.5" fill="#7e97ac">RATED FLC</text>
+      <path d="M40 150 C 90 34, 140 26, 210 108 C 260 150, 700 150, 720 150" fill="none" stroke="#E8626B" stroke-width="2.4"/>
+      <text x="90" y="30" font-family="IBM Plex Mono" font-size="9" fill="#E8626B">DOL &#8776;7&times;</text>
+      <path d="M40 150 C 90 96, 140 92, 210 128 C 260 148, 700 150, 720 150" fill="none" stroke="#F2B84B" stroke-width="2.4"/>
+      <text x="220" y="98" font-family="IBM Plex Mono" font-size="9" fill="#F2B84B">STAR-DELTA &#8776;2.3&times;</text>
+      <path d="M40 150 C 130 108, 220 104, 320 132 C 400 148, 700 150, 720 150" fill="none" stroke="#5FD3E3" stroke-width="2.4"/>
+      <text x="330" y="118" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">SOFT START &#8776;3&times;</text>
+      <path d="M40 150 C 200 136, 380 138, 720 144" fill="none" stroke="#7FD68A" stroke-width="2.4"/>
+      <text x="440" y="132" font-family="IBM Plex Mono" font-size="9" fill="#7FD68A">VFD &#8776;1&ndash;1.5&times;</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">DOL (Direct-On-Line) is the simplest method &mdash; full voltage, full torque, instantly &mdash; but it also pulls the full 6&ndash;8&times; FLC inrush the motor's design allows.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Star-Delta cuts starting current to roughly a third of DOL by starting in star, but starting torque drops to about a third too &mdash; a problem for loads that need torque under load.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Soft starters ramp voltage electronically to limit current to about 2&ndash;4&times; FLC without touching frequency &mdash; a smooth middle ground, especially for pumps and fans.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">VFDs control both voltage and frequency from zero, so starting current can be held down near 1&ndash;1.5&times; FLC &mdash; the most capable method, and the most expensive.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why the starting method matters</h2>
+    <p>An induction motor at standstill looks electrically like a short-circuited transformer &mdash; there's no back-EMF yet to oppose the applied voltage, so the current that flows is limited only by the motor's locked-rotor impedance. That's why a motor started directly across the line can draw 6 to 8 times its full-load current for the second or two it takes to accelerate up to speed. None of the four methods below change that underlying physics; they change how much of that inrush actually reaches the supply and the driven machinery.</p>
+    <div class="chip-grid">
+      <div class="chip"><span class="cdot"></span><span>Voltage dip on the supply bus, which can disturb other connected loads</span></div>
+      <div class="chip"><span class="cdot"></span><span>Nuisance tripping or mis-coordination of upstream protection</span></div>
+      <div class="chip"><span class="cdot"></span><span>Mechanical shock through couplings, belts, gearboxes and the driven load</span></div>
+      <div class="chip"><span class="cdot"></span><span>Extra thermal stress on the windings, worse with frequent starts</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The four methods, side by side</h2>
+    <p>Each method sits at a different point on the cost-vs-control trade-off &mdash; from a single contactor to a full power-electronics drive:</p>
+
+    <div class="method-grid">
+
+      <div class="method-card">
+        <svg class="method-diagram" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="14" x2="20" y2="34" stroke="#7e97ac" stroke-width="2"/>
+          <line x1="10" y1="14" x2="30" y2="14" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="6" y="34" width="28" height="18" rx="2" fill="none" stroke="#F2B84B" stroke-width="2"/>
+          <text x="20" y="46" font-family="IBM Plex Mono" font-size="8" fill="#F2B84B" text-anchor="middle">K1</text>
+          <line x1="20" y1="52" x2="20" y2="72" stroke="#7e97ac" stroke-width="2"/>
+          <circle cx="20" cy="90" r="18" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <text x="20" y="94" font-family="IBM Plex Mono" font-size="10" fill="#5FD3E3" text-anchor="middle">M</text>
+          <text x="70" y="30" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">Supply &rarr; contactor &rarr; motor,</text>
+          <text x="70" y="42" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">full voltage in one step.</text>
+        </svg>
+        <b>1. DOL (Direct-On-Line)</b>
+        <p>A single contactor connects the motor straight across full line voltage. Starting torque is 100% of rated, but so is the electrical and mechanical shock &mdash; suited to small motors where the supply and load can absorb the inrush.</p>
+      </div>
+
+      <div class="method-card">
+        <svg class="method-diagram" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="14" x2="20" y2="30" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="6" y="30" width="28" height="16" rx="2" fill="none" stroke="#F2B84B" stroke-width="2"/>
+          <text x="20" y="41" font-family="IBM Plex Mono" font-size="7.5" fill="#F2B84B" text-anchor="middle">MAIN</text>
+          <line x1="20" y1="46" x2="20" y2="58" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="4" y="58" width="26" height="15" rx="2" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+          <text x="17" y="68" font-family="IBM Plex Mono" font-size="6.5" fill="#5FD3E3" text-anchor="middle">STAR</text>
+          <rect x="34" y="58" width="26" height="15" rx="2" fill="none" stroke="#E8626B" stroke-width="1.6"/>
+          <text x="47" y="68" font-family="IBM Plex Mono" font-size="6.5" fill="#E8626B" text-anchor="middle">DELTA</text>
+          <line x1="20" y1="73" x2="20" y2="88" stroke="#7e97ac" stroke-width="2"/>
+          <line x1="47" y1="73" x2="47" y2="88" stroke="#7e97ac" stroke-width="2"/>
+          <circle cx="33" cy="100" r="14" fill="none" stroke="#7FD68A" stroke-width="2"/>
+          <text x="33" y="104" font-family="IBM Plex Mono" font-size="8" fill="#7FD68A" text-anchor="middle">M</text>
+          <text x="72" y="34" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">Starts in star, a timer</text>
+          <text x="72" y="46" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">switches to delta at speed.</text>
+        </svg>
+        <b>2. Star-Delta (Wye-Delta)</b>
+        <p>The motor starts with its windings in star (line voltage &divide; &radic;3 across each winding), then a timer switches to delta for running. Starting current and torque both drop to about a third of DOL &mdash; needs a six-terminal motor.</p>
+      </div>
+
+      <div class="method-card">
+        <svg class="method-diagram" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="14" x2="20" y2="34" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="6" y="34" width="28" height="26" rx="3" fill="none" stroke="#F2B84B" stroke-width="2"/>
+          <path d="M11 43 L18 52 L11 61 M23 43 L30 52 L23 61" stroke="#F2B84B" stroke-width="1.4" fill="none"/>
+          <line x1="20" y1="60" x2="20" y2="80" stroke="#7e97ac" stroke-width="2"/>
+          <circle cx="20" cy="98" r="16" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <text x="20" y="102" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3" text-anchor="middle">M</text>
+          <path d="M64 20 L64 40 L94 30 Z" fill="none" stroke="#7FD68A" stroke-width="1.5"/>
+          <text x="70" y="52" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">Ramped voltage via</text>
+          <text x="70" y="64" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">back-to-back SCR pairs.</text>
+        </svg>
+        <b>3. Soft Starter</b>
+        <p>Back-to-back thyristor (SCR) pairs on each phase ramp the applied voltage up smoothly over a set time, holding current to roughly 2&ndash;4&times; FLC. Frequency stays fixed &mdash; it's a voltage ramp, not a speed drive.</p>
+      </div>
+
+      <div class="method-card">
+        <svg class="method-diagram" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="16" y1="14" x2="16" y2="30" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="4" y="30" width="24" height="22" rx="3" fill="none" stroke="#F2B84B" stroke-width="2"/>
+          <text x="16" y="44" font-family="IBM Plex Mono" font-size="6.5" fill="#F2B84B" text-anchor="middle">AC-DC</text>
+          <line x1="28" y1="41" x2="42" y2="41" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="42" y="30" width="24" height="22" rx="3" fill="none" stroke="#E8626B" stroke-width="2"/>
+          <text x="54" y="38" font-family="IBM Plex Mono" font-size="6" fill="#E8626B" text-anchor="middle">DC BUS</text>
+          <text x="54" y="47" font-family="IBM Plex Mono" font-size="6" fill="#E8626B" text-anchor="middle">CAP</text>
+          <line x1="66" y1="41" x2="80" y2="41" stroke="#7e97ac" stroke-width="2"/>
+          <rect x="80" y="30" width="24" height="22" rx="3" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <text x="92" y="44" font-family="IBM Plex Mono" font-size="6.5" fill="#5FD3E3" text-anchor="middle">DC-AC</text>
+          <line x1="16" y1="52" x2="16" y2="30" stroke="none"/>
+          <line x1="92" y1="52" x2="92" y2="72" stroke="#7e97ac" stroke-width="2"/>
+          <circle cx="92" cy="90" r="16" fill="none" stroke="#7FD68A" stroke-width="2"/>
+          <text x="92" y="94" font-family="IBM Plex Mono" font-size="9" fill="#7FD68A" text-anchor="middle">M</text>
+          <text x="70" y="18" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">Rectifier &rarr; DC bus &rarr; inverter,</text>
+          <text x="70" y="107" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">variable V &amp; f out</text>
+        </svg>
+        <b>4. VFD (Variable Frequency Drive)</b>
+        <p>Rectifies incoming AC to a DC bus, then an inverter synthesizes a new AC waveform at whatever voltage and frequency the ramp profile calls for &mdash; starting from 0 Hz. Full torque control, adjustable speed, and the gentlest start of the four.</p>
+      </div>
+
+    </div>
+
+    <h2><span class="h2-dot"></span>Comparing them head-to-head</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Method</th><th>Starting current</th><th>Starting torque</th><th>Speed control</th><th>Relative cost</th></tr>
+        <tr><td class="kf-cell">DOL</td><td>6&ndash;8&times; FLC</td><td>100% (full)</td><td>None</td><td>Lowest</td></tr>
+        <tr><td class="kf-cell">Star-Delta</td><td>2&ndash;2.7&times; FLC</td><td>&asymp;33% of DOL</td><td>None</td><td>Low</td></tr>
+        <tr><td class="kf-cell">Soft Starter</td><td>2&ndash;4&times; FLC</td><td>Adjustable, reduced</td><td>None (fixed frequency)</td><td>Moderate</td></tr>
+        <tr class="kf-common"><td class="kf-cell">VFD</td><td>1&ndash;1.5&times; FLC</td><td>Full, controllable</td><td>Full (0&ndash;base speed &amp; beyond)</td><td>Highest</td></tr>
+      </table>
+    </div>
+    <p>Star-delta's current and torque both scale by roughly the same factor because torque is proportional to the square of the applied voltage, and the star connection applies only 1/&radic;3 of line voltage per winding &mdash; (1/&radic;3)&sup2; &asymp; 1/3.</p>
+
+    <h2><span class="h2-dot"></span>How to choose</h2>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Lean toward DOL</b><span>Small motors (typically under ~7.5&ndash;15 kW depending on the supply's fault level), where the local grid and driven equipment can absorb full-voltage inrush without issue.</span></div>
+      <div class="signal-card hot"><b>Lean toward star-delta or soft start</b><span>Pumps, fans and other loads that don't need full torque to break away, where the goal is simply reducing current stress on cables, breakers and the supply.</span></div>
+    </div>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Lean toward VFD</b><span>Conveyors, compressors, and any process needing adjustable running speed, precise torque control, or the gentlest possible mechanical start &mdash; the harmonics it introduces are a trade-off worth checking against IEEE 519.</span></div>
+      <div class="signal-card hot"><b>Always check</b><span>The motor's locked-rotor kVA code letter, the supply's short-circuit capacity, and the driven load's minimum breakaway torque before settling on a method.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Locked-rotor inrush (6&ndash;8&times; FLC) is inherent to how an induction motor starts &mdash; every method manages it, none eliminates it.</span></li>
+      <li><span class="tk-check">✓</span><span>Star-delta trades torque for current in roughly the same 1/3 ratio &mdash; fine for unloaded starts, risky for loads needing breakaway torque.</span></li>
+      <li><span class="tk-check">✓</span><span>Soft starters ramp voltage only; VFDs ramp both voltage and frequency &mdash; that difference is why only a VFD gives real speed control.</span></li>
+      <li><span class="tk-check">✓</span><span>Pick the method against the supply's fault level and the load's breakaway torque, not just against sticker price.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Motor%20Starting%20Methods%3A%20DOL%20vs%20Star-Delta%20vs%20Soft%20Starter%20vs%20VFD%20Compared%20%E2%80%94%20Why%20starting%20current%20matters%2C%20how%20DOL%2C%20star-delta%2C%20soft%20starters%20and%20VFDs%20each%20tame%20it%20differently%2C%20and%20a%20side-by-side%20comparison%20of%20starting%20current%2C%20torque%2C%20cost%20and%20complexity%20to%20help%20you%20pick%20the%20right%20one.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-starting-methods-dol-star-delta-vfd-compared" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-starting-methods-dol-star-delta-vfd-compared" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Motor%20Starting%20Methods%3A%20DOL%20vs%20Star-Delta%20vs%20Soft%20Starter%20vs%20VFD%20Compared&amp;text=Why%20starting%20current%20matters%2C%20how%20DOL%2C%20star-delta%2C%20soft%20starters%20and%20VFDs%20each%20tame%20it%20differently%2C%20and%20a%20side-by-side%20comparison%20of%20starting%20current%2C%20torque%2C%20cost%20and%20complexity%20to%20help%20you%20pick%20the%20right%20one.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-starting-methods-dol-star-delta-vfd-compared" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Motor%20Starting%20Methods%3A%20DOL%20vs%20Star-Delta%20vs%20Soft%20Starter%20vs%20VFD%20Compared&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AMotor%20Starting%20Methods%3A%20DOL%20vs%20Star-Delta%20vs%20Soft%20Starter%20vs%20VFD%20Compared%0AWhy%20starting%20current%20matters%2C%20how%20DOL%2C%20star-delta%2C%20soft%20starters%20and%20VFDs%20each%20tame%20it%20differently%2C%20and%20a%20side-by-side%20comparison%20of%20starting%20current%2C%20torque%2C%20cost%20and%20complexity%20to%20help%20you%20pick%20the%20right%20one.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-starting-methods-dol-star-delta-vfd-compared">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/motor-starting-simulator">Motor Starting Simulator (DOL vs Star-Delta vs VFD) →</a></li><li><a href="../electrical/motor-flc-starting-current">Motor FLC / Starting Current Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="transformer-generator-sizing-motor-starting">Transformer &amp; Generator Sizing: Why Motor Starting Decides the Genset</a></li><li><a href="harmonics-sources-effects-mitigation">Harmonics in Power Systems: Sources, Effects and How to Mitigate Them</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a href="transformer-generator-sizing-motor-starting">Read: Transformer &amp; Generator Sizing for Motor Starting &rarr;</a>
+    <a href="k-rated-transformer-explained">Read: K-Rated Transformers Explained &rarr;</a>
+    <a class="try-tool" href="../electrical/motor-starting-simulator">Try the Motor Starting Simulator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
