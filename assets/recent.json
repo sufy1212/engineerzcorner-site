@@ -1,10 +1,5 @@
 [
   {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-08-03"
-  },
-  {
     "t": "Arc Flash Incident Energy",
     "u": "electrical/arc-flash-incident-energy",
     "d": "2026-08-02"
@@ -12,6 +7,11 @@
   {
     "t": "Belt &amp; Pulley Drive Simulator",
     "u": "mechanical/belt-drive-simulator",
+    "d": "2026-08-02"
+  },
+  {
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
     "d": "2026-08-02"
   }
 ]
