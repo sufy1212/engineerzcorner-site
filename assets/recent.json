@@ -1,17 +1,17 @@
 [
   {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+    "t": "Motor FLC / Starting Current",
+    "u": "electrical/motor-flc-starting-current",
     "d": "2026-08-03"
   },
   {
-    "t": "Arc Flash Incident Energy",
-    "u": "electrical/arc-flash-incident-energy",
-    "d": "2026-08-02"
+    "t": "Motor Starting Simulator",
+    "u": "electrical/motor-starting-simulator",
+    "d": "2026-08-03"
   },
   {
-    "t": "Belt &amp; Pulley Drive Simulator",
-    "u": "mechanical/belt-drive-simulator",
-    "d": "2026-08-02"
+    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+    "d": "2026-08-03"
   }
 ]
