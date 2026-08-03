@@ -1,52 +1,52 @@
 [
   {
-    "t": "Power Transformers Explained: Construction &amp; Working Principle",
-    "u": "posts/power-transformer-construction-working-principle",
+    "t": "Age Calculator",
+    "u": "general/age-calculator",
     "d": "2026-08-03"
   },
   {
-    "t": "Wind Turbines Explained: How Wind Becomes Electricity",
-    "u": "posts/wind-turbine-components-working-principle",
+    "t": "Number Base Converter",
+    "u": "general/base-converter",
     "d": "2026-08-03"
   },
   {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+    "t": "BMI Calculator",
+    "u": "general/bmi-calculator",
     "d": "2026-08-03"
   },
   {
-    "t": "Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load",
-    "u": "posts/transformer-generator-sizing-motor-starting",
+    "t": "Date &amp; Business-Day Calculator",
+    "u": "general/date-calculator",
     "d": "2026-08-03"
   },
   {
-    "t": "Motor FLC / Starting Current",
-    "u": "electrical/motor-flc-starting-current",
+    "t": "Fraction ↔ Decimal (Feet-Inches)",
+    "u": "general/fraction-decimal",
     "d": "2026-08-03"
   },
   {
-    "t": "Motor Starting Simulator",
-    "u": "electrical/motor-starting-simulator",
+    "t": "Markup, Margin &amp; % Change",
+    "u": "general/markup-margin",
     "d": "2026-08-03"
   },
   {
-    "t": "Belt &amp; Pulley Drive Simulator",
-    "u": "mechanical/belt-drive-simulator",
-    "d": "2026-08-02"
+    "t": "Password Generator",
+    "u": "general/password-generator",
+    "d": "2026-08-03"
   },
   {
-    "t": "Level Control Loop Simulator",
-    "u": "automation/level-control-simulator",
-    "d": "2026-08-02"
+    "t": "Percentage Calculator",
+    "u": "general/percentage-calculator",
+    "d": "2026-08-03"
   },
   {
-    "t": "Alarm Setpoint Band Calculator",
-    "u": "automation/alarm-setpoints",
-    "d": "2026-08-02"
+    "t": "Engineering Sanity-Checker",
+    "u": "general/sanity-checker",
+    "d": "2026-08-03"
   },
   {
-    "t": "Deadband / Hysteresis Calculator",
-    "u": "automation/deadband-hysteresis",
-    "d": "2026-08-02"
+    "t": "Site Term Translator",
+    "u": "general/term-translator",
+    "d": "2026-08-03"
   }
 ]
