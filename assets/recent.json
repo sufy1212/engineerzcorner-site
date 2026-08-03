@@ -1,5 +1,10 @@
 [
   {
+    "t": "Wind Turbines Explained: How Wind Becomes Electricity",
+    "u": "posts/wind-turbine-components-working-principle",
+    "d": "2026-08-03"
+  },
+  {
     "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
     "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-08-03"
@@ -42,11 +47,6 @@
   {
     "t": "DP Level Transmitter Ranging",
     "u": "automation/level-transmitter",
-    "d": "2026-08-02"
-  },
-  {
-    "t": "Modbus RTU Timing / Baud Rate Calculator",
-    "u": "automation/modbus-timing",
     "d": "2026-08-02"
   }
 ]
