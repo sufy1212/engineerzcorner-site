@@ -4,7 +4,7 @@
     {t:"Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",u:"posts/solar-panel-derating-factors-explained",d:"2026-07-31"},
     {t:"Flame Retardant vs Flame Resistant Cables: Know the Difference",u:"posts/flame-retardant-vs-flame-resistant-cables",d:"2026-07-30"}
   ];
-  var MAX_ITEMS=8, NEW_DAYS=14;
+  var MAX_ITEMS=10, NEW_DAYS=14;
 
   function fmtDate(d){
     var dt=new Date(d+"T00:00:00");
