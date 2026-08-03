@@ -1,5 +1,15 @@
 [
   {
+    "t": "Breaker / Fuse Sizing Calculator",
+    "u": "electrical/breaker-fuse-sizing-calculator",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Load / Demand Calculator",
+    "u": "electrical/load-demand-calculator",
+    "d": "2026-08-04"
+  },
+  {
     "t": "Age Calculator",
     "u": "general/age-calculator",
     "d": "2026-08-03"
@@ -37,16 +47,6 @@
   {
     "t": "Percentage Calculator",
     "u": "general/percentage-calculator",
-    "d": "2026-08-03"
-  },
-  {
-    "t": "Engineering Sanity-Checker",
-    "u": "general/sanity-checker",
-    "d": "2026-08-03"
-  },
-  {
-    "t": "Site Term Translator",
-    "u": "general/term-translator",
     "d": "2026-08-03"
   }
 ]
