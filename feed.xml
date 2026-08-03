@@ -7,15 +7,8 @@
     <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
     <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
     <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
-    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of current, torque, cost and complexity.</description>
-    <pubDate>Mon, 03 Aug 2026 07:44:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load</title>
-    <link>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting.html</link>
-    <guid>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting.html</guid>
-    <description>Transformer kVA from connected load and demand factor, and why standby generator sizing is governed by motor-starting voltage dip rather than the running load alone.</description>
-    <pubDate>Mon, 03 Aug 2026 07:44:31 GMT</pubDate>
+    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of starting current, torque, cost and complexity.</description>
+    <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
   </item>
   <item>
     <title>HVAC &amp; Plumbing Default Design Values: The Quick Reference</title>
@@ -211,6 +204,20 @@
     <link>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</link>
     <guid>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</guid>
     <description>Why 'on budget' and 'on schedule' need separate proof, what Planned Value, Earned Value and Actual Cost each measure.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</title>
+    <link>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</guid>
+    <description>What an earthing system is actually protecting against, why grid resistance is the number that matters, the factors that drive it.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>What Is an ELV System? Types, Components &amp; the BIM Engineer's Role</title>
+    <link>https://www.engineerzcorner.com/posts/elv-extra-low-voltage-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/elv-extra-low-voltage-systems-explained.html</guid>
+    <description>Extra Low Voltage systems explained: the six categories, how ELV differs from electrical power systems, and where MEP BIM fits in.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
