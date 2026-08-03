@@ -1,17 +1,17 @@
 [
   {
-    "t": "MCB, MCCB, ACB, RCCB &amp; More: Switchgear &amp; Protection Devices Explained",
+    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
     "u": "posts/electrical-switchgear-protection-devices-explained",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Load / Demand Calculator",
-    "u": "electrical/load-demand-calculator",
     "d": "2026-08-04"
   },
   {
     "t": "Breaker / Fuse Sizing Calculator",
     "u": "electrical/breaker-fuse-sizing-calculator",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Load / Demand Calculator",
+    "u": "electrical/load-demand-calculator",
     "d": "2026-08-04"
   },
   {
