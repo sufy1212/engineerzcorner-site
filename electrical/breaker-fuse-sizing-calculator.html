@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breaker / Fuse Sizing Calculator — Engineerz CorneR</title>
+<meta name="description" content="Recommended standard breaker or fuse rating from load current and cable ampacity, with the cable-protection tripping-current check.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/breaker-fuse-sizing-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Breaker / Fuse Sizing Calculator — Engineerz CorneR">
+<meta property="og:description" content="Recommended standard breaker or fuse rating from load current and cable ampacity, with the cable-protection tripping-current check.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/breaker-fuse-sizing-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Breaker / Fuse Sizing Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Recommended standard breaker or fuse rating from load current and cable ampacity, with the cable-protection tripping-current check.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electrical",
+      "item": "https://www.engineerzcorner.com/electrical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Breaker / Fuse Sizing Calculator",
+      "item": "https://www.engineerzcorner.com/electrical/breaker-fuse-sizing-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Breaker / Fuse Sizing Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Recommended standard breaker or fuse rating from load current and cable ampacity, with the cable-protection tripping-current check.",
+  "url": "https://www.engineerzcorner.com/electrical/breaker-fuse-sizing-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Breaker / Fuse Sizing Calculator</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-breakerfuse">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-14h-7z"></path><circle cx="18" cy="6" r="3"></circle></svg></div>
+    <div><h1>Breaker / Fuse Sizing Calculator</h1><div class="hero-sub">Standard device rating from load current and cable ampacity</div></div>
+  </div>
+  <div class="intro">Picks the smallest standard breaker or fuse rating that sits between your design load current and your cable's ampacity (Ib ≤ In ≤ Iz), then checks that the device's conventional tripping current still protects the cable (I2 ≤ 1.45 × Iz) per the standard IEC 60364-4-43 cable-protection rule.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="bfValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Load &amp; Cable</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="bfIb">Design load current, Ib <span class="unit">A</span></label>
+        <input type="number" id="bfIb" value="42" step="1">
+        <div class="hint">The actual current the circuit is designed to carry.</div>
+      </div>
+      <div class="field">
+        <label for="bfIz">Cable ampacity (corrected), Iz <span class="unit">A</span></label>
+        <input type="number" id="bfIz" value="58" step="1">
+        <div class="hint">Derated ampacity for this cable size/installation — from the Cable Sizing Calculator or your datasheet.</div>
+      </div>
+      <div class="field">
+        <label for="bfDevice">Device type</label>
+        <select id="bfDevice">
+          <option value="mcbB">MCB — Curve B (k2 = 1.45)</option>
+          <option value="mcbC" selected>MCB — Curve C (k2 = 1.45)</option>
+          <option value="mcbD">MCB — Curve D (k2 = 1.45)</option>
+          <option value="fuse">Fuse — gG (k2 = 1.6)</option>
+        </select>
+        <div class="hint">Curve sets the instantaneous magnetic trip band; k2 sets the conventional tripping current used for the cable-protection check.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">RECOMMENDED RATING, In</span>
+      <span class="rval" id="bfIn">— <small>A</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Ib ≤ In ≤ Iz</div><div class="sval" id="bfSizingCheck">—</div></div>
+      <div class="stat"><div class="slabel">Conventional trip, I2 (= k2 × In)</div><div class="sval" id="bfI2">—</div></div>
+      <div class="stat"><div class="slabel">Cable protection, I2 ≤ 1.45×Iz</div><div class="sval" id="bfProtectionCheck">—</div></div>
+      <div class="stat"><div class="slabel">Instantaneous trip band</div><div class="sval" id="bfMagBand">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Rating selection: smallest standard In from the series 6, 10, 13, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250, 315, 400, 500, 630 A satisfying <b>In ≥ Ib</b> and <b>In ≤ Iz</b>. Cable protection: <b>I2 = k2 × In</b>, checked against <b>I2 ≤ 1.45 × Iz</b>.
+      </div>
+      <div class="hint" style="margin-top:8px;">k2 = 1.45 for circuit breakers to IEC 60898 and 1.6 for gG fuses to IEC 60269 — both already satisfy I2 ≤ 1.45×Iz automatically once In ≤ Iz for breakers; fuses need the explicit check since k2 is higher. Instantaneous magnetic trip bands (typical): Curve B 3–5×In, Curve C 5–10×In, Curve D 10–20×In — check this against inrush/starting current (e.g. motor starting) to avoid nuisance tripping. This selects a standard device rating only — always verify discrimination/selectivity with upstream and downstream devices, and confirm the breaking capacity (Icu/Icn) against the prospective fault current from the Short Circuit Calculator.</div>
+    </details>
+  </div>
+  <footer>Device rating selection only — verify breaking capacity, selectivity and local code requirements before final selection.</footer>
+</div>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  var STD_RATINGS = [6,10,13,16,20,25,32,40,50,63,80,100,125,160,200,250,315,400,500,630];
+  var MAG_BANDS = { mcbB: '3–5 × In', mcbC: '5–10 × In', mcbD: '10–20 × In', fuse: 'n/a (fuse — no fixed magnetic band)' };
+
+  function calcBreakerFuse(){
+    if(!el('bfIb')) return;
+    var ib = num('bfIb'), iz = num('bfIz'), device = el('bfDevice').value;
+    var errs = 0;
+    errs += fieldError(el('bfIb'), (isNaN(ib) || ib<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('bfIz'), (isNaN(iz) || iz<=0) ? 'Must be greater than 0.' : null);
+    if(errs>0){ updateValidationBanner('bfValidation', errs); return; }
+
+    var k2 = device==='fuse' ? 1.6 : 1.45;
+    var inRating = STD_RATINGS.find(function(r){ return r>=ib; });
+    var sizingOK = inRating!==undefined && inRating<=iz;
+
+    if(inRating===undefined){
+      setText('bfIn', '— <small>A</small>');
+      setText('bfSizingCheck', 'No standard rating covers this load');
+      setText('bfI2', '—');
+      setText('bfProtectionCheck', '—');
+      setText('bfMagBand', '—');
+      var b1 = el('bfValidation');
+      b1.className = 'validation-banner bad';
+      b1.innerHTML = '<span class="vdot"></span><span>Design current exceeds the largest standard rating in this table (630 A) — this needs an MCCB/ACB sizing exercise, not this tool.</span>';
+      return;
+    }
+
+    var i2 = k2*inRating;
+    var protectionOK = i2 <= 1.45*iz;
+
+    setText('bfIn', inRating + ' <small>A</small>');
+    setText('bfSizingCheck', (sizingOK? 'OK — ':'FAILS — ') + fmt(ib,1) + ' ≤ ' + inRating + ' ≤ ' + fmt(iz,1) + ' A');
+    setText('bfI2', fmt(i2,1) + ' A');
+    setText('bfProtectionCheck', (protectionOK? 'OK — ':'FAILS — ') + fmt(i2,1) + ' ≤ ' + fmt(1.45*iz,1) + ' A');
+    setText('bfMagBand', MAG_BANDS[device] + (device!=='fuse' ? ' (' + Math.round(3*inRating) + '–' + Math.round((device==='mcbD'?20:device==='mcbC'?10:5)*inRating) + ' A)' : ''));
+
+    var banner = el('bfValidation');
+    if(!sizingOK){
+      banner.className = 'validation-banner bad';
+      if(inRating>iz){
+        banner.innerHTML = '<span class="vdot"></span><span>Smallest rating that covers the load (' + inRating + ' A) exceeds the cable ampacity (' + fmt(iz,1) + ' A) — increase the cable size or reduce the load.</span>';
+      } else {
+        banner.innerHTML = '<span class="vdot"></span><span>Selected rating does not satisfy Ib ≤ In — check inputs.</span>';
+      }
+    } else if(!protectionOK){
+      banner.className = 'validation-banner bad';
+      banner.innerHTML = '<span class="vdot"></span><span>Conventional tripping current (' + fmt(i2,1) + ' A) exceeds 1.45× cable ampacity — the cable is not fully protected against overload at this rating. Increase the cable size.</span>';
+    } else {
+      updateValidationBanner('bfValidation', 0);
+    }
+  }
+  ['bfIb','bfIz','bfDevice'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcBreakerFuse); e.addEventListener('change', calcBreakerFuse); }
+  });
+  calcBreakerFuse();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
