@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wind Turbines Explained | Engineerz CorneR</title>
+<meta name="description" content="How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path to the grid.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Wind Turbines Explained: How Wind Becomes Electricity, Component by Component">
+<meta property="og:description" content="How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path from nacelle to grid.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wind Turbines Explained: How Wind Becomes Electricity, Component by Component">
+<meta name="twitter:description" content="How a wind turbine converts moving air into grid electricity, component by component.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wind-turbine-components-working-principle.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Wind Turbines Explained: How Wind Becomes Electricity, Component by Component",
+      "item": "https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Wind Turbines Explained: How Wind Becomes Electricity, Component by Component",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+  "description": "How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path from nacelle to grid.",
+  "url": "https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Wind Turbines Explained: How Wind Becomes Electricity, Component by Component</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚙ Mechanical &middot; Renewable Energy</span>
+    <h1>Wind Turbines Explained: How Wind Becomes Electricity</h1>
+    <p class="hero-sub">A turbine doesn't generate grid power directly &mdash; it generates slow, high-torque rotation first, then spends the rest of the nacelle stepping that rotation up and conditioning it into usable electricity. Here's the full path, component by component.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Mechanical / Electrical</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 240" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="220" x2="760" y2="220" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- wind arrows -->
+      <path d="M20 120 h55" stroke="#5FD3E3" stroke-width="2.2" marker-end="url(#arrowcyan2)"/>
+      <path d="M20 140 h55" stroke="#5FD3E3" stroke-width="2.2" marker-end="url(#arrowcyan2)"/>
+      <path d="M20 160 h55" stroke="#5FD3E3" stroke-width="2.2" marker-end="url(#arrowcyan2)"/>
+      <!-- blades + hub -->
+      <g transform="translate(150,150)">
+        <circle cx="0" cy="0" r="10" fill="#122845" stroke="#3E8C97" stroke-width="1.6"/>
+        <path d="M0 0 L0 -95 L14 -80 Z" fill="#18325A" stroke="#5FD3E3" stroke-width="1.4"/>
+        <path d="M0 0 L0 -95 L14 -80 Z" fill="#18325A" stroke="#5FD3E3" stroke-width="1.4" transform="rotate(120)"/>
+        <path d="M0 0 L0 -95 L14 -80 Z" fill="#18325A" stroke="#5FD3E3" stroke-width="1.4" transform="rotate(240)"/>
+      </g>
+      <!-- nacelle -->
+      <rect x="185" y="115" width="330" height="70" rx="8" fill="#122845" stroke="#3E8C97" stroke-width="1.6"/>
+      <!-- low speed shaft -->
+      <rect x="195" y="144" width="50" height="12" fill="#D9782E" opacity=".85"/>
+      <text x="220" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">LOW-SPEED SHAFT</text>
+      <!-- gearbox -->
+      <circle cx="300" cy="150" r="26" fill="#18325A" stroke="#5FD3E3" stroke-width="1.8"/>
+      <circle cx="300" cy="150" r="12" fill="#0A1930" stroke="#D9782E" stroke-width="1.4"/>
+      <text x="300" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">GEARBOX</text>
+      <!-- high speed shaft -->
+      <rect x="330" y="146" width="45" height="8" fill="#D9782E" opacity=".85"/>
+      <text x="352" y="130" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">HIGH-SPEED SHAFT</text>
+      <!-- generator -->
+      <rect x="380" y="128" width="105" height="44" rx="6" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.8"/>
+      <text x="432" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">GENERATOR</text>
+      <!-- anemometer -->
+      <line x1="495" y1="115" x2="495" y2="85" stroke="#8FB0B6" stroke-width="1.4"/>
+      <circle cx="495" cy="80" r="3.5" fill="none" stroke="#5FD3E3" stroke-width="1.4"/>
+      <circle cx="486" cy="90" r="3.5" fill="none" stroke="#5FD3E3" stroke-width="1.4"/>
+      <circle cx="504" cy="90" r="3.5" fill="none" stroke="#5FD3E3" stroke-width="1.4"/>
+      <text x="530" y="75" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">ANEMOMETER</text>
+      <!-- tower -->
+      <path d="M330 185 L350 220 L470 220 L490 185 Z" fill="#122845" stroke="#3E8C97" stroke-width="1.6"/>
+      <!-- yaw motor -->
+      <rect x="500" y="190" width="26" height="22" rx="3" fill="#18325A" stroke="#D9782E" stroke-width="1.4"/>
+      <text x="513" y="182" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">YAW</text>
+      <!-- control cabinet -->
+      <rect x="560" y="120" width="34" height="46" rx="3" fill="#122845" stroke="#3E8C97" stroke-width="1.4"/>
+      <text x="577" y="112" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">CONTROL</text>
+      <!-- power converter -->
+      <rect x="620" y="130" width="34" height="38" rx="3" fill="#122845" stroke="#3E8C97" stroke-width="1.4"/>
+      <text x="637" y="122" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8FB0B6">CONVERTER</text>
+      <!-- transformer -->
+      <rect x="680" y="140" width="42" height="30" rx="3" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.6"/>
+      <text x="701" y="132" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8FB0B6">TRANSFORMER</text>
+      <!-- connections -->
+      <path d="M486 155 L560 145" stroke="#D9782E" stroke-width="1.8" fill="none" marker-end="url(#arroworange2)"/>
+      <path d="M594 145 L620 148" stroke="#D9782E" stroke-width="1.8" fill="none" marker-end="url(#arroworange2)"/>
+      <path d="M654 150 L680 155" stroke="#D9782E" stroke-width="1.8" fill="none" marker-end="url(#arroworange2)"/>
+      <path d="M722 155 L750 165" stroke="#5FD3E3" stroke-width="1.8" fill="none" marker-end="url(#arrowcyan2)"/>
+      <defs>
+        <marker id="arrowcyan2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5FD3E3"/></marker>
+        <marker id="arroworange2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#D9782E"/></marker>
+      </defs>
+      <text x="70" y="105" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">WIND</text>
+      <text x="700" y="200" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">TO GRID</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">The rotor doesn't produce electricity &mdash; it produces slow, high-torque mechanical rotation, typically only 15&ndash;20 RPM.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The gearbox's whole job is speed, not power: it steps that rotation up to over 1,500 RPM so a compact generator can work efficiently.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A generator's raw output is variable-frequency AC &mdash; not grid-ready until a power converter and transformer condition it.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The anemometer and wind vane drive almost every automatic decision the turbine makes, from yaw correction to emergency shutdown.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two conversions, not one</h2>
+    <p>It's tempting to think of a wind turbine as a single machine that turns wind directly into electricity. In reality there are two separate conversions happening in sequence, and understanding both is the key to understanding the whole nacelle. The <b>mechanical stage</b> captures kinetic energy from moving air and turns it into rotating shaft power &mdash; that's the rotor, the low-speed shaft, and the gearbox. The <b>electrical stage</b> takes that shaft power and turns it into usable grid electricity &mdash; that's the generator, the power converter, and the transformer.</p>
+    <p>The gearbox is the hinge between the two stages. Everything before it is about capturing energy from wind as efficiently as possible; everything after it is about turning a fast-spinning shaft into clean, grid-synchronized power.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="9" fill="#122845" stroke="#3E8C97" stroke-width="2"/>
+        <path d="M50 50 L50 12 L60 24 Z" fill="#18325A" stroke="#5FD3E3" stroke-width="1.6"/>
+        <path d="M50 50 L50 12 L60 24 Z" fill="#18325A" stroke="#5FD3E3" stroke-width="1.6" transform="rotate(120 50 50)"/>
+        <path d="M50 50 L50 12 L60 24 Z" fill="#18325A" stroke="#5FD3E3" stroke-width="1.6" transform="rotate(240 50 50)"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>Rotor: Blades &amp; Hub</h3>
+        <ul class="fm-causes">
+          <li>Blades convert the wind's kinetic energy into rotational torque via aerodynamic lift</li>
+          <li>The hub ties all blades together and feeds their combined torque into the low-speed shaft</li>
+          <li>Blade pitch is usually adjustable, letting the rotor shed excess energy in high wind</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="46" width="26" height="8" fill="#D9782E" opacity=".85"/>
+        <circle cx="58" cy="50" r="24" fill="#18325A" stroke="#5FD3E3" stroke-width="2"/>
+        <circle cx="58" cy="50" r="11" fill="#0A1930" stroke="#D9782E" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Low-Speed Shaft &amp; Gearbox</h3>
+        <ul class="fm-causes">
+          <li>Low-speed shaft carries the rotor's high-torque, low-RPM rotation into the nacelle</li>
+          <li>Gearbox steps that rotation up dramatically, often from ~15&ndash;20 RPM to 1,500+ RPM</li>
+          <li>Higher shaft speed is what lets a physically compact generator produce power efficiently</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="44" width="22" height="7" fill="#D9782E" opacity=".85"/>
+        <rect x="30" y="28" width="62" height="44" rx="6" fill="#0A1930" stroke="#5FD3E3" stroke-width="2"/>
+        <circle cx="61" cy="50" r="14" fill="none" stroke="#D9782E" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>High-Speed Shaft &amp; Generator</h3>
+        <ul class="fm-causes">
+          <li>High-speed shaft delivers the gearbox's stepped-up rotation to the generator</li>
+          <li>Generator converts mechanical rotation into electrical current via electromagnetic induction</li>
+          <li>Raw output is variable-frequency AC &mdash; not yet in a form the grid can use directly</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="46" cy="50" r="26" fill="none" stroke="#3E8C97" stroke-width="6" stroke-dasharray="4 4"/>
+        <circle cx="46" cy="50" r="10" fill="#122845" stroke="#5FD3E3" stroke-width="1.6"/>
+        <rect x="72" y="42" width="18" height="16" rx="3" fill="#18325A" stroke="#D9782E" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Yaw System</h3>
+        <ul class="fm-causes">
+          <li>Yaw motor rotates the entire nacelle atop the tower to keep the rotor facing into the wind</li>
+          <li>Yaw drive &mdash; a large toothed ring gear &mdash; is what the motor actually turns the nacelle against</li>
+          <li>Constant realignment is what keeps the rotor capturing close to peak available wind energy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="50" y1="24" x2="50" y2="80" stroke="#8FB0B6" stroke-width="2"/>
+        <circle cx="50" cy="20" r="5" fill="none" stroke="#5FD3E3" stroke-width="1.8"/>
+        <circle cx="34" cy="34" r="5" fill="none" stroke="#5FD3E3" stroke-width="1.8"/>
+        <circle cx="66" cy="34" r="5" fill="none" stroke="#5FD3E3" stroke-width="1.8"/>
+        <path d="M50 80 L38 66 L50 70 L62 66 Z" fill="#D9782E" opacity=".85"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">5</span>Anemometer &amp; Wind Vane</h3>
+        <ul class="fm-causes">
+          <li>Anemometer measures wind speed and feeds it to the turbine's control system</li>
+          <li>Wind vane measures wind direction, triggering the yaw system to reorient the nacelle</li>
+          <li>Same data decides when the turbine starts up, feathers its blades, or shuts down in high wind</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="30" width="24" height="40" rx="3" fill="#122845" stroke="#3E8C97" stroke-width="1.8"/>
+        <rect x="40" y="34" width="22" height="32" rx="3" fill="#122845" stroke="#3E8C97" stroke-width="1.8"/>
+        <rect x="68" y="38" width="26" height="26" rx="3" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.8"/>
+        <path d="M50 42 L45 54 L52 54 L47 66" fill="none" stroke="#D9782E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">6</span>Control Cabinet, Power Converter &amp; Transformer</h3>
+        <ul class="fm-causes">
+          <li>Control cabinet houses the monitoring and control electronics that run the turbine</li>
+          <li>Power converter conditions the generator's variable-frequency output into stable AC</li>
+          <li>Transformer steps voltage up before power is sent out over transmission lines to the grid</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>How the cycle actually runs</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Wind flowing across the blades creates lift, spinning the rotor and hub around the low-speed shaft.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">The low-speed shaft feeds that slow, high-torque rotation into the gearbox.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">The gearbox steps the rotational speed up substantially and drives the high-speed shaft.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">The high-speed shaft spins the generator, which converts mechanical rotation into electrical current.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">The power converter and transformer condition and step up that electricity before it's transmitted to the grid.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>What keeps the rotor pointed the right way</h2>
+    <p>A turbine's output depends heavily on how squarely the rotor faces the wind, and wind direction rarely holds still. The anemometer and wind vane sitting on top of the nacelle continuously report speed and direction back to the control system, which commands the yaw motor to rotate the nacelle as needed. This isn't a one-time setup step &mdash; it runs constantly, in small corrections, for as long as the turbine is operating.</p>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Nacelle</td><td>Housing atop the tower that holds the gearbox, generator, and drivetrain</td></tr>
+        <tr><td>Rotor</td><td>The blades and hub, rotating together as one assembly</td></tr>
+        <tr><td>Yaw system</td><td>Motor + ring gear that rotates the nacelle to track wind direction</td></tr>
+        <tr><td>Pitch control</td><td>Adjusts blade angle to regulate rotor speed and protect the turbine in high wind</td></tr>
+        <tr><td>Cut-in / cut-out speed</td><td>Wind speeds at which the turbine starts producing power / shuts down for safety</td></tr>
+        <tr><td>Power converter</td><td>Electronics that condition variable generator output into grid-compatible AC</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why this architecture is common</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="24" r="12" fill="none" stroke="#D9782E" stroke-width="2"/>
+          <line x1="30" y1="36" x2="30" y2="44" stroke="#D9782E" stroke-width="2"/>
+          <line x1="24" y1="44" x2="36" y2="44" stroke="#D9782E" stroke-width="2"/>
+        </svg>
+        <b>Efficiency</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect x="26" y="14" width="8" height="26" rx="4" fill="none" stroke="#3E8C97" stroke-width="2"/>
+          <circle cx="30" cy="42" r="6" fill="#3E8C97"/>
+        </svg>
+        <b>Grid Compatibility</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="16" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <path d="M22 30 a8 8 0 0 1 16 0" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+        </svg>
+        <b>Automatic Tracking</b>
+      </div>
+    </div>
+    <p>Splitting the machine into a mechanical stage and an electrical stage, joined by a gearbox, is what lets a rotor spinning at a leisurely 15&ndash;20 RPM ultimately produce clean, grid-frequency power. It also isolates maintenance and failure modes &mdash; a gearbox or generator issue doesn't necessarily mean a blade or yaw problem, and vice versa &mdash; which matters a great deal on equipment that's often installed offshore or otherwise hard to reach.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>The rotor produces mechanical rotation, not electricity &mdash; the generator is what makes the actual conversion.</span></li>
+      <li><span class="tk-check">✓</span><span>The gearbox's job is speed, not power: it steps up RPM so a compact generator can operate efficiently.</span></li>
+      <li><span class="tk-check">✓</span><span>Yaw and pitch systems exist purely to keep the rotor working in its efficient range as conditions change.</span></li>
+      <li><span class="tk-check">✓</span><span>A generator's raw output isn't grid-ready &mdash; the power converter and transformer do that conditioning.</span></li>
+      <li><span class="tk-check">✓</span><span>Anemometer and wind vane readings drive nearly every automatic decision the turbine makes.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Wind%20Turbines%20Explained%3A%20How%20Wind%20Becomes%20Electricity%2C%20Component%20by%20Component&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwind-turbine-components-working-principle" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwind-turbine-components-working-principle" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Wind%20Turbines%20Explained%3A%20How%20Wind%20Becomes%20Electricity%2C%20Component%20by%20Component&amp;text=How%20a%20wind%20turbine%20converts%20moving%20air%20into%20grid%20electricity%20%E2%80%94%20rotor%2C%20gearbox%2C%20generator%2C%20yaw%20system%2C%20and%20the%20full%20power%20path%20from%20nacelle%20to%20grid.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwind-turbine-components-working-principle" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Wind%20Turbines%20Explained%3A%20How%20Wind%20Becomes%20Electricity%2C%20Component%20by%20Component&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AWind%20Turbines%20Explained%3A%20How%20Wind%20Becomes%20Electricity%2C%20Component%20by%20Component%0AHow%20a%20wind%20turbine%20converts%20moving%20air%20into%20grid%20electricity%2C%20component%20by%20component.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwind-turbine-components-working-principle">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/transformer-generator-sizing">Transformer / Genset Sizing Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="transformer-generator-sizing-motor-starting">Transformer and Generator Sizing</a></li><li><a href="belt-drive-sizing-speed-ratio-vs-tension">Belt Drive Sizing: Speed Ratio vs. Tension</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
