@@ -147,6 +147,11 @@
     </div>
     <div class="hint" id="nbHint" style="margin:0 16px 16px;">Type in any field — the other three update to match.</div>
   </div>
+  <div class="reftable-section">
+    <h2>Why Convert Between Number Bases</h2>
+    <p class="reftable-note">Decimal (base 10) is what people read; binary (base 2) is what digital logic and PLC registers actually store; hexadecimal (base 16) is the compact shorthand for binary that shows up constantly in Modbus register addresses, memory offsets, and hardware identifiers; octal (base 8) still turns up in Unix file permissions and a handful of legacy addressing schemes. They're all just different alphabets for representing the same integer value.</p><p class="reftable-note">Typical uses: converting a PLC or Modbus register address given in hex into decimal to cross-check it against a datasheet, converting a subnet mask's binary pattern into its decimal octet form, or decoding an octal file-permission value like 755 to see exactly which read/write/execute bits are set for owner, group, and others. Enter a value in any one base and the other three update immediately, since converting between them is really just re-expressing the same number.</p>
+  </div>
+
   <footer>Handles non-negative integers — for signed/two's-complement representations, treat the binary output as unsigned magnitude only.</footer>
 
 </div>
