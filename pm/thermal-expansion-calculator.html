@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231E2226'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23D68A4C' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D68A4C'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipe Thermal Expansion Calculator — Mechanical Toolkit</title>
+<meta name="description" content="Calculate linear thermal expansion of a pipe run from material, length and temperature change.">
+<link rel="canonical" href="https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pipe Thermal Expansion Calculator — Mechanical Toolkit">
+<meta property="og:description" content="Calculate linear thermal expansion of a pipe run from material, length and temperature change.">
+<meta property="og:url" content="https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pipe Thermal Expansion Calculator — Mechanical Toolkit">
+<meta name="twitter:description" content="Calculate linear thermal expansion of a pipe run from material, length and temperature change.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mechanical",
+      "item": "https://www.engineerzcorner.com/mechanical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pipe Thermal Expansion Calculator",
+      "item": "https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pipe Thermal Expansion Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Calculate linear thermal expansion of a pipe run from material, length and temperature change.",
+  "url": "https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Mechanical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Thermal Expansion of Piping</span></div></nav>
+
+
+<div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/pipe-thermal-expansion-why-long-runs-move-more">Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess</a></div></div>
+<main id="mainContent" class="wrap">
+  <p style="margin:18px 0 0;"><a href="../">&larr; Back to full toolkit</a></p>
+<div class="page active" id="page-mech-expansion">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h5l2-6 4 12 2-6h5"></path></svg></div>
+    <div><h1>Thermal Expansion of Piping</h1><div class="hero-sub">Linear growth from temperature change, by material</div></div>
+  </div>
+  <div class="intro">Straight-run linear thermal expansion for a pipe run between anchor points — used to size expansion loops, joints, or guide spacing. Doesn't account for restraint forces, expansion joint selection, or multi-directional runs; treat this as the free (unrestrained) growth a run would experience.</div>
+  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/pipe-thermal-expansion-why-long-runs-move-more" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why long pipe runs move more than intuition suggests &rarr;</a></div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="mteValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Pipe &amp; Temperature Change</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="mteMat">Pipe material</label>
+        <select id="mteMat">
+          <option value="0.0000117">Carbon steel (11.7 µm/m·°C)</option>
+          <option value="0.0000173">Stainless steel (17.3 µm/m·°C)</option>
+          <option value="0.0000170">Copper (17.0 µm/m·°C)</option>
+          <option value="0.0000540">PVC (54.0 µm/m·°C)</option>
+          <option value="0.0002000">HDPE (200 µm/m·°C)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mteL">Run length, L <span class="unit">m</span></label>
+        <input type="number" id="mteL" value="30" step="1">
+      </div>
+      <div class="field">
+        <label for="mteDt">Temperature change, ΔT <span class="unit">°C</span></label>
+        <input type="number" id="mteDt" value="80" step="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">FREE LINEAR EXPANSION</span>
+      <span class="rval" id="mteDl">0.00 <small>mm</small></span>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">ΔL = α · L · ΔT</div>
+      <div class="hint" style="margin-top:8px;">This is the free growth of an unrestrained run. A real installation needs anchors, guides and either expansion loops or joints sized to absorb this movement without overstressing the pipe or its supports.</div>
+    </details>
+  </div>
+  <footer>Free expansion only — expansion loop/joint sizing and support spacing need a full piping stress design.</footer>
+
+  <div class="reftable-section">
+    <h2>About the Thermal Expansion Calculator</h2>
+    <p class="reftable-note">Enter a pipe run's length, its material, and the temperature change it will see in service, and this returns how much that run grows or shrinks in free (unrestrained) expansion. It's the starting figure behind deciding whether a straight run needs an expansion loop, joint, or offset — a run that barely moves might not need one, while a long high-temperature line often will.</p>
+    <p class="reftable-note">This is the free-expansion movement only, not a finished expansion design. Sizing the loop or joint itself, spacing pipe supports and guides, and checking the resulting stress at anchors and branch connections are separate steps that belong to a full piping stress analysis, especially on anything beyond a short, low-temperature run.</p>
+  </div>
+</div>
+
+<!-- PAGE: MH.07B FASTENER TORQUE CALCULATOR -->
+
+</main>
+
+
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
