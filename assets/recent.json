@@ -1,52 +1,52 @@
 [
   {
-    "t": "Cable Glands: What They Do and How to Get the Selection Right",
-    "u": "posts/cable-gland-overview-selection-guide",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
-    "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
-    "u": "posts/electrical-switchgear-protection-devices-explained",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Breaker / Fuse Sizing Calculator",
-    "u": "electrical/breaker-fuse-sizing-calculator",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Load / Demand Calculator",
-    "u": "electrical/load-demand-calculator",
-    "d": "2026-08-04"
-  },
-  {
     "t": "Age Calculator",
     "u": "general/age-calculator",
-    "d": "2026-08-03"
+    "d": "2026-08-04"
   },
   {
     "t": "Number Base Converter",
     "u": "general/base-converter",
-    "d": "2026-08-03"
+    "d": "2026-08-04"
   },
   {
     "t": "BMI Calculator",
     "u": "general/bmi-calculator",
-    "d": "2026-08-03"
+    "d": "2026-08-04"
   },
   {
     "t": "Date &amp; Business-Day Calculator",
     "u": "general/date-calculator",
-    "d": "2026-08-03"
+    "d": "2026-08-04"
   },
   {
     "t": "Fraction ↔ Decimal (Feet-Inches)",
     "u": "general/fraction-decimal",
-    "d": "2026-08-03"
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Markup, Margin &amp; % Change",
+    "u": "general/markup-margin",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Password Generator",
+    "u": "general/password-generator",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Percentage Calculator",
+    "u": "general/percentage-calculator",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Site Term Translator",
+    "u": "general/term-translator",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Time Duration Calculator",
+    "u": "general/time-duration-calculator",
+    "d": "2026-08-04"
   }
 ]
