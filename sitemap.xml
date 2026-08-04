@@ -43,7 +43,7 @@
   <url><loc>https://www.engineerzcorner.com/electrical/arc-flash-incident-energy</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/breaker-fuse-sizing-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/busbar-enclosure-sizing</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/cable-schedule-builder</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/cable-schedule-builder</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/cable-sizing-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/comparisons</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/conduit-fill-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
@@ -59,13 +59,13 @@
   <url><loc>https://www.engineerzcorner.com/electrical/motor-starting-simulator</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/notes</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/panel-ga-maker</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/power-factor-correction</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/power-factor-correction</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/selectivity-coordination-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/short-circuit-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/sld-creator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/sld-creator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/symbol-library</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/three-phase-fault-simulator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/three-phase-power-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/three-phase-power-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/transformer-generator-sizing</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/ups-battery-autonomy-sizing</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/voltage-drop-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
@@ -97,9 +97,9 @@
   <url><loc>https://www.engineerzcorner.com/hvac/duct-sizing-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/guides</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/notes</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/hvac/pipe-insulation-heat-loss-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/hvac/pipe-insulation-heat-loss-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/psychrometric-chart-simulator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/hvac/sensible-heat-airflow-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/hvac/sensible-heat-airflow-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/symbols</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/</loc><lastmod>2026-08-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/automation</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
@@ -119,15 +119,15 @@
   <url><loc>https://www.engineerzcorner.com/mechanical/comparisons</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/duct-sizing-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/guides</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/mechanical/heat-load-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/mechanical/heat-load-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/heat-load-simulator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/notes</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/pipe-flow-head-loss-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/mechanical/pump-fan-affinity-laws-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/mechanical/pump-fan-affinity-laws-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/pump-power-npsh-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/pump-system-curve-simulator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/symbols</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/notes/</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/pm/</loc><lastmod>2026-08-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/pm/commercial-terms</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
