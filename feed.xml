@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Cable Glands: What They Do and How to Get the Selection Right</title>
+    <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
+    <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
+    <pubDate>Tue, 04 Aug 2026 12:01:20 GMT</pubDate>
+  </item>
+  <item>
+    <title>IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification</title>
+    <link>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</guid>
+    <description>How the IEC 60079 / ATEX Zone system (Zone 0/1/2, 20/21/22) compares to the North American NEC Class &amp; Division system — equivalency table, gas/dust groups, temperature classes and Ex protection types explained.</description>
+    <pubDate>Tue, 04 Aug 2026 12:01:20 GMT</pubDate>
+  </item>
+  <item>
     <title>MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</title>
     <link>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</guid>
@@ -144,13 +158,6 @@
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
   <item>
-    <title>Cable Glands: What They Do and How to Get the Selection Right</title>
-    <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
-    <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
     <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
     <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
     <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
     <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cut &amp; Fill Volume: How the Average End Area Method Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</guid>
-    <description>How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>

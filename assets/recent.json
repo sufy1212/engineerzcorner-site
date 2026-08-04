@@ -1,5 +1,15 @@
 [
   {
+    "t": "Cable Glands: What They Do and How to Get the Selection Right",
+    "u": "posts/cable-gland-overview-selection-guide",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
+    "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
+    "d": "2026-08-04"
+  },
+  {
     "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
     "u": "posts/electrical-switchgear-protection-devices-explained",
     "d": "2026-08-04"
@@ -37,16 +47,6 @@
   {
     "t": "Fraction ↔ Decimal (Feet-Inches)",
     "u": "general/fraction-decimal",
-    "d": "2026-08-03"
-  },
-  {
-    "t": "Markup, Margin &amp; % Change",
-    "u": "general/markup-margin",
-    "d": "2026-08-03"
-  },
-  {
-    "t": "Password Generator",
-    "u": "general/password-generator",
     "d": "2026-08-03"
   }
 ]
