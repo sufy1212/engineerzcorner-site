@@ -1,5 +1,20 @@
 [
   {
+    "t": "Meeting Minutes &amp; Action Items",
+    "u": "pm/meeting-minutes",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Action / Task Tracker",
+    "u": "pm/task-tracker",
+    "d": "2026-08-04"
+  },
+  {
+    "t": "Team Directory",
+    "u": "pm/team-directory",
+    "d": "2026-08-04"
+  },
+  {
     "t": "Sensible Heat Load",
     "u": "mechanical/heat-load-calculator",
     "d": "2026-08-04"
@@ -32,21 +47,6 @@
   {
     "t": "Power Factor Correction Sizing",
     "u": "electrical/power-factor-correction",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Single Line Diagram Creator",
-    "u": "electrical/sld-creator",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Three-Phase Power &amp; Current Calculator",
-    "u": "electrical/three-phase-power-calculator",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Cut &amp; Fill Volume (Average End Area)",
-    "u": "civil/cut-fill-volume",
     "d": "2026-08-04"
   }
 ]
