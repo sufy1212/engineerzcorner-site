@@ -1,5 +1,10 @@
 [
   {
+    "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
+    "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
+    "d": "2026-08-05"
+  },
+  {
     "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
     "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-05"
@@ -42,11 +47,6 @@
   {
     "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
     "u": "posts/system-voltages-low-medium-high-explained",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "Application Timeline Planner",
-    "u": "study-abroad/application-timeline-planner",
     "d": "2026-08-05"
   }
 ]

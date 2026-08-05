@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
+    <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
+    <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
+    <description>Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</description>
+    <pubDate>Wed, 05 Aug 2026 20:16:33 GMT</pubDate>
+  </item>
+  <item>
     <title>ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained</title>
     <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</link>
     <guid>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</guid>
     <description>Why a beam's bending capacity comes down to two separate checks — bending stress against section modulus, and deflection against span — not just the applied load.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
-    <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
-    <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
-    <description>Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
