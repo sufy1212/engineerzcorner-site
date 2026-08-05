@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar PV System Components Explained | Engineerz CorneR</title>
+<meta name="description" content="What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy actually flows from sunlight to load.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/solar-pv-system-components-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Solar PV System Components Explained: From Panel to Load">
+<meta property="og:description" content="What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy actually flows from sunlight to load.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/solar-pv-system-components-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solar PV System Components Explained: From Panel to Load">
+<meta name="twitter:description" content="Panels, charge controller, battery bank, inverter, and balance of system — what each one does, and how energy actually flows.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="solar-pv-system-components-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solar PV System Components Explained: From Panel to Load",
+      "item": "https://www.engineerzcorner.com/posts/solar-pv-system-components-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Solar PV System Components Explained: From Panel to Load",
+      "datePublished": "2026-08-05",
+      "dateModified": "2026-08-05",
+  "description": "What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy actually flows from sunlight to load.",
+  "url": "https://www.engineerzcorner.com/posts/solar-pv-system-components-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/solar-pv-system-components-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Solar PV System Components Explained: From Panel to Load</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">☀ Solar &middot; PV Design</span>
+    <h1>Solar PV System Components Explained: From Panel to Load</h1>
+    <p class="hero-sub">A solar array on the roof is only the first link in the chain. Getting usable power out the other end takes a charge controller, a battery bank, an inverter, and a web of balance-of-system parts that rarely get talked about &mdash; here's what each one actually does.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Solar / PV Systems</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 240" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="220" x2="760" y2="220" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- sun -->
+      <circle cx="45" cy="70" r="16" fill="none" stroke="#D9782E" stroke-width="2"/>
+      <path d="M45 42 v-10 M45 98 v10 M17 70 h-10 M73 70 h10 M25 50 l-7 -7 M65 50 l7 -7 M25 90 l-7 7 M65 90 l7 7" stroke="#D9782E" stroke-width="1.8"/>
+      <path d="M60 82 L90 130" stroke="#D9782E" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#arroworange4)"/>
+      <!-- PV panel -->
+      <rect x="88" y="130" width="80" height="50" rx="4" fill="#122845" stroke="#5FD3E3" stroke-width="1.6"/>
+      <line x1="88" y1="147" x2="168" y2="147" stroke="#3E8C97" stroke-width="1"/>
+      <line x1="88" y1="163" x2="168" y2="163" stroke="#3E8C97" stroke-width="1"/>
+      <line x1="115" y1="130" x2="115" y2="180" stroke="#3E8C97" stroke-width="1"/>
+      <line x1="141" y1="130" x2="141" y2="180" stroke="#3E8C97" stroke-width="1"/>
+      <text x="128" y="120" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">PV ARRAY</text>
+      <path d="M168 155 h32" stroke="#D9782E" stroke-width="2" marker-end="url(#arroworange4)"/>
+      <!-- charge controller -->
+      <rect x="205" y="132" width="66" height="46" rx="5" fill="#18325A" stroke="#D9782E" stroke-width="1.6"/>
+      <text x="238" y="122" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8FB0B6">CHARGE</text>
+      <text x="238" y="192" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8FB0B6">CONTROLLER</text>
+      <path d="M271 155 h30" stroke="#D9782E" stroke-width="2" marker-end="url(#arroworange4)"/>
+      <!-- battery bank -->
+      <rect x="306" y="136" width="60" height="38" rx="4" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.6"/>
+      <rect x="362" y="146" width="6" height="18" fill="#5FD3E3"/>
+      <text x="336" y="123" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8FB0B6">BATTERY BANK</text>
+      <path d="M373 155 h30" stroke="#5FD3E3" stroke-width="2" marker-end="url(#arrowcyan4)"/>
+      <!-- inverter -->
+      <rect x="408" y="130" width="70" height="50" rx="5" fill="#122845" stroke="#5FD3E3" stroke-width="1.8"/>
+      <path d="M420 155 h12 l6 -14 8 28 6 -14 h12" fill="none" stroke="#D9782E" stroke-width="1.6" stroke-linejoin="round"/>
+      <text x="443" y="120" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">INVERTER</text>
+      <text x="443" y="192" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#5F7A8C">DC &rarr; AC</text>
+      <path d="M478 155 h30" stroke="#8FB0B6" stroke-width="2" marker-end="url(#arrowcyan4)"/>
+      <!-- load / grid -->
+      <rect x="518" y="135" width="56" height="40" rx="4" fill="#18325A" stroke="#8FB0B6" stroke-width="1.4"/>
+      <path d="M540 145 h20 M540 155 h20 M540 165 h20" stroke="#8FB0B6" stroke-width="1.4"/>
+      <text x="546" y="122" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">LOAD / GRID</text>
+      <!-- BOS monitor node up top -->
+      <rect x="360" y="58" width="76" height="30" rx="5" fill="#18325A" stroke="#5FD3E3" stroke-width="1.4"/>
+      <text x="398" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8FB0B6">BOS / MONITOR</text>
+      <path d="M270 132 L385 88" stroke="#3E8C97" stroke-width="1.2" stroke-dasharray="2 3" fill="none"/>
+      <path d="M443 130 L410 88" stroke="#3E8C97" stroke-width="1.2" stroke-dasharray="2 3" fill="none"/>
+      <defs>
+        <marker id="arrowcyan4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5FD3E3"/></marker>
+        <marker id="arroworange4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#D9782E"/></marker>
+      </defs>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A PV panel produces raw, unregulated DC &mdash; every other component in the chain exists to condition, store, or convert that output into something usable.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The charge controller's whole job is protecting the battery, not the panel &mdash; it throttles current to prevent overcharging as the battery approaches full.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Nothing in a battery-based system runs on AC until the inverter makes it &mdash; panels, controller and battery all stay in the DC domain.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Balance-of-system parts &mdash; combiner boxes, disconnects, monitoring &mdash; carry no energy-conversion job of their own, but the system isn't safe or serviceable without them.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>One array, several conversions</h2>
+    <p>It's easy to picture a solar system as "panels plus batteries," but there are several distinct stages between sunlight hitting a cell and a load actually running. The <b>PV array</b> captures energy and turns it into raw DC. The <b>charge controller</b> regulates that DC before it reaches storage. The <b>battery bank</b> holds energy chemically for later use. The <b>inverter</b> converts stored or incoming DC into the AC most loads and the grid expect. And a set of <b>balance-of-system</b> parts &mdash; wiring, combiner boxes, disconnects, monitoring &mdash; ties the whole thing together safely.</p>
+    <p>Grid-tied systems without batteries skip the charge controller and battery stages, feeding array output straight to an inverter. But the underlying pattern &mdash; generate, regulate, convert, protect &mdash; holds for nearly every PV installation.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14" y="24" width="72" height="46" rx="4" fill="#122845" stroke="#5FD3E3" stroke-width="2"/>
+        <line x1="14" y1="40" x2="86" y2="40" stroke="#3E8C97" stroke-width="1.2"/>
+        <line x1="14" y1="55" x2="86" y2="55" stroke="#3E8C97" stroke-width="1.2"/>
+        <line x1="38" y1="24" x2="38" y2="70" stroke="#3E8C97" stroke-width="1.2"/>
+        <line x1="62" y1="24" x2="62" y2="70" stroke="#3E8C97" stroke-width="1.2"/>
+        <circle cx="50" cy="14" r="6" fill="none" stroke="#D9782E" stroke-width="1.8"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>PV Modules (Panels)</h3>
+        <ul class="fm-causes">
+          <li>Photovoltaic cells convert sunlight directly into DC electricity through the photovoltaic effect</li>
+          <li>Rated output is measured at Standard Test Conditions (STC) &mdash; real-world output is almost always lower</li>
+          <li>Modules are wired in series into strings to build up array voltage, then strings combine to build current</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="20" width="48" height="60" rx="5" fill="#18325A" stroke="#D9782E" stroke-width="2"/>
+        <path d="M38 44 L48 44 L44 56 L58 56 L44 76" fill="none" stroke="#D9782E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="50" cy="30" r="3" fill="#5FD3E3"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Charge Controller</h3>
+        <ul class="fm-causes">
+          <li>Sits between the array and battery, regulating current so the battery charges without being overcharged</li>
+          <li>MPPT controllers track the panel's peak power point for higher efficiency; PWM controllers are simpler and cheaper</li>
+          <li>Sized against both array output and battery bank voltage &mdash; a mismatch here is one of the most common sizing mistakes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="28" width="60" height="42" rx="4" fill="#0A1930" stroke="#5FD3E3" stroke-width="2"/>
+        <rect x="76" y="40" width="8" height="18" fill="#5FD3E3"/>
+        <line x1="30" y1="40" x2="30" y2="58" stroke="#D9782E" stroke-width="2"/>
+        <line x1="22" y1="49" x2="38" y2="49" stroke="#D9782E" stroke-width="2"/>
+        <line x1="48" y1="49" x2="64" y2="49" stroke="#D9782E" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>Battery Bank</h3>
+        <ul class="fm-causes">
+          <li>Stores surplus DC energy chemically so it's available when the array isn't producing &mdash; at night or in cloudy weather</li>
+          <li>Usable capacity depends on chemistry and depth of discharge (DOD), not just the nameplate Ah rating</li>
+          <li>Battery voltage sets the DC bus voltage that the charge controller and inverter both have to match</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="22" width="60" height="56" rx="5" fill="#122845" stroke="#5FD3E3" stroke-width="2"/>
+        <path d="M32 50 h10 l5 -14 8 28 5 -14 h10" fill="none" stroke="#D9782E" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Inverter</h3>
+        <ul class="fm-causes">
+          <li>Converts DC from the array or battery bank into AC power that standard loads &mdash; or the grid &mdash; can actually use</li>
+          <li>Grid-tie inverters synchronize output to grid frequency and voltage; off-grid inverters create their own AC reference</li>
+          <li>Hybrid inverters combine both roles, drawing from array or battery and optionally exporting surplus to the grid</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14" y="14" width="30" height="26" rx="3" fill="#18325A" stroke="#5FD3E3" stroke-width="1.6"/>
+        <rect x="56" y="14" width="30" height="26" rx="3" fill="#18325A" stroke="#5FD3E3" stroke-width="1.6"/>
+        <rect x="35" y="58" width="30" height="26" rx="3" fill="#18325A" stroke="#D9782E" stroke-width="1.6"/>
+        <path d="M29 40 L29 50 L50 50 L50 58" stroke="#3E8C97" stroke-width="1.4" fill="none"/>
+        <path d="M71 40 L71 50 L50 50" stroke="#3E8C97" stroke-width="1.4" fill="none"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">5</span>Balance of System (BOS)</h3>
+        <ul class="fm-causes">
+          <li>Combiner boxes bring multiple strings together; disconnects provide safe isolation points for maintenance</li>
+          <li>Mounting and racking hardware sets array tilt and orientation, and has to handle real wind and snow loads</li>
+          <li>Monitoring hardware tracks production and system health, often the only visibility into a fault before it grows</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>How energy actually flows</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Sunlight strikes the PV array, generating DC current roughly proportional to irradiance.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">The charge controller regulates that DC output, feeding it into the battery bank without overcharging it.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">The battery bank stores surplus energy chemically for use whenever the array isn't producing enough.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">The inverter draws DC from the battery or array and converts it into AC power for loads or the grid.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Balance-of-system components &mdash; combiners, disconnects, monitoring &mdash; protect and report on the whole chain throughout.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why the battery and inverter stay separate</h2>
+    <p>It might seem simpler to build storage and conversion into one box, and some hybrid products do exactly that. But keeping the battery bank and inverter as distinct components has real advantages: a battery chemistry or capacity upgrade doesn't force an inverter replacement, and an inverter fault doesn't strand stored energy behind it. The DC bus voltage is the contract between them &mdash; as long as both sides agree on it, either can be swapped, sized up, or serviced independently.</p>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>STC</td><td>Standard Test Conditions &mdash; the lab conditions a panel's nameplate rating assumes</td></tr>
+        <tr><td>String</td><td>A set of panels wired in series to build up array voltage</td></tr>
+        <tr><td>DOD</td><td>Depth of Discharge &mdash; how much of a battery's capacity is used before recharging</td></tr>
+        <tr><td>MPPT</td><td>Maximum Power Point Tracking &mdash; a charge controller technique that follows the panel's peak output point</td></tr>
+        <tr><td>BOS</td><td>Balance of System &mdash; every non-generating, non-storage part: wiring, combiners, disconnects, mounting, monitoring</td></tr>
+        <tr><td>DC bus voltage</td><td>The system voltage the battery bank, charge controller and inverter all have to share</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why this architecture is common</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="16" fill="none" stroke="#3E8C97" stroke-width="2"/>
+          <path d="M30 22 v8 l6 4" stroke="#3E8C97" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <b>Safety</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="24" r="12" fill="none" stroke="#D9782E" stroke-width="2"/>
+          <line x1="30" y1="36" x2="30" y2="44" stroke="#D9782E" stroke-width="2"/>
+          <line x1="24" y1="44" x2="36" y2="44" stroke="#D9782E" stroke-width="2"/>
+        </svg>
+        <b>Efficiency</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 44 L22 30 L32 36 L48 16" fill="none" stroke="#5FD3E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <b>Monitoring</b>
+      </div>
+    </div>
+    <p>Splitting a PV system into generation, regulation, storage and conversion stages is what makes it both safe and serviceable. Isolating the battery behind a charge controller protects an expensive asset from a cheap mistake; keeping the inverter separate means a fault there doesn't touch stored energy; and BOS components give installers and monitoring systems a clear point to isolate, measure, or troubleshoot any single stage without shutting down the rest.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>A PV panel produces raw DC &mdash; every downstream component exists to regulate, store, or convert that output into something usable.</span></li>
+      <li><span class="tk-check">✓</span><span>The charge controller protects the battery, not the panel, throttling current as the battery approaches full charge.</span></li>
+      <li><span class="tk-check">✓</span><span>Nothing runs on AC until the inverter makes it &mdash; panels, controller and battery all stay in the DC domain.</span></li>
+      <li><span class="tk-check">✓</span><span>Grid-tied systems without batteries skip the charge controller and battery stages entirely, going straight from array to inverter.</span></li>
+      <li><span class="tk-check">✓</span><span>Balance-of-system parts carry no conversion job of their own, but the system isn't safe or serviceable without them.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Solar%20PV%20System%20Components%20Explained%3A%20From%20Panel%20to%20Load&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-pv-system-components-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-pv-system-components-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Solar%20PV%20System%20Components%20Explained%3A%20From%20Panel%20to%20Load&amp;text=What%27s%20actually%20in%20a%20solar%20PV%20system%20%E2%80%94%20panels%2C%20charge%20controller%2C%20battery%20bank%2C%20inverter%2C%20and%20balance%20of%20system%20%E2%80%94%20and%20how%20energy%20actually%20flows%20from%20sunlight%20to%20load.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-pv-system-components-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Solar%20PV%20System%20Components%20Explained%3A%20From%20Panel%20to%20Load&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ASolar%20PV%20System%20Components%20Explained%3A%20From%20Panel%20to%20Load%0AWhat%27s%20actually%20in%20a%20solar%20PV%20system%2C%20component%20by%20component.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-pv-system-components-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../solar/solar-sizing-calculator">Solar Sizing Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="mppt-vs-pwm-solar-charge-controllers">MPPT vs PWM Solar Charge Controllers</a></li><li><a href="solar-panel-derating-factors-explained">Solar Panel Derating Factors Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
