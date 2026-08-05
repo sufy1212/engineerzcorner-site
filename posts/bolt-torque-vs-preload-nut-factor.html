@@ -70,6 +70,40 @@
     <p class="hero-sub">Most of the torque applied to a bolt fights friction, not clamp load &mdash; which is exactly why a torque spec is only as good as the nut factor it assumes.</p>
     <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Bolt Torque</span></div>
   </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 175" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="155" x2="760" y2="155" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- bolt head (hex) -->
+      <polygon points="100,72 112,65 124,72 124,88 112,95 100,88" fill="#122845" stroke="#8FB0B6" stroke-width="1.5"/>
+      <!-- applied torque arrow around head -->
+      <path d="M92,58 A30,30 0 1 1 88,100" fill="none" stroke="#5FD3E3" stroke-width="1.8" marker-end="url(#arrowT)"/>
+      <text x="46" y="52" font-family="IBM Plex Mono" font-size="10" fill="#5FD3E3" font-weight="600">T (applied)</text>
+      <!-- shank through clamped plates -->
+      <rect x="124" y="76" width="220" height="8" fill="#8FB0B6"/>
+      <rect x="150" y="45" width="60" height="70" fill="#18325A" stroke="#8FB0B6" stroke-width="1.3"/>
+      <rect x="215" y="45" width="60" height="70" fill="#18325A" stroke="#8FB0B6" stroke-width="1.3"/>
+      <text x="150" y="38" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">CLAMPED PLATES</text>
+      <!-- clamp force arrows squeezing at the interface -->
+      <line x1="200" y1="130" x2="210" y2="116" stroke="#F2B84B" stroke-width="2" marker-end="url(#arrowF)"/>
+      <line x1="230" y1="130" x2="220" y2="116" stroke="#F2B84B" stroke-width="2" marker-end="url(#arrowF)"/>
+      <text x="178" y="145" font-family="IBM Plex Mono" font-size="9.5" fill="#F2B84B" font-weight="600">F &middot; clamp load</text>
+      <!-- nut (hex) -->
+      <polygon points="344,72 356,65 368,72 368,88 356,95 344,88" fill="#122845" stroke="#8FB0B6" stroke-width="1.5"/>
+      <text x="330" y="112" font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">NUT</text>
+      <!-- torque breakdown bar -->
+      <text x="470" y="38" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" font-weight="600">WHERE THE APPLIED TORQUE GOES</text>
+      <rect x="470" y="48" width="130" height="20" fill="#D9782E"/>
+      <rect x="600" y="48" width="104" height="20" fill="#3E8C97"/>
+      <rect x="704" y="48" width="26" height="20" fill="#5FD3E3"/>
+      <text x="470" y="83" font-family="IBM Plex Mono" font-size="8" fill="#D9782E">Thread friction ~50%</text>
+      <text x="600" y="97" font-family="IBM Plex Mono" font-size="8" fill="#3E8C97">Head friction ~40%</text>
+      <text x="600" y="111" font-family="IBM Plex Mono" font-size="8" fill="#5FD3E3">Useful clamp load ~10%</text>
+      <defs>
+        <marker id="arrowT" markerWidth="7" markerHeight="7" refX="4" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#5FD3E3"/></marker>
+        <marker id="arrowF" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#F2B84B"/></marker>
+      </defs>
+    </svg>
+  </div>
 </div>
 
 <div class="wrap">
