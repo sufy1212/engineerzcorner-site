@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases | Engineerz CorneR</title>
+<meta name="description" content="Voltage classification from ELV to UHV explained &mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="System Voltages Explained: LV, MV, HV, EHV &amp; Phase Configurations">
+<meta property="og:description" content="Voltage classification from ELV to UHV explained &mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="System Voltages Explained: LV, MV, HV, EHV &amp; Phase Configurations">
+<meta name="twitter:description" content="Voltage classification from ELV to UHV explained &mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="system-voltages-low-medium-high-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "System Voltages Explained: Low, Medium & High Voltage Levels and Phases", "item": "https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "System Voltages Explained: Low, Medium & High Voltage Levels and Phases",
+      "datePublished": "2026-08-05",
+      "dateModified": "2026-08-05",
+  "description": "Voltage classification from ELV to UHV explained \u2014 IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.",
+  "url": "https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Power Systems</span>
+    <h1>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</h1>
+    <p class="hero-sub">Every drawing, nameplate, and spec sheet leans on a voltage class &mdash; LV, MV, HV &mdash; that isn't defined the same way twice. Here's how the bands actually break down, the standard values that recur worldwide, and how single-phase and three-phase fit into all of it.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Power Systems / Voltage Classification</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 780 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="130" x2="780" y2="130" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="50" y="110" width="34" height="20" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+      <rect x="150" y="95" width="34" height="35" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+      <rect x="250" y="75" width="34" height="55" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+      <rect x="350" y="50" width="34" height="80" fill="none" stroke="#D9782E" stroke-width="1.6"/>
+      <rect x="450" y="20" width="34" height="110" fill="none" stroke="#D9782E" stroke-width="1.6"/>
+      <circle class="signal-ping" cx="600" cy="60" r="4" fill="none" stroke="#D9782E" stroke-width="1.5"/>
+      <circle class="signal-ping" cx="600" cy="60" r="10" fill="none" stroke="#D9782E" stroke-width="1"/>
+      <circle class="signal-ping" cx="600" cy="60" r="17" fill="none" stroke="#D9782E" stroke-width=".8"/>
+      <text x="45" y="145" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">ELV</text>
+      <text x="150" y="145" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">LV</text>
+      <text x="250" y="145" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">MV</text>
+      <text x="350" y="145" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">HV</text>
+      <text x="440" y="145" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">EHV / UHV</text>
+      <text x="575" y="90" font-family="IBM Plex Mono" font-size="9" fill="#D9782E">1&#966; / 3&#966;</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Voltage bands aren't universal &mdash; IEC and IEEE/ANSI draw the LV/MV/HV lines at different points, so always check which standard a spec is actually citing.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Everything from ELV control circuits to UHV transmission lines runs on one of two phase families: single-phase for light loads, three-phase for balanced power.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Standard voltage values &mdash; 230/400V, 11kV, 33kV, 132kV, 400kV &mdash; recur worldwide because they're set by grid codes and equipment standards, not chosen at random.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Most quoted voltages are RMS values, and whether a figure is line-to-line or line-to-neutral is often the first thing worth double-checking on a drawing.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why "low, medium, high voltage" isn't one fixed line</h2>
+    <p>Ask an IEC-trained engineer where medium voltage ends and high voltage begins, and you'll get a different number than from someone working off IEEE/ANSI documents or a specific national grid code. The underlying idea is the same everywhere &mdash; group system voltages into bands so that insulation levels, clearances, switchgear design, and safety procedures can be standardized within each band &mdash; but the exact cut-off numbers shift depending on which document, country, or utility is being referenced. Treat the ranges below as the commonly used bands, not a single universal law.</p>
+
+    <h2><span class="h2-dot"></span>The voltage classes, ELV to UHV</h2>
+    <div class="lede">Typical ranges seen across IEC and IEEE/ANSI practice, with standard values that show up repeatedly on real projects</div>
+
+    <div class="cat-grid">
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#0E7C86;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          ELV &mdash; Extra Low Voltage
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">&le; 50V AC / &le; 120V DC. Not usually classed as a power voltage at all &mdash; it's the band used for control and signal circuits.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#0E7C86;"></span>12V / 24V DC</span>
+            <span class="chip"><span class="dot" style="background:#0E7C86;"></span>48V DC</span>
+            <span class="chip"><span class="dot" style="background:#0E7C86;"></span>&lt; 50V AC</span>
+          </div>
+          <div class="key-func"><b>Typical use</b><ul><li>PLC / control I/O</li><li>Instrumentation loops</li><li>Fire &amp; security systems</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#1B3A66;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="10" y1="10" x2="10" y2="20"/></svg>
+          LV &mdash; Low Voltage
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">Roughly 50V&ndash;1000V AC. Covers almost every utilization voltage a building, home, or plant actually runs equipment on.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#1B3A66;"></span>230/400V</span>
+            <span class="chip"><span class="dot" style="background:#1B3A66;"></span>120/208V</span>
+            <span class="chip"><span class="dot" style="background:#1B3A66;"></span>277/480V</span>
+          </div>
+          <div class="key-func"><b>Typical use</b><ul><li>Lighting &amp; socket outlets</li><li>Small &amp; medium motors</li><li>Distribution boards</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#1E824C;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>
+          MV &mdash; Medium Voltage
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">From 1kV up to roughly 35kV, though some utilities and IEEE references push the upper limit as far as 69kV.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#1E824C;"></span>3.3 / 6.6kV</span>
+            <span class="chip"><span class="dot" style="background:#1E824C;"></span>11 / 13.8kV</span>
+            <span class="chip"><span class="dot" style="background:#1E824C;"></span>22 / 33kV</span>
+          </div>
+          <div class="key-func"><b>Typical use</b><ul><li>Primary distribution</li><li>Large motor feeders</li><li>Substation infeed</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#C97A1B;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg>
+          HV &mdash; High Voltage
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">From the top of MV up to roughly 230kV &mdash; the workhorse range for sub-transmission and regional transmission networks.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#C97A1B;"></span>66kV</span>
+            <span class="chip"><span class="dot" style="background:#C97A1B;"></span>132kV</span>
+            <span class="chip"><span class="dot" style="background:#C97A1B;"></span>220 / 230kV</span>
+          </div>
+          <div class="key-func"><b>Typical use</b><ul><li>Sub-transmission</li><li>Grid interconnection</li><li>Large substations</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#C62828;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 6 14h5l-2 7 11-11h-5z"/></svg>
+          EHV &mdash; Extra High Voltage
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">Roughly 230kV&ndash;800kV, used for bulk power transmission over long distances to keep line losses manageable.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#C62828;"></span>400kV</span>
+            <span class="chip"><span class="dot" style="background:#C62828;"></span>500kV</span>
+            <span class="chip"><span class="dot" style="background:#C62828;"></span>765kV</span>
+          </div>
+          <div class="key-func"><b>Typical use</b><ul><li>Bulk long-distance transmission</li><li>National grid backbones</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#6A3FA0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+          UHV &mdash; Ultra High Voltage
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">Above 800kV. A small group of countries with very large grids run at this level to move huge blocks of power efficiently.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#6A3FA0;"></span>800kV</span>
+            <span class="chip"><span class="dot" style="background:#6A3FA0;"></span>1100kV</span>
+          </div>
+          <div class="key-func"><b>Typical use</b><ul><li>Cross-country bulk transmission</li><li>China, India-scale grids</li></ul></div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2><span class="h2-dot"></span>IEC vs IEEE/ANSI: where the lines are drawn</h2>
+    <p>The concept of ELV, LV, MV, and HV is shared across standards bodies, but the exact boundary voltages differ &mdash; and national codes often diverge from both. A commonly cited example: the US NEC treated 600V as the ceiling for "low voltage" for decades before more recent code cycles raised that figure to 1000V, bringing US practice closer to the IEC line.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Class</th><th>Commonly used range</th><th>Notes</th></tr>
+        <tr><td class="param-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>ELV</td><td>&le; 50V AC / 120V DC</td><td>Consistent across IEC and most ANSI-influenced references</td></tr>
+        <tr><td class="param-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/></svg>LV</td><td>50V &ndash; 1000V AC</td><td>Older US code practice historically capped LV at 600V</td></tr>
+        <tr><td class="param-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/></svg>MV</td><td>1kV &ndash; 35kV</td><td>Some IEEE references and utilities extend this up to 69kV</td></tr>
+        <tr><td class="param-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>HV</td><td>35kV &ndash; 230kV</td><td>Broad agreement between IEC and IEEE/ANSI practice</td></tr>
+        <tr><td class="param-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 6 14h5l-2 7 11-11h-5z"/></svg>EHV</td><td>230kV &ndash; 800kV</td><td>Broad agreement; national grid codes set the exact steps</td></tr>
+        <tr><td class="param-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>UHV</td><td>&gt; 800kV</td><td>Rare; mainly China, India, and Brazil-scale interconnections</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Standard system voltages used worldwide</h2>
+    <p>Within each band, only a handful of nominal values actually get used &mdash; set by grid codes, transformer standards, and equipment ratings rather than picked freely on a project-by-project basis.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Region</th><th>LV utilization</th><th>MV distribution</th><th>HV / EHV transmission</th></tr>
+        <tr><td class="param-cell">North America</td><td>120/240V split-phase, 120/208V &amp; 277/480V 3&#966;</td><td>4.16kV, 12.47kV, 13.8kV, 34.5kV</td><td>69kV, 138kV, 230kV, 345kV, 500kV</td></tr>
+        <tr><td class="param-cell">Europe / IEC-aligned</td><td>230/400V three-phase</td><td>6.6kV, 11kV, 20kV, 33kV</td><td>132kV, 220kV, 400kV</td></tr>
+        <tr><td class="param-cell">UK / Australia / India</td><td>230/415V three-phase</td><td>11kV, 22kV, 33kV</td><td>132kV, 220kV, 400kV</td></tr>
+        <tr><td class="param-cell">Japan</td><td>100/200V</td><td>6.6kV</td><td>66kV, 154kV, 275kV, 500kV</td></tr>
+      </table>
+    </div>
+    <p>These are the values that recur most often on real single-line diagrams for each region &mdash; but they're a starting reference, not a substitute for the local utility's grid code or connection standard.</p>
+
+    <h2><span class="h2-dot"></span>Phases available: single-phase vs three-phase</h2>
+    <div class="lede">Whatever the voltage class, the electricity itself only arrives in one of a few phase configurations</div>
+
+    <div class="cat-grid">
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#1B3A66;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-6 6-6 8 0s6 6 8 0"/></svg>
+          Single-phase (2-wire)
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">One live conductor plus neutral, carrying a single sinusoidal voltage. The default for small residential and light commercial loads.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#1B3A66;"></span>Domestic lighting</span>
+            <span class="chip"><span class="dot" style="background:#1B3A66;"></span>Small appliances</span>
+            <span class="chip"><span class="dot" style="background:#1B3A66;"></span>Single-phase motors</span>
+          </div>
+          <div class="key-func"><b>Key point</b><ul><li>Supplies one usable voltage only</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#1E824C;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-6 6-6 8 0s6 6 8 0"/><path d="M2 12c2 6 6 6 8 0s6-6 8 0" opacity=".4"/></svg>
+          Split-phase (3-wire)
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">Two 120V legs, 180&deg; apart, from a center-tapped LV transformer &mdash; the standard residential service in North America.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#1E824C;"></span>120V leg-to-neutral</span>
+            <span class="chip"><span class="dot" style="background:#1E824C;"></span>240V leg-to-leg</span>
+          </div>
+          <div class="key-func"><b>Key point</b><ul><li>120V for lighting/outlets, 240V for dryers, ranges &amp; AC from one service</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#C97A1B;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 20h16z"/></svg>
+          Three-phase delta (3-wire)
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">Three lines with no neutral conductor (aside from high-leg or corner-grounded variants). Common through MV networks and industrial power.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#C97A1B;"></span>No neutral</span>
+            <span class="chip"><span class="dot" style="background:#C97A1B;"></span>Balanced line-to-line</span>
+          </div>
+          <div class="key-func"><b>Key point</b><ul><li>Feeds three-phase loads such as motors and MV networks</li></ul></div>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-head" style="background:#6A3FA0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="4" x2="12" y2="9"/><line x1="5.5" y1="16" x2="9.5" y2="13.5"/><line x1="18.5" y1="16" x2="14.5" y2="13.5"/></svg>
+          Three-phase wye / star (4-wire)
+        </div>
+        <div class="cat-body">
+          <p class="cat-desc">Three lines plus a neutral from a star-connected source, giving two usable voltages from the same service.</p>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#6A3FA0;"></span>230/400V</span>
+            <span class="chip"><span class="dot" style="background:#6A3FA0;"></span>120/208V</span>
+            <span class="chip"><span class="dot" style="background:#6A3FA0;"></span>277/480V</span>
+          </div>
+          <div class="key-func"><b>Key point</b><ul><li>The most common LV utility arrangement &mdash; feeds single-phase and three-phase loads together</li></ul></div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2><span class="h2-dot"></span>What this means when you're reading a drawing or spec</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Confirm which standard the "LV/MV/HV" label on a drawing is referencing &mdash; IEC, IEEE/ANSI, or a specific utility grid code &mdash; before assuming a boundary.</span></li>
+      <li><span class="ck-mark">2</span><span>Check whether a quoted voltage is line-to-line or line-to-neutral before it goes into a load or cable calculation.</span></li>
+      <li><span class="ck-mark">3</span><span>Match cable, switchgear, and transformer insulation ratings to the actual system voltage class, not just the nameplate utilization voltage.</span></li>
+      <li><span class="ck-mark">4</span><span>Verify delta vs wye connection on three-phase equipment before sizing protection devices and neutral conductors.</span></li>
+      <li><span class="ck-mark">5</span><span>Cross-check local standard voltages before specifying imported equipment for an unfamiliar country or utility.</span></li>
+      <li><span class="ck-mark">6</span><span>Remember that split-phase, delta, and wye services deliver different usable voltage pairs from the same nominal system &mdash; don't assume every "three-phase" service exposes the same numbers.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Voltage classes &mdash; ELV, LV, MV, HV, EHV, UHV &mdash; are defined differently by IEC, IEEE/ANSI, and individual utilities, so the boundary numbers shift depending on the source document.</span></li>
+      <li><span class="tk-check">✓</span><span>LV runs up to roughly 1kV, MV picks up from there to about 35kV (sometimes 69kV), HV continues to about 230kV, and EHV/UHV cover bulk transmission above that.</span></li>
+      <li><span class="tk-check">✓</span><span>Only two phase families exist in practice: single-phase (including split-phase) for light loads, and three-phase (delta or wye) for balanced power distribution and motors.</span></li>
+      <li><span class="tk-check">✓</span><span>Standard LV utilization voltages cluster around 230/400V and 120/208&ndash;277/480V worldwide; standard MV distribution voltages cluster around 11kV, 22kV, and 33kV.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=System%20Voltages%20Explained%3A%20Low%2C%20Medium%20%26amp%3B%20High%20Voltage%20Levels%20and%20Phases%20%E2%80%94%20Voltage%20classification%20from%20ELV%20to%20UHV%20explained%20%E2%80%94%20IEC%20vs%20IEEE%20ranges%2C%20standard%20system%20voltages%20used%20worldwide%2C%20and%20single-phase%20vs%20three-phase%20configurations.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsystem-voltages-low-medium-high-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsystem-voltages-low-medium-high-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=System%20Voltages%20Explained%3A%20Low%2C%20Medium%20%26amp%3B%20High%20Voltage%20Levels%20and%20Phases&amp;text=Voltage%20classification%20from%20ELV%20to%20UHV%20explained%20%E2%80%94%20IEC%20vs%20IEEE%20ranges%2C%20standard%20system%20voltages%20used%20worldwide%2C%20and%20single-phase%20vs%20three-phase%20configurations.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsystem-voltages-low-medium-high-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=System%20Voltages%20Explained%3A%20Low%2C%20Medium%20%26amp%3B%20High%20Voltage%20Levels%20and%20Phases&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ASystem%20Voltages%20Explained%3A%20Low%2C%20Medium%20%26amp%3B%20High%20Voltage%20Levels%20and%20Phases%0AVoltage%20classification%20from%20ELV%20to%20UHV%20explained%20%E2%80%94%20IEC%20vs%20IEEE%20ranges%2C%20standard%20system%20voltages%20used%20worldwide%2C%20and%20single-phase%20vs%20three-phase%20configurations.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsystem-voltages-low-medium-high-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/three-phase-power-calculator">Three-Phase Power &amp; Current →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="electrical-switchgear-protection-devices-explained">MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</a></li><li><a href="33-11kv-substation-diagram-equipment-overview">33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</a></li><li><a href="power-transformer-construction-working-principle">Power Transformers Explained: Construction &amp; Working Principle</a></li><li><a href="elv-extra-low-voltage-systems-explained">What Is an ELV System? Types, Components &amp; the BIM Engineer's Role</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
