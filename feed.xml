@@ -4,74 +4,25 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Bearing Failures: Root Causes &amp; Prevention</title>
-    <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
-    <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling.</description>
-    <pubDate>Wed, 05 Aug 2026 19:34:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</title>
-    <link>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</guid>
-    <description>Why heat pump sizing isn't the same exercise as furnace or AC sizing, what COP and capacity-at-temperature actually mean.</description>
-    <pubDate>Wed, 05 Aug 2026 19:30:05 GMT</pubDate>
+    <title>ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
+    <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors, ECBs, maintenance bypass switches and key interlocks — what each device does, how it differs, and where it's used.</description>
+    <pubDate>Wed, 05 Aug 2026 19:50:00 GMT</pubDate>
   </item>
   <item>
     <title>AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?</title>
     <link>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</guid>
-    <description>What separates an AHU, FAHU, FCU, FMAHU and CSAHU — air source, installation style and typical application for each, in one comparison.</description>
-    <pubDate>Wed, 05 Aug 2026 16:15:58 GMT</pubDate>
+    <description>Function, air source, installation style and typical application for AHU, FAHU, FCU, FMAHU and CSAHU — five HVAC air-handling terms that get mixed up constantly.</description>
+    <pubDate>Wed, 05 Aug 2026 15:48:00 GMT</pubDate>
   </item>
   <item>
     <title>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</title>
     <link>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</guid>
-    <description>Voltage classification from ELV to UHV explained &amp;mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
-    <pubDate>Wed, 05 Aug 2026 09:21:45 GMT</pubDate>
-  </item>
-  <item>
-    <title>Solar PV System Components Explained: From Panel to Load</title>
-    <link>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</guid>
-    <description>What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy actually flows from sunlight to load.</description>
-    <pubDate>Wed, 05 Aug 2026 04:00:53 GMT</pubDate>
-  </item>
-  <item>
-    <title>PLC Components Explained: What's Actually Inside the Controller</title>
-    <link>https://www.engineerzcorner.com/posts/plc-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/plc-components-explained.html</guid>
-    <description>What's actually inside a PLC — power supply, CPU, input modules, output modules, and communication module — and how the scan cycle ties them together.</description>
-    <pubDate>Wed, 05 Aug 2026 04:00:06 GMT</pubDate>
-  </item>
-  <item>
-    <title>Centrifugal Pump Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
-    <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</title>
-    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</guid>
-    <description>How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Retaining Wall Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/retaining-wall-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/retaining-wall-components-explained.html</guid>
-    <description>What every part of a cantilever retaining wall actually does — stem, footing, toe, heel, shear key, drainage, and reinforcement — component by component.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:15 GMT</pubDate>
-  </item>
-  <item>
-    <title>Retaining Wall Design Basics: Why Overturning, Sliding &amp; Bearing All Have to Pass</title>
-    <link>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing.html</link>
-    <guid>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing.html</guid>
-    <description>The three independent stability checks behind every gravity or cantilever retaining wall — overturning, sliding, and bearing pressure.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:15 GMT</pubDate>
+    <description>Voltage classification from ELV to UHV explained — IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
+    <pubDate>Wed, 05 Aug 2026 08:54:06 GMT</pubDate>
   </item>
   <item>
     <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
@@ -200,6 +151,13 @@
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
   <item>
+    <title>Bearing Failures: Root Causes &amp; Prevention</title>
+    <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
+    <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
     <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
     <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
     <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
@@ -213,4 +171,54 @@
     <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
+  <item>
+    <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
+    <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
+    <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
+    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
+    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
+    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
+    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
+    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
+    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
+    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</title>
+    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</guid>
+    <description>How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Chiller Capacity and COP: Where the Compressor's Work Actually Goes</title>
+    <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
+    <description>Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter</title>
+    <link>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</guid>
+    <description>How gross area and steel ratio combine into a short column&amp;#x27;s axial capacity, why codes cap reinforcement ratio at both ends, and when slenderness cuts that capacity down.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+
 </channel></rss>
