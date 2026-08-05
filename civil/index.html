@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
 <script src="../assets/common-blocks.js"></script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Posts | Engineerz CorneR</title>
-<meta name="description" content="Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.">
-<link rel="canonical" href="https://www.engineerzcorner.com/posts/">
-<link rel="alternate" type="application/rss+xml" title="EngineerzCorneR — Posts" href="/feed.xml">
+<title>Civil Index — Engineerz CorneR</title>
+<meta name="description" content="Civil Index — free calculators for slab-on-grade thickness, beam bending, staircase geometry, column capacity, concrete volume, retaining walls.">
+<link rel="canonical" href="https://www.engineerzcorner.com/civil/">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
-<meta property="og:title" content="Posts | Engineerz CorneR">
-<meta property="og:description" content="Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.">
-<meta property="og:url" content="https://www.engineerzcorner.com/posts/">
+<meta property="og:title" content="Civil Index — Engineerz CorneR">
+<meta property="og:description" content="Civil Index — free calculators for slab-on-grade thickness, beam bending, staircase geometry, column capacity, concrete volume, retaining walls, and footing sizing, plus notes, symbols, guides and comparisons.">
+<meta property="og:url" content="https://www.engineerzcorner.com/civil/">
 <meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Posts | Engineerz CorneR">
-<meta name="twitter:description" content="Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.">
+<meta name="twitter:title" content="Civil Index — Engineerz CorneR">
+<meta name="twitter:description" content="Civil Index — free calculators for slab-on-grade thickness, beam bending, staircase geometry, column capacity, concrete volume, retaining walls, and footing sizing, plus notes, symbols, guides and comparisons.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="index.inline.css">
 <script type="application/ld+json">
 {
@@ -42,8 +42,14 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Posts",
-      "item": "https://www.engineerzcorner.com/posts/"
+      "name": "Civil",
+      "item": "https://www.engineerzcorner.com/civil/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Civil Index",
+      "item": "https://www.engineerzcorner.com/civil/"
     }
   ]
 }
@@ -52,637 +58,254 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Posts",
-  "description": "Standalone technical posts and write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar engineering.",
-  "url": "https://www.engineerzcorner.com/posts/"
+  "name": "Civil Index",
+  "description": "Civil Index \u2014 part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, General Tools).",
+  "url": "https://www.engineerzcorner.com/civil/"
 }
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
 </head>
 <body>
 <link rel="stylesheet" href="../assets/common-blocks.css">
-<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Posts</span></div></nav>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Civil</span></div></nav>
 
-<div class="scrollbar" id="scrollbar"></div>
 
-<nav class="nt-nav">
-  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
-  <a class="nt-back" href="../">&larr; Home</a>
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="./" class="current">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
 </nav>
 
-<div class="hero">
-  <canvas id="netCanvas"></canvas>
-  <div class="hero-glow"></div>
-  <div class="hero-glow g2"></div>
-  <div class="hero-inner">
-    <div class="eyebrow"><span class="pulse-dot"></span>ENGINEERZ CORNER &middot; WRITE-UPS</div>
-    <h1>
-      <span class="word" style="animation-delay:.05s">Standalone</span>
-      <span class="word accent" style="animation-delay:.15s">Posts,</span><br>
-      <span class="word" style="animation-delay:.25s">one</span>
-      <span class="word" style="animation-delay:.32s">idea</span>
-      <span class="word" style="animation-delay:.39s">per</span>
-      <span class="word" style="animation-delay:.46s">page.</span>
-    </h1>
-    <p>Not theory-reference cards like Notes — these are full technical write-ups, each with its own page and its own link.</p>
-    <div class="stat-row">
-      <div class="stat-chip"><div class="stat-num"><span id="statPosts">0</span></div><div class="stat-label">Posts</div></div>
-      <div class="stat-chip"><div class="stat-num"><span id="statDisc">0</span></div><div class="stat-label">Disciplines</div></div>
-      <div class="stat-chip"><div class="stat-num">&infin;</div><div class="stat-label">More coming</div></div>
-    </div>
-  </div>
+<div class="ad-slot ad-slot--banner" data-ad-slot="top-banner" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">top-banner</div></div>
 </div>
 
-<div class="wrap">
+<main id="mainContent">
+<div class="wrap page active" id="page-civil">
 
-  <div class="section-label">All posts</div>
-
-  <div class="filter-bar" id="filterBar"></div>
-  <div class="filter-status" id="filterStatus"></div>
-
-  <div class="nt-grid" id="postsGrid">
-    <a class="nt-card" href="iecex-zones-vs-class-division-hazardous-areas">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚠ Electrical</div>
-      <div class="nt-card-name">IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification</div>
-      <div class="nt-card-desc">How the IEC 60079 / ATEX Zone system (Zone 0/1/2, 20/21/22) compares to the North American NEC Class &amp; Division system — equivalency table, gas/dust groups, temperature classes and Ex protection types, with diagrams.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Hazardous Area Classification</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="motor-starting-methods-dol-star-delta-vfd-compared">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</div>
-      <div class="nt-card-desc">Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of starting current, torque, cost and complexity.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Motor Starting</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="hvac-plumbing-default-design-values">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">❄ HVAC</div>
-      <div class="nt-card-name">HVAC &amp; Plumbing Default Design Values: The Quick Reference</div>
-      <div class="nt-card-desc">Duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and drainage slopes — for a fast first-pass sizing check.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Design Defaults</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="electrical-switchgear-protection-devices-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">MCB, MCCB, ACB, RCCB &amp; More: Switchgear &amp; Protection Devices Explained</div>
-      <div class="nt-card-desc">Sixteen devices found in almost every panel — breakers, earth-leakage protection, switching gear and protection accessories — what each one does, how it differs, and where it's used, with an icon for every device.</div>
-      <div class="nt-card-meta"><span>Reference &middot; LV/MV Switchgear</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="33-11kv-substation-diagram-equipment-overview">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</div>
-      <div class="nt-card-desc">The single line diagram walked stage by stage from the 33 kV incoming line to the outgoing feeders, every major equipment item's function, and the protection schemes behind it.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Distribution Substations</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="access-control-system-acs-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔐 Electrical</div>
-      <div class="nt-card-name">Access Control System (ACS) Explained: Components, Architecture &amp; Site Work</div>
-      <div class="nt-card-desc">Main components, the six-step credential-to-unlock sequence, system architecture and wiring types, integration with FAS/BMS/CCTV, and what an electrical site engineer does on an ACS install.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Access Control &amp; Building Security</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="electrical-panel-fat-checklist">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</div>
-      <div class="nt-card-desc">The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Panel FAT &amp; Commissioning</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="flame-retardant-vs-flame-resistant-cables">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Flame Retardant vs Flame Resistant Cables: Know the Difference</div>
-      <div class="nt-card-desc">IEC 60332 vs IEC 60331 &mdash; why flame retardant cable stops fire from spreading while flame (fire) resistant cable keeps circuits alive during a fire, plus where each belongs.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Cable Selection</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="air-changes-per-hour-ventilation-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">❄ HVAC</div>
-      <div class="nt-card-name">Air Changes per Hour: What ACH Actually Tells You (and Doesn't)</div>
-      <div class="nt-card-desc">What ACH measures, the airflow ÷ volume formula behind it, typical targets by space type, and why short-circuiting can hit the number on paper while ventilating almost nothing.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Ventilation</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="psychrometric-chart-basics">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">❄ HVAC</div>
-      <div class="nt-card-name">Reading a Psychrometric Chart: The Five Lines That Matter</div>
-      <div class="nt-card-desc">How dry-bulb temperature, humidity ratio, relative humidity, wet-bulb temperature and enthalpy combine on one chart, and how to trace a cooling process across it.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Psychrometrics</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="k-rated-transformer-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">K-Rated Transformers: What K-Factor Means and When You Need One</div>
-      <div class="nt-card-desc">What a K-rated transformer actually is, the IEEE C57.110 K-factor scale from K-1 to K-20, how construction differs from a standard transformer, and why K-13 is the common default.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Transformers</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="power-transformer-construction-working-principle">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Power Transformers Explained: Construction &amp; Working Principle</div>
-      <div class="nt-card-desc">How a transformer moves power through a shared magnetic field with zero direct electrical contact &mdash; core, windings, oil, cooling, tap changer, bushings and protection, component by component.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Transformers</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="bms-point-types-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔌 Automation</div>
-      <div class="nt-card-name">BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</div>
-      <div class="nt-card-desc">What each BMS point abbreviation means, the signal ranges behind AI/AO/BI/BO/MI/MO, and why the virtual points BV/AV/MV don't correspond to any physical wiring at all.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Automation / BMS</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="harmonics-sources-effects-mitigation">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Harmonics in Power Systems: Sources, Effects and How to Mitigate Them</div>
-      <div class="nt-card-desc">Where harmonics come from, IEEE 519's voltage THD limits at the PCC, what unmanaged harmonics do to cables and capacitors, and the filter/reactor options to control them.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Power Quality</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="lv-panel-forms-of-construction-iec-61439">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">IEC 61439 Forms of Construction: Form 1 to Form 4 Explained</div>
-      <div class="nt-card-desc">What Form 1 through Form 4 switchboard construction actually separates inside an LV panel, the 2a/2b, 3a/3b and 4a/4b sub-variants, and why the Form number is a deliberate specification choice.</div>
-      <div class="nt-card-meta"><span>Reference &middot; LV Switchgear</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="retaining-wall-design-basics-overturning-sliding-bearing">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🏗 Civil</div>
-      <div class="nt-card-name">Retaining Wall Design Basics: Why Overturning, Sliding &amp; Bearing All Have to Pass</div>
-      <div class="nt-card-desc">The three independent stability checks behind every gravity or cantilever retaining wall, and the safety-factor thresholds engineers actually design to.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Retaining Wall Stability</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="retaining-wall-components-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Retaining Wall Components Explained</div>
-      <div class="nt-card-desc">What every part of a cantilever retaining wall actually does &mdash; stem, toe, heel, shear key, drainage and weep holes, reinforcement, and movement joints &mdash; component by component.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Retaining Wall Anatomy</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="beam-bending-basics-section-modulus-deflection">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🏗 Civil</div>
-      <div class="nt-card-name">Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load</div>
-      <div class="nt-card-desc">Why bending moment alone doesn't tell you if a beam is safe — the section modulus and deflection checks that decide the rest.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Beam Bending &amp; Deflection</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="rebar-development-length-lap-splice-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Rebar Development Length: Why Bar Diameter Decides the Embedment, Not Rules of Thumb</div>
-      <div class="nt-card-desc">Why development length scales with bar diameter and steel/concrete strength, how lap splices build off it, and what hooks buy you.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Reinforced Concrete</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="column-axial-capacity-reinforcement-ratio-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter</div>
-      <div class="nt-card-desc">How gross area and steel ratio combine into a short column's capacity, and when slenderness cuts that capacity down.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Reinforced Concrete</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="staircase-geometry-riser-tread-rule-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Staircase Geometry: The Riser-Tread Rule That Keeps Stairs Walkable</div>
-      <div class="nt-card-desc">Why riser and tread aren't chosen independently, the 2R+T rule behind comfortable stairs, and where headroom comes in.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Building Layout</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="grade-slope-percent-ratio-degrees-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Grade &amp; Slope: Why Percent, Ratio and Degrees Aren't the Same Number</div>
-      <div class="nt-card-desc">How rise over run converts between percent grade, a ratio like 1:20, and degrees — and why mixing them up is a common site mistake.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Site &amp; Earthworks</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="trench-safe-slope-osha-soil-type-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Trench Safe Slope: Why OSHA Soil Type Decides the Angle, Not the Depth</div>
-      <div class="nt-card-desc">Why the same trench depth needs a different sloping angle by soil classification, and when sloping stops being enough.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Excavation Safety</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="cut-fill-volume-average-end-area-method-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Cut &amp; Fill Volume: How the Average End Area Method Actually Works</div>
-      <div class="nt-card-desc">How earthwork volume between cross-sections is estimated, why section spacing controls accuracy, and where the method breaks down.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Site &amp; Earthworks</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="slab-on-grade-thickness-subgrade-support-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Slab-on-Grade Thickness: What Actually Drives the Number</div>
-      <div class="nt-card-desc">Why slab thickness comes from load, subgrade modulus and concrete strength together, not a flat default.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Concrete Slabs</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pipe-flow-capacity-mannings-equation-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity</div>
-      <div class="nt-card-desc">Why full-bore isn't peak flow capacity, what the roughness coefficient represents, and why capacity scales with the square root of slope.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Gravity Drainage</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="concrete-volume-material-takeoff-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Concrete Volume Takeoff: From Cubic Meters to Bags of Cement</div>
-      <div class="nt-card-desc">How a concrete volume converts into cement, sand and aggregate quantities using mix ratio, dry-volume factor and wastage.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Concrete Takeoff</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="solar-panel-tilt-orientation-annual-yield">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">☀ Solar</div>
-      <div class="nt-card-name">Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer</div>
-      <div class="nt-card-desc">How tilt angle and azimuth are chosen for fixed solar arrays, and how seasonal weighting shifts the optimum away from the simple latitude rule.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Fixed-Tilt PV Arrays</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="mppt-vs-pwm-solar-charge-controllers">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">☀ Solar</div>
-      <div class="nt-card-name">MPPT vs PWM Solar Charge Controllers: What Actually Changes</div>
-      <div class="nt-card-desc">Why an MPPT controller can pull 20-30% more power than PWM from the same panel, when PWM is still the right call, and how to size either against your battery voltage.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Off-Grid &amp; Battery Charging</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="solar-panel-derating-factors-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">☀ Solar</div>
-      <div class="nt-card-name">Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</div>
-      <div class="nt-card-desc">The STC nameplate rating assumes lab conditions no rooftop sees. A walk through every real-world derate factor — temperature, soiling, mismatch, wiring, inverter.</div>
-      <div class="nt-card-meta"><span>Reference &middot; PV System Loss Budgeting</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="signal-scaling-4-20ma-engineering-units">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔌 Automation</div>
-      <div class="nt-card-name">Signal Scaling: Turning a 4&ndash;20mA Loop Into an Engineering Value</div>
-      <div class="nt-card-desc">The linear scaling formula behind every analog I/O point, live-zero vs. dead loop, and where scaling errors quietly creep in.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Analog Signal Scaling</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="elv-extra-low-voltage-systems-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">What Is an ELV System? Types, Components &amp; the BIM Engineer's Role</div>
-      <div class="nt-card-desc">The six ELV categories &mdash; ICT, security, fire alarm, PA/voice evacuation, BMS and more &mdash; how ELV differs from electrical power systems, and where MEP BIM fits in.</div>
-      <div class="nt-card-meta"><span>Reference &middot; ELV / Building Systems</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="plc-vs-ddc-key-differences">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔌 Automation</div>
-      <div class="nt-card-name">PLC vs DDC: What Actually Separates Them</div>
-      <div class="nt-card-desc">Why PLCs and DDCs aren't interchangeable &mdash; purpose, communication protocols, programming, I/O handling, and how to pick the right controller for the job.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Automation / BMS</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="is-iec-ieee-electrical-standards-reference">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">IS, IEC &amp; IEEE Codes: The Standards Behind Electrical Engineering</div>
-      <div class="nt-card-desc">What each standards body actually governs, a working reference across wiring, earthing, transformers, switchgear and solar PV, and the codes a solar EPC project reaches for most.</div>
-      <div class="nt-card-meta"><span>Standards &amp; Codes</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="busbar-sizing-thermal-electrodynamic-withstand">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</div>
-      <div class="nt-card-desc">Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force between conductors &mdash; plus enclosure heat dissipation.</div>
-      <div class="nt-card-meta"><span>Busbar &amp; Enclosure Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="transformer-generator-sizing-motor-starting">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load</div>
-      <div class="nt-card-desc">Transformer kVA from connected load and demand factor, and why standby generator sizing is governed by motor-starting voltage dip rather than the running load alone.</div>
-      <div class="nt-card-meta"><span>Transformer &amp; Genset Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="ups-battery-autonomy-sizing-derating-factors">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get</div>
-      <div class="nt-card-desc">Required battery Ah for a UPS from load and backup time, and why depth of discharge, aging, temperature and efficiency all derate the usable capacity well below nameplate.</div>
-      <div class="nt-card-meta"><span>UPS Battery Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="lighting-lumen-method-luminaire-count">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Lighting Design by the Lumen Method: Why Luminaire Count Isn't Just Lumens &divide; Lux</div>
-      <div class="nt-card-desc">Luminaire count for a target lux level using the lumen method, and why utilization factor and maintenance factor both derate raw lumen output before you get a real number.</div>
-      <div class="nt-card-meta"><span>Lighting Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="lv-panel-estimate-boq-from-incomer">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">LV Panel Estimating: Why a Budgetary BOQ Starts With the Incomer, Not the Steel</div>
-      <div class="nt-card-desc">How an LV panel's busbar size, enclosure dimensions and budgetary BOQ cost all cascade from just two inputs: the incomer rating and the number of outgoing ways.</div>
-      <div class="nt-card-meta"><span>LV Panel Estimating</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="harmonics-thd-k-factor-transformer-derating">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer</div>
-      <div class="nt-card-desc">How current THD and K-factor are calculated from a harmonic spectrum, why K-factor weights higher harmonics more heavily, and why IEEE 519 limits aren't a single flat number.</div>
-      <div class="nt-card-meta"><span>Harmonics &amp; THD</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="conduit-fill-why-the-percentage-limit-exists">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Conduit Fill: Why 40% Isn't an Arbitrary Number</div>
-      <div class="nt-card-desc">What the conduit fill percentage check is actually protecting against &mdash; pulling tension and jamming risk during installation, and heat dissipation once cables are in service.</div>
-      <div class="nt-card-meta"><span>Conduit Fill</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="control-valve-cv-sizing-oversizing-mistake">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🔌 Automation</div>
-      <div class="nt-card-name">Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</div>
-      <div class="nt-card-desc">Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</div>
-      <div class="nt-card-meta"><span>Control Valve Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="vfd-speed-scaling-affinity-laws-energy-savings">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🔌 Automation</div>
-      <div class="nt-card-name">VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings</div>
-      <div class="nt-card-desc">Motor speed scaling with VFD output frequency, and why the pump/fan affinity laws mean modest speed reductions cut power consumption by a much larger percentage.</div>
-      <div class="nt-card-meta"><span>VFD Speed Scaling</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="duct-sizing-velocity-limits-vs-airflow">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Duct Sizing: Why Velocity Limits Matter as Much as Airflow</div>
-      <div class="nt-card-desc">Sizing ductwork for airflow, velocity and circular-equivalent diameter, and why designing for velocity limits matters as much as hitting the required airflow figure.</div>
-      <div class="nt-card-meta"><span>Duct Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="chiller-capacity-cop-condenser-heat-rejection">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">❄ HVAC</div>
-      <div class="nt-card-name">Chiller Capacity and COP: Where the Compressor's Work Actually Goes</div>
-      <div class="nt-card-desc">Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input, not just the cooling load alone.</div>
-      <div class="nt-card-meta"><span>Chiller Capacity</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="npsh-margin-why-passing-on-paper-can-still-cavitate">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">NPSH Margin: Why 'NPSHa &gt; NPSHr' Isn't Enough on Its Own</div>
-      <div class="nt-card-desc">Pump hydraulic and shaft power sizing, and why an NPSH margin needs a safety factor beyond simply having available head exceed required head.</div>
-      <div class="nt-card-meta"><span>Pump Power &amp; NPSH</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="belt-drive-sizing-speed-ratio-vs-tension">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</div>
-      <div class="nt-card-desc">Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</div>
-      <div class="nt-card-meta"><span>Belt Drive Sizing</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="bolt-torque-vs-preload-nut-factor">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</div>
-      <div class="nt-card-desc">Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</div>
-      <div class="nt-card-meta"><span>Bolt Torque</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pipe-flow-head-loss-reynolds-number-regime">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies</div>
-      <div class="nt-card-desc">Pipe flow velocity, Reynolds number, friction factor and head loss, and why laminar and turbulent flow need genuinely different formulas rather than one general approximation.</div>
-      <div class="nt-card-meta"><span>Pipe Flow &amp; Head Loss</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pipe-thermal-expansion-why-long-runs-move-more">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess</div>
-      <div class="nt-card-desc">Linear thermal expansion of a pipe run from material, length and temperature change, and why long runs in high-delta-T service need expansion loops, joints, or guided anchoring.</div>
-      <div class="nt-card-meta"><span>Thermal Expansion</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="short-circuit-current-iec-60909-basics">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Prospective Short-Circuit Current: Why It Falls the Further You Are From Source</div>
-      <div class="nt-card-desc">How fault current is calculated per IEC 60909, why it's highest at the transformer and drops downstream, and what that means for breaker interrupting ratings.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Fault Current</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="voltage-drop-lv-feeders-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number</div>
-      <div class="nt-card-desc">Why voltage drop accumulates through every segment of a feeder chain, the formula behind it, and why a cable sized fine for ampacity can still fail on voltage drop.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Voltage Drop</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="breaker-selectivity-discrimination-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</div>
-      <div class="nt-card-desc">What selectivity between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it, and why overlapping trip curves cause both breakers to open for one fault.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Protection Coordination</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="kw-kva-kvar-difference-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">kW, kVA, and kVAR: What Actually Separates Them</div>
-      <div class="nt-card-desc">Real, apparent, and reactive power explained through the power triangle, why transformers are rated in kVA, and a worked 3-phase example.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Power Fundamentals</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="heat-pump-sizing-basics">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">❄ HVAC</div>
-      <div class="nt-card-name">Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</div>
-      <div class="nt-card-desc">Why heat pump capacity moves with outdoor temperature, what balance point means for backup heat, and a practical sizing sequence.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Heat Pumps</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pid-controller-tuning-basics">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔌 Automation</div>
-      <div class="nt-card-name">PID Controller Tuning Basics: What P, I, and D Actually Do</div>
-      <div class="nt-card-desc">What each term in a PID loop actually corrects for, how to read overshoot and oscillation back to their cause, and a practical manual tuning sequence.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Process Control</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="deadband-hysteresis-why-controls-dont-chatter">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔌 Automation</div>
-      <div class="nt-card-name">Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough</div>
-      <div class="nt-card-desc">Why a switch needs two trip points instead of one — how deadband and hysteresis stop a control loop from chattering right at the setpoint.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Instrumentation</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="alarm-setpoint-bands-high-highhigh-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">🔌 Automation</div>
-      <div class="nt-card-name">Alarm Setpoint Bands: Why High and High-High Are Different Alarms</div>
-      <div class="nt-card-desc">Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Alarms</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="earthing-grounding-systems-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</div>
-      <div class="nt-card-desc">What an earthing system is protecting against, why grid resistance decides whether it works, and what drives that number on a real site.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Earthing &amp; Protection</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="load-estimation-first-step-electrical-design">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag featured">⚡ Electrical</div>
-      <div class="nt-card-name">Load Estimation: The First Step in Electrical Design</div>
-      <div class="nt-card-desc">Why load estimation comes before anything else, how to calculate it by floor area, NEC VA/m² guide tables, and a full worked transformer-sizing example.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Electrical Design</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="cable-size-current-capacity-guide">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Cable Size &amp; Current Capacity: A Practical Selection Guide</div>
-      <div class="nt-card-desc">Approximate current capacity for copper and aluminium cables side by side, common house-wiring sizes by load, core-colour ID, and a selection checklist.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Cables</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="cable-gland-overview-selection-guide">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">Cable Glands: What They Do and How to Get the Selection Right</div>
-      <div class="nt-card-desc">The four jobs a gland does at once, gland types and their parts, a selection and quality-inspection checklist, an installation walkthrough, and an IP rating reference.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Cable Accessories</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="ansi-relay-numbers-protection-functions">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">ANSI Relay Numbers: Common Protection Relay Functions</div>
-      <div class="nt-card-desc">A working reference for the ANSI device numbers you'll actually run into &mdash; 50/51, 27/59, 87, 21, 67, 25 and more &mdash; what each does, where it's applied, and how relay technology evolved to get here.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Protection</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="how-to-select-digital-protection-relay">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚡ Electrical</div>
-      <div class="nt-card-name">How to Select a Digital Protection Relay</div>
-      <div class="nt-card-desc">An 8-step working method &mdash; identify the equipment, gather system data, match CT/VT inputs, choose functions, size I/O, pick comms, verify environment, and coordinate &mdash; with a worked 11 kV feeder example.</div>
-      <div class="nt-card-meta"><span>Guide &middot; Protection</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="chilled-water-hvac-system-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">❄ HVAC</div>
-      <div class="nt-card-name">Chilled Water HVAC Systems: How the Loop Actually Works</div>
-      <div class="nt-card-desc">Why a chilled water system is really two separate loops &mdash; chilled water and condenser water &mdash; meeting only inside the chiller, plus what each component and zone-level control point actually does.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Central Plant</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="hvac-system-components-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">❄ HVAC</div>
-      <div class="nt-card-name">HVAC System Components Explained</div>
-      <div class="nt-card-desc">Why an HVAC system is really two loops working together &mdash; refrigerant and air &mdash; and what the compressor, condenser, expansion device, evaporator, air handler, ductwork and controls each actually do.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Systems</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="wind-turbine-components-working-principle">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Wind Turbines Explained: How Wind Becomes Electricity, Component by Component</div>
-      <div class="nt-card-desc">Why a turbine is really two conversions in sequence &mdash; mechanical, then electrical &mdash; and what the rotor, gearbox, generator, yaw system and power path each actually do.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="bearing-failure-modes-causes-prevention">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Bearing Failures: Root Causes &amp; Prevention</div>
-      <div class="nt-card-desc">The five ways rolling-element bearings actually fail &mdash; spalling, lubrication breakdown, contamination, electrical erosion and false brinelling &mdash; with the cause, fix and best monitoring method for each.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pump-cavitation-causes-prevention">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Cavitation in Pumps: Causes, Warning Signs, and Prevention</div>
-      <div class="nt-card-desc">Why local pressure dropping below vapour pressure at the impeller eye erodes pumps, how NPSH available vs. required decides it, and a field checklist to prevent it.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pump-fan-affinity-laws-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Pump &amp; Fan Affinity Laws: Why Speed Changes Cube the Power</div>
-      <div class="nt-card-desc">Flow scales linearly with speed, head scales with the square, and power scales with the cube — the math behind every VFD energy-savings claim.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="centrifugal-pump-curve-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">⚙ Mechanical</div>
-      <div class="nt-card-name">Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</div>
-      <div class="nt-card-desc">How to read the head-capacity curve, efficiency islands, and NPSHr curve — and why the system curve's intersection point, not the datasheet number, decides where a pump operates.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Rotating Equipment</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="sensible-vs-latent-heat-cooling-load">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">❄ HVAC</div>
-      <div class="nt-card-name">Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature</div>
-      <div class="nt-card-desc">Why a cooling load has two separate halves, what drives each one, typical sensible/latent splits by space type, and why "cool but clammy" happens.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Psychrometrics</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="soil-bearing-capacity-footing-sizing">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🏗 Civil</div>
-      <div class="nt-card-name">Soil Bearing Capacity: Why It Decides Your Footing Size</div>
-      <div class="nt-card-desc">Why footing area is set by the weaker of two numbers, typical allowable bearing capacities by soil type, and what shifts them on real sites.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Geotechnical</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="4-20ma-current-loop-basics">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">🔌 Automation</div>
-      <div class="nt-card-name">4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</div>
-      <div class="nt-card-desc">Why current beats voltage over long runs, what live-zero actually protects against, and how to convert a reading back to engineering units.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Instrumentation</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="pv-string-sizing-voltage">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">☀ Solar</div>
-      <div class="nt-card-name">PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</div>
-      <div class="nt-card-desc">Why panel voltage rises as it gets colder, how that can push a cold morning past the inverter's voltage limit, and how to find the safe panel-count range.</div>
-      <div class="nt-card-meta"><span>Reference &middot; PV System Design</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="earned-value-management-basics">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">📊 Project Management</div>
-      <div class="nt-card-name">Earned Value Management: Reading Project Health From Three Numbers</div>
-      <div class="nt-card-desc">What Planned Value, Earned Value and Actual Cost each measure, and how CPI and SPI catch cost and schedule trouble early.</div>
-      <div class="nt-card-meta"><span>Reference &middot; EVM</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="raci-matrix-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">📊 Project Management</div>
-      <div class="nt-card-name">RACI Matrix Explained: Who's Responsible vs. Who's Accountable</div>
-      <div class="nt-card-desc">What Responsible, Accountable, Consulted and Informed actually mean, and the one rule &mdash; exactly one Accountable per task &mdash; that keeps a RACI matrix from becoming useless.</div>
-      <div class="nt-card-meta"><span>Reference &middot; RACI</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="risk-register-probability-impact-scoring">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">📊 Project Management</div>
-      <div class="nt-card-name">Risk Register Basics: Turning Probability × Impact Into Priority</div>
-      <div class="nt-card-desc">How the Probability × Impact score turns two gut-feel judgments into a comparable priority ranking, and why a register only works if it's re-scored, not filed away.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Risk</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
-    <a class="nt-card" href="permit-to-work-loto-explained">
-      <div class="nt-card-glow"></div>
-      <div class="nt-card-tag">📊 Project Management</div>
-      <div class="nt-card-name">Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job</div>
-      <div class="nt-card-desc">What a permit to work authorizes versus what lockout/tagout physically isolates, why each worker applies their own lock, and why isolation still needs verifying at the point of work.</div>
-      <div class="nt-card-meta"><span>Reference &middot; Safety</span><span class="nt-card-arrow">&rarr;</span></div>
-    </a>
+  <div class="pagehero">
+    <h1>Civil — Calculator Index</h1>
   </div>
+<div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
+  <line x1="100" y1="80" x2="100" y2="30" class="illo-line illo-amber" stroke-width="4"/>
+  <line x1="220" y1="80" x2="220" y2="30" class="illo-line illo-blue" stroke-width="4"/>
+  <line x1="340" y1="80" x2="340" y2="30" class="illo-line illo-green" stroke-width="4"/>
+  <line x1="460" y1="80" x2="460" y2="30" class="illo-line illo-amber" stroke-width="4"/>
+  <line x1="80" y1="30" x2="480" y2="30" class="illo-line illo-dim an-pulse" stroke-width="3"/>
+  <line x1="80" y1="86" x2="480" y2="86" class="illo-line illo-dim" stroke-width="2" stroke-dasharray="3 6"/>
+<text x="686" y="92" text-anchor="end" class="illo-label">CIVIL INDEX</text></svg></div>
 
-  <div class="cta-strip" id="ctaStrip">
-    <h3>Got a topic in mind?</h3>
-    <p>Ask, and a new post gets written and added to this page — its own page, its own link.</p>
+  <div class="hero-graphic">
+    <div class="hero-graphic-label">Fig. C1 — Load path: beam to column to footing to soil</div>
+    <svg viewBox="0 0 240 110" fill="none" stroke="#8B93B8" stroke-width="2">
+      <path d="M40 40h160" stroke="var(--amber)"></path>
+      <path d="M55 40v-8M85 40v-8M115 40v-8M145 40v-8M175 40v-8" stroke="var(--amber)"></path>
+      <path d="M50 32l5 8M80 32l5 8M110 32l5 8M140 32l5 8M170 32l5 8" stroke="var(--amber)"></path>
+      <rect x="112" y="40" width="8" height="34" fill="var(--plate-2)" stroke="#4A5170"></rect>
+      <rect x="90" y="78" width="52" height="10" rx="2" fill="var(--plate-2)" stroke="#4A5170"></rect>
+      <path d="M40 96h160" stroke="#4A5170" stroke-dasharray="3 3"></path>
+      <text x="16" y="44" fill="#B7BEDB" font-size="8" font-family="monospace">w</text>
+      <text x="124" y="60" fill="#B7BEDB" font-size="8" font-family="monospace">N</text>
+      <text x="6" y="99" fill="#B7BEDB" font-size="8" font-family="monospace">soil</text>
+    </svg>
   </div>
-
+  <div class="home-intro">Twelve standalone civil/structural calculators plus learning notes, guides, comparisons and a symbol library — pick one below. Like the mechanical sheets, these are self-contained rather than chained together.</div>
+<div class="ad-slot ad-slot--incontent" data-ad-slot="in-content" aria-label="Advertisement">
+  <div class="ad-slot-inner"><div class="ad-slot-label">Advertisement</div><div class="ad-slot-id">in-content</div></div>
 </div>
 
-<script src="index.inline.js"></script>
+  <div class="tool-grid">
+    <a class="tool-card reveal" href="beam-bending">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M4 20V10l8-6 8 6v10"></path><path d="M4 14h16"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.01</div>
+          <div class="tool-card-title">Beam Bending &amp; Deflection</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Bending stress and deflection check for a simply supported beam under a UDL or a midspan point load.</div>
+    </a>
+    <a class="tool-card reveal" href="column-capacity">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="20" rx="1"></rect><path d="M5 6h4M5 12h4M5 18h4M15 6h4M15 12h4M15 18h4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.02</div>
+          <div class="tool-card-title">Column Axial Capacity</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Euler buckling load and allowable axial capacity from slenderness ratio, with a utilization check against applied load.</div>
+    </a>
+    <a class="tool-card reveal" href="footing-sizing">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="16" width="18" height="5" rx="1"></rect><rect x="10" y="3" width="4" height="13"></rect></svg></div>
+        <div>
+          <div class="tool-card-num">CV.03</div>
+          <div class="tool-card-title">Footing Bearing Sizing</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Required square footing size from an axial column load and the allowable soil bearing pressure.</div>
+    </a>
+    <a class="tool-card reveal" href="retaining-wall">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l6-6 6 6v12"></path><path d="M4 21h14"></path><path d="M20 21v-8h-4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.04</div>
+          <div class="tool-card-title">Retaining Wall Stability</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Overturning and sliding factor of safety for a gravity retaining wall under active earth pressure.</div>
+    </a>
+    <a class="tool-card reveal" href="concrete-volume-estimator">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"></rect><path d="M4 14h16M9 4v16"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.05</div>
+          <div class="tool-card-title">Concrete Volume &amp; Material Estimator</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Wet volume converted to cement, sand and aggregate quantities from a given mix ratio.</div>
+    </a>
+    <a class="tool-card reveal" href="slab-on-grade-thickness">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18v4H3z"></path><path d="M3 17v-3l9-4 9 4v3"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.06</div>
+          <div class="tool-card-title">Slab-on-Grade Quick Thickness</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Span/depth rule-of-thumb preliminary thickness sizing for a ground-bearing slab.</div>
+    </a>
+    <a class="tool-card reveal" href="staircase-geometry">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4v-4h4v-4h4v-4h4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.07</div>
+          <div class="tool-card-title">Staircase Geometry Check</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Riser/tread count from floor-to-floor height, checked against the 2R+T rule of thumb.</div>
+    </a>
+    <a class="tool-card reveal" href="notes">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.08</div>
+          <div class="tool-card-title">Learning Notes</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Reference-only theory notes on structural fundamentals, concrete &amp; masonry, geotechnical, materials and codes — not a calculator.</div>
+    </a>
+    <a class="tool-card reveal" href="guides">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.09</div>
+          <div class="tool-card-title">Engineering Guides</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Step-by-step method guides — how to actually approach each job, not just the calculator behind it.</div>
+    </a>
+    <a class="tool-card reveal" href="comparisons">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18"></path><path d="M3 8h5M16 8h5M3 16h5M16 16h5"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.10</div>
+          <div class="tool-card-title">Comparisons</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Head-to-head material and system choices — side by side, so the trade-off is visible at a glance.</div>
+    </a>
+    <a class="tool-card reveal" href="symbols">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-4h4v-4h4v-4h4V5h4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.11</div>
+          <div class="tool-card-title">Symbol Library</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">52 commonly used civil drawing symbols — click any tile for its meaning and typical usage.</div>
+    </a>
+    <a class="tool-card reveal" href="rebar-development">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4c4 0 4 4 8 4s4-4 8-4M4 12c4 0 4 4 8 4s4-4 8-4M4 20c4 0 4 4 8 4"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.12</div>
+          <div class="tool-card-title">Rebar Development Length &amp; Weight</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">ACI 318 simplified tension development length for a straight deformed bar, plus unit and total rebar weight.</div>
+    </a>
+    <a class="tool-card reveal" href="pipe-flow-capacity">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg></div>
+        <div>
+          <div class="tool-card-num">CV.13</div>
+          <div class="tool-card-title">Pipe Flow Capacity (Manning's)</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Full-flow discharge and velocity for a gravity drainage pipe from diameter, slope and Manning's n.</div>
+    </a>
+    <a class="tool-card reveal" href="cut-fill-volume">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"></path><path d="M5 20 9 8h6l4 12"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.14</div>
+          <div class="tool-card-title">Cut &amp; Fill Volume</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Earthwork volume between two survey stations using the average end area method.</div>
+    </a>
+    <a class="tool-card reveal" href="grade-slope">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"></path><path d="M5 20 19 6"></path><path d="M19 20V6"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.15</div>
+          <div class="tool-card-title">Grade / Slope Calculator</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Slope %, ratio (1:X) and angle from elevation change and horizontal distance — roads, ramps, pipe inverts.</div>
+    </a>
+    <a class="tool-card reveal" href="trench-safe-slope">
+      <div class="tool-card-head">
+        <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M4 20 10 6h4l6 14"></path><path d="M10 20V13h4v7"></path></svg></div>
+        <div>
+          <div class="tool-card-num">CV.16</div>
+          <div class="tool-card-title">Trench Excavation Safe Slope</div>
+        </div>
+      </div>
+      <div class="tool-card-desc">Max allowable slope and horizontal offset from OSHA 1926 Subpart P soil classification (Type A/B/C).</div>
+    </a>
+  </div>
+  <footer>Sixteen standalone sheets, all on one page — use the cards above or the tabs on any sheet to jump between them. <a href="../">← All Disciplines</a></footer>
 
+</div>
+</main>
 
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
 
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-<div class="wrap" style="padding-top:0;">
-<div class="nl-box" style="display:block;text-align:left;background-color:#F5F7F8;border:1px solid #E3E6E9;border-radius:16px;padding:20px 22px;margin:8px 0 0;box-shadow:0 1px 3px rgba(24,27,41,.06);">
-  <style>
-    .nl-box .sib-form{text-align:left;}
-    .nl-box #sib-container{max-width:420px;background:transparent;border:none;padding:0;}
-    .nl-box .sib-form-block{padding:4px 0 !important;}
-    .nl-box .sib-form-block p{margin:0;}
-    .nl-box input.input{font-family:inherit;font-size:12.5px;padding:8px 10px;border:1px solid #E1E3F0;border-radius:6px;width:100%;box-sizing:border-box;color:#181B29;background:#fff;}
-    .nl-box .sib-form-block__button{font-family:"JetBrains Mono","SF Mono",monospace !important;font-size:12px !important;font-weight:700 !important;padding:8px 16px !important;border-radius:6px !important;background:#00696D !important;color:#fff !important;cursor:pointer;margin-top:8px;}
-    .nl-box .entry__specification{display:none;}
-    .nl-box .entry__label{font-family:"Manrope","Arial",sans-serif !important;font-size:13.5px !important;font-weight:700 !important;color:#181B29 !important;}
-    .nl-box .sib-form-message-panel{max-width:100% !important;font-size:11.5px !important;margin-bottom:8px;}
-  </style>
-  <div style="font-family:'Manrope','Arial',sans-serif;font-size:13.5px;font-weight:700;color:#181B29;margin-bottom:2px;">Get notified about new content</div>
-  <div style="font-size:11.5px;color:#8D91AA;margin-bottom:10px;">New calculators, guides, notes &amp; tools — one short email when something ships. No spam, unsubscribe anytime.</div>
+<div class="nl-box reveal">
+  
+  <div class="nl-box-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="M22 6l-10 7L2 6"></path></svg>
+    <span class="nl-box-icon-dot"></span>
+  </div>
+  <div class="nl-box-body">
+  <div style="font-family:'Manrope','Arial',sans-serif;font-size:13.5px;font-weight:700;color:var(--ink,#181B29);margin-bottom:2px;">Get notified about new content</div>
+  <div style="font-size:11.5px;color:var(--ink-faint,#8D91AA);margin-bottom:10px;">New calculators, guides, notes &amp; tools — one short email when something ships. No spam, unsubscribe anytime.</div>
 
   <div class="sib-form" style="text-align:center;">
     <div id="sib-form-container" class="sib-form-container">
@@ -724,10 +347,14 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 </div>
 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+
+<script src="../assets/app.js"></script>
+
 
 
 <a href="../" class="ecr-home-fab" aria-label="Go to homepage">
@@ -735,10 +362,5 @@
   <span class="ecr-home-fab-label">Home</span>
 </a>
 <script src="../assets/sidebars.js" defer></script>
-
-<footer class="site-footer">
-  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
-  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
-</footer>
 </body>
 </html>
