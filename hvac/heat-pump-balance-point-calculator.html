@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231B2530'/%3E%3Crect x='7' y='14' width='18' height='4' rx='1' fill='none' stroke='%235AA9D6' stroke-width='2'/%3E%3Cline x1='9' y1='16' x2='23' y2='16' stroke='%235AA9D6' stroke-width='2'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Pump Balance Point &amp; Backup Heat Calculator | Engineerz CorneR</title>
+<meta name="description" content="Heat pump balance point calculator - the outdoor temperature where heat pump output stops covering building heat loss, plus backup heat sizing at design temperature.">
+<link rel="canonical" href="https://www.engineerzcorner.com/hvac/heat-pump-balance-point-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Heat Pump Balance Point &amp; Backup Heat Calculator | Engineerz CorneR">
+<meta property="og:description" content="Heat pump balance point calculator - the outdoor temperature where heat pump output stops covering building heat loss, plus backup heat sizing at design temperature.">
+<meta property="og:url" content="https://www.engineerzcorner.com/hvac/heat-pump-balance-point-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heat Pump Balance Point &amp; Backup Heat Calculator | Engineerz CorneR">
+<meta name="twitter:description" content="Heat pump balance point calculator - the outdoor temperature where heat pump output stops covering building heat loss, plus backup heat sizing at design temperature.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hvac",
+      "item": "https://www.engineerzcorner.com/hvac/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Heat Pump Balance Point & Backup Heat Calculator",
+      "item": "https://www.engineerzcorner.com/hvac/heat-pump-balance-point-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Heat Pump Balance Point & Backup Heat Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Heat pump balance point calculator - the outdoor temperature where heat pump output stops covering building heat loss, plus backup heat sizing at design temperature.",
+  "url": "https://www.engineerzcorner.com/hvac/heat-pump-balance-point-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">HVAC</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Heat Pump Balance Point</span></div></nav>
+
+
+<div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/heat-pump-sizing-basics">Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</a></div></div>
+<a href="../" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-hvac-balance-point">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"></path></svg></div>
+    <div><h1>Heat Pump Balance Point &amp; Backup Heat</h1><div class="hero-sub">The outdoor temperature where heat pump output stops matching heat loss</div></div>
+  </div>
+  <div class="intro">A heat pump's heating output falls as outdoor temperature falls, while a building's heat loss rises as it gets colder — the balance point is the outdoor temperature where those two lines cross. Below it, the heat pump alone can no longer keep up and backup heat has to cover the gap. Enter the building's heat loss at design temperature and two points from the heat pump's own capacity-at-temperature table to find it.</div>
+  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/heat-pump-sizing-basics" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why heat pump sizing isn't the same exercise as furnace sizing &rarr;</a></div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="hbpValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Building Heat Loss</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="hbpTin">Indoor design temperature <span class="unit">°C</span></label>
+        <input type="number" id="hbpTin" value="21" step="0.5">
+      </div>
+      <div class="field">
+        <label for="hbpTdesign">Outdoor design temperature <span class="unit">°C</span></label>
+        <input type="number" id="hbpTdesign" value="-8" step="0.5">
+        <div class="hint">The local winter design condition — typically the 99% or 99.6% ASHRAE design dry-bulb for the site, not the record-cold extreme.</div>
+      </div>
+      <div class="field">
+        <label for="hbpQdesign">Building heat loss at design temp <span class="unit">kW</span></label>
+        <input type="number" id="hbpQdesign" value="12" step="0.5">
+        <div class="hint">From a room-by-room or whole-building heat loss calculation at the design temperature above — not a rule-of-thumb per-m² figure.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Heat Pump Capacity-at-Temperature</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="hbpTrated">Rated condition temperature <span class="unit">°C</span></label>
+        <input type="number" id="hbpTrated" value="8" step="0.5">
+        <div class="hint">Nameplate/brochure heating capacity is usually rated near 8°C / 47°F outdoor air — check the datasheet's test condition.</div>
+      </div>
+      <div class="field">
+        <label for="hbpQrated">Heating capacity at rated condition <span class="unit">kW</span></label>
+        <input type="number" id="hbpQrated" value="14" step="0.5">
+      </div>
+      <div class="field">
+        <label for="hbpQhpDesign">Heating capacity at design temperature <span class="unit">kW</span></label>
+        <input type="number" id="hbpQhpDesign" value="8.5" step="0.5">
+        <div class="hint">Pull this from the manufacturer's capacity-at-temperature table or performance curve at the outdoor design temperature above — not the rated figure, which overstates cold-weather output.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">BALANCE POINT TEMPERATURE</span>
+      <span class="rval" id="hbpBalance">0.0 <small>°C</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Heat pump output at balance point</div><div class="sval" id="hbpQhpAtBalance">—</div></div>
+      <div class="stat"><div class="slabel">Backup heat needed at design temp</div><div class="sval amber" id="hbpBackup">—</div></div>
+      <div class="stat"><div class="slabel">Capacity margin at rated condition</div><div class="sval" id="hbpMargin">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Heat loss line: Q<sub>loss</sub>(T) = Q<sub>design</sub> × (T<sub>in</sub> − T) / (T<sub>in</sub> − T<sub>design</sub>)<br>
+        Heat pump line: Q<sub>hp</sub>(T) = Q<sub>rated</sub> + [(Q<sub>hp,design</sub> − Q<sub>rated</sub>) / (T<sub>design</sub> − T<sub>rated</sub>)] × (T − T<sub>rated</sub>)<br>
+        Balance point: the outdoor temperature T<sub>bal</sub> where Q<sub>loss</sub>(T) = Q<sub>hp</sub>(T) &nbsp;·&nbsp; Backup heat = max(0, Q<sub>design</sub> − Q<sub>hp,design</sub>)
+      </div>
+      <div class="hint" style="margin-top:8px;">Both lines are treated as straight between the two given points — heat loss really is close to linear with outdoor temperature, but a heat pump's real capacity curve bends slightly, so treat the balance point as a good estimate rather than an exact figure. For a tighter answer, use two capacity points closer to your actual design temperature instead of the full rated-to-design span.</div>
+    </details>
+  </div>
+  <footer>Two-point linear estimate only — a full sizing exercise uses the manufacturer's complete capacity curve and a proper room-by-room heat loss calculation. <a href="./">← HVAC Index</a></footer>
+
+  <div class="reftable-section">
+    <h2>About the Heat Pump Balance Point Calculator</h2>
+    <p class="reftable-note">A heat pump's heating capacity isn't a single number — it falls as outdoor temperature drops, while the building's heat loss does the opposite and rises as it gets colder. Plot both against outdoor temperature and they cross at one point: the balance point. Above it, the heat pump alone covers the full heating load. Below it, the gap between the two lines is exactly the capacity that backup heat (a resistance strip, or a hybrid furnace) needs to supply.</p>
+    <p class="reftable-note">This sheet builds both lines from simple two-point data — the building's heat loss at its design temperature, and the heat pump's rated capacity plus its capacity at that same design temperature, both of which should come straight from the manufacturer's performance table. Sizing off the rated/brochure capacity alone is a common mistake here, since that figure is measured at a mild outdoor condition and overstates what the unit can actually deliver on a cold day.</p>
+    <p class="reftable-note">A balance point sitting well above the design temperature isn't necessarily a problem — it just means backup heat needs to be sized for a real, non-trivial share of the coldest days, which is normal for a lot of standard (non cold-climate) heat pump installations. What matters is that the backup capacity is actually sized to cover that gap, rather than assumed to be a small top-up.</p>
+  </div>
+</div>
+
+<!-- PAGE: HBP HEAT PUMP BALANCE POINT -->
+
+
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
