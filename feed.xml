@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
+    <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
+    <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
+    <pubDate>Wed, 05 Aug 2026 20:27:14 GMT</pubDate>
+  </item>
+  <item>
     <title>BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</title>
     <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</guid>
     <description>Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>ANSI Relay Numbers: Common Protection Relay Functions</title>
-    <link>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</guid>
-    <description>A working reference for the ANSI device numbers you'll actually run into on protection schemes — 50/51, 27/59, 87, 21, 67, 25 and more.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>

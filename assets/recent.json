@@ -1,5 +1,10 @@
 [
   {
+    "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
+    "u": "posts/bolt-torque-vs-preload-nut-factor",
+    "d": "2026-08-05"
+  },
+  {
     "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
     "u": "posts/bms-point-types-explained",
     "d": "2026-08-05"
@@ -42,11 +47,6 @@
   {
     "t": "Heat Pump Balance Point &amp; Backup Heat",
     "u": "hvac/heat-pump-balance-point-calculator",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
-    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
     "d": "2026-08-05"
   }
 ]
