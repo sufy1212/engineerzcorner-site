@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</title>
+    <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
+    <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
+    <pubDate>Wed, 05 Aug 2026 20:25:18 GMT</pubDate>
+  </item>
+  <item>
     <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
     <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
     <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</link>
     <guid>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</guid>
     <description>A working reference for the ANSI device numbers you'll actually run into on protection schemes — 50/51, 27/59, 87, 21, 67, 25 and more.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load</title>
-    <link>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</link>
-    <guid>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</guid>
-    <description>Why a beam's bending capacity comes down to two separate checks — bending stress against section modulus, and deflection against span — not just the applied load.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>

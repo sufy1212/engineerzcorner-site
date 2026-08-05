@@ -1,5 +1,10 @@
 [
   {
+    "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
+    "u": "posts/bms-point-types-explained",
+    "d": "2026-08-05"
+  },
+  {
     "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
     "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
     "d": "2026-08-05"
@@ -42,11 +47,6 @@
   {
     "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
     "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
-    "u": "posts/system-voltages-low-medium-high-explained",
     "d": "2026-08-05"
   }
 ]
