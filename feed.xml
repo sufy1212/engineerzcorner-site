@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
+    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
+    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
+    <pubDate>Wed, 05 Aug 2026 20:29:38 GMT</pubDate>
+  </item>
+  <item>
     <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
     <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
     <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</guid>
     <description>What air changes per hour (ACH) measures, the formula behind it, typical ACH targets by space type.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Alarm Setpoint Bands: Why High and High-High Are Different Alarms</title>
-    <link>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</guid>
-    <description>Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>

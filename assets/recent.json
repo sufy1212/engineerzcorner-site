@@ -1,5 +1,10 @@
 [
   {
+    "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
+    "u": "posts/breaker-selectivity-discrimination-explained",
+    "d": "2026-08-05"
+  },
+  {
     "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
     "u": "posts/bolt-torque-vs-preload-nut-factor",
     "d": "2026-08-05"
@@ -42,11 +47,6 @@
   {
     "t": "Refrigeration / Chiller Capacity",
     "u": "hvac/chiller-capacity-calculator",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "Heat Pump Balance Point &amp; Backup Heat",
-    "u": "hvac/heat-pump-balance-point-calculator",
     "d": "2026-08-05"
   }
 ]
