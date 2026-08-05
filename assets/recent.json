@@ -1,5 +1,15 @@
 [
   {
+    "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
+    "u": "posts/chilled-water-hvac-system-explained",
+    "d": "2026-08-05"
+  },
+  {
+    "t": "HVAC System Components Explained",
+    "u": "posts/hvac-system-components-explained",
+    "d": "2026-08-05"
+  },
+  {
     "t": "Meeting Minutes &amp; Action Items",
     "u": "pm/meeting-minutes",
     "d": "2026-08-04"
@@ -37,16 +47,6 @@
   {
     "t": "Sensible Heat / Supply Airflow",
     "u": "hvac/sensible-heat-airflow-calculator",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Cable Schedule Builder",
-    "u": "electrical/cable-schedule-builder",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Power Factor Correction Sizing",
-    "u": "electrical/power-factor-correction",
     "d": "2026-08-04"
   }
 ]

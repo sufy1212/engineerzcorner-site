@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
+    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
+    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
+    <pubDate>Wed, 05 Aug 2026 03:28:55 GMT</pubDate>
+  </item>
+  <item>
+    <title>HVAC System Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</guid>
+    <description>How an HVAC system actually conditions a space, component by component — compressor, condenser, expansion device, evaporator, air handler, ductwork, and controls.</description>
+    <pubDate>Wed, 05 Aug 2026 03:28:55 GMT</pubDate>
+  </item>
+  <item>
     <title>Cable Glands: What They Do and How to Get the Selection Right</title>
     <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
@@ -172,13 +186,6 @@
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
   <item>
-    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
-    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
     <title>Chiller Capacity and COP: Where the Compressor's Work Actually Goes</title>
     <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
     <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists.html</link>
     <guid>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists.html</guid>
     <description>What the conduit fill percentage check is actually protecting against &amp;mdash; pulling tension and jamming risk during installation.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</title>
-    <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
-    <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
-    <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
