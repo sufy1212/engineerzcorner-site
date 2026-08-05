@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</title>
+    <link>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</guid>
+    <description>Voltage classification from ELV to UHV explained — IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
+    <pubDate>Wed, 05 Aug 2026 08:54:06 GMT</pubDate>
+  </item>
+  <item>
     <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
     <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</guid>
     <description>How a concrete volume gets converted into cement, sand and aggregate quantities using mix ratios, why wastage factors are added, and what water-cement ratio does to the mix.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Conduit Fill: Why 40% Isn't an Arbitrary Number</title>
-    <link>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists.html</link>
-    <guid>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists.html</guid>
-    <description>What the conduit fill percentage check is actually protecting against &amp;mdash; pulling tension and jamming risk during installation.</description>
     <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
