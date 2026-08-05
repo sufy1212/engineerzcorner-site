@@ -1,5 +1,10 @@
 [
   {
+    "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
+    "u": "posts/system-voltages-low-medium-high-explained",
+    "d": "2026-08-05"
+  },
+  {
     "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
     "u": "posts/chilled-water-hvac-system-explained",
     "d": "2026-08-05"
@@ -42,11 +47,6 @@
   {
     "t": "Pipe Insulation Heat Loss",
     "u": "hvac/pipe-insulation-heat-loss-calculator",
-    "d": "2026-08-04"
-  },
-  {
-    "t": "Sensible Heat / Supply Airflow",
-    "u": "hvac/sensible-heat-airflow-calculator",
     "d": "2026-08-04"
   }
 ]
