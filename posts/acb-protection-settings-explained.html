@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%2312B8A4'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained | Engineerz CorneR</title>
+<meta name="description" content="LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an Air Circuit Breaker (ACB) — what each protection parameter does, typical setting ranges, and why the settings exist as a coordinated set, not individual dials.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/acb-protection-settings-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Essential Protection Settings of Air Circuit Breakers (ACB) Explained">
+<meta property="og:description" content="Long-time, short-time, instantaneous and ground fault protection settings on an ACB — what each parameter does, typical ranges, and why they exist as a coordinated set.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/acb-protection-settings-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Essential Protection Settings of Air Circuit Breakers (ACB) Explained">
+<meta name="twitter:description" content="Long-time, short-time, instantaneous and ground fault protection settings on an ACB — what each parameter does, typical ranges, and why they exist as a coordinated set.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained", "item": "https://www.engineerzcorner.com/posts/acb-protection-settings-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "description": "Long-time, short-time, instantaneous and ground fault protection settings on an ACB — what each parameter does, typical ranges, and why they exist as a coordinated set.",
+  "url": "https://www.engineerzcorner.com/posts/acb-protection-settings-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/acb-protection-settings-explained"}
+}
+</script>
+<link rel="stylesheet" href="acb-protection-settings-explained.inline.css">
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Essential Protection Settings of Air Circuit Breakers (ACB) Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Protection</span>
+    <h1>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</h1>
+    <p class="hero-sub">Every ACB relay unit has the same handful of dials — long-time, short-time, instantaneous and ground fault. Proper configuration of these settings is what turns a breaker into a coordinated protection device rather than just an on/off switch for a big current.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; LV/MV Switchgear Protection</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="130" x2="720" y2="130" stroke="#12B8A4" stroke-width="3"/>
+      <text x="40" y="146" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">TRIP CURVE &mdash; LOG TIME vs CURRENT</text>
+      <g stroke="#7e97ac" stroke-width="1.3" fill="none">
+        <path d="M60 40 L200 40" stroke-dasharray="3 3" opacity=".5"/>
+        <path d="M60 40 C160 40 200 60 240 95" stroke="#12B8A4" stroke-width="2"/>
+        <path d="M240 95 L300 95" stroke="#F2B84B" stroke-width="2"/>
+        <path d="M300 95 C330 95 340 105 350 118" stroke="#F2B84B" stroke-width="2"/>
+        <path d="M350 118 L400 118" stroke="#E14F3D" stroke-width="2"/>
+        <line x1="400" y1="30" x2="400" y2="130" stroke="#E14F3D" stroke-width="1.6" stroke-dasharray="4 3"/>
+      </g>
+      <g font-family="IBM Plex Mono" font-size="8.5" fill="#8FB0B6">
+        <text x="80" y="34">LTPU / LTD</text>
+        <text x="250" y="88">STPU / STD</text>
+        <text x="395" y="24">INST (Ii)</text>
+        <text x="450" y="115" fill="#7C6FE0">GFPU / GFD (ground fault, parallel path)</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">ACB protection is built from four families of settings — long-time, short-time, instantaneous and ground fault — each targeting a different current level and time band.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Long-time settings (Ir, tr) protect against sustained overload; short-time (Isd, tsd) and instantaneous (Ii) settings handle short-circuit currents at progressively faster response.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Ground fault settings (Ig, tg) run on a separate, lower-threshold path to catch leakage and ground faults that phase overcurrent protection alone would miss.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">None of these settings should be picked in isolation — they're derived from equipment ratings, system design and a coordination study with upstream and downstream devices.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>An ACB's protection relay is really just a current-vs-time trip curve, built out of a handful of adjustable breakpoints. Each setting below moves one segment of that curve — get the segments right and devices trip in the right order; get one wrong and you either nuisance-trip on normal load swings or fail to clear a fault fast enough.</p>
+
+    <h2><span class="h2-dot"></span>The eight settings</h2>
+    <p class="post-lede">Grouped by protection family — long-time (overload), short-time (short-circuit), instantaneous (extreme fault) and ground fault.</p>
+
+    <div class="pf-grid">
+      <div class="pf-card">
+        <div class="pf-badge lt">1</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Long-Time Pickup</span><span class="pf-sym">Ir</span></div>
+          <p class="pf-desc">Defines the current level, as a multiple of the breaker's rated current (In), at which overload protection begins to act. Set too low and normal load fluctuations trip the breaker; set too high and sustained overload goes unprotected.</p>
+          <div class="pf-range">Typical range: <b>0.60&ndash;1.0 &times; In</b></div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-badge lt">2</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Long-Time Delay</span><span class="pf-sym">tr</span></div>
+          <p class="pf-desc">Determines how long the breaker tolerates a current above Ir before tripping, following an inverse-time (I&sup2;t) characteristic — longer delay at currents just above pickup, faster trip as the overload gets larger. This is what lets a breaker ride through a motor's normal starting inrush without tripping.</p>
+          <div class="pf-range">Typical range: <b>3&ndash;30 sec @ 6&times;Ir</b></div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-badge st">3</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Short-Time Pickup</span><span class="pf-sym">Isd</span></div>
+          <p class="pf-desc">Sets the threshold, as a multiple of Ir, above which the breaker switches from long-time overload logic into short-time short-circuit logic. This is the boundary between "overload" and "fault" as far as the relay is concerned.</p>
+          <div class="pf-range">Typical range: <b>2&ndash;10 &times; Ir</b></div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-badge st">4</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Short-Time Delay</span><span class="pf-sym">tsd</span></div>
+          <p class="pf-desc">Adds an intentional, adjustable delay before tripping on a short-time overcurrent. This delay is the main tool for selective coordination — a delay long enough lets a downstream breaker clear a fault on its own circuit first, before the upstream ACB trips.</p>
+          <div class="pf-range">Typical range: <b>100&ndash;400 ms</b></div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-badge inst">5</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Instantaneous Pickup</span><span class="pf-sym">Ii</span></div>
+          <p class="pf-desc">Trips with no intentional delay once current exceeds this threshold — reserved for extremely high fault currents where waiting even a few hundred milliseconds risks equipment damage. On some coordinated systems this function is deliberately disabled on upstream breakers to preserve selectivity.</p>
+          <div class="pf-range">Typical range: <b>2&ndash;24 &times; In</b></div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-badge gf">6</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Ground Fault Pickup</span><span class="pf-sym">Ig</span></div>
+          <p class="pf-desc">Detects ground faults or earth-leakage currents at a threshold well below the phase overcurrent settings, since a ground fault often draws far less current than a phase-to-phase short but is no less dangerous.</p>
+          <div class="pf-range">Typical range: <b>0.1&ndash;0.8 &times; In</b></div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-badge gf">7</div>
+        <div class="pf-body">
+          <div class="pf-head"><span class="pf-name">Ground Fault Delay</span><span class="pf-sym">tg</span></div>
+          <p class="pf-desc">Introduces a delay before tripping on a ground fault, mirroring what tsd does for short-time protection — it exists so ground fault protection at different levels of the distribution system can be coordinated selectively instead of all tripping together.</p>
+          <div class="pf-range">Typical range: <b>0.1&ndash;0.4 sec</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Long-time vs short-time vs instantaneous</b><span>These three sit on the same trip curve at increasing current and decreasing time — long-time protects against overload over seconds, short-time against faults over hundreds of milliseconds, instantaneous against extreme faults with no intentional delay at all.</span></div>
+      <div class="signal-card hot"><b>Why ground fault runs separately</b><span>Ground fault protection doesn't sum the same way phase overcurrent does — it typically monitors the vector sum of the phase currents (or a dedicated CT), which is why Ig and tg are set and coordinated independently of Ir/tr and Isd/tsd.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Setting summary</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Function</th><th>Symbol</th><th>Protects against</th><th>Typical range</th></tr>
+        <tr><td>Long-Time Pickup</td><td>Ir</td><td>Sustained overload</td><td>0.60&ndash;1.0 &times; In</td></tr>
+        <tr><td>Long-Time Delay</td><td>tr</td><td>Sustained overload</td><td>3&ndash;30 sec @ 6&times;Ir</td></tr>
+        <tr><td>Short-Time Pickup</td><td>Isd</td><td>Short-circuit</td><td>2&ndash;10 &times; Ir</td></tr>
+        <tr><td>Short-Time Delay</td><td>tsd</td><td>Short-circuit (coordination)</td><td>100&ndash;400 ms</td></tr>
+        <tr><td>Instantaneous Pickup</td><td>Ii</td><td>Extreme fault current</td><td>2&ndash;24 &times; In</td></tr>
+        <tr><td>Ground Fault Pickup</td><td>Ig</td><td>Ground fault / leakage</td><td>0.1&ndash;0.8 &times; In</td></tr>
+        <tr><td>Ground Fault Delay</td><td>tg</td><td>Ground fault (coordination)</td><td>0.1&ndash;0.4 sec</td></tr>
+      </table>
+    </div>
+    <p class="post-lede">Ranges are typical adjustment bands on common ACB protection relays and vary by manufacturer — always set from the relay's own manual and the project's coordination study, not from typical values alone.</p>
+
+    <h2><span class="h2-dot"></span>Why these settings matter</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"></path></svg></div>
+        <div class="benefit-title">Reliable protection</div>
+        <div class="benefit-desc">Protects against overloads, short circuits and ground faults across their respective current and time bands.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+        <div class="benefit-title">System stability</div>
+        <div class="benefit-desc">Ensures continuity of supply and minimizes downtime by tripping only the affected section.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="6" r="2.5"></circle><circle cx="12" cy="18" r="2.5"></circle><path d="M8 7l3 9M16 7l-3 9"></path></svg></div>
+        <div class="benefit-title">Selective coordination</div>
+        <div class="benefit-desc">Works with other protective devices upstream and downstream so only the nearest breaker to a fault opens.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"></path></svg></div>
+        <div class="benefit-title">Equipment safety</div>
+        <div class="benefit-desc">Protects downstream equipment and personnel by clearing faults before thermal or mechanical damage occurs.</div>
+      </div>
+    </div>
+    <p class="post-lede">Settings should always be based on system design, equipment ratings and a proper coordination study — not left at factory defaults.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Long-time settings (Ir, tr) handle sustained overload with an inverse-time characteristic that rides through normal starting transients.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Short-time settings (Isd, tsd) and instantaneous pickup (Ii) handle short-circuit currents at progressively faster response, with tsd doing most of the work for selective coordination.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Ground fault settings (Ig, tg) run on their own lower-threshold path, separate from phase overcurrent protection.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Instantaneous pickup is sometimes intentionally disabled on upstream breakers specifically to preserve selectivity with downstream devices.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Every value here should come from the coordination study and equipment ratings for the specific installation — not from a typical-values table.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Essential%20Protection%20Settings%20of%20Air%20Circuit%20Breakers%20(ACB)%20Explained%20%E2%80%94%20LTPU%2C%20LTD%2C%20STPU%2C%20STD%2C%20instantaneous%20and%20ground%20fault%20settings%2C%20explained.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Facb-protection-settings-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Facb-protection-settings-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Essential%20Protection%20Settings%20of%20Air%20Circuit%20Breakers%20(ACB)%20Explained&text=LTPU%2C%20LTD%2C%20STPU%2C%20STD%2C%20instantaneous%20and%20ground%20fault%20settings%2C%20explained.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Facb-protection-settings-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Essential%20Protection%20Settings%20of%20Air%20Circuit%20Breakers%20(ACB)%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AEssential%20Protection%20Settings%20of%20Air%20Circuit%20Breakers%20(ACB)%20Explained%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Facb-protection-settings-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculators</p>
+    <ul><li><a href="../electrical/breaker-fuse-sizing-calculator">Breaker / Fuse Sizing Calculator &rarr;</a></li><li><a href="../electrical/selectivity-coordination-calculator">Selectivity Coordination Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li><li><a href="electrical-switchgear-protection-devices-explained">MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</a></li><li><a href="how-to-select-digital-protection-relay">How to Select a Digital Protection Relay: An 8-Step Guide</a></li><li><a href="ansi-relay-numbers-protection-functions">ANSI Relay Numbers: Common Protection Relay Functions</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../electrical/selectivity-coordination-calculator">Try the Selectivity Coordination Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
