@@ -1,0 +1,56 @@
+name: Auto-brand content images
+
+# Runs whenever an image is added or changed anywhere under a content
+# img/ folder — including "Add files via upload" commits — and stamps
+# it with the EngineerzCorner footer band before it's live. Skips
+# images already branded (tracked in assets/branded-images-manifest.json), so
+# it never re-stamps the same file twice.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/img/*.jpg"
+      - "**/img/*.jpeg"
+      - "**/img/*.png"
+      - "**/img/*.webp"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: brand-images
+  cancel-in-progress: false
+
+jobs:
+  brand:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --omit=dev
+
+      - name: Brand new/changed images
+        run: node scripts/brand-images.js
+
+      - name: Commit branded images if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "**/img/*.jpg" "**/img/*.jpeg" "**/img/*.png" "**/img/*.webp" assets/branded-images-manifest.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed — skipping commit."
+          else
+            git commit -m "chore: auto-brand new content image(s) [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $i failed (someone else pushed at the same time) — retrying..."
+              sleep $((RANDOM % 5 + 3))
+            done
+          fi
