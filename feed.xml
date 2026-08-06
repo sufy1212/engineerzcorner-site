@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
+    <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an Air Circuit Breaker (ACB) — what each protection parameter does, typical setting ranges, and why the settings exist as a coordinated set, not individual dials.</description>
+    <pubDate>Thu, 06 Aug 2026 09:02:06 GMT</pubDate>
+  </item>
+  <item>
     <title>FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained</title>
     <link>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
     <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
     <pubDate>Sun, 02 Aug 2026 07:24:43 GMT</pubDate>
-  </item>
-  <item>
-    <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
-    <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
-    <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units.</description>
-    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
