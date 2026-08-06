@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DC Cable Size Selection in PV Systems | Engineerz CorneR</title>
+<meta name="description" content="String cable vs array cable in a PV system — the voltage-drop sizing formula with worked examples, plus the temperature, grouping and installation derating factors that adjust the final size.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="How to Select the Right DC Cable Size in PV Systems">
+<meta property="og:description" content="String cable vs array cable — the voltage-drop sizing formula with worked examples (string and array), plus the temperature, grouping and installation-method derating factors that adjust the final size.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems">
+<meta property="og:image" content="https://www.engineerzcorner.com/posts/img/dc-cable-size-pv-systems-infographic.jpg">
+<meta property="og:image:width" content="889">
+<meta property="og:image:height" content="1420">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Select the Right DC Cable Size in PV Systems">
+<meta name="twitter:description" content="String cable vs array cable — the voltage-drop sizing formula with worked examples, plus the temperature, grouping and installation-method derating factors that adjust the final size.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/posts/img/dc-cable-size-pv-systems-infographic.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Select the Right DC Cable Size in PV Systems",
+      "item": "https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Select the Right DC Cable Size in PV Systems",
+      "datePublished": "2026-08-06",
+      "dateModified": "2026-08-06",
+  "description": "String cable vs array cable — the voltage-drop sizing formula with worked examples, plus the temperature, grouping and installation-method derating factors that adjust the final size.",
+  "url": "https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems",
+  "image": "https://www.engineerzcorner.com/posts/img/dc-cable-size-pv-systems-infographic.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+.post-body .checklist{margin:0 0 30px}
+.post-body .checklist li span:last-child b{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">How to Select the Right DC Cable Size in PV Systems</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">☀ Solar &middot; Cable Sizing</span>
+    <h1>How to Select the Right DC Cable Size in PV Systems</h1>
+    <p class="hero-sub">A PV DC cable schedule really has two different cables to size &mdash; the string cable carrying one string's current, and the array cable carrying every string's current combined &mdash; and both start from the same voltage-drop formula, then get checked against current-carrying capacity.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Solar / PV Cable Sizing</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">String cable carries a single string's current; array cable carries the combined current of every string feeding the combiner box.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Sizing starts as a voltage-drop calculation &mdash; the cross-sectional area comes out of allowable &Delta;V, not current rating alone.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The formula's result is a minimum area &mdash; the size actually selected must still clear current-carrying capacity after derating.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Ambient temperature, grouping with other circuits and the installation method all shrink a cable's real carrying capacity below its tabulated value.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A PV array's DC side has two distinct cable runs, and mixing them up leads to an undersized array cable. The <b>string cable</b> runs from each string of series-connected modules down to the combiner box, carrying just that one string's current. The <b>array cable</b> runs from the combiner box to the inverter, carrying the sum of every string's current. Same voltage-drop method, very different current.</p>
+
+    <img class="infographic" src="img/dc-cable-size-pv-systems-infographic.jpg" alt="Infographic showing how to select DC cable size in PV systems — string cable vs array cable calculation using the voltage-drop formula, plus key selection factors including current capacity, ambient temperature, installation method and grouping factor">
+    <p class="fig-caption">String cable vs array cable — voltage-drop sizing method, worked example, and the factors that govern final selection.</p>
+
+    <h2><span class="h2-dot"></span>String cable vs array cable</h2>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>String cable</b><span>Runs from each PV string (series-connected modules) to the combiner box. Carries one string's current only &mdash; typically the module's short-circuit or rated operating current.</span></div>
+      <div class="signal-card hot"><b>Array cable</b><span>Runs from the combiner box to the inverter. Carries the combined current of every string on that combiner &mdash; number of strings &times; string current.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The voltage-drop sizing formula</h2>
+    <p>Both cables are sized the same way: fix an allowable voltage drop (commonly around 1&ndash;2% of system voltage for the DC side), then solve for the minimum cross-sectional area that keeps the drop under that limit over the cable's one-way length.</p>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-result"><b>A</b><span>area, mm&sup2;</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-chip"><b>2 &times; L &times; I &times; &rho;</b><span>numerator</span></div>
+        <div class="f-op">&divide;</div>
+        <div class="f-chip"><b>&Delta;V</b><span>allowable drop, V</span></div>
+      </div>
+    </div>
+    <div class="formula-note"><b>A</b> = minimum cross-sectional area (mm&sup2;) &middot; <b>L</b> = one-way cable length (m) &middot; <b>I</b> = current carried (A) &middot; <b>&rho;</b> = conductor resistivity, &asymp;0.0175 &Omega;&middot;mm&sup2;/m for copper &middot; <b>&Delta;V</b> = allowable voltage drop (V). The factor of 2 accounts for the round trip &mdash; current flows out on one conductor and back on the other.</div>
+
+    <h2><span class="h2-dot"></span>Worked example &mdash; string cable</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Given</th><th>Value</th></tr>
+        <tr><td>Number of strings</td><td>4</td></tr>
+        <tr><td>Modules per string</td><td>15</td></tr>
+        <tr><td>String voltage</td><td>615 V<sub>DC</sub></td></tr>
+        <tr><td>String current</td><td>15 A</td></tr>
+        <tr><td>Max. allowable voltage drop</td><td>1%</td></tr>
+        <tr><td>String cable length (one way)</td><td>45 m</td></tr>
+      </table>
+    </div>
+    <div class="formula-box">&Delta;V &nbsp;=&nbsp; 615 &times; 1% &nbsp;=&nbsp; 6.15 V<br><br>A &nbsp;=&nbsp; (2 &times; 45 &times; 15 &times; 0.0175) / 6.15 &nbsp;=&nbsp; 3.84 mm&sup2;</div>
+    <div class="formula-note">3.84 mm&sup2; is the minimum calculated area &mdash; rounding up to the nearest standard conductor size gives a <b>selected size of 4 mm&sup2; copper</b> for the string cable.</div>
+
+    <h2><span class="h2-dot"></span>Worked example &mdash; array cable</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Given</th><th>Value</th></tr>
+        <tr><td>Number of strings on this combiner</td><td>4</td></tr>
+        <tr><td>Current per string</td><td>15 A</td></tr>
+        <tr><td>Array cable length (one way)</td><td>30 m</td></tr>
+        <tr><td>Max. allowable voltage drop</td><td>Same 6.15 V basis</td></tr>
+      </table>
+    </div>
+    <div class="formula-box">Array current &nbsp;=&nbsp; 4 &times; 15 &nbsp;=&nbsp; 60 A<br><br>A &nbsp;=&nbsp; (2 &times; 30 &times; 60 &times; 0.0175) / 6.15 &nbsp;=&nbsp; 10.24 mm&sup2;</div>
+    <div class="formula-note">10.24 mm&sup2; rounds up to the nearest standard size &mdash; a <b>selected size of 16 mm&sup2; copper</b> for the array cable. Note how much the area jumps once four strings' current is combined onto one cable, even over a shorter run.</div>
+
+    <h2><span class="h2-dot"></span>Key selection factors</h2>
+    <p>The voltage-drop calculation only gives a starting area. The size that's actually specified has to hold up against every one of these:</p>
+    <ul class="checklist">
+      <li><span class="ck-mark">A</span><span><b>Current carrying capacity</b> &mdash; the cable's rated ampacity for its size, insulation and conductor material must exceed the design current.</span></li>
+      <li><span class="ck-mark">V</span><span><b>Allowable voltage drop</b> &mdash; the percentage limit used to derive the minimum area in the first place.</span></li>
+      <li><span class="ck-mark">L</span><span><b>Cable length</b> &mdash; longer one-way runs push the required area up directly, as the formula shows.</span></li>
+      <li><span class="ck-mark">T</span><span><b>Ambient temperature</b> &mdash; rooftop and rack-mounted DC cable often sees higher ambient than a standard 30&deg;C table assumes.</span></li>
+      <li><span class="ck-mark">M</span><span><b>Installation method</b> &mdash; conduit, cable tray or free air in open air each carry a different current for the same conductor size.</span></li>
+      <li><span class="ck-mark">G</span><span><b>Grouping factor</b> &mdash; multiple current-carrying circuits bundled or run together derate each other's capacity.</span></li>
+      <li><span class="ck-mark">C</span><span><b>Conductor material</b> &mdash; copper vs aluminium changes both resistivity in the formula and the tabulated ampacity.</span></li>
+      <li><span class="ck-mark">S</span><span><b>Standards &amp; codes</b> &mdash; the applicable code (e.g. IEC) sets the base ampacity tables and the correction factors below.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Derating factors: why the calculated area isn't always the final size</h2>
+    <p>A cable's ampacity table value is measured under fixed reference conditions &mdash; usually a specific ambient temperature, a single circuit, and a defined installation method. PV DC cable rarely sees all three at once: it's often run in a hot rooftop environment, alongside other circuits in the same conduit or tray, and clipped to a mounting rail rather than laid free in open air. Each departure from the reference condition derates &mdash; reduces &mdash; the current the cable can actually carry safely.</p>
+
+    <div class="formula-box">I<sub>z</sub> &nbsp;=&nbsp; I<sub>tab</sub> &times; C<sub>t</sub> &times; C<sub>g</sub> &times; C<sub>i</sub></div>
+    <div class="formula-note"><b>I<sub>z</sub></b> = actual usable current-carrying capacity &middot; <b>I<sub>tab</sub></b> = cable's tabulated ampacity at reference conditions &middot; <b>C<sub>t</sub></b> = temperature correction factor &middot; <b>C<sub>g</sub></b> = grouping (bunching) factor &middot; <b>C<sub>i</sub></b> = installation-method factor. The selected cable must satisfy I<sub>z</sub> &ge; design current.</div>
+
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Ambient temp.</th><th>Typical C<sub>t</sub> (XLPE, 90&deg;C base)</th></tr>
+        <tr><td>30&deg;C (reference)</td><td>1.00</td></tr>
+        <tr><td>40&deg;C</td><td>~0.91</td></tr>
+        <tr><td>50&deg;C</td><td>~0.82</td></tr>
+        <tr><td>60&deg;C</td><td>~0.71</td></tr>
+        <tr><td>70&deg;C</td><td>~0.58</td></tr>
+      </table>
+    </div>
+    <p class="fig-caption" style="margin-top:-14px">Illustrative only. Rooftop-mounted DC cable can see cell/cable temperatures well above 40&ndash;50&deg;C in direct sun &mdash; always pull the exact factor from the cable manufacturer's data or the applicable code table.</p>
+
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Circuits grouped together</th><th>Typical C<sub>g</sub></th></tr>
+        <tr><td>1 circuit</td><td>1.00</td></tr>
+        <tr><td>2 circuits</td><td>~0.80</td></tr>
+        <tr><td>4 circuits</td><td>~0.65</td></tr>
+        <tr><td>6+ circuits</td><td>~0.57</td></tr>
+      </table>
+    </div>
+    <p class="fig-caption" style="margin-top:-14px">Grouping several string or array cables in one conduit, tray, or tight bundle reduces each cable's ability to shed heat &mdash; the more circuits bunched together, the lower the factor.</p>
+
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Installation method (C<sub>i</sub>)</b><span>Cable clipped direct to a hot roof surface, run in conduit, or laid on a ventilated tray all carry different current for the same size &mdash; free air with good ventilation generally allows the highest rating, enclosed conduit on a hot surface the lowest.</span></div>
+      <div class="signal-card hot"><b>Combined effect</b><span>Derating factors multiply, not add. A cable at 50&deg;C ambient (C<sub>t</sub>&nbsp;&asymp;&nbsp;0.82) grouped with three others (C<sub>g</sub>&nbsp;&asymp;&nbsp;0.65) is already down to roughly 53% of its tabulated rating before installation method is even factored in.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Putting it together</h2>
+    <p>Final cable selection needs both checks to pass, and the larger conductor from the two governs:</p>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>Voltage-drop check</b>
+        <p>Gives the minimum area to keep &Delta;V within the allowable percentage over the run length &mdash; the calculation worked through above.</p>
+      </div>
+      <div class="split-card latent">
+        <b>Derated ampacity check</b>
+        <p>The selected size's I<sub>z</sub> (tabulated ampacity &times; all applicable derating factors) must still be &ge; the design current it will actually carry.</p>
+      </div>
+    </div>
+    <p>On short, lightly grouped runs the voltage-drop calculation usually governs and derating barely matters. On longer, hotter, heavily grouped runs &mdash; a common combination on large rooftop or ground-mount arrays &mdash; the derated ampacity check can push the required size up past what the voltage-drop formula alone suggested. Both numbers should be checked, and the bigger cable specified.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>String cable and array cable are sized with the same voltage-drop formula, but carry very different currents &mdash; one string's current vs the combined total.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>A &equals; (2 &times; L &times; I &times; &rho;) &divide; &Delta;V gives the minimum cross-sectional area &mdash; round up to the next standard conductor size.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Temperature, grouping and installation method each derate a cable's tabulated ampacity &mdash; and the factors multiply together, not add.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>The final selected size must satisfy both the voltage-drop minimum and the derated current-carrying capacity &mdash; whichever demands the larger conductor wins.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Always verify the final size against the current-carrying capacity table, correction factors, and the applicable code (e.g. IEC) rather than the calculated area alone.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=How%20to%20Select%20the%20Right%20DC%20Cable%20Size%20in%20PV%20Systems%20%E2%80%94%20String%20cable%20vs%20array%20cable%2C%20the%20voltage-drop%20sizing%20formula%20with%20worked%20examples%2C%20plus%20derating%20factors.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-cable-size-selection-pv-systems" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-cable-size-selection-pv-systems" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=How%20to%20Select%20the%20Right%20DC%20Cable%20Size%20in%20PV%20Systems&text=String%20cable%20vs%20array%20cable%2C%20the%20voltage-drop%20sizing%20formula%20with%20worked%20examples%2C%20plus%20derating%20factors.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-cable-size-selection-pv-systems" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=How%20to%20Select%20the%20Right%20DC%20Cable%20Size%20in%20PV%20Systems&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AHow%20to%20Select%20the%20Right%20DC%20Cable%20Size%20in%20PV%20Systems%0AString%20cable%20vs%20array%20cable%2C%20the%20voltage-drop%20sizing%20formula%20with%20worked%20examples%2C%20plus%20derating%20factors.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-cable-size-selection-pv-systems">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../solar/pv-string-sizing-calculator">PV String Sizing Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul>
+      <li><a href="pv-string-sizing-voltage">PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</a></li>
+      <li><a href="solar-panel-derating-factors-explained">Solar Panel Derating Factors Explained</a></li>
+      <li><a href="cable-size-current-capacity-guide">Cable Size &amp; Current Capacity: A Practical Selection Guide</a></li>
+      <li><a href="voltage-drop-lv-feeders-explained">Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number</a></li>
+    </ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
