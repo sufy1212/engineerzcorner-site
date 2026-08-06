@@ -1,0 +1,25 @@
+WHERE EACH FILE GOES IN YOUR REPO
+==================================
+
+Most files here go exactly where they already are (same folder path as
+in your repo) — just overwrite/add them.
+
+Two exceptions, because their real destination folder names start with
+a dot, which most phone file browsers/zip apps hide, so they've been
+placed at plain, visible paths in this zip instead:
+
+1) PLACE-IN-github-workflows-folder/brand-images.yml
+   -> really goes to:  .github/workflows/brand-images.yml
+   This is required by GitHub Actions to be exactly ".github/workflows/".
+   Easiest way on mobile: open the GitHub app (or github.com in your
+   browser) → your repo → Add file → Create new file → type the path
+   ".github/workflows/brand-images.yml" in the filename box (GitHub
+   will create the folders for you) → paste in the file's contents.
+
+2) branded-images-manifest.json
+   -> goes to:  assets/branded-images-manifest.json
+   No hidden folder involved here — just make sure it lands inside
+   your existing "assets" folder.
+
+Everything else (posts/, scripts/, sitemap.html, package.json) matches
+your repo's structure as-is.

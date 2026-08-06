@@ -1,0 +1,12 @@
+{
+  "name": "engineerzcorner-site",
+  "private": true,
+  "description": "Build scripts for the Engineerz CorneR static site (recent.json/sitemap/feed generation, image branding).",
+  "scripts": {
+    "brand-images": "node scripts/brand-images.js",
+    "build-recent": "node scripts/build-recent.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
