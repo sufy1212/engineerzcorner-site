@@ -1,10 +1,5 @@
 [
   {
-    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-    "u": "posts/acb-protection-settings-explained",
-    "d": "2026-08-06"
-  },
-  {
     "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
     "u": "posts/fire-suppression-systems-explained",
     "d": "2026-08-06"
@@ -47,6 +42,11 @@
   {
     "t": "Bearing L10 Life",
     "u": "mechanical/bearing-life-calculator",
+    "d": "2026-08-05"
+  },
+  {
+    "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+    "u": "posts/heat-pump-sizing-basics",
     "d": "2026-08-05"
   }
 ]
