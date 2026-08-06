@@ -7,15 +7,15 @@
     <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
     <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
-    <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an Air Circuit Breaker (ACB) — what each protection parameter does, typical setting ranges, and why the settings exist as a coordinated set, not individual dials.</description>
-    <pubDate>Thu, 06 Aug 2026 09:02:06 GMT</pubDate>
+    <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an ACB — what each parameter does, typical setting ranges, and why they exist as a coordinated set.</description>
+    <pubDate>Thu, 06 Aug 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained</title>
     <link>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</guid>
-    <description>FM-200, Novec 1230, CO2 and foam fire suppression systems compared — components, applications, discharge time, ozone depletion and global warming potential, plus which NFPA standard applies to each.</description>
-    <pubDate>Thu, 06 Aug 2026 08:34:43 GMT</pubDate>
+    <description>Clean agent, CO2 and foam fire suppression systems compared — components, applications, discharge time, ODP/GWP, and the governing NFPA standard for each.</description>
+    <pubDate>Thu, 06 Aug 2026 08:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
@@ -212,5 +212,19 @@
     <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
     <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
     <pubDate>Sun, 02 Aug 2026 07:24:43 GMT</pubDate>
+  </item>
+  <item>
+    <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
+    <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
+    <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Air Changes per Hour: What ACH Actually Tells You (and Doesn't)</title>
+    <link>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</guid>
+    <description>What air changes per hour (ACH) measures, the formula behind it, typical ACH targets by space type.</description>
+    <pubDate>Sat, 01 Aug 2026 20:29:32 GMT</pubDate>
   </item>
 </channel></rss>
