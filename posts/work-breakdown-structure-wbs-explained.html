@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work Breakdown Structure (WBS) Explained | Engineerz CorneR</title>
+<meta name="description" content="How a WBS decomposes project scope into work packages, the 100% rule that keeps it honest, and why it's the foundation CPM and EVM both sit on top of.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign">
+<meta property="og:description" content="How a WBS decomposes project scope into work packages, the 100% rule that keeps it honest, and why it's the foundation CPM and EVM both sit on top of.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign">
+<meta name="twitter:description" content="How a WBS decomposes project scope into work packages, the 100% rule that keeps it honest, and why it's the foundation CPM and EVM both sit on top of.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="work-breakdown-structure-wbs-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
+      "item": "https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
+  "description": "How a WBS decomposes project scope into work packages, the 100% rule that keeps it honest, and why it's the foundation CPM and EVM both sit on top of.",
+  "url": "https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">📊 Project Management &middot; WBS</span>
+    <h1>Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign</h1>
+    <p class="hero-sub">A schedule, a budget, and a RACI matrix are all downstream of one thing: whether the scope was broken down into pieces small enough to actually assign, estimate, and track.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Scope &amp; Scheduling</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <text x="60" y="20" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">WBS &middot; DECOMPOSITION</text>
+      <rect x="330" y="38" width="100" height="32" rx="6" fill="#241c40" stroke="#9B8CF2" stroke-width="1.5"/>
+      <text x="380" y="58" font-family="IBM Plex Mono" font-size="9" fill="#f6f1e4" text-anchor="middle">PROJECT</text>
+      <line x1="380" y1="70" x2="150" y2="100" stroke="#3E4E70" stroke-width="1.5"/>
+      <line x1="380" y1="70" x2="380" y2="100" stroke="#3E4E70" stroke-width="1.5"/>
+      <line x1="380" y1="70" x2="610" y2="100" stroke="#3E4E70" stroke-width="1.5"/>
+      <rect x="100" y="100" width="100" height="30" rx="5" fill="#122845" stroke="#7A69D6" stroke-width="1.2"/>
+      <rect x="330" y="100" width="100" height="30" rx="5" fill="#122845" stroke="#7A69D6" stroke-width="1.2"/>
+      <rect x="560" y="100" width="100" height="30" rx="5" fill="#122845" stroke="#7A69D6" stroke-width="1.2"/>
+      <text x="150" y="119" font-family="IBM Plex Mono" font-size="8" fill="#dcd5fa" text-anchor="middle">DELIVERABLE 1</text>
+      <text x="380" y="119" font-family="IBM Plex Mono" font-size="8" fill="#dcd5fa" text-anchor="middle">DELIVERABLE 2</text>
+      <text x="610" y="119" font-family="IBM Plex Mono" font-size="8" fill="#dcd5fa" text-anchor="middle">DELIVERABLE 3</text>
+      <line x1="150" y1="130" x2="90" y2="155" stroke="#3E4E70" stroke-width="1" stroke-dasharray="3 2"/>
+      <line x1="150" y1="130" x2="150" y2="155" stroke="#3E4E70" stroke-width="1" stroke-dasharray="3 2"/>
+      <line x1="150" y1="130" x2="210" y2="155" stroke="#3E4E70" stroke-width="1" stroke-dasharray="3 2"/>
+      <rect x="60" y="155" width="60" height="24" rx="4" fill="#18325A"/>
+      <rect x="120" y="155" width="60" height="24" rx="4" fill="#18325A"/>
+      <rect x="180" y="155" width="60" height="24" rx="4" fill="#18325A"/>
+      <text x="90" y="171" font-family="IBM Plex Mono" font-size="7" fill="#8FB0B6" text-anchor="middle">PACKAGE</text>
+      <text x="150" y="171" font-family="IBM Plex Mono" font-size="7" fill="#8FB0B6" text-anchor="middle">PACKAGE</text>
+      <text x="210" y="171" font-family="IBM Plex Mono" font-size="7" fill="#8FB0B6" text-anchor="middle">PACKAGE</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A WBS breaks total project scope down into a hierarchy, ending in work packages small enough to estimate, assign, and track.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">It's organized around deliverables &mdash; things produced &mdash; not around activities or the org chart.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The 100% rule: every level must fully account for the level above it, with nothing left out and nothing double-counted.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Everything else &mdash; the schedule, the budget, the RACI, the risk register &mdash; is built against the WBS, not the other way round.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What it actually is</h2>
+    <p>A WBS is a hierarchical decomposition of the total scope of a project into smaller, more manageable pieces. It answers one question at every level: "what has to be produced to deliver the level above this?" Decomposition stops at the work package level &mdash; a piece of work small enough that one person or one team can own it, estimate its cost and duration, and report on whether it's done.</p>
+
+    <h2><span class="h2-dot"></span>Deliverables, not activities</h2>
+    <div class="rule-box">
+      <b>A WBS is a noun structure, not a verb list</b>
+      <span>The most common mistake is building a WBS out of activities &mdash; "design," "procure," "install" &mdash; instead of deliverables. A deliverable-based WBS asks what gets produced ("Foundation," "Switchgear Room," "Roof Structure"); a schedule then attaches the verbs and sequencing to each of those deliverables afterward. Organizing by activity instead collapses the WBS and the schedule into the same document, and loses the one thing a WBS is supposed to guarantee &mdash; a complete, non-overlapping map of everything that has to exist by the end of the project.</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>The 100% rule</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Rule</th><th>What it prevents</th></tr>
+        <tr><td>The sum of child elements equals 100% of the parent</td><td>Scope gaps &mdash; work that exists but isn't captured anywhere</td></tr>
+        <tr><td>No child element belongs to more than one parent</td><td>Double-counted cost or duration when budgets and schedules roll up</td></tr>
+        <tr><td>Decomposition stops at a usable work package, not an arbitrary depth</td><td>Either too coarse to assign, or so fine it becomes a task list, not a scope map</td></tr>
+      </table>
+    </div>
+    <p>The 100% rule is what makes a WBS trustworthy as a base for cost and schedule roll-ups. If a project manager can point at the top box and say every dollar and every day traces down to a work package under it, the WBS is doing its job. If some scope exists only in someone's head or in an email thread, it isn't in the WBS yet &mdash; and it isn't in the budget or the schedule either.</p>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>A small warehouse fit-out, decomposed three levels deep:</p>
+    <div class="example-box">
+      <h3>Decomposition</h3>
+      <div class="result-line"><span>1.0 Warehouse Fit-Out</span><b>Project</b></div>
+      <div class="result-line"><span>1.1 Electrical Systems</span><b>Deliverable</b></div>
+      <div class="result-line"><span>1.1.1 LV Distribution Panel</span><b>Work package</b></div>
+      <div class="result-line"><span>1.1.2 Lighting Installation</span><b>Work package</b></div>
+      <div class="result-line"><span>1.2 Racking &amp; Storage</span><b>Deliverable</b></div>
+      <div class="result-line"><span>1.2.1 Rack Assembly</span><b>Work package</b></div>
+    </div>
+    <p>Each work package under 1.1 and 1.2 is what gets a cost estimate, a duration, and an owner. The WBS code (1.1.1, 1.1.2 …) then becomes the common key that the schedule, the cost breakdown, and the RACI matrix all reference &mdash; so a change to scope in one of those documents can be traced back to exactly which piece of the WBS it affects.</p>
+
+    <h2><span class="h2-dot"></span>What sits downstream of it</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Downstream tool</th><th>What it takes from the WBS</th></tr>
+        <tr><td>Schedule / CPM network</td><td>Work packages become the activities that get sequenced and durations assigned</td></tr>
+        <tr><td>Cost estimate &amp; budget</td><td>Cost is estimated per work package, then rolled up through the hierarchy</td></tr>
+        <tr><td>Earned Value Management</td><td>Planned Value and Earned Value are both measured against WBS work packages</td></tr>
+        <tr><td>RACI matrix</td><td>Each work package gets an assigned owner and accountable party</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Structure the WBS around deliverables &mdash; nouns, not verbs &mdash; and let the schedule attach the sequencing afterward.</span></li>
+      <li><span class="tk-check">✓</span><span>Apply the 100% rule at every level: children must fully cover the parent, with nothing missing and nothing double-counted.</span></li>
+      <li><span class="tk-check">✓</span><span>Stop decomposing at a work package one person or team can own, estimate, and report against.</span></li>
+      <li><span class="tk-check">✓</span><span>Build the schedule, budget, EVM baseline, and RACI matrix against the WBS codes &mdash; not as separate documents that happen to agree.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Work%20Breakdown%20Structure%20(WBS)%3A%20Scope%2C%20Decomposed%20Into%20Work%20You%20Can%20Assign%20%E2%80%94%20How%20a%20WBS%20decomposes%20project%20scope%20into%20work%20packages%2C%20and%20the%20100%25%20rule%20that%20keeps%20it%20honest.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwork-breakdown-structure-wbs-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwork-breakdown-structure-wbs-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Work%20Breakdown%20Structure%20(WBS)%3A%20Scope%2C%20Decomposed%20Into%20Work%20You%20Can%20Assign&amp;text=How%20a%20WBS%20decomposes%20project%20scope%20into%20work%20packages%2C%20and%20the%20100%25%20rule%20that%20keeps%20it%20honest.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwork-breakdown-structure-wbs-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Work%20Breakdown%20Structure%20(WBS)%3A%20Scope%2C%20Decomposed%20Into%20Work%20You%20Can%20Assign&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AWork%20Breakdown%20Structure%20(WBS)%3A%20Scope%2C%20Decomposed%20Into%20Work%20You%20Can%20Assign%0AHow%20a%20WBS%20decomposes%20project%20scope%20into%20work%20packages%2C%20and%20the%20100%25%20rule%20that%20keeps%20it%20honest.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwork-breakdown-structure-wbs-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Keep reading</p>
+    <ul>
+      <li><a href="critical-path-method-cpm-explained">Critical Path Method (CPM): The Chain That Sets Your Finish Date →</a></li>
+      <li><a href="earned-value-management-basics">Earned Value Management: Reading Project Health From Three Numbers →</a></li>
+      <li><a href="raci-matrix-explained">RACI Matrix Explained: Who's Responsible vs. Who's Accountable →</a></li>
+    </ul>
+    <p class="post-related-label">Try the tool</p>
+    <ul><li><a href="../pm/task-tracker">Task Tracker →</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
