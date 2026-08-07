@@ -1,5 +1,20 @@
 [
   {
+    "t": "RACI Matrix Explained: Who's Responsible vs. Who's Accountable",
+    "u": "posts/raci-matrix-explained",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Risk Register Basics: Turning Probability × Impact Into Priority",
+    "u": "posts/risk-register-probability-impact-scoring",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Stakeholder Power-Interest Grid: Sorting Attention, Not Just People",
+    "u": "posts/stakeholder-power-interest-grid-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "Earned Value Management: Reading Project Health From Three Numbers",
     "u": "posts/earned-value-management-basics",
     "d": "2026-08-07"
@@ -33,20 +48,5 @@
     "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
     "u": "posts/junction-box-types-parts-explained",
     "d": "2026-08-07"
-  },
-  {
-    "t": "Cable Size &amp; Current Capacity: A Practical Selection Guide",
-    "u": "posts/cable-size-current-capacity-guide",
-    "d": "2026-08-06"
-  },
-  {
-    "t": "How to Select the Right DC Cable Size in PV Systems",
-    "u": "posts/dc-cable-size-selection-pv-systems",
-    "d": "2026-08-06"
-  },
-  {
-    "t": "PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String",
-    "u": "posts/pv-string-sizing-voltage",
-    "d": "2026-08-06"
   }
 ]

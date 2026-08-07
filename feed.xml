@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>RACI Matrix Explained: Who's Responsible vs. Who's Accountable</title>
+    <link>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</guid>
+    <description>Why projects stall when nobody owns a decision, what Responsible, Accountable, Consulted and Informed actually mean.</description>
+    <pubDate>Fri, 07 Aug 2026 19:53:41 GMT</pubDate>
+  </item>
+  <item>
+    <title>Risk Register Basics: Turning Probability × Impact Into Priority</title>
+    <link>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</link>
+    <guid>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</guid>
+    <description>Why a risk list without scoring is just a list, how Probability × Impact turns gut feeling into a comparable number.</description>
+    <pubDate>Fri, 07 Aug 2026 19:53:41 GMT</pubDate>
+  </item>
+  <item>
+    <title>Stakeholder Power-Interest Grid: Sorting Attention, Not Just People</title>
+    <link>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained.html</guid>
+    <description>How the power-interest grid sorts stakeholders into four engagement strategies, why the same person can move between quadrants, and why 'keep everyone happy' isn't a strategy.</description>
+    <pubDate>Fri, 07 Aug 2026 19:53:41 GMT</pubDate>
+  </item>
+  <item>
     <title>Earned Value Management: Reading Project Health From Three Numbers</title>
     <link>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</link>
     <guid>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</guid>
@@ -191,26 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
     <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
     <pubDate>Wed, 05 Aug 2026 03:59:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</title>
-    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</guid>
-    <description>How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Retaining Wall Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/retaining-wall-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/retaining-wall-components-explained.html</guid>
-    <description>What every part of a cantilever retaining wall actually does — stem, footing, toe, heel, shear key, drainage, and reinforcement — component by component.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:15 GMT</pubDate>
-  </item>
-  <item>
-    <title>Retaining Wall Design Basics: Why Overturning, Sliding &amp; Bearing All Have to Pass</title>
-    <link>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing.html</link>
-    <guid>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing.html</guid>
-    <description>The three independent stability checks behind every gravity or cantilever retaining wall — overturning, sliding, and bearing pressure.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:15 GMT</pubDate>
   </item>
 </channel></rss>
