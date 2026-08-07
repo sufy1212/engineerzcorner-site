@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Critical Path Method (CPM) Explained | Engineerz CorneR</title>
+<meta name="description" content="How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Critical Path Method (CPM): The Chain That Sets Your Finish Date">
+<meta property="og:description" content="How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Critical Path Method (CPM): The Chain That Sets Your Finish Date">
+<meta name="twitter:description" content="How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="critical-path-method-cpm-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+      "item": "https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+  "description": "How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.",
+  "url": "https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Critical Path Method (CPM): The Chain That Sets Your Finish Date</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">📊 Project Management &middot; CPM</span>
+    <h1>Critical Path Method (CPM): The Chain That Sets Your Finish Date</h1>
+    <p class="hero-sub">Not every late task delays a project. Only the tasks sitting on the critical path do &mdash; and finding that path is what separates schedule management from just watching a Gantt chart.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Scheduling</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <text x="60" y="20" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">NETWORK DIAGRAM &middot; CRITICAL PATH</text>
+      <line x1="90" y1="70" x2="220" y2="70" stroke="#D9534F" stroke-width="2"/>
+      <line x1="220" y1="70" x2="350" y2="70" stroke="#D9534F" stroke-width="2"/>
+      <line x1="350" y1="70" x2="480" y2="70" stroke="#D9534F" stroke-width="2"/>
+      <line x1="480" y1="70" x2="610" y2="70" stroke="#D9534F" stroke-width="2"/>
+      <line x1="220" y1="70" x2="350" y2="135" stroke="#3E4E70" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="350" y1="135" x2="480" y2="70" stroke="#3E4E70" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <rect x="60" y="52" width="60" height="36" rx="6" fill="#122845" stroke="#D9534F" stroke-width="1.5"/>
+      <rect x="190" y="52" width="60" height="36" rx="6" fill="#122845" stroke="#D9534F" stroke-width="1.5"/>
+      <rect x="320" y="52" width="60" height="36" rx="6" fill="#122845" stroke="#D9534F" stroke-width="1.5"/>
+      <rect x="450" y="52" width="60" height="36" rx="6" fill="#122845" stroke="#D9534F" stroke-width="1.5"/>
+      <rect x="580" y="52" width="60" height="36" rx="6" fill="#122845" stroke="#D9534F" stroke-width="1.5"/>
+      <rect x="320" y="117" width="60" height="36" rx="6" fill="#18325A" stroke="#3E4E70" stroke-width="1"/>
+      <text x="90" y="74" font-family="IBM Plex Mono" font-size="9" fill="#f6f1e4" text-anchor="middle">A</text>
+      <text x="220" y="74" font-family="IBM Plex Mono" font-size="9" fill="#f6f1e4" text-anchor="middle">B</text>
+      <text x="350" y="74" font-family="IBM Plex Mono" font-size="9" fill="#f6f1e4" text-anchor="middle">D</text>
+      <text x="480" y="74" font-family="IBM Plex Mono" font-size="9" fill="#f6f1e4" text-anchor="middle">E</text>
+      <text x="610" y="74" font-family="IBM Plex Mono" font-size="9" fill="#f6f1e4" text-anchor="middle">F</text>
+      <text x="350" y="139" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">C</text>
+      <text x="90" y="105" font-family="IBM Plex Mono" font-size="8" fill="#D9534F" text-anchor="middle">0 FLOAT</text>
+      <text x="350" y="170" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6" text-anchor="middle">HAS FLOAT</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">The critical path is the longest chain of dependent tasks from project start to finish &mdash; not the chain with the most tasks in it.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Every task on that path has zero float: slip it by a day and the whole project finish date slips by a day.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Tasks off the critical path have float &mdash; room to slip a little without moving the finish date.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The critical path can change as the project runs &mdash; a delayed non-critical task can eat its float and become critical.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>The idea in one line</h2>
+    <p>Draw every task as a box, connect the boxes in the order one task depends on another, and the longest route through that network &mdash; measured in duration, not number of boxes &mdash; is the critical path. It sets the earliest possible finish date for the whole project, because nothing downstream of it can start before everything on that path is done.</p>
+
+    <h2><span class="h2-dot"></span>Two passes through the network</h2>
+    <p>CPM finds the critical path with two sweeps through the same diagram:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Pass</th><th>Direction</th><th>What it calculates</th></tr>
+        <tr><td>Forward pass</td><td>Start &rarr; finish</td><td>Earliest start (ES) and earliest finish (EF) for every task</td></tr>
+        <tr><td>Backward pass</td><td>Finish &rarr; start</td><td>Latest start (LS) and latest finish (LF) for every task, working back from the project finish</td></tr>
+      </table>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>LS</b><span>Latest Start</span></div>
+        <div class="f-op">&minus;</div>
+        <div class="f-chip"><b>ES</b><span>Earliest Start</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-result"><b>Float</b><span>Slack days</span></div>
+      </div>
+    </div>
+    <div class="formula-note">A task with float&nbsp;=&nbsp;0 is on the critical path. Everything else has room to move.</div>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>Five tasks: A feeds B and C in parallel, B feeds D, C feeds D, D feeds E, E feeds F.</p>
+    <div class="example-box">
+      <h3>Forward &amp; backward pass</h3>
+      <div class="result-line"><span>A (3 days)</span><b>ES 0, EF 3 &middot; Float 0</b></div>
+      <div class="result-line"><span>B (5 days)</span><b>ES 3, EF 8 &middot; Float 0</b></div>
+      <div class="result-line"><span>C (2 days)</span><b>ES 3, EF 5 &middot; Float 3</b></div>
+      <div class="result-line"><span>D (4 days)</span><b>ES 8, EF 12 &middot; Float 0</b></div>
+      <div class="result-line"><span>E (6 days)</span><b>ES 12, EF 18 &middot; Float 0</b></div>
+    </div>
+    <p>C finishes on day 5, but D can't start until B is also done on day 8 &mdash; so C has three days of slack before it starts holding up the schedule. The critical path is A &rarr; B &rarr; D &rarr; E, totalling 18 days. C is real work, on the schedule, with a real deadline &mdash; it just isn't what's setting the project finish date.</p>
+
+    <h2><span class="h2-dot"></span>Why float, not task count, decides what to manage</h2>
+    <div class="rule-box">
+      <b>A five-task chain can matter more than a fifteen-task one</b>
+      <span>It's tempting to focus attention on whichever branch of the schedule looks busiest. But a branch with fifteen short tasks and generous float can absorb weeks of minor slippage without moving the finish date, while a five-task chain with zero float moves the finish date the moment any one task runs long. Float, not activity count, is what tells a scheduler where to actually spend attention.</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>The path isn't fixed for the life of the project</h2>
+    <p>As tasks report progress, floats get recalculated. A non-critical task that was supposed to take 2 days can run 5, quietly burning through its float; once that float hits zero, that task &mdash; and everything downstream of it &mdash; joins the critical path. This is why CPM is a living calculation done at every schedule update, not a diagram drawn once at kickoff and left alone. A path that was critical in month one can stop being the tightest constraint by month three, and a path that had slack early on can become the new bottleneck.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>The critical path is the longest duration route through the network, not the route with the most activities.</span></li>
+      <li><span class="tk-check">✓</span><span>Float = Latest Start &minus; Earliest Start. Zero float means the task is critical; any slip pushes the finish date by the same amount.</span></li>
+      <li><span class="tk-check">✓</span><span>Non-critical tasks have float, but float is a budget that shrinks as those tasks run late &mdash; not a permanent cushion.</span></li>
+      <li><span class="tk-check">✓</span><span>Recalculate the critical path at every schedule update &mdash; it can shift as the project progresses, not just at planning.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Critical%20Path%20Method%20(CPM)%3A%20The%20Chain%20That%20Sets%20Your%20Finish%20Date%20%E2%80%94%20How%20the%20critical%20path%20method%20finds%20the%20longest%20chain%20of%20dependent%20tasks%20in%20a%20schedule%2C%20and%20why%20zero%20float%20means%20zero%20room%20for%20delay.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcritical-path-method-cpm-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcritical-path-method-cpm-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Critical%20Path%20Method%20(CPM)%3A%20The%20Chain%20That%20Sets%20Your%20Finish%20Date&amp;text=How%20the%20critical%20path%20method%20finds%20the%20longest%20chain%20of%20dependent%20tasks%20in%20a%20schedule%2C%20and%20why%20zero%20float%20means%20zero%20room%20for%20delay.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcritical-path-method-cpm-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Critical%20Path%20Method%20(CPM)%3A%20The%20Chain%20That%20Sets%20Your%20Finish%20Date&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACritical%20Path%20Method%20(CPM)%3A%20The%20Chain%20That%20Sets%20Your%20Finish%20Date%0AHow%20the%20critical%20path%20method%20finds%20the%20longest%20chain%20of%20dependent%20tasks%20in%20a%20schedule%2C%20and%20why%20zero%20float%20means%20zero%20room%20for%20delay.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcritical-path-method-cpm-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Keep reading</p>
+    <ul>
+      <li><a href="earned-value-management-basics">Earned Value Management: Reading Project Health From Three Numbers →</a></li>
+      <li><a href="ppp-project-lifecycle-explained">The PPP Project Lifecycle: From Identification to Handback →</a></li>
+      <li><a href="risk-register-probability-impact-scoring">Risk Register Basics: Turning Probability × Impact Into Priority →</a></li>
+    </ul>
+    <p class="post-related-label">Try the tool</p>
+    <ul><li><a href="../pm/task-tracker">Task Tracker →</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
