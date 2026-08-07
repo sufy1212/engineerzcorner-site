@@ -1,5 +1,10 @@
 [
   {
+    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+    "u": "posts/battery-soc-vs-dod-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows",
     "u": "posts/row-spacing-inter-row-shading-explained",
     "d": "2026-08-07"
@@ -42,11 +47,6 @@
   {
     "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
     "u": "posts/critical-path-method-cpm-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "The PPP Project Lifecycle: From Identification to Handback",
-    "u": "posts/ppp-project-lifecycle-explained",
     "d": "2026-08-07"
   }
 ]

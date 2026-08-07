@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
+    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
+    <pubDate>Fri, 07 Aug 2026 20:19:09 GMT</pubDate>
+  </item>
+  <item>
     <title>Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows</title>
     <link>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</guid>
     <description>Voltage classification from ELV to UHV explained &amp;mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
     <pubDate>Wed, 05 Aug 2026 09:21:45 GMT</pubDate>
-  </item>
-  <item>
-    <title>Solar PV System Components Explained: From Panel to Load</title>
-    <link>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</guid>
-    <description>What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy actually flows from sunlight to load.</description>
-    <pubDate>Wed, 05 Aug 2026 04:00:53 GMT</pubDate>
   </item>
 </channel></rss>
