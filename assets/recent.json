@@ -1,5 +1,15 @@
 [
   {
+    "t": "Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows",
+    "u": "posts/row-spacing-inter-row-shading-explained",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+    "d": "2026-08-07"
+  },
+  {
     "t": "RACI Matrix Explained: Who's Responsible vs. Who's Accountable",
     "u": "posts/raci-matrix-explained",
     "d": "2026-08-07"
@@ -37,16 +47,6 @@
   {
     "t": "The PPP Project Lifecycle: From Identification to Handback",
     "u": "posts/ppp-project-lifecycle-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Industrial Valves Explained: Types &amp; Parts",
-    "u": "posts/valve-types-parts-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
-    "u": "posts/junction-box-types-parts-explained",
     "d": "2026-08-07"
   }
 ]

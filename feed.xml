@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows</title>
+    <link>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</guid>
+    <description>Why ground-mount and rooftop solar rows need a minimum gap, how the winter-solstice sun angle sets that gap, and the ground coverage ratio trade-off behind it.</description>
+    <pubDate>Fri, 07 Aug 2026 20:16:50 GMT</pubDate>
+  </item>
+  <item>
+    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
+    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
+    <description>How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.</description>
+    <pubDate>Fri, 07 Aug 2026 20:16:50 GMT</pubDate>
+  </item>
+  <item>
     <title>RACI Matrix Explained: Who's Responsible vs. Who's Accountable</title>
     <link>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</guid>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</guid>
     <description>What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy actually flows from sunlight to load.</description>
     <pubDate>Wed, 05 Aug 2026 04:00:53 GMT</pubDate>
-  </item>
-  <item>
-    <title>PLC Components Explained: What's Actually Inside the Controller</title>
-    <link>https://www.engineerzcorner.com/posts/plc-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/plc-components-explained.html</guid>
-    <description>What's actually inside a PLC — power supply, CPU, input modules, output modules, and communication module — and how the scan cycle ties them together.</description>
-    <pubDate>Wed, 05 Aug 2026 04:00:06 GMT</pubDate>
-  </item>
-  <item>
-    <title>Centrifugal Pump Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
-    <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
-    <pubDate>Wed, 05 Aug 2026 03:59:41 GMT</pubDate>
   </item>
 </channel></rss>
