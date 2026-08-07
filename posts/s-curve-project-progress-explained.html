@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S-Curves in Project Management Explained | Engineerz CorneR</title>
+<meta name="description" content="Why cumulative project progress plots as an S, not a straight line, how to read planned vs actual curves, and what the gap between them is actually telling you.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/s-curve-project-progress-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="S-Curves Explained: Why Project Progress Isn't a Straight Line">
+<meta property="og:description" content="Why cumulative project progress plots as an S, not a straight line, how to read planned vs actual curves, and what the gap between them is actually telling you.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/s-curve-project-progress-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="S-Curves Explained: Why Project Progress Isn't a Straight Line">
+<meta name="twitter:description" content="Why cumulative project progress plots as an S, not a straight line, how to read planned vs actual curves, and what the gap between them is actually telling you.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="s-curve-project-progress-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "S-Curves Explained: Why Project Progress Isn't a Straight Line",
+      "item": "https://www.engineerzcorner.com/posts/s-curve-project-progress-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "S-Curves Explained: Why Project Progress Isn't a Straight Line",
+  "description": "Why cumulative project progress plots as an S, not a straight line, how to read planned vs actual curves, and what the gap between them is actually telling you.",
+  "url": "https://www.engineerzcorner.com/posts/s-curve-project-progress-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/s-curve-project-progress-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">S-Curves Explained: Why Project Progress Isn't a Straight Line</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">📊 Project Management &middot; S-Curve</span>
+    <h1>S-Curves Explained: Why Project Progress Isn't a Straight Line</h1>
+    <p class="hero-sub">Plot cumulative progress against time on almost any project and you get an S, not a diagonal &mdash; slow start, fast middle, slow finish. Knowing why is what lets you read one correctly.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Progress Tracking</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <text x="60" y="20" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">CUMULATIVE PROGRESS VS TIME</text>
+      <line x1="60" y1="150" x2="60" y2="35" stroke="#3E4E70" stroke-width="1"/>
+      <line x1="60" y1="150" x2="700" y2="150" stroke="#3E4E70" stroke-width="1"/>
+      <text x="30" y="95" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" transform="rotate(-90 30 95)">% COMPLETE</text>
+      <text x="380" y="172" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">TIME</text>
+      <path d="M 60 150 C 200 148, 280 100, 380 92 C 480 84, 560 45, 700 40" fill="none" stroke="#9B8CF2" stroke-width="2.5"/>
+      <path d="M 60 150 L 700 40" stroke="#3E4E70" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="600" y="60" font-family="IBM Plex Mono" font-size="8" fill="#DCD5FA" text-anchor="middle">PLANNED (S-CURVE)</text>
+      <text x="640" y="118" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6" text-anchor="middle">STRAIGHT-LINE (WRONG)</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">An S-curve plots cumulative progress &mdash; work, cost, or hours &mdash; against time, and it curves because work rate isn't constant.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Most projects start slow (mobilisation, design), accelerate through the middle (bulk of the work), then taper (finishing, commissioning, punch list).</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Plotting planned against actual on the same chart is what turns the curve from a shape into a management tool.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The gap between planned and actual only tells you there's a variance &mdash; not why. That still needs the schedule and the WBS underneath it.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why the S-shape, not a straight line</h2>
+    <p>A straight-line progress plan assumes work happens at a constant rate from day one to the last day &mdash; which almost never matches reality. Most projects open with mobilisation, procurement lead times, and design work that consumes calendar time without producing much measurable physical progress. The middle of the project is where the bulk of the work packages run in parallel and progress accelerates. The tail end slows again as remaining work packages finish, testing and commissioning take over, and punch-list items get closed one at a time. Plotted cumulatively, that slow&ndash;fast&ndash;slow pattern draws an S, not a diagonal.</p>
+
+    <h2><span class="h2-dot"></span>What's actually being plotted</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Curve type</th><th>Y-axis measures</th><th>Common use</th></tr>
+        <tr><td>Progress S-curve</td><td>% physical work complete</td><td>Tracking schedule performance against the plan</td></tr>
+        <tr><td>Cost S-curve</td><td>Cumulative cost spent (often as Planned Value)</td><td>Cash flow forecasting, ties directly into EVM</td></tr>
+        <tr><td>Man-hour S-curve</td><td>Cumulative labour hours</td><td>Resource loading and workforce planning</td></tr>
+      </table>
+    </div>
+    <p>All three are built the same way: take the planned duration and cost of every work package in the WBS, distribute it across the calendar, and sum cumulatively period by period. The curve is a rollup of the schedule, not a separate estimate drawn on its own.</p>
+
+    <h2><span class="h2-dot"></span>Reading planned vs actual</h2>
+    <div class="rule-box">
+      <b>The gap tells you there's a problem, not what the problem is</b>
+      <span>Once the actual progress curve is plotted against the planned one, three readings are possible: actual sits on the plan (on schedule), above it (ahead), or below it (behind). What the chart can't tell you on its own is why &mdash; whether a single critical-path work package is the cause, or delays are spread thinly across many non-critical packages that individually don't matter. Reading the S-curve is the first flag; finding the cause means going back to the schedule and the WBS work packages behind the number.</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>A six-month installation project, progress measured at each month-end:</p>
+    <div class="example-box">
+      <h3>Planned vs actual, cumulative %</h3>
+      <div class="result-line"><span>Month 2</span><b>Planned 15% &middot; Actual 12% &middot; 3 pts behind</b></div>
+      <div class="result-line"><span>Month 4</span><b>Planned 55% &middot; Actual 46% &middot; 9 pts behind</b></div>
+      <div class="result-line"><span>Month 6</span><b>Planned 100% &middot; Actual 88% &middot; 12 pts behind</b></div>
+    </div>
+    <p>The gap isn't just growing &mdash; it's growing faster through the middle of the project, which is exactly where the planned curve is steepest. A fixed percentage-point gap matters more in the steep section of the curve than the same gap near the flat tail, because it represents more absolute work not done in the same amount of calendar time.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>The S-shape comes from work rate genuinely varying &mdash; slow mobilisation and design, a fast middle, a slow finishing tail &mdash; not from an arbitrary curve-fit.</span></li>
+      <li><span class="tk-check">✓</span><span>Progress, cost, and man-hour S-curves all roll up from the same underlying WBS and schedule &mdash; they're views of the same plan, not separate estimates.</span></li>
+      <li><span class="tk-check">✓</span><span>A gap between planned and actual flags that something's off; it doesn't identify which work package or which cause on its own.</span></li>
+      <li><span class="tk-check">✓</span><span>The same point-gap matters more where the curve is steep than where it's flat &mdash; read the gap against the slope, not just its size.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=S-Curves%20Explained%3A%20Why%20Project%20Progress%20Isn%27t%20a%20Straight%20Line%20%E2%80%94%20Why%20cumulative%20project%20progress%20plots%20as%20an%20S%2C%20and%20what%20the%20gap%20between%20planned%20and%20actual%20is%20telling%20you.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fs-curve-project-progress-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fs-curve-project-progress-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=S-Curves%20Explained%3A%20Why%20Project%20Progress%20Isn%27t%20a%20Straight%20Line&amp;text=Why%20cumulative%20project%20progress%20plots%20as%20an%20S%2C%20and%20what%20the%20gap%20between%20planned%20and%20actual%20is%20telling%20you.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fs-curve-project-progress-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=S-Curves%20Explained%3A%20Why%20Project%20Progress%20Isn%27t%20a%20Straight%20Line&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AS-Curves%20Explained%3A%20Why%20Project%20Progress%20Isn%27t%20a%20Straight%20Line%0AWhy%20cumulative%20project%20progress%20plots%20as%20an%20S%2C%20and%20what%20the%20gap%20between%20planned%20and%20actual%20is%20telling%20you.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fs-curve-project-progress-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Keep reading</p>
+    <ul>
+      <li><a href="earned-value-management-basics">Earned Value Management: Reading Project Health From Three Numbers →</a></li>
+      <li><a href="work-breakdown-structure-wbs-explained">Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign →</a></li>
+      <li><a href="critical-path-method-cpm-explained">Critical Path Method (CPM): The Chain That Sets Your Finish Date →</a></li>
+    </ul>
+    <p class="post-related-label">Try the tool</p>
+    <ul><li><a href="../pm/task-tracker">Task Tracker →</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
