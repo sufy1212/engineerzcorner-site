@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Industrial Valves Explained: Types &amp; Parts</title>
+    <link>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</guid>
+    <description>What a valve actually does, the main types — gate, globe, ball, butterfly, check, plug, needle, diaphragm, pressure relief — its parts, a materials and actuation reference, a selection checklist, and common failure points.</description>
+    <pubDate>Fri, 07 Aug 2026 19:25:51 GMT</pubDate>
+  </item>
+  <item>
     <title>Junction Boxes Explained: Types, Parts &amp; Ratings</title>
     <link>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
     <description>How a power transformer steps voltage up or down with no moving parts — core, windings, oil, cooling, tap changer, and the protection gear around them.</description>
     <pubDate>Mon, 03 Aug 2026 18:26:25 GMT</pubDate>
-  </item>
-  <item>
-    <title>Wind Turbines Explained: How Wind Becomes Electricity</title>
-    <link>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</link>
-    <guid>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</guid>
-    <description>How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path to the grid.</description>
-    <pubDate>Mon, 03 Aug 2026 18:14:24 GMT</pubDate>
   </item>
 </channel></rss>
