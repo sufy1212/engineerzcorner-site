@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Solar System Sizing: From Daily Load to Panel Count</title>
+    <link>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</guid>
+    <description>How to go from a daily energy load in kWh to an array size in kW, why peak sun hours (not daylight hours) is the number that matters, and where the derating factors go.</description>
+    <pubDate>Fri, 07 Aug 2026 20:22:17 GMT</pubDate>
+  </item>
+  <item>
     <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
     <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</guid>
     <description>What separates an AHU, FAHU, FCU, FMAHU and CSAHU — air source, installation style and typical application for each, in one comparison.</description>
     <pubDate>Wed, 05 Aug 2026 16:15:58 GMT</pubDate>
-  </item>
-  <item>
-    <title>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</title>
-    <link>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</guid>
-    <description>Voltage classification from ELV to UHV explained &amp;mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
-    <pubDate>Wed, 05 Aug 2026 09:21:45 GMT</pubDate>
   </item>
 </channel></rss>
