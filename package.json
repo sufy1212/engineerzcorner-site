@@ -4,9 +4,13 @@
   "description": "Build scripts for the Engineerz CorneR static site (recent.json/sitemap/feed generation, image branding).",
   "scripts": {
     "brand-images": "node scripts/brand-images.js",
-    "build-recent": "node scripts/build-recent.js"
+    "build-recent": "node scripts/build-recent.js",
+    "watch": "node scripts/auto-push-watcher.js"
   },
   "dependencies": {
     "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0"
   }
 }
