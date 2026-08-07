@@ -4,17 +4,31 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Critical Path Method (CPM): The Chain That Sets Your Finish Date</title>
-    <link>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</guid>
-    <description>How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.</description>
-    <pubDate>Fri, 07 Aug 2026 19:46:56 GMT</pubDate>
+    <title>Earned Value Management: Reading Project Health From Three Numbers</title>
+    <link>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</guid>
+    <description>Why 'on budget' and 'on schedule' need separate proof, what Planned Value, Earned Value and Actual Cost each measure.</description>
+    <pubDate>Fri, 07 Aug 2026 19:50:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>S-Curves Explained: Why Project Progress Isn't a Straight Line</title>
+    <link>https://www.engineerzcorner.com/posts/s-curve-project-progress-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/s-curve-project-progress-explained.html</guid>
+    <description>Why cumulative project progress plots as an S, not a straight line, how to read planned vs actual curves, and what the gap between them is actually telling you.</description>
+    <pubDate>Fri, 07 Aug 2026 19:50:30 GMT</pubDate>
   </item>
   <item>
     <title>Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign</title>
     <link>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained.html</guid>
     <description>How a WBS decomposes project scope into work packages, the 100% rule that keeps it honest, and why it's the foundation CPM and EVM both sit on top of.</description>
+    <pubDate>Fri, 07 Aug 2026 19:50:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Critical Path Method (CPM): The Chain That Sets Your Finish Date</title>
+    <link>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</guid>
+    <description>How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.</description>
     <pubDate>Fri, 07 Aug 2026 19:46:56 GMT</pubDate>
   </item>
   <item>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing.html</guid>
     <description>The three independent stability checks behind every gravity or cantilever retaining wall — overturning, sliding, and bearing pressure.</description>
     <pubDate>Wed, 05 Aug 2026 03:59:15 GMT</pubDate>
-  </item>
-  <item>
-    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
-    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
-    <pubDate>Wed, 05 Aug 2026 03:28:55 GMT</pubDate>
-  </item>
-  <item>
-    <title>HVAC System Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</guid>
-    <description>How an HVAC system actually conditions a space, component by component — compressor, condenser, expansion device, evaporator, air handler, ductwork, and controls.</description>
-    <pubDate>Wed, 05 Aug 2026 03:28:55 GMT</pubDate>
   </item>
 </channel></rss>

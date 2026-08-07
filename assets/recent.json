@@ -1,12 +1,22 @@
 [
   {
-    "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
-    "u": "posts/critical-path-method-cpm-explained",
+    "t": "Earned Value Management: Reading Project Health From Three Numbers",
+    "u": "posts/earned-value-management-basics",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "S-Curves Explained: Why Project Progress Isn't a Straight Line",
+    "u": "posts/s-curve-project-progress-explained",
     "d": "2026-08-07"
   },
   {
     "t": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
     "u": "posts/work-breakdown-structure-wbs-explained",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+    "u": "posts/critical-path-method-cpm-explained",
     "d": "2026-08-07"
   },
   {
@@ -37,16 +47,6 @@
   {
     "t": "PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String",
     "u": "posts/pv-string-sizing-voltage",
-    "d": "2026-08-06"
-  },
-  {
-    "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
-    "u": "posts/solar-panel-derating-factors-explained",
-    "d": "2026-08-06"
-  },
-  {
-    "t": "Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number",
-    "u": "posts/voltage-drop-lv-feeders-explained",
     "d": "2026-08-06"
   }
 ]
