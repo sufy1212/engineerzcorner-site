@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battery State of Charge vs Depth of Discharge | Engineerz CorneR</title>
+<meta name="description" content="Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Battery SoC vs DoD: Why They're Not the Same Number">
+<meta property="og:description" content="Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Battery SoC vs DoD: Why They're Not the Same Number">
+<meta name="twitter:description" content="Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Battery SoC vs DoD: Why They're Not the Same Number", "item": "https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Battery SoC vs DoD: Why They're Not the Same Number",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "description": "Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.",
+  "url": "https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Battery SoC vs DoD: Why They're Not the Same Number</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9728; Solar &middot; Battery Storage</span>
+    <h1>Battery SoC vs DoD: Why They're Not the Same Number</h1>
+    <p class="hero-sub">State of charge and depth of discharge describe the same battery from opposite ends &mdash; but SoC is a real-time estimate built on assumptions, and DoD is a design limit chosen to protect cycle life, not a fixed physical ceiling.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Off-Grid &amp; Battery Storage</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 780 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="780" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- battery outline -->
+      <rect x="300" y="45" width="180" height="90" rx="6" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+      <rect x="470" y="70" width="12" height="40" rx="2" fill="#5FD3E3"/>
+      <!-- fill level showing SoC ~65% -->
+      <rect x="306" y="90" width="168" height="39" rx="3" fill="#F2B84B" opacity=".85"/>
+      <!-- DoD floor line -->
+      <line x1="300" y1="115" x2="480" y2="115" stroke="#E0563C" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="490" y="119" fill="#E0563C" font-size="11" font-family="monospace">DoD limit</text>
+      <text x="220" y="94" fill="#7E97AC" font-size="11" font-family="monospace" text-anchor="end">SoC 65%</text>
+      <line x1="225" y1="90" x2="298" y2="90" stroke="#7E97AC" stroke-width="1" stroke-dasharray="2 3"/>
+    </svg>
+  </div>
+</div>
+
+<div class="page">
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">State of charge (SoC) is how full the battery is right now; depth of discharge (DoD) is how much of its capacity has been used &mdash; they always sum to 100%, but they answer different design questions.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">SoC can't be measured directly in most systems &mdash; it's estimated from voltage, coulomb counting, or a combination of both, and each method has known failure modes.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The maximum allowed DoD is a chemistry- and design-driven limit chosen to hit a target cycle life, not the point at which the battery is "empty."</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Usable capacity, not nameplate capacity, is what a system should be sized against &mdash; and usable capacity is nameplate capacity times the allowed DoD.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two views of the same number</h2>
+    <div class="formula-box">SoC + DoD = 100%</div>
+    <div class="formula-note">SoC = state of charge, the remaining usable capacity as a percentage &middot; DoD = depth of discharge, the capacity already withdrawn as a percentage &mdash; they're complementary, not independent</div>
+    <p>A battery at 70% SoC has been discharged to 30% DoD from full. Systems that specify a "maximum DoD of 80%" are really saying the same thing as "never let SoC fall below 20%" &mdash; the two specs describe the identical operating floor from opposite directions, and mixing them up is a common source of undersized battery banks.</p>
+
+    <h2><span class="h2-dot"></span>How SoC is actually estimated</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>Voltage-based</b><span>Reads open-circuit voltage against a known discharge curve. Simple and cheap, but voltage sags under load and varies with temperature, so it's inaccurate mid-cycle.</span></div>
+      <div class="signal-card b"><b>Coulomb counting</b><span>Integrates current in and out over time from a known starting point. Accurate short-term, but drifts over weeks without periodic recalibration to a known full or empty state.</span></div>
+      <div class="signal-card c"><b>Combined / model-based</b><span>Blends voltage, current, temperature and an internal battery model (common in modern BMS units). Most accurate in practice, but only as good as the model's calibration.</span></div>
+    </div>
+    <p>This is why two identical battery banks can show different SoC readings for the same real charge level &mdash; the number on the display is always an estimate, not a direct measurement, and its accuracy depends entirely on which method (and how well-calibrated it is) sits behind it.</p>
+
+    <h2><span class="h2-dot"></span>Why DoD limits exist</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Chemistry</th><th>Typical recommended max DoD</th><th>Why</th></tr>
+        <tr><td>Flooded lead-acid</td><td>~50%</td><td>Deep, frequent discharges accelerate plate sulfation and shorten cycle life sharply</td></tr>
+        <tr><td>AGM / sealed lead-acid</td><td>~50&ndash;60%</td><td>Similar sulfation mechanism, slightly better tolerance than flooded</td></tr>
+        <tr><td>LiFePO&#8324; (lithium iron phosphate)</td><td>~80&ndash;90%</td><td>Much flatter capacity-fade curve vs DoD, tolerates deeper regular cycling</td></tr>
+      </table>
+    </div>
+    <p>The pattern across chemistries is the same: cycle life falls faster than linearly as DoD increases, so a battery cycled to 50% DoD daily typically lasts far more than twice as many cycles as one cycled to 100% DoD daily &mdash; which is why manufacturers publish a recommended DoD instead of just a raw capacity number.</p>
+
+    <h2><span class="h2-dot"></span>Sizing against usable capacity, not nameplate capacity</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Usable capacity = nameplate capacity &times; allowed DoD &mdash; this is the number that should be sized against daily load, not the nameplate rating on the label.</span></li>
+      <li><span class="ck-mark">2</span><span>Temperature further de-rates usable capacity &mdash; most chemistries deliver less capacity in cold conditions than their rated figure assumes.</span></li>
+      <li><span class="ck-mark">3</span><span>Inverter/charge controller low-voltage disconnect settings should align with the chemistry's DoD limit, not be left at a generic default.</span></li>
+      <li><span class="ck-mark">4</span><span>SoC drift from coulomb-counting error compounds over time without a periodic full-charge recalibration, so a battery bank left partially cycled for weeks can report inaccurate SoC.</span></li>
+      <li><span class="ck-mark">5</span><span>Round-trip efficiency losses mean the energy put back in to reach 100% SoC is always somewhat more than the energy withdrawn to reach the DoD floor.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>SoC and DoD are complementary views of the same battery state, not two separate specifications.</span></li>
+      <li><span class="tk-check">✓</span><span>SoC is always an estimate &mdash; voltage-based, coulomb-counted, or model-based &mdash; never a direct measurement.</span></li>
+      <li><span class="tk-check">✓</span><span>Maximum DoD is a cycle-life design choice driven by chemistry, not the physical point of "empty."</span></li>
+      <li><span class="tk-check">✓</span><span>System sizing should use usable capacity (nameplate &times; allowed DoD), not the nameplate rating alone.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Battery%20SoC%20vs%20DoD%3A%20Why%20They%27re%20Not%20the%20Same%20Number%20%E2%80%94%20Why%20SoC%20and%20DoD%20are%20two%20views%20of%20the%20same%20battery%2C%20how%20SoC%20is%20actually%20estimated%20in%20the%20field%2C%20and%20why%20chemistry%20sets%20the%20DoD%20limit%20that%20protects%20cycle%20life.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbattery-soc-vs-dod-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbattery-soc-vs-dod-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Battery%20SoC%20vs%20DoD%3A%20Why%20They%27re%20Not%20the%20Same%20Number&amp;text=Why%20SoC%20and%20DoD%20are%20two%20views%20of%20the%20same%20battery%2C%20how%20SoC%20is%20actually%20estimated%20in%20the%20field%2C%20and%20why%20chemistry%20sets%20the%20DoD%20limit%20that%20protects%20cycle%20life.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbattery-soc-vs-dod-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Battery%20SoC%20vs%20DoD%3A%20Why%20They%27re%20Not%20the%20Same%20Number&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ABattery%20SoC%20vs%20DoD%3A%20Why%20They%27re%20Not%20the%20Same%20Number%0AWhy%20SoC%20and%20DoD%20are%20two%20views%20of%20the%20same%20battery%2C%20how%20SoC%20is%20actually%20estimated%20in%20the%20field%2C%20and%20why%20chemistry%20sets%20the%20DoD%20limit%20that%20protects%20cycle%20life.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbattery-soc-vs-dod-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../solar/battery-soc-simulator">Battery SoC Simulator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="mppt-vs-pwm-solar-charge-controllers">MPPT vs PWM Solar Charge Controllers: What Actually Changes</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../solar/battery-soc-simulator">Try the Battery SoC Simulator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
