@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>String vs Microinverter vs Power Optimizer | Engineerz CorneR</title>
+<meta name="description" content="How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology">
+<meta property="og:description" content="How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology">
+<meta name="twitter:description" content="How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology", "item": "https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "description": "How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.",
+  "url": "https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9728; Solar &middot; Inverter Selection</span>
+    <h1>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</h1>
+    <p class="hero-sub">The real difference between the three isn't brand or price &mdash; it's where MPPT (maximum power point tracking) happens, which decides how badly one shaded, mismatched or dirty panel drags down everything wired next to it.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; PV System Design</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 780 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="780" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- three panels, each with its own small box underneath to suggest per-panel electronics -->
+      <rect x="90" y="95" width="150" height="10" rx="2" fill="#3C6E86"/>
+      <rect x="90" y="95" width="150" height="10" rx="2" fill="none" stroke="#0A1930" stroke-width="1"/>
+      <rect x="150" y="130" width="30" height="14" rx="2" fill="#F2B84B"/>
+      <line x1="165" y1="105" x2="165" y2="130" stroke="#5FD3E3" stroke-width="1.5"/>
+
+      <rect x="320" y="95" width="150" height="10" rx="2" fill="#3C6E86"/>
+      <rect x="320" y="95" width="150" height="10" rx="2" fill="none" stroke="#0A1930" stroke-width="1"/>
+      <rect x="380" y="130" width="30" height="14" rx="2" fill="#F2B84B"/>
+      <line x1="395" y1="105" x2="395" y2="130" stroke="#5FD3E3" stroke-width="1.5"/>
+
+      <rect x="550" y="95" width="150" height="10" rx="2" fill="#3C6E86"/>
+      <rect x="550" y="95" width="150" height="10" rx="2" fill="none" stroke="#0A1930" stroke-width="1"/>
+      <rect x="610" y="130" width="30" height="14" rx="2" fill="#F2B84B"/>
+      <line x1="625" y1="105" x2="625" y2="130" stroke="#5FD3E3" stroke-width="1.5"/>
+
+      <!-- single combined line to one central inverter box at the far right -->
+      <line x1="165" y1="144" x2="720" y2="144" stroke="#7E97AC" stroke-width="1" stroke-dasharray="2 4" opacity=".5"/>
+      <line x1="395" y1="144" x2="720" y2="144" stroke="#7E97AC" stroke-width="1" stroke-dasharray="2 4" opacity=".5"/>
+      <line x1="625" y1="144" x2="720" y2="144" stroke="#7E97AC" stroke-width="1" stroke-dasharray="2 4" opacity=".5"/>
+      <rect x="700" y="128" width="40" height="26" rx="3" fill="#18325A" stroke="#5FD3E3" stroke-width="1"/>
+    </svg>
+  </div>
+</div>
+
+<div class="page">
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A string inverter tracks one maximum power point per string &mdash; every panel in that string is electrically forced to operate at the same current, so the weakest panel sets the pace for the rest.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">A power optimizer sits at each panel and does DC-to-DC conversion only, still feeding a central string inverter &mdash; it isolates each panel's mismatch but keeps one point of AC conversion.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A microinverter puts a full DC-to-AC inverter at every panel, so each panel is its own independent AC power source with no series-string mismatch at all.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">More per-panel electronics generally means better shade/mismatch tolerance and per-panel monitoring, traded against higher hardware cost and more devices that can individually fail.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Where MPPT actually happens is the whole story</h2>
+    <p>Every panel has a maximum power point (MPP) &mdash; the current/voltage combination where it delivers the most watts &mdash; and that point shifts constantly with irradiance, temperature, soiling and partial shade. The three topologies differ only in the granularity at which they chase that point.</p>
+    <div class="formula-box">P<sub>string</sub> = n &times; I<sub>min</sub> &times; V<sub>string</sub></div>
+    <div class="formula-note">In a series string, every module carries the same current I &mdash; if one panel is shaded and its current-carrying ability drops, the whole string's current drops to match it, not just that panel's output</div>
+    <p>That single formula explains almost every practical difference below: string inverters are exposed to it directly, optimizers neutralize it at the DC stage before the string inverter ever sees mismatched panels, and microinverters remove the series string from the picture entirely.</p>
+
+    <h2><span class="h2-dot"></span>The three topologies side by side</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>String inverter</b><span>One inverter per string (or a few strings). Lowest cost per watt, fewest components, well understood &mdash; but one shaded or mismatched panel can pull down its whole string's output.</span></div>
+      <div class="signal-card b"><b>Power optimizer + string inverter</b><span>DC optimizer at each panel, still one shared inverter. Each panel's MPPT is independent, mismatch loss drops sharply &mdash; adds per-panel hardware cost and a second device type to maintain.</span></div>
+      <div class="signal-card c"><b>Microinverter</b><span>Full inverter at each panel, AC output panel-by-panel. Best shade tolerance and per-panel monitoring, no single string-level failure point &mdash; highest hardware cost per watt, more units in the field.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>What partial shading actually costs under each</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Scenario</th><th>String inverter</th><th>Optimizer</th><th>Microinverter</th></tr>
+        <tr><td>One panel 50% shaded</td><td>Whole string output can drop well beyond that panel's own share</td><td>Loss roughly limited to that panel's own output</td><td>Loss limited to that panel's own output</td></tr>
+        <tr><td>Mixed orientations / roof planes</td><td>Needs separate strings or MPPT inputs per orientation</td><td>Handled per panel on a shared string</td><td>Handled per panel, no string constraint</td></tr>
+        <tr><td>Per-panel fault visibility</td><td>String-level only</td><td>Panel-level</td><td>Panel-level</td></tr>
+      </table>
+    </div>
+    <p>These are directional, not universal numbers &mdash; the actual loss under a string inverter depends on how much of the string is shaded and for how long, but the mechanism (shared current) is what makes shade disproportionately expensive there compared with the other two.</p>
+
+    <h2><span class="h2-dot"></span>How to actually choose</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Simple roof, single unobstructed orientation, no shading concerns &mdash; a string inverter is usually the most cost-effective choice.</span></li>
+      <li><span class="ck-mark">2</span><span>Partial shading from chimneys, vents, trees, or multiple roof planes &mdash; optimizers or microinverters recover energy a plain string inverter would lose.</span></li>
+      <li><span class="ck-mark">3</span><span>Need panel-level production monitoring for diagnostics or performance guarantees &mdash; optimizers and microinverters both provide it, string inverters typically don't.</span></li>
+      <li><span class="ck-mark">4</span><span>Future array expansion or mixed panel models over time &mdash; per-panel topologies tolerate mismatch between old and new panels far better than a shared string.</span></li>
+      <li><span class="ck-mark">5</span><span>Rapid-shutdown code requirements in many jurisdictions favor optimizers or microinverters, since they can drop panel-level voltage quickly without extra add-on devices.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>The core trade-off is granularity of MPPT versus hardware cost and device count &mdash; not brand, and not raw efficiency numbers alone.</span></li>
+      <li><span class="tk-check">✓</span><span>String inverters are the economical default for simple, unshaded, single-orientation roofs.</span></li>
+      <li><span class="tk-check">✓</span><span>Optimizers add per-panel MPPT while keeping one central inverter; microinverters remove the series string entirely.</span></li>
+      <li><span class="tk-check">✓</span><span>Shading, mixed orientations, monitoring needs, and rapid-shutdown code requirements are the practical factors that usually decide the choice.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=String%20vs%20Microinverter%20vs%20Power%20Optimizer%3A%20Choosing%20a%20Solar%20Inverter%20Topology%20%E2%80%94%20How%20string%20inverters%2C%20microinverters%20and%20power%20optimizers%20actually%20differ%20in%20where%20MPPT%20happens%2C%20what%20a%20shaded%20panel%20costs%20you%20under%20each%2C%20and%20how%20to%20pick%20between%20them.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-inverter-topologies-string-vs-micro-vs-optimizer" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-inverter-topologies-string-vs-micro-vs-optimizer" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=String%20vs%20Microinverter%20vs%20Power%20Optimizer%3A%20Choosing%20a%20Solar%20Inverter%20Topology&amp;text=How%20string%20inverters%2C%20microinverters%20and%20power%20optimizers%20actually%20differ%20in%20where%20MPPT%20happens%2C%20what%20a%20shaded%20panel%20costs%20you%20under%20each%2C%20and%20how%20to%20pick%20between%20them.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-inverter-topologies-string-vs-micro-vs-optimizer" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=String%20vs%20Microinverter%20vs%20Power%20Optimizer%3A%20Choosing%20a%20Solar%20Inverter%20Topology&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AString%20vs%20Microinverter%20vs%20Power%20Optimizer%3A%20Choosing%20a%20Solar%20Inverter%20Topology%0AHow%20string%20inverters%2C%20microinverters%20and%20power%20optimizers%20actually%20differ%20in%20where%20MPPT%20happens%2C%20what%20a%20shaded%20panel%20costs%20you%20under%20each%2C%20and%20how%20to%20pick%20between%20them.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-inverter-topologies-string-vs-micro-vs-optimizer">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../solar/charge-controller-sizing-calculator">Charge Controller Sizing Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="mppt-vs-pwm-solar-charge-controllers">MPPT vs PWM Solar Charge Controllers: What Actually Changes</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../solar/pv-string-sizing-calculator">Try the PV String Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
