@@ -1,5 +1,25 @@
 [
   {
+    "t": "Cable Derating Factor Calculator",
+    "u": "electrical/cable-derating-calculator",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Cable Sizing",
+    "u": "electrical/cable-sizing-calculator",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Capacitor Bank Sizing Calculator",
+    "u": "electrical/capacitor-bank-sizing",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Power Factor Correction Sizing",
+    "u": "electrical/power-factor-correction",
+    "d": "2026-08-07"
+  },
+  {
     "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
     "u": "posts/solar-payback-period-roi-explained",
     "d": "2026-08-07"
@@ -27,26 +47,6 @@
   {
     "t": "RACI Matrix Explained: Who's Responsible vs. Who's Accountable",
     "u": "posts/raci-matrix-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Risk Register Basics: Turning Probability × Impact Into Priority",
-    "u": "posts/risk-register-probability-impact-scoring",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Stakeholder Power-Interest Grid: Sorting Attention, Not Just People",
-    "u": "posts/stakeholder-power-interest-grid-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Earned Value Management: Reading Project Health From Three Numbers",
-    "u": "posts/earned-value-management-basics",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "S-Curves Explained: Why Project Progress Isn't a Straight Line",
-    "u": "posts/s-curve-project-progress-explained",
     "d": "2026-08-07"
   }
 ]
