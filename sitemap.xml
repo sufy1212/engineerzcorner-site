@@ -146,7 +146,7 @@
   <url><loc>https://www.engineerzcorner.com/pm/team-directory</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
@@ -162,6 +162,8 @@
   <url><loc>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/valve-types-parts-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
@@ -191,7 +193,6 @@
   <url><loc>https://www.engineerzcorner.com/posts/hvac-system-components-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/is-iec-ieee-electrical-standards-reference</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/k-rated-transformer-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lighting-lumen-method-luminaire-count</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
@@ -238,7 +239,7 @@
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-08-05</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
