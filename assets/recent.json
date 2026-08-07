@@ -1,5 +1,10 @@
 [
   {
+    "t": "The PPP Project Lifecycle: From Identification to Handback",
+    "u": "posts/ppp-project-lifecycle-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "Industrial Valves Explained: Types &amp; Parts",
     "u": "posts/valve-types-parts-explained",
     "d": "2026-08-07"
@@ -43,10 +48,5 @@
     "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
     "u": "posts/fire-suppression-systems-explained",
     "d": "2026-08-06"
-  },
-  {
-    "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
-    "u": "posts/breaker-selectivity-discrimination-explained",
-    "d": "2026-08-05"
   }
 ]

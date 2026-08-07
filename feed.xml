@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>The PPP Project Lifecycle: From Identification to Handback</title>
+    <link>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</guid>
+    <description>The eight stages a Public-Private Partnership moves through, from project identification to handback, and the enablers that hold the whole lifecycle together.</description>
+    <pubDate>Fri, 07 Aug 2026 19:42:05 GMT</pubDate>
+  </item>
+  <item>
     <title>Industrial Valves Explained: Types &amp; Parts</title>
     <link>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</guid>
     <description>How the IEC 60079 / ATEX Zone system (Zone 0/1/2, 20/21/22) compares to the North American NEC Class &amp; Division system — equivalency table, gas/dust groups, temperature classes and Ex protection types explained.</description>
     <pubDate>Tue, 04 Aug 2026 12:01:20 GMT</pubDate>
-  </item>
-  <item>
-    <title>Power Transformers Explained: Construction &amp; Working Principle</title>
-    <link>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</link>
-    <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
-    <description>How a power transformer steps voltage up or down with no moving parts — core, windings, oil, cooling, tap changer, and the protection gear around them.</description>
-    <pubDate>Mon, 03 Aug 2026 18:26:25 GMT</pubDate>
   </item>
 </channel></rss>
