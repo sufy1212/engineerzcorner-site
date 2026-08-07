@@ -1,5 +1,10 @@
 [
   {
+    "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
+    "u": "posts/solar-payback-period-roi-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "Solar System Sizing: From Daily Load to Panel Count",
     "u": "posts/solar-system-sizing-load-to-panel-count",
     "d": "2026-08-07"
@@ -42,11 +47,6 @@
   {
     "t": "S-Curves Explained: Why Project Progress Isn't a Straight Line",
     "u": "posts/s-curve-project-progress-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
-    "u": "posts/work-breakdown-structure-wbs-explained",
     "d": "2026-08-07"
   }
 ]

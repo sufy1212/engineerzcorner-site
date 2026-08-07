@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out</title>
+    <link>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained.html</guid>
+    <description>Why simple payback (cost divided by annual savings) overstates solar economics, and what degradation, escalating electricity prices, and O&amp;M costs actually do to the real payback.</description>
+    <pubDate>Fri, 07 Aug 2026 20:24:37 GMT</pubDate>
+  </item>
+  <item>
     <title>Solar System Sizing: From Daily Load to Panel Count</title>
     <link>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</link>
     <guid>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</guid>
     <description>Why heat pump sizing isn't the same exercise as furnace or AC sizing, what COP and capacity-at-temperature actually mean.</description>
     <pubDate>Wed, 05 Aug 2026 19:30:05 GMT</pubDate>
-  </item>
-  <item>
-    <title>AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</guid>
-    <description>What separates an AHU, FAHU, FCU, FMAHU and CSAHU — air source, installation style and typical application for each, in one comparison.</description>
-    <pubDate>Wed, 05 Aug 2026 16:15:58 GMT</pubDate>
   </item>
 </channel></rss>
