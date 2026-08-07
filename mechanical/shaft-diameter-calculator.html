@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231E2226'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23D68A4C' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D68A4C'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaft Diameter Sizing Calculator — Mechanical Toolkit</title>
+<meta name="description" content="Minimum solid shaft diameter under combined bending and torsion, using the ASME combined-shock-and-fatigue design equation.">
+<link rel="canonical" href="https://www.engineerzcorner.com/mechanical/shaft-diameter-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Shaft Diameter Sizing Calculator — Mechanical Toolkit">
+<meta property="og:description" content="Minimum solid shaft diameter under combined bending and torsion, using the ASME combined-shock-and-fatigue design equation.">
+<meta property="og:url" content="https://www.engineerzcorner.com/mechanical/shaft-diameter-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shaft Diameter Sizing Calculator — Mechanical Toolkit">
+<meta name="twitter:description" content="Minimum solid shaft diameter under combined bending and torsion, using the ASME combined-shock-and-fatigue design equation.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mechanical",
+      "item": "https://www.engineerzcorner.com/mechanical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Shaft Diameter Sizing Calculator",
+      "item": "https://www.engineerzcorner.com/mechanical/shaft-diameter-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Shaft Diameter Sizing Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Minimum solid shaft diameter under combined bending and torsion, using the ASME combined-shock-and-fatigue design equation.",
+  "url": "https://www.engineerzcorner.com/mechanical/shaft-diameter-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Mechanical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Shaft Diameter Sizing</span></div></nav>
+
+<main id="mainContent" class="wrap">
+  <p style="margin:18px 0 0;"><a href="../">&larr; Back to full toolkit</a></p>
+<div class="page active" id="page-mech-shaft">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M4 12h4M16 12h4M12 4v4M12 16v4"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
+    <div><h1>Shaft Diameter Sizing Calculator</h1><div class="hero-sub">Minimum solid shaft diameter under combined bending &amp; torsion</div></div>
+  </div>
+  <div class="intro">Minimum solid shaft diameter to safely carry a combined bending moment and torque, using the ASME combined-shock-and-fatigue design equation. Bending moment isn't calculated here — work it out from your shaft's actual support and load layout (a beam bending calculation) and bring that figure in below; this tool combines it with torsion and applies the code's shock/fatigue allowance.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="shfValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Torque</h2></div>
+    <div class="radiorow">
+      <label><input type="radio" name="shfTMode" value="direct" checked> Enter torque directly</label>
+      <label><input type="radio" name="shfTMode" value="power"> From power &amp; speed</label>
+    </div>
+    <div class="row2" id="shfFldTDirect">
+      <div class="field">
+        <label for="shfMt">Torque, Mt <span class="unit">N&middot;m</span></label>
+        <input type="number" id="shfMt" value="150" step="1" min="0">
+      </div>
+    </div>
+    <div class="row2" id="shfFldTPower" style="display:none;">
+      <div class="field">
+        <label for="shfP">Power, P <span class="unit">kW</span></label>
+        <input type="number" id="shfP" value="15" step="0.1" min="0">
+      </div>
+      <div class="field">
+        <label for="shfN">Shaft speed, N <span class="unit">RPM</span></label>
+        <input type="number" id="shfN" value="1450" step="1" min="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Bending &amp; Material</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="shfMb">Bending moment, Mb <span class="unit">N&middot;m</span></label>
+        <input type="number" id="shfMb" value="200" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="shfTau">Allowable shear stress, &tau;<sub>allow</sub> <span class="unit">MPa</span></label>
+        <input type="number" id="shfTau" value="40" step="1" min="0.1">
+        <div class="hint">ASME code guidance: the lesser of 0.18&times;Su or 0.30&times;Sy. ≈40 MPa is a common conservative value for shafting steel with a keyway.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Loading Condition</h2></div>
+    <div class="field">
+      <label for="shfLoad">Load type (sets Kb / Kt combined shock &amp; fatigue factors)</label>
+      <select id="shfLoad">
+        <option value="1.0,1.0">Stationary shaft, gradually applied load (Kb=1.0, Kt=1.0)</option>
+        <option value="1.5,1.0" selected>Rotating shaft, steady load, minor shock (Kb=1.5, Kt=1.0)</option>
+        <option value="2.0,1.5">Rotating shaft, minor shocks (Kb=2.0, Kt=1.5)</option>
+        <option value="3.0,3.0">Rotating shaft, heavy shocks (Kb=3.0, Kt=3.0)</option>
+        <option value="custom">Custom Kb / Kt</option>
+      </select>
+    </div>
+    <div class="row2" id="shfFldCustomK" style="display:none;">
+      <div class="field">
+        <label for="shfKbCustom">Kb (bending factor)</label>
+        <input type="number" id="shfKbCustom" value="1.5" step="0.1" min="0.1">
+      </div>
+      <div class="field">
+        <label for="shfKtCustom">Kt (torsion factor)</label>
+        <input type="number" id="shfKtCustom" value="1.0" step="0.1" min="0.1">
+      </div>
+    </div>
+    <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13.5px;">
+      <input type="checkbox" id="shfKeyway"> Shaft has a keyway at the critical section
+    </label>
+    <div class="hint">Adds a simplified +10% diameter allowance for the stress concentration a keyway introduces. For a fatigue-critical shaft, replace this with a proper notch stress-concentration factor.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">MINIMUM SHAFT DIAMETER</span>
+      <span class="rval" id="shfD">0.0 <small>mm</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Torque used, Mt</div><div class="sval" id="shfMtOut">—</div></div>
+      <div class="stat"><div class="slabel">Diameter before keyway allowance</div><div class="sval" id="shfDbase">—</div></div>
+      <div class="stat"><div class="slabel">Torsional shear stress at this diameter</div><div class="sval amber" id="shfStress">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        ASME shaft design equation: <b>d = [ (16 / (&pi;&middot;&tau;<sub>allow</sub>)) &middot; &radic;((Kb&middot;Mb)&sup2; + (Kt&middot;Mt)&sup2;) ]<sup>1/3</sup></b><br>
+        Torque from power: <b>Mt = 9550 &middot; P / N</b> (P in kW, N in RPM, Mt in N&middot;m)<br>
+        Keyway allowance (if checked): <b>d<sub>final</sub> = d &times; 1.10</b>
+      </div>
+      <div class="hint" style="margin-top:8px;">Solid circular shaft, static combined-loading check only — doesn't cover fatigue (S-N/Goodman) analysis, critical speed, or deflection limits, which a fully loaded rotating shaft should also be checked against.</div>
+    </details>
+  </div>
+  <footer>ASME combined bending/torsion sizing only — fatigue, critical speed and deflection need separate checks.</footer>
+
+  <div class="reftable-section">
+    <h2>About Shaft Diameter Sizing</h2>
+    <p class="reftable-note">A power-transmission shaft almost never sees pure torsion — belt pull, gear mesh forces and overhung couplings all add a bending moment on top of the torque the shaft is transmitting. The ASME code equation combines the two into a single equivalent stress check, and folds in a Kb/Kt factor pair that accounts for whether the load is steady or shock-loaded, since shock loading raises the effective stress well above what a static calculation alone would show.</p>
+    <p class="reftable-note">This gives a minimum diameter for the section being checked — round up to the next available stock size, and re-check at every other section where the bending moment, torque, or a keyway/shoulder stress concentration might govern instead. Fatigue life, critical (whirling) speed, and shaft deflection at bearings and couplings are separate checks a complete shaft design should still go through.</p>
+  </div>
+</div>
+
+</main>
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function radioVal(name){ var r = document.querySelector('input[name="'+name+'"]:checked'); return r ? r.value : null; }
+
+  function calcShaft(){
+    if(!el('shfMt')) return;
+    var tMode = radioVal('shfTMode');
+    var usePower = tMode === 'power';
+    el('shfFldTDirect').style.display = usePower ? 'none' : '';
+    el('shfFldTPower').style.display = usePower ? '' : 'none';
+
+    var loadSel = el('shfLoad').value;
+    var isCustom = loadSel === 'custom';
+    el('shfFldCustomK').style.display = isCustom ? '' : 'none';
+
+    var errs = 0;
+    var Mt;
+    if(usePower){
+      var P = num('shfP'), N = num('shfN');
+      errs += fieldError(el('shfP'), (isNaN(P) || P<=0) ? 'Must be greater than 0.' : null);
+      errs += fieldError(el('shfN'), (isNaN(N) || N<=0) ? 'Must be greater than 0.' : null);
+      Mt = (isNaN(P) || isNaN(N) || N<=0) ? NaN : 9550 * P / N;
+    } else {
+      Mt = num('shfMt');
+      errs += fieldError(el('shfMt'), (isNaN(Mt) || Mt<0) ? 'Must be 0 or greater.' : null);
+    }
+
+    var Mb = num('shfMb');
+    var tauAllow = num('shfTau');
+    errs += fieldError(el('shfMb'), (isNaN(Mb) || Mb<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('shfTau'), (isNaN(tauAllow) || tauAllow<=0) ? 'Must be greater than 0.' : null);
+
+    var Kb, Kt;
+    if(isCustom){
+      Kb = num('shfKbCustom'); Kt = num('shfKtCustom');
+      errs += fieldError(el('shfKbCustom'), (isNaN(Kb) || Kb<=0) ? 'Must be greater than 0.' : null);
+      errs += fieldError(el('shfKtCustom'), (isNaN(Kt) || Kt<=0) ? 'Must be greater than 0.' : null);
+    } else {
+      var parts = loadSel.split(',');
+      Kb = parseFloat(parts[0]); Kt = parseFloat(parts[1]);
+    }
+
+    if(errs>0){ updateValidationBanner('shfValidation', errs); return; }
+
+    var Mb_Nmm = Mb * 1000, Mt_Nmm = Mt * 1000;
+    var inner = Math.sqrt(Math.pow(Kb*Mb_Nmm,2) + Math.pow(Kt*Mt_Nmm,2));
+    var d_mm = Math.pow((16/(Math.PI*tauAllow)) * inner, 1/3);
+    var keyway = el('shfKeyway').checked;
+    var dFinal = keyway ? d_mm * 1.10 : d_mm;
+
+    var tauCheck = (16 * Mt_Nmm) / (Math.PI * Math.pow(dFinal,3));
+
+    setText('shfD', fmt(dFinal,1) + ' <small>mm</small>');
+    setText('shfMtOut', fmt(Mt,1) + ' N·m');
+    setText('shfDbase', fmt(d_mm,1) + ' mm');
+    setText('shfStress', fmt(tauCheck,2) + ' MPa');
+
+    updateValidationBanner('shfValidation', 0);
+  }
+
+  document.querySelectorAll('input[name="shfTMode"]').forEach(function(r){ r.addEventListener('change', calcShaft); });
+  var loadSel = el('shfLoad'); if(loadSel) loadSel.addEventListener('change', calcShaft);
+  var keywayBox = el('shfKeyway'); if(keywayBox) keywayBox.addEventListener('change', calcShaft);
+  ['shfMt','shfP','shfN','shfMb','shfTau','shfKbCustom','shfKtCustom'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcShaft); e.addEventListener('change', calcShaft); }
+  });
+  calcShaft();
+})();
+</script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
