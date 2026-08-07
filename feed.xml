@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Junction Boxes Explained: Types, Parts &amp; Ratings</title>
+    <link>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</guid>
+    <description>What a junction box actually does, the main types — pull box, gang box, weatherproof, explosion-proof, conduit body, terminal box, panel enclosure — its parts, a material and rating reference, box-fill sizing, and a selection checklist.</description>
+    <pubDate>Fri, 07 Aug 2026 19:20:29 GMT</pubDate>
+  </item>
+  <item>
     <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
     <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle.html</guid>
     <description>How a wind turbine converts moving air into grid electricity — rotor, gearbox, generator, yaw system, and the full power path to the grid.</description>
     <pubDate>Mon, 03 Aug 2026 18:14:24 GMT</pubDate>
-  </item>
-  <item>
-    <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
-    <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
-    <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
-    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of current, torque, cost and complexity.</description>
-    <pubDate>Mon, 03 Aug 2026 07:44:31 GMT</pubDate>
   </item>
 </channel></rss>

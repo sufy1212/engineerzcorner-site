@@ -1,5 +1,10 @@
 [
   {
+    "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
+    "u": "posts/junction-box-types-parts-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "Cable Size &amp; Current Capacity: A Practical Selection Guide",
     "u": "posts/cable-size-current-capacity-guide",
     "d": "2026-08-06"
@@ -42,11 +47,6 @@
   {
     "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
     "u": "posts/bolt-torque-vs-preload-nut-factor",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
-    "u": "posts/bms-point-types-explained",
     "d": "2026-08-05"
   }
 ]
