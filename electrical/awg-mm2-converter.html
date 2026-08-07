@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWG ↔ mm² Wire Size Converter — Engineerz CorneR</title>
+<meta name="description" content="Convert between American Wire Gauge and metric cross-sectional area (mm²), with diameter and the nearest standard metric cable size.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/awg-mm2-converter">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="AWG ↔ mm² Wire Size Converter — Engineerz CorneR">
+<meta property="og:description" content="Convert between American Wire Gauge and metric cross-sectional area (mm²), with diameter and the nearest standard metric cable size.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/awg-mm2-converter">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AWG ↔ mm² Wire Size Converter — Engineerz CorneR">
+<meta name="twitter:description" content="Convert between American Wire Gauge and metric cross-sectional area (mm²), with diameter and the nearest standard metric cable size.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electrical",
+      "item": "https://www.engineerzcorner.com/electrical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AWG \u2194 mm\u00b2 Wire Size Converter",
+      "item": "https://www.engineerzcorner.com/electrical/awg-mm2-converter"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AWG \u2194 mm\u00b2 Wire Size Converter",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Convert between American Wire Gauge and metric cross-sectional area (mm\u00b2), with diameter and the nearest standard metric cable size.",
+  "url": "https://www.engineerzcorner.com/electrical/awg-mm2-converter",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">AWG &harr; mm&sup2; Converter</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-awg">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg></div>
+    <div><h1>AWG &harr; mm&sup2; Wire Size Converter</h1><div class="hero-sub">American Wire Gauge to metric cross-sectional area, and back</div></div>
+  </div>
+  <div class="intro">
+    Converts between American Wire Gauge (AWG) and metric cross-sectional area (mm&sup2;) using the standard AWG geometric formula, and suggests the nearest standard metric cable size. This is a size/area conversion only — it doesn't check ampacity, voltage drop or thermal withstand for the resulting conductor; use the <a href="cable-sizing-calculator">Cable Sizing Calculator</a> for that once you've settled on a size.
+  </div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="awgValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Conversion Direction</h2></div>
+    <div class="radiorow">
+      <label><input type="radio" name="awgDir" value="toMm2" checked> AWG &rarr; mm&sup2;</label>
+      <label><input type="radio" name="awgDir" value="toAwg"> mm&sup2; &rarr; AWG</label>
+    </div>
+  </div>
+
+  <div class="step" id="awgFldToMm2">
+    <div class="step-head"><span class="step-num">2</span><h2>Wire Gauge</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="awgSize">AWG size</label>
+        <select id="awgSize">
+          <option value="-3">4/0 AWG</option>
+          <option value="-2">3/0 AWG</option>
+          <option value="-1">2/0 AWG</option>
+          <option value="0">1/0 AWG</option>
+          <option value="1" selected>1 AWG</option>
+          <option value="2">2 AWG</option>
+          <option value="3">3 AWG</option>
+          <option value="4">4 AWG</option>
+          <option value="6">6 AWG</option>
+          <option value="8">8 AWG</option>
+          <option value="10">10 AWG</option>
+          <option value="12">12 AWG</option>
+          <option value="14">14 AWG</option>
+          <option value="16">16 AWG</option>
+          <option value="18">18 AWG</option>
+          <option value="20">20 AWG</option>
+          <option value="22">22 AWG</option>
+          <option value="24">24 AWG</option>
+          <option value="26">26 AWG</option>
+          <option value="28">28 AWG</option>
+          <option value="30">30 AWG</option>
+          <option value="32">32 AWG</option>
+          <option value="34">34 AWG</option>
+          <option value="36">36 AWG</option>
+          <option value="38">38 AWG</option>
+          <option value="40">40 AWG</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" id="awgFldToAwg" style="display:none;">
+    <div class="step-head"><span class="step-num">2</span><h2>Cross-Sectional Area</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="awgArea">Cross-sectional area <span class="unit">mm&sup2;</span></label>
+        <input type="number" id="awgArea" value="2.5" step="0.01" min="0.0001">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel" id="awgResultLabel">CROSS-SECTIONAL AREA</span>
+      <span class="rval" id="awgResultVal">0.00 <small>mm&sup2;</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Diameter</div><div class="sval" id="awgDiameter">—</div></div>
+      <div class="stat"><div class="slabel">Nearest standard metric size</div><div class="sval amber" id="awgMetric">—</div></div>
+      <div class="stat"><div class="slabel">Nearest AWG (informational)</div><div class="sval" id="awgNearest">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Conductor diameter: <b>d (mm) = 0.127 &times; 92<sup>(36 &minus; n)/39</sup></b>, where n is the AWG number (4/0 = &minus;3, 3/0 = &minus;2, 2/0 = &minus;1, 1/0 = 0, then 1, 2, 3…).<br>
+        Cross-sectional area: <b>A = &pi;/4 &times; d&sup2;</b><br>
+        mm&sup2; &rarr; AWG solves the same formula for n and rounds to the nearest whole AWG size.
+      </div>
+      <div class="hint" style="margin-top:8px;">The "nearest standard metric size" rounds up to the next size in the common IEC series (0.5, 0.75, 1, 1.5, 2.5, 4, 6, 10, 16, 25, 35, 50, 70, 95, 120, 150, 185, 240, 300, 400, 500 mm&sup2;) so the resulting conductor is never smaller than the AWG size it's replacing. Stranded conductors and specific manufacturer catalogues may round differently — check the datasheet for your actual product.</div>
+    </details>
+  </div>
+  <footer>Geometric size conversion only — ampacity, voltage drop and thermal withstand need a separate check.</footer>
+
+  <div class="reftable-section">
+    <h2>About AWG and Metric Wire Sizing</h2>
+    <p class="reftable-note">American Wire Gauge is a logarithmic sizing standard, so each step down in AWG number is a fixed percentage increase in cross-sectional area rather than a fixed amount — that's why the numbering looks arbitrary next to the mm&sup2; sizes used almost everywhere outside North America. This converter runs the standard AWG geometric formula both directions, so you can take a spec written in one system and get a usable equivalent in the other.</p>
+    <p class="reftable-note">The nearest-standard-size result is a starting point for cross-referencing a US-spec drawing against a metric cable catalogue, or vice versa — it doesn't replace checking the actual manufacturer datasheet, since stranding, insulation and conductor material all affect the real-world equivalent between two wires with the same nominal area.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function radioVal(name){ var r = document.querySelector('input[name="'+name+'"]:checked'); return r ? r.value : null; }
+
+  var METRIC_SIZES = [0.5,0.75,1,1.5,2.5,4,6,10,16,25,35,50,70,95,120,150,185,240,300,400,500];
+
+  function awgLabel(n){
+    n = Math.round(n);
+    if(n === -3) return '4/0 AWG';
+    if(n === -2) return '3/0 AWG';
+    if(n === -1) return '2/0 AWG';
+    if(n === 0) return '1/0 AWG';
+    return n + ' AWG';
+  }
+
+  function diaFromAwg(n){
+    return 0.127 * Math.pow(92, (36 - n) / 39);
+  }
+
+  function awgFromDia(dMm){
+    return 36 - 39 * Math.log(dMm / 0.127) / Math.log(92);
+  }
+
+  function nearestMetricUp(areaMm2){
+    for(var i=0;i<METRIC_SIZES.length;i++){
+      if(METRIC_SIZES[i] >= areaMm2) return METRIC_SIZES[i];
+    }
+    return METRIC_SIZES[METRIC_SIZES.length-1];
+  }
+
+  function calcAwg(){
+    if(!el('awgSize')) return;
+    var dir = radioVal('awgDir');
+    var toMm2 = dir === 'toMm2';
+    el('awgFldToMm2').style.display = toMm2 ? '' : 'none';
+    el('awgFldToAwg').style.display = toMm2 ? 'none' : '';
+
+    var errs = 0;
+    var dMm, areaMm2, nExact;
+
+    if(toMm2){
+      var n = num('awgSize');
+      dMm = diaFromAwg(n);
+      areaMm2 = (Math.PI/4) * dMm * dMm;
+      setText('awgResultLabel', 'CROSS-SECTIONAL AREA');
+      setText('awgResultVal', fmt(areaMm2, areaMm2<1?4:3) + ' <small>mm&sup2;</small>');
+      setText('awgDiameter', fmt(dMm,3) + ' mm');
+      setText('awgMetric', fmt(nearestMetricUp(areaMm2),2) + ' mm&sup2;');
+      setText('awgNearest', '—');
+    } else {
+      var area = num('awgArea');
+      errs += fieldError(el('awgArea'), (isNaN(area) || area<=0) ? 'Must be greater than 0.' : null);
+      if(errs>0){ updateValidationBanner('awgValidation', errs); return; }
+      dMm = Math.sqrt(4*area/Math.PI);
+      nExact = awgFromDia(dMm);
+      setText('awgResultLabel', 'NEAREST AWG SIZE');
+      setText('awgResultVal', awgLabel(nExact));
+      setText('awgDiameter', fmt(dMm,3) + ' mm');
+      setText('awgMetric', fmt(nearestMetricUp(area),2) + ' mm&sup2;');
+      setText('awgNearest', 'Exact n = ' + fmt(nExact,2));
+    }
+
+    updateValidationBanner('awgValidation', 0);
+  }
+
+  document.querySelectorAll('input[name="awgDir"]').forEach(function(r){ r.addEventListener('change', calcAwg); });
+  ['awgSize','awgArea'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcAwg); e.addEventListener('change', calcAwg); }
+  });
+  calcAwg();
+})();
+</script>
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
