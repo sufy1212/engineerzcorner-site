@@ -4,6 +4,41 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
+    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
+    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
+    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
+  </item>
+  <item>
+    <title>How to Select the Right DC Cable Size in PV Systems</title>
+    <link>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</guid>
+    <description>String cable vs array cable in a PV system — the voltage-drop sizing formula with worked examples, plus the temperature, grouping and installation derating factors that adjust the final size.</description>
+    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
+  </item>
+  <item>
+    <title>PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</title>
+    <link>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage.html</guid>
+    <description>Why a cold morning can push string voltage past an inverter's limit, how the temperature coefficient drives that swing.</description>
+    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</guid>
+    <description>The STC nameplate rating on a solar panel assumes lab conditions no rooftop ever sees.</description>
+    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
+  </item>
+  <item>
+    <title>Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number</title>
+    <link>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained.html</guid>
+    <description>Why voltage drop accumulates through every segment of a feeder chain, the formula behind it, and why a cable sized fine for ampacity can still fail on voltage drop.</description>
+    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
+  </item>
+  <item>
     <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
     <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
@@ -177,40 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
     <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of current, torque, cost and complexity.</description>
     <pubDate>Mon, 03 Aug 2026 07:44:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load</title>
-    <link>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting.html</link>
-    <guid>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting.html</guid>
-    <description>Transformer kVA from connected load and demand factor, and why standby generator sizing is governed by motor-starting voltage dip rather than the running load alone.</description>
-    <pubDate>Mon, 03 Aug 2026 07:44:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>HVAC &amp; Plumbing Default Design Values: The Quick Reference</title>
-    <link>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</link>
-    <guid>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</guid>
-    <description>Common default design values for HVAC and plumbing — duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and slopes — for a first-pass sizing check.</description>
-    <pubDate>Sun, 02 Aug 2026 07:33:43 GMT</pubDate>
-  </item>
-  <item>
-    <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
-    <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
-    <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
-    <description>How a 33/11 kV substation is built, walked through its single line diagram from incoming line to distribution feeders — every major equipment item, its function, and the protection schemes that back it up.</description>
-    <pubDate>Sun, 02 Aug 2026 07:24:43 GMT</pubDate>
-  </item>
-  <item>
-    <title>Access Control System (ACS) Explained: Components, Architecture &amp; Site Work</title>
-    <link>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</guid>
-    <description>How an Access Control System actually works — main components, the six-step credential-to-unlock sequence, system architecture, integration with FAS/BMS/CCTV, and what an electrical site engineer does on an ACS install.</description>
-    <pubDate>Sun, 02 Aug 2026 07:24:43 GMT</pubDate>
-  </item>
-  <item>
-    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
-    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
-    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
-    <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
-    <pubDate>Sun, 02 Aug 2026 07:24:43 GMT</pubDate>
   </item>
 </channel></rss>

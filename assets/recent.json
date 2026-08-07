@@ -1,5 +1,30 @@
 [
   {
+    "t": "Cable Size &amp; Current Capacity: A Practical Selection Guide",
+    "u": "posts/cable-size-current-capacity-guide",
+    "d": "2026-08-06"
+  },
+  {
+    "t": "How to Select the Right DC Cable Size in PV Systems",
+    "u": "posts/dc-cable-size-selection-pv-systems",
+    "d": "2026-08-06"
+  },
+  {
+    "t": "PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String",
+    "u": "posts/pv-string-sizing-voltage",
+    "d": "2026-08-06"
+  },
+  {
+    "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
+    "u": "posts/solar-panel-derating-factors-explained",
+    "d": "2026-08-06"
+  },
+  {
+    "t": "Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number",
+    "u": "posts/voltage-drop-lv-feeders-explained",
+    "d": "2026-08-06"
+  },
+  {
     "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
     "u": "posts/acb-protection-settings-explained",
     "d": "2026-08-06"
@@ -22,31 +47,6 @@
   {
     "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
     "u": "posts/bms-point-types-explained",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
-    "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
-    "u": "posts/electrical-switchgear-protection-devices-explained",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "Bearing Failures: Root Causes &amp; Prevention",
-    "u": "posts/bearing-failure-modes-causes-prevention",
-    "d": "2026-08-05"
-  },
-  {
-    "t": "Bearing L10 Life",
-    "u": "mechanical/bearing-life-calculator",
     "d": "2026-08-05"
   }
 ]
