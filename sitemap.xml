@@ -171,11 +171,12 @@
   <url><loc>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/deadband-hysteresis-why-controls-dont-chatter</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/earned-value-management-basics</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/earned-value-management-basics</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
@@ -209,6 +210,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/plc-components-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/plc-vs-ddc-key-differences</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/psychrometric-chart-basics</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pump-fan-affinity-laws-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
@@ -218,11 +220,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/retaining-wall-components-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/s-curve-project-progress-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/sensible-vs-latent-heat-cooling-load</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/short-circuit-current-iec-60909-basics</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/signal-scaling-4-20ma-engineering-units</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
@@ -240,6 +238,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/vfd-speed-scaling-affinity-laws-energy-savings</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/privacy-policy</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
