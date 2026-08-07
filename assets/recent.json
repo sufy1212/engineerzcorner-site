@@ -5,6 +5,11 @@
     "d": "2026-08-07"
   },
   {
+    "t": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
+    "u": "posts/work-breakdown-structure-wbs-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "The PPP Project Lifecycle: From Identification to Handback",
     "u": "posts/ppp-project-lifecycle-explained",
     "d": "2026-08-07"
@@ -42,11 +47,6 @@
   {
     "t": "Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number",
     "u": "posts/voltage-drop-lv-feeders-explained",
-    "d": "2026-08-06"
-  },
-  {
-    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-    "u": "posts/acb-protection-settings-explained",
     "d": "2026-08-06"
   }
 ]
