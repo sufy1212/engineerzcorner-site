@@ -1,5 +1,10 @@
 [
   {
+    "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+    "u": "posts/critical-path-method-cpm-explained",
+    "d": "2026-08-07"
+  },
+  {
     "t": "The PPP Project Lifecycle: From Identification to Handback",
     "u": "posts/ppp-project-lifecycle-explained",
     "d": "2026-08-07"
@@ -42,11 +47,6 @@
   {
     "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
     "u": "posts/acb-protection-settings-explained",
-    "d": "2026-08-06"
-  },
-  {
-    "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
-    "u": "posts/fire-suppression-systems-explained",
     "d": "2026-08-06"
   }
 ]

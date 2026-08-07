@@ -4,11 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Critical Path Method (CPM): The Chain That Sets Your Finish Date</title>
+    <link>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</guid>
+    <description>How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.</description>
+    <pubDate>Fri, 07 Aug 2026 19:43:32 GMT</pubDate>
+  </item>
+  <item>
     <title>The PPP Project Lifecycle: From Identification to Handback</title>
     <link>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</guid>
     <description>The eight stages a Public-Private Partnership moves through, from project identification to handback, and the enablers that hold the whole lifecycle together.</description>
-    <pubDate>Fri, 07 Aug 2026 19:42:05 GMT</pubDate>
+    <pubDate>Fri, 07 Aug 2026 19:43:32 GMT</pubDate>
   </item>
   <item>
     <title>Industrial Valves Explained: Types &amp; Parts</title>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
     <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
-    <pubDate>Tue, 04 Aug 2026 12:01:20 GMT</pubDate>
-  </item>
-  <item>
-    <title>IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification</title>
-    <link>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</link>
-    <guid>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</guid>
-    <description>How the IEC 60079 / ATEX Zone system (Zone 0/1/2, 20/21/22) compares to the North American NEC Class &amp; Division system — equivalency table, gas/dust groups, temperature classes and Ex protection types explained.</description>
     <pubDate>Tue, 04 Aug 2026 12:01:20 GMT</pubDate>
   </item>
 </channel></rss>
