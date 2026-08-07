@@ -1,5 +1,15 @@
 [
   {
+    "t": "Fastener Torque Calculator",
+    "u": "mechanical/bolt-torque-calculator",
+    "d": "2026-08-07"
+  },
+  {
+    "t": "Shaft Diameter Sizing Calculator",
+    "u": "mechanical/shaft-diameter-calculator",
+    "d": "2026-08-07"
+  },
+  {
     "t": "AWG &harr; mm&sup2; Wire Size Converter",
     "u": "electrical/awg-mm2-converter",
     "d": "2026-08-07"
@@ -37,16 +47,6 @@
   {
     "t": "Battery SoC vs DoD: Why They're Not the Same Number",
     "u": "posts/battery-soc-vs-dod-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows",
-    "u": "posts/row-spacing-inter-row-shading-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
     "d": "2026-08-07"
   }
 ]
