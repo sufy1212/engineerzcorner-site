@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cable Derating Factor Calculator — Engineerz CorneR</title>
+<meta name="description" content="Combine ambient temperature, grouping, burial and other correction factors into one effective ampacity, with a pass/fail check against your design load current.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/cable-derating-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Cable Derating Factor Calculator — Engineerz CorneR">
+<meta property="og:description" content="Combine ambient temperature, grouping, burial and other correction factors into one effective ampacity, with a pass/fail check against your design load current.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/cable-derating-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cable Derating Factor Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Combine ambient temperature, grouping, burial and other correction factors into one effective ampacity, with a pass/fail check against your design load current.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electrical",
+      "item": "https://www.engineerzcorner.com/electrical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cable Derating Factor Calculator",
+      "item": "https://www.engineerzcorner.com/electrical/cable-derating-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cable Derating Factor Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Combine ambient temperature, grouping, burial and other correction factors into one effective ampacity, with a pass/fail check against your design load current.",
+  "url": "https://www.engineerzcorner.com/electrical/cable-derating-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Cable Derating Factor</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-cdr">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"></path></svg></div>
+    <div><h1>Cable Derating Factor Calculator</h1><div class="hero-sub">Combine correction factors into one effective ampacity</div></div>
+  </div>
+  <div class="intro">
+    Multiplies together every correction factor that applies to a cable run — ambient temperature (calculated here), plus grouping, soil thermal resistivity, burial depth and any other factor you look up — into a single combined derating factor and an effective ampacity. Base ampacity (Iz0) and the individual table-based factors (Cg, Cs, Cd) aren't calculated here; pull them from your cable manufacturer's datasheet or IEC 60364-5-52 Tables B.52.15–B.52.19 for your exact installation method, since that's standardised reference data. Feed the combined factor straight into the <a href="cable-sizing-calculator">Cable Sizing Calculator</a>'s grouping field if you're checking a full run there.
+  </div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="cdrValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Base Cable Data</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="cdrIz0">Base ampacity, Iz0 <span class="unit">A</span></label>
+        <input type="number" id="cdrIz0" value="100" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="cdrInsul">Insulation type</label>
+        <select id="cdrInsul">
+          <option value="70">PVC — max conductor temp 70°C</option>
+          <option value="90" selected>XLPE — max conductor temp 90°C</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="cdrIb">Design load current, Ib <span class="unit">A</span> <small>(optional)</small></label>
+        <input type="number" id="cdrIb" value="80" step="1" min="0">
+      </div>
+    </div>
+    <div class="hint">Iz0 is the un-derated table ampacity for your cable's size and installation method. Leave Ib blank to skip the pass/fail check.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Ambient Temperature Correction</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="cdrAmbient">Actual ambient temperature <span class="unit">°C</span></label>
+        <input type="number" id="cdrAmbient" value="40" step="1">
+      </div>
+      <div class="field">
+        <label for="cdrAmbientRef">Reference ambient (installation standard) <span class="unit">°C</span></label>
+        <input type="number" id="cdrAmbientRef" value="30" step="1">
+      </div>
+    </div>
+    <div class="hint">30°C is the standard IEC 60364-5-52 reference ambient for cables in air. Use 20°C if your base ampacity table is for buried/underground cables.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Other Correction Factors</h2></div>
+    <div class="step-desc">Enter each factor as a multiplier from your reference table — leave at 1.00 if it doesn't apply to this run.</div>
+    <div class="row2">
+      <div class="field">
+        <label for="cdrCg">Grouping factor, Cg</label>
+        <input type="number" id="cdrCg" value="1.00" step="0.01" min="0.01" max="1">
+      </div>
+      <div class="field">
+        <label for="cdrCs">Soil thermal resistivity factor, Cs</label>
+        <input type="number" id="cdrCs" value="1.00" step="0.01" min="0.01" max="1.5">
+      </div>
+      <div class="field">
+        <label for="cdrCd">Depth of burial factor, Cd</label>
+        <input type="number" id="cdrCd" value="1.00" step="0.01" min="0.01" max="1.5">
+      </div>
+      <div class="field">
+        <label for="cdrCx">Other / additional factor, Cx</label>
+        <input type="number" id="cdrCx" value="1.00" step="0.01" min="0.01" max="1.5">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">EFFECTIVE AMPACITY, Iz</span>
+      <span class="rval" id="cdrIz">0.00 <small>A</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Ambient temp factor, Ca</div><div class="sval" id="cdrCa">—</div></div>
+      <div class="stat"><div class="slabel">Combined derating factor</div><div class="sval amber" id="cdrCombined">—</div></div>
+      <div class="stat"><div class="slabel">Ampacity lost to derating</div><div class="sval" id="cdrLoss">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Ambient temperature correction: <b>Ca = √[(θp − θa) / (θp − θa,ref)]</b>, θp = max conductor temp (70°C PVC / 90°C XLPE).<br>
+        Combined factor: <b>C = Ca × Cg × Cs × Cd × Cx</b><br>
+        Effective ampacity: <b>Iz = Iz0 × C</b> — must be ≥ your design load current, Ib.
+      </div>
+      <div class="hint" style="margin-top:8px;">Only combines factors you supply — it doesn't look up Cg, Cs or Cd from a table itself, since those depend on installation method and standard. Cross-check against the base ampacity source you're using.</div>
+    </details>
+  </div>
+  <footer>Combines correction factors into one effective ampacity — base ampacity and table-based factors sourced from your own reference tables.</footer>
+
+  <div class="reftable-section">
+    <h2>About Cable Derating</h2>
+    <p class="reftable-note">A cable's nameplate or table ampacity (Iz0) assumes a specific set of reference conditions — a standard ambient temperature, a single cable in free air, no other circuits nearby. Real installations rarely match that exactly, so each departure from the reference condition gets its own correction factor: hotter ambient reduces the rating, cables bunched together in a group reduce it further, and cables buried in soil pick up factors for thermal resistivity and depth. Multiply them all together and apply that combined factor to Iz0, and you get the effective ampacity the cable can actually carry in its real installation.</p>
+    <p class="reftable-note">This calculator handles the temperature correction with the standard formula and lets you drop in whichever other factors apply from your cable manufacturer's data or IEC 60364-5-52, so you get one combined number and a clear pass/fail against your design load current — instead of multiplying four or five factors by hand and hoping none got missed.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  function calcDerating(){
+    if(!el('cdrIz0')) return;
+    var Iz0 = num('cdrIz0'), thetaP = parseFloat(el('cdrInsul').value);
+    var thetaA = num('cdrAmbient'), thetaARef = num('cdrAmbientRef');
+    var Cg = num('cdrCg'), Cs = num('cdrCs'), Cd = num('cdrCd'), Cx = num('cdrCx');
+    var Ib = num('cdrIb');
+
+    var errs = 0;
+    errs += fieldError(el('cdrIz0'), (isNaN(Iz0) || Iz0<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cdrAmbient'), isNaN(thetaA) ? 'Required.' : null);
+    errs += fieldError(el('cdrAmbientRef'), (isNaN(thetaARef) || thetaARef>=thetaP) ? 'Must be below the max conductor temp.' : null);
+    errs += fieldError(el('cdrCg'), (isNaN(Cg) || Cg<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cdrCs'), (isNaN(Cs) || Cs<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cdrCd'), (isNaN(Cd) || Cd<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cdrCx'), (isNaN(Cx) || Cx<=0) ? 'Must be greater than 0.' : null);
+
+    if(thetaA >= thetaP){
+      errs += fieldError(el('cdrAmbient'), 'Ambient must be below the max conductor temp (' + thetaP + '°C).');
+    }
+
+    if(errs>0){ updateValidationBanner('cdrValidation', errs); setText('cdrIz','—'); setText('cdrCa','—'); setText('cdrCombined','—'); setText('cdrLoss','—'); return; }
+
+    var Ca = Math.sqrt((thetaP - thetaA) / (thetaP - thetaARef));
+    var combined = Ca * Cg * Cs * Cd * Cx;
+    var Iz = Iz0 * combined;
+    var lossPct = (1 - combined) * 100;
+
+    setText('cdrIz', fmt(Iz,2) + ' <small>A</small>');
+    setText('cdrCa', fmt(Ca,3));
+    setText('cdrCombined', fmt(combined,3));
+    setText('cdrLoss', fmt(lossPct,1) + '%');
+
+    var banner = el('cdrValidation');
+    if(!isNaN(Ib) && Ib>0){
+      if(Iz < Ib){
+        banner.className = 'validation-banner bad';
+        banner.innerHTML = '<span class="vdot"></span><span>Effective ampacity (' + fmt(Iz,1) + ' A) is below the design load current (' + fmt(Ib,1) + ' A) — this cable size fails once derated. Increase Iz0 (larger cable) or reduce the derating factors.</span>';
+      } else {
+        banner.className = 'validation-banner ok';
+        banner.innerHTML = '<span class="vdot"></span><span>Effective ampacity (' + fmt(Iz,1) + ' A) covers the design load current (' + fmt(Ib,1) + ' A) with ' + fmt(Iz-Ib,1) + ' A of margin.</span>';
+      }
+    } else {
+      updateValidationBanner('cdrValidation', 0);
+    }
+  }
+
+  ['cdrIz0','cdrInsul','cdrIb','cdrAmbient','cdrAmbientRef','cdrCg','cdrCs','cdrCd','cdrCx'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcDerating); e.addEventListener('change', calcDerating); }
+  });
+  calcDerating();
+})();
+</script>
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>

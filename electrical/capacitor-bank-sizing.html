@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitor Bank Sizing Calculator — Engineerz CorneR</title>
+<meta name="description" content="Required kVAR to capacitance (µF) and rated current for a star- or delta-connected capacitor bank, split into equal switching steps.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/capacitor-bank-sizing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Capacitor Bank Sizing Calculator — Engineerz CorneR">
+<meta property="og:description" content="Required kVAR to capacitance (µF) and rated current for a star- or delta-connected capacitor bank, split into equal switching steps.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/capacitor-bank-sizing">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capacitor Bank Sizing Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Required kVAR to capacitance (µF) and rated current for a star- or delta-connected capacitor bank, split into equal switching steps.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electrical",
+      "item": "https://www.engineerzcorner.com/electrical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Capacitor Bank Sizing Calculator",
+      "item": "https://www.engineerzcorner.com/electrical/capacitor-bank-sizing"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Capacitor Bank Sizing Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Required kVAR to capacitance (µF) and rated current for a star- or delta-connected capacitor bank, split into equal switching steps.",
+  "url": "https://www.engineerzcorner.com/electrical/capacitor-bank-sizing",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Capacitor Bank Sizing</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-cb">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="4" height="12"></rect><rect x="16" y="6" width="4" height="12"></rect><path d="M8 9h8M8 15h8"></path></svg></div>
+    <div><h1>Capacitor Bank Sizing Calculator</h1><div class="hero-sub">From required kVAR to a physical capacitor bank</div></div>
+  </div>
+  <div class="intro">
+    Turns a required reactive power into an actual capacitor bank specification — capacitance per phase, rated bank current, and a split into equal switching steps for an automatic PF-correction relay. Don't have the required kVAR yet? Work it out on the <a href="power-factor-correction">Power Factor Correction</a> calculator first, from the load's real power and its existing/target power factor, then bring that number here. Doesn't account for harmonic resonance risk, inrush limiting reactors, or the bank's protection/switching design — get those checked by the capacitor supplier before final selection, especially on sites with significant VFD or UPS load.
+  </div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="cbValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Required Reactive Power</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="cbQc">Reactive power required, Qc <span class="unit">kVAR</span></label>
+        <input type="number" id="cbQc" value="50" step="1" min="0">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Supply</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="cbV">Supply voltage <span class="unit">V</span></label>
+        <input type="number" id="cbV" value="400" step="1" min="1">
+      </div>
+      <div class="field">
+        <label for="cbF">Frequency</label>
+        <select id="cbF">
+          <option value="50" selected>50 Hz</option>
+          <option value="60">60 Hz</option>
+        </select>
+      </div>
+    </div>
+    <div class="radiorow">
+      <label><input type="radio" name="cbPhase" value="three" checked> Three-phase</label>
+      <label><input type="radio" name="cbPhase" value="single"> Single-phase</label>
+    </div>
+    <div class="radiorow" id="cbConnWrap">
+      <label><input type="radio" name="cbConn" value="delta" checked> Delta (Δ) connected</label>
+      <label><input type="radio" name="cbConn" value="star"> Star (Y) connected</label>
+    </div>
+    <div class="hint" id="cbConnHint">Delta needs a third of the capacitance of an equivalent star bank at the same line voltage, since each capacitor sees the full line voltage rather than the phase voltage — most LV industrial banks are delta-connected for this reason.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Bank Staging</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="cbSteps">Number of equal steps</label>
+        <input type="number" id="cbSteps" value="4" step="1" min="1">
+      </div>
+    </div>
+    <div class="hint">Splits the total bank into this many equal-sized steps, switched in by an automatic PF-correction relay as demand changes.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">CAPACITANCE PER PHASE</span>
+      <span class="rval" id="cbC">0.00 <small>µF</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Rated bank current</div><div class="sval" id="cbI">—</div></div>
+      <div class="stat"><div class="slabel">kVAR per step</div><div class="sval" id="cbQstep">—</div></div>
+      <div class="stat"><div class="slabel">Capacitance per step</div><div class="sval amber" id="cbCstep">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note" id="cbFormula"></div>
+      <div class="hint" style="margin-top:8px;">Sizing only — actual capacitor selection should round up to the manufacturer's nearest standard step rating, and the bank's switching contactors and any inrush-limiting reactors need to be rated for the step current, not just the total.</div>
+    </details>
+  </div>
+  <footer>Reactive-power-to-capacitance sizing only — bank protection, switching and harmonic checks need a full capacitor bank design review.</footer>
+
+  <div class="reftable-section">
+    <h2>About Capacitor Bank Sizing</h2>
+    <p class="reftable-note">Once you know the reactive power a correction bank needs to supply, the next question is a physical one: how much capacitance, at what current, and how should it be split into switching steps. This calculator converts the kVAR figure into a per-phase capacitance in microfarads, works out the current the bank draws at rated voltage, and divides the total into equal steps so an automatic power-factor controller can switch capacitance in and out to track a varying load.</p>
+    <p class="reftable-note">Connection type matters more than it looks: a delta-connected bank needs only a third of the capacitance a star-connected bank would need for the same kVAR at the same line voltage, because each capacitor in a delta bank is wired across the full line-to-line voltage rather than the lower phase voltage. That's the main reason most low-voltage industrial banks are built delta-connected — less capacitance per kVAR of correction.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function radioVal(name){ var r = document.querySelector('input[name="'+name+'"]:checked'); return r ? r.value : null; }
+
+  function calcCapBank(){
+    if(!el('cbQc')) return;
+    var Qc_kvar = num('cbQc'), V = num('cbV'), f = parseFloat(el('cbF').value);
+    var phase = radioVal('cbPhase'), conn = radioVal('cbConn');
+    var steps = num('cbSteps');
+
+    var isThree = phase === 'three';
+    el('cbConnWrap').style.display = isThree ? '' : 'none';
+    el('cbConnHint').style.display = isThree ? '' : 'none';
+
+    var errs = 0;
+    errs += fieldError(el('cbQc'), (isNaN(Qc_kvar) || Qc_kvar<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cbV'), (isNaN(V) || V<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('cbSteps'), (isNaN(steps) || steps<1 || Math.round(steps)!==steps) ? 'Must be a whole number, 1 or more.' : null);
+    if(errs>0){ updateValidationBanner('cbValidation', errs); return; }
+
+    var Qc_var = Qc_kvar * 1000;
+    var omega = 2 * Math.PI * f;
+    var C_F, I_line, formula;
+
+    if(isThree){
+      if(conn === 'delta'){
+        C_F = (Qc_var/3) / (omega * V * V);
+        I_line = Qc_var / (Math.sqrt(3) * V);
+        formula = 'Delta: C per phase (F) = (Qc/3) / (2πf·V²) — each capacitor sees the full line voltage V.<br>Bank line current: I = Qc / (√3·V)';
+      } else {
+        var Vphase = V / Math.sqrt(3);
+        C_F = (Qc_var/3) / (omega * Vphase * Vphase);
+        I_line = Qc_var / (Math.sqrt(3) * V);
+        formula = 'Star: C per phase (F) = (Qc/3) / (2πf·Vphase²), Vphase = V/√3 — each capacitor sees only the phase voltage.<br>Bank line current: I = Qc / (√3·V)';
+      }
+    } else {
+      C_F = Qc_var / (omega * V * V);
+      I_line = Qc_var / V;
+      formula = 'Single-phase: C (F) = Qc / (2πf·V²)<br>Current: I = Qc / V';
+    }
+
+    var C_uF = C_F * 1e6;
+    var Qstep = Qc_kvar / steps;
+    var Cstep = C_uF / steps;
+
+    setText('cbC', fmt(C_uF,2) + ' <small>µF</small>');
+    setText('cbI', fmt(I_line,2) + ' A');
+    setText('cbQstep', fmt(Qstep,2) + ' kVAR');
+    setText('cbCstep', fmt(Cstep,2) + ' µF');
+    setText('cbFormula', formula);
+
+    updateValidationBanner('cbValidation', 0);
+  }
+
+  ['cbQc','cbV','cbF','cbSteps'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcCapBank); e.addEventListener('change', calcCapBank); }
+  });
+  document.querySelectorAll('input[name="cbPhase"]').forEach(function(r){ r.addEventListener('change', calcCapBank); });
+  document.querySelectorAll('input[name="cbConn"]').forEach(function(r){ r.addEventListener('change', calcCapBank); });
+  calcCapBank();
+})();
+</script>
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
