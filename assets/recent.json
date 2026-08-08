@@ -1,5 +1,10 @@
 [
   {
+    "t": "SEER / EER / COP Converter",
+    "u": "hvac/seer-eer-cop-converter",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Refrigerant Charge — Superheat / Subcooling",
     "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
     "d": "2026-08-08"
@@ -42,11 +47,6 @@
   {
     "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
     "u": "posts/pipe-flow-capacity-mannings-equation-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows",
-    "u": "posts/row-spacing-inter-row-shading-explained",
     "d": "2026-08-08"
   }
 ]
