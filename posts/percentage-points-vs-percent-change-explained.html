@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Points vs Percent Change | Engineerz CorneR</title>
+<meta name="description" content="Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, and how mixing them up leads to real reporting errors.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Percentage Points vs Percent Change: Why They're Not the Same Number">
+<meta property="og:description" content="Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, how the gap grows with the base value, and how to keep them straight when reporting a change.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Percentage Points vs Percent Change: Why They're Not the Same Number">
+<meta name="twitter:description" content="Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, how the gap grows with the base value, and how to keep them straight when reporting a change.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Percentage Points vs Percent Change: Why They're Not the Same Number", "item": "https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Percentage Points vs Percent Change: Why They're Not the Same Number",
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07",
+  "description": "Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, how the gap grows with the base value, and how to keep them straight when reporting a change.",
+  "url": "https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Percentage Points vs Percent Change: Why They're Not the Same Nu…</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#128202; General &middot; Numbers &amp; Units</span>
+    <h1>Percentage Points vs Percent Change: Why They're Not the Same Number</h1>
+    <p class="hero-sub">"Up 5 percentage points" and "up 5 percent" describe two different jumps &mdash; and the gap between them grows the moment the base value isn't 100.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Percentages &amp; Ratios</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 175" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- axis -->
+      <line x1="55" y1="20" x2="55" y2="145" stroke="#1E3A5C" stroke-width="1.3"/>
+      <line x1="55" y1="145" x2="740" y2="145" stroke="#1E3A5C" stroke-width="1.3"/>
+      <text x="12" y="24" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">%</text>
+      <!-- before bar -->
+      <rect x="140" y="65" width="70" height="80" fill="#5FD3E3" opacity="0.85"/>
+      <text x="145" y="58" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3" font-weight="600">BEFORE: 20%</text>
+      <!-- after bar -->
+      <rect x="280" y="45" width="70" height="100" fill="#D9782E" opacity="0.9"/>
+      <text x="285" y="38" font-family="IBM Plex Mono" font-size="9" fill="#D9782E" font-weight="600">AFTER: 25%</text>
+      <!-- bracket showing +5pp -->
+      <path d="M360,45 L375,45 L375,145 L360,145" fill="none" stroke="#8FD94A" stroke-width="1.5"/>
+      <text x="382" y="98" font-family="IBM Plex Mono" font-size="10" fill="#8FD94A" font-weight="700">+5 pp</text>
+      <!-- but percent change label -->
+      <text x="460" y="70" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">(25&#8722;20)/20 =</text>
+      <text x="460" y="86" font-family="IBM Plex Mono" font-size="15" fill="#F2B84B" font-weight="700">+25% change</text>
+      <text x="460" y="106" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">not +5%</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A percentage <i>point</i> is a plain subtraction between two percentages &mdash; 25% minus 20% is 5 percentage points, full stop.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Percent <i>change</i> is that same difference measured relative to the starting value &mdash; here, 5 points on a base of 20 is a 25% change.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The two numbers only match when the base is 100 &mdash; everywhere else, percent change is larger (rising from a small base) or smaller (rising from a large base) than the point difference.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Mixing the two is a common source of misleading headlines and mis-stated KPIs, not just a pedantic distinction.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two different questions</h2>
+    <p>"Percentage points" and "percent" answer different questions about the same pair of numbers. A percentage point is a direct subtraction: if a rate moves from 20% to 25%, it has moved <b>5 percentage points</b>, because 25 minus 20 is 5. Percent change asks a different question: relative to where it started, how big was that move? Going from 20 to 25 is a jump of 5 units on a starting value of 20, which works out to a 25% <i>increase</i> &mdash; not 5%.</p>
+    <p>Both numbers are correct descriptions of the same event. They just answer "how far did it move on the percentage scale itself" versus "how much bigger is the new value compared to the old one."</p>
+
+    <h2><span class="h2-dot"></span>The formulas</h2>
+    <div class="formula-box">&Delta;pp &nbsp;=&nbsp; P<sub>after</sub> &minus; P<sub>before</sub></div>
+    <div class="formula-note">&Delta;pp = change in percentage points &middot; a plain subtraction of two already-percentage values, no division involved</div>
+    <div class="formula-box">%&Delta; &nbsp;=&nbsp; (P<sub>after</sub> &minus; P<sub>before</sub>) &nbsp;/&nbsp; P<sub>before</sub> &nbsp;&times;&nbsp; 100</div>
+    <div class="formula-note">%&Delta; = percent change &middot; the same numerator as above, but divided by the starting percentage &mdash; this is what turns a fixed point-gap into a base-dependent ratio</div>
+
+    <h2><span class="h2-dot"></span>Why the gap grows at small bases</h2>
+    <p>The smaller the starting value, the more dramatic percent change looks for the same point move. A move from 2% to 4% is only 2 percentage points &mdash; but it's a 100% increase, because the new value is double the old one. The same 2-point move from 50% to 52% is only a 4% increase. The point difference is identical in both cases; the percent change is not, because it's being divided by a much smaller starting base in the first example.</p>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Small base</b><span>A given point move produces a large, sometimes eye-catching percent change &mdash; e.g. 1% to 2% is "+1pp" but also "+100%".</span></div>
+      <div class="signal-card hot"><b>Large base</b><span>The same point move produces a small percent change &mdash; e.g. 60% to 61% is "+1pp" but only "+1.7%".</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Where the mix-up causes real problems</h2>
+    <p>This distinction shows up constantly in interest rates, survey results, conversion rates, and error rates. An interest rate moving from 3% to 4% is a 1-percentage-point rise, but a 33% increase in the rate itself &mdash; both descriptions are used in reporting, and swapping one for the other overstates or understates the change depending on direction. A defect rate falling from 4% to 2% is a 2-point drop, but a 50% reduction in defects, which is the number that actually matters for a quality report. Reading "percent" when the source meant "percentage points" (or the reverse) can make a modest shift look dramatic, or a dramatic shift look modest.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Percentage points is a subtraction between two percentages &mdash; it doesn't reference the starting value at all.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Percent change divides that same difference by the starting value, so it depends heavily on how large or small the base is.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>The two figures are only equal when the starting value is exactly 100.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>When reading or writing about a rate change, state explicitly which one you mean &mdash; "points" or "percent" are not interchangeable words.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Percentage%20Points%20vs%20Percent%20Change%3A%20Why%20They%27re%20Not%20the%20Same%20Number%20%E2%80%94%20Why%20%27up%205%20percentage%20points%27%20and%20%27up%205%20percent%27%20are%20two%20different%20numbers%2C%20how%20the%20gap%20grows%20with%20the%20base%20value%2C%20and%20how%20to%20keep%20them%20straight%20when%20reporting%20a%20change.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpercentage-points-vs-percent-change-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpercentage-points-vs-percent-change-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Percentage%20Points%20vs%20Percent%20Change%3A%20Why%20They%27re%20Not%20the%20Same%20Number&amp;text=Why%20%27up%205%20percentage%20points%27%20and%20%27up%205%20percent%27%20are%20two%20different%20numbers%2C%20how%20the%20gap%20grows%20with%20the%20base%20value%2C%20and%20how%20to%20keep%20them%20straight%20when%20reporting%20a%20change.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpercentage-points-vs-percent-change-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Percentage%20Points%20vs%20Percent%20Change%3A%20Why%20They%27re%20Not%20the%20Same%20Number&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APercentage%20Points%20vs%20Percent%20Change%3A%20Why%20They%27re%20Not%20the%20Same%20Number%0AWhy%20%27up%205%20percentage%20points%27%20and%20%27up%205%20percent%27%20are%20two%20different%20numbers%2C%20how%20the%20gap%20grows%20with%20the%20base%20value%2C%20and%20how%20to%20keep%20them%20straight%20when%20reporting%20a%20change.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpercentage-points-vs-percent-change-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../general/percentage-calculator">Percentage Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="password-entropy-explained">Password Entropy Explained: What Actually Makes a Password Hard to Crack</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../general/percentage-calculator">Try the Percentage Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
