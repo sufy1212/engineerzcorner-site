@@ -1,5 +1,15 @@
 [
   {
+    "t": "Heat Pump Balance Point &amp; Backup Heat",
+    "u": "hvac/heat-pump-balance-point-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+    "u": "civil/pipe-flow-capacity",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Thermocouple (Type K) Reference",
     "u": "automation/thermocouple-reference",
     "d": "2026-08-08"
@@ -37,16 +47,6 @@
   {
     "t": "Cable Sizing",
     "u": "electrical/cable-sizing-calculator",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Cable Derating Factor Calculator",
-    "u": "electrical/cable-derating-calculator",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Capacitor Bank Sizing Calculator",
-    "u": "electrical/capacitor-bank-sizing",
     "d": "2026-08-07"
   }
 ]
