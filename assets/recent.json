@@ -1,52 +1,52 @@
 [
   {
-    "t": "Proof of Funds Calculator",
-    "u": "study-abroad/proof-of-funds-calculator",
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
     "d": "2026-08-08"
   },
   {
-    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
-    "u": "posts/33-11kv-substation-diagram-equipment-overview",
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
     "d": "2026-08-08"
   },
   {
-    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-    "u": "posts/acb-protection-settings-explained",
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
     "d": "2026-08-08"
   },
   {
-    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
-    "u": "posts/access-control-system-acs-explained",
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
     "d": "2026-08-08"
   },
   {
-    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
     "d": "2026-08-08"
   },
   {
-    "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
-    "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
     "d": "2026-08-08"
   },
   {
-    "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
-    "u": "posts/concrete-volume-material-takeoff-explained",
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
     "d": "2026-08-08"
   },
   {
-    "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
-    "u": "posts/cut-fill-volume-average-end-area-method-explained",
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
     "d": "2026-08-08"
   },
   {
-    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-    "u": "posts/electrical-panel-fat-checklist",
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
     "d": "2026-08-08"
   },
   {
-    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
-    "u": "posts/electrical-switchgear-protection-devices-explained",
+    "t": "Signal Scaling",
+    "u": "automation/signal-scaling",
     "d": "2026-08-08"
   }
 ]
