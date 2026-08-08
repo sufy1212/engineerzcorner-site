@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231B2530'/%3E%3Crect x='7' y='14' width='18' height='4' rx='1' fill='none' stroke='%235AA9D6' stroke-width='2'/%3E%3Cline x1='9' y1='16' x2='23' y2='16' stroke='%235AA9D6' stroke-width='2'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEER / EER / COP Converter | Engineerz CorneR</title>
+<meta name="description" content="Convert between SEER, EER and COP efficiency ratings for AC and heat pump equipment — exact unit conversion between EER and COP, plus an approximate SEER relationship.">
+<link rel="canonical" href="https://www.engineerzcorner.com/hvac/seer-eer-cop-converter">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="SEER / EER / COP Converter | Engineerz CorneR">
+<meta property="og:description" content="Convert between SEER, EER and COP efficiency ratings for AC and heat pump equipment — exact unit conversion between EER and COP, plus an approximate SEER relationship.">
+<meta property="og:url" content="https://www.engineerzcorner.com/hvac/seer-eer-cop-converter">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-hvac.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEER / EER / COP Converter | Engineerz CorneR">
+<meta name="twitter:description" content="Convert between SEER, EER and COP efficiency ratings for AC and heat pump equipment — exact unit conversion between EER and COP, plus an approximate SEER relationship.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-hvac.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hvac",
+      "item": "https://www.engineerzcorner.com/hvac/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEER / EER / COP Converter",
+      "item": "https://www.engineerzcorner.com/hvac/seer-eer-cop-converter"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SEER / EER / COP Converter",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Convert between SEER, EER and COP efficiency ratings for AC and heat pump equipment — exact unit conversion between EER and COP, plus an approximate SEER relationship.",
+  "url": "https://www.engineerzcorner.com/hvac/seer-eer-cop-converter",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">HVAC</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">SEER / EER / COP Converter</span></div></nav>
+
+<a href="../" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-hvac-seer">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path><circle cx="12" cy="12" r="4"></circle></svg></div>
+    <div><h1>SEER / EER / COP Converter</h1><div class="hero-sub">Three efficiency ratings for the same equipment, three different test conditions</div></div>
+  </div>
+  <div class="intro">COP, EER and SEER all describe how much cooling (or heating) output you get per unit of electrical input — they just measure it differently. COP and EER convert to each other exactly (they're the same ratio in different units). SEER is a seasonal average across many outdoor conditions, so there's no exact formula linking it to EER — only a commonly used approximation.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="seerValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>What Do You Know?</h2></div>
+    <div class="radiorow">
+      <label><input type="radio" name="seerMode" value="cop" checked> COP <span class="unit">(dimensionless)</span></label>
+      <label><input type="radio" name="seerMode" value="eer"> EER <span class="unit">(BTU/h per W)</span></label>
+      <label><input type="radio" name="seerMode" value="seer"> SEER / SEER2 <span class="unit">(BTU/h per W, seasonal)</span></label>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="seerIn" id="seerInLabel">COP</label>
+        <input type="number" id="seerIn" value="3.5" step="0.1">
+        <div class="hint" id="seerInHint">Typical COP: air-cooled AC/chiller 2.8–3.5, water-cooled chiller 4–6, heat pump (heating mode) 2.5–4, VRF 3–4.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">EER</span>
+      <span class="rval" id="seerOutEer">0.00 <small>BTU/h per W</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">COP</div><div class="sval" id="seerOutCop">—</div></div>
+      <div class="stat"><div class="slabel">SEER / SEER2 (approx.)</div><div class="sval amber" id="seerOutSeer">—</div></div>
+    </div>
+    <div class="status-banner neutral" id="seerNote"><span class="status-dot"></span><span>COP ↔ EER shown here is an exact unit conversion. Any value touching SEER is a rule-of-thumb approximation — always use the manufacturer's published SEER/SEER2, EER, and COP figures for actual equipment selection.</span></div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">EER = COP &times; 3.412 &nbsp;(exact — 1 kW = 3412 BTU/h)<br>SEER &asymp; EER &times; 1.2 &nbsp;&nbsp;/&nbsp;&nbsp; EER &asymp; SEER &divide; 1.2 &nbsp;(rule-of-thumb approximation, not a physical identity)</div>
+      <div class="hint" style="margin-top:8px;">COP and EER describe the same efficiency at one specific full-load test condition, just in different units (dimensionless vs BTU/h per W) — the 3.412 factor is exact. SEER (or SEER2, the updated test procedure) is a seasonal weighted average across a range of outdoor temperatures per the governing test standard, so it doesn't reduce to a fixed multiple of EER for every unit — real equipment can deviate meaningfully from the 1.2 approximation used here.</div>
+    </details>
+  </div>
+
+  <footer>A quick-reference conversion, not a substitute for the manufacturer's AHRI-certified performance data — SEER/SEER2, EER, and COP are each measured under a different governing test standard, and only COP↔EER converts exactly.</footer>
+</div>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  var SEER_FACTOR = 1.2; // rule-of-thumb: SEER ≈ EER × 1.2
+
+  var LABELS = {
+    cop:  { label: 'COP', unit: '(dimensionless)', hint: 'Typical COP: air-cooled AC/chiller 2.8–3.5, water-cooled chiller 4–6, heat pump (heating mode) 2.5–4, VRF 3–4.' },
+    eer:  { label: 'EER', unit: '(BTU/h per W)', hint: 'Full-load EER, as tested at a single AHRI rated condition — typically in the 8–15 range for residential/light-commercial AC.' },
+    seer: { label: 'SEER / SEER2', unit: '(BTU/h per W, seasonal average)', hint: 'Seasonal average efficiency across a range of outdoor conditions — typically 13–22+ for modern residential AC/heat pump equipment.' }
+  };
+
+  function calcSeer(){
+    if(!el('seerIn')) return;
+    var mode = (document.querySelector('input[name="seerMode"]:checked') || {}).value || 'cop';
+    var meta = LABELS[mode];
+    setText('seerInLabel', meta.label + ' <span class="unit">' + meta.unit + '</span>');
+    setText('seerInHint', meta.hint);
+
+    var v = num('seerIn');
+    var errs = 0;
+    errs += fieldError(el('seerIn'), (isNaN(v) || v<=0) ? 'Must be greater than 0.' : null);
+    if(errs>0){ updateValidationBanner('seerValidation', errs); return; }
+
+    var cop, eer, seer;
+    if(mode === 'cop'){
+      cop = v;
+      eer = cop * 3.412;
+      seer = eer * SEER_FACTOR;
+    } else if(mode === 'eer'){
+      eer = v;
+      cop = eer / 3.412;
+      seer = eer * SEER_FACTOR;
+    } else {
+      seer = v;
+      eer = seer / SEER_FACTOR;
+      cop = eer / 3.412;
+    }
+
+    setText('seerOutEer', fmt(eer,2) + ' <small>BTU/h per W</small>');
+    setText('seerOutCop', fmt(cop,2));
+    setText('seerOutSeer', fmt(seer,2));
+    updateValidationBanner('seerValidation', 0);
+  }
+
+  el('seerIn').addEventListener('input', calcSeer);
+  el('seerIn').addEventListener('change', calcSeer);
+  document.querySelectorAll('input[name="seerMode"]').forEach(function(r){ r.addEventListener('change', calcSeer); });
+  calcSeer();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
