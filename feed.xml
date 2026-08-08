@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Password Entropy Explained: What Actually Makes a Password Hard to Crack</title>
+    <link>https://www.engineerzcorner.com/posts/password-entropy-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/password-entropy-explained.html</guid>
+    <description>What password entropy actually measures, why length beats complexity rules, and how the math behind brute-force cracking time works.</description>
+    <pubDate>Sat, 08 Aug 2026 05:43:07 GMT</pubDate>
+  </item>
+  <item>
+    <title>Percentage Points vs Percent Change: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained.html</guid>
+    <description>Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, and how mixing them up leads to real reporting errors.</description>
+    <pubDate>Sat, 08 Aug 2026 05:43:07 GMT</pubDate>
+  </item>
+  <item>
     <title>Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out</title>
     <link>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained.html</guid>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</guid>
     <description>MCB, MCCB, ACB, VCB, SF6 breakers, RCCB, RCBO, ELCB, isolators, contactors, relays, fuses, SPDs and busbars — what each device does, how it differs, and where it's used.</description>
     <pubDate>Wed, 05 Aug 2026 19:59:08 GMT</pubDate>
-  </item>
-  <item>
-    <title>Bearing Failures: Root Causes &amp; Prevention</title>
-    <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
-    <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling.</description>
-    <pubDate>Wed, 05 Aug 2026 19:34:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</title>
-    <link>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</guid>
-    <description>Why heat pump sizing isn't the same exercise as furnace or AC sizing, what COP and capacity-at-temperature actually mean.</description>
-    <pubDate>Wed, 05 Aug 2026 19:30:05 GMT</pubDate>
   </item>
 </channel></rss>

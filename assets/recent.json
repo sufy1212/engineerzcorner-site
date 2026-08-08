@@ -1,5 +1,15 @@
 [
   {
+    "t": "Password Entropy Explained: What Actually Makes a Password Hard to Crack",
+    "u": "posts/password-entropy-explained",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Percentage Points vs Percent Change: Why They're Not the Same Number",
+    "u": "posts/percentage-points-vs-percent-change-explained",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Fastener Torque Calculator",
     "u": "mechanical/bolt-torque-calculator",
     "d": "2026-08-07"
@@ -37,16 +47,6 @@
   {
     "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
     "u": "posts/solar-payback-period-roi-explained",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Solar System Sizing: From Daily Load to Panel Count",
-    "u": "posts/solar-system-sizing-load-to-panel-count",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-    "u": "posts/battery-soc-vs-dod-explained",
     "d": "2026-08-07"
   }
 ]

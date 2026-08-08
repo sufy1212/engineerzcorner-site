@@ -150,7 +150,7 @@
   <url><loc>https://www.engineerzcorner.com/pm/team-directory</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-08-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-08-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
@@ -207,6 +207,8 @@
   <url><loc>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared</loc><lastmod>2026-08-03</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/mppt-vs-pwm-solar-charge-controllers</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/npsh-margin-why-passing-on-paper-can-still-cavitate</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/password-entropy-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pid-controller-tuning-basics</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
