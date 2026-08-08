@@ -1,52 +1,52 @@
 [
   {
-    "t": "Air Changes per Hour",
-    "u": "hvac/air-changes-per-hour-calculator",
+    "t": "Charge Controller Sizing Calculator",
+    "u": "solar/charge-controller-sizing-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Sensible + Latent Cooling Load",
-    "u": "hvac/cooling-load-calculator",
+    "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
+    "u": "solar/dc-cable-voltage-drop-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Duct Sizing &amp; Air Changes",
-    "u": "hvac/duct-sizing-calculator",
+    "t": "Panel Tilt &amp; Orientation Calculator",
+    "u": "solar/panel-tilt-orientation-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Sensible Heat / Supply Airflow",
-    "u": "hvac/sensible-heat-airflow-calculator",
+    "t": "PV String Sizing &amp; Voltage Calculator",
+    "u": "solar/pv-string-sizing-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Breaker / Fuse Sizing Calculator",
-    "u": "electrical/breaker-fuse-sizing-calculator",
+    "t": "Row Spacing &amp; Self-Shading Calculator",
+    "u": "solar/row-spacing-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Cable Derating Factor Calculator",
-    "u": "electrical/cable-derating-calculator",
+    "t": "Solar Payback &amp; ROI Calculator",
+    "u": "solar/solar-payback-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Cable Sizing",
-    "u": "electrical/cable-sizing-calculator",
+    "t": "Solar Sizing Calculator",
+    "u": "solar/solar-sizing-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Capacitor Bank Sizing Calculator",
-    "u": "electrical/capacitor-bank-sizing",
+    "t": "Sensible Heat Load",
+    "u": "mechanical/heat-load-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Load / Demand Calculator",
-    "u": "electrical/load-demand-calculator",
+    "t": "Pump / Fan Affinity Laws",
+    "u": "mechanical/pump-fan-affinity-laws-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Three-Phase Power &amp; Current Calculator",
-    "u": "electrical/three-phase-power-calculator",
+    "t": "Shaft Diameter Sizing Calculator",
+    "u": "mechanical/shaft-diameter-calculator",
     "d": "2026-08-08"
   }
 ]
