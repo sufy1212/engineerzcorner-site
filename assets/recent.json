@@ -1,5 +1,10 @@
 [
   {
+    "t": "Thermocouple (Type K) Reference",
+    "u": "automation/thermocouple-reference",
+    "d": "2026-08-08"
+  },
+  {
     "t": "HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers",
     "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
     "d": "2026-08-08"
@@ -42,11 +47,6 @@
   {
     "t": "Capacitor Bank Sizing Calculator",
     "u": "electrical/capacitor-bank-sizing",
-    "d": "2026-08-07"
-  },
-  {
-    "t": "Power Factor Correction Sizing",
-    "u": "electrical/power-factor-correction",
     "d": "2026-08-07"
   }
 ]
