@@ -1,5 +1,10 @@
 [
   {
+    "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
+    "u": "civil/trench-safe-slope",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Relay / Contactor Coil Current & Duty Cycle",
     "u": "automation/relay-coil-sizing",
     "d": "2026-08-08"
@@ -42,11 +47,6 @@
   {
     "t": "Sensible Heat Load",
     "u": "mechanical/heat-load-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Pump / Fan Affinity Laws",
-    "u": "mechanical/pump-fan-affinity-laws-calculator",
     "d": "2026-08-08"
   }
 ]
