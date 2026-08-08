@@ -1,52 +1,52 @@
 [
   {
-    "t": "Heat Pump Balance Point &amp; Backup Heat",
-    "u": "hvac/heat-pump-balance-point-calculator",
+    "t": "Proof of Funds Calculator",
+    "u": "study-abroad/proof-of-funds-calculator",
     "d": "2026-08-08"
   },
   {
-    "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-    "u": "civil/pipe-flow-capacity",
+    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+    "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-08"
   },
   {
-    "t": "Thermocouple (Type K) Reference",
-    "u": "automation/thermocouple-reference",
+    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+    "u": "posts/acb-protection-settings-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers",
-    "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
+    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+    "u": "posts/access-control-system-acs-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "Password Entropy Explained: What Actually Makes a Password Hard to Crack",
-    "u": "posts/password-entropy-explained",
+    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "Percentage Points vs Percent Change: Why They're Not the Same Number",
-    "u": "posts/percentage-points-vs-percent-change-explained",
+    "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
+    "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "Fastener Torque Calculator",
-    "u": "mechanical/bolt-torque-calculator",
-    "d": "2026-08-07"
+    "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
+    "u": "posts/concrete-volume-material-takeoff-explained",
+    "d": "2026-08-08"
   },
   {
-    "t": "Shaft Diameter Sizing Calculator",
-    "u": "mechanical/shaft-diameter-calculator",
-    "d": "2026-08-07"
+    "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
+    "u": "posts/cut-fill-volume-average-end-area-method-explained",
+    "d": "2026-08-08"
   },
   {
-    "t": "AWG &harr; mm&sup2; Wire Size Converter",
-    "u": "electrical/awg-mm2-converter",
-    "d": "2026-08-07"
+    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
+    "u": "posts/electrical-panel-fat-checklist",
+    "d": "2026-08-08"
   },
   {
-    "t": "Cable Sizing",
-    "u": "electrical/cable-sizing-calculator",
-    "d": "2026-08-07"
+    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
+    "u": "posts/electrical-switchgear-protection-devices-explained",
+    "d": "2026-08-08"
   }
 ]

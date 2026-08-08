@@ -4,11 +4,165 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
+    <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
+    <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
+    <description>How a 33/11 kV substation is built, walked through its single line diagram from incoming line to distribution feeders — every major equipment item, its function, and the protection schemes that back it up.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
+    <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an Air Circuit Breaker (ACB) — what each protection parameter does, typical setting ranges, and why the settings exist as a coordinated set, not individual dials.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Access Control System (ACS) Explained: Components, Architecture &amp; Site Work</title>
+    <link>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</guid>
+    <description>How an Access Control System actually works — main components, the six-step credential-to-unlock sequence, system architecture, integration with FAS/BMS/CCTV, and what an electrical site engineer does on an ACS install.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
+    <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors, ECBs, maintenance bypass switches and key interlocks — what each device does, how it differs, and where it's used.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter</title>
+    <link>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</guid>
+    <description>How gross area and steel ratio combine into a short column&amp;#x27;s axial capacity, why codes cap reinforcement ratio at both ends, and when slenderness cuts that capacity down.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Concrete Volume Takeoff: From Cubic Meters to Bags of Cement</title>
+    <link>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</guid>
+    <description>How a concrete volume gets converted into cement, sand and aggregate quantities using mix ratios, why wastage factors are added, and what water-cement ratio does to the mix.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cut &amp; Fill Volume: How the Average End Area Method Actually Works</title>
+    <link>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</guid>
+    <description>How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
+    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
+    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
+    <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</title>
+    <link>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</guid>
+    <description>MCB, MCCB, ACB, VCB, SF6 breakers, RCCB, RCBO, ELCB, isolators, contactors, relays, fuses, SPDs and busbars — what each device does, how it differs, and where it's used.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained</title>
+    <link>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</guid>
+    <description>FM-200, Novec 1230, CO2 and foam fire suppression systems compared — components, applications, discharge time, ozone depletion and global warming potential, plus which NFPA standard applies to each.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Grade &amp; Slope: Why Percent, Ratio and Degrees Aren&amp;#x27;t the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/grade-slope-percent-ratio-degrees-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/grade-slope-percent-ratio-degrees-explained.html</guid>
+    <description>How rise over run converts between percent grade, a ratio like 1:20, and an angle in degrees — and why mixing up the three is a common site-drawing mistake.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
     <title>HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers</title>
     <link>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</link>
     <guid>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</guid>
     <description>Preliminary-design thumb rules for cooling load, airflow, fan and pump power, chilled water flow, chiller capacity, cooling tower sizing, and pipe sizing — with the formula behind each one.</description>
-    <pubDate>Sat, 08 Aug 2026 09:09:54 GMT</pubDate>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>HVAC &amp; Plumbing Default Design Values: The Quick Reference</title>
+    <link>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</guid>
+    <description>Common default design values for HVAC and plumbing — duct and pipe velocities, pressure drops, ACH, noise criteria, fresh air rates, temperatures, and plumbing velocities, pressures and slopes — for a first-pass sizing check.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification</title>
+    <link>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</guid>
+    <description>How the IEC 60079 / ATEX Zone system (Zone 0/1/2, 20/21/22) compares to the North American NEC Class &amp; Division system — equivalency table, gas/dust groups, temperature classes and Ex protection types explained.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Junction Boxes Explained: Types, Parts &amp; Ratings</title>
+    <link>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</guid>
+    <description>What a junction box actually does, the main types — pull box, gang box, weatherproof, explosion-proof, conduit body, terminal box, panel enclosure — its parts, a material and rating reference, box-fill sizing, and a selection checklist.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
+    <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
+    <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
+    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of current, torque, cost and complexity.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Manning&amp;#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity</title>
+    <link>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained.html</guid>
+    <description>How Manning&amp;#x27;s equation turns pipe slope, roughness and diameter into gravity flow capacity, why full-bore isn&amp;#x27;t peak capacity, and what the roughness coefficient actually represents.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Rebar Development Length: Why Bar Diameter Decides the Embedment, Not Rules of Thumb</title>
+    <link>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained.html</guid>
+    <description>Why development length is a function of bar diameter and concrete/steel strength rather than a flat number, how lap splices scale off it, and what hooks buy you.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Slab-on-Grade Thickness: What Actually Drives the Number</title>
+    <link>https://www.engineerzcorner.com/posts/slab-on-grade-thickness-subgrade-support-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/slab-on-grade-thickness-subgrade-support-explained.html</guid>
+    <description>Why slab-on-grade thickness comes from load, subgrade support and concrete strength together — not a flat default — and why the subgrade matters as much as the slab itself.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Staircase Geometry: The Riser-Tread Rule That Keeps Stairs Walkable</title>
+    <link>https://www.engineerzcorner.com/posts/staircase-geometry-riser-tread-rule-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/staircase-geometry-riser-tread-rule-explained.html</guid>
+    <description>Why comfortable stairs come down to one relationship between riser height and tread depth, the typical ranges each falls within, and where headroom and going length come in.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</title>
+    <link>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained.html</guid>
+    <description>Voltage classification from ELV to UHV explained &amp;mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Trench Safe Slope: Why OSHA Soil Type Decides the Angle, Not the Depth</title>
+    <link>https://www.engineerzcorner.com/posts/trench-safe-slope-osha-soil-type-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/trench-safe-slope-osha-soil-type-explained.html</guid>
+    <description>Why the same trench depth needs a completely different sloping angle depending on soil classification, what separates Type A, B and C soil, and when sloping stops being enough.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>Industrial Valves Explained: Types &amp; Parts</title>
+    <link>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</guid>
+    <description>What a valve actually does, the main types — gate, globe, ball, butterfly, check, plug, needle, diaphragm, pressure relief — its parts, a materials and actuation reference, a selection checklist, and common failure points.</description>
+    <pubDate>Sat, 08 Aug 2026 09:59:05 GMT</pubDate>
   </item>
   <item>
     <title>Password Entropy Explained: What Actually Makes a Password Hard to Crack</title>
@@ -58,159 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
     <description>How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.</description>
     <pubDate>Fri, 07 Aug 2026 20:16:50 GMT</pubDate>
-  </item>
-  <item>
-    <title>RACI Matrix Explained: Who's Responsible vs. Who's Accountable</title>
-    <link>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</guid>
-    <description>Why projects stall when nobody owns a decision, what Responsible, Accountable, Consulted and Informed actually mean.</description>
-    <pubDate>Fri, 07 Aug 2026 19:53:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Risk Register Basics: Turning Probability × Impact Into Priority</title>
-    <link>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</link>
-    <guid>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</guid>
-    <description>Why a risk list without scoring is just a list, how Probability × Impact turns gut feeling into a comparable number.</description>
-    <pubDate>Fri, 07 Aug 2026 19:53:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Stakeholder Power-Interest Grid: Sorting Attention, Not Just People</title>
-    <link>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained.html</guid>
-    <description>How the power-interest grid sorts stakeholders into four engagement strategies, why the same person can move between quadrants, and why 'keep everyone happy' isn't a strategy.</description>
-    <pubDate>Fri, 07 Aug 2026 19:53:41 GMT</pubDate>
-  </item>
-  <item>
-    <title>Earned Value Management: Reading Project Health From Three Numbers</title>
-    <link>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/earned-value-management-basics.html</guid>
-    <description>Why 'on budget' and 'on schedule' need separate proof, what Planned Value, Earned Value and Actual Cost each measure.</description>
-    <pubDate>Fri, 07 Aug 2026 19:50:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>S-Curves Explained: Why Project Progress Isn't a Straight Line</title>
-    <link>https://www.engineerzcorner.com/posts/s-curve-project-progress-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/s-curve-project-progress-explained.html</guid>
-    <description>Why cumulative project progress plots as an S, not a straight line, how to read planned vs actual curves, and what the gap between them is actually telling you.</description>
-    <pubDate>Fri, 07 Aug 2026 19:50:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign</title>
-    <link>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained.html</guid>
-    <description>How a WBS decomposes project scope into work packages, the 100% rule that keeps it honest, and why it's the foundation CPM and EVM both sit on top of.</description>
-    <pubDate>Fri, 07 Aug 2026 19:50:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Critical Path Method (CPM): The Chain That Sets Your Finish Date</title>
-    <link>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</guid>
-    <description>How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.</description>
-    <pubDate>Fri, 07 Aug 2026 19:46:56 GMT</pubDate>
-  </item>
-  <item>
-    <title>The PPP Project Lifecycle: From Identification to Handback</title>
-    <link>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</guid>
-    <description>The eight stages a Public-Private Partnership moves through, from project identification to handback, and the enablers that hold the whole lifecycle together.</description>
-    <pubDate>Fri, 07 Aug 2026 19:43:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Industrial Valves Explained: Types &amp; Parts</title>
-    <link>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/valve-types-parts-explained.html</guid>
-    <description>What a valve actually does, the main types — gate, globe, ball, butterfly, check, plug, needle, diaphragm, pressure relief — its parts, a materials and actuation reference, a selection checklist, and common failure points.</description>
-    <pubDate>Fri, 07 Aug 2026 19:25:51 GMT</pubDate>
-  </item>
-  <item>
-    <title>Junction Boxes Explained: Types, Parts &amp; Ratings</title>
-    <link>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</guid>
-    <description>What a junction box actually does, the main types — pull box, gang box, weatherproof, explosion-proof, conduit body, terminal box, panel enclosure — its parts, a material and rating reference, box-fill sizing, and a selection checklist.</description>
-    <pubDate>Fri, 07 Aug 2026 19:20:29 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
-    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
-    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
-    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>How to Select the Right DC Cable Size in PV Systems</title>
-    <link>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</link>
-    <guid>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</guid>
-    <description>String cable vs array cable in a PV system — the voltage-drop sizing formula with worked examples, plus the temperature, grouping and installation derating factors that adjust the final size.</description>
-    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</title>
-    <link>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage.html</guid>
-    <description>Why a cold morning can push string voltage past an inverter's limit, how the temperature coefficient drives that swing.</description>
-    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</title>
-    <link>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</guid>
-    <description>The STC nameplate rating on a solar panel assumes lab conditions no rooftop ever sees.</description>
-    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number</title>
-    <link>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained.html</guid>
-    <description>Why voltage drop accumulates through every segment of a feeder chain, the formula behind it, and why a cable sized fine for ampacity can still fail on voltage drop.</description>
-    <pubDate>Thu, 06 Aug 2026 20:06:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
-    <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an Air Circuit Breaker (ACB) — what each protection parameter does, typical setting ranges, and why the settings exist as a coordinated set, not individual dials.</description>
-    <pubDate>Thu, 06 Aug 2026 09:02:06 GMT</pubDate>
-  </item>
-  <item>
-    <title>FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained</title>
-    <link>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</guid>
-    <description>FM-200, Novec 1230, CO2 and foam fire suppression systems compared — components, applications, discharge time, ozone depletion and global warming potential, plus which NFPA standard applies to each.</description>
-    <pubDate>Thu, 06 Aug 2026 08:34:43 GMT</pubDate>
-  </item>
-  <item>
-    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
-    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
-    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
-    <pubDate>Wed, 05 Aug 2026 20:29:38 GMT</pubDate>
-  </item>
-  <item>
-    <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
-    <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
-    <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
-    <pubDate>Wed, 05 Aug 2026 20:27:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</title>
-    <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
-    <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
-    <pubDate>Wed, 05 Aug 2026 20:25:18 GMT</pubDate>
-  </item>
-  <item>
-    <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
-    <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
-    <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
-    <description>Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</description>
-    <pubDate>Wed, 05 Aug 2026 20:16:33 GMT</pubDate>
-  </item>
-  <item>
-    <title>ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained</title>
-    <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
-    <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors, ECBs, maintenance bypass switches and key interlocks — what each device does, how it differs, and where it's used.</description>
-    <pubDate>Wed, 05 Aug 2026 19:59:08 GMT</pubDate>
   </item>
 </channel></rss>
