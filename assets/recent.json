@@ -1,52 +1,52 @@
 [
   {
+    "t": "Battery State-of-Charge Simulator",
+    "u": "solar/battery-soc-simulator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Charge Controller Sizing Calculator",
+    "u": "solar/charge-controller-sizing-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "CO2 Offset &amp; Environmental Savings Calculator",
+    "u": "solar/co2-offset-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
+    "u": "solar/dc-cable-voltage-drop-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Panel Tilt &amp; Orientation Calculator",
+    "u": "solar/panel-tilt-orientation-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "PV String Sizing &amp; Voltage Calculator",
+    "u": "solar/pv-string-sizing-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Row Spacing &amp; Self-Shading Calculator",
+    "u": "solar/row-spacing-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Solar Payback &amp; ROI Calculator",
+    "u": "solar/solar-payback-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Solar Sizing Calculator",
+    "u": "solar/solar-sizing-calculator",
+    "d": "2026-08-08"
+  },
+  {
     "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
     "u": "posts/33-11kv-substation-diagram-equipment-overview",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
-    "u": "posts/4-20ma-current-loop-basics",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-    "u": "posts/acb-protection-settings-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
-    "u": "posts/access-control-system-acs-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
-    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
-    "u": "posts/air-changes-per-hour-ventilation-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
-    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
-    "u": "posts/ansi-relay-numbers-protection-functions",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-    "u": "posts/battery-soc-vs-dod-explained",
     "d": "2026-08-08"
   }
 ]
