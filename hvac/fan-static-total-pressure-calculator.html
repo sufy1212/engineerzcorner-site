@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231B2530'/%3E%3Crect x='7' y='14' width='18' height='4' rx='1' fill='none' stroke='%235AA9D6' stroke-width='2'/%3E%3Cline x1='9' y1='16' x2='23' y2='16' stroke='%235AA9D6' stroke-width='2'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fan Static &amp; Total Pressure Calculator | Engineerz CorneR</title>
+<meta name="description" content="Fan static pressure (FSP) and fan total pressure (FTP) from inlet/outlet duct static pressure readings and velocities, per the standard AMCA field-test method.">
+<link rel="canonical" href="https://www.engineerzcorner.com/hvac/fan-static-total-pressure-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Fan Static &amp; Total Pressure Calculator | Engineerz CorneR">
+<meta property="og:description" content="Fan static pressure (FSP) and fan total pressure (FTP) from inlet/outlet duct static pressure readings and velocities, per the standard AMCA field-test method.">
+<meta property="og:url" content="https://www.engineerzcorner.com/hvac/fan-static-total-pressure-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-hvac.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fan Static &amp; Total Pressure Calculator | Engineerz CorneR">
+<meta name="twitter:description" content="Fan static pressure (FSP) and fan total pressure (FTP) from inlet/outlet duct static pressure readings and velocities, per the standard AMCA field-test method.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-hvac.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hvac",
+      "item": "https://www.engineerzcorner.com/hvac/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fan Static & Total Pressure Calculator",
+      "item": "https://www.engineerzcorner.com/hvac/fan-static-total-pressure-calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Fan Static & Total Pressure Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Fan static pressure (FSP) and fan total pressure (FTP) from inlet/outlet duct static pressure readings and velocities, per the standard AMCA field-test method.",
+  "url": "https://www.engineerzcorner.com/hvac/fan-static-total-pressure-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">HVAC</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Fan Static &amp; Total Pressure</span></div></nav>
+
+<a href="../" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-hvac-fsp">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"></circle><path d="M12 12c0-3.5 1.5-7 4-7s2 3.5 0 5-4 2-4 2"></path><path d="M12 12c3.5 0 7 1.5 7 4s-3.5 2-5 0-2-4-2-4"></path><path d="M12 12c0 3.5-1.5 7-4 7s-2-3.5 0-5 4-2 4-2"></path></svg></div>
+    <div><h1>Fan Static &amp; Total Pressure</h1><div class="hero-sub">Field-test FSP and FTP from duct static pressure and velocity readings</div></div>
+  </div>
+  <div class="intro">Fan static pressure (FSP) and fan total pressure (FTP) are what the fan is actually working against — not just the static pressure difference across it. This follows the standard AMCA field-test relationship: measure static pressure just outside the fan's inlet and outlet, work out the velocity pressure at each point, and combine them properly.</div>
+  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/pipe-flow-head-loss-reynolds-number-regime" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Related: Pipe Head Loss — Why Reynolds Number Decides Which Formula Applies &rarr;</a></div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="fspValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Duct Velocities &amp; Air Density</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="fspVin">Inlet duct velocity <span class="unit">m/s</span></label>
+        <input type="number" id="fspVin" value="0" step="0.5">
+        <div class="hint">Use 0 if the fan draws directly from an open plenum or room (negligible inlet velocity).</div>
+      </div>
+      <div class="field">
+        <label for="fspVout">Outlet duct velocity <span class="unit">m/s</span></label>
+        <input type="number" id="fspVout" value="8" step="0.5">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="fspRho">Air density <span class="unit">kg/m³</span></label>
+        <input type="number" id="fspRho" value="1.2" step="0.01">
+        <div class="hint">1.2 kg/m³ is standard air at ~20°C, sea level. Adjust for altitude or temperature if it matters for the reading.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Static Pressure Readings</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="fspSPin">Inlet static pressure <span class="unit">Pa</span></label>
+        <input type="number" id="fspSPin" value="-150" step="5">
+        <div class="hint">Measured with a manometer just upstream of the fan inlet — usually negative (below atmospheric) on the suction side.</div>
+      </div>
+      <div class="field">
+        <label for="fspSPout">Outlet static pressure <span class="unit">Pa</span></label>
+        <input type="number" id="fspSPout" value="300" step="5">
+        <div class="hint">Measured just downstream of the fan outlet — usually positive (above atmospheric) on the discharge side.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">FAN STATIC PRESSURE (FSP)</span>
+      <span class="rval" id="fspFsp">0.00 <small>Pa</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">FSP (inWG)</div><div class="sval" id="fspFspIn">—</div></div>
+      <div class="stat"><div class="slabel">Fan total pressure (FTP)</div><div class="sval amber" id="fspFtp">—</div></div>
+      <div class="stat"><div class="slabel">Inlet velocity pressure</div><div class="sval" id="fspVpIn">—</div></div>
+      <div class="stat"><div class="slabel">Outlet velocity pressure</div><div class="sval" id="fspVpOut">—</div></div>
+    </div>
+    <div class="status-banner neutral" id="fspStatus"><span class="status-dot"></span><span>Enter the readings above.</span></div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        VP = &frac12; &times; &rho; &times; V&sup2; &nbsp;(velocity pressure at each point)<br>
+        FTP = (SP<sub>out</sub> + VP<sub>out</sub>) &minus; (SP<sub>in</sub> + VP<sub>in</sub>)<br>
+        FSP = FTP &minus; VP<sub>out</sub> &nbsp;=&nbsp; SP<sub>out</sub> &minus; SP<sub>in</sub> &minus; VP<sub>in</sub>
+      </div>
+      <div class="hint" style="margin-top:8px;">FSP excludes the outlet velocity pressure because that energy is considered "used up" once the air leaves the fan discharge — it's why FSP is always lower than FTP, and why a fan curve plotted in static pressure isn't the same thing as one plotted in total pressure.</div>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">i</span><h2>Reading the result</h2></div>
+    <ul class="checklist" style="margin:0;">
+      <li><span class="ck-mark">✓</span><span>If the inlet is drawing straight from an open plenum or room, inlet velocity is effectively 0 — FSP then simplifies to just the static pressure difference (SP<sub>out</sub> &minus; SP<sub>in</sub>).</span></li>
+      <li><span class="ck-mark">✓</span><span>Compare the calculated FSP against the fan's published performance curve at the measured airflow — a big gap usually means excess system resistance (dirty filter, undersized duct, closed damper) or a fan speed/selection issue.</span></li>
+      <li><span class="ck-mark">✓</span><span>A negative FSP result almost always means a measurement or tap location error, not a real fan condition — double-check probe placement and manometer sign convention before trusting the number.</span></li>
+    </ul>
+  </div>
+
+  <footer>Field-test relationship per the standard AMCA static/total pressure definitions — actual fan performance still depends on the specific fan curve, system effect at the inlet/outlet connections, and air density at the test conditions.</footer>
+</div>
+
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+
+  function calcFanPressure(){
+    if(!el('fspVin')) return;
+    var vIn = num('fspVin'), vOut = num('fspVout'), rho = num('fspRho'), spIn = num('fspSPin'), spOut = num('fspSPout');
+    var errs = 0;
+    errs += fieldError(el('fspVin'), (isNaN(vIn) || vIn<0) ? 'Cannot be negative.' : null);
+    errs += fieldError(el('fspVout'), (isNaN(vOut) || vOut<0) ? 'Cannot be negative.' : null);
+    errs += fieldError(el('fspRho'), (isNaN(rho) || rho<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('fspSPin'), isNaN(spIn) ? 'Required.' : null);
+    errs += fieldError(el('fspSPout'), isNaN(spOut) ? 'Required.' : null);
+    if(errs>0){ updateValidationBanner('fspValidation', errs); return; }
+
+    var vpIn = 0.5 * rho * vIn * vIn;
+    var vpOut = 0.5 * rho * vOut * vOut;
+    var tpIn = spIn + vpIn;
+    var tpOut = spOut + vpOut;
+    var ftp = tpOut - tpIn;
+    var fsp = ftp - vpOut;
+
+    setText('fspVpIn', fmt(vpIn,1) + ' Pa');
+    setText('fspVpOut', fmt(vpOut,1) + ' Pa');
+    setText('fspFtp', fmt(ftp,1) + ' <small>Pa</small>');
+    setText('fspFsp', fmt(fsp,1) + ' <small>Pa</small>');
+    setText('fspFspIn', fmt(fsp/1000*4.0147,3) + ' inWG');
+
+    var st = el('fspStatus');
+    if(fsp < 0){
+      st.className = 'status-banner bad';
+      st.innerHTML = '<span class="status-dot"></span><span>FSP came out negative — check probe placement and manometer sign convention; this almost never reflects a real fan condition.</span>';
+    } else {
+      st.className = 'status-banner ok';
+      st.innerHTML = '<span class="status-dot"></span><span>Compare this FSP at the outlet airflow against the fan&#39;s published performance curve to check it&#39;s operating where expected.</span>';
+    }
+    updateValidationBanner('fspValidation', 0);
+  }
+
+  ['fspVin','fspVout','fspRho','fspSPin','fspSPout'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcFanPressure); e.addEventListener('change', calcFanPressure); }
+  });
+  calcFanPressure();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
