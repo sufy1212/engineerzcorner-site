@@ -1,52 +1,52 @@
 [
   {
-    "t": "Commercial Terms of Project",
-    "u": "pm/commercial-terms",
+    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
+    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "Earned Value Management",
-    "u": "pm/evm",
+    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
+    "u": "posts/air-changes-per-hour-ventilation-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "PM Glossary",
-    "u": "pm/glossary",
+    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "Incoterms",
-    "u": "pm/incoterms",
+    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
+    "u": "posts/ansi-relay-numbers-protection-functions",
     "d": "2026-08-08"
   },
   {
-    "t": "Meeting Minutes &amp; Action Items",
-    "u": "pm/meeting-minutes",
+    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "Permit to Work / LOTO Checklist",
-    "u": "pm/permit-to-work",
+    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+    "u": "posts/battery-soc-vs-dod-explained",
     "d": "2026-08-08"
   },
   {
-    "t": "PMP / PMBOK Reference",
-    "u": "pm/pmp-pmbok-reference",
+    "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
+    "u": "posts/beam-bending-basics-section-modulus-deflection",
     "d": "2026-08-08"
   },
   {
-    "t": "Punch List / Snag Tracker",
-    "u": "pm/punch-list",
+    "t": "Bearing Failures: Root Causes &amp; Prevention",
+    "u": "posts/bearing-failure-modes-causes-prevention",
     "d": "2026-08-08"
   },
   {
-    "t": "RACI Matrix Builder",
-    "u": "pm/raci-matrix",
+    "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
+    "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
     "d": "2026-08-08"
   },
   {
-    "t": "Risk Register",
-    "u": "pm/risk-register",
+    "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
+    "u": "posts/bms-point-types-explained",
     "d": "2026-08-08"
   }
 ]
