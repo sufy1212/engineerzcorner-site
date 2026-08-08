@@ -1,5 +1,10 @@
 [
   {
+    "t": "Power Transformer, CT &amp; PT: Internal Construction",
+    "u": "posts/power-transformer-ct-pt-construction-explained",
+    "d": "2026-08-08"
+  },
+  {
     "t": "GPA / CGPA Converter",
     "u": "study-abroad/gpa-converter",
     "d": "2026-08-08"
@@ -42,11 +47,6 @@
   {
     "t": "Solar System Sizing: From Daily Load to Panel Count",
     "u": "posts/solar-system-sizing-load-to-panel-count",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Stakeholder Power-Interest Grid: Sorting Attention, Not Just People",
-    "u": "posts/stakeholder-power-interest-grid-explained",
     "d": "2026-08-08"
   }
 ]

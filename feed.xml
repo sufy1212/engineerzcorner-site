@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Power Transformer, CT &amp; PT: Internal Construction</title>
+    <link>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</guid>
+    <description>The internal construction of a power transformer, a current transformer (CT), and a potential transformer (PT/VT) — parts, typical ratings, accuracy classes, and a side-by-side comparison.</description>
+    <pubDate>Sat, 08 Aug 2026 13:12:37 GMT</pubDate>
+  </item>
+  <item>
     <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
     <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</guid>
     <description>How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
-    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
