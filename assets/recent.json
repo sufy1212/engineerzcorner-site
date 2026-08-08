@@ -1,5 +1,15 @@
 [
   {
+    "t": "Sensible + Latent Cooling Load",
+    "u": "hvac/cooling-load-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Sensible Heat / Supply Airflow",
+    "u": "hvac/sensible-heat-airflow-calculator",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
     "u": "civil/trench-safe-slope",
     "d": "2026-08-08"
@@ -37,16 +47,6 @@
   {
     "t": "Solar Payback &amp; ROI Calculator",
     "u": "solar/solar-payback-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Solar Sizing Calculator",
-    "u": "solar/solar-sizing-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Sensible Heat Load",
-    "u": "mechanical/heat-load-calculator",
     "d": "2026-08-08"
   }
 ]
