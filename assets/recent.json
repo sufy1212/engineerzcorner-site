@@ -1,5 +1,10 @@
 [
   {
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Charge Controller Sizing Calculator",
     "u": "solar/charge-controller-sizing-calculator",
     "d": "2026-08-08"
@@ -42,11 +47,6 @@
   {
     "t": "Pump / Fan Affinity Laws",
     "u": "mechanical/pump-fan-affinity-laws-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Shaft Diameter Sizing Calculator",
-    "u": "mechanical/shaft-diameter-calculator",
     "d": "2026-08-08"
   }
 ]
