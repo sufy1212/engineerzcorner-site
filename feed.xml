@@ -4,6 +4,69 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
+    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cut &amp; Fill Volume: How the Average End Area Method Actually Works</title>
+    <link>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</guid>
+    <description>How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Flame Retardant vs Flame Resistant Cables: Know the Difference</title>
+    <link>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables.html</link>
+    <guid>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables.html</guid>
+    <description>IEC 60332 vs IEC 60331 explained — why flame retardant cables stop fire from spreading while flame (fire) resistant cables keep circuits alive during a fire.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Grade &amp; Slope: Why Percent, Ratio and Degrees Aren&amp;#x27;t the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/grade-slope-percent-ratio-degrees-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/grade-slope-percent-ratio-degrees-explained.html</guid>
+    <description>How rise over run converts between percent grade, a ratio like 1:20, and an angle in degrees — and why mixing up the three is a common site-drawing mistake.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Manning&amp;#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity</title>
+    <link>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained.html</guid>
+    <description>How Manning&amp;#x27;s equation turns pipe slope, roughness and diameter into gravity flow capacity, why full-bore isn&amp;#x27;t peak capacity, and what the roughness coefficient actually represents.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows</title>
+    <link>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</guid>
+    <description>Why ground-mount and rooftop solar rows need a minimum gap, how the winter-solstice sun angle sets that gap, and the ground coverage ratio trade-off behind it.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
+    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
+    <description>How string inverters, microinverters and power optimizers actually differ in where MPPT happens, what a shaded panel costs you under each, and how to pick between them.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar System Sizing: From Daily Load to Panel Count</title>
+    <link>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</guid>
+    <description>How to go from a daily energy load in kWh to an array size in kW, why peak sun hours (not daylight hours) is the number that matters, and where the derating factors go.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
+    <title>Stakeholder Power-Interest Grid: Sorting Attention, Not Just People</title>
+    <link>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/stakeholder-power-interest-grid-explained.html</guid>
+    <description>How the power-interest grid sorts stakeholders into four engagement strategies, why the same person can move between quadrants, and why 'keep everyone happy' isn't a strategy.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
+  </item>
+  <item>
     <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
     <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
     <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
@@ -64,13 +127,6 @@
     <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
     <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors, ECBs, maintenance bypass switches and key interlocks — what each device does, how it differs, and where it's used.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
-    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
-    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
   <item>
@@ -155,62 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
     <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Chiller Capacity and COP: Where the Compressor's Work Actually Goes</title>
-    <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
-    <description>Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter</title>
-    <link>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</guid>
-    <description>How gross area and steel ratio combine into a short column&amp;#x27;s axial capacity, why codes cap reinforcement ratio at both ends, and when slenderness cuts that capacity down.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Concrete Volume Takeoff: From Cubic Meters to Bags of Cement</title>
-    <link>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</guid>
-    <description>How a concrete volume gets converted into cement, sand and aggregate quantities using mix ratios, why wastage factors are added, and what water-cement ratio does to the mix.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Conduit Fill: Why 40% Isn't an Arbitrary Number</title>
-    <link>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists.html</link>
-    <guid>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists.html</guid>
-    <description>What the conduit fill percentage check is actually protecting against &amp;mdash; pulling tension and jamming risk during installation.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</title>
-    <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
-    <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
-    <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Critical Path Method (CPM): The Chain That Sets Your Finish Date</title>
-    <link>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</guid>
-    <description>How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero room for delay, and how to read a network diagram.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cut &amp; Fill Volume: How the Average End Area Method Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</guid>
-    <description>How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>How to Select the Right DC Cable Size in PV Systems</title>
-    <link>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</link>
-    <guid>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</guid>
-    <description>String cable vs array cable in a PV system — the voltage-drop sizing formula with worked examples, plus the temperature, grouping and installation derating factors that adjust the final size.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>

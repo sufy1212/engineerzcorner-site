@@ -1,52 +1,52 @@
 [
   {
+    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+    "u": "posts/battery-soc-vs-dod-explained",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
+    "u": "posts/cut-fill-volume-average-end-area-method-explained",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
+    "u": "posts/flame-retardant-vs-flame-resistant-cables",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Grade &amp; Slope: Why Percent, Ratio and Degrees Aren&#x27;t the Same Number",
+    "u": "posts/grade-slope-percent-ratio-degrees-explained",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
+    "u": "posts/pipe-flow-capacity-mannings-equation-explained",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows",
+    "u": "posts/row-spacing-inter-row-shading-explained",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Solar System Sizing: From Daily Load to Panel Count",
+    "u": "posts/solar-system-sizing-load-to-panel-count",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Stakeholder Power-Interest Grid: Sorting Attention, Not Just People",
+    "u": "posts/stakeholder-power-interest-grid-explained",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Sensible + Latent Cooling Load",
     "u": "hvac/cooling-load-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Sensible Heat / Supply Airflow",
-    "u": "hvac/sensible-heat-airflow-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
-    "u": "civil/trench-safe-slope",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Relay / Contactor Coil Current & Duty Cycle",
-    "u": "automation/relay-coil-sizing",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Charge Controller Sizing Calculator",
-    "u": "solar/charge-controller-sizing-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
-    "u": "solar/dc-cable-voltage-drop-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Panel Tilt &amp; Orientation Calculator",
-    "u": "solar/panel-tilt-orientation-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "PV String Sizing &amp; Voltage Calculator",
-    "u": "solar/pv-string-sizing-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Row Spacing &amp; Self-Shading Calculator",
-    "u": "solar/row-spacing-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Solar Payback &amp; ROI Calculator",
-    "u": "solar/solar-payback-calculator",
     "d": "2026-08-08"
   }
 ]
