@@ -1,52 +1,52 @@
 [
   {
-    "t": "Bearing L10 Life",
-    "u": "mechanical/bearing-life-calculator",
+    "t": "Commercial Terms of Project",
+    "u": "pm/commercial-terms",
     "d": "2026-08-08"
   },
   {
-    "t": "Belt / Pulley Drive",
-    "u": "mechanical/belt-drive-calculator",
+    "t": "Earned Value Management",
+    "u": "pm/evm",
     "d": "2026-08-08"
   },
   {
-    "t": "Belt &amp; Pulley Drive Simulator",
-    "u": "mechanical/belt-drive-simulator",
+    "t": "PM Glossary",
+    "u": "pm/glossary",
     "d": "2026-08-08"
   },
   {
-    "t": "Fastener Torque Calculator",
-    "u": "mechanical/bolt-torque-calculator",
+    "t": "Incoterms",
+    "u": "pm/incoterms",
     "d": "2026-08-08"
   },
   {
-    "t": "Duct Sizing &amp; Air Changes",
-    "u": "mechanical/duct-sizing-calculator",
+    "t": "Meeting Minutes &amp; Action Items",
+    "u": "pm/meeting-minutes",
     "d": "2026-08-08"
   },
   {
-    "t": "Sensible Heat Load",
-    "u": "mechanical/heat-load-calculator",
+    "t": "Permit to Work / LOTO Checklist",
+    "u": "pm/permit-to-work",
     "d": "2026-08-08"
   },
   {
-    "t": "Heat Load / Cooling Simulator",
-    "u": "mechanical/heat-load-simulator",
+    "t": "PMP / PMBOK Reference",
+    "u": "pm/pmp-pmbok-reference",
     "d": "2026-08-08"
   },
   {
-    "t": "Pipe Flow &amp; Head Loss",
-    "u": "mechanical/pipe-flow-head-loss-calculator",
+    "t": "Punch List / Snag Tracker",
+    "u": "pm/punch-list",
     "d": "2026-08-08"
   },
   {
-    "t": "Pump / Fan Affinity Laws",
-    "u": "mechanical/pump-fan-affinity-laws-calculator",
+    "t": "RACI Matrix Builder",
+    "u": "pm/raci-matrix",
     "d": "2026-08-08"
   },
   {
-    "t": "Pump Power &amp; NPSH",
-    "u": "mechanical/pump-power-npsh-calculator",
+    "t": "Risk Register",
+    "u": "pm/risk-register",
     "d": "2026-08-08"
   }
 ]
