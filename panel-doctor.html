@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%2338BDF8'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Doctor — Automation & PLC Troubleshooting | Engineerz CorneR</title>
+<meta name="description" content="Panel Doctor: a visual automation and PLC troubleshooting game. Read the symptom, scan the control panel diagram, and click the failed component.">
+<link rel="canonical" href="https://www.engineerzcorner.com/panel-doctor">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Panel Doctor — Automation & PLC Troubleshooting Game | Engineerz CorneR">
+<meta property="og:description" content="Read the symptom, scan the control panel diagram, click the failed component. A visual automation & PLC diagnostic game.">
+<meta property="og:url" content="https://www.engineerzcorner.com/panel-doctor">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Panel Doctor — Automation & PLC Troubleshooting Game | Engineerz CorneR">
+<meta name="twitter:description" content="Read the symptom, scan the control panel diagram, click the failed component.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="panel-doctor.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
+<link rel="stylesheet" href="assets/sidebars.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+    {"@type":"ListItem","position":2,"name":"Panel Doctor","item":"https://www.engineerzcorner.com/panel-doctor"}
+  ]
+}
+</script>
+</head>
+<body>
+<link rel="stylesheet" href="assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="./">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Panel Doctor</span></div></nav>
+
+
+<nav class="pd-nav">
+  <span class="pd-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="pd-back" href="games">← All games</a>
+</nav>
+
+<div class="pd-arena">
+<div class="pd-arena-grid"></div>
+<div class="wrap">
+
+  <div class="pd-hero">
+    <div class="pd-hero-inner">
+      <div class="pd-eyebrow"><span class="pd-eyebrow-dot"></span> Automation troubleshooting game</div>
+      <h1 class="pd-title">Panel <span class="glow">Doctor</span></h1>
+      <p class="pd-sub">A symptom, a control panel diagram, and one failed component hiding in it. Welded contactors, dead I/O channels, drifted timers, seized VFD fans — read the fault, scan the panel, click the culprit.</p>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div class="pd-card" id="startScreen">
+    <div class="pd-start-stats">
+      <span class="pd-chip">Best score: <b id="bestVal">0</b></span>
+      <span class="pd-chip">26 scenarios</span>
+      <span class="pd-chip">3 lives</span>
+    </div>
+    <ul class="pd-how">
+      <li><span class="pd-how-num">1</span><span>You get a real <b>symptom</b> (e.g. "output stays energized even after the stop command is issued") and a small diagram of that control loop.</span></li>
+      <li><span class="pd-how-num">2</span><span>One component in the diagram is drawn <b>failed</b> — welded, open, drifted, seized, or shorted. Click it.</span></li>
+      <li><span class="pd-how-num">3</span><span>Beat the clock for a time bonus. A wrong click or a timeout costs a life — three strikes ends the run.</span></li>
+    </ul>
+    <button class="pd-btn" id="startBtn">Start run</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="pd-card">
+      <div class="pd-hud">
+        <div class="pd-hud-group">
+          <div class="pd-hud-item">Score <b id="scoreVal">0</b></div>
+          <div class="pd-hud-item">Combo <b id="comboVal">×1</b></div>
+        </div>
+        <div class="pd-hud-item pd-hearts" id="heartsRow"></div>
+      </div>
+      <div class="pd-timerbar-track"><div class="pd-timerbar-fill" id="timerFill"></div></div>
+
+      <span class="pd-symptom-tag" id="roundTag">Symptom</span>
+      <p class="pd-symptom" id="roundSymptom">—</p>
+      <p class="pd-instr">Tap the component in the diagram that's causing it.</p>
+
+      <div class="pd-diagram" id="diagramArea"></div>
+
+      <div class="pd-footrow">
+        <button class="pd-hint-btn" id="hintBtn">💡 Hint (−50 pts)</button>
+        <span class="pd-hud-item">Panels fixed <b id="roundsVal">0</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div class="hidden" id="overScreen">
+    <div class="pd-card">
+      <div class="pd-over-title">Panel down</div>
+      <div class="pd-over-score" id="finalScore">0</div>
+      <div class="pd-over-grid">
+        <span class="pd-chip">Solved <b id="finalRounds">0</b></span>
+        <span class="pd-chip">Best <b id="finalBest">0</b></span>
+      </div>
+      <button class="pd-btn" id="againBtn">Play again</button>
+      <div style="height:10px;"></div>
+      <button class="ecs-share-btn ecs-dark" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/></svg>Share result</button>
+      <div style="height:10px;"></div>
+      <button class="pd-btn ghost" id="backBtn">Back to games</button>
+    </div>
+  </div>
+
+  <div class="reftable-section">
+    <h2>About Panel Doctor</h2>
+    <p class="reftable-note">Each round hands you a real-world symptom — output stays energized after the stop command, say — plus a small diagram of that control loop. One component in it is drawn as failed: welded contacts, an open coil, a drifted timer, a seized VFD fan, or a shorted output. Diagnosing the right component from the symptom is the entire challenge.</p>
+    <p class="reftable-note">The 26 scenarios cover PLC I/O, motor control, safety circuits, drives, and field devices rather than one repeated panel, so the same complaint can trace back to a different failed component depending on the equipment shown. It's meant to sharpen fault-to-symptom intuition, not replace field diagnostics.</p>
+  </div>
+
+  <div class="pd-footer">More reference material lives in the <a href="./">discipline hubs</a>.</div>
+
+</div>
+</div>
+
+<div class="pd-toast" id="toast"></div>
+
+<script src="panel-doctor.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtn"), function () {
+    var score = document.getElementById("finalScore").textContent;
+    var rounds = document.getElementById("finalRounds").textContent;
+    return {
+      title: "Panel Doctor — Engineerz CorneR",
+      text: "I scored " + score + " pts and fixed " + rounds + " panels in Panel Doctor \u26A1 Can you beat me?",
+      url: "https://www.engineerzcorner.com/panel-doctor"
+    };
+  });
+});
+</script>
+
+
+<a href="./" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="about">About</a> &nbsp;·&nbsp; <a href="contact">Contact</a> &nbsp;·&nbsp; <a href="privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
