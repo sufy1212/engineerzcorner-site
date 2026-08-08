@@ -1,5 +1,35 @@
 [
   {
+    "t": "Breaker / Fuse Sizing Calculator",
+    "u": "electrical/breaker-fuse-sizing-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Cable Derating Factor Calculator",
+    "u": "electrical/cable-derating-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Cable Sizing",
+    "u": "electrical/cable-sizing-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Capacitor Bank Sizing Calculator",
+    "u": "electrical/capacitor-bank-sizing",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Load / Demand Calculator",
+    "u": "electrical/load-demand-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Three-Phase Power &amp; Current Calculator",
+    "u": "electrical/three-phase-power-calculator",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Application Timeline Planner",
     "u": "study-abroad/application-timeline-planner",
     "d": "2026-08-08"
@@ -17,36 +47,6 @@
   {
     "t": "Education Loan EMI Calculator",
     "u": "study-abroad/education-loan-emi-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "GPA / CGPA Converter",
-    "u": "study-abroad/gpa-converter",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Proof of Funds Calculator",
-    "u": "study-abroad/proof-of-funds-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Score Calculator",
-    "u": "study-abroad/score-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "SOP / Essay Word Checker",
-    "u": "study-abroad/sop-word-checker",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "University Fee Comparison",
-    "u": "study-abroad/university-fee-comparison",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Visa Points Calculator",
-    "u": "study-abroad/visa-points-calculator",
     "d": "2026-08-08"
   }
 ]
