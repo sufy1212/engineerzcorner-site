@@ -1,6 +1,20 @@
 /mechanical/mechanical.html /mechanical/notes.html 301
 /electrical/engineering-guides.html /electrical/guides.html 301
 
+# These two tool pages are standalone .html files, not folders with their
+# own index.html, so there's no real resource at the trailing-slash path.
+# Google discovered/crawled a trailing-slash variant of each (source
+# unclear — no internal link on the site uses these) and hit a redirect
+# error bouncing against Cloudflare's own auto-canonicalization. Forcing
+# the trailing-slash request straight to the real clean URL fixes it.
+/general/unit-converter/ /general/unit-converter 301
+/electrical/voltage-drop-calculator/ /electrical/voltage-drop-calculator 301
+
+# Google also crawled a bare "/s" with no matching page anywhere on the
+# site (not linked from any page here — likely a stray external
+# reference). Redirect it home instead of letting it 404.
+/s / 301
+
 # Note: no rules needed to collapse /dir, /dir/, /page.html onto canonical
 # URLs — Cloudflare Pages already does that automatically at the platform
 # level (/page.html -> /page, /dir/index.html -> /dir/). Canonical tags,
