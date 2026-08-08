@@ -1,5 +1,25 @@
 [
   {
+    "t": "Air Changes per Hour",
+    "u": "hvac/air-changes-per-hour-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Sensible + Latent Cooling Load",
+    "u": "hvac/cooling-load-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Duct Sizing &amp; Air Changes",
+    "u": "hvac/duct-sizing-calculator",
+    "d": "2026-08-08"
+  },
+  {
+    "t": "Sensible Heat / Supply Airflow",
+    "u": "hvac/sensible-heat-airflow-calculator",
+    "d": "2026-08-08"
+  },
+  {
     "t": "Breaker / Fuse Sizing Calculator",
     "u": "electrical/breaker-fuse-sizing-calculator",
     "d": "2026-08-08"
@@ -27,26 +47,6 @@
   {
     "t": "Three-Phase Power &amp; Current Calculator",
     "u": "electrical/three-phase-power-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Application Timeline Planner",
-    "u": "study-abroad/application-timeline-planner",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Cost of Living Calculator",
-    "u": "study-abroad/cost-of-living-calculator",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Currency Converter",
-    "u": "study-abroad/currency-converter",
-    "d": "2026-08-08"
-  },
-  {
-    "t": "Education Loan EMI Calculator",
-    "u": "study-abroad/education-loan-emi-calculator",
     "d": "2026-08-08"
   }
 ]
