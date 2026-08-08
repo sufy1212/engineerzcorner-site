@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers</title>
+    <link>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</guid>
+    <description>Preliminary-design thumb rules for cooling load, airflow, fan and pump power, chilled water flow, chiller capacity, cooling tower sizing, and pipe sizing — with the formula behind each one.</description>
+    <pubDate>Sat, 08 Aug 2026 09:09:54 GMT</pubDate>
+  </item>
+  <item>
     <title>Password Entropy Explained: What Actually Makes a Password Hard to Crack</title>
     <link>https://www.engineerzcorner.com/posts/password-entropy-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/password-entropy-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
     <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors, ECBs, maintenance bypass switches and key interlocks — what each device does, how it differs, and where it's used.</description>
-    <pubDate>Wed, 05 Aug 2026 19:59:08 GMT</pubDate>
-  </item>
-  <item>
-    <title>MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</title>
-    <link>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</guid>
-    <description>MCB, MCCB, ACB, VCB, SF6 breakers, RCCB, RCBO, ELCB, isolators, contactors, relays, fuses, SPDs and busbars — what each device does, how it differs, and where it's used.</description>
     <pubDate>Wed, 05 Aug 2026 19:59:08 GMT</pubDate>
   </item>
 </channel></rss>
