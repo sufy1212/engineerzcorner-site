@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Commissioning vs Commissioning: What's the Difference | Engineerz CorneR</title>
+<meta name="description" content="Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pre-Commissioning vs Commissioning: What's the Difference">
+<meta property="og:description" content="Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pre-Commissioning vs Commissioning: What's the Difference">
+<meta name="twitter:description" content="Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pre-commissioning-vs-commissioning-electrical-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Pre-Commissioning vs Commissioning: What's the Difference", "item": "https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pre-Commissioning vs Commissioning: What's the Difference",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09",
+  "description": "Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.",
+  "url": "https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pre-Commissioning vs Commissioning: What's the Difference</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Testing &amp; Commissioning</span>
+    <h1>Pre-Commissioning vs Commissioning: What's the Difference</h1>
+    <p class="hero-sub">Both words get used loosely on site, but they check different things at different points in a project. One happens with the system dead. The other happens with it live &mdash; and you don't get to the second without passing the first.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Commissioning &amp; Testing</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <line x1="380" y1="20" x2="380" y2="150" stroke="#1E3A5C" stroke-width="1" stroke-dasharray="3 5"/>
+      <g transform="translate(140,58)">
+        <rect x="-42" y="0" width="84" height="66" rx="5" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.6"/>
+        <line x1="-30" y1="14" x2="18" y2="14" stroke="#7e97ac" stroke-width="1.2"/>
+        <line x1="-30" y1="26" x2="26" y2="26" stroke="#7e97ac" stroke-width="1.2"/>
+        <line x1="-30" y1="38" x2="10" y2="38" stroke="#7e97ac" stroke-width="1.2"/>
+        <path d="M-30 50 L-16 62 L30 16" fill="none" stroke="#5FD3E3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="80" y="24" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6" letter-spacing="1">DE-ENERGIZED</text>
+      <g transform="translate(620,56)">
+        <circle cx="0" cy="0" r="38" fill="none" stroke="#F2B84B" stroke-width="1.6"/>
+        <path d="M-10 -20 L8 -20 L-2 -2 L14 -2 L-14 26 L-6 2 L-20 2 Z" fill="#F2B84B"/>
+      </g>
+      <text x="565" y="24" font-family="IBM Plex Mono" font-size="10" fill="#F2B84B" letter-spacing="1">ENERGIZED</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Pre-commissioning happens before energization &mdash; it confirms the installation is built correctly and safe to power on.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Commissioning happens after energization &mdash; it confirms the system performs as designed under real operating conditions.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Pre-commissioning is offline: visual checks, IR testing, continuity, torque. Commissioning is live: functional, protection, load and performance testing.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Skipping a pre-commissioning check doesn't just risk a failed test later &mdash; it risks energizing a fault that was never caught.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two phases, one switch between them</h2>
+    <p>Pre-commissioning and commissioning get treated as interchangeable words on a lot of sites, but they sit on opposite sides of a single, very specific moment: the point where a system is first energized. Everything before that point &mdash; while the panel, cable, or equipment is still dead &mdash; is pre-commissioning. Everything after it &mdash; once power is actually applied &mdash; is commissioning.</p>
+    <p>That distinction isn't just semantics. Pre-commissioning exists to catch a fault before it can hurt anyone or anything, using tests that don't require the system to be live. Commissioning exists to prove the system does what it was designed to do, and by definition that can only be checked once it's running. Confusing the two &mdash; or worse, skipping the first to get to the second faster &mdash; is how a wiring fault ends up discovered by a breaker trip instead of a Megger.</p>
+
+    <h2><span class="h2-dot"></span>Pre-commissioning: before power is applied</h2>
+    <p>Pre-commissioning is a readiness and safety exercise. It checks that what was actually installed matches what was designed and specified, that every connection is sound, and that nothing about the installation itself would make energizing it dangerous.</p>
+
+    <div class="vs-wrap">
+      <div class="vs-col pre">
+        <div class="vs-col-head">Pre-Commissioning<div class="vs-col-sub">Before energization</div></div>
+        <div class="vs-list">
+          <div class="vs-item"><span class="vs-ico">1</span><div><b>Visual Inspection</b><span>Equipment, wiring, connections, labeling and general workmanship checked against drawings.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">2</span><div><b>Insulation Resistance Test</b><span>Megger test confirming cable and equipment insulation hasn't been damaged or contaminated.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">3</span><div><b>Continuity Test</b><span>Continuity of cables, circuits and the earthing system verified end to end.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">4</span><div><b>Tightening of Terminals</b><span>Every electrical connection torqued to the value specified for that terminal and cable size.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">5</span><div><b>Earthing Check</b><span>Earth continuity confirmed and earthing resistance verified within permissible limits.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">6</span><div><b>Mechanical Checks</b><span>Breakers, switches and relays operated manually to confirm free, correct mechanical movement.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">7</span><div><b>Cleaning &amp; Housekeeping</b><span>Panel and site cleared of debris, tools and foreign material before the panel is closed up.</span></div></div>
+        </div>
+      </div>
+      <div class="vs-col comm">
+        <div class="vs-col-head">Commissioning<div class="vs-col-sub">After energization</div></div>
+        <div class="vs-list">
+          <div class="vs-item"><span class="vs-ico">1</span><div><b>Energization</b><span>Power applied to the system in the sequence set out in the energization procedure.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">2</span><div><b>Functional Testing</b><span>Operation of every piece of equipment and control function verified while live.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">3</span><div><b>Protection &amp; Relay Testing</b><span>Relays and protection devices tested to confirm they trip at the right setting, in the right time.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">4</span><div><b>Motor Operation Check</b><span>Rotation direction, running current, vibration and general performance checked under power.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">5</span><div><b>Interlock Testing</b><span>Interlocks and safety mechanisms verified to actually prevent the unsafe states they're designed for.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">6</span><div><b>Load Testing</b><span>Load applied to the system to verify stability and performance away from a no-load condition.</span></div></div>
+          <div class="vs-item"><span class="vs-ico">7</span><div><b>Performance Verification</b><span>Final confirmation the system meets the design criteria and the client's acceptance requirements.</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Side by side</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Parameter</th><th>Pre-Commissioning</th><th>Commissioning</th></tr>
+        <tr><td>Timing</td><td>Before energization</td><td>After energization</td></tr>
+        <tr><td>System state</td><td>De-energized, isolated</td><td>Live, under power</td></tr>
+        <tr><td>Primary focus</td><td>Readiness, safety, build quality</td><td>Performance, functionality, reliability</td></tr>
+        <tr><td>Typical tools</td><td>Megger, multimeter, torque wrench</td><td>Load bank, relay test set, thermal camera</td></tr>
+        <tr><td>Failure caught</td><td>Wiring, insulation, torque, earthing faults</td><td>Control logic, protection, performance faults</td></tr>
+        <tr><td>Typically witnessed by</td><td>Installation contractor, QA/QC</td><td>Client, consultant, end user</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why the order can't be reversed</h2>
+    <p>Commissioning tests only mean something if the thing being tested was already confirmed sound. Running a load test on a panel that never had its terminals torqued or its insulation Meggered isn't thorough commissioning &mdash; it's an uncontrolled way of finding a pre-commissioning defect, except now the system is energized when it happens. That's the real reason the sequence is fixed: pre-commissioning removes the failure modes that shouldn't exist before the system is ever put under load, so that whatever commissioning finds is genuinely a performance question, not a build-quality one.</p>
+    <p>This is also where a Factory Acceptance Test (FAT) and Site Acceptance Test (SAT) fit in. A FAT is pre-commissioning done at the factory, against the equipment alone, before it ever ships. Pre-commissioning on site repeats and extends that verification after installation and cable termination &mdash; catching anything transit, handling, or field wiring introduced. Only once that passes does commissioning, and eventually a SAT, take the system live.</p>
+
+    <div class="keydiff-strip">
+      <div class="keydiff-box pre"><b>Pre-Commissioning</b><span>Focuses on readiness, safety and verification before power is ever applied.</span></div>
+      <div class="keydiff-box comm"><b>Commissioning</b><span>Focuses on performance, functionality and reliability once the system is live.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Pre-commissioning is everything checked while the system is dead; commissioning is everything checked once it's live.</span></li>
+      <li><span class="tk-check">✓</span><span>Pre-commissioning protects people and equipment from an undiscovered installation fault at the moment of energization.</span></li>
+      <li><span class="tk-check">✓</span><span>Commissioning can only validate real design intent &mdash; functional response, protection, load behavior &mdash; once power is actually flowing.</span></li>
+      <li><span class="tk-check">✓</span><span>The sequence is fixed for a reason: skipping pre-commissioning turns a safe offline check into an uncontrolled live one.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Pre-Commissioning%20vs%20Commissioning%3A%20What%27s%20the%20Difference%20%E2%80%94%20Pre-commissioning%20happens%20before%20energization%3B%20commissioning%20happens%20after.%20The%20checks%20each%20phase%20actually%20covers%2C%20and%20why%20the%20order%20matters.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpre-commissioning-vs-commissioning-electrical-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpre-commissioning-vs-commissioning-electrical-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Pre-Commissioning%20vs%20Commissioning%3A%20What%27s%20the%20Difference&text=Pre-commissioning%20happens%20before%20energization%3B%20commissioning%20happens%20after.%20The%20checks%20each%20phase%20actually%20covers%2C%20and%20why%20the%20order%20matters.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpre-commissioning-vs-commissioning-electrical-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Pre-Commissioning%20vs%20Commissioning%3A%20What%27s%20the%20Difference&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APre-Commissioning%20vs%20Commissioning%3A%20What%27s%20the%20Difference%0APre-commissioning%20happens%20before%20energization%3B%20commissioning%20happens%20after.%20The%20checks%20each%20phase%20actually%20covers%2C%20and%20why%20the%20order%20matters.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpre-commissioning-vs-commissioning-electrical-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the tool</p>
+    <ul><li><a href="../electrical/earthing-grid-resistance">Earthing Grid Resistance Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="electrical-panel-fat-checklist">Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</a></li><li><a href="permit-to-work-loto-explained">Permit to Work &amp; LOTO Explained</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="electrical-panel-fat-checklist">Read: Electrical Panel FAT Checklist &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
