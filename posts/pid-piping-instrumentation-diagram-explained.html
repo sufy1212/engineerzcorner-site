@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23B5502D'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P&amp;ID (Piping &amp; Instrumentation Diagram) Explained | Engineerz CorneR</title>
+<meta name="description" content="How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="P&amp;ID (Piping &amp; Instrumentation Diagram) Explained: The Language of Process Plants">
+<meta property="og:description" content="How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="P&amp;ID (Piping &amp; Instrumentation Diagram) Explained: The Language of Process Plants">
+<meta name="twitter:description" content="Equipment, piping, valves, instrumentation tags, and signal lines — how to actually read a P&amp;ID.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pid-piping-instrumentation-diagram-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "P&ID (Piping & Instrumentation Diagram) Explained: The Language of Process Plants",
+      "item": "https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "P&ID (Piping & Instrumentation Diagram) Explained: The Language of Process Plants",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "description": "How to actually read a P&ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&ID differs from a PFD.",
+  "url": "https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; P&amp;IDs</span>
+    <h1>P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</h1>
+    <p class="hero-sub">A P&amp;ID is the drawing every process plant actually runs on &mdash; more detailed than a flow diagram, less abstract than a spec sheet. Here's how to read one: equipment, piping, valves, instrument tags, and the signal lines connecting them.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; P&amp;IDs</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 175" xmlns="http://www.w3.org/2000/svg">
+      <rect x="80" y="60" width="34" height="55" rx="3" fill="none" stroke="#8FB0B6" stroke-width="2"/>
+      <line x1="97" y1="60" x2="97" y2="46" stroke="#8FB0B6" stroke-width="2"/>
+      <line x1="114" y1="90" x2="150" y2="90" stroke="#8FB0B6" stroke-width="2" marker-end="url(#pidarrow)"/>
+      <circle cx="150" cy="90" r="11" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+      <text x="150" y="94" font-family="IBM Plex Mono" font-size="8" fill="#5FD3E3" text-anchor="middle">FT</text>
+      <line x1="161" y1="90" x2="200" y2="90" stroke="#8FB0B6" stroke-width="2" marker-end="url(#pidarrow)"/>
+      <rect x="200" y="70" width="46" height="40" rx="4" fill="none" stroke="#8FB0B6" stroke-width="2"/>
+      <line x1="203" y1="80" x2="243" y2="80" stroke="#8FB0B6" stroke-width="1.4"/>
+      <line x1="203" y1="90" x2="243" y2="90" stroke="#8FB0B6" stroke-width="1.4"/>
+      <line x1="203" y1="100" x2="243" y2="100" stroke="#8FB0B6" stroke-width="1.4"/>
+      <line x1="246" y1="90" x2="290" y2="90" stroke="#8FB0B6" stroke-width="2" marker-end="url(#pidarrow)"/>
+      <circle cx="290" cy="90" r="11" fill="none" stroke="#D9782E" stroke-width="2"/>
+      <text x="290" y="94" font-family="IBM Plex Mono" font-size="8" fill="#D9782E" text-anchor="middle">TT</text>
+      <line x1="301" y1="90" x2="335" y2="90" stroke="#8FB0B6" stroke-width="2" marker-end="url(#pidarrow)"/>
+      <path d="M335 78 L360 90 L335 102 Z" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+      <circle cx="290" cy="55" r="10" fill="none" stroke="#B5502D" stroke-width="1.6"/>
+      <text x="290" y="59" font-family="IBM Plex Mono" font-size="7.5" fill="#B5502D" text-anchor="middle">TC</text>
+      <line x1="290" y1="65" x2="290" y2="79" stroke="#B5502D" stroke-width="1.4" stroke-dasharray="3 2"/>
+      <line x1="290" y1="55" x2="360" y2="55" stroke="#B5502D" stroke-width="1.4" stroke-dasharray="3 2"/>
+      <line x1="360" y1="55" x2="360" y2="86" stroke="#B5502D" stroke-width="1.4" stroke-dasharray="3 2" marker-end="url(#pidarrowdash)"/>
+      <defs>
+        <marker id="pidarrow" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#8FB0B6"/></marker>
+        <marker id="pidarrowdash" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#B5502D"/></marker>
+      </defs>
+      <text x="97" y="132" font-family="IBM Plex Mono" font-size="8.5" fill="#7e97ac" text-anchor="middle">Vessel</text>
+      <text x="150" y="115" font-family="IBM Plex Mono" font-size="8.5" fill="#7e97ac" text-anchor="middle">Instrument</text>
+      <text x="223" y="122" font-family="IBM Plex Mono" font-size="8.5" fill="#7e97ac" text-anchor="middle">Exchanger</text>
+      <text x="360" y="122" font-family="IBM Plex Mono" font-size="8.5" fill="#7e97ac" text-anchor="middle">Control valve</text>
+      <text x="325" y="45" font-family="IBM Plex Mono" font-size="8.5" fill="#B5502D" text-anchor="middle">Control loop (signal, not pipe)</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A P&amp;ID isn't a picture of the plant &mdash; it's a wiring diagram for both fluid and information, showing exactly what connects to what and how it's controlled.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Every instrument gets a tag built from a fixed code &mdash; the first letters say what it measures, the number says which loop it belongs to.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Line and instrument symbols follow ISA conventions, so a solid line is process piping and a dashed line is a signal &mdash; never the reverse.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A PFD shows the big picture of a process; a P&amp;ID shows everything needed to actually build, operate, and troubleshoot it.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>More detail than a flow diagram, less than a spec sheet</h2>
+    <p>A Process Flow Diagram tells you what a process does &mdash; major equipment, main streams, overall material balance. A P&amp;ID tells you how it's actually built and controlled: every vessel, every line size and material, every valve, every instrument, and every signal connecting them into control loops. It's the drawing operators, maintenance techs, and engineers all reference on the same terms, which is exactly why it has to be unambiguous. A missing valve or a mislabeled signal line on a P&amp;ID isn't a cosmetic error &mdash; it's a drawing that no longer matches the plant.</p>
+    <p>Reading one comes down to three layers stacked on top of each other: the <b>equipment</b> fluid actually moves through, the <b>piping and valves</b> that route and isolate it, and the <b>instrumentation and signal lines</b> that measure and control it. Once those three layers are separated in your head, even a dense P&amp;ID stops being intimidating.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="34" y="20" width="32" height="52" rx="4" fill="none" stroke="#3E8C97" stroke-width="2.4"/>
+        <line x1="50" y1="20" x2="50" y2="10" stroke="#3E8C97" stroke-width="2.2"/>
+        <circle cx="50" cy="76" r="4" fill="#122845" stroke="#5FD3E3" stroke-width="1.4"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>Equipment</h3>
+        <ul class="fm-causes">
+          <li>Vessels, tanks, pumps, heat exchangers, reactors &mdash; drawn roughly to shape, each with its own equipment tag (like T-101 or P-101)</li>
+          <li>Shown with real nozzles and connections, not just a symbol &mdash; every inlet, outlet, vent, and drain the equipment actually has</li>
+          <li>Tag prefixes are consistent across a project: T for tanks/vessels, P for pumps, E for exchangers, C for compressors, and so on</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="16" y1="50" x2="84" y2="50" stroke="#8FB0B6" stroke-width="2.4" marker-end="url(#pidhero1)"/>
+        <defs><marker id="pidhero1" markerWidth="6" markerHeight="6" refX="4" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4 Z" fill="#8FB0B6"/></marker></defs>
+        <path d="M40 40 L60 40 L50 60 Z" fill="none" stroke="#D9782E" stroke-width="2.2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Piping</h3>
+        <ul class="fm-causes">
+          <li>Solid lines are the process itself &mdash; the actual fluid path, drawn with an arrow showing flow direction</li>
+          <li>A line number strung along the pipe (e.g. 2&quot;-CS-150#) encodes size, material, and pressure class in one code</li>
+          <li>Utility lines &mdash; steam, cooling water, instrument air &mdash; are drawn the same way but distinguished by their own tag prefix, since they're still process piping, just not the main product stream</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 40 L70 40 L50 65 Z M50 65 L30 60 M50 65 L70 60" fill="none" stroke="#D9782E" stroke-width="2.2"/>
+        <line x1="16" y1="50" x2="30" y2="50" stroke="#8FB0B6" stroke-width="2"/>
+        <line x1="70" y1="50" x2="84" y2="50" stroke="#8FB0B6" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>Valves</h3>
+        <ul class="fm-causes">
+          <li>Manual valves (bowtie symbol) isolate, throttle by hand, or protect &mdash; gate, globe, ball, and check valves each get their own symbol</li>
+          <li>Control valves add an actuator symbol on top of the valve body, since they're driven by a signal, not a handwheel</li>
+          <li>Relief and safety valves get a distinct symbol too &mdash; they're the last line of defense against overpressure, not a routine isolation point</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="20" fill="none" stroke="#5FD3E3" stroke-width="2.4"/>
+        <text x="50" y="54" font-family="IBM Plex Mono" font-size="14" fill="#5FD3E3" text-anchor="middle">PT</text>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Instrumentation</h3>
+        <ul class="fm-causes">
+          <li>Circles are the standard ISA symbol for a field instrument &mdash; a bare circle is local, a circle in a box is behind a panel or in the control system</li>
+          <li>Letters inside identify what it does: PT (pressure transmitter), FT (flow transmitter), TT (temperature transmitter), LT (level transmitter), and their controller/indicator counterparts (PC, FC, TC, LC)</li>
+          <li>Final control elements &mdash; usually a control valve &mdash; carry the loop's number too, tying the whole measure-decide-act chain together visually</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="14" y1="50" x2="86" y2="50" stroke="#B5502D" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#pidhero2)"/>
+        <defs><marker id="pidhero2" markerWidth="6" markerHeight="6" refX="4" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4 Z" fill="#B5502D"/></marker></defs>
+      </svg>
+      <div>
+        <h3><span class="fm-num">5</span>Signal Lines</h3>
+        <ul class="fm-causes">
+          <li>Dashed lines carry information, not fluid &mdash; electronic signals, pneumatic tubing, or a data link between instruments</li>
+          <li>Following a dashed line from a transmitter to a controller to a control valve traces one complete control loop, end to end</li>
+          <li>Mixing up a signal line for a process line (or the reverse) is one of the fastest ways to misread a P&amp;ID &mdash; the line style is the whole distinction</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>How an instrument tag is built</h2>
+    <p>Instrument tags aren't arbitrary labels &mdash; they follow a fixed ISA structure so anyone trained on the standard can read one cold, on any project. Take PT-101: the letters come first and identify function, then a number identifies which system or unit the loop belongs to, then a sequence number tells loops in that unit apart. PT-101 and PT-102 are both pressure transmitters in the same unit, just different loops.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Prefix</th><th>Function</th></tr>
+        <tr><td>PT / PI</td><td>Pressure transmitter / indicator</td></tr>
+        <tr><td>TT / TI</td><td>Temperature transmitter / indicator</td></tr>
+        <tr><td>FT / FI</td><td>Flow transmitter / indicator</td></tr>
+        <tr><td>LT / LI</td><td>Level transmitter / indicator</td></tr>
+        <tr><td>PC / FC / TC / LC</td><td>Controller for the matching variable</td></tr>
+        <tr><td>CV</td><td>Control valve (the loop's final control element)</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Tracing a control loop on the page</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">A transmitter (say FT-101) measures a process variable &mdash; flow, in this case &mdash; and turns it into a signal.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">A dashed signal line carries that measurement to the DCS or PLC, drawn as a shared control-system block above the loop.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">The control logic compares the measurement to a setpoint and calculates an output &mdash; still inside that same dashed-line world.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">Another dashed line carries the output signal down to the final control element, usually a control valve tagged with the same loop number.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">The valve acts on the actual process line &mdash; the solid pipe &mdash; closing the loop between measurement and action.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>PFD vs. P&amp;ID</h2>
+    <p>These two get confused constantly because they cover the same process, just at different resolutions. A PFD is drawn early, to establish the overall process and material balance; a P&amp;ID is drawn (and continually updated) for construction, operation, and troubleshooting, and carries far more detail on every line.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>PFD</th><th>P&amp;ID</th></tr>
+        <tr><td>Major equipment and main streams only</td><td>Every piece of equipment, every line, every valve</td></tr>
+        <tr><td>No instrumentation or control loops shown</td><td>Full instrumentation, tags, and control loops shown</td></tr>
+        <tr><td>Used for early process design and mass balance</td><td>Used for construction, operation, and troubleshooting</td></tr>
+        <tr><td>Rarely revised once a process is set</td><td>A living document, updated through the plant's life</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why this level of detail earns its keep</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="16" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <text x="30" y="34" font-family="IBM Plex Mono" font-size="11" fill="#5FD3E3" text-anchor="middle">PT</text>
+        </svg>
+        <b>Standardized Tags</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <line x1="12" y1="30" x2="48" y2="30" stroke="#B5502D" stroke-width="2" stroke-dasharray="5 3"/>
+        </svg>
+        <b>Traceable Loops</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 30 h24" stroke="#D9782E" stroke-width="2" marker-end="url(#pidmon1)"/>
+          <defs><marker id="pidmon1" markerWidth="6" markerHeight="6" refX="4" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4 Z" fill="#D9782E"/></marker></defs>
+        </svg>
+        <b>One Shared Reference</b>
+      </div>
+    </div>
+    <p>Because every symbol and tag follows the same conventions project to project, a P&amp;ID transfers knowledge across teams that never talk to each other directly &mdash; a design engineer, a construction crew, and an operator years later can all read the same drawing the same way. That's the whole point of standardizing something as basic-looking as a circle with two letters in it: it removes ambiguity from a document that safety, operations, and maintenance all depend on being exactly right.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Separate a P&amp;ID into three layers &mdash; equipment, piping/valves, instrumentation/signals &mdash; and dense drawings stop being intimidating.</span></li>
+      <li><span class="tk-check">✓</span><span>Instrument tags follow a fixed structure: function letters, then unit number, then loop sequence &mdash; not arbitrary labels.</span></li>
+      <li><span class="tk-check">✓</span><span>Solid lines are process piping; dashed lines are signals. That distinction alone resolves most misreads.</span></li>
+      <li><span class="tk-check">✓</span><span>A PFD shows what a process does; a P&amp;ID shows everything needed to build, operate, and troubleshoot it.</span></li>
+      <li><span class="tk-check">✓</span><span>A P&amp;ID is a living document &mdash; it gets revised through the life of the plant, not just drawn once at design time.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=P%26ID%20(Piping%20%26%20Instrumentation%20Diagram)%20Explained&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpid-piping-instrumentation-diagram-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpid-piping-instrumentation-diagram-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=P%26ID%20(Piping%20%26%20Instrumentation%20Diagram)%20Explained&text=Equipment%2C%20piping%2C%20valves%2C%20instrumentation%20tags%2C%20and%20signal%20lines%20%E2%80%94%20how%20to%20actually%20read%20a%20P%26ID.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpid-piping-instrumentation-diagram-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=P%26ID%20(Piping%20%26%20Instrumentation%20Diagram)%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AP%26ID%20(Piping%20%26%20Instrumentation%20Diagram)%20Explained%0AHow%20to%20actually%20read%20a%20P%26ID%2C%20component%20by%20component.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpid-piping-instrumentation-diagram-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the reference tool</p>
+    <ul><li><a href="../process/symbols">Process Equipment Symbol Library &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="control-valve-components-explained">Control Valve Components Explained: From Signal to Throttled Flow</a></li><li><a href="4-20ma-current-loop-basics">4&ndash;20mA Current Loop Basics</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/symbols">Browse the Symbol Library &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
