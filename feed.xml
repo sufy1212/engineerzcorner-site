@@ -4,17 +4,31 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
-    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
+    <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
+    <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
+    <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units.</description>
+    <pubDate>Sun, 09 Aug 2026 19:13:53 GMT</pubDate>
   </item>
   <item>
     <title>Control Valve Components Explained</title>
     <link>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</guid>
     <description>What every part of a control valve actually does — body, trim (plug &amp; seat), stem, packing, bonnet, actuator, and positioner — component by component, in the order a signal turns into a throttled flow.</description>
+    <pubDate>Sun, 09 Aug 2026 19:13:53 GMT</pubDate>
+  </item>
+  <item>
+    <title>P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</guid>
+    <description>How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.</description>
+    <pubDate>Sun, 09 Aug 2026 19:13:53 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
+    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
+    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
     <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
   </item>
   <item>
@@ -123,13 +137,6 @@
     <pubDate>Sat, 08 Aug 2026 10:23:58 GMT</pubDate>
   </item>
   <item>
-    <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
-    <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
-    <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:58 GMT</pubDate>
-  </item>
-  <item>
     <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
     <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
     <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
-    <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
-    <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>

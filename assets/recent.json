@@ -1,12 +1,22 @@
 [
   {
-    "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
-    "u": "posts/cavitation-vs-flashing-control-valve-explained",
+    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
+    "u": "posts/4-20ma-current-loop-basics",
     "d": "2026-08-09"
   },
   {
     "t": "Control Valve Components Explained",
     "u": "posts/control-valve-components-explained",
+    "d": "2026-08-09"
+  },
+  {
+    "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+    "u": "posts/pid-piping-instrumentation-diagram-explained",
+    "d": "2026-08-09"
+  },
+  {
+    "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
+    "u": "posts/cavitation-vs-flashing-control-valve-explained",
     "d": "2026-08-09"
   },
   {
@@ -37,16 +47,6 @@
   {
     "t": "Currency Converter",
     "u": "study-abroad/currency-converter",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Education Loan EMI Calculator",
-    "u": "study-abroad/education-loan-emi-calculator",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "GPA / CGPA Converter",
-    "u": "study-abroad/gpa-converter",
     "d": "2026-08-09"
   }
 ]
