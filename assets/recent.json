@@ -1,52 +1,52 @@
 [
   {
-    "t": "Fan Static &amp; Total Pressure",
-    "u": "hvac/fan-static-total-pressure-calculator",
-    "d": "2026-08-08"
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
+    "d": "2026-08-09"
   },
   {
-    "t": "SEER / EER / COP Converter",
-    "u": "hvac/seer-eer-cop-converter",
-    "d": "2026-08-08"
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
+    "d": "2026-08-09"
   },
   {
-    "t": "Refrigerant Charge — Superheat / Subcooling",
-    "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
-    "d": "2026-08-08"
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
+    "d": "2026-08-09"
   },
   {
-    "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
-    "u": "posts/pipe-routing-guide-explained",
-    "d": "2026-08-08"
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
+    "d": "2026-08-09"
   },
   {
-    "t": "Power Transformer, CT &amp; PT: Internal Construction",
-    "u": "posts/power-transformer-ct-pt-construction-explained",
-    "d": "2026-08-08"
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
+    "d": "2026-08-09"
   },
   {
-    "t": "GPA / CGPA Converter",
-    "u": "study-abroad/gpa-converter",
-    "d": "2026-08-08"
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
+    "d": "2026-08-09"
   },
   {
-    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-    "u": "posts/battery-soc-vs-dod-explained",
-    "d": "2026-08-08"
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-08-09"
   },
   {
-    "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
-    "u": "posts/cut-fill-volume-average-end-area-method-explained",
-    "d": "2026-08-08"
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
+    "d": "2026-08-09"
   },
   {
-    "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
-    "u": "posts/flame-retardant-vs-flame-resistant-cables",
-    "d": "2026-08-08"
+    "t": "Signal Scaling",
+    "u": "automation/signal-scaling",
+    "d": "2026-08-09"
   },
   {
-    "t": "Grade &amp; Slope: Why Percent, Ratio and Degrees Aren&#x27;t the Same Number",
-    "u": "posts/grade-slope-percent-ratio-degrees-explained",
-    "d": "2026-08-08"
+    "t": "Thermocouple (Type K) Reference",
+    "u": "automation/thermocouple-reference",
+    "d": "2026-08-09"
   }
 ]
