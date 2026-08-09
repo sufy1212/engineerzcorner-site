@@ -4,13 +4,6 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
-    <pubDate>Sun, 09 Aug 2026 08:38:39 GMT</pubDate>
-  </item>
-  <item>
     <title>Pipe Routing Guide: 13 Rules Every Layout Should Follow</title>
     <link>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</guid>
@@ -211,6 +204,20 @@
     <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
     <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
+    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
+    <description>Both begin when local pressure inside the valve drops below the fluid's vapor pressure. Whether the downstream pressure recovers above it or not decides cavitation vs. flashing — and which failure pattern shows up on the trim.</description>
+    <pubDate>Sun, 09 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Centrifugal Pump Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
+    <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
