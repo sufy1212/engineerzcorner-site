@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process/Instrumentation Engineering Guides — Engineerz CorneR</title>
+<meta name="description" content="Process/Instrumentation Engineering Guides — step-by-step how-to guides for relief valve sizing, cavitation checks, P&ID reading, purge sizing and more.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/guides">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Process/Instrumentation Engineering Guides — Engineerz CorneR">
+<meta property="og:description" content="Process/Instrumentation Engineering Guides — step-by-step how-to guides, part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/guides">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Process/Instrumentation Engineering Guides — Engineerz CorneR">
+<meta name="twitter:description" content="Process/Instrumentation Engineering Guides — step-by-step how-to guides.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Process/Instrumentation Engineering Guides", "item": "https://www.engineerzcorner.com/process/guides" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Engineering Guides</span></div></nav>
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pr-guides">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></svg></div>
+    <div><h1>Process/Instrumentation Engineering Guides</h1><div class="hero-sub">Step-by-step method guides — how to actually approach each job, not just the calculator behind it</div></div>
+  </div>
+  <div class="intro">Six practical how-to guides covering the method behind this section's calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work.</div>
+
+  <div class="mech-tabs">
+    <a href="./">Process Index</a>
+    <a href="relief-valve-sizing">PR.01 Relief Valve Sizing</a>
+    <a href="vessel-volume-level">PR.02 Vessel Volume/Level</a>
+    <a href="line-sizing-velocity">PR.03 Line Sizing (Erosional V)</a>
+    <a href="cavitation-flashing-check">PR.04 Cavitation/Flashing</a>
+    <a href="purge-gas-sizing">PR.05 Purge Gas Sizing</a>
+    <a href="notes">PR.06 Notes</a>
+    <a href="symbols">PR.07 Symbols</a>
+    <a href="guides" class="current">PR.08 Guides</a>
+    <a href="comparisons">PR.09 Comparisons</a>
+  </div>
+
+  <div class="guide-toc">
+    <a href="#g-relief" class="guide-toc-link">1. How to Size a Relief Valve (Preliminary Method)</a>
+    <a href="#g-cav" class="guide-toc-link">2. How to Check a Control Valve for Cavitation</a>
+    <a href="#g-pid" class="guide-toc-link">3. How to Read a Process P&amp;ID</a>
+    <a href="#g-purge" class="guide-toc-link">4. How to Size a Dilution Purge</a>
+    <a href="#g-vessel" class="guide-toc-link">5. How to Estimate Vessel Liquid Volume From a Level Reading</a>
+    <a href="#g-erosion" class="guide-toc-link">6. How to Apply the API RP 14E Erosional Velocity Guideline</a>
+  </div>
+
+  <div class="step" id="g-relief">
+    <div class="step-head"><span class="step-num">1</span><h2>How to Size a Relief Valve (Preliminary Method)</h2></div>
+    <div class="step-desc">A first-pass orifice estimate before handing the job to a manufacturer's certified sizing software.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Identify the governing overpressure scenario</b> — fire, blocked outlet, control valve failure, tube rupture, and so on. The largest credible relief load sets the design case, not the average operating condition.</li>
+      <li><b>Establish set pressure and allowable accumulation</b> from the vessel's design pressure and the applicable code — typically 10% overpressure for a single valve on non-fire cases.</li>
+      <li><b>Determine the relieving phase</b> — liquid, vapor, or two-phase. This calculator only covers the first two; two-phase relief needs a dedicated method (e.g. the omega method).</li>
+      <li><b>Calculate the required relieving rate</b> for the governing scenario — often the hardest step, and usually specific to the scenario (e.g. a heat-input correlation for fire case).</li>
+      <li><b>Apply the API 520 sizing equation</b> for the relieving phase to get a required orifice area, then round up to the nearest standard API 526 orifice letter.</li>
+      <li><b>Check backpressure and installation effects</b> — a conventional valve with high built-up backpressure, or a balanced-bellows/pilot-operated valve, may need a backpressure correction factor this simplified calculator doesn't include.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-cav">
+    <div class="step-head"><span class="step-num">2</span><h2>How to Check a Control Valve for Cavitation</h2></div>
+    <div class="step-desc">A quick sigma-index screen to catch a cavitation-prone application before it becomes a maintenance problem.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Gather the process conditions at the worst-case operating point</b> — usually maximum pressure drop, not average flow — since cavitation risk is highest where ΔP is largest relative to available pressure.</li>
+      <li><b>Look up the fluid's vapor pressure</b> at the process temperature, not at standard conditions — vapor pressure rises sharply with temperature for most fluids.</li>
+      <li><b>Calculate the service sigma</b> from upstream pressure, downstream pressure and vapor pressure.</li>
+      <li><b>Compare against the valve's incipient cavitation sigma</b> from the manufacturer's data — a generic default only gets you a rough screen, not a final answer.</li>
+      <li><b>If cavitation risk is flagged</b>, consider an anti-cavitation trim, splitting the pressure drop across two valves in series, or relocating the valve to a point with more favorable downstream pressure.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-pid">
+    <div class="step-head"><span class="step-num">3</span><h2>How to Read a Process P&amp;ID</h2></div>
+    <div class="step-desc">A systematic way to make sense of a drawing you're seeing for the first time.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Start with the major equipment</b> — vessels, pumps, exchangers, columns — and identify each by its equipment tag before worrying about instrumentation.</li>
+      <li><b>Trace the main process flow path</b> from feed to product, following the heavy process lines rather than the thinner instrument signal lines.</li>
+      <li><b>Identify each instrument bubble's tag letters</b> — first letter is the measured variable, later letters describe the function (indicator, controller, transmitter, alarm).</li>
+      <li><b>Follow each control loop from sensor to final element</b> — a transmitter feeding a controller feeding a control valve, tracing the signal line type (electric, pneumatic, software) along the way.</li>
+      <li><b>Note every safety element</b> — relief valves, ESD valves, interlocks — since these define the vessel's protection envelope, not just its normal operation.</li>
+      <li><b>Cross-check against the line list and equipment list</b> if available — a P&amp;ID alone doesn't carry line sizes, materials or design conditions.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-purge">
+    <div class="step-head"><span class="step-num">4</span><h2>How to Size a Dilution Purge</h2></div>
+    <div class="step-desc">Getting from "we need to purge this vessel" to an actual flow rate and time.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Define the initial and target concentrations</b> clearly — for an oxygen purge ahead of vessel entry, this typically means normal air (20.9% O₂) down to a code-defined safe entry threshold.</li>
+      <li><b>Confirm the enclosure volume</b>, including any internals that reduce the free gas volume — a vessel full of packing or trays has meaningfully less free volume than its nominal shell volume.</li>
+      <li><b>Choose a purge gas flow rate</b> the available supply can actually sustain continuously for the calculated duration.</li>
+      <li><b>Calculate the theoretical purge time</b> from the dilution model, then add a practical safety margin</b> — real vessels rarely mix as perfectly as the ideal model assumes, especially with dead legs or low-velocity zones.</li>
+      <li><b>Verify by direct measurement</b> before entry or hot work — the calculation sets an expected purge time, but a gas test at the point of use is what actually confirms the target concentration was reached.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-vessel">
+    <div class="step-head"><span class="step-num">5</span><h2>How to Estimate Vessel Liquid Volume From a Level Reading</h2></div>
+    <div class="step-desc">Converting a level transmitter reading into an actual inventory number.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Confirm the vessel orientation and geometry</b> — horizontal and vertical cylindrical tanks use different volume-vs-level relationships, and the difference is largest around the mid-fill point on a horizontal tank.</li>
+      <li><b>Establish the level measurement's zero reference</b> — a DP level transmitter's 0% point may not be the physical bottom of the shell, depending on how it's ranged.</li>
+      <li><b>Calculate the shell (cylindrical) volume</b> at the measured level using the appropriate segment or straight cylindrical formula.</li>
+      <li><b>Add head volume separately</b> if the tank has dished, elliptical or hemispherical heads — these aren't included in a flat-head cylindrical approximation and can be a meaningful fraction of total volume on shorter vessels.</li>
+      <li><b>Cross-check against a strapping table or calibration chart</b> if one exists for the specific tank — a calculated volume is only as good as the geometry it assumes, while a strapping table reflects the tank's actual as-built shape.</li>
+    </ol>
+  </div>
+
+  <div class="step" id="g-erosion">
+    <div class="step-head"><span class="step-num">6</span><h2>How to Apply the API RP 14E Erosional Velocity Guideline</h2></div>
+    <div class="step-desc">Using a decades-old rule of thumb correctly, including knowing where it doesn't apply well.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Establish the fluid's mixture density</b> at actual flowing conditions — for two-phase flow this means a mixture density, not the liquid or gas density alone.</li>
+      <li><b>Select the correct C constant</b> for the service — continuous vs intermittent, and whether the line is corrosion-resistant or has effective corrosion inhibition.</li>
+      <li><b>Calculate the erosional velocity limit and compare against the actual design velocity</b> at maximum expected flow, not average flow.</li>
+      <li><b>Treat a comfortable margin below the limit as the goal</b>, not the limit itself as a target — operating right at Ve leaves no room for measurement uncertainty or future flow increases.</li>
+      <li><b>Remember the guideline's limitations</b> — it doesn't account for solids content, sharp bends, or specific corrosive species (CO₂, H₂S) that can lower the practical erosion threshold well below the generic API 14E number.</li>
+    </ol>
+  </div>
+
+  <footer>These guides describe common practice and simplified methods — always confirm against the current edition of the relevant code (API 520/521/526, API RP 14E, ISA-5.1) and your own engineering judgement. <a href="./">← Process Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

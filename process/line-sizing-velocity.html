@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process Line Sizing (Erosional Velocity) — Engineerz CorneR</title>
+<meta name="description" content="Process Line Sizing (Erosional Velocity) — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/line-sizing-velocity">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Process Line Sizing (Erosional Velocity) — Engineerz CorneR">
+<meta property="og:description" content="Process Line Sizing (Erosional Velocity) — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/line-sizing-velocity">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Process Line Sizing (Erosional Velocity) — Engineerz CorneR">
+<meta name="twitter:description" content="Process Line Sizing (Erosional Velocity) — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Process Line Sizing (Erosional Velocity)", "item": "https://www.engineerzcorner.com/process/line-sizing-velocity" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Process Line Sizing (Erosional Velocity)",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Process Line Sizing (Erosional Velocity) \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/process/line-sizing-velocity",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Process Line Sizing (Erosional Velocity)</span></div></nav>
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pr-line">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h6"></path><path d="M16 12h6"></path><path d="M8 6c0 3-2 4-2 6s2 3 2 6"></path><path d="M16 6c0 3 2 4 2 6s-2 3-2 6"></path></svg></div>
+    <div><h1>Process Line Sizing</h1><div class="hero-sub">Actual velocity vs the API RP 14E erosional velocity limit</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="./">Process Index</a>
+    <a href="relief-valve-sizing">PR.01 Relief Valve Sizing</a>
+    <a href="vessel-volume-level">PR.02 Vessel Volume/Level</a>
+    <a href="line-sizing-velocity" class="current">PR.03 Line Sizing (Erosional V)</a>
+    <a href="cavitation-flashing-check">PR.04 Cavitation/Flashing</a>
+    <a href="purge-gas-sizing">PR.05 Purge Gas Sizing</a>
+    <a href="notes">PR.06 Notes</a>
+    <a href="symbols">PR.07 Symbols</a>
+    <a href="guides">PR.08 Guides</a>
+    <a href="comparisons">PR.09 Comparisons</a>
+  </div>
+
+  <div class="intro">Checks actual pipe velocity against the API RP 14E erosional velocity guideline — a widely used rule-of-thumb ceiling for erosion/corrosion risk in single- and two-phase process lines. It's a screening check, not a full erosion/corrosion study — solids content, CO₂/H₂S service and elbow geometry can all lower the practical limit further.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="lsvValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Flow &amp; Fluid</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="lsvW">Mass flow rate, W <span class="unit">lb/hr</span></label>
+        <input type="number" id="lsvW" value="80000" step="100">
+      </div>
+      <div class="field">
+        <label for="lsvRho">Fluid density, ρ <span class="unit">lb/ft³</span></label>
+        <input type="number" id="lsvRho" value="4.0" step="0.1">
+        <div class="hint">~62.4 lb/ft³ for water; a low-pressure gas is often 0.1-5 lb/ft³ depending on pressure and molecular weight.</div>
+      </div>
+      <div class="field">
+        <label for="lsvID">Pipe internal diameter <span class="unit">in</span></label>
+        <input type="number" id="lsvID" value="6.065" step="0.01">
+      </div>
+      <div class="field">
+        <label for="lsvC">Service type (C constant)</label>
+        <select id="lsvC">
+          <option value="100" selected>Continuous, non-corrosive/solids-free (C=100)</option>
+          <option value="125">Intermittent service (C=125)</option>
+          <option value="150">Continuous, corrosion-resistant/inhibited (C=150)</option>
+          <option value="200">Intermittent, corrosion-resistant/inhibited (C=200)</option>
+        </select>
+        <div class="hint">API RP 14E constants — use the lower, conservative values unless the line is genuinely corrosion-resistant or continuously inhibited.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">Actual velocity</span>
+      <span class="rval" id="lsvV">0.00 <small>ft/s</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Erosional velocity limit, Ve</div><div class="sval amber" id="lsvVe">—</div></div>
+      <div class="stat"><div class="slabel">Actual velocity (m/s)</div><div class="sval" id="lsvVms">—</div></div>
+      <div class="stat"><div class="slabel">Margin to limit</div><div class="sval" id="lsvMargin">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note" id="lsvFormula">—</div>
+      <div class="hint" style="margin-top:8px;">Ve = C/√ρ (ft/s, ρ in lb/ft³) — the API RP 14E erosional velocity guideline. Actual velocity v = Q/A, with Q = W/ρ (volumetric flow) and A the pipe's internal cross-sectional area.</div>
+    </details>
+  </div>
+  <footer>Erosional velocity screening only — for friction/head-loss sizing, see the <a href="../mechanical/pipe-flow-head-loss-calculator">Mechanical pipe flow calculator</a>. <a href="./">← Process Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function num(id){var e=el(id);return e?parseFloat(e.value):NaN;}
+  function fmt(v,d){return isFinite(v)?v.toFixed(d===undefined?2:d):"—";}
+  function setText(id,html){var e=el(id);if(e)e.innerHTML=html;}
+
+  function calc(){
+    if(!el("lsvW")) return;
+    var W=num("lsvW"), rho=num("lsvRho"), ID=num("lsvID"), C=parseFloat(el("lsvC").value), errs=0;
+    errs+=fieldError(el("lsvW"), isNaN(W)||W<=0 ? "Mass flow must be greater than 0." : null);
+    errs+=fieldError(el("lsvRho"), isNaN(rho)||rho<=0 ? "Density must be greater than 0." : null);
+    errs+=fieldError(el("lsvID"), isNaN(ID)||ID<=0 ? "Pipe ID must be greater than 0." : null);
+    if(errs>0){ updateValidationBanner("lsvValidation",errs); return; }
+
+    var Qft3hr = W/rho;                 // ft3/hr
+    var Qft3s = Qft3hr/3600;
+    var IDft = ID/12;
+    var Area = Math.PI/4*IDft*IDft;     // ft2
+    var v = Qft3s/Area;                 // ft/s
+    var Ve = C/Math.sqrt(rho);          // ft/s
+
+    setText("lsvV", fmt(v,2)+" <small>ft/s</small>");
+    setText("lsvVe", fmt(Ve,2)+" ft/s");
+    setText("lsvVms", fmt(v*0.3048,2)+" m/s");
+    var margin = (Ve-v)/Ve*100;
+    setText("lsvMargin", fmt(margin,1)+"%");
+    setText("lsvFormula", "Q = W/ρ = "+fmt(Qft3hr,0)+" ft³/hr &nbsp;·&nbsp; A = "+fmt(Area,4)+" ft² &nbsp;·&nbsp; v = Q/A = "+fmt(v,2)+" ft/s &nbsp;·&nbsp; Ve = C/√ρ = "+fmt(Ve,2)+" ft/s");
+
+    var banner=el("lsvValidation");
+    if(v>Ve){
+      banner.className="validation-banner bad";
+      banner.innerHTML='<span class="vdot"></span><span>Actual velocity ('+fmt(v,1)+' ft/s) exceeds the erosional limit ('+fmt(Ve,1)+' ft/s) — increase pipe size or reduce flow to control erosion/corrosion risk.</span>';
+    } else if(margin<15){
+      banner.className="validation-banner neutral";
+      banner.innerHTML='<span class="vdot"></span><span>Only '+fmt(margin,0)+'% margin to the erosional limit — comfortable designs typically keep some headroom below Ve.</span>';
+    } else {
+      updateValidationBanner("lsvValidation",0);
+    }
+  }
+  ["lsvW","lsvRho","lsvID","lsvC"].forEach(function(id){
+    var e=el(id); if(e){ e.addEventListener("input",calc); e.addEventListener("change",calc); }
+  });
+  calc();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

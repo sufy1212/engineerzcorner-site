@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process/Instrumentation Comparisons — Engineerz CorneR</title>
+<meta name="description" content="Process/Instrumentation Comparisons — relief valve vs rupture disk, cavitation vs flashing, PSV vs PRV terminology, and more.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/comparisons">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Process/Instrumentation Comparisons — Engineerz CorneR">
+<meta property="og:description" content="Process/Instrumentation Comparisons — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/comparisons">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Process/Instrumentation Comparisons — Engineerz CorneR">
+<meta name="twitter:description" content="Process/Instrumentation Comparisons — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Process/Instrumentation Comparisons", "item": "https://www.engineerzcorner.com/process/comparisons" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Comparisons</span></div></nav>
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pr-comparisons">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18"></path><path d="M3 8h5M16 8h5M3 16h5M16 16h5"></path></svg></div>
+    <div><h1>Process/Instrumentation Comparisons</h1><div class="hero-sub">Head-to-head relief, valve and process choices — side by side, so the trade-off is visible at a glance</div></div>
+  </div>
+  <div class="intro">Six common process engineering decisions, laid out as direct comparisons rather than separate articles.</div>
+
+  <div class="mech-tabs">
+    <a href="./">Process Index</a>
+    <a href="relief-valve-sizing">PR.01 Relief Valve Sizing</a>
+    <a href="vessel-volume-level">PR.02 Vessel Volume/Level</a>
+    <a href="line-sizing-velocity">PR.03 Line Sizing (Erosional V)</a>
+    <a href="cavitation-flashing-check">PR.04 Cavitation/Flashing</a>
+    <a href="purge-gas-sizing">PR.05 Purge Gas Sizing</a>
+    <a href="notes">PR.06 Notes</a>
+    <a href="symbols">PR.07 Symbols</a>
+    <a href="guides">PR.08 Guides</a>
+    <a href="comparisons" class="current">PR.09 Comparisons</a>
+  </div>
+
+  <div class="guide-toc">
+    <a href="#cmp-psvdisk" class="guide-toc-link">1. Relief Valve vs Rupture Disk</a>
+    <a href="#cmp-cavflash" class="guide-toc-link">2. Cavitation vs Flashing</a>
+    <a href="#cmp-terms" class="guide-toc-link">3. PSV vs PRV vs Safety Valve Terminology</a>
+    <a href="#cmp-psvtype" class="guide-toc-link">4. Conventional vs Balanced-Bellows vs Pilot-Operated PSV</a>
+    <a href="#cmp-apicode" class="guide-toc-link">5. API 520 vs API 521</a>
+    <a href="#cmp-blanketpurge" class="guide-toc-link">6. Nitrogen Blanketing vs Dilution Purging</a>
+  </div>
+
+  <div class="step" id="cmp-psvdisk">
+    <div class="step-head"><span class="step-num">1</span><h2>Relief Valve vs Rupture Disk</h2></div>
+    <div class="step-desc">Two ways to protect a vessel from overpressure, with very different behavior once they've operated.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Spring-Loaded Relief Valve</th><th>Rupture Disk</th></tr></thead>
+        <tbody>
+          <tr><td>Behavior after actuation</td><td>Recloses once pressure drops back below set/reseat pressure</td><td>Ruptures permanently — the process stays open to atmosphere/flare until manually isolated and the disk replaced</td></tr>
+          <tr><td>Response speed</td><td>Fast, but not instantaneous — some inertia in opening</td><td>Essentially instantaneous, no moving parts to overcome</td></tr>
+          <tr><td>Leak-tight at normal operation</td><td>Yes, typically bubble-tight to a high percentage of set pressure</td><td>Yes, and often better — no seat to wear or foul over time</td></tr>
+          <tr><td>Typical use</td><td>General overpressure protection where reclosing after a transient event is desirable</td><td>Fast-rising pressure events (runaway reaction), corrosive/fouling service unsuitable for a valve seat, or as a PSV inlet isolator</td></tr>
+          <tr><td>Downside</td><td>More expensive, more maintenance (seat leakage, chatter)</td><td>Loses containment entirely once it bursts — not suitable alone where continuous protection after a transient is required</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> the two are often combined — a rupture disk installed upstream of a PSV protects the valve seat from a fouling or corrosive process while the PSV still recloses after normal transients.</div>
+  </div>
+
+  <div class="step" id="cmp-cavflash">
+    <div class="step-head"><span class="step-num">2</span><h2>Cavitation vs Flashing</h2></div>
+    <div class="step-desc">Related liquid-service phenomena in a control valve, but with different symptoms and consequences.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Cavitation</th><th>Flashing</th></tr></thead>
+        <tbody>
+          <tr><td>What happens</td><td>Vapor bubbles form at the vena contracta, then collapse violently once downstream pressure recovers above vapor pressure</td><td>Vapor bubbles form and never collapse — downstream pressure stays at or below vapor pressure</td></tr>
+          <tr><td>Physical damage</td><td>Erosion from repeated micro-shockwave bubble collapse — can be severe</td><td>Generally no bubble-collapse erosion, though high-velocity two-phase flow can still erode downstream piping</td></tr>
+          <tr><td>Noise</td><td>Often loud, characteristic "gravel" or rattling sound</td><td>Can be noisy from high-velocity two-phase flow, different character than cavitation noise</td></tr>
+          <tr><td>Fix</td><td>Anti-cavitation trim, staged pressure drop, or relocate the valve</td><td>Usually inherent to the process pressures — trim material/design to handle erosion, or accept it as an unavoidable feature of the service</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> whether a valve cavitates or flashes depends entirely on whether downstream pressure recovers above vapor pressure — check both against the actual downstream pressure profile, not just the nominal ΔP.</div>
+  </div>
+
+  <div class="step" id="cmp-terms">
+    <div class="step-head"><span class="step-num">3</span><h2>PSV vs PRV vs Safety Valve Terminology</h2></div>
+    <div class="step-desc">Overlapping terms that get used inconsistently across industries and codes.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Term</th><th>Common Meaning</th><th>Where it's used</th></tr></thead>
+        <tbody>
+          <tr><td>PSV (Pressure Safety Valve)</td><td>Generic term for a spring-loaded relief device, most common in US oil &amp; gas/process usage</td><td>Process P&amp;IDs, API terminology</td></tr>
+          <tr><td>PRV (Pressure Relief Valve)</td><td>Also generic; sometimes used specifically for a valve that opens proportionally to overpressure (rather than popping fully open)</td><td>General industrial and plumbing/HVAC usage</td></tr>
+          <tr><td>Safety Valve</td><td>Traditionally implies rapid, full-open ("pop") action, historically for compressible/steam service</td><td>Boiler and steam code terminology (e.g. ASME Section I)</td></tr>
+          <tr><td>Relief Valve</td><td>Traditionally implies proportional opening, historically for liquid service</td><td>ASME Section VIII and general liquid relief usage</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> the distinctions have blurred — a modern "safety relief valve" often handles both liquid and vapor service with the same basic design. Confirm which code and terminology convention a specific project or document is using rather than assuming.</div>
+  </div>
+
+  <div class="step" id="cmp-psvtype">
+    <div class="step-head"><span class="step-num">4</span><h2>Conventional vs Balanced-Bellows vs Pilot-Operated PSV</h2></div>
+    <div class="step-desc">Three relief valve designs that handle backpressure very differently.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Conventional</th><th>Balanced Bellows</th><th>Pilot-Operated</th></tr></thead>
+        <tbody>
+          <tr><td>Backpressure sensitivity</td><td>High — set pressure and capacity both affected by variable/built-up backpressure</td><td>Low — bellows isolates the disk from backpressure effects on set pressure</td><td>Low — main valve opening is largely independent of backpressure</td></tr>
+          <tr><td>Best suited to</td><td>Low or constant backpressure applications, simplest and cheapest design</td><td>Variable backpressure (e.g. common flare header) applications</td><td>High-capacity, high-pressure, or where tight seat leakage up to very near set pressure matters</td></tr>
+          <tr><td>Complexity/cost</td><td>Lowest</td><td>Moderate — added bellows and vent</td><td>Highest — separate pilot mechanism</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> a common flare header with multiple relief valves discharging together almost always rules out a plain conventional valve — the built-up backpressure from other valves lifting simultaneously would otherwise affect this valve's own set pressure.</div>
+  </div>
+
+  <div class="step" id="cmp-apicode">
+    <div class="step-head"><span class="step-num">5</span><h2>API 520 vs API 521</h2></div>
+    <div class="step-desc">Two companion standards that are often confused because they're both about relief systems.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>API 520</th><th>API 521</th></tr></thead>
+        <tbody>
+          <tr><td>Scope</td><td>Sizing, selection and installation of the pressure-relieving device itself</td><td>Identifying overpressure scenarios and sizing the required relief load for each</td></tr>
+          <tr><td>Typical question it answers</td><td>"Given this required relief rate, what orifice size do I need?"</td><td>"What's the largest credible relief load this vessel could see, and from what scenario?"</td></tr>
+          <tr><td>Split</td><td>Part I (sizing/selection) and Part II (installation)</td><td>Single document covering scenario identification and disposal system design (flare headers, knockout drums)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> a real relief system design uses both together — API 521 to establish the governing scenario and required relief rate, then API 520 to size and select the device that handles it.</div>
+  </div>
+
+  <div class="step" id="cmp-blanketpurge">
+    <div class="step-head"><span class="step-num">6</span><h2>Nitrogen Blanketing vs Dilution Purging</h2></div>
+    <div class="step-desc">Both use an inert gas, but for different jobs on a different timescale.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Nitrogen Blanketing</th><th>Dilution Purging</th></tr></thead>
+        <tbody>
+          <tr><td>Purpose</td><td>Ongoing protection — keep a tank's vapor space continuously inert during normal operation</td><td>One-time event — reduce a specific contaminant/oxygen concentration before entry, hot work or a maintenance activity</td></tr>
+          <tr><td>Duration</td><td>Continuous, for as long as the tank is in that service</td><td>A defined period until the target concentration is reached, then stopped</td></tr>
+          <tr><td>Typical flow rate driver</td><td>Sized for thermal in-breathing and liquid pump-out displacement</td><td>Sized to reach a target dilution ratio in an acceptable time, per the perfectly-mixed dilution model</td></tr>
+          <tr><td>Governing reference</td><td>API 2000 (venting) for the breathing rates involved</td><td>Confined space entry standards and site-specific gas testing procedures</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> a tank taken out of blanketed service for internal inspection typically needs a dilution purge afterward — blanketing keeps the vapor space inert day-to-day, purging is what actually makes it safe to enter.</div>
+  </div>
+
+  <footer>These are general engineering summaries — always verify against the current edition of the applicable code for a specific installation. <a href="./">← Process Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

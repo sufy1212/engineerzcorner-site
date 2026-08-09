@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relief Valve (PSV) Sizing — Engineerz CorneR</title>
+<meta name="description" content="Relief Valve (PSV) Sizing — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/relief-valve-sizing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Relief Valve (PSV) Sizing — Engineerz CorneR">
+<meta property="og:description" content="Relief Valve (PSV) Sizing — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, Process/Instrumentation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/relief-valve-sizing">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Relief Valve (PSV) Sizing — Engineerz CorneR">
+<meta name="twitter:description" content="Relief Valve (PSV) Sizing — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Relief Valve (PSV) Sizing", "item": "https://www.engineerzcorner.com/process/relief-valve-sizing" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Relief Valve (PSV) Sizing",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Relief Valve (PSV) Sizing \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/process/relief-valve-sizing",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Relief Valve (PSV) Sizing</span></div></nav>
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pr-relief">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h8l-4-16z"></path><path d="M12 4v-2"></path></svg></div>
+    <div><h1>Relief Valve (PSV) Sizing</h1><div class="hero-sub">Required orifice area — API 520 simplified, liquid or vapor service</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="./">Process Index</a>
+    <a href="relief-valve-sizing" class="current">PR.01 Relief Valve Sizing</a>
+    <a href="vessel-volume-level">PR.02 Vessel Volume/Level</a>
+    <a href="line-sizing-velocity">PR.03 Line Sizing (Erosional V)</a>
+    <a href="cavitation-flashing-check">PR.04 Cavitation/Flashing</a>
+    <a href="purge-gas-sizing">PR.05 Purge Gas Sizing</a>
+    <a href="notes">PR.06 Notes</a>
+    <a href="symbols">PR.07 Symbols</a>
+    <a href="guides">PR.08 Guides</a>
+    <a href="comparisons">PR.09 Comparisons</a>
+  </div>
+
+  <div class="intro">A simplified, preliminary sizing check against the API 520 liquid and vapor/gas equations — useful for a first-pass orifice estimate. It doesn't replace a full sizing calculation (two-phase relief, fire case heat input, rupture disk combination capacity factors, or manufacturer-certified Kd) — take a final selection to the valve manufacturer's sizing software or a full API 520 calculation.</div>
+
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="prsValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Service &amp; Set Conditions</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label>Relief fluid phase</label>
+        <label style="display:flex;gap:14px;align-items:center;font-weight:400;font-size:13px;">
+          <span><input type="radio" name="prsPhase" value="vapor" checked> Vapor/Gas</span>
+          <span><input type="radio" name="prsPhase" value="liquid"> Liquid</span>
+        </label>
+      </div>
+      <div class="field">
+        <label for="prsPset">Set pressure <span class="unit">psig</span></label>
+        <input type="number" id="prsPset" value="150" step="1">
+      </div>
+      <div class="field">
+        <label for="prsOP">Allowable overpressure <span class="unit">%</span></label>
+        <input type="number" id="prsOP" value="10" step="1">
+        <div class="hint">10% for a single valve on fire/process overpressure; some codes allow 16% or 21% for fire case only.</div>
+      </div>
+      <div class="field">
+        <label for="prsPback">Superimposed back pressure <span class="unit">psig</span></label>
+        <input type="number" id="prsPback" value="0" step="1">
+        <div class="hint">Used only to report relieving ΔP; back-pressure correction factor Kb is assumed 1.0 (conventional valve, low back pressure) — verify against your valve type.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" id="prsFldVapor">
+    <div class="step-head"><span class="step-num">2</span><h2>Vapor/Gas Relief Rate</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="prsW">Required relieving rate, W <span class="unit">lb/hr</span></label>
+        <input type="number" id="prsW" value="50000" step="100">
+      </div>
+      <div class="field">
+        <label for="prsM">Molecular weight, M</label>
+        <input type="number" id="prsM" value="29" step="0.1">
+        <div class="hint">~29 for air; use the relieving fluid's actual molecular weight.</div>
+      </div>
+      <div class="field">
+        <label for="prsT">Relieving temperature, T <span class="unit">°F</span></label>
+        <input type="number" id="prsT" value="200" step="1">
+      </div>
+      <div class="field">
+        <label for="prsZ">Compressibility factor, Z</label>
+        <input type="number" id="prsZ" value="1.0" step="0.01">
+      </div>
+      <div class="field">
+        <label for="prsK">Specific heat ratio, k (Cp/Cv)</label>
+        <input type="number" id="prsK" value="1.4" step="0.01">
+        <div class="hint">1.4 for diatomic gases (air, N₂); ~1.3 for CO₂/steam; ~1.1-1.2 for heavier hydrocarbons.</div>
+      </div>
+      <div class="field">
+        <label for="prsKdV">Discharge coefficient, Kd</label>
+        <input type="number" id="prsKdV" value="0.975" step="0.001">
+        <div class="hint">0.975 is the API 520 default for preliminary sizing before a specific valve is selected.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" id="prsFldLiquid" style="display:none;">
+    <div class="step-head"><span class="step-num">2</span><h2>Liquid Relief Rate</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="prsQ">Required relieving rate, Q <span class="unit">US gpm</span></label>
+        <input type="number" id="prsQ" value="200" step="1">
+      </div>
+      <div class="field">
+        <label for="prsSG">Specific gravity, SG</label>
+        <input type="number" id="prsSG" value="1.0" step="0.01">
+      </div>
+      <div class="field">
+        <label for="prsKdL">Discharge coefficient, Kd</label>
+        <input type="number" id="prsKdL" value="0.65" step="0.001">
+        <div class="hint">0.65 is the API 520 default certified liquid Kd for preliminary sizing.</div>
+      </div>
+      <div class="field">
+        <label for="prsKv">Viscosity correction, Kv</label>
+        <input type="number" id="prsKv" value="1.0" step="0.01">
+        <div class="hint">1.0 for low-viscosity fluids (Reynolds number above the correction threshold); reduce for viscous service.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">Required orifice area</span>
+      <span class="rval" id="prsArea">0.00 <small>in²</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Nearest standard orifice</div><div class="sval amber" id="prsOrifice">—</div></div>
+      <div class="stat"><div class="slabel">Relieving pressure, P1 (psia)</div><div class="sval" id="prsP1">—</div></div>
+      <div class="stat"><div class="slabel">Relieving ΔP (psi)</div><div class="sval" id="prsDp">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note" id="prsFormula">—</div>
+      <div class="hint" style="margin-top:8px;">P1 = set pressure × (1 + overpressure%) + 14.7 psia. Vapor: C = 520·√(k·(2/(k+1))^((k+1)/(k−1))); A = W / (C·Kd·P1·Kb) · √(TZ/M), T in °R. Liquid: A = Q / (38·Kd·Kv) · √(SG/(P1−P2)). These are the API 520 preliminary sizing equations — the standard orifice designations (D through T) are the closest API 526 letter at or above the calculated area, not a final valve selection.</div>
+    </details>
+  </div>
+  <footer>Preliminary sizing only — fire case heat input, two-phase/flashing relief, and a manufacturer-certified Kd all need the full API 520/521 method. <a href="./">← Process Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function num(id){var e=el(id);return e?parseFloat(e.value):NaN;}
+  function fmt(v,d){return isFinite(v)?v.toFixed(d===undefined?2:d):"—";}
+  function setText(id,html){var e=el(id);if(e)e.innerHTML=html;}
+  var ORIFICES=[["D",0.110],["E",0.196],["F",0.307],["G",0.503],["H",0.785],["J",1.287],["K",1.838],["L",2.853],["M",3.60],["N",4.34],["P",6.38],["Q",11.05],["R",16.0],["T",26.0]];
+  function nearestOrifice(A){
+    for(var i=0;i<ORIFICES.length;i++){ if(ORIFICES[i][1]>=A) return ORIFICES[i][0]+" ("+ORIFICES[i][1]+" in\u00B2)"; }
+    return "> T (26.0 in\u00B2) — consult manufacturer";
+  }
+  function calc(){
+    if(!el("prsPset")) return;
+    var phase=(document.querySelector('input[name="prsPhase"]:checked')||{}).value||"vapor";
+    el("prsFldVapor").style.display = phase==="vapor" ? "" : "none";
+    el("prsFldLiquid").style.display = phase==="liquid" ? "" : "none";
+
+    var Pset=num("prsPset"), OP=num("prsOP"), Pback=num("prsPback");
+    var errs=0;
+    errs+=fieldError(el("prsPset"), isNaN(Pset)||Pset<=0 ? "Set pressure must be greater than 0." : null);
+    errs+=fieldError(el("prsOP"), isNaN(OP)||OP<0 ? "Overpressure can't be negative." : null);
+
+    var P1 = Pset*(1+OP/100) + 14.7;
+    var P2 = Pback + 14.7;
+    var A;
+    var formula="";
+
+    if(phase==="vapor"){
+      var W=num("prsW"), M=num("prsM"), Tf=num("prsT"), Z=num("prsZ"), k=num("prsK"), Kd=num("prsKdV");
+      errs+=fieldError(el("prsW"), isNaN(W)||W<=0 ? "Relieving rate must be greater than 0." : null);
+      errs+=fieldError(el("prsM"), isNaN(M)||M<=0 ? "Molecular weight must be greater than 0." : null);
+      errs+=fieldError(el("prsK"), isNaN(k)||k<=1 ? "Specific heat ratio must be greater than 1." : null);
+      errs+=fieldError(el("prsKdV"), isNaN(Kd)||Kd<=0 ? "Discharge coefficient must be greater than 0." : null);
+      if(errs>0){ updateValidationBanner("prsValidation",errs); return; }
+      var Tr = Tf + 459.67;
+      var C = 520*Math.sqrt(k*Math.pow(2/(k+1),(k+1)/(k-1)));
+      A = W/(C*Kd*P1*1.0) * Math.sqrt(Tr*Z/M);
+      formula = "C = "+fmt(C,1)+" (from k = "+fmt(k,2)+") &nbsp;·&nbsp; A = W/(C·Kd·P1·Kb)·√(TZ/M) = "+fmt(A,4)+" in²";
+    } else {
+      var Q=num("prsQ"), SG=num("prsSG"), KdL=num("prsKdL"), Kv=num("prsKv");
+      errs+=fieldError(el("prsQ"), isNaN(Q)||Q<=0 ? "Relieving rate must be greater than 0." : null);
+      errs+=fieldError(el("prsSG"), isNaN(SG)||SG<=0 ? "Specific gravity must be greater than 0." : null);
+      errs+=fieldError(el("prsKdL"), isNaN(KdL)||KdL<=0 ? "Discharge coefficient must be greater than 0." : null);
+      var dP = P1-P2;
+      errs+=fieldError(el("prsQ"), dP<=0 ? "Relieving pressure must exceed back pressure." : null);
+      if(errs>0){ updateValidationBanner("prsValidation",errs); return; }
+      A = Q/(38*KdL*Kv) * Math.sqrt(SG/dP);
+      formula = "A = Q/(38·Kd·Kv)·√(SG/(P1−P2)) = "+fmt(A,4)+" in²";
+    }
+
+    setText("prsArea", fmt(A,4)+" <small>in²</small>");
+    setText("prsOrifice", nearestOrifice(A));
+    setText("prsP1", fmt(P1,1));
+    setText("prsDp", fmt(P1-P2,1));
+    setText("prsFormula", formula);
+    updateValidationBanner("prsValidation",0);
+  }
+  ["prsPset","prsOP","prsPback","prsW","prsM","prsT","prsZ","prsK","prsKdV","prsQ","prsSG","prsKdL","prsKv"].forEach(function(id){
+    var e=el(id); if(e){ e.addEventListener("input",calc); e.addEventListener("change",calc); }
+  });
+  document.querySelectorAll('input[name="prsPhase"]').forEach(function(r){ r.addEventListener("change",calc); });
+  calc();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>

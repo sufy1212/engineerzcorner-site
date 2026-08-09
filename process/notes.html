@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process/Instrumentation Learning Notes — Theory &amp; Reference</title>
+<meta name="description" content="Process/Instrumentation Learning Notes — Part of Engineerz CorneR's free multi-discipline engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/notes">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Process/Instrumentation Learning Notes — Theory &amp; Reference">
+<meta property="og:description" content="Process/Instrumentation Learning Notes — Part of Engineerz CorneR, a free multi-discipline engineering toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/notes">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Process/Instrumentation Learning Notes — Theory &amp; Reference">
+<meta name="twitter:description" content="Process/Instrumentation Learning Notes — Part of Engineerz CorneR.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230F1512'/%3E%3Crect x='9' y='9' width='14' height='14' rx='2' fill='none' stroke='%234FD68C' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%234FD68C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="notes.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Process/Instrumentation Learning Notes", "item": "https://www.engineerzcorner.com/process/notes" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Notes on relief, vessels, piping and control valves.</span></div></nav>
+
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top"><span class="dot">●</span> PROCESS/INSTRUMENTATION LEARNING NOTES</a>
+  </div>
+</div>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+  <div class="hero">
+    <div class="eyebrow">Personal reference · theory only</div>
+    <h1>Notes on relief, vessels, piping and control valves.</h1>
+    <p class="hero-sub">A running set of short, plain-language write-ups on core process engineering and instrumentation concepts — how things work and why, not how to configure them. There are no calculators or design tools on this page.</p>
+    <div class="hero-meta">
+      <div class="m"><b id="metaNoteCount">0</b>notes</div>
+      <div class="m"><b id="metaCatCount">0</b>subjects</div>
+      <div class="notes-crosslinks" style="display:flex;gap:16px;flex-wrap:wrap;width:100%;padding-top:10px;">
+        <a href="./" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--paper-text-dim);text-decoration:underline;">&larr; Process Index</a>
+        <a href="../automation/notes" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--paper-text-dim);text-decoration:underline;">Automation Notes &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="noteSections"></main>
+</div>
+
+  <footer>
+    <p class="foot-note">These are summary explanations written for learning and quick reference — they're deliberately simplified and aren't a substitute for the current edition of the relevant standard (API, ASME, ISA, local process safety codes) or for a qualified engineer's judgement on a real installation.</p>
+  </footer>
+
+<script>
+(function(){
+var DATA=[
+{id:"relief",label:"Relief & Overpressure Protection",color:"#D6704A",notes:[
+{title:"Relief Valve vs Rupture Disk",summary:"Two overpressure devices with fundamentally different behavior once they've actuated.",body:["A spring-loaded relief valve opens at its set pressure and recloses once pressure drops back below reseat pressure, giving repeated, automatic protection through multiple transient events without any intervention.","A rupture disk instead bursts permanently once its set pressure is reached, and stays open to atmosphere or the flare header until someone physically isolates the line and replaces the disk. The two are often paired — a disk installed upstream of a valve protects the valve seat from a fouling or corrosive process stream while the valve itself still recloses after ordinary relief events."]},
+{title:"Set Pressure, Accumulation and Overpressure",summary:"Three related pressure terms that describe a relief valve's operating window, easy to mix up.",body:["Set pressure is the pressure at which the valve is adjusted to begin opening. Overpressure is the additional pressure rise above set pressure the vessel experiences while the valve is relieving — expressed as a percentage of set pressure, commonly 10% for a single valve on a non-fire case.","Accumulation is the resulting maximum vessel pressure during relief (set pressure plus overpressure), which must stay within the vessel's allowable accumulated pressure — typically 110% of design pressure for a single valve, or higher (116-121%) for multiple valves or a fire-only scenario, per the governing code."]},
+{title:"Backpressure Correction in Relief Valve Sizing",summary:"What's on the downstream side of a relief valve affects how much capacity it can actually deliver.",body:["Built-up backpressure (created by the valve's own flow through the discharge piping) and superimposed backpressure (already present in the discharge system before the valve opens, e.g. from other valves on a shared flare header) both reduce a conventional relief valve's effective capacity if they get too high relative to set pressure.","A conventional valve's capacity correction factor Kb drops as backpressure rises, which is exactly why conventional valves are usually avoided on shared flare headers with high or variable built-up backpressure — a balanced-bellows or pilot-operated design largely cancels this backpressure sensitivity out."]},
+{title:"Fire Case Sizing Basics",summary:"Why an external pool fire is often the largest, and most conservative, relief scenario a vessel has to be checked against.",body:["A fire engulfing a vessel transfers heat through the wetted vessel wall, vaporizing liquid inside far faster than any normal process upset would, which is why fire is frequently the single largest relief load a vessel needs to be protected against — even though it's a rare event.","Fire case heat input is typically calculated from a wetted-surface-area correlation (larger wetted area means more heat input), with codes generally allowing a higher permitted overpressure (16-21%) specifically for fire-only relief scenarios, reflecting that fire is treated as a less frequent, more extreme case than routine operational overpressure."]},
+{title:"Two-Phase Relief: Why It's Different",summary:"Relieving a mixture of liquid and vapor together needs a fundamentally different sizing approach than either phase alone.",body:["Many overpressure scenarios — a runaway exothermic reaction, a vessel that's more than half-full of liquid during a fire case — actually relieve a two-phase mixture rather than pure liquid or pure vapor, and sizing for just one phase alone can significantly under-size the required relief area.","Two-phase relief sizing methods (such as the homogeneous equilibrium or omega method from DIERS research) explicitly account for flashing and mixture behavior through the valve, and are meaningfully more involved than the single-phase API 520 equations — which is exactly why a simplified single-phase calculator, like the one on this site, explicitly excludes two-phase scenarios rather than giving a falsely precise wrong answer."]}
+]},
+{id:"vessels",label:"Vessels & Storage",color:"#4FD68C",notes:[
+{title:"Tank Breathing: Thermal In/Out Breathing",summary:"A storage tank's vapor space changes volume with temperature and pumping activity, and has to vent or draw in air to compensate.",body:["Out-breathing occurs when the tank vapor space heats up (daytime solar gain) and expands, or when liquid is pumped in and displaces vapor — both push vapor out through the tank's venting system. In-breathing is the reverse: nighttime cooling contracts the vapor space, and pumping liquid out draws air (or blanket gas) in to replace the lost volume.",'Tank vents and blanketing regulators are sized specifically to handle the worst-case combination of thermal breathing and the maximum expected pump-in/pump-out rate, following the methodology in API 2000 — undersizing a vent can allow a tank to be over- or under-pressured badly enough to damage the shell or roof.']},
+{title:"Nitrogen Blanketing Basics",summary:"Keeping a tank's vapor space continuously inert instead of allowing it to breathe ordinary air.",body:["A nitrogen (or other inert gas) blanketing system maintains a small positive pressure of inert gas in a tank's vapor space at all times, using a pressure regulator that admits makeup gas as the tank in-breathes and vents excess as it out-breathes — keeping the vapor space consistently below the oxygen concentration needed to support combustion or unwanted oxidation.","Blanketing is distinct from a one-time purge: it's a continuous, ongoing protection system for a tank in normal service, sized primarily around the same thermal and pumping in-breathing rates used for conventional tank venting, just supplied with inert gas instead of atmospheric air."]},
+{title:"Vessel Nozzle Orientation and Its Effect on Level Measurement",summary:"Where a level instrument's connections physically sit on the vessel changes what its reading actually means.",body:["A DP level transmitter's zero reading corresponds to the elevation of its low-side tap, not necessarily the physical bottom of the vessel — if the tap is mounted some distance above the tangent line, the transmitter's 0% doesn't mean the vessel is actually empty.","This matters directly for volume calculations: converting a level reading into an inventory volume requires knowing the actual physical elevation the reading is referenced to, not just the percentage span the transmitter reports — a mismatch here is a common, easy-to-miss source of inventory calculation errors."]},
+{title:"Dished vs Flat Heads: Volume Implications",summary:"The shape of a vessel's end caps adds a meaningful amount of volume a simple cylindrical estimate leaves out.",body:["Pressure vessels are rarely built with genuinely flat heads — dished (torispherical), elliptical, or hemispherical heads are far more common because they handle internal pressure more efficiently than a flat plate of the same thickness, but they also add volume beyond what a simple cylinder-length calculation captures.","For a short, small-diameter vessel, head volume can be a significant fraction of total capacity; for a long horizontal vessel with a modest head depth relative to its overall length, the flat-head cylindrical approximation is often adequate — knowing which regime a specific vessel falls into is what determines whether the simplification is safe to use."]},
+{title:"API 2000 and Tank Venting",summary:"The standard that defines how much a storage tank actually needs to vent, and under what scenarios.",body:["API 2000 (Venting Atmospheric and Low-Pressure Storage Tanks) provides standardized methods and tables for calculating the required normal venting capacity — combining thermal breathing and the maximum liquid movement rate — as well as emergency venting capacity for a fire exposure scenario.","The standard explicitly separates normal venting (routine day-to-day operation) from emergency venting (fire case), because the required flow rates differ by a large margin — a tank's normal vent and its fire-case emergency vent are frequently entirely separate devices sized against very different flow requirements."]}
+]},
+{id:"piping",label:"Process Piping",color:"#5AA9D6",notes:[
+{title:"Erosional Velocity and API RP 14E",summary:"A widely used, decades-old rule of thumb for keeping fluid velocity in a process line below an erosion/corrosion risk threshold.",body:["API RP 14E's erosional velocity guideline, Ve = C/√ρ, gives a simple screening limit on fluid velocity based only on mixture density and a service-type constant C — deliberately simple enough to apply quickly during early design, without needing detailed erosion modeling.",'The guideline has known limitations widely discussed in industry — it doesn\u2019t account for solids content, specific corrosive species like CO₂ or H₂S, or sharp-bend geometry, all of which can lower the practical erosion threshold meaningfully below the generic API 14E number, so it\u2019s best treated as a first-pass screening check rather than a definitive erosion prediction.']},
+{title:"Line Sizing Trade-offs: Velocity vs Pressure Drop",summary:"A bigger pipe costs more to install but less to operate — the real sizing decision balances both.",body:["A smaller-diameter line costs less in pipe, fittings and supports, but drives higher velocity for the same flow rate — increasing frictional pressure drop (and pumping/compression energy cost) and pushing closer to erosional or noise limits.","A larger-diameter line reduces velocity and pressure drop but costs more upfront and takes up more physical space and structural support. Practical line sizing balances installed cost against lifetime operating cost, while still respecting hard limits like erosional velocity and any pressure drop budget set by the overall process design."]},
+{title:"Two-Phase Flow Regimes in Process Piping",summary:"A pipe carrying both liquid and gas together doesn't behave like either phase flowing alone.",body:["When liquid and gas flow together in a pipe, the two phases can arrange themselves in several distinct patterns — smoothly stratified layers, intermittent liquid slugs alternating with gas pockets, fine liquid droplets dispersed in a gas core, and others — depending on flow rates, pipe diameter, orientation and fluid properties.","The specific flow regime matters a great deal for downstream equipment design: slug flow in particular can deliver large, irregular liquid surges to downstream separators or pumps, which is exactly why slug-prone lines are often routed through a dedicated slug catcher sized to absorb that surge before it reaches more sensitive equipment."]},
+{title:"Pipe Schedule and Wall Thickness Basics",summary:"A numbering system for pipe wall thickness that isn't the same as nominal pipe size.",body:["Pipe schedule (Sch 40, Sch 80, and so on) describes wall thickness relative to a pipe's nominal diameter — a higher schedule number means a thicker wall for the same nominal size, providing more pressure-containing capability at the cost of more material and weight.","Nominal pipe size (NPS) doesn't correspond exactly to actual outside or inside diameter, particularly for smaller sizes — NPS is a labeling convention rooted in historical pipe sizing, not a direct physical measurement, which is why actual dimensional tables (not just the NPS number) are needed for any precise sizing or flow calculation."]},
+{title:"Slug Catchers and Why They're Needed",summary:"A dedicated vessel sized specifically to absorb the irregular liquid surges two-phase flow can deliver.",body:["A slug catcher is a vessel (or a set of parallel finger pipes) placed at the end of a two-phase pipeline specifically to absorb large, irregular liquid slugs before they can overwhelm downstream separation equipment sized only for steady-state flow.","Sizing a slug catcher requires estimating the largest credible slug volume the upstream line could generate — from pipeline terrain changes, pigging operations, or transient flow changes — which is a meaningfully different, more specialized calculation than routine steady-state line sizing."]}
+]},
+{id:"valves",label:"Control Valve Phenomena",color:"#E2B93B",notes:[
+{title:"Cavitation and Flashing (Recap)",summary:"The two related but distinct liquid-service phenomena a control valve sizing check has to screen for.",body:["As liquid accelerates through a valve restriction, local pressure drops — if it falls below the liquid's vapor pressure, vapor bubbles form. If downstream pressure recovers above vapor pressure again, those bubbles collapse violently (cavitation), causing erosion; if downstream pressure never recovers, the vapor simply stays as vapor and exits as a two-phase mixture (flashing).","Distinguishing the two matters for the fix: cavitation is addressed with anti-cavitation trim or staged pressure drop specifically to control the pressure recovery profile, while flashing is generally an inherent feature of the process pressures that trim design can only partially mitigate through erosion-resistant materials and geometry."]},
+{title:"Choked Flow in Control Valves",summary:"Beyond a certain pressure drop, increasing ΔP further stops increasing flow through the valve.",body:["For both liquid (cavitating/flashing) and gas/vapor service, a control valve reaches a point where further increasing the pressure drop across it no longer increases flow rate — the flow has become choked, limited by conditions at the vena contracta rather than by the total available ΔP.","Sizing a valve without checking for choked flow can produce a badly oversized (or simply wrong) capacity estimate, since the simple square-root ΔP relationship used for normal sizing breaks down once choking occurs — full sizing standards (IEC 60534, API 520 vapor equations) explicitly include a choked-flow check for exactly this reason."]},
+{title:"Noise Prediction Basics",summary:"High-velocity flow through a valve restriction generates noise through mechanisms that scale predictably with pressure drop.",body:["Aerodynamic noise in gas/vapor service and cavitation/turbulent noise in liquid service have different physical mechanisms but both increase sharply with pressure drop across the valve, which is why noise, cavitation and erosion risk often move together as design pressure drop increases.","Formal noise prediction methods (such as those in IEC 60534-8) estimate sound pressure level from the valve's flow conditions and trim design, letting an engineer check a design against noise limits (often driven by personnel exposure standards) before committing to a specific trim, rather than discovering an unacceptably loud valve after installation."]},
+{title:"Anti-Cavitation Trim Design",summary:"Specialized valve internals engineered specifically to control the pressure-recovery profile that drives cavitation.",body:["Anti-cavitation trims — multi-stage, tortuous-path, or drilled-hole designs — work by breaking a single large pressure drop into several smaller stages, or by creating many small parallel flow paths, so no single stage's local pressure ever drops far enough below vapor pressure to trigger significant cavitation.","These trims are meaningfully more expensive and often have lower maximum capacity for a given valve size than a standard trim, which is why they're specified deliberately once a cavitation check (like a sigma-index screen) flags genuine risk — not applied by default to every valve regardless of actual service conditions."]},
+{title:"Valve Sizing Margin and Rangeability",summary:"A control valve needs headroom on both ends of its stroke to actually control well, not just to pass rated flow.",body:["Sizing a valve too close to its maximum required Cv leaves little margin for future flow increases or fouling-related capacity loss, while sizing it too generously leaves the valve operating mostly near its closed position, where small stroke changes produce large, hard-to-control flow changes.","Rangeability describes the ratio between a valve's maximum and minimum controllable flow while maintaining reasonably accurate, stable control — a valve needs to be sized so the actual expected operating flow range falls comfortably within its rangeability, not just so its single maximum-flow point is technically covered."]}
+]}
+];
+var counts={notes:0,cats:DATA.length};
+var main=document.getElementById("noteSections");
+DATA.forEach(function(cat){
+  var section=document.createElement("section");
+  section.className="catsection";
+  var head=document.createElement("div");
+  head.className="catsection-head";
+  head.innerHTML='<span class="catdot" style="background:'+cat.color+'"></span><h2>'+cat.label+'</h2><span class="catcount">'+cat.notes.length+' notes</span>';
+  section.appendChild(head);
+  var grid=document.createElement("div");
+  grid.className="grid";
+  cat.notes.forEach(function(note){
+    counts.notes++;
+    var card=document.createElement("div");
+    card.className="note-card";
+    card.style.borderLeftColor=cat.color;
+    var words=note.body.join(" ").split(/\s+/).length;
+    var mins=Math.max(1,Math.round(words/200));
+    card.innerHTML='<button type="button" class="note-head" aria-expanded="false"><div class="note-toprow"><span class="note-tag" style="color:'+cat.color+'">'+cat.label+'</span><span class="note-time">'+mins+' min read</span></div><h3 class="note-title">'+note.title+'</h3><p class="note-summary">'+note.summary+'</p><div class="note-toggle-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>Read note</div></button><div class="note-body"><div class="note-body-inner">'+note.body.map(function(p){return "<p>"+p+"</p>";}).join("")+'</div></div>';
+    var btn=card.querySelector(".note-head");
+    btn.addEventListener("click",function(){
+      var open=card.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    grid.appendChild(card);
+  });
+  section.appendChild(grid);
+  main.appendChild(section);
+});
+document.getElementById("metaNoteCount").textContent = counts.notes;
+document.getElementById("metaCatCount").textContent = counts.cats;
+})();
+</script>
+<script src="../assets/app.js"></script>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>

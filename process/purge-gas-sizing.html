@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilution Purge Gas Sizing — Engineerz CorneR</title>
+<meta name="description" content="Dilution Purge Gas Sizing — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/purge-gas-sizing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Dilution Purge Gas Sizing — Engineerz CorneR">
+<meta property="og:description" content="Dilution Purge Gas Sizing — part of a free multi-discipline engineering calculator toolkit.">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/purge-gas-sizing">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dilution Purge Gas Sizing — Engineerz CorneR">
+<meta name="twitter:description" content="Dilution Purge Gas Sizing — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Dilution Purge Gas Sizing", "item": "https://www.engineerzcorner.com/process/purge-gas-sizing" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dilution Purge Gas Sizing",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Dilution Purge Gas Sizing \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/process/purge-gas-sizing",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Dilution Purge Gas Sizing</span></div></nav>
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pr-purge">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 4 6 7 6 11a6 6 0 1 1-12 0c0-4 3-7 6-11z"></path></svg></div>
+    <div><h1>Dilution Purge Gas Sizing</h1><div class="hero-sub">Purge volume and time to reach a target concentration</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="./">Process Index</a>
+    <a href="relief-valve-sizing">PR.01 Relief Valve Sizing</a>
+    <a href="vessel-volume-level">PR.02 Vessel Volume/Level</a>
+    <a href="line-sizing-velocity">PR.03 Line Sizing (Erosional V)</a>
+    <a href="cavitation-flashing-check">PR.04 Cavitation/Flashing</a>
+    <a href="purge-gas-sizing" class="current">PR.05 Purge Gas Sizing</a>
+    <a href="notes">PR.06 Notes</a>
+    <a href="symbols">PR.07 Symbols</a>
+    <a href="guides">PR.08 Guides</a>
+    <a href="comparisons">PR.09 Comparisons</a>
+  </div>
+
+  <div class="intro">Models continuous dilution purging of a well-mixed enclosure or vessel — displacing an initial O₂ or contaminant concentration down to a target level with a steady purge gas flow. Assumes perfect, instantaneous mixing (no dead zones or short-circuiting), which is optimistic for real vessels — apply a safety margin on top of the calculated purge time or volume for a confined-space or vessel-entry purge.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="pgsValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Enclosure &amp; Concentrations</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="pgsV">Enclosure/vessel volume, V <span class="unit">m³</span></label>
+        <input type="number" id="pgsV" value="20" step="0.5">
+      </div>
+      <div class="field">
+        <label for="pgsC0">Initial concentration, C₀ <span class="unit">%</span></label>
+        <input type="number" id="pgsC0" value="20.9" step="0.1">
+        <div class="hint">20.9% for normal air oxygen content.</div>
+      </div>
+      <div class="field">
+        <label for="pgsC1">Target concentration, C₁ <span class="unit">%</span></label>
+        <input type="number" id="pgsC1" value="0.5" step="0.1">
+      </div>
+      <div class="field">
+        <label for="pgsQ">Purge gas flow rate, Q <span class="unit">m³/h</span></label>
+        <input type="number" id="pgsQ" value="30" step="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">Purge time required</span>
+      <span class="rval" id="pgsTime">0.00 <small>min</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Total purge gas volume used</div><div class="sval" id="pgsVol">—</div></div>
+      <div class="stat"><div class="slabel">Volume turnovers (N)</div><div class="sval amber" id="pgsN">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note" id="pgsFormula">—</div>
+      <div class="hint" style="margin-top:8px;">Perfectly mixed dilution model: C(t)/C₀ = exp(−Qt/V), so N = ln(C₀/C₁) turnovers are needed, purge time t = (V/Q)·N, and total purge gas consumed = Q·t = V·N.</div>
+    </details>
+  </div>
+  <footer>Ideal-mixing model — real vessels typically need extra time/volume margin for incomplete mixing and dead zones. <a href="./">← Process Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function num(id){var e=el(id);return e?parseFloat(e.value):NaN;}
+  function fmt(v,d){return isFinite(v)?v.toFixed(d===undefined?2:d):"—";}
+  function setText(id,html){var e=el(id);if(e)e.innerHTML=html;}
+
+  function calc(){
+    if(!el("pgsV")) return;
+    var V=num("pgsV"), C0=num("pgsC0"), C1=num("pgsC1"), Q=num("pgsQ"), errs=0;
+    errs+=fieldError(el("pgsV"), isNaN(V)||V<=0 ? "Must be greater than 0." : null);
+    errs+=fieldError(el("pgsC0"), isNaN(C0)||C0<=0 ? "Must be greater than 0." : null);
+    errs+=fieldError(el("pgsC1"), isNaN(C1)||C1<=0 ? "Must be greater than 0." : (C1>=C0 ? "Target must be lower than initial concentration." : null));
+    errs+=fieldError(el("pgsQ"), isNaN(Q)||Q<=0 ? "Must be greater than 0." : null);
+    if(errs>0){ updateValidationBanner("pgsValidation",errs); return; }
+
+    var N = Math.log(C0/C1);
+    var t = (V/Q)*N;       // hours
+    var vol = Q*t;         // m3
+
+    setText("pgsTime", fmt(t*60,1)+" <small>min</small>");
+    setText("pgsVol", fmt(vol,2)+" m³");
+    setText("pgsN", fmt(N,2));
+    setText("pgsFormula", "N = ln(C₀/C₁) = ln("+fmt(C0,2)+"/"+fmt(C1,2)+") = "+fmt(N,3)+" &nbsp;·&nbsp; t = (V/Q)·N = "+fmt(t,3)+" hr");
+    updateValidationBanner("pgsValidation",0);
+  }
+  ["pgsV","pgsC0","pgsC1","pgsQ"].forEach(function(id){
+    var e=el(id); if(e){ e.addEventListener("input",calc); e.addEventListener("change",calc); }
+  });
+  calc();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
