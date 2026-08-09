@@ -4,17 +4,17 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
-    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
-    <pubDate>Sun, 09 Aug 2026 21:29:21 GMT</pubDate>
-  </item>
-  <item>
     <title>Chiller Machine: Main Parts &amp; Functions</title>
     <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
     <description>Every major chiller component explained — compressor, condenser, evaporator, EXV and 14 more — plus the refrigeration cycle, the chilled water circuit, and air-cooled vs water-cooled chillers compared.</description>
+    <pubDate>Sun, 09 Aug 2026 21:35:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
+    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
+    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
     <pubDate>Sun, 09 Aug 2026 21:29:21 GMT</pubDate>
   </item>
   <item>
