@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Ingress Protection (IP) Ratings Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</guid>
+    <description>How an IP rating is actually built — the solid-protection digit, the liquid-protection digit, and the optional letters — decoded digit by digit against IEC 60529, with a full ratings reference and an IP-to-NEMA cross-check.</description>
+    <pubDate>Sun, 09 Aug 2026 19:17:32 GMT</pubDate>
+  </item>
+  <item>
+    <title>Junction Boxes Explained: Types, Parts &amp; Ratings</title>
+    <link>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</guid>
+    <description>What a junction box actually does, the main types — pull box, gang box, weatherproof, explosion-proof, conduit body, terminal box, panel enclosure — its parts, a material and rating reference, box-fill sizing, and a selection checklist.</description>
+    <pubDate>Sun, 09 Aug 2026 19:17:32 GMT</pubDate>
+  </item>
+  <item>
     <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
     <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
     <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
@@ -197,20 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
     <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
     <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
-    <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
-    <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
-    <description>Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</title>
-    <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
-    <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
