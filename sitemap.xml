@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.engineerzcorner.com/</loc><lastmod>2026-08-08</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.engineerzcorner.com/about</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/</loc><lastmod>2026-08-09</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.engineerzcorner.com/about</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/</loc><lastmod>2026-08-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/alarm-setpoints</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/comparisons</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
@@ -37,7 +37,7 @@
   <url><loc>https://www.engineerzcorner.com/civil/staircase-geometry</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/civil/symbols</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/civil/trench-safe-slope</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/contact</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/contact</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/defect-finder</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/</loc><lastmod>2026-08-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/arc-flash-incident-energy</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -258,11 +258,11 @@
   <url><loc>https://www.engineerzcorner.com/posts/voltage-drop-lv-feeders-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/wind-turbine-components-working-principle</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/privacy-policy</loc><lastmod>2026-08-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/privacy-policy</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-08-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -289,5 +289,5 @@
   <url><loc>https://www.engineerzcorner.com/study-abroad/sop-word-checker</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/study-abroad/university-fee-comparison</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/study-abroad/visa-points-calculator</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/terms</loc><lastmod>2026-08-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/terms</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
 </urlset>
