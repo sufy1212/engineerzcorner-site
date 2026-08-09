@@ -4,11 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
+    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
+    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
+    <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
+    <pubDate>Sun, 09 Aug 2026 20:27:10 GMT</pubDate>
+  </item>
+  <item>
     <title>Pre-Commissioning vs Commissioning: What's the Difference</title>
     <link>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</guid>
-    <description>Pre-commissioning happens before energization; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.</description>
-    <pubDate>Sun, 09 Aug 2026 21:00:00 GMT</pubDate>
+    <description>Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.</description>
+    <pubDate>Sun, 09 Aug 2026 20:27:10 GMT</pubDate>
   </item>
   <item>
     <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</guid>
     <description>Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>ANSI Relay Numbers: Common Protection Relay Functions</title>
-    <link>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</guid>
-    <description>A working reference for the ANSI device numbers you'll actually run into on protection schemes — 50/51, 27/59, 87, 21, 67, 25 and more.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
