@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Chilled Water HVAC Systems: How the Loop Actually Works</title>
+    <link>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chilled-water-hvac-system-explained.html</guid>
+    <description>How a chilled water HVAC system moves heat from occupied zones all the way out to atmosphere.</description>
+    <pubDate>Sun, 09 Aug 2026 21:29:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Chiller Machine: Main Parts &amp; Functions</title>
+    <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
+    <description>Every major chiller component explained — compressor, condenser, evaporator, EXV and 14 more — plus the refrigeration cycle, the chilled water circuit, and air-cooled vs water-cooled chillers compared.</description>
+    <pubDate>Sun, 09 Aug 2026 21:29:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>HVAC System Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</guid>
+    <description>How an HVAC system actually conditions a space, component by component — compressor, condenser, expansion device, evaporator, air handler, ductwork, and controls.</description>
+    <pubDate>Sun, 09 Aug 2026 21:29:21 GMT</pubDate>
+  </item>
+  <item>
     <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
     <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
     <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
@@ -191,26 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</guid>
     <description>How an Access Control System actually works — main components, the six-step credential-to-unlock sequence, system architecture, integration with FAS/BMS/CCTV, and what an electrical site engineer does on an ACS install.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:58 GMT</pubDate>
-  </item>
-  <item>
-    <title>AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained.html</guid>
-    <description>What separates an AHU, FAHU, FCU, FMAHU and CSAHU — air source, installation style and typical application for each, in one comparison.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Air Changes per Hour: What ACH Actually Tells You (and Doesn't)</title>
-    <link>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/air-changes-per-hour-ventilation-explained.html</guid>
-    <description>What air changes per hour (ACH) measures, the formula behind it, typical ACH targets by space type.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Alarm Setpoint Bands: Why High and High-High Are Different Alarms</title>
-    <link>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</guid>
-    <description>Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
