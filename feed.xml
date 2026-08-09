@@ -4,39 +4,32 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
-    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
-  </item>
-  <item>
-    <title>Control Valve Components Explained</title>
+    <title>Control Valve Components Explained: From Signal to Throttled Flow</title>
     <link>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</guid>
-    <description>What every part of a control valve actually does — body, trim (plug &amp; seat), stem, packing, bonnet, actuator, and positioner — component by component, in the order a signal turns into a throttled flow.</description>
-    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
-  </item>
-  <item>
-    <title>Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</title>
-    <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
-    <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
-    <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
-    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
+    <description>What every part of a control valve actually does — body, trim, stem, packing, bonnet, actuator, and positioner — component by component, in the order a control signal turns into a throttled flow.</description>
+    <pubDate>Sun, 09 Aug 2026 16:30:00 GMT</pubDate>
   </item>
   <item>
     <title>Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</title>
     <link>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</guid>
-    <description>Two different velocity limits compete to size a process line — economic velocity minimizes lifecycle cost, the API RP 14E erosional velocity protects the pipe wall. The lower of the two always governs.</description>
-    <pubDate>Sun, 09 Aug 2026 16:47:06 GMT</pubDate>
+    <description>Two different velocity limits compete for your pipe size — the lower one always wins. Economic velocity minimizes lifecycle cost; API RP 14E erosional velocity protects the pipe wall.</description>
+    <pubDate>Sun, 09 Aug 2026 14:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type</title>
     <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
     <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
-    <description>Three ways a pressure relief valve holds its disc shut until set pressure — how back pressure, operating margin, and dirty service tolerance decide between a conventional, balanced bellows, or pilot-operated PSV.</description>
-    <pubDate>Sun, 09 Aug 2026 16:47:06 GMT</pubDate>
+    <description>Same job — stop overpressure — three different ways of holding the disc shut until then. How back pressure, operating margin and fouling tolerance decide which PSV type fits the service.</description>
+    <pubDate>Sun, 09 Aug 2026 12:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
+    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
+    <description>Both begin when local pressure inside the valve drops below the fluid's vapor pressure. Whether the downstream pressure recovers above it or not decides cavitation vs. flashing — and which failure pattern shows up on the trim.</description>
+    <pubDate>Sun, 09 Aug 2026 10:23:30 GMT</pubDate>
   </item>
   <item>
     <title>Pipe Routing Guide: 13 Rules Every Layout Should Follow</title>
@@ -211,6 +204,41 @@
     <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
     <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
     <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
+    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
+    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
+    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
+    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
+    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Glands: What They Do and How to Get the Selection Right</title>
+    <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
+    <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
+    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
+    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Centrifugal Pump Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
+    <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
