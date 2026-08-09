@@ -8,7 +8,21 @@
     <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
     <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
-    <pubDate>Sun, 09 Aug 2026 16:47:06 GMT</pubDate>
+    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
+  </item>
+  <item>
+    <title>Control Valve Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</guid>
+    <description>What every part of a control valve actually does — body, trim (plug &amp; seat), stem, packing, bonnet, actuator, and positioner — component by component, in the order a signal turns into a throttled flow.</description>
+    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
+  </item>
+  <item>
+    <title>Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</title>
+    <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
+    <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
+    <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
+    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
   </item>
   <item>
     <title>Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</title>
@@ -197,20 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
     <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
     <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
-    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
-    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
-    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
-    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
-    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
