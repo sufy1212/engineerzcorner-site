@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star (Y) and Delta (Δ) Connections Explained | Engineerz CorneR</title>
+<meta name="description" content="How Star (Y) and Delta (Δ) three-phase winding connections actually differ — the neutral point, the line/phase voltage and current relationships, terminal wiring, and why a Star-Delta starter switches between the two.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/star-delta-connection-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Star (Y) and Delta (Δ) Connections Explained">
+<meta property="og:description" content="The neutral point, the line/phase voltage and current relationships, terminal wiring, and why a Star-Delta starter switches between the two.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/star-delta-connection-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Star (Y) and Delta (Δ) Connections Explained">
+<meta name="twitter:description" content="How the two basic three-phase winding connections differ, and why a Star-Delta starter switches between them.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="star-delta-connection-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Star (Y) and Delta (Δ) Connections Explained",
+      "item": "https://www.engineerzcorner.com/posts/star-delta-connection-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Star (Y) and Delta (Δ) Connections Explained",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "description": "How Star (Y) and Delta (Δ) three-phase winding connections actually differ — the neutral point, the line/phase voltage and current relationships, terminal wiring, and why a Star-Delta starter switches between the two.",
+  "url": "https://www.engineerzcorner.com/posts/star-delta-connection-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/star-delta-connection-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Star (Y) and Delta (Δ) Connections Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Three-Phase Systems</span>
+    <h1>Star (Y) and Delta (Δ) Connections Explained</h1>
+    <p class="hero-sub">Two ways to wire three windings together, and they behave completely differently &mdash; different voltage, different current, different starting torque. Here's what actually changes between them, and why a starter switches from one to the other.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Three-Phase Systems</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Star joins one end of all three windings at a common neutral point; Delta joins the windings end-to-end into a closed triangle &mdash; there's no third option.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">In Star, line voltage is &radic;3 times phase voltage; in Delta, they're equal &mdash; that single relationship is where most of the practical difference comes from.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A motor started in Star draws roughly a third of its Delta starting current &mdash; but also produces only about a third of the starting torque.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A Star-Delta starter isn't a permanent choice between the two &mdash; it runs in Star to start, then switches to Delta once the motor is up to speed.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two ways to connect three windings</h2>
+    <p>Any three-phase winding set &mdash; in a motor, a transformer, or a generator &mdash; has six ends that need to go somewhere: two per winding, three windings. There are exactly two standard ways to join them. In a <b>Star (Y)</b> connection, one end of each winding is tied together at a common point, forming a neutral; the other three ends go out to the three phases. In a <b>Delta (Δ)</b> connection, the windings are joined end-to-end in a closed loop, and the three junctions between them go out to the three phases &mdash; there's no neutral point at all.</p>
+    <p>Everything else that differs between Star and Delta &mdash; voltage relationships, current relationships, starting behavior &mdash; follows directly from that one structural difference in how the windings are joined.</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <svg class="method-diagram" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="130" cy="118" r="4" fill="#F2B84B"/>
+          <path d="M130 118 L130 60" stroke="#5FD3E3" stroke-width="2" fill="none"/>
+          <path d="M126 62 q4 -6 8 0 q4 -6 8 0 q4 -6 8 0" stroke="#5FD3E3" stroke-width="1.6" fill="none" transform="translate(-16,10)"/>
+          <circle cx="130" cy="40" r="4" fill="#e06666"/>
+          <text x="130" y="28" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f6f1e4" text-anchor="middle">R</text>
+          <path d="M130 118 L70 158" stroke="#5FD3E3" stroke-width="2" fill="none"/>
+          <circle cx="55" cy="167" r="4" fill="#f2c14e"/>
+          <text x="45" y="180" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f6f1e4" text-anchor="middle">Y</text>
+          <path d="M130 118 L190 158" stroke="#5FD3E3" stroke-width="2" fill="none"/>
+          <circle cx="205" cy="167" r="4" fill="#5b9bd5"/>
+          <text x="215" y="180" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f6f1e4" text-anchor="middle">B</text>
+          <text x="150" y="122" font-family="IBM Plex Mono" font-size="9" fill="#9fc2cb">N</text>
+        </svg>
+        <b>Star (Y) Connection</b>
+        <p>One end of every winding meets at a common neutral point (N); the free ends go to R, Y, B. A neutral wire can be taken from the common point if the load needs it.</p>
+      </div>
+      <div class="method-card">
+        <svg class="method-diagram" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M130 45 L60 155 L200 155 Z" stroke="#5FD3E3" stroke-width="2" fill="none"/>
+          <circle cx="130" cy="45" r="4" fill="#e06666"/>
+          <text x="130" y="30" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f6f1e4" text-anchor="middle">R</text>
+          <circle cx="60" cy="155" r="4" fill="#f2c14e"/>
+          <text x="45" y="172" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f6f1e4" text-anchor="middle">Y</text>
+          <circle cx="200" cy="155" r="4" fill="#5b9bd5"/>
+          <text x="215" y="172" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f6f1e4" text-anchor="middle">B</text>
+        </svg>
+        <b>Delta (Δ) Connection</b>
+        <p>The three windings are joined end-to-end, closing into a triangle. The three junctions connect to R, Y, B directly &mdash; there's no neutral point to take a wire from.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The line/phase relationship that drives everything</h2>
+    <p>"Phase" values describe what a single winding actually sees; "line" values describe what's measured between two incoming supply terminals. In Star, a winding only sees part of the line voltage, because two windings are effectively in series between any two lines &mdash; that's what produces the &radic;3 factor. In Delta, each winding is connected directly across a line-to-line voltage, so phase and line voltage are simply equal. Current works the opposite way: in Star, the same current that flows in a winding flows straight out to the line; in Delta, line current is the sum of two winding currents combining out of phase, which is where Delta's &radic;3 factor on current comes from.</p>
+
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Feature</th><th>Star (Y)</th><th>Delta (&Delta;)</th></tr>
+        <tr><td>Connection</td><td>Winding ends meet at a common neutral point</td><td>Winding ends connected end-to-end in a loop</td></tr>
+        <tr><td>Neutral</td><td>Available</td><td>Not available</td></tr>
+        <tr><td>Line vs. phase voltage</td><td>V<sub>L</sub> = &radic;3 &times; V<sub>ph</sub></td><td>V<sub>L</sub> = V<sub>ph</sub></td></tr>
+        <tr><td>Line vs. phase current</td><td>I<sub>L</sub> = I<sub>ph</sub></td><td>I<sub>L</sub> = &radic;3 &times; I<sub>ph</sub></td></tr>
+        <tr><td>Starting current</td><td>Low</td><td>High</td></tr>
+        <tr><td>Starting torque</td><td>Low</td><td>High</td></tr>
+        <tr><td>Insulation requirement</td><td>Lower &mdash; each winding sees only phase voltage</td><td>Higher &mdash; each winding sees full line voltage</td></tr>
+        <tr><td>Common use</td><td>Motor starting, power distribution</td><td>Motor running, heavy-load applications</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Terminal connections in practice</h2>
+    <p>A standard three-phase motor brings out six terminals &mdash; U1, V1, W1 and U2, V2, W2 &mdash; specifically so the connection can be made either way at the terminal box, without rewiring the motor internally. For Star, W2, U2 and V2 are bridged together to form the neutral point, and U1, V1, W1 take the three supply lines. For Delta, each terminal is bridged to the next in sequence (W2&ndash;U1, U2&ndash;V1, V2&ndash;W1), closing the loop, and the supply connects across those same junctions. It's the same motor either way &mdash; only the jumper arrangement on the terminal block changes.</p>
+
+    <h2><span class="h2-dot"></span>Why a Star-Delta starter exists</h2>
+    <p>A motor's windings are rated for a specific voltage per winding. A dual-voltage motor (say 400V line) is built so its windings are individually rated for 400V &mdash; meaning it can run in Delta directly across a 400V line, or it can start in Star, where each winding only sees 400V &divide; &radic;3 &asymp; 230V. Starting in Star cuts the starting current to roughly a third of what Delta would draw directly across the line, at the cost of roughly a third of the torque. A Star-Delta starter uses that tradeoff deliberately: start in Star to limit inrush, then switch to Delta once the motor's up near its rated speed and doesn't need the extra torque to keep accelerating.</p>
+
+    <div class="signal-grid">
+      <div class="signal-card cold">
+        <b>Start &mdash; Star</b>
+        <span>Low current, low torque. Used only for acceleration, never as the running connection for a motor rated to run in Delta.</span>
+      </div>
+      <div class="signal-card hot">
+        <b>Run &mdash; Delta</b>
+        <span>Full line voltage per winding, full rated torque and current. The motor switches here automatically once it's reached roughly 80&ndash;90% of rated speed.</span>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>What switching to Delta actually buys</h2>
+    <div class="chip-grid">
+      <div class="chip"><span class="cdot"></span><span>Reduces inrush current on the supply during starting</span></div>
+      <div class="chip"><span class="cdot"></span><span>Minimizes the voltage dip that inrush current would otherwise cause on the supply system</span></div>
+      <div class="chip"><span class="cdot"></span><span>Reduces mechanical and thermal shock during the transition to full running torque</span></div>
+      <div class="chip"><span class="cdot"></span><span>Lets the same motor both start gently and run at full rated capability, without oversizing anything</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Star and Delta are the only two ways to join three windings &mdash; a common neutral point, or a closed loop with no neutral.</span></li>
+      <li><span class="tk-check">✓</span><span>The &radic;3 factor between line and phase values flips depending on connection: it applies to voltage in Star, to current in Delta.</span></li>
+      <li><span class="tk-check">✓</span><span>Same motor, same windings &mdash; only the terminal-box jumpers change between a Star and a Delta connection.</span></li>
+      <li><span class="tk-check">✓</span><span>Star trades torque for lower starting current; Delta gives full torque and current straight away.</span></li>
+      <li><span class="tk-check">✓</span><span>A Star-Delta starter isn't a fixed choice &mdash; it starts in Star and switches to Delta once the motor is near rated speed.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Star%20(Y)%20and%20Delta%20(%CE%94)%20Connections%20Explained&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fstar-delta-connection-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fstar-delta-connection-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Star%20(Y)%20and%20Delta%20(%CE%94)%20Connections%20Explained&text=The%20neutral%20point%2C%20the%20line%2Fphase%20voltage%20and%20current%20relationships%2C%20and%20why%20a%20Star-Delta%20starter%20switches%20between%20the%20two.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fstar-delta-connection-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Star%20(Y)%20and%20Delta%20(%CE%94)%20Connections%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AStar%20(Y)%20and%20Delta%20(%CE%94)%20Connections%20Explained%0AHow%20the%20two%20basic%20three-phase%20winding%20connections%20differ.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fstar-delta-connection-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/motor-starting-simulator">Motor Starting Simulator (DOL vs Star-Delta vs VFD) &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="motor-starting-methods-dol-star-delta-vfd-compared">DOL vs Star-Delta vs Soft Starter vs VFD: Motor Starting Methods Compared</a></li><li><a href="transformer-generator-sizing-motor-starting">Transformer &amp; Generator Sizing: Why Motor Starting Decides the Genset</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../electrical/motor-starting-simulator">Try the Motor Starting Simulator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
