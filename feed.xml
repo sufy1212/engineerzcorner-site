@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
+    <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
+    <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
+    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a side-by-side comparison of current, torque, cost and complexity.</description>
+    <pubDate>Sun, 09 Aug 2026 20:17:27 GMT</pubDate>
+  </item>
+  <item>
+    <title>Star (Y) and Delta (Δ) Connections Explained</title>
+    <link>https://www.engineerzcorner.com/posts/star-delta-connection-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/star-delta-connection-explained.html</guid>
+    <description>How Star (Y) and Delta (Δ) three-phase winding connections actually differ — the neutral point, the line/phase voltage and current relationships, terminal wiring, and why a Star-Delta starter switches between the two.</description>
+    <pubDate>Sun, 09 Aug 2026 20:17:27 GMT</pubDate>
+  </item>
+  <item>
     <title>Ingress Protection (IP) Ratings Explained</title>
     <link>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</guid>
@@ -197,20 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
     <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors, ECBs, maintenance bypass switches and key interlocks — what each device does, how it differs, and where it's used.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load</title>
-    <link>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</link>
-    <guid>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</guid>
-    <description>Why a beam's bending capacity comes down to two separate checks — bending stress against section modulus, and deflection against span — not just the applied load.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
-  </item>
-  <item>
-    <title>Bearing Failures: Root Causes &amp; Prevention</title>
-    <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
-    <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
