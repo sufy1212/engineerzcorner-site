@@ -4,18 +4,25 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
-    <pubDate>Sun, 09 Aug 2026 16:02:54 GMT</pubDate>
+    <title>Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</title>
+    <link>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</guid>
+    <description>Two different velocity limits compete for your pipe size — the lower one always wins. Economic velocity minimizes lifecycle cost; API RP 14E erosional velocity protects the pipe wall.</description>
+    <pubDate>Sun, 09 Aug 2026 14:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type</title>
     <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
     <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
-    <description>Three ways a pressure relief valve holds its disc shut until set pressure — how back pressure, operating margin, and dirty service tolerance decide between a conventional, balanced bellows, or pilot-operated PSV.</description>
-    <pubDate>Sun, 09 Aug 2026 16:02:54 GMT</pubDate>
+    <description>Same job — stop overpressure — three different ways of holding the disc shut until then. How back pressure, operating margin and fouling tolerance decide which PSV type fits the service.</description>
+    <pubDate>Sun, 09 Aug 2026 12:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
+    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
+    <description>Both begin when local pressure inside the valve drops below the fluid's vapor pressure. Whether the downstream pressure recovers above it or not decides cavitation vs. flashing — and which failure pattern shows up on the trim.</description>
+    <pubDate>Sun, 09 Aug 2026 10:23:30 GMT</pubDate>
   </item>
   <item>
     <title>Pipe Routing Guide: 13 Rules Every Layout Should Follow</title>
@@ -211,6 +218,20 @@
     <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
     <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
+    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
+    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
+    <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
+  </item>
+  <item>
+    <title>Centrifugal Pump Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
+    <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:30 GMT</pubDate>
   </item>
 </channel></rss>
