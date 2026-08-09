@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erosional vs. Economic Velocity in Process Line Sizing | Engineerz CorneR</title>
+<meta name="description" content="Two different velocity limits compete to size a process line — economic velocity minimizes lifecycle cost, the API RP 14E erosional velocity protects the pipe wall. The lower of the two always governs.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?">
+<meta property="og:description" content="Two different velocity limits compete for your pipe size — the lower one always wins. Economic velocity minimizes lifecycle cost; API RP 14E erosional velocity protects the pipe wall from erosion and corrosion.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1350">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?">
+<meta name="twitter:description" content="Two different velocity limits compete for your pipe size — the lower one always wins. Economic velocity minimizes lifecycle cost; API RP 14E erosional velocity protects the pipe wall.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
+      "item": "https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09",
+  "description": "Two different velocity limits compete for your pipe size — the lower one always wins. Economic velocity minimizes lifecycle cost; API RP 14E erosional velocity protects the pipe wall from erosion and corrosion.",
+  "url": "https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained",
+  "image": "https://www.engineerzcorner.com/posts/img/erosional-vs-economic-velocity-infographic.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Line Sizing</span>
+    <h1>Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</h1>
+    <p class="hero-sub">Two velocity limits compete for every process line — one keeps the project cheap, the other keeps the pipe wall intact. They rarely agree, and the smaller of the two is the one that actually decides your pipe size.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Process / Line Sizing</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Economic velocity sizes a line for the lowest total lifecycle cost — balancing pipe capital cost against pumping/energy cost.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Erosional velocity (API RP 14E, Ve = C/√ρ) is a safety/integrity ceiling that protects the pipe wall and fittings from erosion and corrosion.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A line's actual pipe size has to keep velocity under whichever of the two limits is lower — that's the one that governs.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Clean liquid service is usually cost-governed; two-phase and solids-laden gas lines are usually erosion-governed instead.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Ask "how fast should the fluid move in this pipe?" and there are two entirely different, entirely valid answers — and they rarely land on the same number. <b>Economic velocity</b> answers the question a project accountant would ask: what pipe size gives the lowest total cost over the line's life? <b>Erosional velocity</b> answers the question an integrity engineer would ask: what's the fastest this fluid can safely move before it starts eating the pipe wall? A correctly sized line respects both.</p>
+
+    <img class="infographic" src="img/erosional-vs-economic-velocity-infographic.png" alt="Infographic comparing erosional velocity and economic velocity for process line sizing — basis, formula, what each protects, what happens if ignored, and which service each usually governs">
+    <p class="fig-caption">Erosional vs. economic velocity — two different limits, and the lower one always sets the pipe size.</p>
+
+    <h2><span class="h2-dot"></span>1. Economic velocity — sizing for cost</h2>
+    <p>A larger pipe diameter costs more to buy and install, but it slows the fluid down, which cuts friction loss and therefore pumping/compression energy over the line's operating life. A smaller pipe is cheaper up front but pushes velocity up, driving friction loss — and the pumping energy bill — higher for as long as the line runs. <b>Economic velocity</b> is the point where the sum of those two costs is lowest, and while it can be solved as a genuine optimization, most day-to-day sizing instead leans on published rule-of-thumb velocity ranges by service (roughly 1–3 m/s for liquid pump discharge, lower for suction, much higher for gas and steam), which approximate where that optimum tends to fall.</p>
+    <p>Ignoring the economic velocity doesn't break anything — the line still operates safely. It just means the project spent more than it needed to, either on oversized pipe or on the pumping energy an undersized line demands for decades.</p>
+
+    <h2><span class="h2-dot"></span>2. Erosional velocity — sizing for integrity</h2>
+    <p>The API RP 14E guideline sets a different kind of ceiling: <b>Ve = C/√ρ</b> (velocity in ft/s, density ρ in lb/ft³), where C is a constant set by the service — lower for solids-laden or continuous-duty lines, higher for clean, corrosion-resistant, or intermittent service. This isn't a cost optimum; it's a screening check against erosion from entrained solids or liquid droplets and against corrosion-film scouring, both of which concentrate hardest at elbows, tees and other points where flow direction changes.</p>
+    <p>Ignoring the erosional limit is a different kind of problem than ignoring the economic one — instead of a bigger utility bill, it's accelerated wall thinning, and eventually leaks or failures at the fittings that take the worst of it.</p>
+
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>&nbsp;</th><th>Economic velocity</th><th>Erosional velocity</th></tr></thead>
+        <tbody>
+          <tr><td>Basis</td><td>Lowest lifecycle cost</td><td>API RP 14E integrity limit</td></tr>
+          <tr><td>Formula / source</td><td>Service rule-of-thumb ranges</td><td>Ve = C/√ρ</td></tr>
+          <tr><td>Protects</td><td>The project budget</td><td>The pipe wall &amp; fittings</td></tr>
+          <tr><td>If ignored</td><td>Line still works, costs more</td><td>Erosion, corrosion, leaks, failure</td></tr>
+          <tr><td>Usually governs</td><td>Clean, single-phase liquid</td><td>Two-phase, solids-laden, low-P gas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>3. Which one actually governs?</h2>
+    <p>Both are ceilings on velocity, so both push toward a larger pipe as they get more restrictive. The line has to satisfy the more restrictive of the two — meaning the pipe size must be large enough to keep velocity under the <b>lower</b> of the economic and erosional limits. In practice: compute the actual velocity from v = Q/A, compare it against both limits, and whichever limit is lower is the one that's actually sizing the line — the other one just rides along with comfortable margin.</p>
+    <p>For clean, single-phase liquid service, the erosional limit tends to sit well above typical economic velocities, so cost quietly governs and the erosional check just confirms there's margin. For two-phase flow, solids-laden streams, or low-pressure gas lines, the erosional velocity can drop well below what the economics alone would suggest — forcing a bigger, more expensive line than a cost-only sizing would ever choose, because integrity has to win that argument.</p>
+
+    <h2><span class="h2-dot"></span>Quick understanding</h2>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>Economic velocity — the cost lens</b>
+        <p>Balances pipe cost against pumping energy. Usually the quieter constraint on clean liquid lines, where erosion risk is naturally low.</p>
+      </div>
+      <div class="split-card latent">
+        <b>Erosional velocity — the integrity lens</b>
+        <p>A hard API RP 14E ceiling protecting the pipe wall. Often the deciding constraint on two-phase, solids-laden, or low-pressure gas lines.</p>
+      </div>
+    </div>
+    <p>Sizing a line on economics alone risks an erosion problem the cost model never saw; sizing purely to the erosional limit without checking economics can leave money on the table on services where it wasn't actually the binding constraint. Checking both is the only way to know which one you're actually designing to.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Economic velocity minimizes total lifecycle cost — pipe capital cost traded against pumping/energy cost over the line's life.</span></li>
+      <li><span class="tk-check">✓</span><span>Erosional velocity (API RP 14E, Ve = C/√ρ) is a safety/integrity ceiling protecting the pipe wall and fittings, not a cost figure.</span></li>
+      <li><span class="tk-check">✓</span><span>The pipe size must satisfy the lower of the two limits — that's the one that actually governs the line size.</span></li>
+      <li><span class="tk-check">✓</span><span>Clean, single-phase liquid service is usually cost-governed; two-phase, solids-laden, or low-pressure gas lines are usually erosion-governed.</span></li>
+      <li><span class="tk-check">✓</span><span>Both checks matter — one avoids overspending, the other avoids a wall-thickness problem the cost model would never catch.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Erosional%20vs.%20Economic%20Velocity%3A%20Which%20One%20Actually%20Sizes%20Your%20Pipe%3F%20%E2%80%94%20Two%20velocity%20limits%20compete%20for%20every%20process%20line%2C%20and%20the%20lower%20one%20always%20wins.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ferosional-vs-economic-velocity-line-sizing-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ferosional-vs-economic-velocity-line-sizing-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Erosional%20vs.%20Economic%20Velocity%3A%20Which%20One%20Actually%20Sizes%20Your%20Pipe%3F&text=Economic%20velocity%20minimizes%20lifecycle%20cost%3B%20API%20RP%2014E%20erosional%20velocity%20protects%20the%20pipe%20wall.%20The%20lower%20of%20the%20two%20always%20governs.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ferosional-vs-economic-velocity-line-sizing-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Erosional%20vs.%20Economic%20Velocity%3A%20Which%20One%20Actually%20Sizes%20Your%20Pipe%3F&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AErosional%20vs.%20Economic%20Velocity%3A%20Which%20One%20Actually%20Sizes%20Your%20Pipe%3F%0AEconomic%20velocity%20minimizes%20lifecycle%20cost%3B%20API%20RP%2014E%20erosional%20velocity%20protects%20the%20pipe%20wall.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ferosional-vs-economic-velocity-line-sizing-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../process/line-sizing-velocity">Process Line Sizing (Erosional Velocity) &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="cavitation-vs-flashing-control-valve-explained">Cavitation vs. Flashing in Control Valves: What's the Difference?</a></li><li><a href="psv-types-conventional-bellows-pilot-operated-compared">Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/line-sizing-velocity">Try the Line Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
