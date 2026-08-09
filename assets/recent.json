@@ -1,52 +1,52 @@
 [
   {
-    "t": "Commercial Terms of Project",
-    "u": "pm/commercial-terms",
+    "t": "Application Timeline Planner",
+    "u": "study-abroad/application-timeline-planner",
     "d": "2026-08-09"
   },
   {
-    "t": "Earned Value Management",
-    "u": "pm/evm",
+    "t": "Cost of Living Calculator",
+    "u": "study-abroad/cost-of-living-calculator",
     "d": "2026-08-09"
   },
   {
-    "t": "PM Glossary",
-    "u": "pm/glossary",
+    "t": "Currency Converter",
+    "u": "study-abroad/currency-converter",
     "d": "2026-08-09"
   },
   {
-    "t": "Incoterms",
-    "u": "pm/incoterms",
+    "t": "Education Loan EMI Calculator",
+    "u": "study-abroad/education-loan-emi-calculator",
     "d": "2026-08-09"
   },
   {
-    "t": "Meeting Minutes &amp; Action Items",
-    "u": "pm/meeting-minutes",
+    "t": "GPA / CGPA Converter",
+    "u": "study-abroad/gpa-converter",
     "d": "2026-08-09"
   },
   {
-    "t": "Permit to Work / LOTO Checklist",
-    "u": "pm/permit-to-work",
+    "t": "Proof of Funds Calculator",
+    "u": "study-abroad/proof-of-funds-calculator",
     "d": "2026-08-09"
   },
   {
-    "t": "PMP / PMBOK Reference",
-    "u": "pm/pmp-pmbok-reference",
+    "t": "Score Calculator",
+    "u": "study-abroad/score-calculator",
     "d": "2026-08-09"
   },
   {
-    "t": "Punch List / Snag Tracker",
-    "u": "pm/punch-list",
+    "t": "SOP / Essay Word Checker",
+    "u": "study-abroad/sop-word-checker",
     "d": "2026-08-09"
   },
   {
-    "t": "RACI Matrix Builder",
-    "u": "pm/raci-matrix",
+    "t": "University Fee Comparison",
+    "u": "study-abroad/university-fee-comparison",
     "d": "2026-08-09"
   },
   {
-    "t": "Risk Register",
-    "u": "pm/risk-register",
+    "t": "Visa Points Calculator",
+    "u": "study-abroad/visa-points-calculator",
     "d": "2026-08-09"
   }
 ]
