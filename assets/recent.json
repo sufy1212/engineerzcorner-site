@@ -1,5 +1,10 @@
 [
   {
+    "t": "Legend Sheet in a P&amp;ID Explained",
+    "u": "posts/pid-legend-sheet-explained",
+    "d": "2026-08-10"
+  },
+  {
     "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
     "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
     "d": "2026-08-10"
@@ -42,11 +47,6 @@
   {
     "t": "Star (Y) and Delta (Δ) Connections Explained",
     "u": "posts/star-delta-connection-explained",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Ingress Protection (IP) Ratings Explained",
-    "u": "posts/ingress-protection-ip-rating-explained",
     "d": "2026-08-09"
   }
 ]
