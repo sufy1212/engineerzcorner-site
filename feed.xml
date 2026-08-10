@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Transformer Vector Groups Explained</title>
+    <link>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</guid>
+    <description>How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.</description>
+    <pubDate>Mon, 10 Aug 2026 19:30:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Chiller Machine: Main Parts &amp; Functions</title>
     <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
