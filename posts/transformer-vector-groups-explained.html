@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformer Vector Groups Explained | Engineerz CorneR</title>
+<meta name="description" content="How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/transformer-vector-groups-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Transformer Vector Groups Explained">
+<meta property="og:description" content="How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/transformer-vector-groups-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Transformer Vector Groups Explained">
+<meta name="twitter:description" content="How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="transformer-vector-groups-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Transformer Vector Groups Explained",
+      "item": "https://www.engineerzcorner.com/posts/transformer-vector-groups-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Transformer Vector Groups Explained",
+      "datePublished": "2026-08-10",
+      "dateModified": "2026-08-10",
+  "description": "How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.",
+  "url": "https://www.engineerzcorner.com/posts/transformer-vector-groups-explained",
+  "image": "https://www.engineerzcorner.com/assets/og/og-posts.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/transformer-vector-groups-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Transformer Vector Groups Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Transformers</span>
+    <h1>Transformer Vector Groups Explained</h1>
+    <p class="hero-sub">Connection, neutral access, phase displacement and safe parallel operation — how to read a code like Dyn11 off a nameplate, and why a mismatch you can't see on a single-line diagram can still trip a breaker.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 60076</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Vector group is a three-part code — winding connections, neutral access, and LV phase shift relative to HV — read straight off the nameplate.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The clock number isn't decorative: HV always sits at 12 o'clock, and the LV phasor's clock position gives the exact phase displacement in 30° steps.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Matching vector groups is necessary for paralleling transformers, but it's not sufficient — ratio, taps and impedance still have to line up.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A 60° clock mismatch between two "similar" units is enough to circulate damaging current the moment the tie breaker closes.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Every power transformer nameplate carries a short code like <b>Dyn11</b> or <b>Yyn0</b>. It looks minor next to the kVA rating and impedance figure next to it, but it's telling you three separate things at once: how each winding is connected, whether a neutral is brought out, and exactly how far the LV phasors sit behind or ahead of the HV phasors. Get it wrong when paralleling two transformers and you're not looking at a nuisance trip — you're looking at circulating current large enough to damage windings.</p>
+
+    <h2><span class="h2-dot"></span>Decode the nameplate: Dyn11</h2>
+    <p>The code reads in a fixed order: HV connection, LV connection, neutral, clock number. Uppercase always means the higher-voltage winding; lowercase always means the lower-voltage winding.</p>
+
+    <div class="decode-grid">
+      <div class="decode-chip hv"><div class="dc-letter">D</div><div class="dc-label">HV Delta</div><div class="dc-sub">uppercase = HV</div></div>
+      <div class="decode-chip lv"><div class="dc-letter">y</div><div class="dc-label">LV Star</div><div class="dc-sub">lowercase = LV</div></div>
+      <div class="decode-chip n"><div class="dc-letter">n</div><div class="dc-label">Neutral</div><div class="dc-sub">brought out</div></div>
+      <div class="decode-chip clk"><div class="dc-letter">11</div><div class="dc-label">Clock No.</div><div class="dc-sub">phase position</div></div>
+    </div>
+
+    <div class="decode-visual">
+      <div class="dv-item">
+        <svg width="90" height="80" viewBox="0 0 90 80"><polygon points="45,10 80,68 10,68" fill="none" stroke="#B85F1F" stroke-width="4" stroke-linejoin="round"/></svg>
+        <div class="dv-label">HV: Δ (Delta)</div>
+      </div>
+      <div class="dv-item">
+        <svg width="90" height="80" viewBox="0 0 90 80"><line x1="45" y1="10" x2="45" y2="70" stroke="#0B7A70" stroke-width="4"/><line x1="45" y1="40" x2="16" y2="58" stroke="#0B7A70" stroke-width="4"/><line x1="45" y1="40" x2="74" y2="58" stroke="#0B7A70" stroke-width="4"/><circle cx="45" cy="40" r="4" fill="#0B7A70"/></svg>
+        <div class="dv-label">LV: Y + N (Star)</div>
+      </div>
+    </div>
+
+    <div class="decode-callout">
+      <div class="dcall-title">Correct interpretation</div>
+      <div class="dcall-line">HV is the 12 o'clock reference. LV sits at clock position 11.</div>
+      <div class="dcall-result">LV LEADS HV BY 30°</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Clock notation — 30° per hour</h2>
+    <p class="lede">The LV phasor's position is measured clockwise from the HV reference sitting at 12.</p>
+
+    <div class="clock-wrap">
+      <div class="clock-face-col">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <circle cx="75" cy="75" r="68" fill="none" stroke="#E3E6E9" stroke-width="2"/>
+          <g font-family="IBM Plex Mono" font-size="10" fill="#5B6470" text-anchor="middle">
+            <text x="75" y="16">12</text><text x="109" y="26">1</text><text x="130" y="50">2</text>
+            <text x="138" y="80">3</text><text x="130" y="110">4</text><text x="109" y="134">5</text>
+            <text x="75" y="144">6</text><text x="41" y="134">7</text><text x="20" y="110">8</text>
+            <text x="12" y="80">9</text><text x="20" y="50">10</text><text x="41" y="26">11</text>
+          </g>
+          <line x1="75" y1="75" x2="75" y2="22" stroke="#0A1930" stroke-width="3" stroke-linecap="round"/>
+          <line x1="75" y1="75" x2="41" y2="30" stroke="#B85F1F" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="75" cy="75" r="4" fill="#1A1F26"/>
+        </svg>
+        <div style="font-family:IBM Plex Mono;font-size:11px;color:#5B6470;margin-top:6px">● HV ref &nbsp; ● LV at 11</div>
+      </div>
+      <div class="clock-legend">
+        <div class="clock-legend-row"><b>1</b><span>30° lag</span></div>
+        <div class="clock-legend-row"><b>2</b><span>60° lag</span></div>
+        <div class="clock-legend-row"><b>3</b><span>90° lag</span></div>
+        <div class="clock-legend-row"><b>4</b><span>120° lag</span></div>
+        <div class="clock-legend-row"><b>5</b><span>150° lag</span></div>
+        <div class="clock-legend-row"><b>6</b><span>180°</span></div>
+        <div class="clock-legend-row"><b>7</b><span>150° lead</span></div>
+        <div class="clock-legend-row"><b>11</b><span>30° lead</span></div>
+        <div class="clock-legend-row"><b>0</b><span>0° in phase</span></div>
+        <div class="clock-formula">θ = n × 30° clockwise. Clock 11 = 330° clockwise, equivalent to a 30° lead.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why it matters across the power system</h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 2"></path></svg></div>
+          <div class="tool-card-title">Parallel operation</div>
+        </div>
+        <div class="tool-card-desc">Avoids angle mismatch and circulating current between units on the same bus.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path></svg></div>
+          <div class="tool-card-title">Protection</div>
+        </div>
+        <div class="tool-card-desc">Sets relay compensation (e.g. differential CT connections) and phase relationships.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9"></path><path d="M7 9l5 5 5-5"></path><path d="M6 21h12"></path></svg></div>
+          <div class="tool-card-title">Neutral &amp; earthing</div>
+        </div>
+        <div class="tool-card-desc">Defines neutral access and available fault-current paths.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"></path></svg></div>
+          <div class="tool-card-title">Zero sequence</div>
+        </div>
+        <div class="tool-card-desc">Influences harmonics and unbalanced-current paths through the winding set.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l5-6 4 4 7-9"></path></svg></div>
+          <div class="tool-card-title">System integration</div>
+        </div>
+        <div class="tool-card-desc">Supports correct metering, planning and coordination between connected networks.</div>
+      </div>
+    </div>
+
+    <div class="info-strip"><span class="dot"></span><span><b>Engineering takeaway:</b> a matching vector group alone does not guarantee safe paralleling — ratio, taps and impedance must also be verified.</span></div>
+
+    <h2><span class="h2-dot"></span>Parallel-operation decision gate</h2>
+    <p>Match the electrical conditions — not only the transformer labels.</p>
+
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span>Same frequency and phase sequence</span></li>
+      <li><span class="ck-mark">✓</span><span>Same angular displacement, polarity and terminal mapping</span></li>
+      <li><span class="ck-mark">✓</span><span>Matching voltage ratio and tap positions</span></li>
+      <li><span class="ck-mark">✓</span><span>Similar impedance voltage (u<sub>k</sub>%) and X/R ratio</span></li>
+      <li><span class="ck-mark">✓</span><span>Compatible kVA ratings for acceptable load sharing</span></li>
+    </ul>
+
+    <div class="two-col">
+      <div class="split-card aligned">
+        <b>Aligned — can parallel</b>
+        <div class="sc-pair"><span class="sc-chip">Dyn11 · 30° lead</span><span class="sc-op">✓</span><span class="sc-chip">Dyn11 · 30° lead</span></div>
+        <p>Subject to ratio, impedance and test verification.</p>
+      </div>
+      <div class="split-card mismatch">
+        <b>Mismatch — do not close</b>
+        <div class="sc-pair"><span class="sc-chip">Dyn11 · 30° lead</span><span class="sc-op">✕</span><span class="sc-chip">Dyn1 · 30° lag</span></div>
+        <p>Clock positions differ by 60°. Any proposed exception requires an approved engineering study and manufacturer acceptance.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Quick reference</h2>
+    <p class="lede">Selected examples; application determines suitability.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Group</th><th>Windings</th><th>LV shift</th></tr>
+        <tr><td>Yyn0</td><td>Star / star + N</td><td>0° in phase</td></tr>
+        <tr><td>Dyn11</td><td>Delta / star + N</td><td>30° lead</td></tr>
+        <tr><td>Yd1</td><td>Star / delta</td><td>30° lag</td></tr>
+        <tr><td>Dy5</td><td>Delta / star</td><td>150° lag</td></tr>
+        <tr><td>Yzn11</td><td>Star / zigzag + N</td><td>30° lead</td></tr>
+      </table>
+    </div>
+
+    <div class="notation-key">
+      <span><b>D / d</b> Delta</span>
+      <span><b>Y / y</b> Star</span>
+      <span><b>Z / z</b> Zigzag</span>
+      <span><b>n</b> = neutral terminal brought out</span>
+      <span>Uppercase = HV winding · Lowercase = LV winding</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Pre-energization good practice</h2>
+    <div class="step-strip">
+      <div class="step-card"><div class="step-num">1</div><b>Read</b><span>Nameplate &amp; vector diagram</span></div>
+      <div class="step-card"><div class="step-num">2</div><b>Verify</b><span>Terminals, sequence &amp; polarity</span></div>
+      <div class="step-card"><div class="step-num">3</div><b>Match</b><span>Ratio, tap position &amp; impedance</span></div>
+      <div class="step-card"><div class="step-num">4</div><b>Test</b><span>Ratio, phase angle &amp; circulation</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>The vector group code always reads HV connection, LV connection, neutral, then clock number — HV is the fixed 12 o'clock reference.</span></li>
+      <li><span class="tk-check">✓</span><span>Each clock hour equals 30° of phase displacement, measured clockwise from HV to LV.</span></li>
+      <li><span class="tk-check">✓</span><span>Paralleling requires matching angular displacement and polarity, plus matching ratio, tap position, impedance and kVA — not just a matching label.</span></li>
+      <li><span class="tk-check">✓</span><span>A 60° clock difference between two "similar" transformers is a hard stop, not a tolerance to work around.</span></li>
+      <li><span class="tk-check">✓</span><span>Follow approved project documents, applicable standards (IEC 60076 series) and manufacturer instructions before closing any tie breaker.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Transformer%20Vector%20Groups%20Explained%20%E2%80%94%20decoding%20Dyn11%2C%20clock%20notation%20and%20the%20parallel-operation%20decision%20gate.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-vector-groups-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-vector-groups-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Transformer%20Vector%20Groups%20Explained&text=Decoding%20Dyn11%2C%20clock%20notation%2C%20and%20the%20parallel-operation%20decision%20gate.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-vector-groups-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Transformer%20Vector%20Groups%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ATransformer%20Vector%20Groups%20Explained%0AHow%20to%20decode%20Dyn11%2C%20read%20clock%20notation%2C%20and%20decide%20whether%20two%20transformers%20can%20safely%20parallel.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-vector-groups-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/transformer-generator-sizing">Transformer &amp; Generator Sizing Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="power-transformer-construction-working-principle">Power Transformers Explained: Construction &amp; Working Principle</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
