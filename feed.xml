@@ -8,7 +8,7 @@
     <link>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</guid>
     <description>How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.</description>
-    <pubDate>Mon, 10 Aug 2026 19:30:00 GMT</pubDate>
+    <pubDate>Mon, 10 Aug 2026 19:32:47 GMT</pubDate>
   </item>
   <item>
     <title>Chiller Machine: Main Parts &amp; Functions</title>
@@ -211,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
     <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an Air Circuit Breaker (ACB) — what each protection parameter does, typical setting ranges, and why the settings exist as a coordinated set, not individual dials.</description>
-    <pubDate>Sat, 08 Aug 2026 10:23:58 GMT</pubDate>
-  </item>
-  <item>
-    <title>Access Control System (ACS) Explained: Components, Architecture &amp; Site Work</title>
-    <link>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</guid>
-    <description>How an Access Control System actually works — main components, the six-step credential-to-unlock sequence, system architecture, integration with FAS/BMS/CCTV, and what an electrical site engineer does on an ACS install.</description>
     <pubDate>Sat, 08 Aug 2026 10:23:58 GMT</pubDate>
   </item>
 </channel></rss>

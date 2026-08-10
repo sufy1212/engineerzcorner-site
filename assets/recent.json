@@ -1,5 +1,10 @@
 [
   {
+    "t": "Transformer Vector Groups Explained",
+    "u": "posts/transformer-vector-groups-explained",
+    "d": "2026-08-10"
+  },
+  {
     "t": "Chiller Machine: Main Parts &amp; Functions",
     "u": "posts/chiller-machine-parts-functions-explained",
     "d": "2026-08-10"
@@ -42,11 +47,6 @@
   {
     "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
     "u": "posts/junction-box-types-parts-explained",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
-    "u": "posts/4-20ma-current-loop-basics",
     "d": "2026-08-09"
   }
 ]
