@@ -5,6 +5,16 @@
     "d": "2026-08-10"
   },
   {
+    "t": "Legend Sheet in a P&amp;ID Explained",
+    "u": "posts/pid-legend-sheet-explained",
+    "d": "2026-08-10"
+  },
+  {
+    "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+    "u": "posts/pid-piping-instrumentation-diagram-explained",
+    "d": "2026-08-10"
+  },
+  {
     "t": "Transformer Vector Groups Explained",
     "u": "posts/transformer-vector-groups-explained",
     "d": "2026-08-10"
@@ -37,16 +47,6 @@
   {
     "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
     "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Star (Y) and Delta (Δ) Connections Explained",
-    "u": "posts/star-delta-connection-explained",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Ingress Protection (IP) Ratings Explained",
-    "u": "posts/ingress-protection-ip-rating-explained",
     "d": "2026-08-09"
   }
 ]
