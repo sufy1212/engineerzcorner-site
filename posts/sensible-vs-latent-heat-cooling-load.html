@@ -16,13 +16,13 @@
 <meta property="og:title" content="Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature">
 <meta property="og:description" content="Why a cooling load calculation has two separate halves, what sensible and latent heat each actually cool, typical splits by space type, and why ignoring latent load leaves a room cold but clammy.">
 <meta property="og:url" content="https://www.engineerzcorner.com/posts/sensible-vs-latent-heat-cooling-load">
-<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image" content="https://www.engineerzcorner.com/posts/img/sensible-vs-latent-heat-infographic.png">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="1290">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature">
 <meta name="twitter:description" content="Why a cooling load calculation has two separate halves, what sensible and latent heat each actually cool, typical splits by space type, and why ignoring latent load leaves a room cold but clammy.">
-<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/posts/img/sensible-vs-latent-heat-infographic.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -81,6 +81,10 @@
 }
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
 </head>
 <body>
 
@@ -134,6 +138,9 @@
   <div class="post-body">
 
     <h2><span class="h2-dot"></span>Two different jobs, one coil</h2>
+    <img class="infographic" src="img/sensible-vs-latent-heat-infographic.png" alt="Infographic comparing sensible and latent heat in cooling load, their sources, the total cooling load formula, and typical sensible/latent splits by space type">
+    <p class="fig-caption">Sensible heat drives the thermometer; latent heat drives the humidity a thermostat never sees.</p>
+
     <p>Every cooling coil is doing two jobs on the air passing through it at once. It's removing sensible heat &mdash; the heat that you'd feel as a temperature drop on a thermometer. And, if the air's moisture content is above the coil's dew point, it's also condensing water vapour out of the air, which removes latent heat &mdash; heat tied up in the state of the water itself, not its temperature.</p>
     <p>A thermostat only reports the sensible side. That's exactly why a space can read the correct setpoint on the wall and still feel muggy: the sensible load was matched, but the latent load &mdash; the moisture &mdash; wasn't removed fast enough to keep up with what people, cooking, or outside air kept adding.</p>
 

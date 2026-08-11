@@ -16,13 +16,13 @@
 <meta property="og:title" content="MPPT vs PWM Solar Charge Controllers: What Actually Changes">
 <meta property="og:description" content="Why an MPPT controller can pull 20-30% more power than PWM from the same panel, when PWM is still the right call, and how to actually size either one against your battery voltage.">
 <meta property="og:url" content="https://www.engineerzcorner.com/posts/mppt-vs-pwm-solar-charge-controllers">
-<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image" content="https://www.engineerzcorner.com/posts/img/mppt-vs-pwm-infographic.png">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="1142">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MPPT vs PWM Solar Charge Controllers: What Actually Changes">
 <meta name="twitter:description" content="Why an MPPT controller can pull 20-30% more power than PWM from the same panel, when PWM is still the right call, and how to actually size either one against your battery voltage.">
-<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/posts/img/mppt-vs-pwm-infographic.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -57,6 +57,10 @@
 }
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
 </head>
 <body>
 
@@ -121,6 +125,9 @@
   <div class="post-body">
 
     <h2><span class="h2-dot"></span>What each controller is actually doing</h2>
+    <img class="infographic" src="img/mppt-vs-pwm-infographic.png" alt="Infographic comparing MPPT and PWM solar charge controllers: how each works, panel operating voltage, best fit, cost, and the power formulas behind the efficiency gap">
+    <p class="fig-caption">PWM forces the panel to the battery's voltage; MPPT converts the panel's own max-power voltage down, recovering the gap as current.</p>
+
     <p>A PWM (pulse-width modulation) controller is, electrically, a switch. Once the battery approaches its target voltage, the controller rapidly connects and disconnects the panel from the battery, and the average current tapers off &mdash; but while connected, the panel is forced to operate at essentially the battery's voltage, whatever that happens to be at that moment. There's no voltage conversion; the panel's own maximum-power voltage is irrelevant to what the controller lets it deliver.</p>
     <p>An MPPT (maximum power point tracking) controller is a switching DC-DC converter, almost always a buck (step-down) topology for solar. It continuously samples the panel's voltage and current, hunts for the operating point that yields the highest instantaneous power (P = V &times; I), and then converts that power down to the battery's voltage &mdash; stepping voltage down and current up to conserve power on both sides of the conversion, minus a small conversion loss.</p>
 

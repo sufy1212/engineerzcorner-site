@@ -16,13 +16,13 @@
 <meta property="og:title" content="PLC vs DDC: What Actually Separates Them">
 <meta property="og:description" content="PLC and DDC controllers both automate equipment, but they're built for different jobs. Purpose, communication protocols, programming, I/O handling, and when to use each.">
 <meta property="og:url" content="https://www.engineerzcorner.com/posts/plc-vs-ddc-key-differences">
-<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image" content="https://www.engineerzcorner.com/posts/img/plc-vs-ddc-infographic.png">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="1130">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PLC vs DDC: What Actually Separates Them">
 <meta name="twitter:description" content="PLC and DDC controllers both automate equipment, but they're built for different jobs. Purpose, communication protocols, programming, I/O handling, and when to use each.">
-<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/posts/img/plc-vs-ddc-infographic.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -81,6 +81,10 @@
 }
 </script>
 <link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
 </head>
 <body>
 <link rel="stylesheet" href="../assets/common-blocks.css">
@@ -129,6 +133,9 @@
   <div class="post-body">
 
     <h2><span class="h2-dot"></span>Same idea, different job</h2>
+    <img class="infographic" src="img/plc-vs-ddc-infographic.png" alt="Infographic comparing PLC and DDC controllers across purpose, application, communication protocols, programming, I/O handling, data logging and user interface">
+    <p class="fig-caption">Same building blocks, different jobs &mdash; a PLC built for the shop floor next to a DDC built for the building.</p>
+
     <p>A PLC (Programmable Logic Controller) is an industrial controller built for machine and process automation — reading sensors, driving actuators, and executing hardwired logic fast enough to keep up with a production line. It's designed to survive the shop floor: vibration, electrical noise, temperature swings, and cycle times measured in milliseconds.</p>
     <p>A DDC (Direct Digital Controller) is a building automation controller, the workhorse inside a BMS (Building Management System). Instead of running a conveyor or a packaging line, it's monitoring and controlling HVAC equipment, lighting, and building services — loads that change over minutes, not milliseconds, and where the priority shifts from raw speed to easy integration, trending, and remote monitoring across an entire facility.</p>
 
