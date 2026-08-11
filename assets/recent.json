@@ -1,5 +1,45 @@
 [
   {
+    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+    "u": "posts/33-11kv-substation-diagram-equipment-overview",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
+    "u": "posts/electrical-switchgear-protection-devices-explained",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "Gas Insulated Substation (GIS) Explained",
+    "u": "posts/gas-insulated-substation-gis-explained",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
+    "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "MPPT vs PWM Solar Charge Controllers: What Actually Changes",
+    "u": "posts/mppt-vs-pwm-solar-charge-controllers",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "PLC vs DDC: What Actually Separates Them",
+    "u": "posts/plc-vs-ddc-key-differences",
+    "d": "2026-08-11"
+  },
+  {
+    "t": "Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature",
+    "u": "posts/sensible-vs-latent-heat-cooling-load",
+    "d": "2026-08-11"
+  },
+  {
     "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
     "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
     "d": "2026-08-10"
@@ -8,45 +48,5 @@
     "t": "Legend Sheet in a P&amp;ID Explained",
     "u": "posts/pid-legend-sheet-explained",
     "d": "2026-08-10"
-  },
-  {
-    "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
-    "u": "posts/pid-piping-instrumentation-diagram-explained",
-    "d": "2026-08-10"
-  },
-  {
-    "t": "Transformer Vector Groups Explained",
-    "u": "posts/transformer-vector-groups-explained",
-    "d": "2026-08-10"
-  },
-  {
-    "t": "Chiller Machine: Main Parts &amp; Functions",
-    "u": "posts/chiller-machine-parts-functions-explained",
-    "d": "2026-08-10"
-  },
-  {
-    "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
-    "u": "posts/chilled-water-hvac-system-explained",
-    "d": "2026-08-10"
-  },
-  {
-    "t": "HVAC System Components Explained",
-    "u": "posts/hvac-system-components-explained",
-    "d": "2026-08-10"
-  },
-  {
-    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-    "u": "posts/electrical-panel-fat-checklist",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Pre-Commissioning vs Commissioning: What's the Difference",
-    "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-08-09"
   }
 ]
