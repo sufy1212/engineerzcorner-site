@@ -87,59 +87,159 @@
 .card-grid-v2 .orb{position:absolute;border-radius:50%;filter:blur(36px);z-index:0;pointer-events:none}
 .card-grid-v2 .status{position:absolute;top:20px;left:24px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:8.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#fff;padding:3px 9px;border-radius:20px;background:#ffffff1c;border:1px solid #ffffff30;backdrop-filter:blur(4px)}
 
+/* ---------- ELECTRICAL ---------- */
 .card-grid-v2 .c-elec .card-face{background:linear-gradient(150deg,#150920 0%,#2b0f3d 45%,#160a28 100%)}
 .card-grid-v2 .c-elec{--glow:#FFD93D}
-.card-grid-v2 .c-elec .orb1{width:190px;height:190px;background:#FFD93D;top:-60px;right:-40px;opacity:.32}
-.card-grid-v2 .c-elec .orb2{width:140px;height:140px;background:#9D4EDD;bottom:-40px;left:-20px;opacity:.38}
+.card-grid-v2 .c-elec .orb1{width:190px;height:190px;background:#FFD93D;top:-60px;right:-40px;opacity:.32;animation:elecOrb 4s ease-in-out infinite}
+.card-grid-v2 .c-elec .orb2{width:140px;height:140px;background:#9D4EDD;bottom:-40px;left:-20px;opacity:.38;animation:elecOrb 5s ease-in-out infinite reverse}
+@keyframes elecOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,-14px) scale(1.15)}}
+.card-grid-v2 .c-elec .bolt-svg{position:absolute;z-index:2;top:8px;right:10px;width:66px;height:100px;opacity:0}
+.card-grid-v2 .c-elec .bolt-svg path{stroke:#FFD93D;stroke-width:2;fill:#FFD93D;filter:drop-shadow(0 0 10px #FFD93D)}
+.card-grid-v2 .c-elec .bolt-svg{animation:elecStrike 3.4s ease-in-out infinite}
+@keyframes elecStrike{0%,88%,100%{opacity:0}90%{opacity:1}92%{opacity:.15}94%{opacity:1}97%{opacity:0}}
+.card-grid-v2 .c-elec .card-icon{animation:elecIconPulse 1.8s ease-in-out infinite}
+@keyframes elecIconPulse{0%,100%{box-shadow:0 0 0 0 #ffd93d4d}50%{box-shadow:0 0 0 9px #ffd93d00}}
+.card-grid-v2 .c-elec .card-icon svg .z{animation:elecZigZag 1.8s ease-in-out infinite}
+@keyframes elecZigZag{0%,100%{filter:brightness(1)}45%{filter:brightness(1)}50%{filter:brightness(2.3)}55%{filter:brightness(1)}}
 
+/* ---------- MECHANICAL ---------- */
 .card-grid-v2 .c-mech .card-face{background:linear-gradient(150deg,#0e1217 0%,#1c2530 55%,#0e1217 100%)}
 .card-grid-v2 .c-mech{--glow:#4FD1C5}
-.card-grid-v2 .c-mech .orb1{width:170px;height:170px;background:#4FD1C5;top:-40px;left:-40px;opacity:.16}
+.card-grid-v2 .c-mech .orb1{width:170px;height:170px;background:#4FD1C5;top:-40px;left:-40px;opacity:.16;animation:mechOrb 6s ease-in-out infinite}
+@keyframes mechOrb{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+.card-grid-v2 .c-mech .gears{position:absolute;right:-14px;bottom:-20px;width:140px;height:140px;z-index:2;opacity:.85}
+.card-grid-v2 .c-mech .gA{transform-box:fill-box;transform-origin:center;animation:mechGA 8s linear infinite}
+.card-grid-v2 .c-mech .gB{transform-box:fill-box;transform-origin:center;animation:mechGB 5.5s linear infinite reverse}
+@keyframes mechGA{to{transform:rotate(360deg)}}
+@keyframes mechGB{to{transform:rotate(360deg)}}
+.card-grid-v2 .c-mech .card-icon svg{animation:mechIconSpin 5s linear infinite}
+@keyframes mechIconSpin{to{transform:rotate(360deg)}}
 
+/* ---------- HVAC ---------- */
 .card-grid-v2 .c-hvac .card-face{background:linear-gradient(150deg,#061826 0%,#0c2b3e 50%,#04141f 100%)}
 .card-grid-v2 .c-hvac{--glow:#61E8E1}
-.card-grid-v2 .c-hvac .orb1{width:210px;height:210px;background:#61E8E1;top:-60px;right:-60px;opacity:.32}
-.card-grid-v2 .c-hvac .orb2{width:130px;height:130px;background:#3E92CC;bottom:-30px;left:10px;opacity:.32}
+.card-grid-v2 .c-hvac .orb1{width:210px;height:210px;background:#61E8E1;top:-60px;right:-60px;opacity:.32;animation:hvacDrift 7s ease-in-out infinite}
+.card-grid-v2 .c-hvac .orb2{width:130px;height:130px;background:#3E92CC;bottom:-30px;left:10px;opacity:.32;animation:hvacDrift 9s ease-in-out infinite reverse}
+@keyframes hvacDrift{0%,100%{transform:translate(0,0)}50%{transform:translate(-16px,14px)}}
+.card-grid-v2 .c-hvac .snow{position:absolute;z-index:2;width:5px;height:5px;border-radius:50%;background:#eafcff;top:-8px;opacity:.9;animation:hvacSnowFall linear infinite}
+@keyframes hvacSnowFall{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}100%{transform:translateY(220px) translateX(16px);opacity:0}}
+.card-grid-v2 .c-hvac .card-icon svg{animation:hvacIconSpin 4s ease-in-out infinite}
+@keyframes hvacIconSpin{0%,100%{transform:rotate(0deg)}50%{transform:rotate(90deg)}}
 
+/* ---------- CIVIL ---------- */
 .card-grid-v2 .c-civil .card-face{background:linear-gradient(150deg,#26130a 0%,#5c2413 50%,#231007 100%)}
 .card-grid-v2 .c-civil{--glow:#FF8C42}
-.card-grid-v2 .c-civil .orb1{width:190px;height:190px;background:#FF8C42;bottom:-60px;right:-50px;opacity:.32}
+.card-grid-v2 .c-civil .orb1{width:190px;height:190px;background:#FF8C42;bottom:-60px;right:-50px;opacity:.32;animation:civilOrb 5.5s ease-in-out infinite}
+@keyframes civilOrb{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.card-grid-v2 .c-civil .grid2{position:absolute;inset:0;z-index:1;background-image:linear-gradient(#FF8C4222 1px,transparent 1px),linear-gradient(90deg,#FF8C4222 1px,transparent 1px);background-size:18px 18px;animation:civilGridFade 4s ease-in-out infinite;opacity:.5}
+@keyframes civilGridFade{0%,100%{opacity:.3}50%{opacity:.7}}
+.card-grid-v2 .c-civil .crane2{position:absolute;right:18px;top:14px;width:38px;height:38px;z-index:2;opacity:.8}
+.card-grid-v2 .c-civil .hook2{transform-box:fill-box;transform-origin:top center;animation:civilCraneBob 2.6s ease-in-out infinite}
+@keyframes civilCraneBob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.card-grid-v2 .c-civil .card-icon svg .win2{animation:civilWinBlink2 3s ease-in-out infinite}
+.card-grid-v2 .c-civil .card-icon svg .win2:nth-child(2){animation-delay:.4s}
+.card-grid-v2 .c-civil .card-icon svg .win2:nth-child(3){animation-delay:.8s}
+@keyframes civilWinBlink2{0%,100%{opacity:.3}50%{opacity:1}}
 
+/* ---------- AUTOMATION ---------- */
 .card-grid-v2 .c-auto .card-face{background:linear-gradient(150deg,#0c0416 0%,#210a35 50%,#0c0416 100%)}
 .card-grid-v2 .c-auto{--glow:#00F0FF}
-.card-grid-v2 .c-auto .orb1{width:160px;height:160px;background:#FF2FB0;top:-40px;right:-30px;opacity:.28}
+.card-grid-v2 .c-auto .cybergrid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(#FF2FB030 1px,transparent 1px),linear-gradient(90deg,#00F0FF20 1px,transparent 1px);background-size:20px 20px;animation:autoGridMove 6s linear infinite;opacity:.5}
+@keyframes autoGridMove{to{background-position:20px 20px}}
+.card-grid-v2 .c-auto .orb1{width:160px;height:160px;background:#FF2FB0;top:-40px;right:-30px;opacity:.28;animation:autoOrb 4.5s ease-in-out infinite}
+@keyframes autoOrb{0%,100%{opacity:.18}50%{opacity:.42}}
+.card-grid-v2 .c-auto .matrixdot{position:absolute;z-index:2;width:3px;height:3px;background:#00F0FF;border-radius:50%;box-shadow:0 0 6px #00F0FF;top:-6px;animation:autoFall linear infinite}
+@keyframes autoFall{0%{transform:translateY(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(210px);opacity:0}}
+.card-grid-v2 .c-auto .card-icon svg .led2{animation:autoLed2 1.4s ease-in-out infinite}
+.card-grid-v2 .c-auto .card-icon svg .led2:nth-child(2){animation-delay:.2s}
+.card-grid-v2 .c-auto .card-icon svg .led2:nth-child(3){animation-delay:.4s}
+.card-grid-v2 .c-auto .card-icon svg .led2:nth-child(4){animation-delay:.6s}
+@keyframes autoLed2{0%,100%{opacity:.2}50%{opacity:1;filter:drop-shadow(0 0 4px #00F0FF)}}
 
+/* ---------- SOLAR ---------- */
 .card-grid-v2 .c-solar .card-face{background:linear-gradient(150deg,#2b0a12 0%,#7a1e1e 45%,#c2410c 100%)}
 .card-grid-v2 .c-solar{--glow:#FFD23F}
-.card-grid-v2 .c-solar .orb1{width:230px;height:230px;background:#FFD23F;top:-70px;right:-70px;opacity:.5}
+.card-grid-v2 .c-solar .orb1{width:230px;height:230px;background:#FFD23F;top:-70px;right:-70px;opacity:.5;animation:solarBlaze 3s ease-in-out infinite}
+@keyframes solarBlaze{0%,100%{transform:scale(1);opacity:.45}50%{transform:scale(1.2);opacity:.7}}
+.card-grid-v2 .c-solar .ring2{position:absolute;left:36px;top:36px;width:14px;height:14px;border-radius:50%;border:1.5px solid #FFD23F;transform:translate(-50%,-50%);animation:solarPing2 2.4s ease-out infinite;z-index:2}
+.card-grid-v2 .c-solar .ring2.r2{animation-delay:.6s}
+.card-grid-v2 .c-solar .ring2.r3{animation-delay:1.2s}
+@keyframes solarPing2{0%{width:14px;height:14px;opacity:.6}100%{width:170px;height:170px;opacity:0}}
+.card-grid-v2 .c-solar .card-icon svg .rays2{transform-box:fill-box;transform-origin:center;animation:solarRay2 7s linear infinite}
+@keyframes solarRay2{to{transform:rotate(360deg)}}
+.card-grid-v2 .c-solar .card-icon svg .core2{transform-box:fill-box;transform-origin:center;animation:solarCore2 1.6s ease-in-out infinite}
+@keyframes solarCore2{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
 
+/* ---------- PROCESS ---------- */
 .card-grid-v2 .c-process .card-face{background:linear-gradient(150deg,#031a17 0%,#0a3d34 50%,#031a17 100%)}
 .card-grid-v2 .c-process{--glow:#2DD4BF}
-.card-grid-v2 .c-process .orb1{width:190px;height:190px;background:#2DD4BF;bottom:-60px;left:-50px;opacity:.3}
+.card-grid-v2 .c-process .orb1{width:190px;height:190px;background:#2DD4BF;bottom:-60px;left:-50px;opacity:.3;animation:procOrb 5s ease-in-out infinite}
+@keyframes procOrb{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.card-grid-v2 .c-process .bub2{position:absolute;bottom:-8px;width:6px;height:6px;border-radius:50%;background:#2DD4BF;box-shadow:0 0 6px #2dd4bf88;z-index:2;animation:procBubRise2 3.6s ease-in infinite}
+@keyframes procBubRise2{0%{transform:translateY(0) scale(.6);opacity:0}12%{opacity:.95}100%{transform:translateY(-140px) scale(1.1);opacity:0}}
+.card-grid-v2 .c-process .card-icon svg .bubble2{animation:procIconRise2 2.4s ease-in infinite;transform-box:fill-box;transform-origin:center}
+.card-grid-v2 .c-process .card-icon svg .bubble2:nth-child(2){animation-delay:.5s}
+.card-grid-v2 .c-process .card-icon svg .bubble2:nth-child(3){animation-delay:1s}
+@keyframes procIconRise2{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-9px);opacity:0}}
 
+/* ---------- POSTS ---------- */
 .card-grid-v2 .c-posts .card-face{background:linear-gradient(150deg,#0f0a20 0%,#241146 50%,#12081f 100%)}
 .card-grid-v2 .c-posts{--glow:#7C6CF7}
-.card-grid-v2 .c-posts .orb1{width:180px;height:180px;background:#7C6CF7;top:-50px;left:-40px;opacity:.38}
+.card-grid-v2 .c-posts .orb1{width:180px;height:180px;background:#7C6CF7;top:-50px;left:-40px;opacity:.38;animation:postsOrb 5s ease-in-out infinite}
+@keyframes postsOrb{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.card-grid-v2 .c-posts .pagestack{position:absolute;right:16px;bottom:14px;width:56px;height:66px;z-index:2;opacity:.55}
+.card-grid-v2 .c-posts .pg{position:absolute;inset:0;border:1.4px solid #ffffff55;border-radius:5px;background:#ffffff08}
+.card-grid-v2 .c-posts .pg2{transform:translate(5px,5px);animation:postsFloat 4s ease-in-out infinite}
+.card-grid-v2 .c-posts .pg3{transform:translate(10px,10px);animation:postsFloat 4s ease-in-out infinite .6s}
+@keyframes postsFloat{0%,100%{transform:translate(5px,5px)}50%{transform:translate(6px,2px)}}
+.card-grid-v2 .c-posts .typecursor{position:absolute;z-index:2;left:24px;bottom:28px;width:2px;height:12px;background:#fff;animation:postsCursor 1s steps(1) infinite}
+@keyframes postsCursor{0%,49%{opacity:1}50%,100%{opacity:0}}
+.card-grid-v2 .c-posts .card-icon svg .writeline2{stroke-dasharray:8;stroke-dashoffset:8;animation:postsWrite2 2.6s ease-in-out infinite}
+.card-grid-v2 .c-posts .card-icon svg .writeline2:nth-child(2){animation-delay:.35s}
+.card-grid-v2 .c-posts .card-icon svg .writeline2:nth-child(3){animation-delay:.7s}
+@keyframes postsWrite2{0%{stroke-dashoffset:8}35%{stroke-dashoffset:0}70%{stroke-dashoffset:0}100%{stroke-dashoffset:-8}}
 
+/* ---------- GENERAL TOOLS ---------- */
 .card-grid-v2 .c-general .card-face{background:linear-gradient(150deg,#12141f 0%,#252a45 50%,#12141f 100%)}
 .card-grid-v2 .c-general{--glow:#94A3B8}
-.card-grid-v2 .c-general .orb1{width:180px;height:180px;background:#94A3B8;top:-50px;right:-40px;opacity:.3}
+.card-grid-v2 .c-general .orb1{width:180px;height:180px;background:#94A3B8;top:-50px;right:-40px;opacity:.3;animation:generalOrb 5.5s ease-in-out infinite}
+@keyframes generalOrb{0%,100%{transform:rotate(0deg) scale(1)}50%{transform:rotate(20deg) scale(1.12)}}
+.card-grid-v2 .c-general .card-icon svg{animation:generalIconSpin 4.5s ease-in-out infinite}
+@keyframes generalIconSpin{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-25deg)}}
 
+/* ---------- STUDY ABROAD ---------- */
 .card-grid-v2 .c-study .card-face{background:linear-gradient(150deg,#071a2b 0%,#0d3352 50%,#071a2b 100%)}
 .card-grid-v2 .c-study{--glow:#38BDF8}
-.card-grid-v2 .c-study .orb1{width:190px;height:190px;background:#38BDF8;bottom:-50px;right:-40px;opacity:.32}
+.card-grid-v2 .c-study .orb1{width:190px;height:190px;background:#38BDF8;bottom:-50px;right:-40px;opacity:.32;animation:studyDrift 7s ease-in-out infinite}
+@keyframes studyDrift{0%,100%{transform:translate(0,0)}50%{transform:translate(-14px,-10px)}}
+.card-grid-v2 .c-study .card-icon svg{animation:studyIconFloat 3.2s ease-in-out infinite}
+@keyframes studyIconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 
+/* ---------- PROJECT MANAGEMENT ---------- */
 .card-grid-v2 .c-pm .card-face{background:linear-gradient(150deg,#241505 0%,#5c3a0d 50%,#231400 100%)}
 .card-grid-v2 .c-pm{--glow:#F5B400}
-.card-grid-v2 .c-pm .orb1{width:190px;height:190px;background:#F5B400;top:-50px;left:-40px;opacity:.3}
+.card-grid-v2 .c-pm .orb1{width:190px;height:190px;background:#F5B400;top:-50px;left:-40px;opacity:.3;animation:pmOrb 5s ease-in-out infinite}
+@keyframes pmOrb{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.card-grid-v2 .c-pm .card-icon svg{animation:pmIconCheck 2.6s ease-in-out infinite}
+@keyframes pmIconCheck{0%,80%,100%{filter:brightness(1)}88%{filter:brightness(1.8)}}
 
+/* ---------- INTERVIEW PREP ---------- */
 .card-grid-v2 .c-interview .card-face{background:linear-gradient(150deg,#240a1c 0%,#5c1339 50%,#230a1a 100%)}
 .card-grid-v2 .c-interview{--glow:#F472B6}
-.card-grid-v2 .c-interview .orb1{width:190px;height:190px;background:#F472B6;bottom:-50px;left:-30px;opacity:.32}
+.card-grid-v2 .c-interview .orb1{width:190px;height:190px;background:#F472B6;bottom:-50px;left:-30px;opacity:.32;animation:interviewOrb 6s ease-in-out infinite}
+@keyframes interviewOrb{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.card-grid-v2 .c-interview .card-icon{animation:interviewIconPulse 2s ease-in-out infinite}
+@keyframes interviewIconPulse{0%,100%{box-shadow:0 0 0 0 #f472b64d}50%{box-shadow:0 0 0 8px #f472b600}}
 
+/* ---------- TECHNICAL GAMES ---------- */
 .card-grid-v2 .c-games .card-face{background:linear-gradient(150deg,#04241a 0%,#0d5c3f 50%,#032015 100%)}
 .card-grid-v2 .c-games{--glow:#34D399}
-.card-grid-v2 .c-games .orb1{width:190px;height:190px;background:#34D399;top:-50px;right:-30px;opacity:.32}
+.card-grid-v2 .c-games .orb1{width:190px;height:190px;background:#34D399;top:-50px;right:-30px;opacity:.32;animation:gamesOrb 4.2s ease-in-out infinite}
+@keyframes gamesOrb{0%,100%{transform:translate(0,0)}50%{transform:translate(-10px,8px)}}
+.card-grid-v2 .c-games .card-icon svg circle{animation:gamesBlink 1.6s ease-in-out infinite}
+.card-grid-v2 .c-games .card-icon svg circle:nth-child(3){animation-delay:.3s}
+.card-grid-v2 .c-games .card-icon svg circle:nth-child(4){animation-delay:.6s}
+@keyframes gamesBlink{0%,100%{opacity:.4}50%{opacity:1}}
 
 @media(prefers-reduced-motion:reduce){.card-grid-v2 *{animation:none!important}}
 </style>
@@ -396,11 +496,13 @@
       <div class="card-ring"></div>
       <div class="card-face">
         <div class="orb orb1"></div>
+        <div class="pagestack"><div class="pg pg3"></div><div class="pg pg2"></div><div class="pg"></div></div>
+        <div class="typecursor"></div>
         <div class="shine"></div>
         <span class="status" id="postsBadgeGrid">118 Articles</span>
         <span class="card-num">01</span>
         <div class="card-inner">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7M9 15h4"></path></svg></div>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path class="writeline2" d="M9 7h7"></path><path class="writeline2" d="M9 11h7"></path><path class="writeline2" d="M9 15h4"></path></svg></div>
           <div class="card-title">Posts</div>
           <div class="card-desc">Long-form, single-topic write-ups — cable sizing, PID tuning, earthing, cavitation, ANSI relay numbers and more. New ones added all the time.</div>
           <div class="card-cta">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
@@ -412,11 +514,12 @@
       <div class="card-ring"></div>
       <div class="card-face">
         <div class="orb orb1"></div><div class="orb orb2"></div>
+        <svg class="bolt-svg" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path></svg>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">02</span>
         <div class="card-inner">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"></polygon></svg></div>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon class="z" points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"></polygon></svg></div>
           <div class="card-title">Electrical</div>
           <div class="card-desc">Short-circuit analysis, voltage drop, protective device selectivity, cable sizing, panel loads, transformer &amp; genset sizing, busbar/enclosure sizing.</div>
           <div class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
@@ -428,6 +531,10 @@
       <div class="card-ring"></div>
       <div class="card-face">
         <div class="orb orb1"></div>
+        <svg class="gears" viewBox="0 0 100 100" fill="#4FD1C5">
+          <g class="gA"><circle cx="55" cy="55" r="10"/><path d="M55 30v6M55 74v6M30 55h6M74 55h6M37 37l4 4M69 69l4 4M69 37l-4 4M37 69l-4 4" stroke="#4FD1C5" stroke-width="6" stroke-linecap="round"/></g>
+          <g class="gB"><circle cx="24" cy="24" r="7" opacity=".8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5" stroke="#2C7A7B" stroke-width="5" stroke-linecap="round" opacity=".8"/></g>
+        </svg>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">03</span>
@@ -444,6 +551,10 @@
       <div class="card-ring"></div>
       <div class="card-face">
         <div class="orb orb1"></div><div class="orb orb2"></div>
+        <div class="snow" style="left:20%;animation-duration:3.2s;animation-delay:0s"></div>
+        <div class="snow" style="left:45%;animation-duration:4s;animation-delay:.8s"></div>
+        <div class="snow" style="left:68%;animation-duration:3.6s;animation-delay:1.6s"></div>
+        <div class="snow" style="left:82%;animation-duration:4.4s;animation-delay:.3s"></div>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">04</span>
@@ -459,12 +570,14 @@
     <a class="card c-civil" href="civil/">
       <div class="card-ring"></div>
       <div class="card-face">
+        <div class="grid2"></div>
         <div class="orb orb1"></div>
+        <svg class="crane2" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="1.6" stroke-linecap="round"><path d="M4 20V4M4 4h14M18 4v4"></path><g class="hook2"><line x1="18" y1="8" x2="18" y2="13"></line><circle cx="18" cy="14.5" r="1.4"></circle></g></svg>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">05</span>
         <div class="card-inner">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-6h6v6"></path><path d="M9 9h.01M15 9h.01M9 13h.01M15 13h.01"></path></svg></div>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-6h6v6"></path><circle class="win2" cx="9" cy="9" r=".6" fill="#fff" stroke="none"></circle><circle class="win2" cx="15" cy="9" r=".6" fill="#fff" stroke="none"></circle><circle class="win2" cx="9" cy="13" r=".6" fill="#fff" stroke="none"></circle></svg></div>
           <div class="card-title">Civil</div>
           <div class="card-desc">Beam bending &amp; deflection, column axial capacity, footing bearing sizing, retaining wall stability, staircase geometry.</div>
           <div class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
@@ -475,12 +588,17 @@
     <a class="card c-auto" href="automation/">
       <div class="card-ring"></div>
       <div class="card-face">
+        <div class="cybergrid"></div>
         <div class="orb orb1"></div>
+        <div class="matrixdot" style="left:15%;animation-duration:2.2s;animation-delay:0s"></div>
+        <div class="matrixdot" style="left:38%;animation-duration:2.8s;animation-delay:.6s"></div>
+        <div class="matrixdot" style="left:60%;animation-duration:2.4s;animation-delay:1.2s"></div>
+        <div class="matrixdot" style="left:83%;animation-duration:3s;animation-delay:.3s"></div>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">06</span>
         <div class="card-inner">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></div>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><circle class="led2" cx="9" cy="1.4" r=".9" fill="#fff" stroke="none"></circle><circle class="led2" cx="15" cy="1.4" r=".9" fill="#fff" stroke="none"></circle><circle class="led2" cx="1.4" cy="9" r=".9" fill="#fff" stroke="none"></circle><circle class="led2" cx="1.4" cy="15" r=".9" fill="#fff" stroke="none"></circle></svg></div>
           <div class="card-title">Automation</div>
           <div class="card-desc">Signal scaling, PID tuning, control valve sizing, level-transmitter ranging, VFD frequency/speed scaling.</div>
           <div class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
@@ -492,11 +610,15 @@
       <div class="card-ring"></div>
       <div class="card-face">
         <div class="orb orb1"></div>
+        <div class="bub2" style="left:14%;animation-duration:3.2s;animation-delay:0s"></div>
+        <div class="bub2" style="left:40%;animation-duration:4s;animation-delay:.9s"></div>
+        <div class="bub2" style="left:64%;animation-duration:3.5s;animation-delay:1.8s"></div>
+        <div class="bub2" style="left:85%;animation-duration:3.9s;animation-delay:.4s"></div>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">07</span>
         <div class="card-inner">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h8l-4-16z"></path><path d="M12 4v-2"></path></svg></div>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h8l-4-16z"></path><path d="M12 4v-2"></path><circle class="bubble2" cx="11" cy="17" r=".7" fill="#fff" stroke="none"></circle><circle class="bubble2" cx="13" cy="18" r=".6" fill="#fff" stroke="none"></circle><circle class="bubble2" cx="12" cy="15" r=".5" fill="#fff" stroke="none"></circle></svg></div>
           <div class="card-title">Process</div>
           <div class="card-desc">Relief valve sizing, vessel/tank volume &amp; level, line sizing, cavitation/flashing check, purge gas sizing.</div>
           <div class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
@@ -508,11 +630,12 @@
       <div class="card-ring"></div>
       <div class="card-face">
         <div class="orb orb1"></div>
+        <div class="ring2"></div><div class="ring2 r2"></div><div class="ring2 r3"></div>
         <div class="shine"></div>
         <span class="status">Active</span>
         <span class="card-num">08</span>
         <div class="card-inner">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg></div>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="rays2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></g><circle class="core2" cx="12" cy="12" r="4"></circle></svg></div>
           <div class="card-title">Solar</div>
           <div class="card-desc">Array, battery &amp; inverter sizing, plus a click-to-explore symbol library and comparisons.</div>
           <div class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
