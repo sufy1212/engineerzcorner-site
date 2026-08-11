@@ -1,5 +1,10 @@
 [
   {
+    "t": "Gas Insulated Substation (GIS) Explained",
+    "u": "posts/gas-insulated-substation-gis-explained",
+    "d": "2026-08-11"
+  },
+  {
     "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
     "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
     "d": "2026-08-10"
@@ -42,11 +47,6 @@
   {
     "t": "Pre-Commissioning vs Commissioning: What's the Difference",
     "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
-    "d": "2026-08-09"
-  },
-  {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-08-09"
   }
 ]
