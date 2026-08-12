@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dissolved Gas Analysis (DGA) Explained | Engineerz CorneR</title>
+<meta name="description" content="How DGA reads a transformer's insulating oil for early fault signs — the key gas fingerprint, the five-step test workflow, why one number never proves a fault, and a field checklist with reference standards.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Dissolved Gas Analysis (DGA) Explained">
+<meta property="og:description" content="How DGA reads a transformer's insulating oil for early fault signs — the key gas fingerprint, the five-step test workflow, why one number never proves a fault, and a field checklist with reference standards.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dissolved Gas Analysis (DGA) Explained">
+<meta name="twitter:description" content="The key gas fingerprint, the five-step DGA test workflow, why one number never proves a fault, and a field sampling checklist with reference standards.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dissolved-gas-analysis-dga-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Dissolved Gas Analysis (DGA) Explained",
+      "item": "https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Dissolved Gas Analysis (DGA) Explained",
+      "datePublished": "2026-08-12",
+      "dateModified": "2026-08-12",
+  "description": "How DGA reads a transformer's insulating oil for early fault signs — the key gas fingerprint, the five-step test workflow, why one number never proves a fault, and a field checklist with reference standards.",
+  "url": "https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained",
+  "image": "https://www.engineerzcorner.com/assets/og/og-posts.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Dissolved Gas Analysis (DGA)</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Asset Health</span>
+    <h1>Dissolved Gas Analysis (DGA) Explained</h1>
+    <p class="hero-sub">Power transformer oil is a running record of everything stressing the insulation. DGA reads the dissolved gases in that oil — the fingerprint, the test workflow, and why the pattern matters far more than any single number.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 60599 / IEEE C57.104</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">DGA is the transformer's blood test — heat and electrical stress break down oil and cellulose, and the gases that escape into solution reveal what kind of fault is developing, before it becomes one.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Nine key gases each point toward electrical, thermal or cellulose-related stress — but the associations are indicative, not exclusive diagnoses on their own.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">There's no universal pass/fail value. A single result means little; trend, generation rate, gas ratios and load context are what actually build a diagnosis.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Sample quality decides data quality — a poorly drawn, air-contaminated sample can manufacture a false fault signature that no interpretation method can undo.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>The transformer's blood test</h2>
+    <p>Mineral oil inside a power transformer does two jobs at once — it insulates and it cools. Under normal service it slowly breaks down, and under abnormal electrical or thermal stress it breaks down faster, releasing characteristic gases that dissolve into the oil itself. Dissolved Gas Analysis samples that oil and measures which gases are present and in what concentration. The pattern — not any one gas alone — can reveal an incipient fault (electrical, thermal, or cellulose-related) long before it progresses to a failure that protection relays would have to catch.</p>
+
+    <div class="stress-grid">
+      <div class="stress-card"><div class="stress-icon elec">⚡</div><div class="stress-title">Electrical</div><div class="stress-desc">Partial discharge &middot; sparking &middot; arcing</div></div>
+      <div class="stress-card"><div class="stress-icon therm">🔥</div><div class="stress-title">Thermal</div><div class="stress-desc">Insulating-oil overheating</div></div>
+      <div class="stress-card"><div class="stress-icon cell">🍃</div><div class="stress-title">Cellulose</div><div class="stress-desc">Paper heating &middot; insulation aging</div></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key gas fingerprint</h2>
+    <p class="lede">Indicative associations — not exclusive diagnoses. Confirm with ratios, trend and engineering judgement.</p>
+
+    <div class="gas-grid">
+      <div class="gas-card elec"><div class="gas-formula">H<sub>2</sub></div><div class="gas-body"><div class="gas-name">Hydrogen</div><div class="gas-desc">Partial discharge and electrical activity.</div></div></div>
+      <div class="gas-card therm"><div class="gas-formula">CH<sub>4</sub></div><div class="gas-body"><div class="gas-name">Methane</div><div class="gas-desc">Low-temperature oil thermal fault.</div></div></div>
+      <div class="gas-card therm"><div class="gas-formula">C<sub>2</sub>H<sub>6</sub></div><div class="gas-body"><div class="gas-name">Ethane</div><div class="gas-desc">Lower-temperature oil overheating.</div></div></div>
+      <div class="gas-card therm2"><div class="gas-formula">C<sub>2</sub>H<sub>4</sub></div><div class="gas-body"><div class="gas-name">Ethylene</div><div class="gas-desc">Higher-temperature oil overheating.</div></div></div>
+      <div class="gas-card elec2"><div class="gas-formula">C<sub>2</sub>H<sub>2</sub></div><div class="gas-body"><div class="gas-name">Acetylene</div><div class="gas-desc">High-energy discharge or arcing.</div></div></div>
+      <div class="gas-card cell"><div class="gas-formula">CO</div><div class="gas-body"><div class="gas-name">Carbon Monoxide</div><div class="gas-desc">Cellulose heating and paper degradation.</div></div></div>
+      <div class="gas-card cell2"><div class="gas-formula">CO<sub>2</sub></div><div class="gas-body"><div class="gas-name">Carbon Dioxide</div><div class="gas-desc">Cellulose aging / oxidation. Trend together with CO.</div></div></div>
+      <div class="gas-card context"><div class="gas-formula">O<sub>2</sub>+N<sub>2</sub></div><div class="gas-body"><div class="gas-name">Context Gases</div><div class="gas-desc">Air ingress, sealing and oil-preservation behavior.</div></div></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>DGA test workflow</h2>
+    <p class="lede">Five steps from oil sample to a usable diagnosis.</p>
+    <div class="workflow-strip">
+      <div class="wf-card"><div class="wf-num">1</div><b>Sample</b><span>Gas-tight sample</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">2</div><b>Extract</b><span>Gas extraction</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">3</div><b>Separate</b><span>Chromatography</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">4</div><b>Quantify</b><span>&micro;L/L &asymp; ppm</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card done"><div class="wf-num">5</div><b>Diagnose</b><span>Trend + context</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Interpret the pattern — not one number</h2>
+    <p class="lede">Four things build an actual diagnosis; none of them is a single ppm value in isolation.</p>
+
+    <div class="interp-layout">
+      <div class="interp-grid">
+        <div class="interp-card"><div class="interp-num n1">1</div><div class="interp-title">Trend</div><div class="interp-desc">Compare with the asset's own baseline.</div></div>
+        <div class="interp-card"><div class="interp-num n2">2</div><div class="interp-title">Rate</div><div class="interp-desc">Calculate generation rate over time.</div></div>
+        <div class="interp-card"><div class="interp-num n3">3</div><div class="interp-title">Pattern</div><div class="interp-desc">Use key gases, ratios and Duval tools.</div></div>
+        <div class="interp-card"><div class="interp-num n4">4</div><div class="interp-title">Context</div><div class="interp-desc">Consider load, events, temperature and oil type.</div></div>
+      </div>
+      <div class="warn-card">
+        <div class="warn-head">⚠ No universal pass / fail value</div>
+        <p>One result alone does not prove a transformer fault. Confirm the trend; correlate with other tests and engineering judgement.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Field checklist &amp; reference framework</h2>
+
+    <div class="two-col">
+      <div class="check-panel">
+        <div class="check-panel-title">Sample quality = data quality</div>
+        <ul class="checklist">
+          <li><span class="ck-mark">✓</span><span>Flush the sampling point; exclude every air bubble.</span></li>
+          <li><span class="ck-mark">✓</span><span>Use a clean, gas-tight container; seal immediately.</span></li>
+          <li><span class="ck-mark">✓</span><span>Record load, oil temperature, date/time and location.</span></li>
+          <li><span class="ck-mark">✓</span><span>Identify main tank vs. LTC; follow site safety procedures.</span></li>
+        </ul>
+      </div>
+      <div class="std-panel">
+        <div class="std-panel-title">Reference standards</div>
+        <ul class="std-list">
+          <li><b>IEC 60475:2022</b> — insulating-liquid sampling</li>
+          <li><b>IEC 60567:2023</b> — gas extraction and analysis</li>
+          <li><b>IEC 60599:2022</b> — DGA interpretation guidance</li>
+          <li><b>IEEE C57.104-2019</b> — mineral-oil transformers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-strip"><span class="dot"></span><span><b>Scope:</b> mineral-oil transformers. Use fluid-specific guidance for ester or silicone liquids — gas solubility and interpretation thresholds differ from mineral oil.</span></div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>DGA measures gases dissolved in insulating oil, released by electrical, thermal and cellulose-related stress inside the transformer.</span></li>
+      <li><span class="tk-check">✓</span><span>Nine key gases each lean toward a stress type, but the associations are indicative — a full diagnosis needs ratios and context, not one gas read alone.</span></li>
+      <li><span class="tk-check">✓</span><span>Trend, generation rate, pattern and operating context are what turn a lab result into a usable diagnosis — there's no single pass/fail ppm value.</span></li>
+      <li><span class="tk-check">✓</span><span>A gas-tight, air-free sample with accurate load and temperature records is the foundation every interpretation method depends on.</span></li>
+      <li><span class="tk-check">✓</span><span>Follow IEC 60475/60567/60599 or IEEE C57.104 as applicable, and confirm findings against other tests before acting on a DGA result.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Dissolved%20Gas%20Analysis%20(DGA)%20Explained&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdissolved-gas-analysis-dga-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdissolved-gas-analysis-dga-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Dissolved%20Gas%20Analysis%20(DGA)%20Explained&text=The%20key%20gas%20fingerprint%2C%20the%20five-step%20test%20workflow%2C%20and%20why%20one%20number%20never%20proves%20a%20transformer%20fault.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdissolved-gas-analysis-dga-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Dissolved%20Gas%20Analysis%20(DGA)%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ADissolved%20Gas%20Analysis%20(DGA)%20Explained%0AThe%20key%20gas%20fingerprint%2C%20the%20five-step%20test%20workflow%2C%20and%20why%20one%20number%20never%20proves%20a%20transformer%20fault.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdissolved-gas-analysis-dga-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="power-transformer-construction-working-principle">Power Transformers Explained: Construction &amp; Working Principle</a></li><li><a href="transformer-vector-groups-explained">Transformer Vector Groups Explained</a></li><li><a href="power-system-protection-relays-explained">Power System Protection Relays: The Complete Reference Guide</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
