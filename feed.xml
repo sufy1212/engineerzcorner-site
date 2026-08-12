@@ -4,13 +4,6 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Power System Protection Relays: The Complete Reference Guide</title>
-    <link>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</guid>
-    <description>The relay operation workflow, five competing design goals, every relay category by measured quantity and by equipment, IEC 61850 architecture, inverse-time curves, coordination principles and a selection table.</description>
-    <pubDate>Wed, 12 Aug 2026 08:00:00 GMT</pubDate>
-  </item>
-  <item>
     <title>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More</title>
     <link>https://www.engineerzcorner.com/posts/lv-panel-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/lv-panel-types-explained.html</guid>
