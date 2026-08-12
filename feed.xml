@@ -4,11 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Dissolved Gas Analysis (DGA) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</guid>
+    <description>The key gas fingerprint, the five-step DGA test workflow, why one number never proves a fault, and a field checklist with reference standards.</description>
+    <pubDate>Wed, 12 Aug 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Power System Protection Relays: The Complete Reference Guide</title>
     <link>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</guid>
-    <description>Every protection relay category in one place — operation workflow, the five design goals, current/voltage/distance/differential/frequency relays, IEC 61850 architecture, inverse-time curves, coordination principles and a quick selection table.</description>
-    <pubDate>Wed, 12 Aug 2026 19:06:55 GMT</pubDate>
+    <description>The relay operation workflow, five competing design goals, every relay category by measured quantity and by equipment, IEC 61850 architecture, inverse-time curves, coordination principles and a selection table.</description>
+    <pubDate>Wed, 12 Aug 2026 08:00:00 GMT</pubDate>
   </item>
   <item>
     <title>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More</title>
@@ -212,5 +219,12 @@
     <guid>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</guid>
     <description>The internal construction of a power transformer, a current transformer (CT), and a potential transformer (PT/VT) — parts, typical ratings, accuracy classes, and a side-by-side comparison.</description>
     <pubDate>Sat, 08 Aug 2026 13:12:37 GMT</pubDate>
+  </item>
+  <item>
+    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
+    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
+    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
   </item>
 </channel></rss>
