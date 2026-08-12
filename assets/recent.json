@@ -1,5 +1,10 @@
 [
   {
+    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
+    "u": "posts/facility-management-codes-standards-reference",
+    "d": "2026-08-12"
+  },
+  {
     "t": "Dissolved Gas Analysis (DGA) Explained",
     "u": "posts/dissolved-gas-analysis-dga-explained",
     "d": "2026-08-12"
@@ -42,11 +47,6 @@
   {
     "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
     "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
-    "d": "2026-08-11"
-  },
-  {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-08-11"
   }
 ]

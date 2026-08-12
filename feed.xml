@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Facility &amp; Property Management: Key Codes &amp; Standards Reference</title>
+    <link>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</guid>
+    <description>The key codes and standards that govern facility and property management &amp;mdash; maintenance, HVAC, fire &amp; life safety, occupational health, electrical, building codes, and more.</description>
+    <pubDate>Wed, 12 Aug 2026 19:38:34 GMT</pubDate>
+  </item>
+  <item>
     <title>Dissolved Gas Analysis (DGA) Explained</title>
     <link>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
     <description>Three ways a pressure relief valve holds its disc shut until set pressure — how back pressure, operating margin, and dirty service tolerance decide between a conventional, balanced bellows, or pilot-operated PSV.</description>
     <pubDate>Sun, 09 Aug 2026 16:47:06 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pipe Routing Guide: 13 Rules Every Layout Should Follow</title>
-    <link>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</guid>
-    <description>Pipe routing principles, pump suction line routing, equipment clearance, pipe racks, supports, dead legs, expansion loops, hot/cold line routing, utility routing, underground vs above ground, nozzle orientation, flange accessibility, and maintenance clearances.</description>
-    <pubDate>Sat, 08 Aug 2026 19:30:14 GMT</pubDate>
   </item>
 </channel></rss>
