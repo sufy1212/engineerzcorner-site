@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More | Engineerz CorneR</title>
+<meta name="description" content="Every panel you'll find in a low-voltage electrical system — MDB, PCC, SDB/DB, MCC, VFD panel, APFC/PFC panel, feeder pillar, busbar trunking, ATS/AMF and PLC panels — what each does, where it sits, and which IEC 61439 part governs it.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/lv-panel-types-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More">
+<meta property="og:description" content="Every panel you'll find in an LV system — MDB, PCC, SDB/DB, MCC, VFD panel, APFC/PFC panel, feeder pillar, busbar trunking, ATS/AMF and PLC panels — what each does and which IEC 61439 part governs it.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/lv-panel-types-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More">
+<meta name="twitter:description" content="Every panel you'll find in an LV system — MDB, PCC, SDB/DB, MCC, VFD panel, APFC/PFC panel, feeder pillar, busbar trunking, ATS/AMF and PLC panels — what each does and which IEC 61439 part governs it.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar & More", "item": "https://www.engineerzcorner.com/posts/lv-panel-types-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar & More",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12",
+  "description": "Every panel you'll find in a low-voltage electrical system — MDB, PCC, SDB/DB, MCC, VFD panel, APFC/PFC panel, feeder pillar, busbar trunking, ATS/AMF and PLC panels — what each does, where it sits, and which IEC 61439 part governs it.",
+  "url": "https://www.engineerzcorner.com/posts/lv-panel-types-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/lv-panel-types-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">LV Panel Types Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; LV Switchgear</span>
+    <h1>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More</h1>
+    <p class="hero-sub">Every job site talks about "the LV panel" as if there's only one. In practice a low-voltage system is a chain of different panel types, each doing one job — from the main incomer down to the final circuit. Here's what exists in the LV range, what each one does, and where it sits in that chain.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; LV Switchgear &amp; Distribution</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">"LV" (low voltage) covers assemblies up to 1000 V AC / 1500 V DC &mdash; the range IEC 61439 regulates, from the main incomer panel down to the final distribution board.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Power flows through panels in a rough hierarchy: MDB &rarr; PCC &rarr; MCC / APFC / SDB &rarr; final DB &mdash; each stage handing off a smaller, more specific slice of the load.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">MCC, VFD and APFC panels aren't just distribution &mdash; they actively control what's downstream: motor starting, speed, and reactive power respectively.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">IEC 61439 has a dedicated part for almost every panel type: Part 2 for general power assemblies, Part 3 for ordinary-person DBs, Part 5 for public network assemblies, Part 6 for busbar trunking.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What counts as an "LV panel"?</h2>
+    <p>Any low-voltage switchgear and controlgear assembly &mdash; a factory-built enclosure holding busbars, breakers, contactors and other devices that switch, protect, control or distribute electrical energy &mdash; is governed internationally by <b>IEC 61439</b>. "Low voltage" here means the assembly's rated voltage doesn't exceed 1000 V AC or 1500 V DC. Above that, you're into medium-voltage switchgear (IEC 62271), a different standard entirely.</p>
+    <p>IEC 61439 isn't one document; it's a series, and different panel types fall under different parts of it. Part 1 sets the general rules every assembly follows. Part 2 covers general power switchgear and controlgear assemblies (PSC) &mdash; the broad category most industrial and commercial panels fall into. Part 3 covers distribution boards meant to be operated by ordinary, untrained people (DBO) &mdash; your typical domestic or light-commercial final DB. Part 5 covers assemblies for power distribution in public networks (PENDA) &mdash; utility-side equipment like feeder pillars. Part 6 covers busbar trunking systems (busways).</p>
+
+    <h2><span class="h2-dot"></span>Main power distribution panels</h2>
+    <p class="post-lede">The panels that take bulk incoming power and split it into manageable feeders.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="9" x2="9" y2="21"></line></svg></div>
+          <div><div class="device-name">MDB / MSB</div><div class="device-full">Main Distribution Board / Main Switchboard</div></div>
+        </div>
+        <div class="device-desc">The primary distribution hub, taking supply straight from the transformer or generator and splitting it into sub-mains and major feeders. Houses the main incomer breaker, bus-section and outgoing ACBs/MCCBs &mdash; rated up to 6300 A on large installations.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="7" x2="16" y2="7"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="17" x2="12" y2="17"></line></svg></div>
+          <div><div class="device-name">PCC</div><div class="device-full">Power Control Center</div></div>
+        </div>
+        <div class="device-desc">Sits between the MDB and the load-specific panels on larger industrial sites &mdash; a high-capacity hub (typically 2000&ndash;6300 A) that receives from the MDB and feeds MCCs, APFC panels and other downstream boards.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><circle cx="9" cy="17" r=".8" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><div class="device-name">SDB / DB</div><div class="device-full">Sub-Distribution Board / Distribution Board</div></div>
+        </div>
+        <div class="device-desc">The final stage &mdash; splits a feeder down into individual final circuits: lighting, sockets, small power. In domestic and light-commercial work these are IEC 61439-3 DBOs, built for safe operation by untrained people (&le;300 V to earth, &le;125 A per outgoing circuit).</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Motor &amp; drive panels</h2>
+    <p class="post-lede">Panels that don't just distribute power to motors &mdash; they actively start, protect and control them.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle><line x1="12" y1="3" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="21"></line></svg></div>
+          <div><div class="device-name">MCC</div><div class="device-full">Motor Control Center</div></div>
+        </div>
+        <div class="device-desc">A dedicated panel housing multiple motor starters &mdash; contactors, overload relays, MCCBs and (increasingly) soft starters or VFDs &mdash; each in its own standardized fixed or withdrawable functional unit, so a single motor can be isolated and pulled for maintenance without shutting the rest down.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"></path></svg></div>
+          <div><div class="device-name">VFD Panel</div><div class="device-full">Variable Frequency Drive Panel</div></div>
+        </div>
+        <div class="device-desc">Houses one or more variable frequency drives that vary a motor's speed by adjusting output frequency &mdash; used for pumps, fans and conveyors where speed control saves energy and gives a soft, controlled start. Can be a standalone panel or built in as drive feeders inside an MCC.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Power quality panel</h2>
+    <p class="post-lede">The panel that fixes the site's power factor rather than distributing or controlling load.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l3-5 3 3 5-8"></path></svg></div>
+          <div><div class="device-name">APFC / PFC Panel</div><div class="device-full">Automatic Power Factor Correction Panel</div></div>
+        </div>
+        <div class="device-desc">Houses a bank of capacitors switched in and out by a controller (via contactors or thyristors) to keep the site's power factor near unity, cutting the reactive-power penalty on the electricity bill. Sites with heavy VFD or non-linear loads often add detuned reactors to avoid harmonic resonance.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Outdoor &amp; utility-side distribution</h2>
+    <p class="post-lede">Panels built for outdoor exposure or bulk current distribution rather than indoor switchboards.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="14" x2="17" y2="14"></line></svg></div>
+          <div><div class="device-name">Feeder Pillar</div><div class="device-full">LV Feeder Pillar</div></div>
+        </div>
+        <div class="device-desc">A weatherproof outdoor or underground-fed cabinet that taps off a utility LV distribution network to serve a cluster of consumers, or a run of street lighting. Typically IP54/IP65 rated, 160&ndash;4000 A, and tested as a public electricity network distribution assembly.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><rect x="8" y="8" width="3" height="8"></rect><rect x="14" y="8" width="3" height="8"></rect></svg></div>
+          <div><div class="device-name">Busbar Trunking</div><div class="device-full">Busway / Busbar Trunking System (BTS)</div></div>
+        </div>
+        <div class="device-desc">A prefabricated, modular run of busbars in a metal enclosure, used instead of cable for high-current vertical risers or long horizontal runs. Tap-off units plug in anywhere along the run to feed a panel below without a separate cable pull.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Standby &amp; control panels</h2>
+    <p class="post-lede">Panels that manage where the power comes from, or that carry logic instead of load current.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10M7 7l3-3M7 7l3 3"></path><path d="M17 17H7M17 17l-3-3M17 17l-3 3"></path></svg></div>
+          <div><div class="device-name">ATS / AMF Panel</div><div class="device-full">Automatic Transfer Switch / Auto Mains Failure Panel</div></div>
+        </div>
+        <div class="device-desc">Automatically switches the load between two sources &mdash; typically utility mains and a standby generator &mdash; on loss of the primary supply, and switches back once it's restored. On multi-generator sites this pairs with a synchronizing panel handling start/stop sequencing, synchronization and load sharing.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></div>
+          <div><div class="device-name">PLC / Automation Panel</div><div class="device-full">Control Panel</div></div>
+        </div>
+        <div class="device-desc">Not a power-distribution panel at all &mdash; houses the PLC, I/O modules, relays, HMI and communication gear that run process or machine control logic. The enclosure itself still follows IEC 61439-2; the PLC hardware and programming follow IEC 61131.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Panel types at a glance</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Panel</th><th>Function</th><th>Typical standard</th><th>Typical rating</th></tr>
+        <tr><td>MDB / MSB</td><td>Primary distribution from transformer/genset</td><td>IEC 61439-2</td><td>up to 6300 A</td></tr>
+        <tr><td>PCC</td><td>High-capacity hub to MCC, APFC &amp; sub-panels</td><td>IEC 61439-2</td><td>2000&ndash;6300 A</td></tr>
+        <tr><td>SDB / DB</td><td>Final circuits &mdash; lighting, sockets, small power</td><td>IEC 61439-3 (DBO)</td><td>&le;250 A in / &le;125 A out</td></tr>
+        <tr><td>MCC</td><td>Centralized motor starters &amp; protection</td><td>IEC 61439-2</td><td>per feeder, up to 630 A+</td></tr>
+        <tr><td>VFD Panel</td><td>Houses drives for motor speed control</td><td>IEC 61439-2</td><td>per drive rating</td></tr>
+        <tr><td>APFC / PFC</td><td>Automatic power-factor correction</td><td>IEC 61439-2</td><td>sized in kVAR</td></tr>
+        <tr><td>Feeder Pillar</td><td>Outdoor LV utility tap-off point</td><td>IEC 61439-5 (PENDA)</td><td>160&ndash;4000 A</td></tr>
+        <tr><td>Busbar Trunking</td><td>Prefabricated busbar run, riser or horizontal</td><td>IEC 61439-6</td><td>per busway rating</td></tr>
+        <tr><td>ATS / AMF</td><td>Automatic changeover, mains &harr; standby</td><td>IEC 60947-6-1</td><td>matches incomer</td></tr>
+        <tr><td>PLC / Automation</td><td>Control logic, not power distribution</td><td>IEC 61439-2 (enclosure)</td><td>N/A</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>How they connect</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Power enters at the MDB/MSB from the transformer or generator, protected by the main incomer breaker.</span></li>
+      <li><span class="ck-mark">2</span><span>On larger sites, a PCC sits downstream of the MDB, splitting bulk power toward MCCs, APFC panels and other sub-boards.</span></li>
+      <li><span class="ck-mark">3</span><span>Motor loads route through an MCC, with VFD feeders where speed control is needed; everything else routes through SDBs toward final DBs.</span></li>
+      <li><span class="ck-mark">4</span><span>An APFC panel taps in parallel across the bus to correct the whole site's power factor, not any single load.</span></li>
+      <li><span class="ck-mark">5</span><span>Outdoors, feeder pillars and busbar trunking move bulk current between buildings or up through a structure without open cable runs.</span></li>
+      <li><span class="ck-mark">6</span><span>An ATS/AMF panel sits ahead of the MDB where standby power exists, choosing which source feeds the whole downstream chain.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>An LV panel is any switchgear/controlgear assembly rated up to 1000 V AC / 1500 V DC, governed by the IEC 61439 series.</span></li>
+      <li><span class="tk-check">✓</span><span>Distribution panels (MDB, PCC, SDB/DB) just split power into smaller feeders; control panels (MCC, VFD, APFC) actively manage what's downstream.</span></li>
+      <li><span class="tk-check">✓</span><span>Feeder pillars and busbar trunking exist because not every LV run makes sense as buried cable &mdash; one's for outdoor utility tap-offs, the other for high-current risers.</span></li>
+      <li><span class="tk-check">✓</span><span>ATS/AMF panels decide the source; PLC/automation panels carry logic, not load current &mdash; neither is a distribution panel in the usual sense.</span></li>
+      <li><span class="tk-check">✓</span><span>Almost every panel type has its own IEC 61439 part: Part 2 for general power assemblies, Part 3 for ordinary-person DBs, Part 5 for public networks, Part 6 for busbar trunking.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=LV%20Panel%20Types%20Explained%3A%20Switchgear%2C%20MCC%2C%20PFC%2C%20VFD%2C%20Feeder%20Pillar%20%26%20More%20%E2%80%94%20every%20panel%20in%20a%20low-voltage%20system%2C%20explained.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flv-panel-types-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flv-panel-types-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=LV%20Panel%20Types%20Explained%3A%20Switchgear%2C%20MCC%2C%20PFC%2C%20VFD%2C%20Feeder%20Pillar%20%26%20More&text=Every%20panel%20you%27ll%20find%20in%20a%20low-voltage%20system%20%E2%80%94%20MDB%2C%20PCC%2C%20SDB%2FDB%2C%20MCC%2C%20VFD%2C%20APFC%2C%20feeder%20pillar%2C%20busbar%20trunking%2C%20ATS%2FAMF%20and%20PLC%20panels.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flv-panel-types-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=LV%20Panel%20Types%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ALV%20Panel%20Types%20Explained%3A%20Switchgear%2C%20MCC%2C%20PFC%2C%20VFD%2C%20Feeder%20Pillar%20%26%20More%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flv-panel-types-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="electrical-switchgear-protection-devices-explained">MCB, MCCB, ACB &amp; RCCB Explained</a></li><li><a href="33-11kv-substation-diagram-equipment-overview">33/11 kV Substation SLD Overview</a></li><li><a href="gas-insulated-substation-gis-explained">Gas Insulated Substation (GIS) Explained</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a href="electrical-switchgear-protection-devices-explained">Read: MCB, MCCB, ACB &amp; RCCB Explained &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
