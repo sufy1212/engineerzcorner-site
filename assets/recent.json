@@ -1,52 +1,52 @@
 [
   {
-    "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
-    "u": "posts/hira-vs-jsa-vs-sop-explained",
+    "t": "Age Calculator",
+    "u": "general/age-calculator",
     "d": "2026-08-12"
   },
   {
-    "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
-    "u": "posts/permit-to-work-loto-explained",
+    "t": "Number Base Converter",
+    "u": "general/base-converter",
     "d": "2026-08-12"
   },
   {
-    "t": "Risk Register Basics: Turning Probability × Impact Into Priority",
-    "u": "posts/risk-register-probability-impact-scoring",
+    "t": "BMI Calculator",
+    "u": "general/bmi-calculator",
     "d": "2026-08-12"
   },
   {
-    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
-    "u": "posts/facility-management-codes-standards-reference",
+    "t": "Date &amp; Business-Day Calculator",
+    "u": "general/date-calculator",
     "d": "2026-08-12"
   },
   {
-    "t": "Dissolved Gas Analysis (DGA) Explained",
-    "u": "posts/dissolved-gas-analysis-dga-explained",
+    "t": "Fraction ↔ Decimal (Feet-Inches)",
+    "u": "general/fraction-decimal",
     "d": "2026-08-12"
   },
   {
-    "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
-    "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
+    "t": "Markup, Margin &amp; % Change",
+    "u": "general/markup-margin",
     "d": "2026-08-12"
   },
   {
-    "t": "Power System Protection Relays: The Complete Reference Guide",
-    "u": "posts/power-system-protection-relays-explained",
+    "t": "Password Generator",
+    "u": "general/password-generator",
     "d": "2026-08-12"
   },
   {
-    "t": "Transformer Vector Groups Explained",
-    "u": "posts/transformer-vector-groups-explained",
+    "t": "Percentage Calculator",
+    "u": "general/percentage-calculator",
     "d": "2026-08-12"
   },
   {
-    "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
-    "u": "posts/lv-panel-types-explained",
+    "t": "Engineering Sanity-Checker",
+    "u": "general/sanity-checker",
     "d": "2026-08-12"
   },
   {
-    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
-    "u": "posts/33-11kv-substation-diagram-equipment-overview",
-    "d": "2026-08-11"
+    "t": "Site Term Translator",
+    "u": "general/term-translator",
+    "d": "2026-08-12"
   }
 ]
