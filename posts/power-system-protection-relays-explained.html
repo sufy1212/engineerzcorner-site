@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power System Protection Relays: The Complete Reference Guide | Engineerz CorneR</title>
+<meta name="description" content="Every protection relay category in one place — operation workflow, the five design goals, current/voltage/distance/differential/frequency relays, IEC 61850 architecture, inverse-time curves, coordination principles and a quick selection table.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/power-system-protection-relays-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Power System Protection Relays: The Complete Reference Guide">
+<meta property="og:description" content="Every protection relay category in one place — operation workflow, the five design goals, current/voltage/distance/differential/frequency relays, IEC 61850 architecture, inverse-time curves, coordination principles and a quick selection table.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/power-system-protection-relays-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Power System Protection Relays: The Complete Reference Guide">
+<meta name="twitter:description" content="Every protection relay category in one place — operation workflow, design goals, IEC 61850 architecture, inverse-time curves, coordination principles and a selection table.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="power-system-protection-relays-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Power System Protection Relays: The Complete Reference Guide",
+      "item": "https://www.engineerzcorner.com/posts/power-system-protection-relays-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Power System Protection Relays: The Complete Reference Guide",
+      "datePublished": "2026-08-12",
+      "dateModified": "2026-08-12",
+  "description": "Every protection relay category in one place — operation workflow, the five design goals, current/voltage/distance/differential/frequency relays, IEC 61850 architecture, inverse-time curves, coordination principles and a quick selection table.",
+  "url": "https://www.engineerzcorner.com/posts/power-system-protection-relays-explained",
+  "image": "https://www.engineerzcorner.com/assets/og/og-posts.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/power-system-protection-relays-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Power System Protection Relays</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Protection</span>
+    <h1>Power System Protection Relays: The Complete Reference Guide</h1>
+    <p class="hero-sub">One map of the whole subject — how a relay actually thinks, the five goals every setting is judged against, every relay category by equipment type, IEC 61850's digital architecture, and how to pick and coordinate the right device.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEEE C37.2 / IEC 61850 / IEC 60255</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Every relay runs the same loop — measure, evaluate, decide, act, isolate, restore — whether it's an electromechanical disc or a multifunction IED.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Good protection is a balance of five competing goals: selectivity, speed, sensitivity, dependability and stability. Optimizing one too hard degrades another.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">IEC 61850 replaces hardwired trip contacts with GOOSE messaging over Ethernet, letting bay-level relays trip and interlock each other directly.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Coordination is a chain: the relay closest to the fault must clear it before anything further upstream is allowed to operate.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A protection relay's job sounds simple — detect a fault, isolate it. In practice a modern power system runs dozens of relay types side by side, each watching a different quantity (current, voltage, impedance, frequency, differential current) and each tuned to trip fast enough to protect equipment without tripping ahead of a device that's better positioned to clear the fault. This is the whole picture in one place: how a relay operates, what it's designed to balance, every major relay category, the digital IEC 61850 architecture replacing hardwired panels, and how to select and coordinate devices correctly.</p>
+
+    <h2><span class="h2-dot"></span>Why protection relays exist</h2>
+    <p class="lede">Six jobs, one purpose — keep people safe and keep the rest of the system running.</p>
+    <div class="tool-grid">
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l2 2"></path></svg></div><div class="tool-card-title">Detect faults</div></div><div class="tool-card-desc">Recognize abnormal current, voltage or impedance as soon as it appears.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h5l2-7 4 14 2-7h5"></path></svg></div><div class="tool-card-title">Isolate faults</div></div><div class="tool-card-desc">Trip only the breakers needed to remove the faulted section.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"></path></svg></div><div class="tool-card-title">Minimize damage</div></div><div class="tool-card-desc">Cut fault-clearing time to limit thermal and mechanical stress on equipment.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 12h16"></path></svg></div><div class="tool-card-title">Maintain stability</div></div><div class="tool-card-desc">Clear faults before they push connected generation out of synchronism.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-8 4 16 2-8h6"></path></svg></div><div class="tool-card-title">Ensure continuity</div></div><div class="tool-card-desc">Keep unaffected parts of the network energized and in service.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"></path></svg></div><div class="tool-card-title">Protect people &amp; assets</div></div><div class="tool-card-desc">Limit arc-flash exposure and equipment damage across the whole installation.</div></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The relay operation workflow</h2>
+    <p class="lede">Every relay technology — from electromechanical to numerical — runs this same six-stage loop.</p>
+    <div class="workflow-strip">
+      <div class="wf-card"><div class="wf-num">1</div><b>Measurement</b><span>Acquire system quantities from CTs/VTs</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">2</div><b>Evaluation</b><span>Compare against settings &amp; logic</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">3</div><b>Decision</b><span>Trip, alarm or log the event</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">4</div><b>Action</b><span>Operate the circuit breaker</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">5</div><b>Isolation</b><span>Isolate the faulted section</span></div>
+      <div class="wf-arrow">&rarr;</div>
+      <div class="wf-card"><div class="wf-num">6</div><b>Restoration</b><span>Maintain stability &amp; restore service</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Five design goals in tension</h2>
+    <p class="lede">Push one too hard and it costs you another — good coordination is a deliberate balance, not a maximum on any single axis.</p>
+    <div class="goal-grid">
+      <div class="goal-card"><div class="goal-title">Selectivity</div><div class="goal-desc">Trips only the device closest to the fault — nothing further upstream operates.</div></div>
+      <div class="goal-card"><div class="goal-title">Speed</div><div class="goal-desc">Clears the fault fast enough to limit damage and preserve stability.</div></div>
+      <div class="goal-card"><div class="goal-title">Sensitivity</div><div class="goal-desc">Detects faults quickly, including low-magnitude and evolving conditions.</div></div>
+      <div class="goal-card"><div class="goal-title">Dependability</div><div class="goal-desc">Operates reliably under all conditions when a genuine fault occurs.</div></div>
+      <div class="goal-card"><div class="goal-title">Stability</div><div class="goal-desc">Stays restrained through normal transients — prevents false trips.</div></div>
+    </div>
+    <div class="info-strip"><span class="dot"></span><span><b>Engineering takeaway:</b> a setting tuned purely for speed and sensitivity tends to erode stability; a setting tuned purely for stability tends to erode speed. Settings studies exist to find the working balance, not a theoretical best on every axis.</span></div>
+
+    <h2><span class="h2-dot"></span>Relay categories by measured quantity</h2>
+    <p class="lede">Relays are grouped first by what they measure, then applied to specific equipment.</p>
+    <div class="tool-grid">
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Current protection</div></div><div class="tool-card-desc">Overcurrent (50/51), directional overcurrent (67), negative sequence (46), ground fault (50N/51N), definite time / IDMT.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Voltage protection</div></div><div class="tool-card-desc">Overvoltage (59), undervoltage (27), phase sequence (47), voltage unbalance (60), overexcitation (24).</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Distance protection</div></div><div class="tool-card-desc">Phase distance (21), ground distance (21N), impedance measurement, mho / quadrilateral characteristics.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Differential protection</div></div><div class="tool-card-desc">Transformer differential (87T), generator differential (87G), line differential (87L), busbar differential (87B), motor differential (87M).</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Power / frequency protection</div></div><div class="tool-card-desc">Over/under frequency (81), rate of change of frequency (ROCOF), over/under power (32), reverse power (32R), power factor (55).</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Special purpose</div></div><div class="tool-card-desc">Thermal overload (49), locked rotor (51LR), inrush detection (68), breaker failure (50BF), synchrocheck (25).</div></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Relay categories by equipment</h2>
+    <p class="lede">The same measured quantities, applied to the specific piece of equipment they're protecting.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Equipment</th><th>Typical relay functions</th></tr>
+        <tr><td>Transformer</td><td>Differential (87T), Buchholz (63), winding temp. (49), oil temp./level (26/71), overfluxing (24)</td></tr>
+        <tr><td>Generator</td><td>Stator ground (64G), loss of field (40), reverse power (32R), overexcitation (24), differential (87G)</td></tr>
+        <tr><td>Motor</td><td>Thermal overload (49), phase unbalance (46), locked rotor (51LR), stall/jam (51), ground fault (50N)</td></tr>
+        <tr><td>Line</td><td>Distance (21), overcurrent (50/51), differential (87L), auto-reclose (79), synchronizing (25)</td></tr>
+        <tr><td>Busbar</td><td>Busbar differential (87B), overcurrent (50/51), zone interlocking (68), breaker failure (50BF)</td></tr>
+        <tr><td>Capacitor / reactor</td><td>Differential (87C), overcurrent (50/51), overvoltage (59), unbalance (60), inrush (68)</td></tr>
+      </table>
+    </div>
+    <p style="font-size:13.5px;color:var(--ink-dim);margin:-4px 0 26px">Not sure which ANSI code does what? See the full <a href="ansi-relay-numbers-protection-functions" style="color:var(--acc-dim)">ANSI relay device number reference</a>.</p>
+
+    <h2><span class="h2-dot"></span>IEC 61850 communication &amp; architecture</h2>
+    <p class="lede">Modern substations replace point-to-point hardwiring with a layered Ethernet architecture.</p>
+    <div class="arch-grid">
+      <div class="arch-card"><div class="arch-label">Station level</div><div class="arch-detail">HMI / SCADA + engineering workstation</div></div>
+      <div class="arch-card"><div class="arch-label">Bay level</div><div class="arch-detail">Protection relays + bay controller</div></div>
+      <div class="arch-card"><div class="arch-label">Process level</div><div class="arch-detail">Merging units</div></div>
+      <div class="arch-card"><div class="arch-label">Process interface</div><div class="arch-detail">CTs / VTs + circuit breaker</div></div>
+    </div>
+    <div class="notation-key">
+      <span><b>MMS</b> Monitoring &amp; control</span>
+      <span><b>GOOSE</b> Fast peer-to-peer event messaging (trips, interlocks)</span>
+      <span><b>SV</b> Sampled Values from merging units</span>
+      <span><b>PTP (IEEE 1588)</b> Precision time synchronization</span>
+    </div>
+    <div class="info-strip"><span class="dot"></span><span><b>Why it matters:</b> GOOSE lets bay-level relays trip or interlock each other directly over the station bus — no hardwired trip contact between panels — while PTP keeps every IED's timestamp aligned for fault records and synchrophasors.</span></div>
+
+    <h2><span class="h2-dot"></span>Inverse-time overcurrent characteristics</h2>
+    <p class="lede">The IEC 60255 equation behind standard, very, extremely and long-time inverse curves.</p>
+    <div class="decode-callout">
+      <div class="dcall-title">IEC 60255 inverse-time equation</div>
+      <div class="dcall-line">t = TMS &times; k / [(I / I<sub>pickup</sub>)<sup>&alpha;</sup> &minus; 1]</div>
+      <div class="dcall-result">Steeper curve → faster trip at high fault current</div>
+    </div>
+    <div class="notation-key">
+      <span><b>t</b> Operating time</span>
+      <span><b>TMS</b> Time multiplier setting</span>
+      <span><b>I</b> Fault current</span>
+      <span><b>I<sub>pickup</sub></b> Pickup current</span>
+      <span><b>k, &alpha;</b> Curve constants (IEC 60255)</span>
+    </div>
+    <p>The four common curve shapes — Standard Inverse (SI), Very Inverse (VI), Extremely Inverse (EI) and Long Time Inverse (LTI) — trade off how aggressively operating time drops as fault current rises above pickup. Definite Time (DT) trips at a fixed delay regardless of magnitude. Curve choice is driven by what's downstream: EI curves grade well against fuses and motor starting current; SI curves are the general-purpose default for feeder coordination.</p>
+
+    <h2><span class="h2-dot"></span>Coordination principles</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span><b>Selectivity</b> — only the nearest device to the fault operates.</span></li>
+      <li><span class="ck-mark">✓</span><span><b>Speed</b> — faster clearing improves system security.</span></li>
+      <li><span class="ck-mark">✓</span><span><b>Sensitivity</b> — detects small and evolving faults.</span></li>
+      <li><span class="ck-mark">✓</span><span><b>Dependability</b> — operates correctly under all conditions.</span></li>
+      <li><span class="ck-mark">✓</span><span><b>Reliability</b> — consistent performance over time.</span></li>
+    </ul>
+    <div class="info-strip"><span class="dot"></span><span><b>Proper coordination ensures safety, reliability and continuity of power.</b> A coordination (grading) study is what actually proves the chain works — settings alone don't guarantee it.</span></div>
+
+    <h2><span class="h2-dot"></span>Where each relay type applies</h2>
+    <div class="tool-grid">
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Generation plants</div></div><div class="tool-card-desc">Generator, transformer and busbar protection working together at the source.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Transmission lines</div></div><div class="tool-card-desc">Distance and line differential protection over long, high-voltage circuits.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Distribution systems</div></div><div class="tool-card-desc">Overcurrent, auto-reclose and ground-fault protection on radial feeders.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Industrial facilities</div></div><div class="tool-card-desc">Motor, transformer and busbar protection sized around process-critical loads.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Renewable energy systems</div></div><div class="tool-card-desc">Inverter-aware protection accounting for limited fault-current contribution.</div></div>
+      <div class="tool-card"><div class="tool-card-head"><div class="tool-card-title">Data centers &amp; microgrids</div></div><div class="tool-card-desc">Fast, selective protection across tightly coordinated low-voltage zones.</div></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Relay selection quick reference</h2>
+    <p class="lede">Selected examples; the actual scheme depends on system studies and applicable standards.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Application</th><th>Primary relays</th><th>Backup relays</th><th>Typical standard</th></tr>
+        <tr><td>Transmission line</td><td>21, 50/51, 67, 79, 85</td><td>50/51, 67</td><td>IEC 61850, IEEE C37.2</td></tr>
+        <tr><td>Transformer</td><td>87T, 50/51, 63, 49, 24</td><td>50/51, 24</td><td>IEC 60076, IEC 60034</td></tr>
+        <tr><td>Generator</td><td>87G, 64G, 40, 32, 24, 81</td><td>50/51, 32</td><td>IEC C50, IEC 60034</td></tr>
+        <tr><td>Motor</td><td>49, 51, 46, 51LR, 50N</td><td>50/51, 46</td><td>IEC 60947, IEEE C37.2</td></tr>
+        <tr><td>Busbar</td><td>87B, 50/51, 50BF</td><td>50/51</td><td>IEC 61850</td></tr>
+        <tr><td>Capacitor bank</td><td>87C, 50/51, 59, 60</td><td>50/51, 59</td><td>IEC 60871</td></tr>
+        <tr><td>Shunt reactor</td><td>50/51, 59, 51N</td><td>50/51</td><td>IEC 60289</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Best practices</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Use correct CT/VT ratios and burden — undersized or oversaturated instrument transformers make every downstream setting meaningless.</span></li>
+      <li><span class="tk-check">✓</span><span>Verify settings with studies and simulations before commissioning, not after the first trip.</span></li>
+      <li><span class="tk-check">✓</span><span>Test relays regularly — both primary and backup protection, on a defined interval.</span></li>
+      <li><span class="tk-check">✓</span><span>Maintain single-line diagrams and settings records so the "as-installed" scheme actually matches paper.</span></li>
+      <li><span class="tk-check">✓</span><span>Monitor event, alarm and disturbance records — they're the evidence trail when coordination is questioned.</span></li>
+      <li><span class="tk-check">✓</span><span>Keep firmware up to date and secure, especially on IEC 61850 GOOSE/MMS-connected IEDs.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>All relays — electromechanical or numerical — run the same measure → evaluate → decide → act → isolate → restore loop.</span></li>
+      <li><span class="tk-check">✓</span><span>Selectivity, speed, sensitivity, dependability and stability are competing goals; coordination studies find the practical balance.</span></li>
+      <li><span class="tk-check">✓</span><span>Relay families split by measured quantity — current, voltage, distance, differential, power/frequency — then map onto specific equipment.</span></li>
+      <li><span class="tk-check">✓</span><span>IEC 61850 replaces hardwired trip wiring with GOOSE messaging over a time-synchronized Ethernet network.</span></li>
+      <li><span class="tk-check">✓</span><span>Follow applicable standards (IEEE C37.2, IEC 60255, IEC 61850) and a documented coordination study before commissioning any scheme.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Power%20System%20Protection%20Relays%3A%20The%20Complete%20Reference%20Guide&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-system-protection-relays-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-system-protection-relays-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Power%20System%20Protection%20Relays%3A%20The%20Complete%20Reference%20Guide&text=Operation%20workflow%2C%20design%20goals%2C%20relay%20types%2C%20IEC%2061850%20architecture%20and%20a%20selection%20table.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-system-protection-relays-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Power%20System%20Protection%20Relays%3A%20The%20Complete%20Reference%20Guide&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APower%20System%20Protection%20Relays%3A%20The%20Complete%20Reference%20Guide%0AOperation%20workflow%2C%20design%20goals%2C%20relay%20types%2C%20IEC%2061850%20architecture%20and%20a%20selection%20table.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-system-protection-relays-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="ansi-relay-numbers-protection-functions">ANSI Relay Numbers: Common Protection Relay Functions</a></li><li><a href="how-to-select-digital-protection-relay">How to Select a Digital Protection Relay</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity Explained</a></li><li><a href="transformer-vector-groups-explained">Transformer Vector Groups Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
