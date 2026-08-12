@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?</title>
+    <link>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</guid>
+    <description>HIRA, JSA and SOP all show up in the same industrial safety training deck, but they operate at three different scopes and points in time — whole-workplace planning, one specific job before it starts, and the daily standard method once it's running.</description>
+    <pubDate>Wed, 12 Aug 2026 19:55:23 GMT</pubDate>
+  </item>
+  <item>
+    <title>Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job</title>
+    <link>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained.html</guid>
+    <description>What a permit to work actually authorizes, why lockout/tagout requires one lock per person rather than one lock per job.</description>
+    <pubDate>Wed, 12 Aug 2026 19:55:23 GMT</pubDate>
+  </item>
+  <item>
+    <title>Risk Register Basics: Turning Probability × Impact Into Priority</title>
+    <link>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</link>
+    <guid>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</guid>
+    <description>Why a risk list without scoring is just a list, how Probability × Impact turns gut feeling into a comparable number.</description>
+    <pubDate>Wed, 12 Aug 2026 19:55:23 GMT</pubDate>
+  </item>
+  <item>
     <title>Facility &amp; Property Management: Key Codes &amp; Standards Reference</title>
     <link>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</link>
     <guid>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</guid>
@@ -191,26 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
     <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
     <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
-  </item>
-  <item>
-    <title>Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake</title>
-    <link>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</link>
-    <guid>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake.html</guid>
-    <description>Basic incompressible-flow control valve Cv sizing, and why an oversized valve hurts controllability even when it comfortably passes the required flow.</description>
-    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
-  </item>
-  <item>
-    <title>Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</title>
-    <link>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</guid>
-    <description>Two different velocity limits compete to size a process line — economic velocity minimizes lifecycle cost, the API RP 14E erosional velocity protects the pipe wall. The lower of the two always governs.</description>
-    <pubDate>Sun, 09 Aug 2026 16:47:06 GMT</pubDate>
-  </item>
-  <item>
-    <title>Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type</title>
-    <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
-    <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
-    <description>Three ways a pressure relief valve holds its disc shut until set pressure — how back pressure, operating margin, and dirty service tolerance decide between a conventional, balanced bellows, or pilot-operated PSV.</description>
-    <pubDate>Sun, 09 Aug 2026 16:47:06 GMT</pubDate>
   </item>
 </channel></rss>
