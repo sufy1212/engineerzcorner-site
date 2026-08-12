@@ -1,5 +1,15 @@
 [
   {
+    "t": "Inverter Sizing Calculator",
+    "u": "solar/inverter-sizing-calculator",
+    "d": "2026-08-12"
+  },
+  {
+    "t": "Solar Sizing Calculator",
+    "u": "solar/solar-sizing-calculator",
+    "d": "2026-08-12"
+  },
+  {
     "t": "Age Calculator",
     "u": "general/age-calculator",
     "d": "2026-08-12"
@@ -37,16 +47,6 @@
   {
     "t": "Percentage Calculator",
     "u": "general/percentage-calculator",
-    "d": "2026-08-12"
-  },
-  {
-    "t": "Engineering Sanity-Checker",
-    "u": "general/sanity-checker",
-    "d": "2026-08-12"
-  },
-  {
-    "t": "Site Term Translator",
-    "u": "general/term-translator",
     "d": "2026-08-12"
   }
 ]
