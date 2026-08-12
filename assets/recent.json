@@ -5,8 +5,18 @@
     "d": "2026-08-12"
   },
   {
+    "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
+    "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
+    "d": "2026-08-12"
+  },
+  {
     "t": "Power System Protection Relays: The Complete Reference Guide",
     "u": "posts/power-system-protection-relays-explained",
+    "d": "2026-08-12"
+  },
+  {
+    "t": "Transformer Vector Groups Explained",
+    "u": "posts/transformer-vector-groups-explained",
     "d": "2026-08-12"
   },
   {
@@ -37,16 +47,6 @@
   {
     "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
     "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-08-11"
-  },
-  {
-    "t": "MPPT vs PWM Solar Charge Controllers: What Actually Changes",
-    "u": "posts/mppt-vs-pwm-solar-charge-controllers",
-    "d": "2026-08-11"
-  },
-  {
-    "t": "PLC vs DDC: What Actually Separates Them",
-    "u": "posts/plc-vs-ddc-key-differences",
     "d": "2026-08-11"
   }
 ]

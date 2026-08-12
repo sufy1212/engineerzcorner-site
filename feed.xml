@@ -8,14 +8,28 @@
     <link>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</guid>
     <description>How DGA reads a transformer's insulating oil for early fault signs — the key gas fingerprint, the five-step test workflow, why one number never proves a fault, and a field checklist with reference standards.</description>
-    <pubDate>Wed, 12 Aug 2026 19:11:32 GMT</pubDate>
+    <pubDate>Wed, 12 Aug 2026 19:16:13 GMT</pubDate>
+  </item>
+  <item>
+    <title>P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained</title>
+    <link>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</guid>
+    <description>What the line under an instrument bubble actually means — field-mounted, control-room-mounted, or not directly accessible — plus how to break down a tag like TT01 into loop number, measured variable and device function using ISA S5.1.</description>
+    <pubDate>Wed, 12 Aug 2026 19:16:13 GMT</pubDate>
   </item>
   <item>
     <title>Power System Protection Relays: The Complete Reference Guide</title>
     <link>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</guid>
     <description>Every protection relay category in one place — operation workflow, the five design goals, current/voltage/distance/differential/frequency relays, IEC 61850 architecture, inverse-time curves, coordination principles and a quick selection table.</description>
-    <pubDate>Wed, 12 Aug 2026 19:06:55 GMT</pubDate>
+    <pubDate>Wed, 12 Aug 2026 19:16:13 GMT</pubDate>
+  </item>
+  <item>
+    <title>Transformer Vector Groups Explained</title>
+    <link>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</guid>
+    <description>How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.</description>
+    <pubDate>Wed, 12 Aug 2026 19:16:13 GMT</pubDate>
   </item>
   <item>
     <title>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More</title>
@@ -81,13 +95,6 @@
     <pubDate>Tue, 11 Aug 2026 12:02:33 GMT</pubDate>
   </item>
   <item>
-    <title>P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</guid>
-    <description>What the line under an instrument bubble actually means — field-mounted, control-room-mounted, or not directly accessible — plus how to break down a tag like TT01 into loop number, measured variable and device function using ISA S5.1.</description>
-    <pubDate>Mon, 10 Aug 2026 20:07:11 GMT</pubDate>
-  </item>
-  <item>
     <title>Legend Sheet in a P&amp;ID Explained</title>
     <link>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
@@ -100,13 +107,6 @@
     <guid>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</guid>
     <description>How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.</description>
     <pubDate>Mon, 10 Aug 2026 20:07:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>Transformer Vector Groups Explained</title>
-    <link>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/transformer-vector-groups-explained.html</guid>
-    <description>How to decode a Dyn11 nameplate, read clock notation, and use vector group to decide whether two transformers can safely parallel — plus a quick-reference table of common groups.</description>
-    <pubDate>Mon, 10 Aug 2026 19:32:47 GMT</pubDate>
   </item>
   <item>
     <title>Chiller Machine: Main Parts &amp; Functions</title>
