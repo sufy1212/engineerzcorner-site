@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Dissolved Gas Analysis (DGA) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</guid>
+    <description>How DGA reads a transformer's insulating oil for early fault signs — the key gas fingerprint, the five-step test workflow, why one number never proves a fault, and a field checklist with reference standards.</description>
+    <pubDate>Wed, 12 Aug 2026 19:11:32 GMT</pubDate>
+  </item>
+  <item>
     <title>Power System Protection Relays: The Complete Reference Guide</title>
     <link>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</guid>
     <description>Pipe routing principles, pump suction line routing, equipment clearance, pipe racks, supports, dead legs, expansion loops, hot/cold line routing, utility routing, underground vs above ground, nozzle orientation, flange accessibility, and maintenance clearances.</description>
     <pubDate>Sat, 08 Aug 2026 19:30:14 GMT</pubDate>
-  </item>
-  <item>
-    <title>Power Transformer, CT &amp; PT: Internal Construction</title>
-    <link>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</guid>
-    <description>The internal construction of a power transformer, a current transformer (CT), and a potential transformer (PT/VT) — parts, typical ratings, accuracy classes, and a side-by-side comparison.</description>
-    <pubDate>Sat, 08 Aug 2026 13:12:37 GMT</pubDate>
   </item>
 </channel></rss>

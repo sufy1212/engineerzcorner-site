@@ -1,5 +1,10 @@
 [
   {
+    "t": "Dissolved Gas Analysis (DGA) Explained",
+    "u": "posts/dissolved-gas-analysis-dga-explained",
+    "d": "2026-08-12"
+  },
+  {
     "t": "Power System Protection Relays: The Complete Reference Guide",
     "u": "posts/power-system-protection-relays-explained",
     "d": "2026-08-12"
@@ -42,11 +47,6 @@
   {
     "t": "PLC vs DDC: What Actually Separates Them",
     "u": "posts/plc-vs-ddc-key-differences",
-    "d": "2026-08-11"
-  },
-  {
-    "t": "Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature",
-    "u": "posts/sensible-vs-latent-heat-cooling-load",
     "d": "2026-08-11"
   }
 ]
