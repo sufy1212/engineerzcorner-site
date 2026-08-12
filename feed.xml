@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More</title>
+    <link>https://www.engineerzcorner.com/posts/lv-panel-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/lv-panel-types-explained.html</guid>
+    <description>Every panel you'll find in a low-voltage electrical system — MDB, PCC, SDB/DB, MCC, VFD panel, APFC/PFC panel, feeder pillar, busbar trunking, ATS/AMF and PLC panels — what each does, where it sits, and which IEC 61439 part governs it.</description>
+    <pubDate>Wed, 12 Aug 2026 05:33:16 GMT</pubDate>
+  </item>
+  <item>
     <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
     <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
     <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
     <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
-    <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cut &amp; Fill Volume: How the Average End Area Method Actually Works</title>
-    <link>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cut-fill-volume-average-end-area-method-explained.html</guid>
-    <description>How earthwork volume between two cross-sections is estimated by averaging their areas, why section spacing controls accuracy, and where the method breaks down.</description>
     <pubDate>Sat, 08 Aug 2026 11:53:36 GMT</pubDate>
   </item>
 </channel></rss>

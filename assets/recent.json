@@ -1,5 +1,10 @@
 [
   {
+    "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
+    "u": "posts/lv-panel-types-explained",
+    "d": "2026-08-12"
+  },
+  {
     "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
     "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-11"
@@ -42,11 +47,6 @@
   {
     "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
     "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
-    "d": "2026-08-10"
-  },
-  {
-    "t": "Legend Sheet in a P&amp;ID Explained",
-    "u": "posts/pid-legend-sheet-explained",
     "d": "2026-08-10"
   }
 ]
