@@ -1,10 +1,5 @@
 [
   {
-    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
-    "u": "posts/facility-management-codes-standards-reference",
-    "d": "2026-08-13"
-  },
-  {
     "t": "Facility Management: Monthly Invoice Processing",
     "u": "posts/facility-management-monthly-invoice-processing",
     "d": "2026-08-13"
@@ -47,6 +42,11 @@
   {
     "t": "Inverter Sizing Calculator",
     "u": "solar/inverter-sizing-calculator",
+    "d": "2026-08-12"
+  },
+  {
+    "t": "Solar Sizing Calculator",
+    "u": "solar/solar-sizing-calculator",
     "d": "2026-08-12"
   }
 ]
