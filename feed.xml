@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Power Transformers Explained: Construction &amp; Working Principle</title>
+    <link>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
+    <description>How a power transformer steps voltage up or down with no moving parts — core, windings, oil, cooling, tap changer, and the protection gear around them.</description>
+    <pubDate>Thu, 13 Aug 2026 09:13:47 GMT</pubDate>
+  </item>
+  <item>
+    <title>Tap Changer of a Distribution Transformer Explained</title>
+    <link>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained.html</guid>
+    <description>How an off-load tap changer adjusts a distribution transformer's turns ratio to keep output voltage in range — where it sits, how tap positions map to voltage, and a worked ±5% example.</description>
+    <pubDate>Thu, 13 Aug 2026 09:13:47 GMT</pubDate>
+  </item>
+  <item>
     <title>Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</title>
     <link>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</guid>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</guid>
     <description>How an IP rating is actually built — the solid-protection digit, the liquid-protection digit, and the optional letters — decoded digit by digit against IEC 60529, with a full ratings reference and an IP-to-NEMA cross-check.</description>
     <pubDate>Sun, 09 Aug 2026 19:17:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>Junction Boxes Explained: Types, Parts &amp; Ratings</title>
-    <link>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained.html</guid>
-    <description>What a junction box actually does, the main types — pull box, gang box, weatherproof, explosion-proof, conduit body, terminal box, panel enclosure — its parts, a material and rating reference, box-fill sizing, and a selection checklist.</description>
-    <pubDate>Sun, 09 Aug 2026 19:17:32 GMT</pubDate>
-  </item>
-  <item>
-    <title>4-20mA Current Loops: Why Industry Still Trusts an Analog Signal</title>
-    <link>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
-    <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units.</description>
-    <pubDate>Sun, 09 Aug 2026 19:13:53 GMT</pubDate>
   </item>
 </channel></rss>
