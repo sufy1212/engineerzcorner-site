@@ -1,10 +1,5 @@
 [
   {
-    "t": "Basics of Fire Protection in Buildings Explained",
-    "u": "posts/basics-of-fire-protection-in-buildings-explained",
-    "d": "2026-08-13"
-  },
-  {
     "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
     "u": "posts/facility-management-codes-standards-reference",
     "d": "2026-08-13"
@@ -48,5 +43,10 @@
     "t": "Types of Earthing Systems: 9 Electrode Types Explained",
     "u": "posts/types-of-earthing-systems-explained",
     "d": "2026-08-13"
+  },
+  {
+    "t": "Inverter Sizing Calculator",
+    "u": "solar/inverter-sizing-calculator",
+    "d": "2026-08-12"
   }
 ]
