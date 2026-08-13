@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</title>
+    <link>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</guid>
+    <description>What an earthing system is actually protecting against, why grid resistance is the number that matters, the factors that drive it.</description>
+    <pubDate>Thu, 13 Aug 2026 09:10:18 GMT</pubDate>
+  </item>
+  <item>
+    <title>Types of Earthing Systems: 9 Electrode Types Explained</title>
+    <link>https://www.engineerzcorner.com/posts/types-of-earthing-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/types-of-earthing-systems-explained.html</guid>
+    <description>Nine types of earthing electrodes explained — plate, pipe, rod, strip, wire, chemical, ring, mesh and equipment earthing — with what each is built from and where it's actually used.</description>
+    <pubDate>Thu, 13 Aug 2026 09:10:18 GMT</pubDate>
+  </item>
+  <item>
     <title>HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?</title>
     <link>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</guid>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics.html</guid>
     <description>Why 4-20mA beat 0-20mA and voltage signals for instrumentation, what live-zero actually protects against, how to convert a reading back to engineering units.</description>
     <pubDate>Sun, 09 Aug 2026 19:13:53 GMT</pubDate>
-  </item>
-  <item>
-    <title>Control Valve Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</guid>
-    <description>What every part of a control valve actually does — body, trim (plug &amp; seat), stem, packing, bonnet, actuator, and positioner — component by component, in the order a signal turns into a throttled flow.</description>
-    <pubDate>Sun, 09 Aug 2026 19:13:53 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
-    <pubDate>Sun, 09 Aug 2026 16:52:47 GMT</pubDate>
   </item>
 </channel></rss>
