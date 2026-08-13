@@ -1,9 +1,17 @@
 #!/usr/bin/env node
 /**
  * brand-images.js — auto-watermark every content image with EngineerzCorner
- * branding, so any image added to the repo (infographic, diagram, screenshot)
- * automatically gets turned into "our own" — a gold accent rule + a footer
- * band carrying the site name and tagline — before it ever ships.
+ * branding: a gold accent rule + a footer band carrying the site name and
+ * tagline, stamped onto every image under a content img/ folder before it
+ * ever ships.
+ *
+ * IMPORTANT — this is a safety net, not a license to paste in third-party
+ * images. Site rule (see CONTRIBUTING.md "Image policy"): every image
+ * published on the site must be original EngineerzCorner-styled artwork —
+ * built from the site's own palette/type/layout system — not a copied,
+ * screenshotted, or reposted infographic from elsewhere. This script stamps
+ * a footer band on anything that slips through; it does not make a
+ * third-party image acceptable to publish.
  *
  * Runs in CI on every push (see .github/workflows/brand-images.yml) and is
  * idempotent: a manifest of post-brand file hashes (assets/branded-images-manifest.json)

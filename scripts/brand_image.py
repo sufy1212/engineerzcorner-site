@@ -7,6 +7,14 @@ Adds:
     small diamond logo mark, the site name, and a one-line tagline/URL
   - a thin gold accent rule separating the band from the artwork
 
+IMPORTANT — site rule (see CONTRIBUTING.md "Image policy"): every image
+published on the site must be original EngineerzCorner-styled artwork,
+built from the site's own navy/flame/gold palette and type system — never
+a copied, screenshotted, or reposted image from somewhere else. This
+script stamps a footer band on an image; it does not turn a third-party
+image into something acceptable to publish. Build the artwork original
+first, then run this.
+
 Usage:
     python3 brand_image.py <input_image> [output_image]
 
