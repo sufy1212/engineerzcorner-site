@@ -13,7 +13,7 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://sibforms.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://sibforms.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://latest.currency-api.pages.dev https://api.frankfurter.dev https://api.frankfurter.app https://open.er-api.com https://sibforms.com https://*.sibforms.com; frame-src https://sibforms.com https://*.sibforms.com; base-uri 'self'; form-action 'self' https://*.sibforms.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://sibforms.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://sibforms.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://latest.currency-api.pages.dev https://api.frankfurter.dev https://api.frankfurter.app https://open.er-api.com https://api.api-ninjas.com https://sibforms.com https://*.sibforms.com; frame-src https://sibforms.com https://*.sibforms.com; base-uri 'self'; form-action 'self' https://*.sibforms.com
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
