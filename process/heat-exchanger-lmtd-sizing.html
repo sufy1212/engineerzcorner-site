@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Exchanger Sizing (LMTD) — Engineerz CorneR</title>
+<meta name="description" content="Heat Exchanger Sizing (LMTD) — part of Engineerz CorneR's free engineering toolkit.">
+<link rel="canonical" href="https://www.engineerzcorner.com/process/heat-exchanger-lmtd-sizing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Heat Exchanger Sizing (LMTD) — Engineerz CorneR">
+<meta property="og:description" content="Heat Exchanger Sizing (LMTD) — part of a free multi-discipline engineering calculator toolkit (Electrical, Mechanical, HVAC, Civil, Automation, Process/Instrumentation, General Tools).">
+<meta property="og:url" content="https://www.engineerzcorner.com/process/heat-exchanger-lmtd-sizing">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heat Exchanger Sizing (LMTD) — Engineerz CorneR">
+<meta name="twitter:description" content="Heat Exchanger Sizing (LMTD) — part of a free multi-discipline engineering calculator toolkit.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Process/Instrumentation", "item": "https://www.engineerzcorner.com/process/" },
+    { "@type": "ListItem", "position": 3, "name": "Heat Exchanger Sizing (LMTD)", "item": "https://www.engineerzcorner.com/process/heat-exchanger-lmtd-sizing" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Heat Exchanger Sizing (LMTD)",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Heat Exchanger Sizing (LMTD) \u2014 part of a free multi-discipline engineering calculator toolkit.",
+  "url": "https://www.engineerzcorner.com/process/heat-exchanger-lmtd-sizing",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Process</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Heat Exchanger Sizing (LMTD)</span></div></nav>
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="../">Home</a>
+    <a href="../electrical/">Electrical</a>
+    <a href="../mechanical/">Mechanical</a>
+    <a href="../hvac/">HVAC</a>
+    <a href="../civil/">Civil</a>
+    <a href="../automation/">Automation</a>
+    <a href="./" class="current">Process</a>
+    <a href="../solar/">Solar</a>
+    <a href="../general/">General Tools</a>
+    <a href="../study-abroad/">Study Abroad</a>
+  </div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-pr-lmtd">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h13l4 4"></path><path d="M21 16H8l-4-4"></path></svg></div>
+    <div><h1>Heat Exchanger Sizing (LMTD)</h1><div class="hero-sub">Log-mean temperature difference and required area — counter-current or co-current</div></div>
+  </div>
+
+  <div class="mech-tabs">
+    <a href="./">Process Index</a>
+    <a href="relief-valve-sizing">PR.01 Relief Valve Sizing</a>
+    <a href="vessel-volume-level">PR.02 Vessel Volume/Level</a>
+    <a href="line-sizing-velocity">PR.03 Line Sizing (Erosional V)</a>
+    <a href="cavitation-flashing-check">PR.04 Cavitation/Flashing</a>
+    <a href="purge-gas-sizing">PR.05 Purge Gas Sizing</a>
+    <a href="heat-exchanger-lmtd-sizing" class="current">PR.10 Heat Exchanger (LMTD)</a>
+    <a href="notes">PR.06 Notes</a>
+    <a href="symbols">PR.07 Symbols</a>
+    <a href="guides">PR.08 Guides</a>
+    <a href="comparisons">PR.09 Comparisons</a>
+  </div>
+
+  <div class="intro">A first-pass shell-and-tube or double-pipe exchanger check: enter the four terminal temperatures to get the log-mean temperature difference (LMTD), then add duty and an overall heat transfer coefficient to estimate the required surface area. Counter-current and co-current (parallel flow) arrangements pair the hot and cold streams differently at each end — pick whichever matches your exchanger.</div>
+
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="lmValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Terminal Temperatures &amp; Arrangement</h2></div>
+    <div class="field" style="padding:0 16px 12px;">
+      <label>Flow arrangement</label>
+      <label style="display:flex;gap:14px;align-items:center;font-weight:400;font-size:13px;">
+        <span><input type="radio" name="lmArr" value="counter" checked> Counter-current</span>
+        <span><input type="radio" name="lmArr" value="co"> Co-current (parallel)</span>
+      </label>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="lmThi">Hot fluid inlet, T<sub>hi</sub> <span class="unit">°C</span></label>
+        <input type="number" id="lmThi" value="150" step="1">
+      </div>
+      <div class="field">
+        <label for="lmTho">Hot fluid outlet, T<sub>ho</sub> <span class="unit">°C</span></label>
+        <input type="number" id="lmTho" value="90" step="1">
+      </div>
+      <div class="field">
+        <label for="lmTci">Cold fluid inlet, T<sub>ci</sub> <span class="unit">°C</span></label>
+        <input type="number" id="lmTci" value="20" step="1">
+      </div>
+      <div class="field">
+        <label for="lmTco">Cold fluid outlet, T<sub>co</sub> <span class="unit">°C</span></label>
+        <input type="number" id="lmTco" value="80" step="1">
+      </div>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">ΔT at end 1</div><div class="sval" id="lmDt1">—</div></div>
+      <div class="stat"><div class="slabel">ΔT at end 2</div><div class="sval" id="lmDt2">—</div></div>
+      <div class="stat"><div class="slabel">LMTD</div><div class="sval amber" id="lmLmtd">—</div></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Duty, U &amp; Required Area</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="lmQ">Heat duty, Q <span class="unit">kW</span></label>
+        <input type="number" id="lmQ" value="500" step="10">
+      </div>
+      <div class="field">
+        <label for="lmU">Overall heat transfer coefficient, U <span class="unit">W/m²·K</span></label>
+        <input type="number" id="lmU" value="800" step="10">
+        <div class="hint">Typical: ~800–1500 for water-water, ~300–800 for water-light oil, ~100–300 for gas-liquid.</div>
+      </div>
+      <div class="field">
+        <label for="lmF">Correction factor, F <span class="unit">0–1, dimensionless</span></label>
+        <input type="number" id="lmF" value="1.0" step="0.01" min="0" max="1">
+        <div class="hint">1.0 for true counter-current or co-current single-pass; below 1.0 for multi-pass shell-and-tube (get from an F-factor chart for your pass configuration).</div>
+      </div>
+    </div>
+    <div class="result-line"><span class="rlabel">Corrected LMTD (F × LMTD)</span><span class="rval" id="lmLmtdCorr">0.0 <small>°C</small></span></div>
+    <div class="result-line"><span class="rlabel">Required Heat Transfer Area</span><span class="rval" id="lmArea">0.00 <small>m²</small></span></div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note" id="lmFormula">—</div>
+      <div class="hint" style="margin-top:8px;">Counter-current: ΔT1 = Thi−Tco, ΔT2 = Tho−Tci. Co-current: ΔT1 = Thi−Tci, ΔT2 = Tho−Tco. LMTD = (ΔT1−ΔT2)/ln(ΔT1/ΔT2) — for ΔT1 ≈ ΔT2, LMTD converges to that common value. Area = Q / (U · F · LMTD).</div>
+    </details>
+  </div>
+
+  <div class="reftable-section">
+    <h2>Counter-Current vs Co-Current</h2>
+    <p class="reftable-note">Counter-current (the hot and cold streams flowing in opposite directions) almost always gives a higher LMTD than co-current for the same four terminal temperatures, which means a smaller required area for the same duty — it's the default choice for most shell-and-tube and double-pipe exchangers. Co-current (parallel flow) is occasionally chosen when a fast initial approach temperature is wanted, or where limiting the maximum metal/tube-wall temperature matters, since the temperature difference is highest at the inlet end and falls off quickly.</p><p class="reftable-note">If either ΔT1 or ΔT2 comes out zero or negative, that particular arrangement can't achieve those four terminal temperatures — the hot stream would need to end up colder than the cold stream at that end, which is a temperature cross. Counter-current can sometimes still work in that case even when co-current can't, because of how the temperature differences are paired at each end.</p>
+  </div>
+
+  <footer>First-pass sizing using the LMTD method for a single-pass exchanger — multi-pass shell-and-tube designs need an F correction factor from a chart or the ε-NTU method for a fuller check. <a href="./">&larr; Process Index</a></footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function el(id){return document.getElementById(id);}
+  function num(id){var e=el(id);return e?parseFloat(e.value):NaN;}
+  function fmt(v,d){return isFinite(v)?v.toFixed(d===undefined?2:d):"—";}
+  function setText(id,html){var e=el(id);if(e)e.innerHTML=html;}
+
+  function calc(){
+    if(!el("lmThi")) return;
+    var arr=(document.querySelector('input[name="lmArr"]:checked')||{}).value||"counter";
+    var Thi=num("lmThi"), Tho=num("lmTho"), Tci=num("lmTci"), Tco=num("lmTco");
+    var Q=num("lmQ"), U=num("lmU"), F=num("lmF");
+    var errs=0;
+
+    errs+=fieldError(el("lmQ"), isNaN(Q)||Q<=0 ? "Heat duty must be greater than 0." : null);
+    errs+=fieldError(el("lmU"), isNaN(U)||U<=0 ? "U must be greater than 0." : null);
+    errs+=fieldError(el("lmF"), isNaN(F)||F<=0||F>1 ? "F must be between 0 and 1." : null);
+
+    if(errs>0){ updateValidationBanner("lmValidation",errs); return; }
+
+    var dT1, dT2;
+    if(arr==="counter"){
+      dT1 = Thi - Tco;
+      dT2 = Tho - Tci;
+    } else {
+      dT1 = Thi - Tci;
+      dT2 = Tho - Tco;
+    }
+
+    setText("lmDt1", fmt(dT1,1)+" <small>°C</small>");
+    setText("lmDt2", fmt(dT2,1)+" <small>°C</small>");
+
+    if(!isFinite(dT1) || !isFinite(dT2) || dT1<=0 || dT2<=0){
+      setText("lmLmtd", "—");
+      setText("lmLmtdCorr", "— <small>°C</small>");
+      setText("lmArea", "— <small>m²</small>");
+      setText("lmFormula", "—");
+      var b=el("lmValidation");
+      b.className="validation-banner bad";
+      b.innerHTML='<span class="vdot"></span><span>Temperature cross — ΔT1 or ΔT2 is zero or negative for the '+(arr==="counter"?"counter-current":"co-current")+' arrangement. These four temperatures aren\'t achievable this way; check the values or try the other arrangement.</span>';
+      return;
+    }
+
+    var lmtd;
+    if(Math.abs(dT1-dT2) < 1e-6){
+      lmtd = dT1;
+    } else {
+      lmtd = (dT1-dT2) / Math.log(dT1/dT2);
+    }
+
+    var lmtdCorr = F * lmtd;
+    var areaM2 = (isFinite(lmtdCorr) && lmtdCorr>0) ? (Q*1000) / (U*lmtdCorr) : NaN;
+
+    setText("lmLmtd", fmt(lmtd,1)+" <small>°C</small>");
+    setText("lmLmtdCorr", fmt(lmtdCorr,1)+" <small>°C</small>");
+    setText("lmArea", fmt(areaM2,2)+" <small>m²</small>");
+    setText("lmFormula", "ΔT1 = "+fmt(dT1,1)+"°C, ΔT2 = "+fmt(dT2,1)+"°C &nbsp;·&nbsp; LMTD = "+fmt(lmtd,2)+"°C &nbsp;·&nbsp; A = Q/(U·F·LMTD) = "+fmt(areaM2,3)+" m²");
+    updateValidationBanner("lmValidation",0);
+  }
+
+  ["lmThi","lmTho","lmTci","lmTco","lmQ","lmU","lmF"].forEach(function(id){
+    var e=el(id); if(e){ e.addEventListener("input",calc); e.addEventListener("change",calc); }
+  });
+  document.querySelectorAll('input[name="lmArr"]').forEach(function(r){ r.addEventListener("change",calc); });
+  calc();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+</body>
+</html>
