@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tap Changer of a Distribution Transformer Explained | Engineerz CorneR</title>
+<meta name="description" content="How an off-load tap changer adjusts a distribution transformer's turns ratio to keep output voltage in range — where it sits, how tap positions map to voltage, and a worked ±5% example.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Tap Changer of a Distribution Transformer Explained">
+<meta property="og:description" content="How an off-load tap changer adjusts a distribution transformer's turns ratio to keep output voltage in range — where it sits, how tap positions map to voltage, and a worked ±5% example.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tap Changer of a Distribution Transformer Explained">
+<meta name="twitter:description" content="How an off-load tap changer adjusts a distribution transformer's turns ratio to keep output voltage in range — where it sits, how tap positions map to voltage, and a worked ±5% example.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tap Changer of a Distribution Transformer Explained",
+      "item": "https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tap Changer of a Distribution Transformer Explained",
+      "datePublished": "2026-08-13",
+      "dateModified": "2026-08-13",
+  "description": "How an off-load tap changer adjusts a distribution transformer's turns ratio to keep output voltage in range — where it sits, how tap positions map to voltage, and a worked \u00b15% example.",
+  "url": "https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Tap Changer of a Distribution Transformer Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Transformers</span>
+    <h1>Tap Changer of a Distribution Transformer Explained</h1>
+    <p class="hero-sub">Supply voltage drifts, but the output still has to land in range — a tap changer is how a transformer adjusts its turns ratio to compensate, without doing anything fancier than picking a different connection point on the winding.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Transformers</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="70" y="40" width="26" height="100" rx="3" fill="#D9782E"/>
+      <g stroke="#8FB0B6" stroke-width="1.4">
+        <line x1="96" y1="55" x2="140" y2="55"/>
+        <line x1="96" y1="75" x2="140" y2="75"/>
+        <line x1="96" y1="95" x2="140" y2="95"/>
+        <line x1="96" y1="115" x2="140" y2="115"/>
+      </g>
+      <circle cx="140" cy="55" r="3" fill="#5FD3E3"/>
+      <circle cx="140" cy="75" r="3" fill="#5FD3E3"/>
+      <circle cx="140" cy="95" r="3" fill="#5FD3E3"/>
+      <circle cx="140" cy="115" r="3" fill="#5FD3E3"/>
+      <line x1="140" y1="75" x2="200" y2="75" stroke="#5FD3E3" stroke-width="2.2"/>
+      <circle cx="200" cy="75" r="4" fill="#0A1930" stroke="#5FD3E3" stroke-width="1.5"/>
+      <line x1="204" y1="72" x2="240" y2="45" stroke="#5FD3E3" stroke-width="2.2"/>
+      <text x="245" y="45" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">TAP SELECT</text>
+      <rect x="320" y="50" width="18" height="80" rx="3" fill="#3E8C97"/>
+      <line x1="338" y1="90" x2="420" y2="90" stroke="#5FD3E3" stroke-width="2"/>
+      <rect x="420" y="60" width="120" height="60" rx="6" fill="#122845" stroke="#3E8C97" stroke-width="1.5"/>
+      <text x="440" y="95" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">LV OUT</text>
+      <line x1="540" y1="90" x2="620" y2="90" stroke="#D9782E" stroke-width="2"/>
+      <path d="M600 82 L618 90 L600 98" fill="none" stroke="#D9782E" stroke-width="2"/>
+      <text x="560" y="70" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">433V</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A tap changer adjusts the transformer's turns ratio by selecting a different connection point on the winding — it doesn't regulate voltage electronically.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">On distribution transformers it's almost always fitted on the HV winding, and is almost always an off-load type — switched only with the transformer de-energized.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">More turns on the HV side raises the turns ratio, which lowers LV output voltage for the same HV supply — and fewer turns does the opposite.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A typical tap range is ±5% in 2.5% steps, giving five selectable positions to compensate for supply variation without changing the transformer itself.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What a tap changer is actually adjusting</h2>
+    <p>A transformer's output voltage is set by its turns ratio — the number of HV winding turns divided by the number of LV winding turns. A tap changer gives access to several different points along the HV winding, each with a slightly different number of turns between the tap and the winding's start. Selecting a different tap changes that turns count, which changes the turns ratio, which changes the LV output voltage for the same HV supply — all without touching the LV winding at all.</p>
+    <p>This matters because incoming supply voltage isn't perfectly constant. It drifts with loading on the wider network, distance from the source substation, and time of day. Without some way to compensate, that drift would show up directly as out-of-range voltage at the transformer's LV output. The tap changer is the mechanism that absorbs that drift by nudging the turns ratio instead.</p>
+
+    <h2><span class="h2-dot"></span>Where it sits, and what kind it usually is</h2>
+    <p class="lede">HV side, off-load type — the two defaults for distribution transformers</p>
+    <p>In distribution transformers, the tap changer is almost always provided on the HV winding rather than the LV winding — HV current is lower for the same power transfer, so the tap connections and switching contacts can be lighter and simpler there. It's also almost always an <b>off-load tap changer (OLTC — off-load, not on-load)</b>: the transformer has to be de-energized and taken off supply before the tap position can be changed. That's a deliberate simplification for distribution-class equipment, where taps are set occasionally (commissioning, or a seasonal adjustment) rather than continuously, unlike the on-load tap changers used on larger power transformers that need to regulate voltage while staying in service.</p>
+
+    <div class="signal-grid">
+      <div class="signal-card"><b>Off-load tap changer</b><span>Simple contact-and-resistor selector switch; must be switched with the transformer isolated. Standard on distribution transformers.</span></div>
+      <div class="signal-card"><b>On-load tap changer</b><span>More complex mechanism (diverter switch, transition resistors/reactors) that changes taps while the transformer stays energized and loaded — used on larger power/grid transformers where taking the unit offline isn't practical.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Typical tap positions and their effect</h2>
+    <p>A common arrangement is a ±5% tap range in 2.5% steps, giving five selectable positions. More turns on the HV side raises the effective turns ratio and lowers LV output voltage for a given HV supply; fewer turns does the reverse.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Tap Position</th><th>Change in Turns Ratio (HV Side)</th><th>Effect on LV Voltage (Approx.)</th></tr>
+        <tr><td>+5%</td><td>More turns</td><td>Increases voltage</td></tr>
+        <tr><td>+2.5%</td><td>Slightly more turns</td><td>Slightly increases voltage</td></tr>
+        <tr><td>0% (Neutral)</td><td>Normal turns</td><td>Normal voltage</td></tr>
+        <tr><td>&minus;2.5%</td><td>Slightly less turns</td><td>Slightly decreases voltage</td></tr>
+        <tr><td>&minus;5%</td><td>Less turns</td><td>Decreases voltage</td></tr>
+      </table>
+    </div>
+    <div class="formula-note">Note the direction: a "+5%" tap adds turns to the HV winding, which raises the turns ratio and actually pushes LV output voltage <i>up</i> for a given HV supply — the tap label describes the winding change, not the voltage direction directly, so it's worth double-checking against the nameplate rather than assuming.</div>
+
+    <h2><span class="h2-dot"></span>Worked example: an 11kV/433V distribution transformer</h2>
+    <p>Picture an 11kV HV supply feeding a transformer normally set to give 433V on the LV side at the neutral (0%) tap. Two situations call for a different tap:</p>
+    <div class="signal-grid">
+      <div class="signal-card"><b>If HV supply drops</b><span>Select the +2.5% or +5% tap (more turns on HV side). LV voltage increases back toward the desired 433V, compensating for the lower-than-normal supply.</span></div>
+      <div class="signal-card"><b>If HV supply rises</b><span>Select the −2.5% or −5% tap (fewer turns on HV side). LV voltage decreases back toward the desired 433V, compensating for the higher-than-normal supply.</span></div>
+    </div>
+    <p>Either way, the goal is the same: land back near the desired 433V output despite the HV side not being exactly 11kV. The transformer itself doesn't change — only which tap point the HV winding connects through.</p>
+
+    <h2><span class="h2-dot"></span>Inside an off-load tap changer</h2>
+    <p>Physically, an off-load tap changer is a rotary selector switch mounted on (or connected to) the transformer tank, usually with an external operating handle and a position indicator so the set tap is visible without opening the unit. Internally, a selector switch and contact fingers connect to different terminal studs — each stud wired to a different tap point on the HV winding — while the whole assembly sits in an oil chamber shared with the transformer's main tank, keeping the switching contacts insulated and cooled the same way the windings are.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>A tap changer adjusts turns ratio by selecting a different HV winding connection point — it's mechanical, not electronic.</span></li>
+      <li><span class="tk-check">✓</span><span>Distribution transformers almost always carry it on the HV side, as an off-load type switched only while de-energized.</span></li>
+      <li><span class="tk-check">✓</span><span>More HV turns → higher turns ratio → higher LV voltage; fewer HV turns → lower turns ratio → lower LV voltage.</span></li>
+      <li><span class="tk-check">✓</span><span>A typical ±5% range in 2.5% steps gives enough adjustment to correct for normal supply and loading variation without changing the transformer.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Tap%20Changer%20of%20a%20Distribution%20Transformer%20Explained%20%E2%80%94%20How%20an%20off-load%20tap%20changer%20adjusts%20turns%20ratio%20to%20keep%20output%20voltage%20in%20range%2C%20with%20a%20worked%20%C2%B15%25%20example.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftap-changer-distribution-transformer-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftap-changer-distribution-transformer-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Tap%20Changer%20of%20a%20Distribution%20Transformer%20Explained&text=How%20an%20off-load%20tap%20changer%20adjusts%20turns%20ratio%20to%20keep%20output%20voltage%20in%20range%2C%20with%20a%20worked%20%C2%B15%25%20example.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftap-changer-distribution-transformer-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Tap%20Changer%20of%20a%20Distribution%20Transformer%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ATap%20Changer%20of%20a%20Distribution%20Transformer%20Explained%0AHow%20an%20off-load%20tap%20changer%20adjusts%20turns%20ratio%20to%20keep%20output%20voltage%20in%20range%2C%20with%20a%20worked%20%C2%B15%25%20example.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftap-changer-distribution-transformer-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="power-transformer-construction-working-principle">Power Transformer Construction &amp; Working Principle</a></li><li><a href="transformer-vector-groups-explained">Transformer Vector Groups Explained</a></li><li><a href="k-rated-transformer-explained">K-Rated Transformers Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
