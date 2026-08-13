@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
+    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
+    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
+    <pubDate>Thu, 13 Aug 2026 09:18:18 GMT</pubDate>
+  </item>
+  <item>
+    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
+    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
+    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
+    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
+    <pubDate>Thu, 13 Aug 2026 09:18:18 GMT</pubDate>
+  </item>
+  <item>
+    <title>Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs</title>
+    <link>https://www.engineerzcorner.com/posts/icw-icu-ics-icm-short-circuit-ratings-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/icw-icu-ics-icm-short-circuit-ratings-explained.html</guid>
+    <description>Four short-circuit kA ratings on a breaker or busbar nameplate — Icw, Icu, Ics and Icm — and what each one actually certifies, with a worked example showing how they relate.</description>
+    <pubDate>Thu, 13 Aug 2026 09:18:18 GMT</pubDate>
+  </item>
+  <item>
     <title>Power Transformers Explained: Construction &amp; Working Principle</title>
     <link>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle.html</guid>
@@ -191,26 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
     <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
     <pubDate>Sun, 09 Aug 2026 20:27:10 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pre-Commissioning vs Commissioning: What's the Difference</title>
-    <link>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</guid>
-    <description>Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.</description>
-    <pubDate>Sun, 09 Aug 2026 20:27:10 GMT</pubDate>
-  </item>
-  <item>
-    <title>Star (Y) and Delta (Δ) Connections Explained</title>
-    <link>https://www.engineerzcorner.com/posts/star-delta-connection-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/star-delta-connection-explained.html</guid>
-    <description>How Star (Y) and Delta (Δ) three-phase winding connections actually differ — the neutral point, the line/phase voltage and current relationships, terminal wiring, and why a Star-Delta starter switches between the two.</description>
-    <pubDate>Sun, 09 Aug 2026 20:17:27 GMT</pubDate>
-  </item>
-  <item>
-    <title>Ingress Protection (IP) Ratings Explained</title>
-    <link>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ingress-protection-ip-rating-explained.html</guid>
-    <description>How an IP rating is actually built — the solid-protection digit, the liquid-protection digit, and the optional letters — decoded digit by digit against IEC 60529, with a full ratings reference and an IP-to-NEMA cross-check.</description>
-    <pubDate>Sun, 09 Aug 2026 19:17:32 GMT</pubDate>
   </item>
 </channel></rss>
