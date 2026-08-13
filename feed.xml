@@ -4,11 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Facility &amp; Property Management: Key Codes &amp; Standards Reference</title>
+    <link>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</guid>
+    <description>The key codes and standards that govern facility and property management &amp;mdash; maintenance, HVAC, fire &amp; life safety, occupational health, electrical, building codes, and more.</description>
+    <pubDate>Thu, 13 Aug 2026 11:30:48 GMT</pubDate>
+  </item>
+  <item>
     <title>Facility Management: Monthly Invoice Processing</title>
     <link>https://www.engineerzcorner.com/posts/facility-management-monthly-invoice-processing.html</link>
     <guid>https://www.engineerzcorner.com/posts/facility-management-monthly-invoice-processing.html</guid>
-    <description>How FM teams process monthly invoices — the 3 expense categories, the 10-step verification-to-filing workflow, and a worked invoice tracker example.</description>
-    <pubDate>Thu, 13 Aug 2026 12:00:00 GMT</pubDate>
+    <description>How FM teams process monthly invoices &amp;mdash; the 3 expense categories (utility, service, consumables), the 10-step verification-to-filing workflow, and a worked invoice tracker example.</description>
+    <pubDate>Thu, 13 Aug 2026 11:30:48 GMT</pubDate>
   </item>
   <item>
     <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
@@ -79,13 +86,6 @@
     <guid>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring.html</guid>
     <description>Why a risk list without scoring is just a list, how Probability × Impact turns gut feeling into a comparable number.</description>
     <pubDate>Wed, 12 Aug 2026 19:55:23 GMT</pubDate>
-  </item>
-  <item>
-    <title>Facility &amp; Property Management: Key Codes &amp; Standards Reference</title>
-    <link>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</link>
-    <guid>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</guid>
-    <description>The key codes and standards that govern facility and property management &amp;mdash; maintenance, HVAC, fire &amp; life safety, occupational health, electrical, building codes, and more.</description>
-    <pubDate>Wed, 12 Aug 2026 19:38:34 GMT</pubDate>
   </item>
   <item>
     <title>Dissolved Gas Analysis (DGA) Explained</title>
@@ -212,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/hvac-system-components-explained.html</guid>
     <description>How an HVAC system actually conditions a space, component by component — compressor, condenser, expansion device, evaporator, air handler, ductwork, and controls.</description>
     <pubDate>Sun, 09 Aug 2026 21:29:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
-    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
-    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
-    <description>The 8 stages of an LV panel FAT — visual and mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation — plus the acceptance criteria that close it out.</description>
-    <pubDate>Sun, 09 Aug 2026 20:27:10 GMT</pubDate>
   </item>
 </channel></rss>
