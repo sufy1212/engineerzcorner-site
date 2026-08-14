@@ -1,5 +1,15 @@
 [
   {
+    "t": "GPA / CGPA Converter",
+    "u": "study-abroad/gpa-converter",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Score Calculator",
+    "u": "study-abroad/score-calculator",
+    "d": "2026-08-14"
+  },
+  {
     "t": "IEC 104 Communication Protocol Explained",
     "u": "posts/iec-104-communication-protocol-explained",
     "d": "2026-08-14"
@@ -37,16 +47,6 @@
   {
     "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
     "u": "posts/breaker-selectivity-discrimination-explained",
-    "d": "2026-08-13"
-  },
-  {
-    "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
-    "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
-    "d": "2026-08-13"
-  },
-  {
-    "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
-    "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
     "d": "2026-08-13"
   }
 ]
