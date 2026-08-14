@@ -1,5 +1,12 @@
 [
  {
+  "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
+  "u": "posts/scada-supervisory-control-data-acquisition-explained",
+  "d": "2026-08-14",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Battery State-of-Charge Simulator",
   "u": "solar/battery-soc-simulator",
   "d": "2026-08-14",
