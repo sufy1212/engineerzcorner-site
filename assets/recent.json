@@ -1,52 +1,52 @@
 [
   {
-    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
-    "u": "posts/33-11kv-substation-diagram-equipment-overview",
+    "t": "Battery State-of-Charge Simulator",
+    "u": "solar/battery-soc-simulator",
     "d": "2026-08-14"
   },
   {
-    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
-    "u": "posts/4-20ma-current-loop-basics",
+    "t": "Charge Controller Sizing Calculator",
+    "u": "solar/charge-controller-sizing-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-    "u": "posts/acb-protection-settings-explained",
+    "t": "CO2 Offset &amp; Environmental Savings Calculator",
+    "u": "solar/co2-offset-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
-    "u": "posts/access-control-system-acs-explained",
+    "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
+    "u": "solar/dc-cable-voltage-drop-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
-    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
+    "t": "Inverter Sizing Calculator",
+    "u": "solar/inverter-sizing-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
-    "u": "posts/air-changes-per-hour-ventilation-explained",
+    "t": "Panel Tilt &amp; Orientation Calculator",
+    "u": "solar/panel-tilt-orientation-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
-    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+    "t": "PV String Sizing &amp; Voltage Calculator",
+    "u": "solar/pv-string-sizing-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
-    "u": "posts/ansi-relay-numbers-protection-functions",
+    "t": "Row Spacing &amp; Self-Shading Calculator",
+    "u": "solar/row-spacing-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
+    "t": "Solar Payback &amp; ROI Calculator",
+    "u": "solar/solar-payback-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Basics of Fire Protection in Buildings Explained",
-    "u": "posts/basics-of-fire-protection-in-buildings-explained",
+    "t": "Solar Sizing Calculator",
+    "u": "solar/solar-sizing-calculator",
     "d": "2026-08-14"
   }
 ]
