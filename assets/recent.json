@@ -1,52 +1,52 @@
 [
   {
-    "t": "Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough",
-    "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
+    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+    "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-14"
   },
   {
-    "t": "Dissolved Gas Analysis (DGA) Explained",
-    "u": "posts/dissolved-gas-analysis-dga-explained",
+    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
+    "u": "posts/4-20ma-current-loop-basics",
     "d": "2026-08-14"
   },
   {
-    "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
-    "u": "posts/duct-sizing-velocity-limits-vs-airflow",
+    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+    "u": "posts/acb-protection-settings-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Earned Value Management: Reading Project Health From Three Numbers",
-    "u": "posts/earned-value-management-basics",
+    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+    "u": "posts/access-control-system-acs-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
-    "u": "posts/earthing-grounding-systems-explained",
+    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
+    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-    "u": "posts/electrical-panel-fat-checklist",
+    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
+    "u": "posts/air-changes-per-hour-ventilation-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
-    "u": "posts/electrical-switchgear-protection-devices-explained",
+    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "What Is an ELV System? Types, Components &amp; the BIM Engineer's Role",
-    "u": "posts/elv-extra-low-voltage-systems-explained",
+    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
+    "u": "posts/ansi-relay-numbers-protection-functions",
     "d": "2026-08-14"
   },
   {
-    "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
-    "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
+    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
-    "u": "posts/facility-management-codes-standards-reference",
+    "t": "Basics of Fire Protection in Buildings Explained",
+    "u": "posts/basics-of-fire-protection-in-buildings-explained",
     "d": "2026-08-14"
   }
 ]
