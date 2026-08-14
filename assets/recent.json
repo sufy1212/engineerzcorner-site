@@ -1,5 +1,45 @@
 [
   {
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Earthing Grid Resistance",
+    "u": "electrical/earthing-grid-resistance",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Earthing Rod Resistance",
+    "u": "electrical/earthing-rod-resistance",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Energy Cost / kWh Bill Estimator",
+    "u": "electrical/energy-cost-calculator",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Motor FLC / Starting Current",
+    "u": "electrical/motor-flc-starting-current",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Power Factor Correction Sizing",
+    "u": "electrical/power-factor-correction",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Single Line Diagram Creator",
+    "u": "electrical/sld-creator",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Three-Phase Power &amp; Current Calculator",
+    "u": "electrical/three-phase-power-calculator",
+    "d": "2026-08-14"
+  },
+  {
     "t": "Beam Bending &amp; Deflection",
     "u": "civil/beam-bending",
     "d": "2026-08-14"
@@ -7,46 +47,6 @@
   {
     "t": "Column Axial Capacity",
     "u": "civil/column-capacity",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Concrete Volume &amp; Material Estimator",
-    "u": "civil/concrete-volume-estimator",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Retaining Wall Stability",
-    "u": "civil/retaining-wall",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Slab-on-Grade Quick Thickness",
-    "u": "civil/slab-on-grade-thickness",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Staircase Geometry Check",
-    "u": "civil/staircase-geometry",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "DP Level Transmitter Ranging",
-    "u": "automation/level-transmitter",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Application Timeline Planner",
-    "u": "study-abroad/application-timeline-planner",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Cost of Living Calculator",
-    "u": "study-abroad/cost-of-living-calculator",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Currency Converter",
-    "u": "study-abroad/currency-converter",
     "d": "2026-08-14"
   }
 ]
