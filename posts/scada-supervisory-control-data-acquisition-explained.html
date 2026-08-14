@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCADA (Supervisory Control &amp; Data Acquisition) Explained | Engineerz CorneR</title>
+<meta name="description" content="How SCADA actually works — the field/communication/supervisory architecture, the 5-step monitor-to-action loop, components, communication protocols, SCADA system types, and SCADA vs DCS compared.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="SCADA (Supervisory Control &amp; Data Acquisition) Explained">
+<meta property="og:description" content="SCADA architecture, the 5-step monitor-to-action loop, components, communication protocols, system types, and SCADA vs DCS — in one reference.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/posts/img/scada-supervisory-control-data-acquisition-infographic.jpg">
+<meta property="og:image:width" content="1079">
+<meta property="og:image:height" content="1353">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SCADA (Supervisory Control &amp; Data Acquisition) Explained">
+<meta name="twitter:description" content="SCADA architecture, the 5-step monitor-to-action loop, components, communication protocols, system types, and SCADA vs DCS — in one reference.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/posts/img/scada-supervisory-control-data-acquisition-infographic.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SCADA (Supervisory Control & Data Acquisition) Explained",
+      "item": "https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SCADA (Supervisory Control & Data Acquisition) Explained",
+      "datePublished": "2026-08-14",
+      "dateModified": "2026-08-14",
+  "description": "SCADA architecture, the 5-step monitor-to-action loop, components, communication protocols, system types, and SCADA vs DCS — in one reference.",
+  "url": "https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained",
+  "image": "https://www.engineerzcorner.com/posts/img/scada-supervisory-control-data-acquisition-infographic.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">SCADA (Supervisory Control &amp; Data Acquisition) Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9881; Automation &middot; SCADA Systems</span>
+    <h1>SCADA (Supervisory Control &amp; Data Acquisition) Explained</h1>
+    <p class="hero-sub">SCADA is how one control room watches and commands equipment scattered across a whole site, region or grid — pumping stations, substations, wellheads, pipelines — without an operator standing at each one. Here's the architecture, the monitor-to-action loop, and how it actually differs from a PLC or DCS.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Automation</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">SCADA doesn't control equipment directly — it supervises the PLCs/RTUs that do, then lets one control room see and command all of them together.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The architecture is three tiers stacked on top of each other: field devices, a communication network, and the supervisory HMI/servers layer.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">SCADA is built for geographic reach over wide areas; DCS is built for tight, high-density control inside one plant.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Every cycle follows the same loop — collect, transmit, process, supervise, act — and the action feeds straight back into the next collection.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>SCADA (Supervisory Control and Data Acquisition) is a software-and-hardware system that lets a central control room monitor, control and analyze physical processes that may be spread across one site or an entire country. It pulls data from field devices, gives operators supervisory command over that equipment, and logs everything so trends, alarms and reports are available without anyone walking out to the field.</p>
+
+    <img class="infographic" src="img/scada-supervisory-control-data-acquisition-infographic.jpg" alt="SCADA infographic — what SCADA is, key functions, benefits, system architecture, how SCADA works, types of SCADA systems, components, communication protocols, industrial applications, SCADA vs DCS, alarm management and the future of SCADA">
+    <p class="fig-caption">SCADA at a glance — architecture, working sequence, components, protocols and applications.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="slabel">Architecture Levels</div><div class="sval">3</div></div>
+      <div class="stat"><div class="slabel">Working-Loop Steps</div><div class="sval">5</div></div>
+      <div class="stat"><div class="slabel">Common SCADA Types</div><div class="sval">4</div></div>
+      <div class="stat"><div class="slabel">Comm. Protocols Covered</div><div class="sval amber">6</div></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key functions</h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"></rect><path d="M8 20h8M12 16v4"></path></svg></div>
+          <div><div class="tool-card-title">Real-Time Monitoring</div></div>
+        </div>
+        <div class="tool-card-desc">Continuously watches the status of field devices and processes as conditions change.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></div>
+          <div><div class="tool-card-title">Data Acquisition</div></div>
+        </div>
+        <div class="tool-card-desc">Collects live readings from RTUs, PLCs and sensors out in the field.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg></div>
+          <div><div class="tool-card-title">Supervisory Control</div></div>
+        </div>
+        <div class="tool-card-desc">Sends command signals out to field devices remotely, from one control point.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-6 6c0 4-1.5 5.5-1.5 5.5h15S18 13 18 9a6 6 0 0 0-6-6z"></path><path d="M10 19a2 2 0 0 0 4 0"></path></svg></div>
+          <div><div class="tool-card-title">Alarms &amp; Notifications</div></div>
+        </div>
+        <div class="tool-card-desc">Detects abnormal conditions and notifies operators before they escalate.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l3 3v17H6z"></path><path d="M15 2v3h3M9 12h6M9 16h6M9 8h3"></path></svg></div>
+          <div><div class="tool-card-title">Data Logging &amp; Reporting</div></div>
+        </div>
+        <div class="tool-card-desc">Stores historical data and generates reports operators and engineers can review later.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l3-4 3 3 5-7"></path></svg></div>
+          <div><div class="tool-card-title">Trending &amp; Analysis</div></div>
+        </div>
+        <div class="tool-card-desc">Analyzes trends and performance over time to support better operating decisions.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>SCADA system architecture — three levels</h2>
+    <p>Every SCADA system stacks the same three tiers, regardless of industry:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Level</th><th>What sits here</th><th>Job</th></tr>
+        <tr><td>Field Level</td><td>Sensors, transmitters, actuators, meters, relays, valves feeding an RTU/PLC</td><td>Measures and actuates the physical process</td></tr>
+        <tr><td>Communication Level</td><td>Communication servers running OPC, Modbus, DNP3, IEC 60870-5-104, etc.</td><td>Carries data between field devices and the supervisory layer</td></tr>
+        <tr><td>Supervisory Level</td><td>HMI/SCADA servers and engineering workstations</td><td>Displays, logs and lets operators command the whole system</td></tr>
+      </table>
+    </div>
+    <p>Data only flows upward to be seen and downward to be acted on — the RTU/PLC at field level is still what's actually executing control locally; SCADA supervises it rather than replacing it.</p>
+
+    <h2><span class="h2-dot"></span>How SCADA works — the 5-step loop</h2>
+    <div class="sld-ladder">
+      <div class="sld-step"><span class="sld-badge">1</span><div><b>Data Collection</b><span>Field devices send readings to RTUs/PLCs at the equipment.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">2</span><div><b>Data Transmission</b><span>That data is carried over the communication network to the SCADA server.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">3</span><div><b>Data Processing</b><span>The SCADA server processes, stores and analyzes the incoming data.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">4</span><div><b>Supervision &amp; Control</b><span>Operators monitor the picture on the HMI and issue commands.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">5</span><div><b>Action</b><span>Control commands travel back down to the field devices — and the loop repeats.</span></div></div>
+    </div>
+    <p>Step 5 feeding back into step 1 is the whole point: SCADA is a closed supervisory loop, not a one-way reporting tool.</p>
+
+    <h2><span class="h2-dot"></span>SCADA components</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Component</th><th>Function</th></tr>
+        <tr><td>HMI (Human Machine Interface)</td><td>Graphical interface for monitoring and control</td></tr>
+        <tr><td>SCADA Server</td><td>Manages data, alarms, logging, reports and user access</td></tr>
+        <tr><td>RTU (Remote Terminal Unit)</td><td>Interfaces with field devices and transmits data to SCADA</td></tr>
+        <tr><td>PLC (Programmable Logic Controller)</td><td>Controls field processes and communicates with SCADA</td></tr>
+        <tr><td>Communication Network</td><td>Transmits data between field devices and the SCADA system</td></tr>
+        <tr><td>Field Devices</td><td>Sensors, transmitters, actuators, meters, valves and other instruments</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Communication protocols</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Protocol</th><th>What it's for</th></tr>
+        <tr><td>OPC UA</td><td>Platform-independent, secure, reliable communication standard</td></tr>
+        <tr><td>Modbus</td><td>Widely used open protocol for industrial device communication</td></tr>
+        <tr><td>DNP3</td><td>Standard for communication between a SCADA master and RTUs</td></tr>
+        <tr><td>IEC 60870-5-104</td><td>Secure telecontrol protocol over IP networks — <a href="iec-104-communication-protocol-explained">covered in detail here</a></td></tr>
+        <tr><td>Ethernet / TCP-IP</td><td>Common backbone communication for modern SCADA systems</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Types of SCADA systems</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>Stand-Alone SCADA</td><td>Single-site system with local HMI and communication to field devices</td></tr>
+        <tr><td>Distributed SCADA</td><td>Multiple SCADA servers and HMIs coordinated across multiple locations</td></tr>
+        <tr><td>Networked SCADA</td><td>SCADA systems connected over a wide area network (WAN)</td></tr>
+        <tr><td>Web-Based SCADA</td><td>Access and monitoring through web browsers and mobile devices</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>SCADA vs DCS</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Feature</th><th>SCADA</th><th>DCS</th></tr>
+        <tr><td>Primary use</td><td>Supervisory monitoring and data acquisition</td><td>Process control and automation</td></tr>
+        <tr><td>System structure</td><td>Centralized / distributed over wide areas</td><td>Distributed control within one plant</td></tr>
+        <tr><td>Control</td><td>Primarily monitoring and command</td><td>Direct, continuous control of processes</td></tr>
+        <tr><td>Typical communication range</td><td>Wide area (WAN)</td><td>Local area (LAN)</td></tr>
+        <tr><td>Typical response time</td><td>Seconds</td><td>Milliseconds</td></tr>
+        <tr><td>Example use case</td><td>Water systems, pipelines, power grids</td><td>Chemical plants, refineries</td></tr>
+      </table>
+    </div>
+    <p>For where PLC fits alongside these two, see <a href="plc-vs-dcs-vs-scada-explained">PLC vs DCS vs SCADA Explained</a>.</p>
+
+    <h2><span class="h2-dot"></span>Industrial applications</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span><b>Water &amp; wastewater:</b> monitoring pumps, tanks, flow, level and water quality.</span></li>
+      <li><span class="tk-check">✓</span><span><b>Oil &amp; gas:</b> monitoring pipelines, wellheads, refineries and storage.</span></li>
+      <li><span class="tk-check">✓</span><span><b>Power &amp; energy:</b> monitoring power plants, substations and distribution.</span></li>
+      <li><span class="tk-check">✓</span><span><b>Manufacturing:</b> monitoring machines, production lines and utilities.</span></li>
+      <li><span class="tk-check">✓</span><span><b>Transportation:</b> railways, tunnels, airports and traffic control systems.</span></li>
+      <li><span class="tk-check">✓</span><span><b>Building automation:</b> HVAC, lighting, security and energy management.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Alarm management</h2>
+    <p>A SCADA system is only as useful as its alarm list is trustworthy. Good practice:</p>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Prioritize alarms based on severity and impact, not just order of arrival.</span></li>
+      <li><span class="tk-check">✓</span><span>Give operators clear, actionable alarm messages, not raw tag names.</span></li>
+      <li><span class="tk-check">✓</span><span>Avoid alarm flooding — nuisance and duplicate alarms bury the ones that matter.</span></li>
+      <li><span class="tk-check">✓</span><span>Enable proper alarm acknowledgment, shelving and history logging.</span></li>
+      <li><span class="tk-check">✓</span><span>Effective alarm management reduces operator stress and improves overall safety.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Where SCADA is heading</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Integration with IIoT and cloud platforms for real-time data access from anywhere.</span></li>
+      <li><span class="tk-check">✓</span><span>Advanced analytics and AI for predictive maintenance and anomaly detection.</span></li>
+      <li><span class="tk-check">✓</span><span>Stronger cybersecurity built around SCADA's role as critical infrastructure.</span></li>
+      <li><span class="tk-check">✓</span><span>Mobile and web access for remote monitoring and control on any device.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>SCADA connects the field to the control room — sensors and RTUs feed data up, commands travel back down.</span></li>
+      <li><span class="tk-check">✓</span><span>The three-level architecture — field, communication, supervisory — is the same regardless of industry.</span></li>
+      <li><span class="tk-check">✓</span><span>SCADA is built for wide-area supervision over many sites; DCS is built for tight, continuous control inside one plant.</span></li>
+      <li><span class="tk-check">✓</span><span>Alarm management quality determines whether operators can actually trust and act on what SCADA shows them.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=SCADA%20(Supervisory%20Control%20%26%20Data%20Acquisition)%20Explained%20%E2%80%94%20architecture%2C%20the%205-step%20working%20loop%2C%20components%2C%20protocols%20and%20SCADA%20vs%20DCS.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fscada-supervisory-control-data-acquisition-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fscada-supervisory-control-data-acquisition-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=SCADA%20(Supervisory%20Control%20%26%20Data%20Acquisition)%20Explained&text=SCADA%20architecture%2C%20the%205-step%20working%20loop%2C%20components%2C%20protocols%20and%20SCADA%20vs%20DCS%2C%20in%20one%20reference.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fscada-supervisory-control-data-acquisition-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=SCADA%20(Supervisory%20Control%20%26%20Data%20Acquisition)%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ASCADA%20(Supervisory%20Control%20%26%20Data%20Acquisition)%20Explained%0AArchitecture%2C%20the%205-step%20working%20loop%2C%20components%2C%20protocols%20and%20SCADA%20vs%20DCS.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fscada-supervisory-control-data-acquisition-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="plc-vs-dcs-vs-scada-explained">PLC vs DCS vs SCADA Explained: Real Industrial Comparison</a></li><li><a href="iec-104-communication-protocol-explained">IEC 104 Communication Protocol Explained</a></li><li><a href="plc-components-explained">PLC Components Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+</body>
+</html>
