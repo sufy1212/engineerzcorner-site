@@ -1,5 +1,15 @@
 [
   {
+    "t": "Heat Load / Cooling Simulator",
+    "u": "mechanical/heat-load-simulator",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Pump System Curve Simulator",
+    "u": "mechanical/pump-system-curve-simulator",
+    "d": "2026-08-14"
+  },
+  {
     "t": "Motor Starting Simulator",
     "u": "electrical/motor-starting-simulator",
     "d": "2026-08-14"
@@ -37,16 +47,6 @@
   {
     "t": "GPA / CGPA Converter",
     "u": "study-abroad/gpa-converter",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Proof of Funds Calculator",
-    "u": "study-abroad/proof-of-funds-calculator",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Score Calculator",
-    "u": "study-abroad/score-calculator",
     "d": "2026-08-14"
   }
 ]
