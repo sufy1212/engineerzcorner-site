@@ -4,13 +4,6 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
-    <description>SCADA architecture, the 5-step monitor-to-action loop, components, communication protocols, system types, and SCADA vs DCS — in one reference.</description>
-    <pubDate>Fri, 14 Aug 2026 12:00:00 GMT</pubDate>
-  </item>
-  <item>
     <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
     <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
     <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
