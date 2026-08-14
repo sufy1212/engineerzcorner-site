@@ -156,7 +156,7 @@
   <url><loc>https://www.engineerzcorner.com/pm/team-directory</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-08-11</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -164,6 +164,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -198,7 +199,6 @@
   <url><loc>https://www.engineerzcorner.com/posts/elv-extra-low-voltage-systems-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained</loc><lastmod>2026-08-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference</loc><lastmod>2026-08-13</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained</loc><lastmod>2026-08-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/facility-management-monthly-invoice-processing</loc><lastmod>2026-08-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -240,7 +240,6 @@
   <url><loc>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-thermal-expansion-why-long-runs-move-more</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/plc-components-explained</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/plc-vs-ddc-key-differences</loc><lastmod>2026-08-11</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained</loc><lastmod>2026-08-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/power-transformer-construction-working-principle</loc><lastmod>2026-08-13</lastmod><priority>0.6</priority></url>
