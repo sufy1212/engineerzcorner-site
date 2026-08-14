@@ -1,52 +1,52 @@
 [
   {
-    "t": "Commercial Terms of Project",
-    "u": "pm/commercial-terms",
+    "t": "Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough",
+    "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
     "d": "2026-08-14"
   },
   {
-    "t": "Earned Value Management",
-    "u": "pm/evm",
+    "t": "Dissolved Gas Analysis (DGA) Explained",
+    "u": "posts/dissolved-gas-analysis-dga-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "PM Glossary",
-    "u": "pm/glossary",
+    "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
+    "u": "posts/duct-sizing-velocity-limits-vs-airflow",
     "d": "2026-08-14"
   },
   {
-    "t": "Incoterms",
-    "u": "pm/incoterms",
+    "t": "Earned Value Management: Reading Project Health From Three Numbers",
+    "u": "posts/earned-value-management-basics",
     "d": "2026-08-14"
   },
   {
-    "t": "Meeting Minutes &amp; Action Items",
-    "u": "pm/meeting-minutes",
+    "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
+    "u": "posts/earthing-grounding-systems-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Permit to Work / LOTO Checklist",
-    "u": "pm/permit-to-work",
+    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
+    "u": "posts/electrical-panel-fat-checklist",
     "d": "2026-08-14"
   },
   {
-    "t": "PMP / PMBOK Reference",
-    "u": "pm/pmp-pmbok-reference",
+    "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
+    "u": "posts/electrical-switchgear-protection-devices-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Punch List / Snag Tracker",
-    "u": "pm/punch-list",
+    "t": "What Is an ELV System? Types, Components &amp; the BIM Engineer's Role",
+    "u": "posts/elv-extra-low-voltage-systems-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "RACI Matrix Builder",
-    "u": "pm/raci-matrix",
+    "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
+    "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
     "d": "2026-08-14"
   },
   {
-    "t": "Risk Register",
-    "u": "pm/risk-register",
+    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
+    "u": "posts/facility-management-codes-standards-reference",
     "d": "2026-08-14"
   }
 ]
