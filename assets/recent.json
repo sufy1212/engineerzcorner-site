@@ -1,52 +1,52 @@
 [
   {
-    "t": "Battery State-of-Charge Simulator",
-    "u": "solar/battery-soc-simulator",
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
     "d": "2026-08-14"
   },
   {
-    "t": "Psychrometric Chart Simulator",
-    "u": "hvac/psychrometric-chart-simulator",
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
     "d": "2026-08-14"
   },
   {
-    "t": "Heat Load / Cooling Simulator",
-    "u": "mechanical/heat-load-simulator",
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
     "d": "2026-08-14"
   },
   {
-    "t": "Pump System Curve Simulator",
-    "u": "mechanical/pump-system-curve-simulator",
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
     "d": "2026-08-14"
   },
   {
-    "t": "Motor Starting Simulator",
-    "u": "electrical/motor-starting-simulator",
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
     "d": "2026-08-14"
   },
   {
-    "t": "3-Phase Fault &amp; Coordination Simulator",
-    "u": "electrical/three-phase-fault-simulator",
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "Voltage Drop &amp; Cable Sizing Simulator",
-    "u": "electrical/voltage-drop-simulator",
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
     "d": "2026-08-14"
   },
   {
-    "t": "Application Timeline Planner",
-    "u": "study-abroad/application-timeline-planner",
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "Cost of Living Calculator",
-    "u": "study-abroad/cost-of-living-calculator",
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
     "d": "2026-08-14"
   },
   {
-    "t": "Currency Converter",
-    "u": "study-abroad/currency-converter",
+    "t": "Signal Scaling",
+    "u": "automation/signal-scaling",
     "d": "2026-08-14"
   }
 ]
