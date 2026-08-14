@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEC 104 Communication Protocol Explained | Engineerz CorneR</title>
+<meta name="description" content="What IEC 60870-5-104 actually does, how it extends IEC 101 over TCP/IP, the master-slave request/response and spontaneous-reporting model, a security reference, and where it's used in SCADA and remote control systems.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="IEC 104 Communication Protocol Explained">
+<meta property="og:description" content="What IEC 60870-5-104 actually does, how it extends IEC 101 over TCP/IP, the master-slave request/response and spontaneous-reporting model, a security reference, and where it's used in SCADA and remote control systems.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IEC 104 Communication Protocol Explained">
+<meta name="twitter:description" content="What IEC 60870-5-104 actually does, how it extends IEC 101 over TCP/IP, the master-slave request/response and spontaneous-reporting model, a security reference, and where it's used in SCADA and remote control systems.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="iec-104-communication-protocol-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "IEC 104 Communication Protocol Explained",
+      "item": "https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "IEC 104 Communication Protocol Explained",
+      "datePublished": "2026-08-14",
+      "dateModified": "2026-08-14",
+  "description": "What IEC 60870-5-104 actually does, how it extends IEC 101 over TCP/IP, the master-slave request/response and spontaneous-reporting model, a security reference, and where it's used in SCADA and remote control systems.",
+  "url": "https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">IEC 104 Communication Protocol Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">🔌 Automation &middot; Communication</span>
+    <h1>IEC 104 Communication Protocol Explained</h1>
+    <p class="hero-sub">IEC 60870-5-104 is the protocol that lets a control center talk to substations and remote sites over an ordinary IP network &mdash; same data model as its serial predecessor, but no longer limited by a wire.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Automation / SCADA</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="70" y="60" width="160" height="72" rx="4" fill="#122845" stroke="#7e97ac" stroke-width="1"/>
+      <text x="85" y="52" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">CONTROL CENTER</text>
+      <rect x="90" y="76" width="120" height="10" rx="2" fill="#3E4E70"/>
+      <rect x="90" y="92" width="90" height="10" rx="2" fill="#3E4E70"/>
+      <rect x="90" y="108" width="70" height="10" rx="2" fill="#3E4E70"/>
+      <line x1="230" y1="96" x2="290" y2="96" stroke="#3E8C97" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <circle cx="380" cy="96" r="46" fill="none" stroke="#3EC6E0" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <text x="380" y="92" font-family="IBM Plex Mono" font-size="11" fill="#3EC6E0" text-anchor="middle">TCP/IP</text>
+      <text x="380" y="106" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">NETWORK</text>
+      <line x1="470" y1="96" x2="530" y2="96" stroke="#3E8C97" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <rect x="530" y="60" width="160" height="72" rx="4" fill="#122845" stroke="#7e97ac" stroke-width="1"/>
+      <text x="545" y="52" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">REMOTE SUBSTATION</text>
+      <rect x="550" y="76" width="120" height="10" rx="2" fill="#3E4E70"/>
+      <rect x="550" y="92" width="90" height="10" rx="2" fill="#3E4E70"/>
+      <rect x="550" y="108" width="70" height="10" rx="2" fill="#3E4E70"/>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">IEC 104 is IEC 101 carried over TCP/IP instead of a serial link &mdash; the underlying ASDU data structure is the same, so the two are directly related, not competing standards.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">It's not purely poll-driven &mdash; a substation can report a changed value spontaneously the moment it happens, rather than waiting for the master to ask.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Running over a standard IP network is a convenience, not a security feature &mdash; encryption, VPN/IPsec, or IEC 62351 compliance have to be deliberately added.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A general interrogation is the protocol's "resync everything" command, normally used at startup or after a communication interruption to rebuild a complete, consistent picture.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What IEC 104 actually does</h2>
+    <p>IEC 60870-5-104 is a telecontrol protocol built for Supervisory Control and Data Acquisition (SCADA) in remote control systems &mdash; think a utility control center monitoring and operating substations, pumping stations, or metering points spread across a wide area. It's an extension of the IEC 101 standard, carrying the same application-layer data (measurements, status points, commands) but running over TCP/IP (per RFC 793 and RFC 791) instead of a dedicated serial line. That single change is what lets it operate over routed networks, fiber, or even cellular links, at distances IEC 101's point-to-point serial connection was never designed for.</p>
+
+    <h2><span class="h2-dot"></span>Protocol overview</h2>
+    <p class="post-lede">Same data model as IEC 101, a different transport underneath it.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><line x1="8" y1="20" x2="16" y2="20"></line><line x1="12" y1="16" x2="12" y2="20"></line></svg></div>
+          <div><div class="device-name">ASDU</div><div class="device-full">Application service data unit</div></div>
+        </div>
+        <div class="device-desc">The application-layer data unit carrying the actual process content &mdash; measured values, status points, commands, and timestamps &mdash; identical in structure to IEC 101, which is what keeps the two standards closely related.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4z"></path><path d="M4 12h10M4 16h7"></path></svg></div>
+          <div><div class="device-name">APCI</div><div class="device-full">Application protocol control info</div></div>
+        </div>
+        <div class="device-desc">A frame-control header wrapped around each ASDU, handling sequence numbering and link-level control functions like starting/stopping data transfer and sending test frames to confirm the connection is alive.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="12" r="3"></circle><circle cx="17" cy="12" r="3"></circle><line x1="10" y1="12" x2="14" y2="12"></line></svg></div>
+          <div><div class="device-name">Master-Slave Relationship</div><div class="device-full">Control center &amp; remote station roles</div></div>
+        </div>
+        <div class="device-desc">The control center acts as the master, initiating requests and issuing commands; the remote substation acts as the slave, responding to requests and reporting its own data &mdash; establishing which side drives the session.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18 9 9 0 0 1 0-18z"></path><path d="M3 12h18M12 3v18"></path></svg></div>
+          <div><div class="device-name">General Interrogation</div><div class="device-full">Full-station resync</div></div>
+        </div>
+        <div class="device-desc">A master-initiated "send me everything" request that pulls a complete, current snapshot of every monitored point &mdash; run at startup, or after a communication interruption, to rebuild a consistent picture rather than trusting an incremental catch-up.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path></svg></div>
+          <div><div class="device-name">Spontaneous Reporting</div><div class="device-full">Event-driven data push</div></div>
+        </div>
+        <div class="device-desc">By default a substation pushes a changed value the moment it happens rather than only answering polls &mdash; keeping the master current in near real time while using far less bandwidth than continuous polling of every point.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg></div>
+          <div><div class="device-name">Time Synchronization</div><div class="device-full">Clock alignment across the link</div></div>
+        </div>
+        <div class="device-desc">Periodic time-sync messages keep the substation's clock aligned with the master, so timestamped events from different sites remain consistent &mdash; essential for reconstructing the correct sequence of events after a disturbance.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>IEC 104 vs IEC 101</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Aspect</th><th>IEC 104</th><th>IEC 101</th></tr>
+        <tr><td>Transport</td><td>TCP/IP over Ethernet/WAN</td><td>Serial (RS-232 / RS-485)</td></tr>
+        <tr><td>Practical distance</td><td>Effectively unlimited via routed IP networks</td><td>Limited by the serial cable or modem link</td></tr>
+        <tr><td>Typical topology</td><td>Multi-site SCADA over LAN, WAN, fiber, or cellular</td><td>Point-to-point or multidrop serial RTU links</td></tr>
+        <tr><td>Redundant paths</td><td>Supports redundant IP routes / dual channels</td><td>Limited, largely hardware-dependent</td></tr>
+        <tr><td>Application data (ASDU)</td><td>Same structure as IEC 101</td><td>Original standard, still deployed on legacy RTUs</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Communication sequence</h2>
+    <div class="steps-strip">
+      <div class="step-row"><span class="step-num">1</span><span>Control Center (master) opens a TCP connection to the remote station and sends an ASDU request, such as a general interrogation.</span></div>
+      <div class="step-row"><span class="step-num">2</span><span>Remote Substation (slave) responds with the requested data, or reports a change spontaneously as soon as a monitored value moves.</span></div>
+      <div class="step-row"><span class="step-num">3</span><span>Either side can then issue supervisory control commands or transfer files over the same established connection, without renegotiating the session.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Secure communication reference</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Measure</th><th>What it addresses</th></tr>
+        <tr><td>Encryption</td><td>Protects the confidentiality of data in transit end-to-end</td></tr>
+        <tr><td>VPN / IPsec tunneling</td><td>Secures the network path itself when the protocol session isn't natively encrypted</td></tr>
+        <tr><td>TLS 1.3</td><td>Transport-layer security used in newer, IEC 62351-3&ndash;aligned implementations</td></tr>
+        <tr><td>IEC 62351 compliance</td><td>Broader standard covering authentication, encryption, and access control for power-system communications</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Implementation &amp; security checklist</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Confirm the TCP/IP path and firewall rules between the control center and every remote station</span></li>
+      <li><span class="ck-mark">2</span><span>Set appropriate timeout, interrogation, and time-sync intervals for the link</span></li>
+      <li><span class="ck-mark">3</span><span>Verify redundant communication paths where the application requires high availability</span></li>
+      <li><span class="ck-mark">4</span><span>Enable encryption, VPN/IPsec, or IEC 62351-compliant security rather than running the protocol in the clear</span></li>
+      <li><span class="ck-mark">5</span><span>Test both spontaneous event reporting and a full general interrogation after any commissioning change</span></li>
+      <li><span class="ck-mark">6</span><span>Confirm interoperability with any existing IEC 101, IEC 61850, or DNP3 systems on a mixed-protocol site</span></li>
+    </ul>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Because IEC 104 rides on a standard IP network, it's easy to treat the network itself as the security boundary &mdash; but the protocol wasn't originally designed with encryption built in, so that boundary has to be built deliberately, not assumed.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">Power utility SCADA</span>
+      <span class="app-chip">Substation automation</span>
+      <span class="app-chip">Water &amp; wastewater remote monitoring</span>
+      <span class="app-chip">Gas distribution networks</span>
+      <span class="app-chip">Remote RTU / meter polling</span>
+      <span class="app-chip">Multi-vendor control system integration</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>IEC 104 extends IEC 101 onto TCP/IP, keeping the same ASDU data structure while adding networked, effectively unlimited-distance communication.</span></li>
+      <li><span class="tk-check">✓</span><span>It uses a master-slave model, but isn't purely poll-driven &mdash; spontaneous reporting pushes changed values immediately without waiting for a poll.</span></li>
+      <li><span class="tk-check">✓</span><span>Riding on a standard IP network doesn't make it secure by default &mdash; encryption, VPN/IPsec, or IEC 62351 compliance need to be deliberately configured.</span></li>
+      <li><span class="tk-check">✓</span><span>Consistent time synchronization across stations is what makes sequence-of-events analysis meaningful after a disturbance, not just a housekeeping detail.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=IEC%20104%20Communication%20Protocol%20Explained%20%E2%80%94%20What%20IEC%2060870-5-104%20actually%20does%2C%20how%20it%20extends%20IEC%20101%20over%20TCP%2FIP%2C%20the%20master-slave%20request%2Fresponse%20and%20spontaneous-reporting%20model%2C%20a%20security%20reference%2C%20and%20where%20it%27s%20used.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fiec-104-communication-protocol-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fiec-104-communication-protocol-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=IEC%20104%20Communication%20Protocol%20Explained&text=What%20IEC%2060870-5-104%20actually%20does%2C%20how%20it%20extends%20IEC%20101%20over%20TCP%2FIP%2C%20the%20master-slave%20request%2Fresponse%20and%20spontaneous-reporting%20model%2C%20a%20security%20reference%2C%20and%20where%20it%27s%20used.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fiec-104-communication-protocol-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=IEC%20104%20Communication%20Protocol%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AIEC%20104%20Communication%20Protocol%20Explained%0AWhat%20IEC%2060870-5-104%20actually%20does%2C%20how%20it%20extends%20IEC%20101%20over%20TCP%2FIP%2C%20the%20master-slave%20request%2Fresponse%20and%20spontaneous-reporting%20model%2C%20a%20security%20reference%2C%20and%20where%20it%27s%20used.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fiec-104-communication-protocol-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../automation/">Automation &amp; Instrumentation Calculators &amp; References →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="4-20ma-current-loop-basics">4-20mA Current Loop Basics</a></li><li><a href="signal-scaling-4-20ma-engineering-units">Signal Scaling: 4-20mA to Engineering Units</a></li><li><a href="bms-point-types-explained">BMS Point Types Explained</a></li><li><a href="deadband-hysteresis-why-controls-dont-chatter">Deadband &amp; Hysteresis: Why Controls Don't Chatter</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
