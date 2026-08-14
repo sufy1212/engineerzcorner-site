@@ -1,52 +1,52 @@
 [
   {
-    "t": "Alarm Setpoint Band Calculator",
-    "u": "automation/alarm-setpoints",
+    "t": "Beam Bending &amp; Deflection",
+    "u": "civil/beam-bending",
     "d": "2026-08-14"
   },
   {
-    "t": "Deadband / Hysteresis Calculator",
-    "u": "automation/deadband-hysteresis",
+    "t": "Column Axial Capacity",
+    "u": "civil/column-capacity",
     "d": "2026-08-14"
   },
   {
-    "t": "Level Control Loop Simulator",
-    "u": "automation/level-control-simulator",
+    "t": "Concrete Volume &amp; Material Estimator",
+    "u": "civil/concrete-volume-estimator",
     "d": "2026-08-14"
   },
   {
-    "t": "DP Level Transmitter Ranging",
-    "u": "automation/level-transmitter",
+    "t": "Cut &amp; Fill Volume (Average End Area)",
+    "u": "civil/cut-fill-volume",
     "d": "2026-08-14"
   },
   {
-    "t": "Modbus RTU Timing / Baud Rate Calculator",
-    "u": "automation/modbus-timing",
+    "t": "Footing Bearing Sizing",
+    "u": "civil/footing-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "Orifice Plate (DP Flow) Sizing",
-    "u": "automation/orifice-flow-sizing",
+    "t": "Grade / Slope Calculator",
+    "u": "civil/grade-slope",
     "d": "2026-08-14"
   },
   {
-    "t": "PID Tuning (Reaction Curve)",
-    "u": "automation/pid-tuning",
+    "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+    "u": "civil/pipe-flow-capacity",
     "d": "2026-08-14"
   },
   {
-    "t": "Relay / Contactor Coil Current & Duty Cycle",
-    "u": "automation/relay-coil-sizing",
+    "t": "Rebar Development Length &amp; Weight",
+    "u": "civil/rebar-development",
     "d": "2026-08-14"
   },
   {
-    "t": "RTD (Pt100) Temperature ↔ Resistance",
-    "u": "automation/rtd-conversion",
+    "t": "Retaining Wall Stability",
+    "u": "civil/retaining-wall",
     "d": "2026-08-14"
   },
   {
-    "t": "Signal Scaling",
-    "u": "automation/signal-scaling",
+    "t": "Slab-on-Grade Quick Thickness",
+    "u": "civil/slab-on-grade-thickness",
     "d": "2026-08-14"
   }
 ]
