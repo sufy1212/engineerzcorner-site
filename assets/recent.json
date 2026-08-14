@@ -1,5 +1,10 @@
 [
   {
+    "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
+    "u": "posts/nfpa-fire-protection-design-standards-reference",
+    "d": "2026-08-14"
+  },
+  {
     "t": "WTI vs OTI Explained: Winding vs Oil Temperature Indicators",
     "u": "posts/wti-vs-oti-explained",
     "d": "2026-08-14"
@@ -42,11 +47,6 @@
   {
     "t": "Tap Changer of a Distribution Transformer Explained",
     "u": "posts/tap-changer-distribution-transformer-explained",
-    "d": "2026-08-13"
-  },
-  {
-    "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
-    "u": "posts/earthing-grounding-systems-explained",
     "d": "2026-08-13"
   }
 ]

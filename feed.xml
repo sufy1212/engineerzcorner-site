@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Fire Fighting: NFPA Fire Protection System Design Standards Reference</title>
+    <link>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</guid>
+    <description>A quick-reference table of the NFPA standards that govern fire protection system design — NFPA 10, 13, 14, 16, 17A, 20, 22, 2001 and local civil defense compliance — what each covers and where it applies.</description>
+    <pubDate>Fri, 14 Aug 2026 04:44:47 GMT</pubDate>
+  </item>
+  <item>
     <title>WTI vs OTI Explained: Winding vs Oil Temperature Indicators</title>
     <link>https://www.engineerzcorner.com/posts/wti-vs-oti-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/wti-vs-oti-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</guid>
     <description>How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.</description>
     <pubDate>Mon, 10 Aug 2026 20:07:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>Chiller Machine: Main Parts &amp; Functions</title>
-    <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
-    <description>Every major chiller component explained — compressor, condenser, evaporator, EXV and 14 more — plus the refrigeration cycle, the chilled water circuit, and air-cooled vs water-cooled chillers compared.</description>
-    <pubDate>Sun, 09 Aug 2026 21:35:30 GMT</pubDate>
   </item>
 </channel></rss>
