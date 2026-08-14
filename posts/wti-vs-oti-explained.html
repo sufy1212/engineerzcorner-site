@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23E14F3D'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WTI vs OTI Explained: Winding vs Oil Temperature Indicators | Engineerz CorneR</title>
+<meta name="description" content="WTI (Winding Temperature Indicator) vs OTI (Oil Temperature Indicator) on a power transformer — what each measures, how WTI simulates hot-spot temperature using a CT-fed heating element, a worked example, and why both alarms matter.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/wti-vs-oti-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="WTI vs OTI Explained: Winding vs Oil Temperature Indicators">
+<meta property="og:description" content="What WTI and OTI each measure on a power transformer, how WTI simulates hot-spot temperature using a CT-fed heating element, a worked example, and why both alarms matter.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/wti-vs-oti-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/posts/img/wti-vs-oti-infographic.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WTI vs OTI Explained: Winding vs Oil Temperature Indicators">
+<meta name="twitter:description" content="What WTI and OTI each measure on a power transformer, how WTI simulates hot-spot temperature, a worked example, and why both alarms matter.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/posts/img/wti-vs-oti-infographic.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "WTI vs OTI Explained: Winding vs Oil Temperature Indicators", "item": "https://www.engineerzcorner.com/posts/wti-vs-oti-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "WTI vs OTI Explained: Winding vs Oil Temperature Indicators",
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "description": "WTI (Winding Temperature Indicator) vs OTI (Oil Temperature Indicator) on a power transformer — what each measures, how WTI simulates hot-spot temperature using a CT-fed heating element, a worked example, and why both alarms matter.",
+  "url": "https://www.engineerzcorner.com/posts/wti-vs-oti-explained",
+  "image": "https://www.engineerzcorner.com/posts/img/wti-vs-oti-infographic.png",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/wti-vs-oti-explained"}
+}
+</script>
+<link rel="stylesheet" href="wti-vs-oti-explained.inline.css">
+<link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">WTI vs OTI Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Transformers</span>
+    <h1>WTI vs OTI Explained: Winding vs Oil Temperature Indicators</h1>
+    <p class="hero-sub">Two dial gauges on the same transformer, both labeled in &deg;C, both easy to mix up. OTI measures the oil directly. WTI doesn't measure anything directly &mdash; it simulates the winding hot-spot by adding a CT-driven heating element to the oil temperature. Different mechanism, different job, and both alarms exist for a reason.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Transformer Protection &amp; Monitoring</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="130" x2="720" y2="130" stroke="#E14F3D" stroke-width="3"/>
+      <text x="40" y="146" font-family="IBM Plex Mono" font-size="9" fill="#c9a394">TEMPERATURE INDICATION</text>
+      <g font-family="IBM Plex Mono" font-size="8.5" fill="#c9a394">
+        <circle cx="130" cy="70" r="32" fill="none" stroke="#F2B84B" stroke-width="1.6"/>
+        <line x1="130" y1="70" x2="148" y2="56" stroke="#F2B84B" stroke-width="1.6"/>
+        <line x1="130" y1="70" x2="130" y2="46" stroke="#F2B84B" stroke-width="1.2"/>
+        <text x="106" y="112">WTI</text>
+        <rect x="230" y="46" width="30" height="48" rx="4" fill="none" stroke="#7e97ac" stroke-width="1.4"/>
+        <line x1="245" y1="46" x2="245" y2="94" stroke="#7e97ac" stroke-width="1"/>
+        <text x="222" y="112">CT</text>
+        <circle cx="360" cy="70" r="10" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+        <path d="M360 60c-6 8-6 12 0 20 6-8 6-12 0-20z" fill="#5FD3E3" opacity=".8"/>
+        <text x="336" y="112">OIL</text>
+        <circle cx="470" cy="70" r="32" fill="none" stroke="#5FD3E3" stroke-width="1.6"/>
+        <line x1="470" y1="70" x2="486" y2="60" stroke="#5FD3E3" stroke-width="1.6"/>
+        <line x1="470" y1="70" x2="470" y2="46" stroke="#5FD3E3" stroke-width="1.2"/>
+        <text x="446" y="112">OTI</text>
+        <g transform="translate(600,50)">
+          <path d="M0 30V6a10 10 0 0 1 20 0v24" fill="none" stroke="#E14F3D" stroke-width="1.6"/>
+          <circle cx="10" cy="34" r="6" fill="#E14F3D"/>
+        </g>
+        <text x="592" y="54">ALARM</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">OTI measures the actual top-oil temperature directly with a sensing bulb in the oil &mdash; nothing simulated, nothing added.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">WTI does NOT measure winding temperature directly &mdash; it adds a CT-fed heating element's rise to the oil temperature to approximate the winding hot-spot.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">WTI tracks load, because its heating element is driven by load current through a CT &mdash; OTI barely moves with load and mostly reflects ambient and cooling conditions.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Both drive alarms and trips, and both can control cooling fans/pumps &mdash; but WTI is the one that matters most for overload protection, since it's the only one that actually sees load current.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>WTI and OTI sit on the same transformer, both reading out in &deg;C on a dial gauge, and it's easy to assume they're just two views of the same number. They're not. One is a direct measurement; the other is a calculated approximation built specifically to track what a direct sensor can't reach &mdash; the temperature inside the winding insulation itself.</p>
+
+    <img class="infographic" src="img/wti-vs-oti-infographic.png" alt="EngineerzCorner infographic comparing WTI (Winding Temperature Indicator) and OTI (Oil Temperature Indicator) on a power transformer, with a key-differences table, how WTI works, and a worked temperature example">
+    <p class="fig-caption">WTI vs OTI &mdash; what each measures, how they differ, and how WTI's estimate is built.</p>
+
+    <h2><span class="h2-dot"></span>1. WTI &mdash; Winding Temperature Indicator</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+        <div><div class="fs-name">WTI</div><div class="fs-full">Winding Temperature Indicator &middot; Simulated Hot-Spot Estimate</div></div>
+      </div>
+      <p class="fs-desc">Indicates the estimated temperature of the transformer windings. It doesn't have a sensor sitting inside the winding insulation &mdash; that's not physically practical at operating voltage &mdash; so it approximates the hot-spot instead, by combining the actual oil temperature with a simulated temperature rise driven by load current.</p>
+    </div>
+
+    <h2><span class="h2-dot"></span>2. OTI &mdash; Oil Temperature Indicator</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 7-6 11a6 6 0 0 0 12 0c0-4-3-7-6-11z"></path></svg></div>
+        <div><div class="fs-name">OTI</div><div class="fs-full">Oil Temperature Indicator &middot; Direct Top-Oil Measurement</div></div>
+      </div>
+      <p class="fs-desc">Indicates the actual temperature of the transformer oil, sensed directly by a bulb at the top of the tank, where the hottest oil collects. Straightforward, no simulation involved &mdash; which is exactly why it can't tell you what's happening inside the winding under load.</p>
+    </div>
+
+    <h2><span class="h2-dot"></span>WTI vs OTI &mdash; key differences</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Feature</th><th>WTI</th><th>OTI</th></tr>
+        <tr><td>Measures</td><td>Estimated winding temperature</td><td>Actual top-oil temperature</td></tr>
+        <tr><td>Temperature sensing</td><td>Oil temperature + simulated winding heating</td><td>Directly senses transformer oil</td></tr>
+        <tr><td>Main purpose</td><td>Monitors winding overheating</td><td>Monitors oil overheating</td></tr>
+        <tr><td>Load dependency</td><td>Strongly dependent on load</td><td>Less dependent on load</td></tr>
+        <tr><td>Alarm</td><td>Provides winding temperature alarm</td><td>Provides high oil temperature alarm</td></tr>
+        <tr><td>Trip</td><td>Can initiate trip at higher winding temperature</td><td>May initiate transformer trip</td></tr>
+        <tr><td>Cooling control</td><td>Often used for cooling control based on winding temperature</td><td>Can control cooling fans / pumps</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>How WTI works</h2>
+    <p>WTI does <b>not</b> measure the winding temperature directly. It uses a sensing bulb immersed in the oil, plus a small heating element wrapped around it and supplied from a current transformer (CT) on the winding circuit. The heating element's temperature rise is scaled to track how the winding would be heating up under the same load &mdash; so the gauge reading is the oil temperature plus that simulated rise:</p>
+    <div class="signal-grid">
+      <div class="signal-card hot"><b>Oil Temperature + Winding Temperature Rise &asymp; Winding Hot-Spot Temperature</b><span>The CT feeds a current proportional to load into the heating element. More load &rarr; more heat added to the sensing bulb &rarr; a higher WTI reading, tracking the winding's actual thermal behavior even though nothing is sensing inside the winding itself.</span></div>
+      <div class="signal-card cold"><b>Why not sense inside the winding directly</b><span>A physical sensor inside the winding insulation at operating voltage is impractical and intrusive on most transformers. The CT-driven heating element sidesteps that by reproducing the winding's thermal response externally, calibrated during factory heat-run tests.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Simple example</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Quantity</th><th>Value</th></tr>
+        <tr><td>OTI (oil temperature)</td><td>70&deg;C</td></tr>
+        <tr><td>Winding temperature rise above oil</td><td>25&deg;C</td></tr>
+        <tr><td>WTI (estimated winding temperature)</td><td>95&deg;C</td></tr>
+      </table>
+    </div>
+    <p class="post-lede">So OTI tells you how hot the oil is, while WTI gives an indication of how hot the winding is under load.</p>
+
+    <h2><span class="h2-dot"></span>Why both matter</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span><b>Protects the transformer from overheating</b> &mdash; helps prevent insulation damage and extends service life.</span></li>
+      <li><span class="tk-check">&#10003;</span><span><b>Ensures safe, reliable operation</b> &mdash; provides early warning for abnormal thermal conditions before they become failures.</span></li>
+      <li><span class="tk-check">&#10003;</span><span><b>Optimizes the cooling system</b> &mdash; helps automatically control cooling fans and pumps based on real thermal load.</span></li>
+      <li><span class="tk-check">&#10003;</span><span><b>Essential for protection &amp; monitoring</b> &mdash; both feed alarms, trips, and SCADA, not just the local dial.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>In short</h2>
+    <p><b>OTI</b> = Oil Temperature (measured). <b>WTI</b> = Winding Temperature (estimated). WTI is especially important for transformer overload and winding protection, because it's the one indicator that actually reflects what load is doing to the winding &mdash; not just the tank.</p>
+
+    <h2><span class="h2-dot"></span>Applicable references</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Standard</th><th>Covers</th></tr>
+        <tr><td>IEC 60076-2</td><td>Power transformers &mdash; temperature rise for liquid-immersed transformers</td></tr>
+        <tr><td>IEC 60076-7</td><td>Loading guide for oil-immersed power transformers</td></tr>
+        <tr><td>IEEE C57.91</td><td>Guide for loading mineral-oil-immersed transformers and step-voltage regulators</td></tr>
+        <tr><td>IEC 60947 / manufacturer datasheet</td><td>WTI/OTI gauge construction, contacts and alarm/trip setpoints (device-specific)</td></tr>
+      </table>
+    </div>
+    <p class="post-lede">Actual alarm and trip setpoints are set per the transformer's design and the manufacturer's thermal test data &mdash; always verify against the nameplate and O&amp;M manual for the specific unit.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>OTI is a direct measurement of top-oil temperature; WTI is a calculated estimate of winding hot-spot temperature.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>WTI = oil temperature + a CT-driven simulated winding temperature rise &mdash; it tracks load, OTI mostly doesn't.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Both provide alarms and can initiate a trip or control cooling; WTI is the more load-sensitive of the two.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Neither replaces the other &mdash; OTI protects the oil/tank side, WTI protects the winding insulation, and both should always be monitored together.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=WTI%20vs%20OTI%20Explained%3A%20Winding%20vs%20Oil%20Temperature%20Indicators%20%E2%80%94%20What%20each%20measures%2C%20how%20WTI%20simulates%20hot-spot%20temperature%2C%20and%20why%20both%20alarms%20matter.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwti-vs-oti-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwti-vs-oti-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=WTI%20vs%20OTI%20Explained%3A%20Winding%20vs%20Oil%20Temperature%20Indicators&text=What%20each%20measures%2C%20how%20WTI%20simulates%20hot-spot%20temperature%2C%20and%20why%20both%20alarms%20matter.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwti-vs-oti-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=WTI%20vs%20OTI%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AWTI%20vs%20OTI%20Explained%3A%20Winding%20vs%20Oil%20Temperature%20Indicators%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fwti-vs-oti-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="power-transformer-construction-working-principle">Power Transformers Explained: Construction &amp; Working Principle</a></li><li><a href="power-transformer-ct-pt-construction-explained">Power Transformer, CT &amp; PT Internal Construction Explained</a></li><li><a href="tap-changer-distribution-transformer-explained">Tap Changer of a Distribution Transformer Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a></div>
+</footer>
+</body>
+</html>
