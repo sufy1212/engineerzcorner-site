@@ -1,6 +1,16 @@
 [
   {
-    "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
+    "t": "IEC 104 Communication Protocol Explained",
+    "u": "posts/iec-104-communication-protocol-explained",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
+    "u": "posts/plc-vs-dcs-vs-scada-explained",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "SCADA (Supervisory Control &amp; Data Acquisition) Explained",
     "u": "posts/scada-supervisory-control-data-acquisition-explained",
     "d": "2026-08-14"
   },
@@ -37,16 +47,6 @@
   {
     "t": "Score Calculator",
     "u": "study-abroad/score-calculator",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "SOP / Essay Word Checker",
-    "u": "study-abroad/sop-word-checker",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "University Fee Comparison",
-    "u": "study-abroad/university-fee-comparison",
     "d": "2026-08-14"
   }
 ]
