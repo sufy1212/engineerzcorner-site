@@ -43,6 +43,7 @@
     document.body.appendChild(overlay);
     input = overlay.querySelector('#ecSearchInput');
     resultsEl = overlay.querySelector('#ecSearchResults');
+    bindResultsDelegation();
 
     overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
     overlay.querySelector('.ec-search-close').addEventListener('click', closeModal);
@@ -58,7 +59,16 @@
   function moveActive(dir){
     if (!currentResults.length) return;
     activeIndex = (activeIndex + dir + currentResults.length) % currentResults.length;
-    renderResults(currentResults, activeIndex);
+    highlightActive();
+  }
+
+  function highlightActive(){
+    var items = resultsEl.querySelectorAll('.ec-search-item');
+    Array.prototype.forEach.call(items, function(el, i){
+      var isActive = i === activeIndex;
+      el.classList.toggle('active', isActive);
+      if (isActive) el.scrollIntoView({ block: 'nearest' });
+    });
   }
 
   function openActive(){
@@ -89,10 +99,22 @@
         (item.d ? '<div class="ec-search-item-desc">' + escapeHtml(item.d) + '</div>' : '') +
       '</a>';
     }).join('');
-    Array.prototype.forEach.call(resultsEl.querySelectorAll('.ec-search-item'), function(a){
-      a.addEventListener('mouseenter', function(){
-        activeIndex = parseInt(a.getAttribute('data-idx'), 10);
-        renderResults(currentResults, activeIndex);
+  }
+
+  // Event delegation for hover highlighting: only toggles a class on the
+  // existing elements, never rebuilds the list markup. Rebuilding on
+  // mouseenter/hover would replace the very link a user just tapped a
+  // moment before their tap's navigation fires, silently cancelling the
+  // click on touch devices (and occasionally on desktop too).
+  function bindResultsDelegation(){
+    resultsEl.addEventListener('mouseover', function(e){
+      var a = e.target.closest('.ec-search-item');
+      if (!a || !resultsEl.contains(a)) return;
+      var idx = parseInt(a.getAttribute('data-idx'), 10);
+      if (idx === activeIndex) return;
+      activeIndex = idx;
+      Array.prototype.forEach.call(resultsEl.querySelectorAll('.ec-search-item'), function(el){
+        el.classList.toggle('active', el === a);
       });
     });
   }
