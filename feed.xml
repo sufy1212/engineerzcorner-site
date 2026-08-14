@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
+    <description>How SCADA actually works — the field/communication/supervisory architecture, the 5-step monitor-to-action loop, components, communication protocols, SCADA system types, and SCADA vs DCS compared.</description>
+    <pubDate>Fri, 14 Aug 2026 11:46:17 GMT</pubDate>
+  </item>
+  <item>
     <title>IEC 104 Communication Protocol Explained</title>
     <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
@@ -15,13 +22,6 @@
     <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
     <description>PLC, DCS and SCADA compared for real industrial use — control type, speed, architecture, redundancy, and where control execution actually happens — plus a feature-by-feature table and typical applications for each.</description>
-    <pubDate>Fri, 14 Aug 2026 11:40:15 GMT</pubDate>
-  </item>
-  <item>
-    <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
-    <description>How SCADA actually works — the field/communication/supervisory architecture, the 5-step monitor-to-action loop, components, communication protocols, SCADA system types, and SCADA vs DCS compared.</description>
     <pubDate>Fri, 14 Aug 2026 11:40:15 GMT</pubDate>
   </item>
   <item>
