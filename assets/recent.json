@@ -1,5 +1,10 @@
 [
   {
+    "t": "IEC 104 Communication Protocol Explained",
+    "u": "posts/iec-104-communication-protocol-explained",
+    "d": "2026-08-14"
+  },
+  {
     "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
     "u": "posts/plc-vs-dcs-vs-scada-explained",
     "d": "2026-08-14"
@@ -42,11 +47,6 @@
   {
     "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
     "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
-    "d": "2026-08-13"
-  },
-  {
-    "t": "Power Transformers Explained: Construction &amp; Working Principle",
-    "u": "posts/power-transformer-construction-working-principle",
     "d": "2026-08-13"
   }
 ]

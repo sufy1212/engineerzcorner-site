@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>IEC 104 Communication Protocol Explained</title>
+    <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
+    <description>What IEC 60870-5-104 actually does, how it extends IEC 101 over TCP/IP, the master-slave request/response and spontaneous-reporting model, a security reference, and where it's used in SCADA and remote control systems.</description>
+    <pubDate>Fri, 14 Aug 2026 05:12:40 GMT</pubDate>
+  </item>
+  <item>
     <title>PLC vs DCS vs SCADA Explained: Real Industrial Comparison</title>
     <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/sensible-vs-latent-heat-cooling-load.html</guid>
     <description>Why a cooling load calculation has two separate halves, what sensible and latent heat each actually cool, typical splits by space type.</description>
     <pubDate>Tue, 11 Aug 2026 12:02:33 GMT</pubDate>
-  </item>
-  <item>
-    <title>Legend Sheet in a P&amp;ID Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
-    <description>A legend sheet is the reference table that defines every symbol, line type, abbreviation and tag format used on a P&amp;ID — the reason engineers, operators and contractors all read the same drawing the same way.</description>
-    <pubDate>Mon, 10 Aug 2026 20:07:11 GMT</pubDate>
   </item>
 </channel></rss>
