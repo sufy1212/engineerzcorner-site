@@ -1,52 +1,52 @@
 [
   {
-    "t": "Beam Bending &amp; Deflection",
-    "u": "civil/beam-bending",
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
     "d": "2026-08-14"
   },
   {
-    "t": "Column Axial Capacity",
-    "u": "civil/column-capacity",
+    "t": "AWG &harr; mm&sup2; Wire Size Converter",
+    "u": "electrical/awg-mm2-converter",
     "d": "2026-08-14"
   },
   {
-    "t": "Concrete Volume &amp; Material Estimator",
-    "u": "civil/concrete-volume-estimator",
+    "t": "Breaker / Fuse Sizing Calculator",
+    "u": "electrical/breaker-fuse-sizing-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Cut &amp; Fill Volume (Average End Area)",
-    "u": "civil/cut-fill-volume",
+    "t": "Busbar &amp; Enclosure Sizing",
+    "u": "electrical/busbar-enclosure-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "Footing Bearing Sizing",
-    "u": "civil/footing-sizing",
+    "t": "Cable Derating Factor Calculator",
+    "u": "electrical/cable-derating-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Grade / Slope Calculator",
-    "u": "civil/grade-slope",
+    "t": "Cable Schedule Builder",
+    "u": "electrical/cable-schedule-builder",
     "d": "2026-08-14"
   },
   {
-    "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-    "u": "civil/pipe-flow-capacity",
+    "t": "Cable Sizing",
+    "u": "electrical/cable-sizing-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Rebar Development Length &amp; Weight",
-    "u": "civil/rebar-development",
+    "t": "Capacitor Bank Sizing Calculator",
+    "u": "electrical/capacitor-bank-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "Retaining Wall Stability",
-    "u": "civil/retaining-wall",
+    "t": "Conduit Fill Calculator",
+    "u": "electrical/conduit-fill-calculator",
     "d": "2026-08-14"
   },
   {
-    "t": "Slab-on-Grade Quick Thickness",
-    "u": "civil/slab-on-grade-thickness",
+    "t": "Earthing Grid Resistance",
+    "u": "electrical/earthing-grid-resistance",
     "d": "2026-08-14"
   }
 ]
