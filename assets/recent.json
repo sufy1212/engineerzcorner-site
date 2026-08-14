@@ -1,52 +1,52 @@
 [
   {
-    "t": "GPA / CGPA Converter",
-    "u": "study-abroad/gpa-converter",
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
     "d": "2026-08-14"
   },
   {
-    "t": "Score Calculator",
-    "u": "study-abroad/score-calculator",
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
     "d": "2026-08-14"
   },
   {
-    "t": "IEC 104 Communication Protocol Explained",
-    "u": "posts/iec-104-communication-protocol-explained",
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
     "d": "2026-08-14"
   },
   {
-    "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
-    "u": "posts/plc-vs-dcs-vs-scada-explained",
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
     "d": "2026-08-14"
   },
   {
-    "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
-    "u": "posts/nfpa-fire-protection-design-standards-reference",
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "WTI vs OTI Explained: Winding vs Oil Temperature Indicators",
-    "u": "posts/wti-vs-oti-explained",
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
     "d": "2026-08-14"
   },
   {
-    "t": "Basics of Fire Protection in Buildings Explained",
-    "u": "posts/basics-of-fire-protection-in-buildings-explained",
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
     "d": "2026-08-14"
   },
   {
-    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
-    "u": "posts/facility-management-codes-standards-reference",
-    "d": "2026-08-13"
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
+    "d": "2026-08-14"
   },
   {
-    "t": "Facility Management: Monthly Invoice Processing",
-    "u": "posts/facility-management-monthly-invoice-processing",
-    "d": "2026-08-13"
+    "t": "Signal Scaling",
+    "u": "automation/signal-scaling",
+    "d": "2026-08-14"
   },
   {
-    "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
-    "u": "posts/breaker-selectivity-discrimination-explained",
-    "d": "2026-08-13"
+    "t": "Thermocouple (Type K) Reference",
+    "u": "automation/thermocouple-reference",
+    "d": "2026-08-14"
   }
 ]
