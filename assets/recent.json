@@ -1,52 +1,52 @@
 [
   {
-    "t": "Age Calculator",
-    "u": "general/age-calculator",
+    "t": "Commercial Terms of Project",
+    "u": "pm/commercial-terms",
     "d": "2026-08-14"
   },
   {
-    "t": "Number Base Converter",
-    "u": "general/base-converter",
+    "t": "Earned Value Management",
+    "u": "pm/evm",
     "d": "2026-08-14"
   },
   {
-    "t": "BMI Calculator",
-    "u": "general/bmi-calculator",
+    "t": "PM Glossary",
+    "u": "pm/glossary",
     "d": "2026-08-14"
   },
   {
-    "t": "Date &amp; Business-Day Calculator",
-    "u": "general/date-calculator",
+    "t": "Incoterms",
+    "u": "pm/incoterms",
     "d": "2026-08-14"
   },
   {
-    "t": "Fraction ↔ Decimal (Feet-Inches)",
-    "u": "general/fraction-decimal",
+    "t": "Meeting Minutes &amp; Action Items",
+    "u": "pm/meeting-minutes",
     "d": "2026-08-14"
   },
   {
-    "t": "Markup, Margin &amp; % Change",
-    "u": "general/markup-margin",
+    "t": "Permit to Work / LOTO Checklist",
+    "u": "pm/permit-to-work",
     "d": "2026-08-14"
   },
   {
-    "t": "Password Generator",
-    "u": "general/password-generator",
+    "t": "PMP / PMBOK Reference",
+    "u": "pm/pmp-pmbok-reference",
     "d": "2026-08-14"
   },
   {
-    "t": "Percentage Calculator",
-    "u": "general/percentage-calculator",
+    "t": "Punch List / Snag Tracker",
+    "u": "pm/punch-list",
     "d": "2026-08-14"
   },
   {
-    "t": "Engineering Sanity-Checker",
-    "u": "general/sanity-checker",
+    "t": "RACI Matrix Builder",
+    "u": "pm/raci-matrix",
     "d": "2026-08-14"
   },
   {
-    "t": "Site Term Translator",
-    "u": "general/term-translator",
+    "t": "Risk Register",
+    "u": "pm/risk-register",
     "d": "2026-08-14"
   }
 ]
