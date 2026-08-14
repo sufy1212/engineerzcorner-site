@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>PLC vs DCS vs SCADA Explained: Real Industrial Comparison</title>
+    <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
+    <description>PLC, DCS and SCADA compared for real industrial use — control type, speed, architecture, redundancy, and where control execution actually happens — plus a feature-by-feature table and typical applications for each.</description>
+    <pubDate>Fri, 14 Aug 2026 04:56:05 GMT</pubDate>
+  </item>
+  <item>
     <title>Fire Fighting: NFPA Fire Protection System Design Standards Reference</title>
     <link>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</link>
     <guid>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
     <description>A legend sheet is the reference table that defines every symbol, line type, abbreviation and tag format used on a P&amp;ID — the reason engineers, operators and contractors all read the same drawing the same way.</description>
-    <pubDate>Mon, 10 Aug 2026 20:07:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</guid>
-    <description>How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.</description>
     <pubDate>Mon, 10 Aug 2026 20:07:11 GMT</pubDate>
   </item>
 </channel></rss>
