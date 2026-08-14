@@ -38,6 +38,9 @@
   .cl-title{ font-family:var(--font-display); font-size:14.5px; font-weight:700; color:var(--ink); text-decoration:none; }
   .cl-title:hover{ color:var(--amber-deep); text-decoration:underline; }
   .cl-cat{ display:inline-block; font-family:var(--font-mono); font-size:8.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,var(--amber),var(--blue)); padding:2px 7px; border-radius:20px; margin-left:8px; vertical-align:middle; }
+  .cl-action{ display:inline-block; font-family:var(--font-mono); font-size:8.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:2px 7px; border-radius:20px; margin-left:6px; vertical-align:middle; }
+  .cl-action--added{ color:var(--blue); background:rgba(13,148,136,.12); border:1px solid rgba(13,148,136,.3); }
+  .cl-action--updated{ color:var(--amber-deep); background:rgba(108,92,231,.1); border:1px solid rgba(108,92,231,.28); }
   .cl-empty, .cl-loading{ font-family:var(--font-mono); font-size:12.5px; color:var(--ink-faint); text-align:center; padding:30px 16px; border:1px dashed var(--line); border-radius:8px; }
   .cl-note{ font-size:12px; color:var(--ink-faint); margin:22px 0 0; line-height:1.6; }
 </style>
@@ -136,8 +139,10 @@
         lastMonth = mk;
       }
       var catBadge = item.c ? '<span class="cl-cat">' + escapeHtml(item.c) + '</span>' : '';
+      var actionBadge = item.a === 'updated' ? '<span class="cl-action cl-action--updated">Updated</span>'
+                       : item.a === 'added' ? '<span class="cl-action cl-action--added">New</span>' : '';
       html += '<div class="cl-entry"><div class="cl-date">' + fmtDate(item.d) + '</div>' +
-              '<div class="cl-body"><a class="cl-title" href="' + item.u + '">' + escapeHtml(item.t) + '</a>' + catBadge + '</div></div>';
+              '<div class="cl-body"><a class="cl-title" href="' + item.u + '">' + escapeHtml(item.t) + '</a>' + actionBadge + catBadge + '</div></div>';
     });
     el.innerHTML = html;
   }
