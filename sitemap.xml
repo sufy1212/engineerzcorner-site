@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.engineerzcorner.com/</loc><lastmod>2026-08-11</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.engineerzcorner.com/</loc><lastmod>2026-08-14</lastmod><priority>1.0</priority></url>
   <url><loc>https://www.engineerzcorner.com/about</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/alarm-setpoints</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
@@ -38,7 +38,7 @@
   <url><loc>https://www.engineerzcorner.com/civil/symbols</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/civil/trench-safe-slope</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/contact</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/defect-finder</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/defect-finder</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/discipline-cards-v2</loc><lastmod>2026-08-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/</loc><lastmod>2026-08-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/arc-flash-incident-energy</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -74,10 +74,10 @@
   <url><loc>https://www.engineerzcorner.com/electrical/ups-battery-autonomy-sizing</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/voltage-drop-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/voltage-drop-simulator</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/escape-room</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/fault-finder</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/flashcards</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/games</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/escape-room</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/fault-finder</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/flashcards</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/games</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/general/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/general/age-calculator</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/general/base-converter</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
@@ -93,7 +93,7 @@
   <url><loc>https://www.engineerzcorner.com/general/time-duration-calculator</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/general/tip-calculator</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/general/unit-converter</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/hvac-doctor</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/hvac-doctor</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/air-changes-per-hour-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/chiller-capacity-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -119,8 +119,8 @@
   <url><loc>https://www.engineerzcorner.com/interview/mechanical</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/pm</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/solar</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/load-stack</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/machine-fixer</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/load-stack</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/machine-fixer</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/bearing-life-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/belt-drive-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
@@ -140,7 +140,7 @@
   <url><loc>https://www.engineerzcorner.com/mechanical/symbols</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/thermal-expansion-calculator</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/notes/</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.engineerzcorner.com/panel-doctor</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/panel-doctor</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/pm/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/pm/commercial-terms</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/pm/evm</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
@@ -301,9 +301,9 @@
   <url><loc>https://www.engineerzcorner.com/process/relief-valve-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/process/symbols</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/process/vessel-volume-level</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
