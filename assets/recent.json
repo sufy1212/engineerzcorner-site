@@ -1,5 +1,10 @@
 [
   {
+    "t": "Types of HVAC Fans Explained",
+    "u": "posts/types-of-hvac-fans-explained",
+    "d": "2026-08-16"
+  },
+  {
     "t": "FM-200 System Diagram: Components &amp; How It Works Explained",
     "u": "posts/fm-200-clean-agent-system-components-explained",
     "d": "2026-08-16"
@@ -47,6 +52,11 @@
   {
     "t": "Cost of Living Calculator",
     "u": "study-abroad/cost-of-living-calculator",
+    "d": "2026-08-14"
+  },
+  {
+    "t": "Currency Converter",
+    "u": "study-abroad/currency-converter",
     "d": "2026-08-14"
   }
 ]
