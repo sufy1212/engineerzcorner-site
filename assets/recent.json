@@ -1,11 +1,16 @@
 [
   {
-    "t": "UPS Architecture, Types &amp; Operating Modes Explained",
+    "t": "Sag in Transmission Lines Explained",
+    "u": "posts/sag-in-transmission-lines-explained",
+    "d": "2026-08-16"
+  },
+  {
+    "t": "UPS Architecture, Types & Operating Modes Explained",
     "u": "posts/ups-architecture-types-operating-modes-explained",
     "d": "2026-08-16"
   },
   {
-    "t": "Relay Basics: Construction, Working Principle &amp; Contact Types",
+    "t": "Relay Basics: Construction, Working Principle & Contact Types",
     "u": "posts/relay-basics-construction-working-principle-explained",
     "d": "2026-08-16"
   },
@@ -42,11 +47,6 @@
   {
     "t": "Education Loan EMI Calculator",
     "u": "study-abroad/education-loan-emi-calculator",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "GPA / CGPA Converter",
-    "u": "study-abroad/gpa-converter",
     "d": "2026-08-14"
   }
 ]
