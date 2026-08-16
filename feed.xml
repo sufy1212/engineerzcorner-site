@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>FM-200 System Diagram: Components &amp; How It Works Explained</title>
+    <link>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained.html</guid>
+    <description>FM-200 clean agent fire suppression system explained — cylinder, solenoid valve, nozzles, control panel, detection system, manual release station and pressure switch, with a full system diagram and how each part triggers discharge.</description>
+    <pubDate>Sun, 16 Aug 2026 20:17:20 GMT</pubDate>
+  </item>
+  <item>
     <title>Gas Detector Types &amp; Working Principles Explained</title>
     <link>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
     <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP</title>
-    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-curve-explained.html</guid>
-    <description>How to read a manufacturer's pump curve — the head-capacity curve, efficiency islands, NPSHr curve.</description>
     <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
   </item>
 </channel></rss>
