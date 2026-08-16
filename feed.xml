@@ -4,18 +4,25 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Sag in Transmission Lines Explained</title>
+    <link>https://www.engineerzcorner.com/posts/sag-in-transmission-lines-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/sag-in-transmission-lines-explained.html</guid>
+    <description>What sag is in an overhead transmission line, why it's designed in rather than eliminated, the level-support sag formula, the factors that raise or lower it, typical sag-to-span ratios by voltage level, and why sag is checked at multiple temperatures.</description>
+    <pubDate>Sun, 16 Aug 2026 07:05:00 GMT</pubDate>
+  </item>
+  <item>
     <title>UPS Architecture, Types &amp; Operating Modes Explained</title>
     <link>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</guid>
     <description>How an online double-conversion UPS is built — rectifier/charger, battery bank, inverter, static switch and bypass — the three operating modes, offline vs line-interactive vs online UPS types, and key protections and parameters.</description>
-    <pubDate>Sun, 16 Aug 2026 19:58:15 GMT</pubDate>
+    <pubDate>Sun, 16 Aug 2026 06:55:00 GMT</pubDate>
   </item>
   <item>
     <title>Relay Basics: Construction, Working Principle &amp; Contact Types</title>
     <link>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</guid>
     <description>What a relay actually is, how the coil and armature switch a separate power circuit, NO/NC/CO contact types, a control-vs-power circuit diagram, common applications, key specs, and the trade-offs versus contactors and solid-state relays.</description>
-    <pubDate>Sun, 16 Aug 2026 19:52:53 GMT</pubDate>
+    <pubDate>Sun, 16 Aug 2026 06:48:00 GMT</pubDate>
   </item>
   <item>
     <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
@@ -211,6 +218,20 @@
     <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
     <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
     <description>Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input.</description>
+    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Chiller Machine: Main Parts &amp; Functions</title>
+    <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
+    <description>Every major chiller component explained — compressor, condenser, evaporator, EXV and 14 more — plus the refrigeration cycle, the chilled water circuit, and air-cooled vs water-cooled chillers compared.</description>
+    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter</title>
+    <link>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</guid>
+    <description>How gross area and steel ratio combine into a short column&amp;#x27;s axial capacity, why codes cap reinforcement ratio at both ends, and when slenderness cuts that capacity down.</description>
     <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
   </item>
 </channel></rss>
