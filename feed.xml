@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>UPS Architecture, Types &amp; Operating Modes Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</guid>
+    <description>How an online double-conversion UPS is built — rectifier/charger, battery bank, inverter, static switch and bypass — the three operating modes, offline vs line-interactive vs online UPS types, and key protections and parameters.</description>
+    <pubDate>Sun, 16 Aug 2026 19:58:15 GMT</pubDate>
+  </item>
+  <item>
     <title>Relay Basics: Construction, Working Principle &amp; Contact Types</title>
     <link>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
     <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
     <description>Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Chiller Machine: Main Parts &amp; Functions</title>
-    <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
-    <description>Every major chiller component explained — compressor, condenser, evaporator, EXV and 14 more — plus the refrigeration cycle, the chilled water circuit, and air-cooled vs water-cooled chillers compared.</description>
     <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
   </item>
 </channel></rss>

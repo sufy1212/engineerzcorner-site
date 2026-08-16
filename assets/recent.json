@@ -1,5 +1,10 @@
 [
   {
+    "t": "UPS Architecture, Types &amp; Operating Modes Explained",
+    "u": "posts/ups-architecture-types-operating-modes-explained",
+    "d": "2026-08-16"
+  },
+  {
     "t": "Relay Basics: Construction, Working Principle &amp; Contact Types",
     "u": "posts/relay-basics-construction-working-principle-explained",
     "d": "2026-08-16"
@@ -42,11 +47,6 @@
   {
     "t": "GPA / CGPA Converter",
     "u": "study-abroad/gpa-converter",
-    "d": "2026-08-14"
-  },
-  {
-    "t": "Proof of Funds Calculator",
-    "u": "study-abroad/proof-of-funds-calculator",
     "d": "2026-08-14"
   }
 ]
