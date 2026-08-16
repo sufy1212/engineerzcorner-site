@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Relay Basics: Construction, Working Principle &amp; Contact Types</title>
+    <link>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</guid>
+    <description>What a relay actually is, how the coil and armature switch a separate power circuit, NO/NC/CO contact types, a control-vs-power circuit diagram, common applications, key specs, and the trade-offs versus contactors and solid-state relays.</description>
+    <pubDate>Sun, 16 Aug 2026 06:48:00 GMT</pubDate>
+  </item>
+  <item>
     <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
     <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
