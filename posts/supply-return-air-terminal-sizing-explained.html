@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supply &amp; Return Air Terminal Sizing: Diffusers &amp; Grilles Explained | Engineerz CorneR</title>
+<meta name="description" content="How to calculate supply and return air terminal quantity from room CFM — diffuser CFM/NC/throw selection, return grille face velocity, air balance, and a full worked example with layout.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal">
+<meta property="og:description" content="Right air, right place, right quantity — the full method for sizing diffusers and return grilles from room CFM, with a worked example and typical layout.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal">
+<meta name="twitter:description" content="Right air, right place, right quantity — the full method for sizing diffusers and return grilles from room CFM, with a worked example and typical layout.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "How to Calculate & Select Supply Air Terminal & Return Air Terminal", "item": "https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "description": "Right air, right place, right quantity — the full method for sizing diffusers and return grilles from room CFM, with a worked example and typical layout.",
+  "url": "https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained",
+  "image": "https://www.engineerzcorner.com/posts/img/supply-return-air-terminal-sizing-infographic.jpg",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+<style>
+.post-body img.infographic{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 24px #181b2916;margin:6px 0 8px}
+.post-body .fig-caption{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);text-align:center;margin:0 0 30px}
+</style>
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">❄ HVAC &middot; Air Distribution</span>
+    <h1>How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal</h1>
+    <p class="hero-sub">Right air, right place, right quantity. Getting the diffuser and return grille count wrong doesn't just look odd on a reflected ceiling plan — it shows up later as short-circuiting, drafts, and rooms that never quite balance.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; HVAC / Air Distribution</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Room supply air quantity (CFM) comes from the cooling load: CFM = Total Cooling Load (BTU/H) &divide; (1.08 &times; &Delta;T).</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Number of supply diffusers = Total Supply CFM &divide; CFM per diffuser at the selected Noise Criteria (NC) level, typically NC 25&ndash;35 for comfort.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Number of return grilles = Total Return CFM &divide; CFM per grille at the selected face velocity, typically 250&ndash;500 FPM.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Total supply CFM should approximately equal total return CFM, within about 5&ndash;10%, for proper air balance.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Proper selection and quantity of <b>Supply Air Terminals</b> (diffusers) and <b>Return Air Terminals</b> (grilles) is what actually delivers good air distribution, comfort and efficiency in a room — the load calculation and duct sizing upstream of it don't matter much if the air doesn't leave the diffuser at the right rate, throw and noise level. The method is the same four steps every time: get the room's air quantity, pick a diffuser that delivers it at an acceptable noise level, pick a return grille that pulls it back at an acceptable face velocity, and check that supply and return balance.</p>
+
+    <img class="infographic" src="img/supply-return-air-terminal-sizing-infographic.jpg" alt="Infographic on how to calculate and select supply air terminal and return air terminal — CFM formula, diffuser and return grille selection, air balance check, and a worked example with room layout">
+    <p class="fig-caption">Room CFM, supply diffuser selection, return grille selection, air balance, and a worked example with a typical layout.</p>
+
+    <h2><span class="h2-dot"></span>1. Calculate air quantity (CFM) for the room</h2>
+    <div class="formula-box">CFM &nbsp;=&nbsp; Total Cooling Load (BTU/H) &divide; (1.08 &times; &Delta;T)</div>
+    <div class="formula-note">1.08 = constant (air density &amp; specific heat, at standard conditions) &middot; &Delta;T = supply-to-room temperature difference (&deg;F)</div>
+    <p>The CFM required for a room is usually already available from the load calculation, so this step is normally a lookup rather than new work — but it's worth keeping the formula on hand, since it also lets you sanity-check a supplied CFM number against the room's stated cooling load and design &Delta;T.</p>
+
+    <h2><span class="h2-dot"></span>2. Select the supply air terminal</h2>
+    <p>Start by choosing the diffuser type — ceiling or sidewall — based on the ceiling layout and room geometry. From the manufacturer's performance data, pull two numbers for each candidate size: CFM at the desired NC (Noise Criteria) level, and throw distance. NC 25&ndash;35 is the typical comfort range; going lower usually means a larger, more expensive diffuser for the same CFM.</p>
+    <div class="formula-box">Number of Supply Diffusers (N<sub>s</sub>) &nbsp;=&nbsp; Total Supply CFM &divide; CFM per Diffuser (at selected NC)</div>
+    <p>Round the result up to a whole number of diffusers — rounding down under-delivers air to the room, which is the more common and more noticeable mistake.</p>
+
+    <h2><span class="h2-dot"></span>3. Select the return air terminal</h2>
+    <p>Return grilles are sized differently — instead of a noise-level lookup, use the manufacturer's CFM capacity at a chosen face velocity, typically in the 250&ndash;500 FPM range. Too high a face velocity pulls noise and draft complaints back into the return path; too low oversizes the grille for no real benefit.</p>
+    <div class="formula-box">Number of Return Grilles (N<sub>r</sub>) &nbsp;=&nbsp; Total Return CFM &divide; CFM per Return Grille (at selected velocity)</div>
+
+    <h2><span class="h2-dot"></span>4. Check air balance</h2>
+    <p>Total supply CFM should come out approximately equal to total return CFM — within about 5&ndash;10% is the usual tolerance for proper balance. A room that's persistently over-supplied or over-returned relative to its neighbors ends up pressurized or depressurized against the corridor, which shows up as doors that won't close quietly, drafts under doors, or odors migrating between spaces.</p>
+
+    <h2><span class="h2-dot"></span>5. Worked example</h2>
+    <p>Room: 20 ft (L) &times; 15 ft (W) &times; 10 ft (H), cooling load 24,000 BTU/H, &Delta;T = 20&deg;F.</p>
+
+    <h3 style="font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);margin:18px 0 8px;text-transform:uppercase;letter-spacing:.04em">Step 1 — Air quantity</h3>
+    <div class="formula-box">CFM &nbsp;=&nbsp; 24,000 &divide; (1.08 &times; 20) &nbsp;=&nbsp; 24,000 &divide; 21.6 &nbsp;&asymp;&nbsp; 1111 CFM</div>
+    <div class="formula-note">Total Supply CFM = Total Return CFM = 1111 CFM</div>
+
+    <h3 style="font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);margin:18px 0 8px;text-transform:uppercase;letter-spacing:.04em">Step 2 — Supply diffuser selection</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Neck Size</th><th>CFM (at NC 30)</th><th>Throw (ft)</th></tr>
+        <tr><td>12&Prime; &times; 12&Prime;</td><td>250</td><td>8 &ndash; 10</td></tr>
+        <tr><td>16&Prime; &times; 16&Prime;</td><td>400</td><td>11 &ndash; 13</td></tr>
+        <tr><td>20&Prime; &times; 20&Prime;</td><td>600</td><td>13 &ndash; 16</td></tr>
+      </table>
+    </div>
+    <p>Selecting the 16&Prime; &times; 16&Prime; ceiling 4-way diffuser (400 CFM each):</p>
+    <div class="formula-box">N<sub>s</sub> &nbsp;=&nbsp; 1111 &divide; 400 &nbsp;=&nbsp; 2.78 &nbsp;&asymp;&nbsp; 3 diffusers</div>
+    <div class="formula-note">Use 3 diffusers — total delivered CFM = 1200 (rounded up from the exact requirement, as it should be).</div>
+
+    <h3 style="font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);margin:18px 0 8px;text-transform:uppercase;letter-spacing:.04em">Step 3 — Return grille selection</h3>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Grille Size</th><th>CFM (at 400 FPM)</th><th>Face Velocity</th><th>NC</th></tr>
+        <tr><td>12&Prime; &times; 12&Prime;</td><td>300</td><td>400</td><td>&lt;25</td></tr>
+        <tr><td>18&Prime; &times; 18&Prime;</td><td>600</td><td>400</td><td>&lt;25</td></tr>
+        <tr><td>24&Prime; &times; 24&Prime;</td><td>1000</td><td>400</td><td>&lt;25</td></tr>
+      </table>
+    </div>
+    <p>Selecting the 18&Prime; &times; 18&Prime; return grille (600 CFM each):</p>
+    <div class="formula-box">N<sub>r</sub> &nbsp;=&nbsp; 1111 &divide; 600 &nbsp;=&nbsp; 1.85 &nbsp;&asymp;&nbsp; 2 grilles</div>
+    <div class="formula-note">Use 2 return grilles — total return CFM = 1200, matching the supply side.</div>
+
+    <h3 style="font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);margin:18px 0 8px;text-transform:uppercase;letter-spacing:.04em">Step 4 — Typical layout</h3>
+    <p>With 3 supply diffusers spread across the room and 2 return grilles placed away from them, supply and return both land at 1200 CFM — inside balance, and with 3 diffusers instead of a lumped single outlet, the room gets more even air distribution and less risk of short-circuiting air straight from supply to return.</p>
+
+    <h2><span class="h2-dot"></span>Practical tips</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Place supply diffusers away from return grilles to avoid short-circuiting — air taking the shortest path back out without actually conditioning the occupied zone.</span></li>
+      <li><span class="ck-mark">2</span><span>Ensure even air distribution across the room; a single oversized diffuser rarely performs like several smaller ones spread through the space.</span></li>
+      <li><span class="ck-mark">3</span><span>Account for room layout, obstructions (beams, light fixtures, sprinklers) and ceiling height when placing terminals.</span></li>
+      <li><span class="ck-mark">4</span><span>Follow ASHRAE 62.1, SMACNA and local code requirements for design and installation, and always refer to the manufacturer's performance data for exact CFM, throw and NC values rather than assuming.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Room supply CFM comes from the cooling load: CFM = BTU/H &divide; (1.08 &times; &Delta;T).</span></li>
+      <li><span class="tk-check">✓</span><span>Supply diffuser count = Total Supply CFM &divide; CFM per diffuser at the selected NC level (typically NC 25&ndash;35).</span></li>
+      <li><span class="tk-check">✓</span><span>Return grille count = Total Return CFM &divide; CFM per grille at the selected face velocity (typically 250&ndash;500 FPM).</span></li>
+      <li><span class="tk-check">✓</span><span>Round terminal counts up, not down — under-delivering air is the more common and more noticeable failure.</span></li>
+      <li><span class="tk-check">✓</span><span>Keep supply and return CFM within about 5&ndash;10% of each other, and always verify final selections against manufacturer data and ASHRAE/SMACNA guidance.</span></li>
+    </ul>
+
+  </div>
+
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=How%20to%20Calculate%20%26%20Select%20Supply%20Air%20Terminal%20%26%20Return%20Air%20Terminal&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsupply-return-air-terminal-sizing-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsupply-return-air-terminal-sizing-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=How%20to%20Calculate%20%26%20Select%20Supply%20Air%20Terminal%20%26%20Return%20Air%20Terminal&text=Right%20air%2C%20right%20place%2C%20right%20quantity%20%E2%80%94%20diffuser%20and%20return%20grille%20sizing%2C%20with%20a%20worked%20example.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsupply-return-air-terminal-sizing-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=How%20to%20Calculate%20%26%20Select%20Supply%20Air%20Terminal%20%26%20Return%20Air%20Terminal&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AHow%20to%20Calculate%20%26%20Select%20Supply%20Air%20Terminal%20%26%20Return%20Air%20Terminal%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsupply-return-air-terminal-sizing-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="duct-sizing-velocity-limits-vs-airflow">Duct Sizing: Velocity Limits vs. Airflow Explained</a></li><li><a href="sensible-vs-latent-heat-cooling-load">Sensible vs. Latent Heat in Cooling Load Explained</a></li><li><a href="types-of-hvac-fans-explained">Types of HVAC Fans Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+</body>
+</html>
