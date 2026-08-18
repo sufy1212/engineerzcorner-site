@@ -4,11 +4,25 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Earthing vs. Grounding: Same Earth Connection, Different Job</title>
+    <link>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained.html</guid>
+    <description>Both connect to earth, but earthing protects people from shock while grounding protects the electrical system's stability — purpose, connection point, current flow and typical use, compared side by side.</description>
+    <pubDate>Mon, 17 Aug 2026 14:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal</title>
+    <link>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained.html</guid>
+    <description>Right air, right place, right quantity — the full method for sizing diffusers and return grilles from room CFM, with a worked example and typical layout.</description>
+    <pubDate>Mon, 17 Aug 2026 13:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication</title>
     <link>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</guid>
-    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) are the two dimensions that drive piping material take-off and fabrication. Formulas, a bend allowance table, and a worked 2-inch 90° bend example.</description>
-    <pubDate>Mon, 17 Aug 2026 19:41:22 GMT</pubDate>
+    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) drive piping material take-off, fabrication drawings and field installation — formulas, a bend allowance table, and a worked 2&#8243; NB example.</description>
+    <pubDate>Mon, 17 Aug 2026 12:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Types of HVAC Fans</title>
@@ -211,6 +225,13 @@
     <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
     <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
+    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
+    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
+    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
     <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
   </item>
 </channel></rss>
