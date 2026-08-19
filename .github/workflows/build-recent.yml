@@ -1,7 +1,17 @@
-name: Rebuild recent.json / sitemap.xml / feed.xml
+name: Validate, self-heal, and rebuild site metadata
 
-# Runs on every push to main — including "Add files via upload" commits —
-# so assets/recent.json, sitemap.xml, and feed.xml never go stale again.
+# Runs on every push to main — including "Add files via upload" commits.
+#
+# Order matters here:
+#   1. Fail-fast checks run first and stop the workflow on any real bug
+#      (broken link, missing/duplicate <h1>, stylesheet load order,
+#      HTML/CSS/JS drift) BEFORE anything below gets a chance to
+#      auto-commit on top of a broken page.
+#   2. Self-healing scripts run next, only if step 1 passed. Each one
+#      writes files only when something actually changed.
+#   3. A single commit at the end picks up everything the self-healers
+#      touched, so one push here means at most one auto-commit back,
+#      not five.
 on:
   push:
     branches: [main]
@@ -10,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: build-recent
+  group: validate-and-build
   cancel-in-progress: false
 
 jobs:
@@ -20,25 +30,58 @@ jobs:
       - name: Checkout with full history
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # script needs real git log dates, not a shallow clone
+          fetch-depth: 0   # build-recent.js / build-changelog.js need real git log dates
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Run build-recent.js
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # ---- 1. Fail-fast checks (stop here if any of these fail) ----
+      - name: Check for broken internal links
+        run: node scripts/check-broken-links.js
+
+      - name: Check every page has exactly one H1
+        run: node scripts/check-h1.js
+
+      - name: Check stylesheet load order
+        run: node scripts/check-stylesheet-order.js
+
+      - name: Validate HTML/CSS/JS match
+        run: python3 scripts/validate-css-js-match.py
+
+      # ---- 2. Self-healing scripts (only run if checks above passed) ----
+      - name: Sync sitemap.html with pages on disk
+        run: node scripts/check-sitemap-html.js
+
+      - name: Sync site-nav block sitewide
+        run: node scripts/check-site-nav.js
+
+      - name: Rebuild recent.json / sitemap.xml / feed.xml
         run: node scripts/build-recent.js
 
-      - name: Commit regenerated files if changed
+      - name: Rebuild changelog.json
+        run: node scripts/build-changelog.js
+
+      - name: Rebuild search-index.json
+        run: node scripts/build-search-index.js
+
+      # ---- 3. One commit for everything the self-healers touched ----
+      - name: Commit auto-healed files if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/recent.json assets/site-stats.json sitemap.xml feed.xml
+          git add sitemap.html "**/*.html" assets/recent.json assets/site-stats.json \
+                  assets/changelog.json assets/search-index.json sitemap.xml feed.xml
           if git diff --cached --quiet; then
             echo "Nothing changed — skipping commit."
           else
-            git commit -m "chore: rebuild recent.json / sitemap.xml / feed.xml [skip ci]"
+            git commit -m "chore: auto-heal sitemap/nav + rebuild recent/changelog/search-index [skip ci]"
             for i in 1 2 3 4 5; do
               git pull --rebase origin main && git push && break
               echo "Push attempt $i failed (someone else pushed at the same time) — retrying..."
