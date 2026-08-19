@@ -1,0 +1,26 @@
+.gg-toolbar{position:relative;margin:0 0 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.gg-search{position:relative;flex:1;min-width:220px}
+.gg-search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--ink-faint);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.gg-search input{width:100%;box-sizing:border-box;font-family:var(--font-body);font-size:14.5px;padding:12px 40px;border-radius:12px;border:1.5px solid var(--line);background:var(--sheet);color:var(--ink);outline:none;transition:border-color .15s,box-shadow .15s}
+.gg-search input:focus{border-color:var(--amber);box-shadow:0 0 0 3px #6c5ce726}
+.gg-search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;border:none;background:var(--sheet-2);color:var(--ink-dim);cursor:pointer;display:none;align-items:center;justify-content:center;font-size:15px;line-height:1}
+.gg-search-clear:hover{background:var(--line-soft);color:var(--ink)}
+.gg-toolbar-count{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);white-space:nowrap}
+.gg-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.gg-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-dim);background:var(--sheet);border:1.5px solid var(--line);border-radius:20px;padding:7px 13px;cursor:pointer;transition:all .15s ease}
+.gg-chip:hover{border-color:var(--chip-c,var(--amber));color:var(--chip-c,var(--amber))}
+.gg-chip.active{color:#fff;background:var(--chip-c,var(--amber));border-color:var(--chip-c,var(--amber))}
+.gg-tag{display:inline-block;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:10px;margin-left:8px;vertical-align:middle;white-space:nowrap;border:1px solid transparent}
+.gg-tag-electrical{color:#1D4ED8;background:#1D4ED814;border-color:#1D4ED830}
+.gg-tag-mechanical{color:#C2410C;background:#C2410C14;border-color:#C2410C30}
+.gg-tag-hvac{color:#0D9488;background:#0D948814;border-color:#0D948830}
+.gg-tag-automation{color:#7C3AED;background:#7C3AED14;border-color:#7C3AED30}
+.gg-tag-civil{color:#78350F;background:#78350F14;border-color:#78350F30}
+.gg-tag-solar{color:#B9860A;background:#B9860A14;border-color:#B9860A30}
+.gg-tag-process{color:#B91C1C;background:#B91C1C14;border-color:#B91C1C30}
+.gg-tag-general{color:#475569;background:#47556914;border-color:#47556930}
+.gg-row-hide{display:none!important}
+.gg-section-hide{display:none!important}
+.gg-empty{display:none;text-align:center;padding:40px 20px;color:var(--ink-faint);font-size:14px;font-family:var(--font-body)}
+.gg-empty.gg-show{display:block}
+@media(max-width:520px){.gg-toolbar{flex-direction:column;align-items:stretch}.gg-toolbar-count{text-align:right}}
