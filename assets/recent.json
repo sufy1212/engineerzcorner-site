@@ -1,5 +1,30 @@
 [
   {
+    "t": "Belt / Pulley Drive",
+    "u": "mechanical/belt-drive-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Duct Sizing &amp; Air Changes",
+    "u": "mechanical/duct-sizing-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Sensible Heat Load",
+    "u": "mechanical/heat-load-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Pipe Flow &amp; Head Loss",
+    "u": "mechanical/pipe-flow-head-loss-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Pump Power &amp; NPSH",
+    "u": "mechanical/pump-power-npsh-calculator",
+    "d": "2026-08-19"
+  },
+  {
     "t": "Belt &amp; Pulley Drive Simulator",
     "u": "mechanical/belt-drive-simulator",
     "d": "2026-08-19"
@@ -23,30 +48,5 @@
     "t": "Instrument/Sensor Selector",
     "u": "automation/instrument-selector",
     "d": "2026-08-19"
-  },
-  {
-    "t": "Engineering Glossary",
-    "u": "general/engineering-glossary",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
-    "u": "solar/grid-tie-off-grid-comparator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Shading &amp; Soiling Loss Estimator",
-    "u": "solar/shading-soiling-loss-calculator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
-    "u": "posts/earthing-grounding-systems-explained",
-    "d": "2026-08-17"
-  },
-  {
-    "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
-    "u": "posts/earthing-vs-grounding-explained",
-    "d": "2026-08-17"
   }
 ]

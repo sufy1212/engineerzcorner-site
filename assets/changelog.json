@@ -63,6 +63,41 @@
   "a": "added"
  },
  {
+  "t": "Belt / Pulley Drive",
+  "u": "mechanical/belt-drive-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing &amp; Air Changes",
+  "u": "mechanical/duct-sizing-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible Heat Load",
+  "u": "mechanical/heat-load-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Flow &amp; Head Loss",
+  "u": "mechanical/pipe-flow-head-loss-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Pump Power &amp; NPSH",
+  "u": "mechanical/pump-power-npsh-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
   "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
   "u": "posts/supply-return-air-terminal-sizing-explained",
   "d": "2026-08-17",
@@ -434,13 +469,6 @@
   "a": "added"
  },
  {
-  "t": "Belt / Pulley Drive",
-  "u": "mechanical/belt-drive-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
   "t": "Fastener Torque Calculator",
   "u": "mechanical/bolt-torque-calculator",
   "d": "2026-08-14",
@@ -448,36 +476,8 @@
   "a": "added"
  },
  {
-  "t": "Duct Sizing &amp; Air Changes",
-  "u": "mechanical/duct-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
-  "t": "Sensible Heat Load",
-  "u": "mechanical/heat-load-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
-  "t": "Pipe Flow &amp; Head Loss",
-  "u": "mechanical/pipe-flow-head-loss-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
   "t": "Pump / Fan Affinity Laws",
   "u": "mechanical/pump-fan-affinity-laws-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
-  "t": "Pump Power &amp; NPSH",
-  "u": "mechanical/pump-power-npsh-calculator",
   "d": "2026-08-14",
   "c": "Mechanical",
   "a": "added"
