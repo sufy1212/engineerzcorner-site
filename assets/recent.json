@@ -1,52 +1,52 @@
 [
   {
-    "t": "Concrete Volume &amp; Material Estimator",
-    "u": "civil/concrete-volume-estimator",
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
     "d": "2026-08-19"
   },
   {
-    "t": "Slab-on-Grade Quick Thickness",
-    "u": "civil/slab-on-grade-thickness",
+    "t": "Busbar &amp; Enclosure Sizing",
+    "u": "electrical/busbar-enclosure-sizing",
     "d": "2026-08-19"
   },
   {
-    "t": "Staircase Geometry Check",
-    "u": "civil/staircase-geometry",
+    "t": "Conduit Fill Calculator",
+    "u": "electrical/conduit-fill-calculator",
     "d": "2026-08-19"
   },
   {
-    "t": "Belt / Pulley Drive",
-    "u": "mechanical/belt-drive-calculator",
+    "t": "Earthing Rod Resistance",
+    "u": "electrical/earthing-rod-resistance",
     "d": "2026-08-19"
   },
   {
-    "t": "Duct Sizing &amp; Air Changes",
-    "u": "mechanical/duct-sizing-calculator",
+    "t": "Energy Cost / kWh Bill Estimator",
+    "u": "electrical/energy-cost-calculator",
     "d": "2026-08-19"
   },
   {
-    "t": "Sensible Heat Load",
-    "u": "mechanical/heat-load-calculator",
+    "t": "LV Panel Estimate",
+    "u": "electrical/lv-panel-estimate",
     "d": "2026-08-19"
   },
   {
-    "t": "Pipe Flow &amp; Head Loss",
-    "u": "mechanical/pipe-flow-head-loss-calculator",
+    "t": "Motor FLC / Starting Current",
+    "u": "electrical/motor-flc-starting-current",
     "d": "2026-08-19"
   },
   {
-    "t": "Pump Power &amp; NPSH",
-    "u": "mechanical/pump-power-npsh-calculator",
+    "t": "Power Factor Correction Sizing",
+    "u": "electrical/power-factor-correction",
     "d": "2026-08-19"
   },
   {
-    "t": "Belt &amp; Pulley Drive Simulator",
-    "u": "mechanical/belt-drive-simulator",
+    "t": "Three-Phase Power &amp; Current Calculator",
+    "u": "electrical/three-phase-power-calculator",
     "d": "2026-08-19"
   },
   {
-    "t": "Panel GA Maker",
-    "u": "electrical/panel-ga-maker",
+    "t": "Transformer &amp; Generator Sizing",
+    "u": "electrical/transformer-generator-sizing",
     "d": "2026-08-19"
   }
 ]
