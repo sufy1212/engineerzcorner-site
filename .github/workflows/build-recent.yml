@@ -52,6 +52,9 @@ jobs:
       - name: Check stylesheet load order
         run: node scripts/check-stylesheet-order.js
 
+      - name: Check for duplicate tool numbers
+        run: node scripts/check-tool-numbers.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
