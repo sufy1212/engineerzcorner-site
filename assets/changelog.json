@@ -196,6 +196,55 @@
   "a": "updated"
  },
  {
+  "t": "Air Changes per Hour",
+  "u": "hvac/air-changes-per-hour-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Refrigeration / Chiller Capacity",
+  "u": "hvac/chiller-capacity-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible + Latent Cooling Load",
+  "u": "hvac/cooling-load-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing &amp; Air Changes",
+  "u": "hvac/duct-sizing-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Balance Point &amp; Backup Heat",
+  "u": "hvac/heat-pump-balance-point-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Insulation Heat Loss",
+  "u": "hvac/pipe-insulation-heat-loss-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible Heat / Supply Airflow",
+  "u": "hvac/sensible-heat-airflow-calculator",
+  "d": "2026-08-19",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
   "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
   "u": "posts/supply-return-air-terminal-sizing-explained",
   "d": "2026-08-17",
@@ -518,50 +567,8 @@
   "a": "added"
  },
  {
-  "t": "Air Changes per Hour",
-  "u": "hvac/air-changes-per-hour-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Refrigeration / Chiller Capacity",
-  "u": "hvac/chiller-capacity-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Sensible + Latent Cooling Load",
-  "u": "hvac/cooling-load-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Duct Sizing &amp; Air Changes",
-  "u": "hvac/duct-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
   "t": "Fan Static &amp; Total Pressure",
   "u": "hvac/fan-static-total-pressure-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Heat Pump Balance Point &amp; Backup Heat",
-  "u": "hvac/heat-pump-balance-point-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Pipe Insulation Heat Loss",
-  "u": "hvac/pipe-insulation-heat-loss-calculator",
   "d": "2026-08-14",
   "c": "HVAC",
   "a": "added"
@@ -576,13 +583,6 @@
  {
   "t": "SEER / EER / COP Converter",
   "u": "hvac/seer-eer-cop-converter",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Sensible Heat / Supply Airflow",
-  "u": "hvac/sensible-heat-airflow-calculator",
   "d": "2026-08-14",
   "c": "HVAC",
   "a": "added"

@@ -1,5 +1,40 @@
 [
   {
+    "t": "Air Changes per Hour",
+    "u": "hvac/air-changes-per-hour-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Refrigeration / Chiller Capacity",
+    "u": "hvac/chiller-capacity-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Sensible + Latent Cooling Load",
+    "u": "hvac/cooling-load-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Duct Sizing &amp; Air Changes",
+    "u": "hvac/duct-sizing-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Heat Pump Balance Point &amp; Backup Heat",
+    "u": "hvac/heat-pump-balance-point-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Pipe Insulation Heat Loss",
+    "u": "hvac/pipe-insulation-heat-loss-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Sensible Heat / Supply Airflow",
+    "u": "hvac/sensible-heat-airflow-calculator",
+    "d": "2026-08-19"
+  },
+  {
     "t": "Arc Flash Incident Energy",
     "u": "electrical/arc-flash-incident-energy",
     "d": "2026-08-19"
@@ -12,41 +47,6 @@
   {
     "t": "Conduit Fill Calculator",
     "u": "electrical/conduit-fill-calculator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Earthing Rod Resistance",
-    "u": "electrical/earthing-rod-resistance",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Energy Cost / kWh Bill Estimator",
-    "u": "electrical/energy-cost-calculator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "LV Panel Estimate",
-    "u": "electrical/lv-panel-estimate",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Motor FLC / Starting Current",
-    "u": "electrical/motor-flc-starting-current",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Power Factor Correction Sizing",
-    "u": "electrical/power-factor-correction",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Three-Phase Power &amp; Current Calculator",
-    "u": "electrical/three-phase-power-calculator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Transformer &amp; Generator Sizing",
-    "u": "electrical/transformer-generator-sizing",
     "d": "2026-08-19"
   }
 ]
