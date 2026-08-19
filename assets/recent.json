@@ -1,5 +1,20 @@
 [
   {
+    "t": "Concrete Volume &amp; Material Estimator",
+    "u": "civil/concrete-volume-estimator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Slab-on-Grade Quick Thickness",
+    "u": "civil/slab-on-grade-thickness",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Staircase Geometry Check",
+    "u": "civil/staircase-geometry",
+    "d": "2026-08-19"
+  },
+  {
     "t": "Belt / Pulley Drive",
     "u": "mechanical/belt-drive-calculator",
     "d": "2026-08-19"
@@ -32,21 +47,6 @@
   {
     "t": "Panel GA Maker",
     "u": "electrical/panel-ga-maker",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Single Line Diagram Creator",
-    "u": "electrical/sld-creator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Level Control Loop Simulator",
-    "u": "automation/level-control-simulator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Instrument/Sensor Selector",
-    "u": "automation/instrument-selector",
     "d": "2026-08-19"
   }
 ]

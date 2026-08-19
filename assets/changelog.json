@@ -98,6 +98,27 @@
   "a": "updated"
  },
  {
+  "t": "Concrete Volume &amp; Material Estimator",
+  "u": "civil/concrete-volume-estimator",
+  "d": "2026-08-19",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Slab-on-Grade Quick Thickness",
+  "u": "civil/slab-on-grade-thickness",
+  "d": "2026-08-19",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Staircase Geometry Check",
+  "u": "civil/staircase-geometry",
+  "d": "2026-08-19",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
   "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
   "u": "posts/supply-return-air-terminal-sizing-explained",
   "d": "2026-08-17",
@@ -581,13 +602,6 @@
   "a": "added"
  },
  {
-  "t": "Concrete Volume &amp; Material Estimator",
-  "u": "civil/concrete-volume-estimator",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
   "t": "Cut &amp; Fill Volume (Average End Area)",
   "u": "civil/cut-fill-volume",
   "d": "2026-08-14",
@@ -625,20 +639,6 @@
  {
   "t": "Retaining Wall Stability",
   "u": "civil/retaining-wall",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Slab-on-Grade Quick Thickness",
-  "u": "civil/slab-on-grade-thickness",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Staircase Geometry Check",
-  "u": "civil/staircase-geometry",
   "d": "2026-08-14",
   "c": "Civil",
   "a": "added"
