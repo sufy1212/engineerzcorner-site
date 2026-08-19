@@ -1,1 +1,52 @@
-[{"t": "Supply &amp; Return Air Terminal Sizing", "u": "posts/supply-return-air-terminal-sizing-explained", "d": "2026-08-17"}, {"t": "Earthing vs. Grounding", "u": "posts/earthing-vs-grounding-explained", "d": "2026-08-17"}, {"t": "BOD &amp; BOP in Pipe Bending", "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained", "d": "2026-08-17"}, {"t": "Types of HVAC Fans", "u": "posts/types-of-hvac-fans-explained", "d": "2026-08-16"}, {"t": "FM-200 System Diagram: Components &amp; How It Works Explained", "u": "posts/fm-200-clean-agent-system-components-explained", "d": "2026-08-16"}, {"t": "Gas Detector Types &amp; Working Principles Explained", "u": "posts/gas-detector-types-working-principles-explained", "d": "2026-08-16"}, {"t": "Sag in Transmission Lines Explained", "u": "posts/sag-in-transmission-lines-explained", "d": "2026-08-16"}, {"t": "UPS Architecture, Types &amp; Operating Modes Explained", "u": "posts/ups-architecture-types-operating-modes-explained", "d": "2026-08-16"}, {"t": "Relay Basics: Construction, Working Principle &amp; Contact Types", "u": "posts/relay-basics-construction-working-principle-explained", "d": "2026-08-16"}, {"t": "SCADA (Supervisory Control &amp; Data Acquisition) Explained", "u": "posts/scada-supervisory-control-data-acquisition-explained", "d": "2026-08-14"}]
+[
+  {
+    "t": "Belt &amp; Pulley Drive Simulator",
+    "u": "mechanical/belt-drive-simulator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Panel GA Maker",
+    "u": "electrical/panel-ga-maker",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Single Line Diagram Creator",
+    "u": "electrical/sld-creator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Instrument/Sensor Selector",
+    "u": "automation/instrument-selector",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Engineering Glossary",
+    "u": "general/engineering-glossary",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
+    "u": "solar/grid-tie-off-grid-comparator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Shading &amp; Soiling Loss Estimator",
+    "u": "solar/shading-soiling-loss-calculator",
+    "d": "2026-08-19"
+  },
+  {
+    "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
+    "u": "posts/earthing-grounding-systems-explained",
+    "d": "2026-08-17"
+  },
+  {
+    "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
+    "u": "posts/earthing-vs-grounding-explained",
+    "d": "2026-08-17"
+  }
+]

@@ -4,25 +4,39 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</title>
+    <link>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</guid>
+    <description>What an earthing system is actually protecting against, why grid resistance is the number that matters, the factors that drive it.</description>
+    <pubDate>Mon, 17 Aug 2026 19:49:13 GMT</pubDate>
+  </item>
+  <item>
     <title>Earthing vs. Grounding: Same Earth Connection, Different Job</title>
     <link>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained.html</guid>
-    <description>Both connect to earth, but earthing protects people from shock while grounding protects the electrical system's stability — purpose, connection point, current flow and typical use, compared side by side.</description>
-    <pubDate>Mon, 17 Aug 2026 14:00:00 GMT</pubDate>
+    <description>Earthing and grounding both connect to earth, but their purpose is different — earthing protects people from shock, grounding protects the electrical system. Purpose, connection point, current flow and where each is used, compared.</description>
+    <pubDate>Mon, 17 Aug 2026 19:49:13 GMT</pubDate>
   </item>
   <item>
     <title>How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal</title>
     <link>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained.html</guid>
-    <description>Right air, right place, right quantity — the full method for sizing diffusers and return grilles from room CFM, with a worked example and typical layout.</description>
-    <pubDate>Mon, 17 Aug 2026 13:00:00 GMT</pubDate>
+    <description>How to calculate supply and return air terminal quantity from room CFM — diffuser CFM/NC/throw selection, return grille face velocity, air balance, and a full worked example with layout.</description>
+    <pubDate>Mon, 17 Aug 2026 19:49:13 GMT</pubDate>
+  </item>
+  <item>
+    <title>Types of Earthing Systems: 9 Electrode Types Explained</title>
+    <link>https://www.engineerzcorner.com/posts/types-of-earthing-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/types-of-earthing-systems-explained.html</guid>
+    <description>Nine types of earthing electrodes explained — plate, pipe, rod, strip, wire, chemical, ring, mesh and equipment earthing — with what each is built from and where it's actually used.</description>
+    <pubDate>Mon, 17 Aug 2026 19:49:13 GMT</pubDate>
   </item>
   <item>
     <title>BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication</title>
     <link>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</guid>
-    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) drive piping material take-off, fabrication drawings and field installation — formulas, a bend allowance table, and a worked 2&#8243; NB example.</description>
-    <pubDate>Mon, 17 Aug 2026 12:00:00 GMT</pubDate>
+    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) are the two dimensions that drive piping material take-off and fabrication. Formulas, a bend allowance table, and a worked 2-inch 90° bend example.</description>
+    <pubDate>Mon, 17 Aug 2026 19:41:22 GMT</pubDate>
   </item>
   <item>
     <title>Types of HVAC Fans</title>
@@ -197,41 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
     <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
     <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result far more than bolt grade.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
-    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
-    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
-    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
-    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
-    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Glands: What They Do and How to Get the Selection Right</title>
-    <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
-    <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
-    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
-    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
-    <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event inside a control valve — what happens downstream is what makes one loud and pitted, and the other quiet and eroded.</description>
     <pubDate>Fri, 14 Aug 2026 11:17:35 GMT</pubDate>
   </item>
 </channel></rss>
