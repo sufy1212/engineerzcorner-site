@@ -38,6 +38,7 @@ const DIR_TO_SECTION_ID = {
   general: "sm-general",
   "study-abroad": "sm-study-abroad",
   interview: "sm-interview",
+  posts: "sm-blog",
 };
 
 if (!fs.existsSync(SITEMAP_PATH)) {
