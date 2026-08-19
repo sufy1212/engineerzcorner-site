@@ -245,6 +245,27 @@
   "a": "updated"
  },
  {
+  "t": "Fastener Torque Calculator",
+  "u": "mechanical/bolt-torque-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Pump / Fan Affinity Laws",
+  "u": "mechanical/pump-fan-affinity-laws-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Thermal Expansion of Piping",
+  "u": "mechanical/thermal-expansion-calculator",
+  "d": "2026-08-19",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
   "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
   "u": "posts/supply-return-air-terminal-sizing-explained",
   "d": "2026-08-17",
@@ -539,29 +560,8 @@
   "a": "added"
  },
  {
-  "t": "Fastener Torque Calculator",
-  "u": "mechanical/bolt-torque-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
-  "t": "Pump / Fan Affinity Laws",
-  "u": "mechanical/pump-fan-affinity-laws-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
   "t": "Shaft Diameter Sizing Calculator",
   "u": "mechanical/shaft-diameter-calculator",
-  "d": "2026-08-14",
-  "c": "Mechanical",
-  "a": "added"
- },
- {
-  "t": "Thermal Expansion of Piping",
-  "u": "mechanical/thermal-expansion-calculator",
   "d": "2026-08-14",
   "c": "Mechanical",
   "a": "added"
