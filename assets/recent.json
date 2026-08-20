@@ -1,5 +1,15 @@
 [
   {
+    "t": "Instrument/Sensor Selector",
+    "u": "automation/instrument-selector",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
+    "d": "2026-08-20"
+  },
+  {
     "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
     "u": "solar/grid-tie-off-grid-comparator",
     "d": "2026-08-20"
@@ -37,16 +47,6 @@
   {
     "t": "FM-200 System Diagram: Components &amp; How It Works Explained",
     "u": "posts/fm-200-clean-agent-system-components-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Gas Detector Types &amp; Working Principles Explained",
-    "u": "posts/gas-detector-types-working-principles-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
-    "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
     "d": "2026-08-20"
   }
 ]
