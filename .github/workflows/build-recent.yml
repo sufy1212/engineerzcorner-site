@@ -58,6 +58,9 @@ jobs:
       - name: Check _redirects for stale rules
         run: node scripts/check-redirects.js
 
+      - name: Check for orphan pages
+        run: node scripts/check-orphan-pages.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
