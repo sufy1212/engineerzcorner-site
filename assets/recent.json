@@ -1,5 +1,10 @@
 [
   {
+    "t": "Engineering Glossary",
+    "u": "general/engineering-glossary",
+    "d": "2026-08-20"
+  },
+  {
     "t": "Belt / Pulley Drive",
     "u": "mechanical/belt-drive-calculator",
     "d": "2026-08-19"
@@ -42,11 +47,6 @@
   {
     "t": "Air Changes per Hour",
     "u": "hvac/air-changes-per-hour-calculator",
-    "d": "2026-08-19"
-  },
-  {
-    "t": "Refrigeration / Chiller Capacity",
-    "u": "hvac/chiller-capacity-calculator",
     "d": "2026-08-19"
   }
 ]
