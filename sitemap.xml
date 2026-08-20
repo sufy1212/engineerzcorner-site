@@ -115,7 +115,7 @@
   <url><loc>https://www.engineerzcorner.com/hvac/symbols</loc><lastmod>2026-08-19</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/automation</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/civil</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/civil</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/electrical</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/general</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/interview/hvac</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
@@ -301,20 +301,20 @@
   <url><loc>https://www.engineerzcorner.com/posts/work-breakdown-structure-wbs-explained</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/wti-vs-oti-explained</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/privacy-policy</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/</loc><lastmod>2026-08-19</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/cavitation-flashing-check</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/comparisons</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/guides</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/heat-exchanger-lmtd-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/line-sizing-velocity</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/notes</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/npsh-available-calculator</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/pipe-wall-thickness-asme-b31-3</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/purge-gas-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/relief-valve-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/symbols</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/valve-type-selector</loc><lastmod>2026-08-19</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/process/vessel-volume-level</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/cavitation-flashing-check</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/comparisons</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/guides</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/heat-exchanger-lmtd-sizing</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/line-sizing-velocity</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/notes</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/npsh-available-calculator</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/pipe-wall-thickness-asme-b31-3</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/purge-gas-sizing</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/relief-valve-sizing</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/symbols</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/valve-type-selector</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/process/vessel-volume-level</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
