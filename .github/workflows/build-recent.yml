@@ -67,6 +67,9 @@ jobs:
       - name: Check canonical / og:url self-reference
         run: node scripts/check-canonical.js
 
+      - name: Check og:image matches discipline
+        run: node scripts/check-og-image.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
