@@ -644,6 +644,13 @@
   "a": "updated"
  },
  {
+  "t": "Solar Sizing Calculator",
+  "u": "solar/solar-sizing-calculator",
+  "d": "2026-08-20",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
   "t": "Shading & Soiling Loss Estimator",
   "u": "solar/shading-soiling-loss-calculator",
   "d": "2026-08-19",
@@ -1269,13 +1276,6 @@
  {
   "t": "Row Spacing &amp; Self-Shading Calculator",
   "u": "solar/row-spacing-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Solar Sizing Calculator",
-  "u": "solar/solar-sizing-calculator",
   "d": "2026-08-14",
   "c": "Solar",
   "a": "added"

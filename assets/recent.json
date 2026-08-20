@@ -1,5 +1,15 @@
 [
   {
+    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
+    "u": "solar/grid-tie-off-grid-comparator",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Solar Sizing Calculator",
+    "u": "solar/solar-sizing-calculator",
+    "d": "2026-08-20"
+  },
+  {
     "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
     "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-20"
@@ -37,16 +47,6 @@
   {
     "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
     "u": "posts/bolt-torque-vs-preload-nut-factor",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
-    "u": "posts/cavitation-vs-flashing-control-valve-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Chiller Machine: Main Parts &amp; Functions",
-    "u": "posts/chiller-machine-parts-functions-explained",
     "d": "2026-08-20"
   }
 ]
