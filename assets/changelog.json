@@ -651,6 +651,13 @@
   "a": "updated"
  },
  {
+  "t": "Visa Points Calculator",
+  "u": "study-abroad/visa-points-calculator",
+  "d": "2026-08-20",
+  "c": "Study Abroad",
+  "a": "updated"
+ },
+ {
   "t": "Shading & Soiling Loss Estimator",
   "u": "solar/shading-soiling-loss-calculator",
   "d": "2026-08-19",
@@ -1409,13 +1416,6 @@
  {
   "t": "University Fee Comparison",
   "u": "study-abroad/university-fee-comparison",
-  "d": "2026-08-14",
-  "c": "Study Abroad",
-  "a": "added"
- },
- {
-  "t": "Visa Points Calculator",
-  "u": "study-abroad/visa-points-calculator",
   "d": "2026-08-14",
   "c": "Study Abroad",
   "a": "added"
