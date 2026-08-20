@@ -1,5 +1,10 @@
 [
   {
+    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
+    "u": "solar/grid-tie-off-grid-comparator",
+    "d": "2026-08-20"
+  },
+  {
     "t": "Basics of Fire Protection in Buildings Explained",
     "u": "posts/basics-of-fire-protection-in-buildings-explained",
     "d": "2026-08-20"
@@ -42,11 +47,6 @@
   {
     "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
     "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
-    "u": "posts/lv-panel-types-explained",
     "d": "2026-08-20"
   }
 ]
