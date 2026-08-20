@@ -55,6 +55,9 @@ jobs:
       - name: Check for duplicate tool numbers
         run: node scripts/check-tool-numbers.js
 
+      - name: Check _redirects for stale rules
+        run: node scripts/check-redirects.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
