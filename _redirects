@@ -1,5 +1,13 @@
-/mechanical/mechanical.html /mechanical/notes.html 301
-/electrical/engineering-guides.html /electrical/guides.html 301
+# Both rules below point at old .html filenames that no longer exist on
+# disk (renamed since). Cloudflare's automatic .html-stripping only
+# rewrites requests for files that ARE still on disk — it can't invent a
+# mapping for a name that's gone. So a rule written as "/old-name.html ->
+# ..." only ever matches if someone requests the literal ".html" URL,
+# which nothing does anymore now the site uses clean URLs everywhere.
+# Google crawling the clean variant (no .html) fell through and 404'd.
+# Match the clean URL instead so it actually catches those requests.
+/mechanical/mechanical /mechanical/notes 301
+/electrical/engineering-guides /electrical/guides 301
 
 # These two tool pages are standalone .html files, not folders with their
 # own index.html, so there's no real resource at the trailing-slash path.
