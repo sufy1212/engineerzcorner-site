@@ -64,6 +64,9 @@ jobs:
       - name: Check meta title/description
         run: node scripts/check-meta-length.js
 
+      - name: Check canonical / og:url self-reference
+        run: node scripts/check-canonical.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
