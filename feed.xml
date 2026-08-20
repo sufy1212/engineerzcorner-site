@@ -4,213 +4,213 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
+    <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
+    <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
+    <description>How a 33/11 kV substation is built, walked through its single line diagram from incoming line to distribution feeders — every equipment item and its function.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Essential Protection Settings of Air Circuit Breakers (ACB) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/acb-protection-settings-explained.html</guid>
+    <description>LTPU, LTD, STPU, STD, instantaneous and ground fault settings on an ACB — what each does, typical ranges, and why they exist as a coordinated set.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Access Control System (ACS) Explained: Components, Architecture &amp; Site Work</title>
+    <link>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/access-control-system-acs-explained.html</guid>
+    <description>How an Access Control System actually works — main components, the six-step credential-to-unlock sequence, architecture, and integration with FAS/BMS/CCTV.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
+    <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors and ECBs — what each device does, how it differs, and where it's used.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
     <title>Basics of Fire Protection in Buildings Explained</title>
     <link>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</guid>
-    <description>Passive protection, active systems, detection, suppression and safe evacuation — the five layers of building fire protection, how sprinklers, hydrants, fire pumps and alarm systems work together, and the simple working sequence from detection to fire brigade response.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>Passive protection, active systems, detection, suppression and evacuation — the five layers of building fire protection and how they work together.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load</title>
+    <link>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</link>
+    <guid>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</guid>
+    <description>Why a beam's bending capacity comes down to two checks — bending stress against section modulus, and deflection against span — not just the applied load.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication</title>
     <link>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</guid>
-    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) are the two dimensions that drive piping material take-off and fabrication. Formulas, a bend allowance table, and a worked 2-inch 90° bend example.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) drive piping take-off and fabrication. Formulas, a bend allowance table, and a worked 90° bend example.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters</title>
+    <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
+    <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result more than bolt grade.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
+    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
+    <description>Cavitation and flashing both start with the same vapor-pressure event in a control valve — downstream is what makes one loud and pitted, the other eroded.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Chiller Machine: Main Parts &amp; Functions</title>
+    <link>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chiller-machine-parts-functions-explained.html</guid>
+    <description>Every major chiller component explained — compressor, condenser, evaporator, EXV and more — plus the refrigeration cycle and chiller types compared.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter</title>
+    <link>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/column-axial-capacity-reinforcement-ratio-explained.html</guid>
+    <description>How gross area and steel ratio combine into a short column's axial capacity, why codes cap reinforcement ratio, and when slenderness cuts that capacity down.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Concrete Volume Takeoff: From Cubic Meters to Bags of Cement</title>
+    <link>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained.html</guid>
+    <description>How a concrete volume converts into cement, sand and aggregate quantities using mix ratios, why wastage factors are added, and the water-cement ratio's role.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Control Valve Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/control-valve-components-explained.html</guid>
+    <description>What every part of a control valve does — body, trim, stem, packing, bonnet, actuator, and positioner — component by component, in signal-to-flow order.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Critical Path Method (CPM): The Chain That Sets Your Finish Date</title>
+    <link>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained.html</guid>
+    <description>How the critical path method finds the longest chain of dependent tasks in a schedule, why zero float means zero delay room, and how to read a network diagram.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>How to Select the Right DC Cable Size in PV Systems</title>
+    <link>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dc-cable-size-selection-pv-systems.html</guid>
+    <description>String cable vs array cable in a PV system — the voltage-drop sizing formula with worked examples, plus temperature, grouping and derating factors.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Dissolved Gas Analysis (DGA) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dissolved-gas-analysis-dga-explained.html</guid>
+    <description>How DGA reads a transformer's insulating oil for early fault signs — the key gas fingerprint, the five-step test workflow, and a field checklist with standards.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Duct Sizing: Why Velocity Limits Matter as Much as Airflow</title>
+    <link>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow.html</link>
+    <guid>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow.html</guid>
+    <description>Sizing ductwork for airflow, velocity and circular-equivalent diameter, and why designing for velocity limits matters as much as hitting the airflow figure.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>Earthing vs. Grounding: Same Earth Connection, Different Job</title>
     <link>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained.html</guid>
-    <description>Earthing and grounding both connect to earth, but their purpose is different — earthing protects people from shock, grounding protects the electrical system. Purpose, connection point, current flow and where each is used, compared.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>Earthing and grounding both connect to earth, but serve different purposes — earthing protects people from shock, grounding protects the electrical system.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
+    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
+    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
+    <description>The 8 stages of an LV panel FAT — visual/mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained</title>
+    <link>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained.html</guid>
+    <description>MCB, MCCB, ACB, VCB, SF6 breakers, RCCB, RCBO, ELCB, isolators, contactors, relays, fuses and busbars — what each device does and where it's used.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?</title>
     <link>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/erosional-vs-economic-velocity-line-sizing-explained.html</guid>
-    <description>Two different velocity limits compete to size a process line — economic velocity minimizes lifecycle cost, the API RP 14E erosional velocity protects the pipe wall. The lower of the two always governs.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>Two velocity limits compete to size a process line — economic velocity minimizes cost, API RP 14E erosional velocity protects the pipe. The lower one governs.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>Facility &amp; Property Management: Key Codes &amp; Standards Reference</title>
     <link>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</link>
     <guid>https://www.engineerzcorner.com/posts/facility-management-codes-standards-reference.html</guid>
-    <description>The key codes and standards that govern facility and property management &amp;mdash; maintenance, HVAC, fire &amp; life safety, occupational health, electrical, building codes, and more.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>The key codes and standards that govern facility and property management — maintenance, HVAC, fire &amp; life safety, occupational health, electrical, and more.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>Facility Management: Monthly Invoice Processing</title>
     <link>https://www.engineerzcorner.com/posts/facility-management-monthly-invoice-processing.html</link>
     <guid>https://www.engineerzcorner.com/posts/facility-management-monthly-invoice-processing.html</guid>
-    <description>How FM teams process monthly invoices &amp;mdash; the 3 expense categories (utility, service, consumables), the 10-step verification-to-filing workflow, and a worked invoice tracker example.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>How FM teams process monthly invoices — the 3 expense categories, the 10-step verification-to-filing workflow, and a worked invoice tracker example.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained</title>
+    <link>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/fire-suppression-systems-explained.html</guid>
+    <description>FM-200, Novec 1230, CO2 and foam fire suppression systems compared — components, applications, discharge time, and which NFPA standard applies to each.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>FM-200 System Diagram: Components &amp; How It Works Explained</title>
     <link>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained.html</guid>
-    <description>FM-200 clean agent fire suppression system explained — cylinder, solenoid valve, nozzles, control panel, detection system, manual release station and pressure switch, with a full system diagram and how each part triggers discharge.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>FM-200 clean agent fire suppression explained — cylinder, solenoid valve, nozzles, control panel, detection and release station, with a full system diagram.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
     <title>Gas Detector Types &amp; Working Principles Explained</title>
     <link>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained.html</guid>
-    <description>Catalytic bead, electrochemical, infrared, semiconductor and photoionization (PID) gas detectors compared — what each senses, how the sensing element actually works, and where each type is applied.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <description>Catalytic bead, electrochemical, infrared, semiconductor and PID gas detectors compared — what each senses, how it works, and where it's applied.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
-    <title>Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs</title>
-    <link>https://www.engineerzcorner.com/posts/icw-icu-ics-icm-short-circuit-ratings-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/icw-icu-ics-icm-short-circuit-ratings-explained.html</guid>
-    <description>Four short-circuit kA ratings on a breaker or busbar nameplate — Icw, Icu, Ics and Icm — and what each one actually certifies, with a worked example showing how they relate.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <title>Gas Insulated Substation (GIS) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained.html</guid>
+    <description>A GIS packs busbars, breakers, disconnects, earthing switches and transformers into a sealed, SF6-filled enclosure — key components, why it's used, and where.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
-    <title>LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More</title>
-    <link>https://www.engineerzcorner.com/posts/lv-panel-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/lv-panel-types-explained.html</guid>
-    <description>Every panel you'll find in a low-voltage electrical system — MDB, PCC, SDB/DB, MCC, VFD panel, APFC/PFC panel, feeder pillar, busbar trunking, ATS/AMF and PLC panels — what each does, where it sits, and the IEC 61439 parts behind it.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <title>HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?</title>
+    <link>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</guid>
+    <description>HIRA, JSA and SOP operate at three different scopes and points in time — whole-workplace planning, one job before it starts, and the daily standard method.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
-    <title>Fire Fighting: NFPA Fire Protection System Design Standards Reference</title>
-    <link>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</link>
-    <guid>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</guid>
-    <description>A quick-reference table of the NFPA standards that govern fire protection system design — NFPA 10, 13, 14, 16, 17A, 20, 22, 2001 and local civil defense compliance — what each covers and where it applies.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
+    <title>HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers</title>
+    <link>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</guid>
+    <description>Preliminary-design thumb rules for cooling load, airflow, fan and pump power, chilled water flow, chiller capacity and pipe sizing — with the formula for each.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
-    <title>P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</guid>
-    <description>What the line under an instrument bubble actually means — field-mounted, control-room-mounted, or not directly accessible — plus how to break down a tag like TT01 into loop number, measured variable and device function using ISA S5.1.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</guid>
-    <description>How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus the ISA tag-naming logic and how a P&amp;ID differs from a PFD.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pipe Routing Guide: 13 Rules Every Layout Should Follow</title>
-    <link>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained.html</guid>
-    <description>Pipe routing principles, pump suction line routing, equipment clearance, pipe racks, supports, dead legs, expansion loops, hot/cold line routing, utility routing, underground vs above ground, nozzle orientation, flange accessibility, and maintenance clearances.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>PLC vs DCS vs SCADA Explained: Real Industrial Comparison</title>
-    <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
-    <description>PLC, DCS and SCADA compared for real industrial use — control type, speed, architecture, redundancy, and where control execution actually happens — plus a feature-by-feature table and typical applications for each.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Power System Protection Relays: The Complete Reference Guide</title>
-    <link>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/power-system-protection-relays-explained.html</guid>
-    <description>Every protection relay category in one place — operation workflow, the five design goals, current/voltage/distance/differential/frequency relays, IEC 61850 architecture, inverse-time curves, coordination principles and a quick selection table.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Power Transformer, CT &amp; PT: Internal Construction</title>
-    <link>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</guid>
-    <description>The internal construction of a power transformer, a current transformer (CT), and a potential transformer (PT/VT) — parts, typical ratings, accuracy classes, and a side-by-side comparison.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pre-Commissioning vs Commissioning: What's the Difference</title>
-    <link>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</guid>
-    <description>Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase actually covers, why the order matters, and where FAT and SAT fit in.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type</title>
-    <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
-    <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
-    <description>Three ways a pressure relief valve holds its disc shut until set pressure — how back pressure, operating margin, and dirty service tolerance decide between a conventional, balanced bellows, or pilot-operated PSV.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Relay Basics: Construction, Working Principle &amp; Contact Types</title>
-    <link>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained.html</guid>
-    <description>What a relay actually is, how the coil and armature switch a separate power circuit, NO/NC/CO contact types, a control-vs-power circuit diagram, common applications, key specs, and the trade-offs versus contactors and solid-state relays.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
-    <description>How SCADA actually works — the field/communication/supervisory architecture, the 5-step monitor-to-action loop, components, communication protocols, SCADA system types, and SCADA vs DCS compared.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Star (Y) and Delta (Δ) Connections Explained</title>
-    <link>https://www.engineerzcorner.com/posts/star-delta-connection-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/star-delta-connection-explained.html</guid>
-    <description>How Star (Y) and Delta (Δ) three-phase winding connections actually differ — the neutral point, the line/phase voltage and current relationships, terminal wiring, and why a Star-Delta starter switches between the two.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal</title>
-    <link>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained.html</guid>
-    <description>How to calculate supply and return air terminal quantity from room CFM — diffuser CFM/NC/throw selection, return grille face velocity, air balance, and a full worked example with layout.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Tap Changer of a Distribution Transformer Explained</title>
-    <link>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained.html</guid>
-    <description>How an off-load tap changer adjusts a distribution transformer's turns ratio to keep output voltage in range — where it sits, how tap positions map to voltage, and a worked ±5% example.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Types of Earthing Systems: 9 Electrode Types Explained</title>
-    <link>https://www.engineerzcorner.com/posts/types-of-earthing-systems-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/types-of-earthing-systems-explained.html</guid>
-    <description>Nine types of earthing electrodes explained — plate, pipe, rod, strip, wire, chemical, ring, mesh and equipment earthing — with what each is built from and where it's actually used.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Types of HVAC Fans</title>
-    <link>https://www.engineerzcorner.com/posts/types-of-hvac-fans-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/types-of-hvac-fans-explained.html</guid>
-    <description>The five main HVAC fan types compared — axial, centrifugal, inline, mixed-flow and exhaust fans. How each one works, typical applications and key advantages, so you can match the fan to the job.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>UPS Architecture, Types &amp; Operating Modes Explained</title>
-    <link>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</guid>
-    <description>How an online double-conversion UPS is built — rectifier/charger, battery bank, inverter, static switch and bypass — the three operating modes, offline vs line-interactive vs online UPS types, and key protections and parameters.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>WTI vs OTI Explained: Winding vs Oil Temperature Indicators</title>
-    <link>https://www.engineerzcorner.com/posts/wti-vs-oti-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/wti-vs-oti-explained.html</guid>
-    <description>WTI (Winding Temperature Indicator) vs OTI (Oil Temperature Indicator) on a power transformer — what each measures, how WTI simulates hot-spot temperature using a CT-fed heating element, a worked example, and why both alarms matter.</description>
-    <pubDate>Thu, 20 Aug 2026 09:14:57 GMT</pubDate>
-  </item>
-  <item>
-    <title>Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game</title>
-    <link>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained.html</guid>
-    <description>What an earthing system is actually protecting against, why grid resistance is the number that matters, the factors that drive it.</description>
-    <pubDate>Mon, 17 Aug 2026 19:49:13 GMT</pubDate>
-  </item>
-  <item>
-    <title>Sag in Transmission Lines Explained</title>
-    <link>https://www.engineerzcorner.com/posts/sag-in-transmission-lines-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/sag-in-transmission-lines-explained.html</guid>
-    <description>What sag is in an overhead transmission line, why it's designed in rather than eliminated, the level-support sag formula, the factors that raise or lower it, typical sag-to-span ratios by voltage level, and why sag is checked at multiple temperatures.</description>
-    <pubDate>Sun, 16 Aug 2026 20:02:18 GMT</pubDate>
+    <title>HVAC &amp; Plumbing Default Design Values: The Quick Reference</title>
+    <link>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</link>
+    <guid>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values.html</guid>
+    <description>Common default design values for HVAC and plumbing — duct/pipe velocities, pressure drops, ACH, noise criteria, fresh air rates and temperatures.</description>
+    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
 </channel></rss>

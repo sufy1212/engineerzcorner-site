@@ -1,52 +1,52 @@
 [
   {
-    "t": "Belt &amp; Pulley Drive Simulator",
-    "u": "mechanical/belt-drive-simulator",
+    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+    "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-20"
   },
   {
-    "t": "Heat Pump Balance Point &amp; Backup Heat",
-    "u": "hvac/heat-pump-balance-point-calculator",
+    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+    "u": "posts/acb-protection-settings-explained",
     "d": "2026-08-20"
   },
   {
-    "t": "Refrigerant Charge — Superheat / Subcooling",
-    "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
+    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+    "u": "posts/access-control-system-acs-explained",
     "d": "2026-08-20"
   },
   {
-    "t": "SEER / EER / COP Converter",
-    "u": "hvac/seer-eer-cop-converter",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Engineering Glossary",
-    "u": "general/engineering-glossary",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Engineering Sanity-Checker",
-    "u": "general/sanity-checker",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Instrument/Sensor Selector",
-    "u": "automation/instrument-selector",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Level Control Loop Simulator",
-    "u": "automation/level-control-simulator",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
-    "u": "solar/grid-tie-off-grid-comparator",
+    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-20"
   },
   {
     "t": "Basics of Fire Protection in Buildings Explained",
     "u": "posts/basics-of-fire-protection-in-buildings-explained",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
+    "u": "posts/beam-bending-basics-section-modulus-deflection",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
+    "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
+    "u": "posts/bolt-torque-vs-preload-nut-factor",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
+    "u": "posts/cavitation-vs-flashing-control-valve-explained",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Chiller Machine: Main Parts &amp; Functions",
+    "u": "posts/chiller-machine-parts-functions-explained",
     "d": "2026-08-20"
   }
 ]

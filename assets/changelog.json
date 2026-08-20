@@ -322,6 +322,328 @@
   "a": "updated"
  },
  {
+  "t": "Sag in Transmission Lines Explained",
+  "u": "posts/sag-in-transmission-lines-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "PM Glossary",
+  "u": "pm/glossary",
+  "d": "2026-08-20",
+  "c": "Project Management",
+  "a": "updated"
+ },
+ {
+  "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+  "u": "posts/33-11kv-substation-diagram-equipment-overview",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+  "u": "posts/acb-protection-settings-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+  "u": "posts/access-control-system-acs-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+  "u": "posts/ats-mts-ecb-switch-disconnector-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
+  "u": "posts/beam-bending-basics-section-modulus-deflection",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
+  "u": "posts/bolt-torque-vs-preload-nut-factor",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
+  "u": "posts/cavitation-vs-flashing-control-valve-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Machine: Main Parts &amp; Functions",
+  "u": "posts/chiller-machine-parts-functions-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
+  "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
+  "u": "posts/concrete-volume-material-takeoff-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Components Explained",
+  "u": "posts/control-valve-components-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+  "u": "posts/critical-path-method-cpm-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "How to Select the Right DC Cable Size in PV Systems",
+  "u": "posts/dc-cable-size-selection-pv-systems",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Dissolved Gas Analysis (DGA) Explained",
+  "u": "posts/dissolved-gas-analysis-dga-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
+  "u": "posts/duct-sizing-velocity-limits-vs-airflow",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
+  "u": "posts/electrical-panel-fat-checklist",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
+  "u": "posts/electrical-switchgear-protection-devices-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
+  "u": "posts/fire-suppression-systems-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Gas Insulated Substation (GIS) Explained",
+  "u": "posts/gas-insulated-substation-gis-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
+  "u": "posts/hira-vs-jsa-vs-sop-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers",
+  "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "HVAC &amp; Plumbing Default Design Values: The Quick Reference",
+  "u": "posts/hvac-plumbing-default-design-values",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "HVAC System Components Explained",
+  "u": "posts/hvac-system-components-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "IEC 104 Communication Protocol Explained",
+  "u": "posts/iec-104-communication-protocol-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
+  "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Ingress Protection (IP) Ratings Explained",
+  "u": "posts/ingress-protection-ip-rating-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
+  "u": "posts/junction-box-types-parts-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+  "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Legend Sheet in a P&amp;ID Explained",
+  "u": "posts/pid-legend-sheet-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
+  "u": "posts/pipe-flow-capacity-mannings-equation-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Rebar Development Length: Why Bar Diameter Decides the Embedment, Not Rules of Thumb",
+  "u": "posts/rebar-development-length-lap-splice-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Slab-on-Grade Thickness: What Actually Drives the Number",
+  "u": "posts/slab-on-grade-thickness-subgrade-support-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
+  "u": "posts/solar-payback-period-roi-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Solar PV System Components Explained: From Panel to Load",
+  "u": "posts/solar-pv-system-components-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Solar System Sizing: From Daily Load to Panel Count",
+  "u": "posts/solar-system-sizing-load-to-panel-count",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Staircase Geometry: The Riser-Tread Rule That Keeps Stairs Walkable",
+  "u": "posts/staircase-geometry-riser-tread-rule-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Stakeholder Power-Interest Grid: Sorting Attention, Not Just People",
+  "u": "posts/stakeholder-power-interest-grid-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load",
+  "u": "posts/transformer-generator-sizing-motor-starting",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Transformer Vector Groups Explained",
+  "u": "posts/transformer-vector-groups-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Trench Safe Slope: Why OSHA Soil Type Decides the Angle, Not the Depth",
+  "u": "posts/trench-safe-slope-osha-soil-type-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Industrial Valves Explained: Types &amp; Parts",
+  "u": "posts/valve-types-parts-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
+  "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number",
+  "u": "posts/voltage-drop-lv-feeders-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Shading & Soiling Loss Estimator",
   "u": "solar/shading-soiling-loss-calculator",
   "d": "2026-08-19",
@@ -542,13 +864,6 @@
   "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
   "u": "posts/earthing-grounding-systems-explained",
   "d": "2026-08-17",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Sag in Transmission Lines Explained",
-  "u": "posts/sag-in-transmission-lines-explained",
-  "d": "2026-08-16",
   "c": "Blog",
   "a": "added"
  },
@@ -1120,13 +1435,6 @@
   "a": "added"
  },
  {
-  "t": "PM Glossary",
-  "u": "pm/glossary",
-  "d": "2026-08-14",
-  "c": "Project Management",
-  "a": "added"
- },
- {
   "t": "Incoterms",
   "u": "pm/incoterms",
   "d": "2026-08-14",
@@ -1190,29 +1498,8 @@
   "a": "added"
  },
  {
-  "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
-  "u": "posts/33-11kv-substation-diagram-equipment-overview",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
   "u": "posts/4-20ma-current-loop-basics",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-  "u": "posts/acb-protection-settings-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
-  "u": "posts/access-control-system-acs-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1246,22 +1533,8 @@
   "a": "added"
  },
  {
-  "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-  "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Battery SoC vs DoD: Why They're Not the Same Number",
   "u": "posts/battery-soc-vs-dod-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
-  "u": "posts/beam-bending-basics-section-modulus-deflection",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1283,13 +1556,6 @@
  {
   "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
   "u": "posts/bms-point-types-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
-  "u": "posts/bolt-torque-vs-preload-nut-factor",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1323,13 +1589,6 @@
   "a": "added"
  },
  {
-  "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
-  "u": "posts/cavitation-vs-flashing-control-valve-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Centrifugal Pump Components Explained",
   "u": "posts/centrifugal-pump-components-explained",
   "d": "2026-08-14",
@@ -1358,36 +1617,8 @@
   "a": "added"
  },
  {
-  "t": "Chiller Machine: Main Parts &amp; Functions",
-  "u": "posts/chiller-machine-parts-functions-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
-  "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
-  "u": "posts/concrete-volume-material-takeoff-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Conduit Fill: Why 40% Isn't an Arbitrary Number",
   "u": "posts/conduit-fill-why-the-percentage-limit-exists",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Control Valve Components Explained",
-  "u": "posts/control-valve-components-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1400,22 +1631,8 @@
   "a": "added"
  },
  {
-  "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
-  "u": "posts/critical-path-method-cpm-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
   "u": "posts/cut-fill-volume-average-end-area-method-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "How to Select the Right DC Cable Size in PV Systems",
-  "u": "posts/dc-cable-size-selection-pv-systems",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1428,20 +1645,6 @@
   "a": "added"
  },
  {
-  "t": "Dissolved Gas Analysis (DGA) Explained",
-  "u": "posts/dissolved-gas-analysis-dga-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
-  "u": "posts/duct-sizing-velocity-limits-vs-airflow",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Earned Value Management: Reading Project Health From Three Numbers",
   "u": "posts/earned-value-management-basics",
   "d": "2026-08-14",
@@ -1449,36 +1652,8 @@
   "a": "added"
  },
  {
-  "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-  "u": "posts/electrical-panel-fat-checklist",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
-  "u": "posts/electrical-switchgear-protection-devices-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "What Is an ELV System? Types, Components &amp; the BIM Engineer's Role",
   "u": "posts/elv-extra-low-voltage-systems-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
-  "u": "posts/fire-suppression-systems-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Gas Insulated Substation (GIS) Explained",
-  "u": "posts/gas-insulated-substation-gis-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1512,13 +1687,6 @@
   "a": "added"
  },
  {
-  "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
-  "u": "posts/hira-vs-jsa-vs-sop-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "How to Select a Digital Protection Relay",
   "u": "posts/how-to-select-digital-protection-relay",
   "d": "2026-08-14",
@@ -1526,57 +1694,8 @@
   "a": "added"
  },
  {
-  "t": "HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers",
-  "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HVAC &amp; Plumbing Default Design Values: The Quick Reference",
-  "u": "posts/hvac-plumbing-default-design-values",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HVAC System Components Explained",
-  "u": "posts/hvac-system-components-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "IEC 104 Communication Protocol Explained",
-  "u": "posts/iec-104-communication-protocol-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
-  "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Ingress Protection (IP) Ratings Explained",
-  "u": "posts/ingress-protection-ip-rating-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "IS, IEC &amp; IEEE Codes: The Standards Behind Electrical Engineering",
   "u": "posts/is-iec-ieee-electrical-standards-reference",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
-  "u": "posts/junction-box-types-parts-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1624,13 +1743,6 @@
   "a": "added"
  },
  {
-  "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-  "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "NPSH Margin: Why 'NPSHa &gt; NPSHr' Isn't Enough on Its Own",
   "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
   "d": "2026-08-14",
@@ -1661,20 +1773,6 @@
  {
   "t": "PID Controller Tuning Basics: What P, I, and D Actually Do",
   "u": "posts/pid-controller-tuning-basics",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Legend Sheet in a P&amp;ID Explained",
-  "u": "posts/pid-legend-sheet-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
-  "u": "posts/pipe-flow-capacity-mannings-equation-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1757,13 +1855,6 @@
   "a": "added"
  },
  {
-  "t": "Rebar Development Length: Why Bar Diameter Decides the Embedment, Not Rules of Thumb",
-  "u": "posts/rebar-development-length-lap-splice-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Retaining Wall Components Explained",
   "u": "posts/retaining-wall-components-explained",
   "d": "2026-08-14",
@@ -1820,22 +1911,8 @@
   "a": "added"
  },
  {
-  "t": "Slab-on-Grade Thickness: What Actually Drives the Number",
-  "u": "posts/slab-on-grade-thickness-subgrade-support-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Soil Bearing Capacity: Why It Decides Your Footing Size, Not Just Column Load",
   "u": "posts/soil-bearing-capacity-footing-sizing",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1848,41 +1925,6 @@
   "a": "added"
  },
  {
-  "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
-  "u": "posts/solar-payback-period-roi-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Solar PV System Components Explained: From Panel to Load",
-  "u": "posts/solar-pv-system-components-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Solar System Sizing: From Daily Load to Panel Count",
-  "u": "posts/solar-system-sizing-load-to-panel-count",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Staircase Geometry: The Riser-Tread Rule That Keeps Stairs Walkable",
-  "u": "posts/staircase-geometry-riser-tread-rule-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Stakeholder Power-Interest Grid: Sorting Attention, Not Just People",
-  "u": "posts/stakeholder-power-interest-grid-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
   "u": "posts/system-voltages-low-medium-high-explained",
   "d": "2026-08-14",
@@ -1890,50 +1932,8 @@
   "a": "added"
  },
  {
-  "t": "Transformer and Generator Sizing: Why Motor Starting Decides the Genset, Not the Running Load",
-  "u": "posts/transformer-generator-sizing-motor-starting",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Transformer Vector Groups Explained",
-  "u": "posts/transformer-vector-groups-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Trench Safe Slope: Why OSHA Soil Type Decides the Angle, Not the Depth",
-  "u": "posts/trench-safe-slope-osha-soil-type-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get",
   "u": "posts/ups-battery-autonomy-sizing-derating-factors",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Industrial Valves Explained: Types &amp; Parts",
-  "u": "posts/valve-types-parts-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
-  "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number",
-  "u": "posts/voltage-drop-lv-feeders-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
