@@ -61,6 +61,9 @@ jobs:
       - name: Check for orphan pages
         run: node scripts/check-orphan-pages.js
 
+      - name: Check meta title/description
+        run: node scripts/check-meta-length.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
