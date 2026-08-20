@@ -294,6 +294,34 @@
   "a": "updated"
  },
  {
+  "t": "Belt &amp; Pulley Drive Simulator",
+  "u": "mechanical/belt-drive-simulator",
+  "d": "2026-08-20",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Balance Point &amp; Backup Heat",
+  "u": "hvac/heat-pump-balance-point-calculator",
+  "d": "2026-08-20",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "SEER / EER / COP Converter",
+  "u": "hvac/seer-eer-cop-converter",
+  "d": "2026-08-20",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Engineering Sanity-Checker",
+  "u": "general/sanity-checker",
+  "d": "2026-08-20",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
   "t": "Shading & Soiling Loss Estimator",
   "u": "solar/shading-soiling-loss-calculator",
   "d": "2026-08-19",
@@ -312,13 +340,6 @@
   "u": "electrical/sld-creator",
   "d": "2026-08-19",
   "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Belt &amp; Pulley Drive Simulator",
-  "u": "mechanical/belt-drive-simulator",
-  "d": "2026-08-19",
-  "c": "Mechanical",
   "a": "added"
  },
  {
@@ -478,13 +499,6 @@
  {
   "t": "Duct Sizing &amp; Air Changes",
   "u": "hvac/duct-sizing-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Heat Pump Balance Point &amp; Backup Heat",
-  "u": "hvac/heat-pump-balance-point-calculator",
   "d": "2026-08-19",
   "c": "HVAC",
   "a": "updated"
@@ -763,13 +777,6 @@
   "a": "added"
  },
  {
-  "t": "SEER / EER / COP Converter",
-  "u": "hvac/seer-eer-cop-converter",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
   "t": "Beam Bending &amp; Deflection",
   "u": "civil/beam-bending",
   "d": "2026-08-14",
@@ -1010,13 +1017,6 @@
  {
   "t": "Percentage Calculator",
   "u": "general/percentage-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Engineering Sanity-Checker",
-  "u": "general/sanity-checker",
   "d": "2026-08-14",
   "c": "General Tools",
   "a": "added"

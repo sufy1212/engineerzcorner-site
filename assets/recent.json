@@ -1,5 +1,35 @@
 [
   {
+    "t": "Belt &amp; Pulley Drive Simulator",
+    "u": "mechanical/belt-drive-simulator",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Heat Pump Balance Point &amp; Backup Heat",
+    "u": "hvac/heat-pump-balance-point-calculator",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Refrigerant Charge — Superheat / Subcooling",
+    "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "SEER / EER / COP Converter",
+    "u": "hvac/seer-eer-cop-converter",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Engineering Glossary",
+    "u": "general/engineering-glossary",
+    "d": "2026-08-20"
+  },
+  {
+    "t": "Engineering Sanity-Checker",
+    "u": "general/sanity-checker",
+    "d": "2026-08-20"
+  },
+  {
     "t": "Instrument/Sensor Selector",
     "u": "automation/instrument-selector",
     "d": "2026-08-20"
@@ -17,36 +47,6 @@
   {
     "t": "Basics of Fire Protection in Buildings Explained",
     "u": "posts/basics-of-fire-protection-in-buildings-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
-    "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
-    "u": "posts/earthing-vs-grounding-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
-    "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
-    "u": "posts/facility-management-codes-standards-reference",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Facility Management: Monthly Invoice Processing",
-    "u": "posts/facility-management-monthly-invoice-processing",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "FM-200 System Diagram: Components &amp; How It Works Explained",
-    "u": "posts/fm-200-clean-agent-system-components-explained",
     "d": "2026-08-20"
   }
 ]
