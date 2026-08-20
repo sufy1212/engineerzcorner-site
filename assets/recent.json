@@ -1,52 +1,52 @@
 [
   {
-    "t": "Engineering Glossary",
-    "u": "general/engineering-glossary",
+    "t": "Basics of Fire Protection in Buildings Explained",
+    "u": "posts/basics-of-fire-protection-in-buildings-explained",
     "d": "2026-08-20"
   },
   {
-    "t": "Belt / Pulley Drive",
-    "u": "mechanical/belt-drive-calculator",
-    "d": "2026-08-19"
+    "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
+    "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
+    "d": "2026-08-20"
   },
   {
-    "t": "Fastener Torque Calculator",
-    "u": "mechanical/bolt-torque-calculator",
-    "d": "2026-08-19"
+    "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
+    "u": "posts/earthing-vs-grounding-explained",
+    "d": "2026-08-20"
   },
   {
-    "t": "Duct Sizing &amp; Air Changes",
-    "u": "mechanical/duct-sizing-calculator",
-    "d": "2026-08-19"
+    "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
+    "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
+    "d": "2026-08-20"
   },
   {
-    "t": "Sensible Heat Load",
-    "u": "mechanical/heat-load-calculator",
-    "d": "2026-08-19"
+    "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
+    "u": "posts/facility-management-codes-standards-reference",
+    "d": "2026-08-20"
   },
   {
-    "t": "Pipe Flow &amp; Head Loss",
-    "u": "mechanical/pipe-flow-head-loss-calculator",
-    "d": "2026-08-19"
+    "t": "Facility Management: Monthly Invoice Processing",
+    "u": "posts/facility-management-monthly-invoice-processing",
+    "d": "2026-08-20"
   },
   {
-    "t": "Pump / Fan Affinity Laws",
-    "u": "mechanical/pump-fan-affinity-laws-calculator",
-    "d": "2026-08-19"
+    "t": "FM-200 System Diagram: Components &amp; How It Works Explained",
+    "u": "posts/fm-200-clean-agent-system-components-explained",
+    "d": "2026-08-20"
   },
   {
-    "t": "Pump Power &amp; NPSH",
-    "u": "mechanical/pump-power-npsh-calculator",
-    "d": "2026-08-19"
+    "t": "Gas Detector Types &amp; Working Principles Explained",
+    "u": "posts/gas-detector-types-working-principles-explained",
+    "d": "2026-08-20"
   },
   {
-    "t": "Thermal Expansion of Piping",
-    "u": "mechanical/thermal-expansion-calculator",
-    "d": "2026-08-19"
+    "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
+    "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
+    "d": "2026-08-20"
   },
   {
-    "t": "Air Changes per Hour",
-    "u": "hvac/air-changes-per-hour-calculator",
-    "d": "2026-08-19"
+    "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
+    "u": "posts/lv-panel-types-explained",
+    "d": "2026-08-20"
   }
 ]

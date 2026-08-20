@@ -70,6 +70,209 @@
   "a": "updated"
  },
  {
+  "t": "How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal",
+  "u": "posts/supply-return-air-terminal-sizing-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
+  "u": "posts/earthing-vs-grounding-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
+  "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Types of Earthing Systems: 9 Electrode Types Explained",
+  "u": "posts/types-of-earthing-systems-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Types of HVAC Fans",
+  "u": "posts/types-of-hvac-fans-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "FM-200 System Diagram: Components &amp; How It Works Explained",
+  "u": "posts/fm-200-clean-agent-system-components-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Gas Detector Types &amp; Working Principles Explained",
+  "u": "posts/gas-detector-types-working-principles-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "UPS Architecture, Types &amp; Operating Modes Explained",
+  "u": "posts/ups-architecture-types-operating-modes-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Relay Basics: Construction, Working Principle &amp; Contact Types",
+  "u": "posts/relay-basics-construction-working-principle-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "SCADA (Supervisory Control &amp; Data Acquisition) Explained",
+  "u": "posts/scada-supervisory-control-data-acquisition-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Refrigerant Charge — Superheat / Subcooling",
+  "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
+  "d": "2026-08-20",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Basics of Fire Protection in Buildings Explained",
+  "u": "posts/basics-of-fire-protection-in-buildings-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
+  "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
+  "u": "posts/facility-management-codes-standards-reference",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Facility Management: Monthly Invoice Processing",
+  "u": "posts/facility-management-monthly-invoice-processing",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
+  "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
+  "u": "posts/lv-panel-types-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
+  "u": "posts/nfpa-fire-protection-design-standards-reference",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
+  "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+  "u": "posts/pid-piping-instrumentation-diagram-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
+  "u": "posts/pipe-routing-guide-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
+  "u": "posts/plc-vs-dcs-vs-scada-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Power System Protection Relays: The Complete Reference Guide",
+  "u": "posts/power-system-protection-relays-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Power Transformer, CT &amp; PT: Internal Construction",
+  "u": "posts/power-transformer-ct-pt-construction-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Pre-Commissioning vs Commissioning: What's the Difference",
+  "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
+  "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Star (Y) and Delta (Δ) Connections Explained",
+  "u": "posts/star-delta-connection-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Tap Changer of a Distribution Transformer Explained",
+  "u": "posts/tap-changer-distribution-transformer-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "WTI vs OTI Explained: Winding vs Oil Temperature Indicators",
+  "u": "posts/wti-vs-oti-explained",
+  "d": "2026-08-20",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Instrument/Sensor Selector",
   "u": "automation/instrument-selector",
   "d": "2026-08-19",
@@ -322,27 +525,6 @@
   "a": "updated"
  },
  {
-  "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
-  "u": "posts/supply-return-air-terminal-sizing-explained",
-  "d": "2026-08-17",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
-  "u": "posts/earthing-vs-grounding-explained",
-  "d": "2026-08-17",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "BOD & BOP in Pipe Bending: The Key to Piping Take-Off & Fabrication",
-  "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
-  "d": "2026-08-17",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
   "u": "posts/earthing-grounding-systems-explained",
   "d": "2026-08-17",
@@ -350,58 +532,9 @@
   "a": "added"
  },
  {
-  "t": "Types of Earthing Systems: 9 Electrode Types Explained",
-  "u": "posts/types-of-earthing-systems-explained",
-  "d": "2026-08-17",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Types of HVAC Fans Explained",
-  "u": "posts/types-of-hvac-fans-explained",
-  "d": "2026-08-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "FM-200 System Diagram: Components & How It Works Explained",
-  "u": "posts/fm-200-clean-agent-system-components-explained",
-  "d": "2026-08-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Gas Detector Types & Working Principles Explained",
-  "u": "posts/gas-detector-types-working-principles-explained",
-  "d": "2026-08-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Sag in Transmission Lines Explained",
   "u": "posts/sag-in-transmission-lines-explained",
   "d": "2026-08-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "UPS Architecture, Types & Operating Modes Explained",
-  "u": "posts/ups-architecture-types-operating-modes-explained",
-  "d": "2026-08-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Relay Basics: Construction, Working Principle & Contact Types",
-  "u": "posts/relay-basics-construction-working-principle-explained",
-  "d": "2026-08-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
-  "u": "posts/scada-supervisory-control-data-acquisition-explained",
-  "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
  },
@@ -625,13 +758,6 @@
  {
   "t": "Fan Static &amp; Total Pressure",
   "u": "hvac/fan-static-total-pressure-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Refrigerant Charge — Superheat / Subcooling",
-  "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
   "d": "2026-08-14",
   "c": "HVAC",
   "a": "added"
@@ -1127,13 +1253,6 @@
   "a": "added"
  },
  {
-  "t": "Basics of Fire Protection in Buildings Explained",
-  "u": "posts/basics-of-fire-protection-in-buildings-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Battery SoC vs DoD: Why They're Not the Same Number",
   "u": "posts/battery-soc-vs-dod-explained",
   "d": "2026-08-14",
@@ -1351,27 +1470,6 @@
   "a": "added"
  },
  {
-  "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
-  "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
-  "u": "posts/facility-management-codes-standards-reference",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Facility Management: Monthly Invoice Processing",
-  "u": "posts/facility-management-monthly-invoice-processing",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
   "u": "posts/fire-suppression-systems-explained",
   "d": "2026-08-14",
@@ -1444,13 +1542,6 @@
  {
   "t": "HVAC System Components Explained",
   "u": "posts/hvac-system-components-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
-  "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1533,22 +1624,8 @@
   "a": "added"
  },
  {
-  "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
-  "u": "posts/lv-panel-types-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
   "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
-  "u": "posts/nfpa-fire-protection-design-standards-reference",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1589,22 +1666,8 @@
   "a": "added"
  },
  {
-  "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
-  "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Legend Sheet in a P&amp;ID Explained",
   "u": "posts/pid-legend-sheet-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
-  "u": "posts/pid-piping-instrumentation-diagram-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1624,13 +1687,6 @@
   "a": "added"
  },
  {
-  "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
-  "u": "posts/pipe-routing-guide-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess",
   "u": "posts/pipe-thermal-expansion-why-long-runs-move-more",
   "d": "2026-08-14",
@@ -1645,22 +1701,8 @@
   "a": "added"
  },
  {
-  "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
-  "u": "posts/plc-vs-dcs-vs-scada-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "PLC vs DDC: What Actually Separates Them",
   "u": "posts/plc-vs-ddc-key-differences",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Power System Protection Relays: The Complete Reference Guide",
-  "u": "posts/power-system-protection-relays-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1673,29 +1715,8 @@
   "a": "added"
  },
  {
-  "t": "Power Transformer, CT &amp; PT: Internal Construction",
-  "u": "posts/power-transformer-ct-pt-construction-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "The PPP Project Lifecycle: From Identification to Handback",
   "u": "posts/ppp-project-lifecycle-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Pre-Commissioning vs Commissioning: What's the Difference",
-  "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
-  "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1862,22 +1883,8 @@
   "a": "added"
  },
  {
-  "t": "Star (Y) and Delta (Δ) Connections Explained",
-  "u": "posts/star-delta-connection-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
   "u": "posts/system-voltages-low-medium-high-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Tap Changer of a Distribution Transformer Explained",
-  "u": "posts/tap-changer-distribution-transformer-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
@@ -1941,13 +1948,6 @@
  {
   "t": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
   "u": "posts/work-breakdown-structure-wbs-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "WTI vs OTI Explained: Winding vs Oil Temperature Indicators",
-  "u": "posts/wti-vs-oti-explained",
   "d": "2026-08-14",
   "c": "Blog",
   "a": "added"
