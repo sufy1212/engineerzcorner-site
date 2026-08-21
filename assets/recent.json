@@ -1,5 +1,20 @@
 [
   {
+    "t": "Cable Schedule Builder",
+    "u": "electrical/cable-schedule-builder",
+    "d": "2026-08-22"
+  },
+  {
+    "t": "Panel GA Maker",
+    "u": "electrical/panel-ga-maker",
+    "d": "2026-08-22"
+  },
+  {
+    "t": "Single Line Diagram Creator",
+    "u": "electrical/sld-creator",
+    "d": "2026-08-22"
+  },
+  {
     "t": "Visa Points Calculator",
     "u": "study-abroad/visa-points-calculator",
     "d": "2026-08-20"
@@ -32,21 +47,6 @@
   {
     "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
     "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Basics of Fire Protection in Buildings Explained",
-    "u": "posts/basics-of-fire-protection-in-buildings-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
-    "u": "posts/beam-bending-basics-section-modulus-deflection",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
-    "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
     "d": "2026-08-20"
   }
 ]
