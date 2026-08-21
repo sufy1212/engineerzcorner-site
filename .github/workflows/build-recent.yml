@@ -70,6 +70,9 @@ jobs:
       - name: Check og:image matches discipline
         run: node scripts/check-og-image.js
 
+      - name: Check heading hierarchy
+        run: node scripts/check-heading-hierarchy.js
+
       - name: Validate HTML/CSS/JS match
         run: python3 scripts/validate-css-js-match.py
 
