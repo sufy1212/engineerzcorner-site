@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAV vs VAV: Constant vs Variable Air Volume Explained | Engineerz CorneR</title>
+<meta name="description" content="CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="CAV vs VAV: Constant vs Variable Air Volume Explained">
+<meta property="og:description" content="How CAV and VAV systems each control airflow, their key features, pros and cons, and which building types each one actually suits.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAV vs VAV: Constant vs Variable Air Volume Explained">
+<meta name="twitter:description" content="Two airflow control strategies, one goal — comfort with efficiency. How each works, and which building types suit which.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cav-vs-vav-air-volume-control-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CAV vs VAV: Constant vs Variable Air Volume Explained",
+      "item": "https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CAV vs VAV: Constant vs Variable Air Volume Explained",
+      "datePublished": "2026-08-23",
+      "dateModified": "2026-08-23",
+  "description": "CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.",
+  "url": "https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">CAV vs VAV: Constant vs Variable Air Volume Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#10052; HVAC &middot; Air Systems</span>
+    <h1>CAV vs VAV: Constant vs Variable Air Volume Explained</h1>
+    <p class="hero-sub">Every HVAC system exists to provide comfort, protect indoor air quality, and save energy. CAV and VAV are the two ways an air system decides how much air to actually deliver &mdash; and that one decision shapes cost, comfort, and energy use for the life of the building.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; HVAC / Air Systems</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 240" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="228" x2="760" y2="228" stroke="#1E3A5C" stroke-width="1"/>
+      <!-- CAV row -->
+      <text x="18" y="58" font-family="IBM Plex Mono" font-size="9" fill="#D9782E" font-weight="700">CAV &mdash; CONSTANT</text>
+      <rect x="18" y="68" width="58" height="40" rx="4" fill="#122845" stroke="#D9782E" stroke-width="1.6"/>
+      <text x="47" y="92" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#8FB0B6">AHU</text>
+      <path d="M76 88 h60" stroke="#8FB0B6" stroke-width="2"/>
+      <path d="M156 60 v56" stroke="#8FB0B6" stroke-width="2"/>
+      <path d="M136 88 h100" stroke="#8FB0B6" stroke-width="2"/>
+      <path d="M160 60 v14 M220 60 v14 M280 60 v14" stroke="#8FB0B6" stroke-width="1.6"/>
+      <path d="M156 60 L164 46 M164 46 L172 60" stroke="#D9782E" stroke-width="1.6" fill="none"/>
+      <path d="M216 60 L224 46 M224 46 L232 60" stroke="#D9782E" stroke-width="1.6" fill="none"/>
+      <path d="M276 60 L284 46 M284 46 L292 60" stroke="#D9782E" stroke-width="1.6" fill="none"/>
+      <text x="164" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="#5F7A8C">EQUAL</text>
+      <text x="224" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="#5F7A8C">EQUAL</text>
+      <text x="284" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="#5F7A8C">EQUAL</text>
+      <!-- VAV row -->
+      <text x="410" y="58" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3" font-weight="700">VAV &mdash; VARIABLE</text>
+      <rect x="410" y="68" width="58" height="40" rx="4" fill="#122845" stroke="#5FD3E3" stroke-width="1.6"/>
+      <text x="439" y="92" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#8FB0B6">AHU</text>
+      <path d="M468 88 h60" stroke="#8FB0B6" stroke-width="2"/>
+      <path d="M548 60 v56" stroke="#8FB0B6" stroke-width="2"/>
+      <path d="M528 88 h140" stroke="#8FB0B6" stroke-width="2"/>
+      <rect x="540" y="52" width="18" height="14" rx="2" fill="none" stroke="#5FD3E3" stroke-width="1.4"/>
+      <rect x="620" y="52" width="18" height="14" rx="2" fill="none" stroke="#5FD3E3" stroke-width="1.4"/>
+      <rect x="680" y="52" width="18" height="14" rx="2" fill="none" stroke="#5FD3E3" stroke-width="1.4"/>
+      <path d="M549 66 L556 44 M556 44 L563 66" stroke="#5FD3E3" stroke-width="2.4" fill="none"/>
+      <path d="M629 66 L633 52 M633 52 L637 66" stroke="#5FD3E3" stroke-width="1.4" fill="none"/>
+      <path d="M689 66 L695 40 M695 40 L701 66" stroke="#5FD3E3" stroke-width="3" fill="none"/>
+      <text x="556" y="34" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="#5F7A8C">HIGH</text>
+      <text x="633" y="34" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="#5F7A8C">LOW</text>
+      <text x="695" y="34" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="#5F7A8C">PEAK</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">CAV delivers the same airflow to a space at all times, leaning on reheat or cooling coils to manage temperature instead.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">VAV varies airflow to each zone as its cooling load changes, using VAV boxes to throttle volume rather than reheat it.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">CAV is simple and cheap to install but wastes fan energy at part load, which is most of a building's operating hours.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">VAV costs more upfront and is harder to commission, but pays that back through lower operating cost in large, multi-zone buildings.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two ways to answer the same question</h2>
+    <p>Every HVAC system is built to do three things: provide comfort, ensure indoor air quality, and save energy. How much air to actually push into a space is the core decision behind all three &mdash; and there are two established strategies for making it. <b>CAV (Constant Air Volume)</b> systems always deliver the same airflow and adjust temperature to match the load. <b>VAV (Variable Air Volume)</b> systems hold temperature closer to constant and instead adjust how much air they deliver.</p>
+    <p>Neither approach is universally better &mdash; the right choice depends on building size, zoning, and how much load varies from one part of the building to another.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="34" width="34" height="30" rx="3" fill="#122845" stroke="#D9782E" stroke-width="2"/>
+        <path d="M46 49 h44" stroke="#8FB0B6" stroke-width="2"/>
+        <path d="M60 49 v-14 M60 35 l-5 6 M60 35 l5 6" stroke="#D9782E" stroke-width="1.6" fill="none"/>
+        <path d="M76 49 v-14 M76 35 l-5 6 M76 35 l5 6" stroke="#D9782E" stroke-width="1.6" fill="none"/>
+        <path d="M60 49 v14 M60 63 l-5 -6 M60 63 l5 -6" stroke="#5FD3E3" stroke-width="1.6" fill="none"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>CAV &mdash; Constant Air Volume</h3>
+        <ul class="fm-causes">
+          <li>Delivers a fixed, constant airflow to the space at all times, regardless of the actual cooling load</li>
+          <li>Space temperature is controlled by a reheat or cooling coil, not by changing how much air arrives</li>
+          <li>Simple duct layout &mdash; a fixed damper position, with the AHU sized for peak airflow at all hours</li>
+          <li>Best suited to small buildings, single-zone areas, and spaces with steady, predictable load</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="34" width="34" height="30" rx="3" fill="#122845" stroke="#5FD3E3" stroke-width="2"/>
+        <path d="M46 49 h44" stroke="#8FB0B6" stroke-width="2"/>
+        <rect x="58" y="41" width="16" height="16" rx="2" fill="#18325A" stroke="#5FD3E3" stroke-width="1.6"/>
+        <path d="M66 63 v14 M66 77 l-5 -6 M66 77 l5 -6" stroke="#5FD3E3" stroke-width="2.4" fill="none"/>
+        <path d="M84 49 v14 M84 63 l-4 -5 M84 63 l4 -5" stroke="#5FD3E3" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>VAV &mdash; Variable Air Volume</h3>
+        <ul class="fm-causes">
+          <li>Varies airflow to each zone based on that zone's real-time cooling load, tracked by a VAV box</li>
+          <li>Each VAV box modulates a damper to throttle volume, with reheat available for zones that need it</li>
+          <li>Zone-by-zone temperature control &mdash; different areas of the same building can run different setpoints</li>
+          <li>Best suited to large buildings, multi-zone areas, and spaces with varying occupancy or load conditions</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>How a VAV zone actually responds</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">A zone's cooling load drops as occupancy or solar gain falls, so its space temperature moves toward setpoint.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">The zone thermostat signals the VAV box controller that less cooling is now needed.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">The VAV box damper modulates closed, reducing the airflow delivered to that zone.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">Across the building, the AHU fan senses lower total demand through duct static pressure and slows down.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Fan energy drops with airflow &mdash; the mechanism behind VAV's part-load efficiency advantage over CAV.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Pros and cons</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>System</th><th>Pros</th><th>Cons</th></tr>
+        <tr><td>CAV</td><td>Simple to design and operate; lower initial cost; reliable, proven technology</td><td>Higher energy consumption; poor part-load efficiency; more reheat means higher operating cost</td></tr>
+        <tr><td>VAV</td><td>Energy efficient; better comfort control; lower long-run operating cost; ideal for part-load conditions</td><td>Higher initial cost; complex design and commissioning; requires skilled maintenance</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Quick comparison</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Feature</th><th>CAV</th><th>VAV</th></tr>
+        <tr><td>Airflow</td><td>Constant</td><td>Variable, as per load</td></tr>
+        <tr><td>Temperature control</td><td>By reheat or cooling coil</td><td>By VAV box, with reheat</td></tr>
+        <tr><td>Energy efficiency</td><td>Lower</td><td>Higher</td></tr>
+        <tr><td>Initial cost</td><td>Lower</td><td>Higher</td></tr>
+        <tr><td>Operating cost</td><td>Higher</td><td>Lower</td></tr>
+        <tr><td>Best for</td><td>Small, single-zone, steady load</td><td>Large, multi-zone, varying load</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Where each one is used</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="18" width="28" height="34" rx="2" fill="none" stroke="#D9782E" stroke-width="2"/>
+          <path d="M22 26 h16 M22 34 h16 M22 42 h16" stroke="#D9782E" stroke-width="1.4"/>
+        </svg>
+        <b>CAV &mdash; Retail, Small Offices, Schools</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="16" height="42" rx="2" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <rect x="30" y="18" width="20" height="34" rx="2" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+          <path d="M14 18 h8 M14 26 h8 M14 34 h8 M34 24 h12 M34 32 h12 M34 40 h12" stroke="#5FD3E3" stroke-width="1.2"/>
+        </svg>
+        <b>VAV &mdash; Commercial, Hospitals, Hotels</b>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Choosing between them</h2>
+    <p>The decision usually comes down to how uniform the building's load is. A small building or single-zone space with a steady, predictable load rarely justifies VAV's added design and commissioning complexity &mdash; CAV does the job at a lower first cost. A large, multi-zone building with occupancy and solar gain that vary by floor, orientation, or time of day is where VAV earns back its higher upfront cost, often within a few years of lower fan and reheat energy use.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>CAV holds airflow constant and varies temperature through reheat or cooling coils &mdash; simple, but energy-hungry at part load.</span></li>
+      <li><span class="tk-check">✓</span><span>VAV holds temperature closer to constant and varies airflow zone by zone through VAV boxes &mdash; efficient, but more complex to design and commission.</span></li>
+      <li><span class="tk-check">✓</span><span>CAV suits small, single-zone buildings with steady load; VAV suits large, multi-zone buildings with varying occupancy and load.</span></li>
+      <li><span class="tk-check">✓</span><span>VAV's efficiency advantage comes directly from fan energy dropping as duct static pressure falls with lower total demand.</span></li>
+      <li><span class="tk-check">✓</span><span>CAV is simple and cost-effective; VAV is smart and energy-efficient &mdash; the right pick depends on the building, not a universal rule.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=CAV%20vs%20VAV%3A%20Constant%20vs%20Variable%20Air%20Volume%20Explained&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcav-vs-vav-air-volume-control-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcav-vs-vav-air-volume-control-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=CAV%20vs%20VAV%3A%20Constant%20vs%20Variable%20Air%20Volume%20Explained&text=How%20CAV%20and%20VAV%20systems%20each%20control%20airflow%2C%20their%20key%20features%2C%20pros%20and%20cons%2C%20and%20which%20building%20types%20each%20one%20actually%20suits.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcav-vs-vav-air-volume-control-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=CAV%20vs%20VAV%3A%20Constant%20vs%20Variable%20Air%20Volume%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACAV%20vs%20VAV%3A%20Constant%20vs%20Variable%20Air%20Volume%20Explained%0AHow%20each%20airflow%20control%20strategy%20works%2C%20and%20which%20building%20types%20each%20suits.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcav-vs-vav-air-volume-control-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../hvac/duct-sizing-calculator">Duct Sizing Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="hvac-system-components-explained">HVAC System Components Explained</a></li><li><a href="duct-sizing-velocity-limits-vs-airflow">Duct Sizing: Velocity Limits vs Airflow</a></li><li><a href="ahu-fahu-fcu-fmahu-csahu-difference-explained">AHU, FAHU, FCU, FMAHU, CSAHU &mdash; Difference Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+</body>
+</html>
