@@ -42,6 +42,20 @@
   "a": "updated"
  },
  {
+  "t": "Cost Contingency &amp; Management Reserve Calculator",
+  "u": "pm/cost-contingency-calculator",
+  "d": "2026-08-23",
+  "c": "Project Management",
+  "a": "added"
+ },
+ {
+  "t": "Meeting Cost Calculator",
+  "u": "pm/meeting-cost-calculator",
+  "d": "2026-08-23",
+  "c": "Project Management",
+  "a": "added"
+ },
+ {
   "t": "Panel GA Maker",
   "u": "electrical/panel-ga-maker",
   "d": "2026-08-22",
