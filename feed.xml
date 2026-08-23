@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Basics of Fire Protection in Buildings Explained</title>
+    <link>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</guid>
+    <description>Passive protection, active systems, detection, suppression and evacuation — the five layers of building fire protection and how they work together.</description>
+    <pubDate>Sun, 23 Aug 2026 16:14:24 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes</title>
+    <link>https://www.engineerzcorner.com/posts/fire-pump-room-installation-commissioning-mistakes.html</link>
+    <guid>https://www.engineerzcorner.com/posts/fire-pump-room-installation-commissioning-mistakes.html</guid>
+    <description>A correctly selected fire pump still fails if the room around it isn't installed and commissioned right — valve position, suction arrangement, pressure settings, check valves, sensing lines, diesel readiness, test setup, controls and housekeeping.</description>
+    <pubDate>Sun, 23 Aug 2026 16:14:24 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fire Fighting: NFPA Fire Protection System Design Standards Reference</title>
+    <link>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</link>
+    <guid>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference.html</guid>
+    <description>A quick-reference table of NFPA standards that govern fire protection design — NFPA 10, 13, 14, 16, 17A, 20, 22, 2001 — what each covers and where it applies.</description>
+    <pubDate>Sun, 23 Aug 2026 16:14:24 GMT</pubDate>
+  </item>
+  <item>
     <title>Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit</title>
     <link>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</guid>
@@ -50,13 +71,6 @@
     <link>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ats-mts-ecb-switch-disconnector-explained.html</guid>
     <description>ATS, MTS, COS, switch disconnectors, load break switches, fused switch disconnectors and ECBs — what each device does, how it differs, and where it's used.</description>
-    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
-  </item>
-  <item>
-    <title>Basics of Fire Protection in Buildings Explained</title>
-    <link>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</guid>
-    <description>Passive protection, active systems, detection, suppression and evacuation — the five layers of building fire protection and how they work together.</description>
     <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
   <item>
@@ -197,20 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained.html</guid>
     <description>FM-200 clean agent fire suppression explained — cylinder, solenoid valve, nozzles, control panel, detection and release station, with a full system diagram.</description>
-    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
-  </item>
-  <item>
-    <title>Gas Detector Types &amp; Working Principles Explained</title>
-    <link>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained.html</guid>
-    <description>Catalytic bead, electrochemical, infrared, semiconductor and PID gas detectors compared — what each senses, how it works, and where it's applied.</description>
-    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
-  </item>
-  <item>
-    <title>Gas Insulated Substation (GIS) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained.html</guid>
-    <description>A GIS packs busbars, breakers, disconnects, earthing switches and transformers into a sealed, SF6-filled enclosure — key components, why it's used, and where.</description>
     <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
 </channel></rss>

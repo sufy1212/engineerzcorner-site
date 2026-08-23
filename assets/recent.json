@@ -1,5 +1,20 @@
 [
   {
+    "t": "Basics of Fire Protection in Buildings Explained",
+    "u": "posts/basics-of-fire-protection-in-buildings-explained",
+    "d": "2026-08-23"
+  },
+  {
+    "t": "Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes",
+    "u": "posts/fire-pump-room-installation-commissioning-mistakes",
+    "d": "2026-08-23"
+  },
+  {
+    "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
+    "u": "posts/nfpa-fire-protection-design-standards-reference",
+    "d": "2026-08-23"
+  },
+  {
     "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
     "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
     "d": "2026-08-23"
@@ -32,21 +47,6 @@
   {
     "t": "Visa Points Calculator",
     "u": "study-abroad/visa-points-calculator",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
-    "u": "solar/grid-tie-off-grid-comparator",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Solar Sizing Calculator",
-    "u": "solar/solar-sizing-calculator",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
-    "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-20"
   }
 ]

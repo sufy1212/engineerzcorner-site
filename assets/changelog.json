@@ -28,6 +28,20 @@
   "a": "added"
  },
  {
+  "t": "Basics of Fire Protection in Buildings Explained",
+  "u": "posts/basics-of-fire-protection-in-buildings-explained",
+  "d": "2026-08-23",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
+  "u": "posts/nfpa-fire-protection-design-standards-reference",
+  "d": "2026-08-23",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Panel GA Maker",
   "u": "electrical/panel-ga-maker",
   "d": "2026-08-22",
@@ -196,13 +210,6 @@
   "a": "updated"
  },
  {
-  "t": "Basics of Fire Protection in Buildings Explained",
-  "u": "posts/basics-of-fire-protection-in-buildings-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
   "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
   "d": "2026-08-20",
@@ -233,13 +240,6 @@
  {
   "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
   "u": "posts/lv-panel-types-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
-  "u": "posts/nfpa-fire-protection-design-standards-reference",
   "d": "2026-08-20",
   "c": "Blog",
   "a": "updated"
