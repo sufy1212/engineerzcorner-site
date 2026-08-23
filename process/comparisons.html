@@ -95,6 +95,7 @@
     <a href="#cmp-psvtype" class="guide-toc-link">4. Conventional vs Balanced-Bellows vs Pilot-Operated PSV</a>
     <a href="#cmp-apicode" class="guide-toc-link">5. API 520 vs API 521</a>
     <a href="#cmp-blanketpurge" class="guide-toc-link">6. Nitrogen Blanketing vs Dilution Purging</a>
+    <a href="#cmp-b313vsb311" class="guide-toc-link">7. ASME B31.3 vs B31.1</a>
   </div>
 
   <div class="step" id="cmp-psvdisk">
@@ -196,6 +197,23 @@
       </table>
     </div>
     <div class="cmp-verdict"><b>In practice:</b> a tank taken out of blanketed service for internal inspection typically needs a dilution purge afterward — blanketing keeps the vapor space inert day-to-day, purging is what actually makes it safe to enter.</div>
+  </div>
+
+  <div class="step" id="cmp-b313vsb311">
+    <div class="step-head"><span class="step-num">7</span><h2>ASME B31.3 vs B31.1</h2></div>
+    <div class="step-desc">Two piping codes that look interchangeable on a stress analysis input screen but come from different design philosophies.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>ASME B31.3 (Process Piping)</th><th>ASME B31.1 (Power Piping)</th></tr></thead>
+        <tbody>
+          <tr><td>Scope</td><td>Refineries, chemical/pharma plants, and most industrial process piping not covered by another B31 section</td><td>Steam and feedwater piping in power plants, boiler external piping, and central heating/district steam systems</td></tr>
+          <tr><td>Allowable stress basis</td><td>Lesser of ⅓ ultimate tensile strength or ⅔ yield strength — factor of safety around 3</td><td>More conservative allowable stress tables, factor of safety roughly 3.5–4 against ultimate tensile strength</td></tr>
+          <tr><td>Practical effect on wall thickness</td><td>Higher allowable stress generally means a thinner wall for the same material, pressure and temperature</td><td>Lower allowable stress generally means a thicker wall for identical conditions</td></tr>
+          <tr><td>Occasional load allowance (wind/seismic)</td><td>Allowable stress can be increased up to roughly 1.33× the hot allowable stress</td><td>Lower increase allowed, roughly 1.15–1.20× the hot allowable stress</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> which code governs is set by the piping's function and the project's contractual/regulatory basis, not by which one produces a thinner wall — boiler external piping falls under B31.1 even inside an otherwise B31.3 process plant, and that boundary has to be identified explicitly in the design basis rather than assumed from the fluid alone.</div>
   </div>
 
   <footer>These are general engineering summaries — always verify against the current edition of the applicable code for a specific installation. <a href="./">← Process Index</a></footer>
