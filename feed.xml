@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>CAV vs VAV: Constant vs Variable Air Volume Explained</title>
+    <link>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</guid>
+    <description>CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.</description>
+    <pubDate>Sun, 23 Aug 2026 09:31:29 GMT</pubDate>
+  </item>
+  <item>
     <title>What Is an Inverter? DC-to-AC Conversion Explained</title>
     <link>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</guid>
     <description>HIRA, JSA and SOP operate at three different scopes and points in time — whole-workplace planning, one job before it starts, and the daily standard method.</description>
-    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
-  </item>
-  <item>
-    <title>HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers</title>
-    <link>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</link>
-    <guid>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference.html</guid>
-    <description>Preliminary-design thumb rules for cooling load, airflow, fan and pump power, chilled water flow, chiller capacity and pipe sizing — with the formula for each.</description>
     <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
 </channel></rss>

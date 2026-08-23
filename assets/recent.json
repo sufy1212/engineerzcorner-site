@@ -1,5 +1,10 @@
 [
   {
+    "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
+    "u": "posts/cav-vs-vav-air-volume-control-explained",
+    "d": "2026-08-23"
+  },
+  {
     "t": "What Is an Inverter? DC-to-AC Conversion Explained",
     "u": "posts/what-is-an-inverter-dc-ac-explained",
     "d": "2026-08-23"
@@ -42,11 +47,6 @@
   {
     "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
     "u": "posts/acb-protection-settings-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
-    "u": "posts/access-control-system-acs-explained",
     "d": "2026-08-20"
   }
 ]
