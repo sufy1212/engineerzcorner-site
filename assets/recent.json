@@ -1,5 +1,10 @@
 [
   {
+    "t": "Change Order Impact Calculator",
+    "u": "pm/change-order-impact-calculator",
+    "d": "2026-08-23"
+  },
+  {
     "t": "Cost Contingency &amp; Management Reserve Calculator",
     "u": "pm/cost-contingency-calculator",
     "d": "2026-08-23"
@@ -42,11 +47,6 @@
   {
     "t": "Cable Schedule Builder",
     "u": "electrical/cable-schedule-builder",
-    "d": "2026-08-22"
-  },
-  {
-    "t": "Panel GA Maker",
-    "u": "electrical/panel-ga-maker",
     "d": "2026-08-22"
   }
 ]

@@ -56,6 +56,13 @@
   "a": "added"
  },
  {
+  "t": "Change Order Impact Calculator",
+  "u": "pm/change-order-impact-calculator",
+  "d": "2026-08-23",
+  "c": "Project Management",
+  "a": "added"
+ },
+ {
   "t": "Panel GA Maker",
   "u": "electrical/panel-ga-maker",
   "d": "2026-08-22",
