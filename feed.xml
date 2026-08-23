@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit</title>
+    <link>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</guid>
+    <description>Cable tray, cable ladder, cable trunking, and conduit compared — construction, protection level, typical load, where each is used, and how to choose between them.</description>
+    <pubDate>Sun, 23 Aug 2026 11:59:30 GMT</pubDate>
+  </item>
+  <item>
     <title>CAV vs VAV: Constant vs Variable Air Volume Explained</title>
     <link>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained.html</guid>
     <description>A GIS packs busbars, breakers, disconnects, earthing switches and transformers into a sealed, SF6-filled enclosure — key components, why it's used, and where.</description>
-    <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
-  </item>
-  <item>
-    <title>HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?</title>
-    <link>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained.html</guid>
-    <description>HIRA, JSA and SOP operate at three different scopes and points in time — whole-workplace planning, one job before it starts, and the daily standard method.</description>
     <pubDate>Thu, 20 Aug 2026 09:23:16 GMT</pubDate>
   </item>
 </channel></rss>
