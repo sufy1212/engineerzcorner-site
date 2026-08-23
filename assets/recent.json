@@ -1,5 +1,10 @@
 [
   {
+    "t": "What Is an Inverter? DC-to-AC Conversion Explained",
+    "u": "posts/what-is-an-inverter-dc-ac-explained",
+    "d": "2026-08-23"
+  },
+  {
     "t": "Cable Schedule Builder",
     "u": "electrical/cable-schedule-builder",
     "d": "2026-08-22"
@@ -42,11 +47,6 @@
   {
     "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
     "u": "posts/access-control-system-acs-explained",
-    "d": "2026-08-20"
-  },
-  {
-    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-20"
   }
 ]
