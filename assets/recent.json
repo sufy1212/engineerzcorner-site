@@ -1,5 +1,10 @@
 [
   {
+    "t": "Transformer Turn Ratio (TTR) Test Explained",
+    "u": "posts/transformer-turn-ratio-ttr-test-explained",
+    "d": "2026-08-25"
+  },
+  {
     "t": "Main Components of a 33 kV Substation Explained",
     "u": "posts/33kv-substation-main-components-explained",
     "d": "2026-08-25"
@@ -42,11 +47,6 @@
   {
     "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
     "u": "posts/nfpa-fire-protection-design-standards-reference",
-    "d": "2026-08-23"
-  },
-  {
-    "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
-    "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
     "d": "2026-08-23"
   }
 ]
