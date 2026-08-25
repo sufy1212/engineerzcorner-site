@@ -1,5 +1,10 @@
 [
   {
+    "t": "Main Components of a 33 kV Substation Explained",
+    "u": "posts/33kv-substation-main-components-explained",
+    "d": "2026-08-25"
+  },
+  {
     "t": "MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings",
     "u": "posts/mep-sleeves-installation-guide-explained",
     "d": "2026-08-25"
@@ -42,11 +47,6 @@
   {
     "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
     "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
-    "d": "2026-08-23"
-  },
-  {
-    "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
-    "u": "posts/cav-vs-vav-air-volume-control-explained",
     "d": "2026-08-23"
   }
 ]
