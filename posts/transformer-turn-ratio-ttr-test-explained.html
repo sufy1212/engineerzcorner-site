@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformer Turn Ratio (TTR) Test Explained | Engineerz CorneR</title>
+<meta name="description" content="How the transformer turn ratio (TTR) test verifies winding ratios, polarity and connections, and detects shorted turns — terminals, wiring, procedure, example readings and acceptance criteria.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Transformer Turn Ratio (TTR) Test Explained">
+<meta property="og:description" content="How the transformer turn ratio (TTR) test verifies winding ratios, polarity and connections, and detects shorted turns — terminals, wiring, procedure, example readings and acceptance criteria.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Transformer Turn Ratio (TTR) Test Explained">
+<meta name="twitter:description" content="How the transformer turn ratio (TTR) test verifies winding ratios, polarity and connections, and detects shorted turns — terminals, wiring, procedure, example readings and acceptance criteria.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Transformer Turn Ratio (TTR) Test Explained", "item": "https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Transformer Turn Ratio (TTR) Test Explained",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "description": "How the transformer turn ratio (TTR) test verifies winding ratios, polarity and connections, and detects shorted turns — terminals, wiring, procedure, example readings and acceptance criteria.",
+  "url": "https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {"@type": "Organization", "name": "Engineerz CorneR", "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained"}
+}
+</script>
+<link rel="stylesheet" href="transformer-turn-ratio-ttr-test-explained.inline.css">
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Transformer Turn Ratio (TTR) Test Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Transformer Testing</span>
+    <h1>Transformer Turn Ratio (TTR) Test Explained</h1>
+    <p class="hero-sub">A TTR meter applies a small AC voltage to the HV winding and measures what comes out the LV side — a five-minute test that catches wrong connections, reversed polarity and shorted turns before a transformer is ever energized.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Transformer Commissioning</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <rect x="60" y="50" width="70" height="70" rx="6" fill="#122845" stroke="#5FD3E3" stroke-width="1.8"/>
+      <text x="95" y="90" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">TTR</text>
+      <text x="95" y="102" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">METER</text>
+      <path d="M130 68 h50" stroke="#e0463c" stroke-width="2.2" marker-end="url(#arrowred)"/>
+      <text x="140" y="60" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">H (HV)</text>
+      <circle cx="230" cy="68" r="4" fill="#e0463c"/>
+      <circle cx="230" cy="68" r="16" fill="none" stroke="#7e97ac" stroke-width="1.4"/>
+      <path d="M234 68 h20 M254 68 h6" stroke="#7e97ac" stroke-width="1.2"/>
+      <path d="M260 68c4 -8 8 -8 12 0s8 8 12 0s8 -8 12 0s8 8 12 0" fill="none" stroke="#7e97ac" stroke-width="1.4"/>
+      <path d="M300 68 h14" stroke="#7e97ac" stroke-width="1.2"/>
+      <path d="M314 100c4 -8 8 -8 12 0s8 8 12 0s8 -8 12 0s8 8 12 0" fill="none" stroke="#7e97ac" stroke-width="1.4"/>
+      <path d="M314 68 v32 M370 68 v32" stroke="#7e97ac" stroke-width="1.2"/>
+      <circle cx="410" cy="100" r="4" fill="#1a1a1a"/>
+      <circle cx="410" cy="100" r="16" fill="none" stroke="#7e97ac" stroke-width="1.4"/>
+      <path d="M414 100 h50" stroke="#1a1a1a" stroke-width="2.2" marker-end="url(#arrowblack)"/>
+      <text x="440" y="92" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">X (LV)</text>
+      <path d="M464 100 v20 h-374 v-52" stroke="#1a1a1a" stroke-width="1.6" fill="none"/>
+      <rect x="60" y="50" width="70" height="70" rx="6" fill="none" stroke="none"/>
+      <text x="95" y="140" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">APPLIES AC</text>
+      <text x="580" y="60" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">MEASURED RATIO</text>
+      <text x="580" y="80" font-family="Space Grotesk" font-size="20" font-weight="700" fill="#5FD3E3">25.41</text>
+      <text x="580" y="98" font-family="IBM Plex Mono" font-size="8" fill="#8FB0B6">NAMEPLATE 25.404</text>
+      <text x="580" y="118" font-family="IBM Plex Mono" font-size="9" fill="#5FD3E3">+0.02% DEV.</text>
+      <defs>
+        <marker id="arrowred" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#e0463c"/></marker>
+        <marker id="arrowblack" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1a1a1a"/></marker>
+      </defs>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">TTR applies a known AC voltage to the HV winding and measures the induced voltage on the LV winding — the ratio between the two should match the transformer's nameplate turns ratio.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The same test that confirms the ratio also confirms polarity and correct terminal connections, since a reversed or miswired winding shows up immediately as a wrong or unstable reading.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A shorted turn is one of the hardest transformer faults to see any other way — it pulls the measured ratio measurably off nameplate even though insulation resistance can look fine.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Acceptance is normally &plusmn;0.5% of nameplate ratio per phase, with the three phases balanced within 0.5% of each other — tighter, and a deviation almost always means investigate before energizing.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What TTR verifies</h2>
+    <p>The turn ratio test exists to catch problems a transformer can have before it's ever put into service: winding ratios that don't match the nameplate, terminals wired to the wrong phase, reversed polarity, or turns shorted together inside a winding. None of these are things you can see from the outside, and several of them — a shorted turn especially — won't necessarily show up on an insulation resistance test either. TTR is comparative by nature: it measures the actual ratio and checks it against what the nameplate says it should be, for every phase and every tap position the transformer has.</p>
+
+    <h2><span class="h2-dot"></span>Transformer terminals and polarity</h2>
+    <p>A typical distribution transformer example — 11 kV / 433 V, vector group Dyn11 — has three HV terminals (U, V, W) and three LV terminals (u, v, w), each pair sharing a common core leg. Terminals of the same polarity are marked with a dot or matching terminal numbers: 1U pairs with 2u, 1V with 2v, 1W with 2w. That pairing is exactly what the TTR meter connects across — H (high) lead to the HV terminal, X (low) lead to the corresponding LV terminal — for each of the three phases in turn.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h3M13 12h3"></path></svg></div>
+          <div><div class="device-name">HV Winding</div><div class="device-full">1U / 1V / 1W</div></div>
+        </div>
+        <div class="device-desc">The higher-voltage winding, connected to the TTR meter's H (high) lead — the side the test voltage is applied to.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"></circle><path d="M9.5 12h5"></path></svg></div>
+          <div><div class="device-name">LV Winding</div><div class="device-full">2u / 2v / 2w</div></div>
+        </div>
+        <div class="device-desc">The lower-voltage winding, connected to the TTR meter's X (low) lead — where the induced voltage is measured.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="1.6" fill="currentColor" stroke="none"></circle><path d="M12 9v13M6 22h12"></path></svg></div>
+          <div><div class="device-name">Polarity Dot</div><div class="device-full">Same-Polarity Marking</div></div>
+        </div>
+        <div class="device-desc">Marks terminals of the same instantaneous polarity across HV and LV — 1U's dot pairs with 2u's dot, and so on for each phase.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M7 10h4M7 14h2"></path><circle cx="17" cy="12" r="2"></circle></svg></div>
+          <div><div class="device-name">TTR Meter</div><div class="device-full">Turn Ratio Test Set</div></div>
+        </div>
+        <div class="device-desc">Applies a small AC voltage to the HV side and precisely measures the voltage induced on the LV side to compute the actual turns ratio.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Test setup and connections</h2>
+    <div class="sld-ladder">
+      <div class="sld-step"><span class="sld-badge">1</span><div><b>De-energize and isolate</b><span>Confirm the transformer is fully de-energized and isolated from the system before any leads are connected.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">2</span><div><b>Verify polarity marks</b><span>Check the nameplate and terminal markings so the H and X leads go on the correct, same-polarity pair.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">3</span><div><b>Connect H to HV terminal</b><span>H (High) lead to the HV terminal being tested first, e.g. 1U.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">4</span><div><b>Connect X to LV terminal</b><span>X (Low) lead to the corresponding LV terminal, e.g. 2u — same phase, same polarity pairing.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">5</span><div><b>Select voltage ratio range</b><span>Set the meter's range to suit the expected ratio so the reading resolves cleanly.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">6</span><div><b>Take and record the reading</b><span>The meter applies AC to the HV winding, measures the induced LV voltage, and displays the calculated ratio.</span></div></div>
+      <div class="sld-step"><span class="sld-badge">7</span><div><b>Repeat for V&ndash;v and W&ndash;w</b><span>Move the leads to the next phase pair and repeat, then repeat again for any other tap positions the transformer has.</span></div></div>
+    </div>
+    <p>The neutral point on the LV side (N) stays grounded throughout, the same way it would in service — the test doesn't disturb the transformer's normal earthing arrangement, only its energization state.</p>
+
+    <h2><span class="h2-dot"></span>Example reading</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Phase</th><th>Connection (HV&ndash;LV)</th><th>Nameplate Ratio</th><th>Measured Ratio</th><th>% Deviation</th></tr>
+        <tr><td>R</td><td>1U &ndash; 2u</td><td>11,000 / 433 = 25.404</td><td>25.41</td><td>+0.02%</td></tr>
+        <tr><td>Y</td><td>1V &ndash; 2v</td><td>11,000 / 433 = 25.404</td><td>25.39</td><td>&minus;0.06%</td></tr>
+        <tr><td>B</td><td>1W &ndash; 2w</td><td>11,000 / 433 = 25.404</td><td>25.40</td><td>&minus;0.02%</td></tr>
+      </table>
+    </div>
+    <p>All three phases here land comfortably inside a &plusmn;0.5% band and stay within 0.5% of each other, which is exactly what a healthy transformer should show — small, consistent deviation attributable to instrument accuracy rather than a winding fault.</p>
+
+    <h2><span class="h2-dot"></span>Acceptance and rejection criteria</h2>
+    <div class="crit-panel good">
+      <div class="crit-panel-title">✓ Acceptance criteria</div>
+      <ol>
+        <li>Measured turn ratio for each phase is within &plusmn;0.5% of the nameplate ratio.</li>
+        <li>The ratio across all three phases is balanced — difference between any two phases ≤ 0.5%.</li>
+        <li>Correct polarity is confirmed at every terminal pair.</li>
+      </ol>
+    </div>
+    <div class="crit-panel bad">
+      <div class="crit-panel-title">⚠ Rejection criteria</div>
+      <ul>
+        <li>Deviation greater than &plusmn;0.5% from the nameplate ratio.</li>
+        <li>Reversed or incorrect polarity.</li>
+        <li>Unbalanced ratio between phases greater than 0.5%.</li>
+      </ul>
+    </div>
+    <p>Any deviation beyond these limits points to possible shorted turns, wrong connections, or an internal fault — none of which should be dismissed as instrument noise without investigating further.</p>
+
+    <h2><span class="h2-dot"></span>Practical notes</h2>
+    <ul class="plain">
+      <li>Test all three phase pairs — U&ndash;u, V&ndash;v and W&ndash;w — not just one, since a fault can be isolated to a single phase.</li>
+      <li>Repeat the test at other tap positions if the transformer has an off-load or on-load tap changer.</li>
+      <li>Record ambient temperature and test conditions alongside the readings.</li>
+      <li>Ensure all connections are tight and clean before applying test voltage — a loose lead reads as a bad ratio that isn't actually there.</li>
+      <li>Use a calibrated TTR meter, and keep the calibration record with the test report.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>TTR compares measured turns ratio against nameplate ratio for each phase and tap — it's a comparison test, not an absolute measurement standing alone.</span></li>
+      <li><span class="tk-check">✓</span><span>The same test simultaneously confirms winding ratio, polarity, and correct terminal connections.</span></li>
+      <li><span class="tk-check">✓</span><span>A shorted turn is one of the few transformer faults that TTR catches reliably where an insulation resistance test might not.</span></li>
+      <li><span class="tk-check">✓</span><span>&plusmn;0.5% of nameplate per phase, and ≤0.5% between phases, is the standard bar — anything outside it gets investigated before the transformer is energized.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Transformer%20Turn%20Ratio%20(TTR)%20Test%20Explained%20%E2%80%94%20Terminals%2C%20wiring%2C%20procedure%2C%20example%20readings%20and%20acceptance%20criteria.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-turn-ratio-ttr-test-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-turn-ratio-ttr-test-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Transformer%20Turn%20Ratio%20(TTR)%20Test%20Explained&amp;text=Terminals%2C%20wiring%2C%20procedure%2C%20example%20readings%20and%20acceptance%20criteria.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-turn-ratio-ttr-test-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Transformer%20Turn%20Ratio%20(TTR)%20Test%20Explained&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ATransformer%20Turn%20Ratio%20(TTR)%20Test%20Explained%0ATerminals%2C%20wiring%2C%20procedure%2C%20example%20readings%20and%20acceptance%20criteria.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftransformer-turn-ratio-ttr-test-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="dissolved-gas-analysis-dga-explained">Dissolved Gas Analysis (DGA) Explained</a></li><li><a href="power-transformer-construction-working-principle">Power Transformer Construction &amp; Working Principle</a></li><li><a href="transformer-vector-groups-explained">Transformer Vector Groups Explained</a></li><li><a href="tap-changer-distribution-transformer-explained">Tap Changer on a Distribution Transformer Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+</body>
+</html>
