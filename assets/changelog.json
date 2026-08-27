@@ -98,6 +98,90 @@
   "a": "updated"
  },
  {
+  "t": "Concrete Volume &amp; Material Estimator",
+  "u": "civil/concrete-volume-estimator",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Slab-on-Grade Quick Thickness",
+  "u": "civil/slab-on-grade-thickness",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Staircase Geometry Check",
+  "u": "civil/staircase-geometry",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Beam Bending &amp; Deflection",
+  "u": "civil/beam-bending",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Column Axial Capacity",
+  "u": "civil/column-capacity",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Cut &amp; Fill Volume (Average End Area)",
+  "u": "civil/cut-fill-volume",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Footing Bearing Sizing",
+  "u": "civil/footing-sizing",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Grade / Slope Calculator",
+  "u": "civil/grade-slope",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+  "u": "civil/pipe-flow-capacity",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Rebar Development Length &amp; Weight",
+  "u": "civil/rebar-development",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Retaining Wall Stability",
+  "u": "civil/retaining-wall",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
+  "u": "civil/trench-safe-slope",
+  "d": "2026-08-27",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
   "d": "2026-08-25",
@@ -882,27 +966,6 @@
   "a": "updated"
  },
  {
-  "t": "Concrete Volume &amp; Material Estimator",
-  "u": "civil/concrete-volume-estimator",
-  "d": "2026-08-19",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Slab-on-Grade Quick Thickness",
-  "u": "civil/slab-on-grade-thickness",
-  "d": "2026-08-19",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Staircase Geometry Check",
-  "u": "civil/staircase-geometry",
-  "d": "2026-08-19",
-  "c": "Civil",
-  "a": "updated"
- },
- {
   "t": "Arc Flash Incident Energy",
   "u": "electrical/arc-flash-incident-energy",
   "d": "2026-08-19",
@@ -1264,69 +1327,6 @@
   "u": "hvac/fan-static-total-pressure-calculator",
   "d": "2026-08-14",
   "c": "HVAC",
-  "a": "added"
- },
- {
-  "t": "Beam Bending &amp; Deflection",
-  "u": "civil/beam-bending",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Column Axial Capacity",
-  "u": "civil/column-capacity",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Cut &amp; Fill Volume (Average End Area)",
-  "u": "civil/cut-fill-volume",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Footing Bearing Sizing",
-  "u": "civil/footing-sizing",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Grade / Slope Calculator",
-  "u": "civil/grade-slope",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-  "u": "civil/pipe-flow-capacity",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Rebar Development Length &amp; Weight",
-  "u": "civil/rebar-development",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Retaining Wall Stability",
-  "u": "civil/retaining-wall",
-  "d": "2026-08-14",
-  "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
-  "u": "civil/trench-safe-slope",
-  "d": "2026-08-14",
-  "c": "Civil",
   "a": "added"
  },
  {
