@@ -182,6 +182,209 @@
   "a": "updated"
  },
  {
+  "t": "Panel GA Maker",
+  "u": "electrical/panel-ga-maker",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Single Line Diagram Creator",
+  "u": "electrical/sld-creator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Schedule Builder",
+  "u": "electrical/cable-schedule-builder",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Arc Flash Incident Energy",
+  "u": "electrical/arc-flash-incident-energy",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Busbar &amp; Enclosure Sizing",
+  "u": "electrical/busbar-enclosure-sizing",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Conduit Fill Calculator",
+  "u": "electrical/conduit-fill-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Earthing Rod Resistance",
+  "u": "electrical/earthing-rod-resistance",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Energy Cost / kWh Bill Estimator",
+  "u": "electrical/energy-cost-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "LV Panel Estimate",
+  "u": "electrical/lv-panel-estimate",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Motor FLC / Starting Current",
+  "u": "electrical/motor-flc-starting-current",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Power Factor Correction Sizing",
+  "u": "electrical/power-factor-correction",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Three-Phase Power &amp; Current Calculator",
+  "u": "electrical/three-phase-power-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Transformer &amp; Generator Sizing",
+  "u": "electrical/transformer-generator-sizing",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Battery / UPS Autonomy Sizing",
+  "u": "electrical/ups-battery-autonomy-sizing",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Motor Starting Simulator",
+  "u": "electrical/motor-starting-simulator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "3-Phase Fault &amp; Coordination Simulator",
+  "u": "electrical/three-phase-fault-simulator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Voltage Drop &amp; Cable Sizing Simulator",
+  "u": "electrical/voltage-drop-simulator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "AWG &harr; mm&sup2; Wire Size Converter",
+  "u": "electrical/awg-mm2-converter",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Breaker / Fuse Sizing Calculator",
+  "u": "electrical/breaker-fuse-sizing-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Derating Factor Calculator",
+  "u": "electrical/cable-derating-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Sizing",
+  "u": "electrical/cable-sizing-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Capacitor Bank Sizing Calculator",
+  "u": "electrical/capacitor-bank-sizing",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Earthing Grid Resistance",
+  "u": "electrical/earthing-grid-resistance",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Harmonics / THD Estimate",
+  "u": "electrical/harmonics-thd-estimate",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Lighting / Illumination Sizing",
+  "u": "electrical/lighting-illumination-sizing",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Load / Demand Calculator",
+  "u": "electrical/load-demand-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Selectivity / TCC Grading Check",
+  "u": "electrical/selectivity-coordination-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "LV Short Circuit Calculator",
+  "u": "electrical/short-circuit-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "LV Voltage Drop Calculator",
+  "u": "electrical/voltage-drop-calculator",
+  "d": "2026-08-27",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
   "d": "2026-08-25",
@@ -271,27 +474,6 @@
   "d": "2026-08-23",
   "c": "Project Management",
   "a": "added"
- },
- {
-  "t": "Panel GA Maker",
-  "u": "electrical/panel-ga-maker",
-  "d": "2026-08-22",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Single Line Diagram Creator",
-  "u": "electrical/sld-creator",
-  "d": "2026-08-22",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Cable Schedule Builder",
-  "u": "electrical/cable-schedule-builder",
-  "d": "2026-08-22",
-  "c": "Electrical",
-  "a": "updated"
  },
  {
   "t": "Valve Type Selector",
@@ -966,83 +1148,6 @@
   "a": "updated"
  },
  {
-  "t": "Arc Flash Incident Energy",
-  "u": "electrical/arc-flash-incident-energy",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Busbar &amp; Enclosure Sizing",
-  "u": "electrical/busbar-enclosure-sizing",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Conduit Fill Calculator",
-  "u": "electrical/conduit-fill-calculator",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Earthing Rod Resistance",
-  "u": "electrical/earthing-rod-resistance",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Energy Cost / kWh Bill Estimator",
-  "u": "electrical/energy-cost-calculator",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "LV Panel Estimate",
-  "u": "electrical/lv-panel-estimate",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Motor FLC / Starting Current",
-  "u": "electrical/motor-flc-starting-current",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Power Factor Correction Sizing",
-  "u": "electrical/power-factor-correction",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Three-Phase Power &amp; Current Calculator",
-  "u": "electrical/three-phase-power-calculator",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Transformer &amp; Generator Sizing",
-  "u": "electrical/transformer-generator-sizing",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Battery / UPS Autonomy Sizing",
-  "u": "electrical/ups-battery-autonomy-sizing",
-  "d": "2026-08-19",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
   "t": "Air Changes per Hour",
   "u": "hvac/air-changes-per-hour-calculator",
   "d": "2026-08-19",
@@ -1141,27 +1246,6 @@
   "a": "added"
  },
  {
-  "t": "Motor Starting Simulator",
-  "u": "electrical/motor-starting-simulator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "3-Phase Fault & Coordination Simulator",
-  "u": "electrical/three-phase-fault-simulator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Voltage Drop & Cable Sizing Simulator",
-  "u": "electrical/voltage-drop-simulator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
   "t": "Application Timeline Planner",
   "u": "study-abroad/application-timeline-planner",
   "d": "2026-08-14",
@@ -1223,90 +1307,6 @@
   "d": "2026-08-14",
   "c": "Solar",
   "a": "updated"
- },
- {
-  "t": "AWG &harr; mm&sup2; Wire Size Converter",
-  "u": "electrical/awg-mm2-converter",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Breaker / Fuse Sizing Calculator",
-  "u": "electrical/breaker-fuse-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Cable Derating Factor Calculator",
-  "u": "electrical/cable-derating-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Cable Sizing",
-  "u": "electrical/cable-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Capacitor Bank Sizing Calculator",
-  "u": "electrical/capacitor-bank-sizing",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Earthing Grid Resistance",
-  "u": "electrical/earthing-grid-resistance",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Harmonics / THD Estimate",
-  "u": "electrical/harmonics-thd-estimate",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Lighting / Illumination Sizing",
-  "u": "electrical/lighting-illumination-sizing",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Load / Demand Calculator",
-  "u": "electrical/load-demand-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "Selectivity / TCC Grading Check",
-  "u": "electrical/selectivity-coordination-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "LV Short Circuit Calculator",
-  "u": "electrical/short-circuit-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
- },
- {
-  "t": "LV Voltage Drop Calculator",
-  "u": "electrical/voltage-drop-calculator",
-  "d": "2026-08-14",
-  "c": "Electrical",
-  "a": "added"
  },
  {
   "t": "Bearing L10 Life",
