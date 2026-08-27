@@ -1,52 +1,52 @@
 [
   {
-    "t": "Arc Flash Incident Energy",
-    "u": "electrical/arc-flash-incident-energy",
+    "t": "Age Calculator",
+    "u": "general/age-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "AWG &harr; mm&sup2; Wire Size Converter",
-    "u": "electrical/awg-mm2-converter",
+    "t": "Number Base Converter",
+    "u": "general/base-converter",
     "d": "2026-08-27"
   },
   {
-    "t": "Breaker / Fuse Sizing Calculator",
-    "u": "electrical/breaker-fuse-sizing-calculator",
+    "t": "BMI Calculator",
+    "u": "general/bmi-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "Busbar &amp; Enclosure Sizing",
-    "u": "electrical/busbar-enclosure-sizing",
+    "t": "Date &amp; Business-Day Calculator",
+    "u": "general/date-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "Cable Derating Factor Calculator",
-    "u": "electrical/cable-derating-calculator",
+    "t": "Engineering Glossary",
+    "u": "general/engineering-glossary",
     "d": "2026-08-27"
   },
   {
-    "t": "Cable Schedule Builder",
-    "u": "electrical/cable-schedule-builder",
+    "t": "Fraction ↔ Decimal (Feet-Inches)",
+    "u": "general/fraction-decimal",
     "d": "2026-08-27"
   },
   {
-    "t": "Cable Sizing",
-    "u": "electrical/cable-sizing-calculator",
+    "t": "Markup, Margin &amp; % Change",
+    "u": "general/markup-margin",
     "d": "2026-08-27"
   },
   {
-    "t": "Capacitor Bank Sizing Calculator",
-    "u": "electrical/capacitor-bank-sizing",
+    "t": "Password Generator",
+    "u": "general/password-generator",
     "d": "2026-08-27"
   },
   {
-    "t": "Conduit Fill Calculator",
-    "u": "electrical/conduit-fill-calculator",
+    "t": "Percentage Calculator",
+    "u": "general/percentage-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "Earthing Grid Resistance",
-    "u": "electrical/earthing-grid-resistance",
+    "t": "Engineering Sanity-Checker",
+    "u": "general/sanity-checker",
     "d": "2026-08-27"
   }
 ]

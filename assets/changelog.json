@@ -385,6 +385,111 @@
   "a": "updated"
  },
  {
+  "t": "Engineering Glossary",
+  "u": "general/engineering-glossary",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Engineering Sanity-Checker",
+  "u": "general/sanity-checker",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Age Calculator",
+  "u": "general/age-calculator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Number Base Converter",
+  "u": "general/base-converter",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "BMI Calculator",
+  "u": "general/bmi-calculator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Date &amp; Business-Day Calculator",
+  "u": "general/date-calculator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Fraction ↔ Decimal (Feet-Inches)",
+  "u": "general/fraction-decimal",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Markup, Margin &amp; % Change",
+  "u": "general/markup-margin",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Password Generator",
+  "u": "general/password-generator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Percentage Calculator",
+  "u": "general/percentage-calculator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Site Term Translator",
+  "u": "general/term-translator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Text Case Converter",
+  "u": "general/text-case-converter",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Time Duration Calculator",
+  "u": "general/time-duration-calculator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Tip Calculator",
+  "u": "general/tip-calculator",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Unit Converter",
+  "u": "general/unit-converter",
+  "d": "2026-08-27",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
   "d": "2026-08-25",
@@ -536,13 +641,6 @@
   "u": "process/vessel-volume-level",
   "d": "2026-08-20",
   "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Engineering Glossary",
-  "u": "general/engineering-glossary",
-  "d": "2026-08-20",
-  "c": "General Tools",
   "a": "updated"
  },
  {
@@ -760,13 +858,6 @@
   "u": "hvac/seer-eer-cop-converter",
   "d": "2026-08-20",
   "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Engineering Sanity-Checker",
-  "u": "general/sanity-checker",
-  "d": "2026-08-20",
-  "c": "General Tools",
   "a": "updated"
  },
  {
@@ -1362,97 +1453,6 @@
   "u": "solar/row-spacing-calculator",
   "d": "2026-08-14",
   "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Age Calculator",
-  "u": "general/age-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Number Base Converter",
-  "u": "general/base-converter",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "BMI Calculator",
-  "u": "general/bmi-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Date &amp; Business-Day Calculator",
-  "u": "general/date-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Fraction ↔ Decimal (Feet-Inches)",
-  "u": "general/fraction-decimal",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Markup, Margin &amp; % Change",
-  "u": "general/markup-margin",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Password Generator",
-  "u": "general/password-generator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Percentage Calculator",
-  "u": "general/percentage-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Site Term Translator",
-  "u": "general/term-translator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Text Case Converter",
-  "u": "general/text-case-converter",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Time Duration Calculator",
-  "u": "general/time-duration-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Tip Calculator",
-  "u": "general/tip-calculator",
-  "d": "2026-08-14",
-  "c": "General Tools",
-  "a": "added"
- },
- {
-  "t": "Unit Converter",
-  "u": "general/unit-converter",
-  "d": "2026-08-14",
-  "c": "General Tools",
   "a": "added"
  },
  {
