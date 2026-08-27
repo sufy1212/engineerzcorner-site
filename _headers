@@ -4,8 +4,19 @@
 #    hashed static assets are cached hard since they change name when updated.
 #
 # 2) SECURITY — clickjacking protection, MIME-sniffing protection, and a
-#    Content-Security-Policy that allows Google Fonts and Google Tag Manager
-#    while still blocking random third-party domains.
+#    Content-Security-Policy that allows Google Fonts, Google Tag Manager,
+#    and the Adcash (aclib) ad network, while still blocking random
+#    third-party domains.
+#
+#    NOTE ON ADS: ad networks like Adcash serve creatives from many
+#    different, sometimes-changing advertiser/exchange domains — that's
+#    inherent to how programmatic ad serving works. script-src is kept
+#    locked down to the specific Adcash loader domain (acscdn.com), but
+#    frame-src/img-src/connect-src had to be relaxed to https: generally
+#    so the actual ad creatives (served via iframes from rotating domains)
+#    aren't silently blocked. If you want a tighter policy later, check
+#    the browser console for the exact blocked domains under real traffic
+#    and allowlist those specifically instead of the broad https: rule.
 
 /*
   Cache-Control: public, max-age=0, must-revalidate
@@ -13,7 +24,7 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://sibforms.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://sibforms.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://latest.currency-api.pages.dev https://api.frankfurter.dev https://api.frankfurter.app https://open.er-api.com https://api.api-ninjas.com https://sibforms.com https://*.sibforms.com; frame-src https://sibforms.com https://*.sibforms.com; base-uri 'self'; form-action 'self' https://*.sibforms.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://sibforms.com https://acscdn.com https://*.acscdn.com https://adcash.com https://*.adcash.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://sibforms.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://latest.currency-api.pages.dev https://api.frankfurter.dev https://api.frankfurter.app https://open.er-api.com https://api.api-ninjas.com https://sibforms.com https://*.sibforms.com https:; frame-src https://sibforms.com https://*.sibforms.com https:; base-uri 'self'; form-action 'self' https://*.sibforms.com
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
