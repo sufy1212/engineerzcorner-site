@@ -1,52 +1,52 @@
 [
   {
-    "t": "Chiller Machine: Main Parts &amp; Functions",
-    "u": "posts/chiller-machine-parts-functions-explained",
+    "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+    "u": "posts/33-11kv-substation-diagram-equipment-overview",
     "d": "2026-08-27"
   },
   {
-    "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
-    "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
+    "t": "Main Components of a 33 kV Substation Explained",
+    "u": "posts/33kv-substation-main-components-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
-    "u": "posts/concrete-volume-material-takeoff-explained",
+    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
+    "u": "posts/4-20ma-current-loop-basics",
     "d": "2026-08-27"
   },
   {
-    "t": "Conduit Fill: Why 40% Isn't an Arbitrary Number",
-    "u": "posts/conduit-fill-why-the-percentage-limit-exists",
+    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+    "u": "posts/acb-protection-settings-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Control Valve Components Explained",
-    "u": "posts/control-valve-components-explained",
+    "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+    "u": "posts/access-control-system-acs-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake",
-    "u": "posts/control-valve-cv-sizing-oversizing-mistake",
+    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
+    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
-    "u": "posts/critical-path-method-cpm-explained",
+    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
+    "u": "posts/air-changes-per-hour-ventilation-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
-    "u": "posts/cut-fill-volume-average-end-area-method-explained",
+    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "How to Select the Right DC Cable Size in PV Systems",
-    "u": "posts/dc-cable-size-selection-pv-systems",
+    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
+    "u": "posts/ansi-relay-numbers-protection-functions",
     "d": "2026-08-27"
   },
   {
-    "t": "Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough",
-    "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
+    "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+    "u": "posts/ats-mts-ecb-switch-disconnector-explained",
     "d": "2026-08-27"
   }
 ]

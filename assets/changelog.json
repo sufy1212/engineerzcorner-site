@@ -1612,28 +1612,203 @@
  {
   "t": "Main Components of a 33 kV Substation Explained",
   "u": "posts/33kv-substation-main-components-explained",
-  "d": "2026-08-25",
+  "d": "2026-08-27",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
   "u": "posts/cav-vs-vav-air-volume-control-explained",
-  "d": "2026-08-23",
+  "d": "2026-08-27",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
   "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
-  "d": "2026-08-23",
+  "d": "2026-08-27",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "Basics of Fire Protection in Buildings Explained",
   "u": "posts/basics-of-fire-protection-in-buildings-explained",
-  "d": "2026-08-23",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
+  "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+  "u": "posts/33-11kv-substation-diagram-equipment-overview",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+  "u": "posts/acb-protection-settings-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+  "u": "posts/access-control-system-acs-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+  "u": "posts/ats-mts-ecb-switch-disconnector-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
+  "u": "posts/beam-bending-basics-section-modulus-deflection",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
+  "u": "posts/bolt-torque-vs-preload-nut-factor",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
+  "u": "posts/cavitation-vs-flashing-control-valve-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
+  "u": "posts/4-20ma-current-loop-basics",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
+  "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
+  "u": "posts/air-changes-per-hour-ventilation-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+  "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "ANSI Relay Numbers: Common Protection Relay Functions",
+  "u": "posts/ansi-relay-numbers-protection-functions",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+  "u": "posts/battery-soc-vs-dod-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Bearing Failures: Root Causes &amp; Prevention",
+  "u": "posts/bearing-failure-modes-causes-prevention",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
+  "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
+  "u": "posts/bms-point-types-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
+  "u": "posts/breaker-selectivity-discrimination-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
+  "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Glands: What They Do and How to Get the Selection Right",
+  "u": "posts/cable-gland-overview-selection-guide",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Size &amp; Current Capacity: A Practical Selection Guide",
+  "u": "posts/cable-size-current-capacity-guide",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Centrifugal Pump Components Explained",
+  "u": "posts/centrifugal-pump-components-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP",
+  "u": "posts/centrifugal-pump-curve-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
+  "u": "posts/chilled-water-hvac-system-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+  "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
@@ -1701,66 +1876,10 @@
   "a": "updated"
  },
  {
-  "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
-  "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
   "u": "solar/grid-tie-off-grid-comparator",
   "d": "2026-08-20",
   "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
-  "u": "posts/33-11kv-substation-diagram-equipment-overview",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-  "u": "posts/acb-protection-settings-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
-  "u": "posts/access-control-system-acs-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
-  "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
-  "u": "posts/beam-bending-basics-section-modulus-deflection",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
-  "u": "posts/bolt-torque-vs-preload-nut-factor",
-  "d": "2026-08-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
-  "u": "posts/cavitation-vs-flashing-control-valve-explained",
-  "d": "2026-08-20",
-  "c": "Blog",
   "a": "updated"
  },
  {
@@ -1908,125 +2027,6 @@
   "u": "study-abroad/university-fee-comparison",
   "d": "2026-08-14",
   "c": "Study Abroad",
-  "a": "added"
- },
- {
-  "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
-  "u": "posts/4-20ma-current-loop-basics",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
-  "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
-  "u": "posts/air-changes-per-hour-ventilation-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
-  "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "ANSI Relay Numbers: Common Protection Relay Functions",
-  "u": "posts/ansi-relay-numbers-protection-functions",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-  "u": "posts/battery-soc-vs-dod-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Bearing Failures: Root Causes &amp; Prevention",
-  "u": "posts/bearing-failure-modes-causes-prevention",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
-  "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
-  "u": "posts/bms-point-types-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
-  "u": "posts/breaker-selectivity-discrimination-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
-  "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Cable Glands: What They Do and How to Get the Selection Right",
-  "u": "posts/cable-gland-overview-selection-guide",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Cable Size &amp; Current Capacity: A Practical Selection Guide",
-  "u": "posts/cable-size-current-capacity-guide",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Centrifugal Pump Components Explained",
-  "u": "posts/centrifugal-pump-components-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP",
-  "u": "posts/centrifugal-pump-curve-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
-  "u": "posts/chilled-water-hvac-system-explained",
-  "d": "2026-08-14",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
-  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
-  "d": "2026-08-14",
-  "c": "Blog",
   "a": "added"
  }
 ]
