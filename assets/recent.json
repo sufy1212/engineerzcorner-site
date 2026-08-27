@@ -1,52 +1,52 @@
 [
   {
-    "t": "Bearing L10 Life",
-    "u": "mechanical/bearing-life-calculator",
+    "t": "Change Order Impact Calculator",
+    "u": "pm/change-order-impact-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "Belt / Pulley Drive",
-    "u": "mechanical/belt-drive-calculator",
+    "t": "Commercial Terms of Project",
+    "u": "pm/commercial-terms",
     "d": "2026-08-27"
   },
   {
-    "t": "Belt &amp; Pulley Drive Simulator",
-    "u": "mechanical/belt-drive-simulator",
+    "t": "Cost Contingency &amp; Management Reserve Calculator",
+    "u": "pm/cost-contingency-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "Fastener Torque Calculator",
-    "u": "mechanical/bolt-torque-calculator",
+    "t": "Earned Value Management",
+    "u": "pm/evm",
     "d": "2026-08-27"
   },
   {
-    "t": "Duct Sizing &amp; Air Changes",
-    "u": "mechanical/duct-sizing-calculator",
+    "t": "PM Glossary",
+    "u": "pm/glossary",
     "d": "2026-08-27"
   },
   {
-    "t": "Sensible Heat Load",
-    "u": "mechanical/heat-load-calculator",
+    "t": "Incoterms",
+    "u": "pm/incoterms",
     "d": "2026-08-27"
   },
   {
-    "t": "Heat Load / Cooling Simulator",
-    "u": "mechanical/heat-load-simulator",
+    "t": "Meeting Cost Calculator",
+    "u": "pm/meeting-cost-calculator",
     "d": "2026-08-27"
   },
   {
-    "t": "Pipe Flow &amp; Head Loss",
-    "u": "mechanical/pipe-flow-head-loss-calculator",
+    "t": "Meeting Minutes &amp; Action Items",
+    "u": "pm/meeting-minutes",
     "d": "2026-08-27"
   },
   {
-    "t": "Pump / Fan Affinity Laws",
-    "u": "mechanical/pump-fan-affinity-laws-calculator",
+    "t": "Permit to Work / LOTO Checklist",
+    "u": "pm/permit-to-work",
     "d": "2026-08-27"
   },
   {
-    "t": "Pump Power &amp; NPSH",
-    "u": "mechanical/pump-power-npsh-calculator",
+    "t": "PMP / PMBOK Reference",
+    "u": "pm/pmp-pmbok-reference",
     "d": "2026-08-27"
   }
 ]
