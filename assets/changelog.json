@@ -1878,14 +1878,84 @@
  {
   "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
   "u": "solar/grid-tie-off-grid-comparator",
-  "d": "2026-08-20",
+  "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
  },
  {
   "t": "Solar Sizing Calculator",
   "u": "solar/solar-sizing-calculator",
-  "d": "2026-08-20",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Shading &amp; Soiling Loss Estimator",
+  "u": "solar/shading-soiling-loss-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Battery State-of-Charge Simulator",
+  "u": "solar/battery-soc-simulator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "PV String Sizing &amp; Voltage Calculator",
+  "u": "solar/pv-string-sizing-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Solar Payback &amp; ROI Calculator",
+  "u": "solar/solar-payback-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Panel Tilt &amp; Orientation Calculator",
+  "u": "solar/panel-tilt-orientation-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Charge Controller Sizing Calculator",
+  "u": "solar/charge-controller-sizing-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "CO2 Offset &amp; Environmental Savings Calculator",
+  "u": "solar/co2-offset-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
+  "u": "solar/dc-cable-voltage-drop-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Inverter Sizing Calculator",
+  "u": "solar/inverter-sizing-calculator",
+  "d": "2026-08-27",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Row Spacing &amp; Self-Shading Calculator",
+  "u": "solar/row-spacing-calculator",
+  "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
  },
@@ -1895,20 +1965,6 @@
   "d": "2026-08-20",
   "c": "Study Abroad",
   "a": "updated"
- },
- {
-  "t": "Shading & Soiling Loss Estimator",
-  "u": "solar/shading-soiling-loss-calculator",
-  "d": "2026-08-19",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Battery State-of-Charge Simulator",
-  "u": "solar/battery-soc-simulator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "added"
  },
  {
   "t": "Application Timeline Planner",
@@ -1929,62 +1985,6 @@
   "u": "study-abroad/currency-converter",
   "d": "2026-08-14",
   "c": "Study Abroad",
-  "a": "added"
- },
- {
-  "t": "PV String Sizing &amp; Voltage Calculator",
-  "u": "solar/pv-string-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Solar Payback &amp; ROI Calculator",
-  "u": "solar/solar-payback-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Panel Tilt &amp; Orientation Calculator",
-  "u": "solar/panel-tilt-orientation-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Charge Controller Sizing Calculator",
-  "u": "solar/charge-controller-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "CO2 Offset &amp; Environmental Savings Calculator",
-  "u": "solar/co2-offset-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
-  "u": "solar/dc-cable-voltage-drop-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Inverter Sizing Calculator",
-  "u": "solar/inverter-sizing-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Row Spacing &amp; Self-Shading Calculator",
-  "u": "solar/row-spacing-calculator",
-  "d": "2026-08-14",
-  "c": "Solar",
   "a": "added"
  },
  {
