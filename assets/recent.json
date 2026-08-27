@@ -1,52 +1,52 @@
 [
   {
-    "t": "Transformer Turn Ratio (TTR) Test Explained",
-    "u": "posts/transformer-turn-ratio-ttr-test-explained",
-    "d": "2026-08-25"
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
+    "d": "2026-08-27"
   },
   {
-    "t": "Main Components of a 33 kV Substation Explained",
-    "u": "posts/33kv-substation-main-components-explained",
-    "d": "2026-08-25"
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
+    "d": "2026-08-27"
   },
   {
-    "t": "MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings",
-    "u": "posts/mep-sleeves-installation-guide-explained",
-    "d": "2026-08-25"
+    "t": "Instrument/Sensor Selector",
+    "u": "automation/instrument-selector",
+    "d": "2026-08-27"
   },
   {
-    "t": "Change Order Impact Calculator",
-    "u": "pm/change-order-impact-calculator",
-    "d": "2026-08-23"
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
+    "d": "2026-08-27"
   },
   {
-    "t": "Cost Contingency &amp; Management Reserve Calculator",
-    "u": "pm/cost-contingency-calculator",
-    "d": "2026-08-23"
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
+    "d": "2026-08-27"
   },
   {
-    "t": "Meeting Cost Calculator",
-    "u": "pm/meeting-cost-calculator",
-    "d": "2026-08-23"
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
+    "d": "2026-08-27"
   },
   {
-    "t": "Resource Loading &amp; Utilization Calculator",
-    "u": "pm/resource-loading-calculator",
-    "d": "2026-08-23"
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
+    "d": "2026-08-27"
   },
   {
-    "t": "Basics of Fire Protection in Buildings Explained",
-    "u": "posts/basics-of-fire-protection-in-buildings-explained",
-    "d": "2026-08-23"
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
+    "d": "2026-08-27"
   },
   {
-    "t": "Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes",
-    "u": "posts/fire-pump-room-installation-commissioning-mistakes",
-    "d": "2026-08-23"
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-08-27"
   },
   {
-    "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
-    "u": "posts/nfpa-fire-protection-design-standards-reference",
-    "d": "2026-08-23"
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
+    "d": "2026-08-27"
   }
 ]

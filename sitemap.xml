@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.engineerzcorner.com/</loc><lastmod>2026-08-27</lastmod><priority>1.0</priority></url>
   <url><loc>https://www.engineerzcorner.com/about</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/</loc><lastmod>2026-08-19</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/alarm-setpoints</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/comparisons</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/deadband-hysteresis</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/guides</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/instrument-selector</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/level-control-simulator</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/level-transmitter</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/modbus-timing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/notes</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/orifice-flow-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/pid-tuning</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/relay-coil-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/rtd-conversion</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/signal-scaling</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/symbols</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/thermocouple-reference</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/valve-sizing</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/vfd-scaling</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/</loc><lastmod>2026-08-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/alarm-setpoints</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/comparisons</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/deadband-hysteresis</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/guides</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/instrument-selector</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/level-control-simulator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/level-transmitter</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/modbus-timing</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/notes</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/orifice-flow-sizing</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/pid-tuning</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/relay-coil-sizing</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/rtd-conversion</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/signal-scaling</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/symbols</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/thermocouple-reference</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/valve-sizing</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/vfd-scaling</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/changelog</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/civil/</loc><lastmod>2026-08-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/civil/beam-bending</loc><lastmod>2026-08-14</lastmod><priority>0.6</priority></url>

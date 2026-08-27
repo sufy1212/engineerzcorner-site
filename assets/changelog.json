@@ -1,5 +1,103 @@
 [
  {
+  "t": "Instrument/Sensor Selector",
+  "u": "automation/instrument-selector",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Level Control Loop Simulator",
+  "u": "automation/level-control-simulator",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Alarm Setpoint Band Calculator",
+  "u": "automation/alarm-setpoints",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Deadband / Hysteresis Calculator",
+  "u": "automation/deadband-hysteresis",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "DP Level Transmitter Ranging",
+  "u": "automation/level-transmitter",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Modbus RTU Timing / Baud Rate Calculator",
+  "u": "automation/modbus-timing",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Orifice Plate (DP Flow) Sizing",
+  "u": "automation/orifice-flow-sizing",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "PID Tuning (Reaction Curve)",
+  "u": "automation/pid-tuning",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Relay / Contactor Coil Current & Duty Cycle",
+  "u": "automation/relay-coil-sizing",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "RTD (Pt100) Temperature ↔ Resistance",
+  "u": "automation/rtd-conversion",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Signal Scaling",
+  "u": "automation/signal-scaling",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Thermocouple (Type K) Reference",
+  "u": "automation/thermocouple-reference",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Sizing",
+  "u": "automation/valve-sizing",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "VFD Frequency / Speed Scaling",
+  "u": "automation/vfd-scaling",
+  "d": "2026-08-27",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
   "d": "2026-08-25",
@@ -375,20 +473,6 @@
   "u": "solar/grid-tie-off-grid-comparator",
   "d": "2026-08-20",
   "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Instrument/Sensor Selector",
-  "u": "automation/instrument-selector",
-  "d": "2026-08-20",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Level Control Loop Simulator",
-  "u": "automation/level-control-simulator",
-  "d": "2026-08-20",
-  "c": "Automation",
   "a": "updated"
  },
  {
@@ -1243,90 +1327,6 @@
   "u": "civil/trench-safe-slope",
   "d": "2026-08-14",
   "c": "Civil",
-  "a": "added"
- },
- {
-  "t": "Alarm Setpoint Band Calculator",
-  "u": "automation/alarm-setpoints",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Deadband / Hysteresis Calculator",
-  "u": "automation/deadband-hysteresis",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "DP Level Transmitter Ranging",
-  "u": "automation/level-transmitter",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Modbus RTU Timing / Baud Rate Calculator",
-  "u": "automation/modbus-timing",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Orifice Plate (DP Flow) Sizing",
-  "u": "automation/orifice-flow-sizing",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "PID Tuning (Reaction Curve)",
-  "u": "automation/pid-tuning",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Relay / Contactor Coil Current & Duty Cycle",
-  "u": "automation/relay-coil-sizing",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "RTD (Pt100) Temperature ↔ Resistance",
-  "u": "automation/rtd-conversion",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Signal Scaling",
-  "u": "automation/signal-scaling",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Thermocouple (Type K) Reference",
-  "u": "automation/thermocouple-reference",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Control Valve Sizing",
-  "u": "automation/valve-sizing",
-  "d": "2026-08-14",
-  "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "VFD Frequency / Speed Scaling",
-  "u": "automation/vfd-scaling",
-  "d": "2026-08-14",
-  "c": "Automation",
   "a": "added"
  },
  {
