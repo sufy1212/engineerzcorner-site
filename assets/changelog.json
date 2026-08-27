@@ -490,6 +490,83 @@
   "a": "updated"
  },
  {
+  "t": "Refrigerant Charge — Superheat / Subcooling",
+  "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Balance Point &amp; Backup Heat",
+  "u": "hvac/heat-pump-balance-point-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "SEER / EER / COP Converter",
+  "u": "hvac/seer-eer-cop-converter",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Air Changes per Hour",
+  "u": "hvac/air-changes-per-hour-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Refrigeration / Chiller Capacity",
+  "u": "hvac/chiller-capacity-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible + Latent Cooling Load",
+  "u": "hvac/cooling-load-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing &amp; Air Changes",
+  "u": "hvac/duct-sizing-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Insulation Heat Loss",
+  "u": "hvac/pipe-insulation-heat-loss-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible Heat / Supply Airflow",
+  "u": "hvac/sensible-heat-airflow-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Psychrometric Chart Simulator",
+  "u": "hvac/psychrometric-chart-simulator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Fan Static &amp; Total Pressure",
+  "u": "hvac/fan-static-total-pressure-calculator",
+  "d": "2026-08-27",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
   "d": "2026-08-25",
@@ -714,13 +791,6 @@
   "a": "updated"
  },
  {
-  "t": "Refrigerant Charge — Superheat / Subcooling",
-  "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
-  "d": "2026-08-20",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
   "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
   "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
   "d": "2026-08-20",
@@ -844,20 +914,6 @@
   "u": "mechanical/belt-drive-simulator",
   "d": "2026-08-20",
   "c": "Mechanical",
-  "a": "updated"
- },
- {
-  "t": "Heat Pump Balance Point &amp; Backup Heat",
-  "u": "hvac/heat-pump-balance-point-calculator",
-  "d": "2026-08-20",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "SEER / EER / COP Converter",
-  "u": "hvac/seer-eer-cop-converter",
-  "d": "2026-08-20",
-  "c": "HVAC",
   "a": "updated"
  },
  {
@@ -1239,48 +1295,6 @@
   "a": "updated"
  },
  {
-  "t": "Air Changes per Hour",
-  "u": "hvac/air-changes-per-hour-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Refrigeration / Chiller Capacity",
-  "u": "hvac/chiller-capacity-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Sensible + Latent Cooling Load",
-  "u": "hvac/cooling-load-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Duct Sizing &amp; Air Changes",
-  "u": "hvac/duct-sizing-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Pipe Insulation Heat Loss",
-  "u": "hvac/pipe-insulation-heat-loss-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Sensible Heat / Supply Airflow",
-  "u": "hvac/sensible-heat-airflow-calculator",
-  "d": "2026-08-19",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
   "t": "Fastener Torque Calculator",
   "u": "mechanical/bolt-torque-calculator",
   "d": "2026-08-19",
@@ -1313,13 +1327,6 @@
   "u": "solar/battery-soc-simulator",
   "d": "2026-08-14",
   "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Psychrometric Chart Simulator",
-  "u": "hvac/psychrometric-chart-simulator",
-  "d": "2026-08-14",
-  "c": "HVAC",
   "a": "added"
  },
  {
@@ -1411,13 +1418,6 @@
   "u": "mechanical/shaft-diameter-calculator",
   "d": "2026-08-14",
   "c": "Mechanical",
-  "a": "added"
- },
- {
-  "t": "Fan Static &amp; Total Pressure",
-  "u": "hvac/fan-static-total-pressure-calculator",
-  "d": "2026-08-14",
-  "c": "HVAC",
   "a": "added"
  },
  {
