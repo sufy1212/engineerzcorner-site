@@ -1,52 +1,52 @@
 [
   {
-    "t": "Change Order Impact Calculator",
-    "u": "pm/change-order-impact-calculator",
+    "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
+    "u": "posts/permit-to-work-loto-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Commercial Terms of Project",
-    "u": "pm/commercial-terms",
+    "t": "PID Controller Tuning Basics: What P, I, and D Actually Do",
+    "u": "posts/pid-controller-tuning-basics",
     "d": "2026-08-27"
   },
   {
-    "t": "Cost Contingency &amp; Management Reserve Calculator",
-    "u": "pm/cost-contingency-calculator",
+    "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
+    "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Earned Value Management",
-    "u": "pm/evm",
+    "t": "Legend Sheet in a P&amp;ID Explained",
+    "u": "posts/pid-legend-sheet-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "PM Glossary",
-    "u": "pm/glossary",
+    "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+    "u": "posts/pid-piping-instrumentation-diagram-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Incoterms",
-    "u": "pm/incoterms",
+    "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
+    "u": "posts/pipe-flow-capacity-mannings-equation-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Meeting Cost Calculator",
-    "u": "pm/meeting-cost-calculator",
+    "t": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies",
+    "u": "posts/pipe-flow-head-loss-reynolds-number-regime",
     "d": "2026-08-27"
   },
   {
-    "t": "Meeting Minutes &amp; Action Items",
-    "u": "pm/meeting-minutes",
+    "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
+    "u": "posts/pipe-routing-guide-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Permit to Work / LOTO Checklist",
-    "u": "pm/permit-to-work",
+    "t": "Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess",
+    "u": "posts/pipe-thermal-expansion-why-long-runs-move-more",
     "d": "2026-08-27"
   },
   {
-    "t": "PMP / PMBOK Reference",
-    "u": "pm/pmp-pmbok-reference",
+    "t": "PLC Components Explained: What's Actually Inside the Controller",
+    "u": "posts/plc-components-explained",
     "d": "2026-08-27"
   }
 ]
