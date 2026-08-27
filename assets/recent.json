@@ -1,52 +1,52 @@
 [
   {
-    "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
-    "u": "posts/permit-to-work-loto-explained",
+    "t": "Chiller Machine: Main Parts &amp; Functions",
+    "u": "posts/chiller-machine-parts-functions-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "PID Controller Tuning Basics: What P, I, and D Actually Do",
-    "u": "posts/pid-controller-tuning-basics",
+    "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
+    "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
-    "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
+    "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
+    "u": "posts/concrete-volume-material-takeoff-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Legend Sheet in a P&amp;ID Explained",
-    "u": "posts/pid-legend-sheet-explained",
+    "t": "Conduit Fill: Why 40% Isn't an Arbitrary Number",
+    "u": "posts/conduit-fill-why-the-percentage-limit-exists",
     "d": "2026-08-27"
   },
   {
-    "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
-    "u": "posts/pid-piping-instrumentation-diagram-explained",
+    "t": "Control Valve Components Explained",
+    "u": "posts/control-valve-components-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
-    "u": "posts/pipe-flow-capacity-mannings-equation-explained",
+    "t": "Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake",
+    "u": "posts/control-valve-cv-sizing-oversizing-mistake",
     "d": "2026-08-27"
   },
   {
-    "t": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies",
-    "u": "posts/pipe-flow-head-loss-reynolds-number-regime",
+    "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+    "u": "posts/critical-path-method-cpm-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
-    "u": "posts/pipe-routing-guide-explained",
+    "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
+    "u": "posts/cut-fill-volume-average-end-area-method-explained",
     "d": "2026-08-27"
   },
   {
-    "t": "Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess",
-    "u": "posts/pipe-thermal-expansion-why-long-runs-move-more",
+    "t": "How to Select the Right DC Cable Size in PV Systems",
+    "u": "posts/dc-cable-size-selection-pv-systems",
     "d": "2026-08-27"
   },
   {
-    "t": "PLC Components Explained: What's Actually Inside the Controller",
-    "u": "posts/plc-components-explained",
+    "t": "Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough",
+    "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
     "d": "2026-08-27"
   }
 ]
