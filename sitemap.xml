@@ -113,15 +113,16 @@
   <url><loc>https://www.engineerzcorner.com/hvac/seer-eer-cop-converter</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/sensible-heat-airflow-calculator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/hvac/symbols</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/</loc><lastmod>2026-08-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/automation</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/civil</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/electrical</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/general</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/hvac</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/mechanical</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/pm</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/interview/solar</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/</loc><lastmod>2026-08-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/automation</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/civil</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/electrical</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/general</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/hvac</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/mechanical</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/pm</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/process</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/interview/solar</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/load-stack</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/machine-fixer</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/mechanical/</loc><lastmod>2026-08-27</lastmod><priority>0.8</priority></url>
@@ -329,7 +330,7 @@
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-08-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
