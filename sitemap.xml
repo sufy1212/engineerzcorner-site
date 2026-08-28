@@ -165,7 +165,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-08-29</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -224,6 +224,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/harmonics-thd-k-factor-transformer-derating</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -250,9 +251,9 @@
   <url><loc>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pid-controller-tuning-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>

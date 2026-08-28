@@ -1,5 +1,25 @@
 [
   {
+    "t": "How to Read a Full P&amp;ID: A Complete Worked Walkthrough",
+    "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
+    "d": "2026-08-29"
+  },
+  {
+    "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
+    "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
+    "d": "2026-08-29"
+  },
+  {
+    "t": "Legend Sheet in a P&amp;ID Explained",
+    "u": "posts/pid-legend-sheet-explained",
+    "d": "2026-08-29"
+  },
+  {
+    "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+    "u": "posts/pid-piping-instrumentation-diagram-explained",
+    "d": "2026-08-29"
+  },
+  {
     "t": "Application Timeline Planner",
     "u": "study-abroad/application-timeline-planner",
     "d": "2026-08-27"
@@ -27,26 +47,6 @@
   {
     "t": "Proof of Funds Calculator",
     "u": "study-abroad/proof-of-funds-calculator",
-    "d": "2026-08-27"
-  },
-  {
-    "t": "Score Calculator",
-    "u": "study-abroad/score-calculator",
-    "d": "2026-08-27"
-  },
-  {
-    "t": "SOP / Essay Word Checker",
-    "u": "study-abroad/sop-word-checker",
-    "d": "2026-08-27"
-  },
-  {
-    "t": "University Fee Comparison",
-    "u": "study-abroad/university-fee-comparison",
-    "d": "2026-08-27"
-  },
-  {
-    "t": "Visa Points Calculator",
-    "u": "study-abroad/visa-points-calculator",
     "d": "2026-08-27"
   }
 ]
