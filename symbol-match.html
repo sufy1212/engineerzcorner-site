@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Symbol Match — Drawing Symbol Pairs Game | Engineerz CorneR</title>
+<meta name="description" content="Symbol Match: a memory-pairs game across P&amp;ID/Automation, Process, Mechanical, HVAC, Civil and Solar drawing symbols. Flip cards, find the icon-to-name pairs, beat your best time.">
+<link rel="canonical" href="https://www.engineerzcorner.com/symbol-match">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Symbol Match — Engineering Drawing Symbol Pairs Game | Engineerz CorneR">
+<meta property="og:description" content="Flip cards, find the icon-to-name pairs — P&amp;ID/Automation, Process, Mechanical, HVAC, Civil and Solar symbols, pulled straight from the site's own symbol libraries.">
+<meta property="og:url" content="https://www.engineerzcorner.com/symbol-match">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Symbol Match — Engineering Drawing Symbol Pairs Game | Engineerz CorneR">
+<meta name="twitter:description" content="Flip cards, find the icon-to-name pairs across six engineering disciplines.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/common-blocks.css">
+<link rel="stylesheet" href="symbol-match.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
+<link rel="stylesheet" href="assets/sidebars.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+    {"@type":"ListItem","position":2,"name":"Symbol Match","item":"https://www.engineerzcorner.com/symbol-match"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="./">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Symbol Match</span></div></nav>
+
+
+<nav class="sm2-nav">
+  <span class="sm2-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="sm2-back" href="games">← All games</a>
+</nav>
+
+<div class="sm2-arena">
+<div class="sm2-arena-grid"></div>
+<div class="wrap">
+
+  <div class="sm2-hero">
+    <div class="sm2-hero-inner">
+      <div class="sm2-eyebrow"><span class="sm2-eyebrow-dot"></span> Symbol recognition game</div>
+      <h1 class="sm2-title">Symbol <span class="glow">Match</span></h1>
+      <p class="sm2-sub">A memory-pairs drill built from the site's own symbol libraries. Flip two cards, find the icon that goes with its name, clear the board in as few moves as you can — across P&amp;ID/Automation, Process, Mechanical, HVAC, Civil and Solar.</p>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div class="sm2-card" id="startScreen">
+    <div class="sm2-start-stats">
+      <span class="sm2-chip">Best (Mixed): <b id="bestVal">—</b></span>
+      <span class="sm2-chip">36 symbols</span>
+      <span class="sm2-chip">6 disciplines</span>
+    </div>
+    <ul class="sm2-how">
+      <li><span class="sm2-how-num">1</span><span>Every card starts face-down. Tap one to flip it, then tap a second — a <b>symbol icon</b> and its matching <b>name</b> make a pair.</span></li>
+      <li><span class="sm2-how-num">2</span><span>A correct pair stays face-up. A wrong pair flips back after a moment — remember what you saw.</span></li>
+      <li><span class="sm2-how-num">3</span><span>Clear the whole board in as few moves and as little time as possible. Pick one discipline to drill, or Mixed for a wider pull.</span></li>
+    </ul>
+    <div class="sm2-cat-label">Choose a set</div>
+    <div class="sm2-cat-grid" id="catGrid"></div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="sm2-card">
+      <div class="sm2-hud">
+        <div class="sm2-hud-group">
+          <div class="sm2-hud-item">Moves <b id="movesVal">0</b></div>
+          <div class="sm2-hud-item">Time <b id="timeVal">0:00</b></div>
+        </div>
+        <div class="sm2-hud-item" id="pairsLeft">0 / 0 pairs</div>
+      </div>
+
+      <div class="sm2-board" id="board"></div>
+
+      <div class="sm2-footrow">
+        <span class="sm2-set-tag" id="setTag">Mixed</span>
+        <button class="sm2-restart-btn" id="restartBtn">Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div class="hidden" id="overScreen">
+    <div class="sm2-card">
+      <div class="sm2-over-title">Board cleared</div>
+      <div class="sm2-over-time" id="finalTime">0:00</div>
+      <div class="sm2-over-grid">
+        <span class="sm2-chip">Moves <b id="finalMoves">0</b></span>
+        <span class="sm2-chip">Best <b id="finalBest">—</b></span>
+      </div>
+      <button class="sm2-btn" id="againBtn">Play again</button>
+      <div style="height:10px;"></div>
+      <button class="ecs-share-btn ecs-dark" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/></svg>Share result</button>
+      <div style="height:10px;"></div>
+      <button class="sm2-btn ghost" id="backBtn">Back to games</button>
+    </div>
+  </div>
+
+  <div class="reftable-section">
+    <h2>About Symbol Match</h2>
+    <p class="reftable-note">Every icon in this game comes straight from Engineerz CorneR's own per-discipline symbol libraries — the same <a href="automation/symbols">Automation</a>, <a href="process/symbols">Process</a>, <a href="mechanical/symbols">Mechanical</a>, <a href="hvac/symbols">HVAC</a>, <a href="civil/symbols">Civil</a> and <a href="solar/symbols">Solar</a> reference pages you'd use to look a symbol up. This game just turns recognizing them into something faster to practice.</p>
+    <p class="reftable-note">Pick a single discipline to drill it in isolation, or Mixed to pull a random spread across all six — useful once individual sets start feeling too easy. Time and moves are tracked per set, with your best kept locally in this browser.</p>
+  </div>
+
+  <div class="sm2-footer">Full symbol references live in each <a href="./">discipline hub</a>.</div>
+
+</div>
+</div>
+
+<div class="sm2-toast" id="toast"></div>
+
+<script src="symbol-match.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtn"), function () {
+    var time = document.getElementById("finalTime").textContent;
+    var moves = document.getElementById("finalMoves").textContent;
+    return {
+      title: "Symbol Match — Engineerz CorneR",
+      text: "I cleared the board in " + time + " and " + moves + " moves in Symbol Match \uD83D\uDD0D Can you beat me?",
+      url: "https://www.engineerzcorner.com/symbol-match"
+    };
+  });
+});
+</script>
+
+
+<a href="./" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="about">About</a> &nbsp;·&nbsp; <a href="contact">Contact</a> &nbsp;·&nbsp; <a href="privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="changelog">Changelog</a> &nbsp;·&nbsp; <a href="feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
