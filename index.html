@@ -509,7 +509,7 @@
         <div class="pagestack"><div class="pg pg3"></div><div class="pg pg2"></div><div class="pg"></div></div>
         <div class="typecursor"></div>
         <div class="shine"></div>
-        <span class="status" id="postsBadgeGrid">118 Articles</span>
+        <span class="status" id="postsBadgeGrid">150 Articles</span>
         <span class="card-num">01</span>
         <div class="card-inner">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path class="writeline2" d="M9 7h7"></path><path class="writeline2" d="M9 11h7"></path><path class="writeline2" d="M9 15h4"></path></svg></div>
@@ -973,6 +973,10 @@
     var postsBadge = document.getElementById('postsBadge');
     if(postsBadge && stats.postsTotal > 0){
       postsBadge.textContent = stats.postsTotal + ' posts';
+    }
+    var postsBadgeGrid = document.getElementById('postsBadgeGrid');
+    if(postsBadgeGrid && stats.postsTotal > 0){
+      postsBadgeGrid.textContent = stats.postsTotal + ' Articles';
     }
     var fcBadge = document.getElementById('flashcardsBadge');
     if(fcBadge && stats.flashcardSymbols > 0){
