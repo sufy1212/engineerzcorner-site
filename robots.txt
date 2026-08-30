@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /scripts/
 
 Sitemap: https://www.engineerzcorner.com/sitemap.xml
 
