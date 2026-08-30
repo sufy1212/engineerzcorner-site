@@ -1,5 +1,45 @@
 [
   {
+    "t": "Main Components of a 33 kV Substation Explained",
+    "u": "posts/33kv-substation-main-components-explained",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
+    "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
+    "u": "posts/cav-vs-vav-air-volume-control-explained",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes",
+    "u": "posts/fire-pump-room-installation-commissioning-mistakes",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "How to Read a Full P&amp;ID: A Complete Worked Walkthrough",
+    "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings",
+    "u": "posts/mep-sleeves-installation-guide-explained",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "Transformer Turn Ratio (TTR) Test Explained",
+    "u": "posts/transformer-turn-ratio-ttr-test-explained",
+    "d": "2026-08-30"
+  },
+  {
+    "t": "What Is an Inverter? DC-to-AC Conversion Explained",
+    "u": "posts/what-is-an-inverter-dc-ac-explained",
+    "d": "2026-08-30"
+  },
+  {
     "t": "Change Order Impact Calculator",
     "u": "pm/change-order-impact-calculator",
     "d": "2026-08-30"
@@ -7,46 +47,6 @@
   {
     "t": "Commercial Terms of Project",
     "u": "pm/commercial-terms",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Cost Contingency &amp; Management Reserve Calculator",
-    "u": "pm/cost-contingency-calculator",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Earned Value Management",
-    "u": "pm/evm",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "PM Glossary",
-    "u": "pm/glossary",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Incoterms",
-    "u": "pm/incoterms",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Meeting Cost Calculator",
-    "u": "pm/meeting-cost-calculator",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Meeting Minutes &amp; Action Items",
-    "u": "pm/meeting-minutes",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Permit to Work / LOTO Checklist",
-    "u": "pm/permit-to-work",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "PMP / PMBOK Reference",
-    "u": "pm/pmp-pmbok-reference",
     "d": "2026-08-30"
   }
 ]

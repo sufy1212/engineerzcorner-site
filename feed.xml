@@ -4,18 +4,67 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Legend Sheet in a P&amp;ID Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
-    <description>A legend sheet is the reference table that defines every symbol, line type and tag format on a P&amp;ID — why everyone reads the same drawing the same way.</description>
-    <pubDate>Sat, 29 Aug 2026 09:18:08 GMT</pubDate>
+    <title>Main Components of a 33 kV Substation Explained</title>
+    <link>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</guid>
+    <description>Every stage of a 33 kV substation feeding a 0.433 kV LT network — HT switchgear, transformer feeder, power transformer, LT panel and outgoing distribution.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit</title>
+    <link>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</guid>
+    <description>Cable tray, ladder, trunking, and conduit compared — construction, protection level, typical load, where each is used, and how to choose.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>CAV vs VAV: Constant vs Variable Air Volume Explained</title>
+    <link>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</guid>
+    <description>CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes</title>
+    <link>https://www.engineerzcorner.com/posts/fire-pump-room-installation-commissioning-mistakes.html</link>
+    <guid>https://www.engineerzcorner.com/posts/fire-pump-room-installation-commissioning-mistakes.html</guid>
+    <description>A correctly selected fire pump still fails if the room isn't installed right — valve position, suction, pressure settings, sensing lines, and controls.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
   </item>
   <item>
     <title>How to Read a Full P&amp;ID: A Complete Worked Walkthrough</title>
     <link>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough.html</link>
     <guid>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough.html</guid>
-    <description>A complete, start-to-finish walkthrough of reading a P&amp;ID — equipment and line symbols, tag anatomy, valve types, a fully worked example tracing a real control loop end to end, common misreads, and revision/document-control basics.</description>
-    <pubDate>Sat, 29 Aug 2026 09:11:35 GMT</pubDate>
+    <description>A start-to-finish walkthrough of reading a P&amp;ID — symbols, tag anatomy, valve types, and a fully worked example tracing one real control loop end to end.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings</title>
+    <link>https://www.engineerzcorner.com/posts/mep-sleeves-installation-guide-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/mep-sleeves-installation-guide-explained.html</guid>
+    <description>What an MEP sleeve is, the seven locations they're cast into, why they're used, precautions, and the site sequence from drawing to final inspection.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Transformer Turn Ratio (TTR) Test Explained</title>
+    <link>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained.html</guid>
+    <description>How the TTR test verifies winding ratios, polarity and connections, and detects shorted turns — procedure, example readings and acceptance criteria.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>What Is an Inverter? DC-to-AC Conversion Explained</title>
+    <link>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</guid>
+    <description>How an inverter turns DC into AC — switching, filtering, waveform types (pure sine, modified sine, square wave), key components, and typical uses.</description>
+    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
+  </item>
+  <item>
+    <title>Legend Sheet in a P&amp;ID Explained</title>
+    <link>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
+    <description>A legend sheet is the reference table that defines every symbol, line type and tag format on a P&amp;ID — why everyone reads the same drawing the same way.</description>
+    <pubDate>Sat, 29 Aug 2026 09:18:08 GMT</pubDate>
   </item>
   <item>
     <title>P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained</title>
@@ -36,13 +85,6 @@
     <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
     <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
     <description>How a 33/11 kV substation is built, walked through its single line diagram from incoming line to distribution feeders — every equipment item and its function.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Main Components of a 33 kV Substation Explained</title>
-    <link>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</guid>
-    <description>Every stage of a 33 kV substation feeding a 0.433 kV LT network — incoming supply, HT switchgear, busbar, transformer feeder, power transformer, LT panel and outgoing distribution — plus earthing and auxiliary systems.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
   <item>
@@ -169,48 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
     <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
     <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Glands: What They Do and How to Get the Selection Right</title>
-    <link>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-gland-overview-selection-guide.html</guid>
-    <description>What a cable gland is actually holding together, the main gland types and their parts, a selection and quality-inspection checklist.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Size &amp; Current Capacity: A Practical Selection Guide</title>
-    <link>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-size-current-capacity-guide.html</guid>
-    <description>Approximate current-carrying capacity for copper and aluminium cables by cross-section, common house-wiring cable sizes by load.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit</title>
-    <link>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</guid>
-    <description>Cable tray, cable ladder, cable trunking, and conduit compared — construction, protection level, typical load, where each is used, and how to choose between them.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>CAV vs VAV: Constant vs Variable Air Volume Explained</title>
-    <link>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</guid>
-    <description>CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cavitation vs. Flashing in Control Valves: What's the Difference?</title>
-    <link>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cavitation-vs-flashing-control-valve-explained.html</guid>
-    <description>Cavitation and flashing both start with the same vapor-pressure event in a control valve — downstream is what makes one loud and pitted, the other eroded.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Centrifugal Pump Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/centrifugal-pump-components-explained.html</guid>
-    <description>What every part of a centrifugal pump actually does — impeller, volute casing, shaft, seal, bearings, and coupling — component by component.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>
