@@ -21,27 +21,6 @@
   "a": "new"
  },
  {
-  "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
-  "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
-  "d": "2026-08-29",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
-  "u": "posts/pid-piping-instrumentation-diagram-explained",
-  "d": "2026-08-29",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Legend Sheet in a P&amp;ID Explained",
-  "u": "posts/pid-legend-sheet-explained",
-  "d": "2026-08-29",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Instrument/Sensor Selector",
   "u": "automation/instrument-selector",
   "d": "2026-08-27",
@@ -868,6 +847,20 @@
   "a": "updated"
  },
  {
+  "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
+  "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+  "u": "posts/pid-piping-instrumentation-diagram-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
   "u": "posts/pipe-routing-guide-explained",
   "d": "2026-08-27",
@@ -933,6 +926,13 @@
  {
   "t": "Sag in Transmission Lines Explained",
   "u": "posts/sag-in-transmission-lines-explained",
+  "d": "2026-08-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Legend Sheet in a P&amp;ID Explained",
+  "u": "posts/pid-legend-sheet-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
