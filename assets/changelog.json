@@ -427,6 +427,34 @@
   "a": "updated"
  },
  {
+  "t": "Heat Exchanger Sizing (LMTD)",
+  "u": "process/heat-exchanger-lmtd-sizing",
+  "d": "2026-08-30",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "NPSH Available Calculator",
+  "u": "process/npsh-available-calculator",
+  "d": "2026-08-30",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Wall Thickness — ASME B31.3",
+  "u": "process/pipe-wall-thickness-asme-b31-3",
+  "d": "2026-08-30",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Relief Valve (PSV) Sizing",
+  "u": "process/relief-valve-sizing",
+  "d": "2026-08-30",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
   "t": "Symbol Match",
   "u": "symbol-match",
   "d": "2026-08-29",
@@ -1848,13 +1876,6 @@
   "a": "updated"
  },
  {
-  "t": "Heat Exchanger Sizing (LMTD)",
-  "u": "process/heat-exchanger-lmtd-sizing",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
   "t": "Process Line Sizing",
   "u": "process/line-sizing-velocity",
   "d": "2026-08-27",
@@ -1862,29 +1883,8 @@
   "a": "updated"
  },
  {
-  "t": "NPSH Available Calculator",
-  "u": "process/npsh-available-calculator",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Pipe Wall Thickness — ASME B31.3",
-  "u": "process/pipe-wall-thickness-asme-b31-3",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
   "t": "Dilution Purge Gas Sizing",
   "u": "process/purge-gas-sizing",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Relief Valve (PSV) Sizing",
-  "u": "process/relief-valve-sizing",
   "d": "2026-08-27",
   "c": "Process",
   "a": "updated"
