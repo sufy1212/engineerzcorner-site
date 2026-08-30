@@ -1,5 +1,89 @@
 [
  {
+  "t": "Alarm Setpoint Band Calculator",
+  "u": "automation/alarm-setpoints",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Deadband / Hysteresis Calculator",
+  "u": "automation/deadband-hysteresis",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "DP Level Transmitter Ranging",
+  "u": "automation/level-transmitter",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Modbus RTU Timing / Baud Rate Calculator",
+  "u": "automation/modbus-timing",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Orifice Plate (DP Flow) Sizing",
+  "u": "automation/orifice-flow-sizing",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "PID Tuning (Reaction Curve)",
+  "u": "automation/pid-tuning",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Relay / Contactor Coil Current & Duty Cycle",
+  "u": "automation/relay-coil-sizing",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "RTD (Pt100) Temperature ↔ Resistance",
+  "u": "automation/rtd-conversion",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Signal Scaling",
+  "u": "automation/signal-scaling",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Thermocouple (Type K) Reference",
+  "u": "automation/thermocouple-reference",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Sizing",
+  "u": "automation/valve-sizing",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "VFD Frequency / Speed Scaling",
+  "u": "automation/vfd-scaling",
+  "d": "2026-08-30",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
   "t": "Symbol Match",
   "u": "symbol-match",
   "d": "2026-08-29",
@@ -51,90 +135,6 @@
  {
   "t": "Level Control Loop Simulator",
   "u": "automation/level-control-simulator",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Alarm Setpoint Band Calculator",
-  "u": "automation/alarm-setpoints",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Deadband / Hysteresis Calculator",
-  "u": "automation/deadband-hysteresis",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "DP Level Transmitter Ranging",
-  "u": "automation/level-transmitter",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Modbus RTU Timing / Baud Rate Calculator",
-  "u": "automation/modbus-timing",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Orifice Plate (DP Flow) Sizing",
-  "u": "automation/orifice-flow-sizing",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "PID Tuning (Reaction Curve)",
-  "u": "automation/pid-tuning",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Relay / Contactor Coil Current & Duty Cycle",
-  "u": "automation/relay-coil-sizing",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "RTD (Pt100) Temperature ↔ Resistance",
-  "u": "automation/rtd-conversion",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Signal Scaling",
-  "u": "automation/signal-scaling",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Thermocouple (Type K) Reference",
-  "u": "automation/thermocouple-reference",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Sizing",
-  "u": "automation/valve-sizing",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "VFD Frequency / Speed Scaling",
-  "u": "automation/vfd-scaling",
   "d": "2026-08-27",
   "c": "Automation",
   "a": "updated"
