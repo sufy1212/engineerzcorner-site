@@ -1,5 +1,10 @@
 [
   {
+    "t": "Cooling Tower Types Explained",
+    "u": "posts/cooling-tower-types-explained",
+    "d": "2026-09-01"
+  },
+  {
     "t": "Pump Types Explained: Centrifugal to PD",
     "u": "posts/pump-types-explained",
     "d": "2026-09-01"
@@ -42,11 +47,6 @@
   {
     "t": "Transformer Turn Ratio (TTR) Test Explained",
     "u": "posts/transformer-turn-ratio-ttr-test-explained",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "What Is an Inverter? DC-to-AC Conversion Explained",
-    "u": "posts/what-is-an-inverter-dc-ac-explained",
     "d": "2026-08-30"
   }
 ]
