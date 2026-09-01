@@ -100,7 +100,7 @@
     <div><h1>Engineering Guides</h1><div class="hero-sub">Step-by-step method guides — how to actually approach each job, not just the calculator behind it</div></div>
   </div>
   <div class="intro">
-    Ten practical how-to guides covering the method behind this site's automation calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work. Each guide stands on its own; jump straight to the one you need.
+    Eleven practical how-to guides covering the method behind this site's automation calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work. Each guide stands on its own; jump straight to the one you need.
   </div>
 
   <div class="guide-toc">
@@ -114,6 +114,7 @@
       <a href="#g-atio" class="guide-toc-link">8. How to Select I/O for a PLC Application</a>
       <a href="#g-atsis" class="guide-toc-link">9. Safety Instrumented Systems &amp; SIL Basics</a>
       <a href="#g-atground" class="guide-toc-link">10. How to Ground and Shield Instrumentation Cable</a>
+      <a href="#g-atsensor" class="guide-toc-link">11. How to Select the Right Industrial Sensor</a>
   </div>
 
   <div class="step" id="g-atpid">
@@ -245,6 +246,21 @@
       <li><b>Keep instrument signal cable separated from power cable</b> in cable trays and conduit — running low-level analog signal wiring parallel to VFD or motor power cable induces noise, and adequate physical separation (or a dedicated tray) avoids it.</li>
       <li><b>Use twisted-pair cable for analog signals</b>, and verify the shield is continuous and intact along the full run — a shield that's been nicked, cut, or left unterminated partway along a run provides little of its intended noise protection.</li>
     </ol>
+  </div>
+
+  <div class="step" id="g-atsensor">
+    <div class="step-head"><span class="step-num">11</span><h2>How to Select the Right Industrial Sensor</h2></div>
+    <div class="step-desc">Start from the target and the question you need answered, not from a sensor catalog.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Decide discrete or analog first.</b> If the question is "is it there or not," a simple discrete presence sensor is all that's needed; if the question is "how much," an analog sensor with a continuous output is required — specifying an analog sensor for a simple presence check adds cost and complexity for no benefit.</li>
+      <li><b>Identify the target material</b> before picking a sensing principle. Inductive sensors only detect metal; capacitive sensors detect almost any material but with less precision; photoelectric sensors work on nearly any surface at longer range but are affected by color and gloss.</li>
+      <li><b>Check the environment the sensor has to survive</b> — washdown, dust, vibration, temperature extremes, or a hazardous area classification — since a sensor that performs perfectly on the bench can fail quickly in an environment it wasn't rated for.</li>
+      <li><b>Match the output signal to the controller's input capability</b> — discrete NPN/PNP, analog 4–20mA or 0–10V, or a digital fieldbus — confirming this before purchase avoids discovering an incompatible output type during commissioning.</li>
+      <li><b>Confirm response speed and range against the actual application</b>, not a generic spec — a sensor rated for a long detection range at a slow response speed may not keep up with fast-moving parts on a high-speed line, even though the range spec alone looks adequate.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      Sensor selection mistakes usually trace back to skipping the first question — discrete vs analog — and jumping straight to comparing specific sensor models. Getting that one decision right up front eliminates most of the wrong options before target material or environment even enter the picture.
+    </div>
   </div>
 
   <footer><a href="./">← Automation Index</a></footer>
