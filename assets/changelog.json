@@ -1,5 +1,12 @@
 [
  {
+  "t": "Circuit Breaker Types Explained: MCB to OCB",
+  "u": "posts/circuit-breaker-types-explained",
+  "d": "2026-09-01",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Alarm Setpoint Band Calculator",
   "u": "automation/alarm-setpoints",
   "d": "2026-08-30",

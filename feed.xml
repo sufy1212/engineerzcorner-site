@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Circuit Breaker Types Explained: MCB to OCB</title>
+    <link>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</guid>
+    <description>What a circuit breaker actually does, the main types — MCB, MCCB, ACB, VCB, OCB, SF6, air-blast, GIS — its parts, an interrupting-medium reference, a voltage-class selection guide, and common failure points.</description>
+    <pubDate>Tue, 01 Sep 2026 03:03:46 GMT</pubDate>
+  </item>
+  <item>
     <title>Main Components of a 33 kV Substation Explained</title>
     <link>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
     <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating</title>
-    <link>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</link>
-    <guid>https://www.engineerzcorner.com/posts/busbar-sizing-thermal-electrodynamic-withstand.html</guid>
-    <description>Busbar cross-section from continuous current rating, then checked against short-circuit thermal withstand and electrodynamic force.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>

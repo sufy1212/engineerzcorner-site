@@ -1,5 +1,10 @@
 [
   {
+    "t": "Circuit Breaker Types Explained: MCB to OCB",
+    "u": "posts/circuit-breaker-types-explained",
+    "d": "2026-09-01"
+  },
+  {
     "t": "Main Components of a 33 kV Substation Explained",
     "u": "posts/33kv-substation-main-components-explained",
     "d": "2026-08-30"
@@ -42,11 +47,6 @@
   {
     "t": "Change Order Impact Calculator",
     "u": "pm/change-order-impact-calculator",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Commercial Terms of Project",
-    "u": "pm/commercial-terms",
     "d": "2026-08-30"
   }
 ]
