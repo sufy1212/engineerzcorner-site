@@ -100,7 +100,7 @@
     <div><h1>Comparisons</h1><div class="hero-sub">Head-to-head instrumentation, signal and control choices — side by side, so the trade-off is visible at a glance</div></div>
   </div>
   <div class="intro">
-    Eight common automation/controls decisions, laid out as direct comparisons rather than separate articles — same criteria, side by side, with a plain-language verdict on when each option actually wins. Jump straight to the one you need.
+    Nine common automation/controls decisions, laid out as direct comparisons rather than separate articles — same criteria, side by side, with a plain-language verdict on when each option actually wins. Jump straight to the one you need.
   </div>
 
   <div class="guide-toc">
@@ -112,6 +112,7 @@
       <a href="#cmp-atlevel" class="guide-toc-link">6. DP vs Ultrasonic vs Radar Level Measurement</a>
       <a href="#cmp-atlogic" class="guide-toc-link">7. Relay Logic vs PLC Logic</a>
       <a href="#cmp-atwireless" class="guide-toc-link">8. Wired vs Wireless Instrumentation</a>
+      <a href="#cmp-atprotocol" class="guide-toc-link">9. Modbus vs Profibus vs Profinet vs Ethernet/IP</a>
   </div>
 
   <div class="step" id="cmp-atsignal">
@@ -257,6 +258,24 @@
       </table>
     </div>
     <div class="hint" style="margin:10px 16px 0;">Wired instrumentation remains the default for any loop where control performance, update rate, or reliability genuinely matters — most closed-loop process control. Wireless instrumentation earns its place specifically for monitoring points that are expensive or impractical to cable — remote tanks, rotating equipment, retrofit projects — where a slower update rate and battery-powered operation are an acceptable trade for avoiding a costly cable run. It's rarely the right choice yet for tight, fast-acting control loops.</div>
+  </div>
+
+  <div class="step" id="cmp-atprotocol">
+    <div class="step-head"><span class="step-num">9</span><h2>Modbus vs Profibus vs Profinet vs Ethernet/IP</h2></div>
+    <div class="step-desc">All four move process data between controllers and field devices — the real differences are wiring, speed, and which vendor ecosystem each one comes from.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Modbus (RTU/TCP)</th><th>Profibus</th><th>Profinet</th><th>Ethernet/IP</th></tr></thead>
+        <tbody>
+      <tr><td>Physical medium</td><td>RS-485 (RTU) or Ethernet (TCP)</td><td>RS-485 twisted pair</td><td>Ethernet</td><td>Ethernet</td></tr>
+      <tr><td>Typical speed</td><td>Slow (RTU) to fast (TCP)</td><td>Moderate, deterministic</td><td>Fast, real-time capable</td><td>Fast, real-time capable</td></tr>
+      <tr><td>Openness</td><td>Fully open, vendor-neutral</td><td>Open standard, Siemens-originated</td><td>Open standard, Siemens-originated</td><td>Open standard, Rockwell-originated</td></tr>
+      <tr><td>Typical ecosystem</td><td>Widely supported across nearly all vendors</td><td>Strong in European/Siemens-centric plants</td><td>Strong in European/Siemens-centric plants</td><td>Strong in North American/Rockwell-centric plants</td></tr>
+      <tr><td>Typical use</td><td>Simple point-to-point or small networks, legacy device integration</td><td>Established factory and process automation networks</td><td>Modern high-speed factory automation, motion control</td><td>Modern high-speed factory automation, motion control</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Modbus wins on sheer openness and simplicity — it's the closest thing to a universal fallback when a device needs to talk to almost anything. Profibus and Profinet dominate in Siemens-centric plants and regions, while Ethernet/IP plays the equivalent role in Rockwell-centric plants — picking between the Ethernet-based options usually comes down to which vendor ecosystem the rest of the plant is already built around, more than a technical difference between the protocols themselves.</div>
   </div>
 
   <footer><a href="./">← Automation Index</a></footer>
