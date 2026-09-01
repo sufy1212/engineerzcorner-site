@@ -72,7 +72,7 @@
     <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18"></path><path d="M3 8h5M16 8h5M3 16h5M16 16h5"></path></svg></div>
     <div><h1>Process/Instrumentation Comparisons</h1><div class="hero-sub">Head-to-head relief, valve and process choices — side by side, so the trade-off is visible at a glance</div></div>
   </div>
-  <div class="intro">Six common process engineering decisions, laid out as direct comparisons rather than separate articles.</div>
+  <div class="intro">Eight common process engineering decisions, laid out as direct comparisons rather than separate articles.</div>
 
   <div class="mech-tabs">
     <a href="./">Process Index</a>
@@ -98,6 +98,7 @@
     <a href="#cmp-apicode" class="guide-toc-link">5. API 520 vs API 521</a>
     <a href="#cmp-blanketpurge" class="guide-toc-link">6. Nitrogen Blanketing vs Dilution Purging</a>
     <a href="#cmp-b313vsb311" class="guide-toc-link">7. ASME B31.3 vs B31.1</a>
+    <a href="#cmp-hazoplopa" class="guide-toc-link">8. HAZOP vs LOPA</a>
   </div>
 
   <div class="step" id="cmp-psvdisk">
@@ -216,6 +217,24 @@
       </table>
     </div>
     <div class="cmp-verdict"><b>In practice:</b> which code governs is set by the piping's function and the project's contractual/regulatory basis, not by which one produces a thinner wall — boiler external piping falls under B31.1 even inside an otherwise B31.3 process plant, and that boundary has to be identified explicitly in the design basis rather than assumed from the fluid alone.</div>
+  </div>
+
+  <div class="step" id="cmp-hazoplopa">
+    <div class="step-head"><span class="step-num">8</span><h2>HAZOP vs LOPA</h2></div>
+    <div class="step-desc">HAZOP finds the hazards; LOPA decides how much independent protection each one actually needs — they're sequential steps, not competing methods.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>HAZOP</th><th>LOPA</th></tr></thead>
+        <tbody>
+          <tr><td>Primary question</td><td>What deviations can occur, and what are the consequences?</td><td>Is enough independent protection already in place for this specific scenario?</td></tr>
+          <tr><td>Output type</td><td>Qualitative — a list of deviations, causes, consequences, and safeguards</td><td>Semi-quantitative — order-of-magnitude risk ranking against a target frequency</td></tr>
+          <tr><td>When it's typically done</td><td>Earlier — once a design is developed enough to review node by node</td><td>Later — on specific high-consequence scenarios flagged during or after HAZOP</td></tr>
+          <tr><td>Level of rigor per scenario</td><td>Broad but shallow — covers every node and deviation systematically</td><td>Narrow but deep — focused study of individual high-risk scenarios only</td></tr>
+          <tr><td>Typical outcome</td><td>Action items, safeguard adequacy judgements</td><td>A determination of whether a SIF (safety instrumented function) or added independent protection layer is required, and at what SIL</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cmp-verdict"><b>In practice:</b> LOPA is not a substitute for HAZOP — it's typically triggered by specific high-consequence scenarios a HAZOP already identified, applied only to the subset of scenarios where a more rigorous, semi-quantitative answer is actually needed to decide on additional protection layers like a safety instrumented function.</div>
   </div>
 
   <footer>These are general engineering summaries — always verify against the current edition of the applicable code for a specific installation. <a href="./">← Process Index</a></footer>
