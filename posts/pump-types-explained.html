@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pump Types Explained: Centrifugal vs Positive Displacement | Engineerz CorneR</title>
+<meta name="description" content="What a pump actually does, the main types — centrifugal, gear, screw, vane, diaphragm, piston, peristaltic, progressive cavity — its parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pump-types-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pump Types Explained: Centrifugal vs Positive Displacement">
+<meta property="og:description" content="What a pump actually does, eight common pump types, its parts, a centrifugal-vs-positive-displacement comparison, a selection checklist, and common failure points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pump-types-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pump Types Explained: Centrifugal vs Positive Displacement">
+<meta name="twitter:description" content="What a pump actually does, eight common pump types, its parts, a centrifugal-vs-positive-displacement comparison, a selection checklist, and common failure points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pump-types-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pump Types Explained: Centrifugal vs Positive Displacement",
+      "item": "https://www.engineerzcorner.com/posts/pump-types-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pump Types Explained: Centrifugal vs Positive Displacement",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+  "description": "What a pump actually does, eight common pump types, its parts, a centrifugal-vs-positive-displacement comparison, a selection checklist, and common failure points.",
+  "url": "https://www.engineerzcorner.com/posts/pump-types-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/pump-types-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pump Types Explained: Centrifugal vs Positive Displacement</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚙ Mechanical &middot; Pumps</span>
+    <h1>Pump Types Explained: Centrifugal to PD</h1>
+    <p class="hero-sub">Every pump moves fluid from one point to another, but it does that in one of two fundamentally different ways &mdash; spinning it fast enough to fling it forward, or physically trapping and displacing a fixed volume &mdash; and that split is what actually defines every type below.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Mechanical / Pumps</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="90" y="76" width="170" height="18" rx="2" fill="#3E4E70" stroke="#7e97ac" stroke-width="1"/>
+      <text x="105" y="66" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">SUCTION</text>
+      <circle cx="345" cy="85" r="42" fill="#122845" stroke="#C9A034" stroke-width="1.6"/>
+      <circle cx="345" cy="85" r="16" fill="none" stroke="#E4C878" stroke-width="2.5"/>
+      <line x1="345" y1="69" x2="345" y2="101" stroke="#E4C878" stroke-width="2"/>
+      <line x1="329" y1="85" x2="361" y2="85" stroke="#E4C878" stroke-width="2"/>
+      <line x1="333" y1="73" x2="357" y2="97" stroke="#E4C878" stroke-width="2"/>
+      <line x1="357" y1="73" x2="333" y2="97" stroke="#E4C878" stroke-width="2"/>
+      <text x="313" y="140" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">PUMP</text>
+      <line x1="387" y1="85" x2="450" y2="85" stroke="#3E4E70" stroke-width="4"/>
+      <rect x="450" y="76" width="170" height="18" rx="2" fill="#3E4E70" stroke="#7e97ac" stroke-width="1"/>
+      <text x="600" y="66" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">DISCHARGE</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Every pump falls into one of two families &mdash; centrifugal (kinetic, spins the fluid) or positive displacement (traps and moves a fixed volume each cycle) &mdash; and that split, not the pump's size, decides how it actually behaves.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">A centrifugal pump's flow drops as system pressure rises; a positive displacement pump's flow stays nearly constant regardless of pressure &mdash; which is exactly why the two need completely different overpressure protection.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Dead-heading (blocking the outlet) overheats a centrifugal pump but can burst a positive displacement pump or its piping &mdash; PD pumps need a relief valve on the discharge line for this reason alone.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Viscosity is the fastest way to rule pumps in or out &mdash; centrifugal efficiency collapses on thick fluids, while most positive displacement types handle high viscosity comfortably.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What a pump actually does</h2>
+    <p>A pump adds mechanical energy to a fluid so it can move against friction, elevation, and pressure in a system. How it adds that energy splits every pump into one of two families. A centrifugal pump uses a spinning impeller to accelerate fluid outward, converting that velocity into pressure as the fluid slows down in the casing. A positive displacement (PD) pump instead traps a fixed volume of fluid in a chamber and physically pushes it out the discharge side, cycle after cycle. Almost every practical difference between pump types &mdash; how flow responds to pressure, how they handle viscosity, and what protects them from damage &mdash; traces back to that one split.</p>
+
+    <h2><span class="h2-dot"></span>Types of pumps</h2>
+    <p class="post-lede">Different mechanisms trade off flow-vs-pressure behavior, viscosity tolerance, self-priming ability, and how precisely they can meter flow &mdash; no single type wins across every duty.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"></circle><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line><line x1="19" y1="12" x2="22" y2="8"></line></svg></div>
+          <div><div class="device-name">Centrifugal Pump</div><div class="device-full">Kinetic, rotating impeller</div></div>
+        </div>
+        <div class="device-desc">An impeller spins fluid outward, and the casing converts that velocity into pressure. High flow at moderate pressure, simple and cheap, but flow falls off sharply as system head rises &mdash; the default for water and low-viscosity duties.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="5"></circle><circle cx="16" cy="12" r="5"></circle></svg></div>
+          <div><div class="device-name">Gear Pump</div><div class="device-full">Rotary positive displacement</div></div>
+        </div>
+        <div class="device-desc">Two meshing gears trap fluid in the spaces between their teeth and carry it around the casing to the outlet. Smooth, near-constant flow, good for viscous fluids like oils &mdash; common in lubrication and hydraulic systems.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-4 3-7 8-7s8 3 8 7-3 7-8 7-8-3-8-7z"></path><path d="M6 12h12" stroke-dasharray="1.5 2.2"></path></svg></div>
+          <div><div class="device-name">Screw Pump</div><div class="device-full">Rotary positive displacement</div></div>
+        </div>
+        <div class="device-desc">One or more helical screws rotate inside a close-fitting casing, moving fluid axially in a smooth, continuous, low-pulsation flow. Handles high viscosity and some entrained gas well &mdash; used in fuel oil and viscous chemical transfer.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><line x1="12" y1="4" x2="12" y2="10"></line><line x1="12" y1="12" x2="17" y2="9"></line></svg></div>
+          <div><div class="device-name">Vane Pump</div><div class="device-full">Rotary positive displacement</div></div>
+        </div>
+        <div class="device-desc">Sliding vanes in a rotor extend against an eccentric casing wall, trapping and carrying fluid in the pockets between them. Good self-priming ability and steady flow &mdash; common in fuel transfer and some hydraulic applications.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M8 12c1.5-2 6.5-2 8 0"></path></svg></div>
+          <div><div class="device-name">Diaphragm Pump</div><div class="device-full">Reciprocating positive displacement</div></div>
+        </div>
+        <div class="device-desc">A flexing diaphragm changes chamber volume, drawing fluid in through one check valve and pushing it out through another. No dynamic seal in contact with the process fluid &mdash; ideal for chemical dosing and leak-sensitive service.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="10" height="6" rx="1"></rect><line x1="14" y1="12" x2="20" y2="12"></line><line x1="20" y1="8" x2="20" y2="16"></line></svg></div>
+          <div><div class="device-name">Piston / Plunger Pump</div><div class="device-full">Reciprocating positive displacement</div></div>
+        </div>
+        <div class="device-desc">A piston or plunger moves back and forth in a cylinder, displacing a precise volume each stroke through check valves. Capable of very high pressures &mdash; used in high-pressure cleaning, hydraulic power units, and dosing.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c4-8 12-8 16 0"></path><circle cx="8" cy="9" r="2"></circle><circle cx="16" cy="9" r="2"></circle></svg></div>
+          <div><div class="device-name">Peristaltic Pump</div><div class="device-full">Reciprocating-type positive displacement</div></div>
+        </div>
+        <div class="device-desc">Rollers compress a flexible tube against a track, pushing a trapped slug of fluid ahead of the compression point. Fluid never touches the pump itself &mdash; ideal for hygienic, abrasive, or highly corrosive fluids in precise metering duty.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c2-4 4-6 8-6s6 2 8 6c-2 4-4 6-8 6s-6-2-8-6z"></path><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><div class="device-name">Progressive Cavity Pump</div><div class="device-full">Rotary positive displacement</div></div>
+        </div>
+        <div class="device-desc">A helical rotor turns inside a matching elastomeric stator, forming sealed cavities that progress fluid steadily from inlet to outlet. Handles viscous, abrasive, and solids-laden fluids &mdash; a common choice for sludge and slurry transfer.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Main parts of a centrifugal pump</h2>
+    <ol class="part-list">
+      <li><span class="part-num">1</span><div class="part-text"><b>Casing / volute</b><span>Houses the impeller and converts the fluid's velocity into pressure as it slows down.</span></div></li>
+      <li><span class="part-num">2</span><div class="part-text"><b>Impeller</b><span>The rotating component whose vanes accelerate fluid outward from the center of rotation.</span></div></li>
+      <li><span class="part-num">3</span><div class="part-text"><b>Shaft</b><span>Transmits torque from the driver (motor) to the impeller.</span></div></li>
+      <li><span class="part-num">4</span><div class="part-text"><b>Mechanical seal / gland packing</b><span>Seals the point where the rotating shaft passes through the stationary casing, preventing leakage.</span></div></li>
+      <li><span class="part-num">5</span><div class="part-text"><b>Bearings</b><span>Support the shaft and absorb radial and axial loads from the impeller.</span></div></li>
+      <li><span class="part-num">6</span><div class="part-text"><b>Wear rings</b><span>Close-clearance rings that limit internal recirculation between the discharge and suction sides.</span></div></li>
+      <li><span class="part-num">7</span><div class="part-text"><b>Suction &amp; discharge nozzles</b><span>The inlet and outlet connection points sized for the pump's rated flow.</span></div></li>
+      <li><span class="part-num">8</span><div class="part-text"><b>Coupling</b><span>Connects the pump shaft to the driver shaft, accommodating minor misalignment.</span></div></li>
+    </ol>
+
+    <h2><span class="h2-dot"></span>Centrifugal vs positive displacement</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Behavior</th><th>Centrifugal</th><th>Positive displacement</th></tr>
+        <tr><td>Flow vs pressure</td><td>Flow drops as head rises</td><td>Flow nearly constant regardless of pressure</td></tr>
+        <tr><td>Viscosity tolerance</td><td>Efficiency drops sharply with viscosity</td><td>Generally improves or holds up with viscosity</td></tr>
+        <tr><td>Overpressure risk</td><td>Dead-heading overheats the pump</td><td>Dead-heading can burst the pump or piping</td></tr>
+        <tr><td>Overpressure protection</td><td>Minimum-flow / recirculation line</td><td>Relief valve required on discharge</td></tr>
+        <tr><td>Flow control</td><td>Throttling valve or VFD speed control</td><td>Speed control or a bypass; throttling is unsafe</td></tr>
+        <tr><td>Metering precision</td><td>Low &mdash; not suited to precise dosing</td><td>High &mdash; well suited to precise dosing</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Selection by duty</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Duty</th><th>Well suited</th></tr>
+        <tr><td>High flow, low viscosity, moderate head</td><td>Centrifugal</td></tr>
+        <tr><td>High viscosity fluids (oils, syrups)</td><td>Gear, screw, progressive cavity</td></tr>
+        <tr><td>Precise chemical dosing / metering</td><td>Diaphragm, piston/plunger, peristaltic</td></tr>
+        <tr><td>Abrasive slurries or solids-laden fluids</td><td>Progressive cavity, diaphragm</td></tr>
+        <tr><td>Hygienic or highly corrosive fluids</td><td>Peristaltic, diaphragm</td></tr>
+        <tr><td>Very high discharge pressure</td><td>Piston / plunger</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Flow control methods</h2>
+    <div class="steps-strip">
+      <div class="step-row"><span class="step-num">1</span><span>Throttling valve &mdash; restricts a centrifugal pump's discharge, moving its operating point back along the curve; never used to throttle a PD pump.</span></div>
+      <div class="step-row"><span class="step-num">2</span><span>VFD speed control &mdash; varies motor speed to change flow, following the pump's affinity laws; works on both pump families.</span></div>
+      <div class="step-row"><span class="step-num">3</span><span>Bypass / recirculation line &mdash; routes excess flow back to suction, protecting a centrifugal pump from operating too close to shutoff.</span></div>
+      <div class="step-row"><span class="step-num">4</span><span>Relief valve &mdash; a mandatory safeguard on PD pump discharge lines, opening to protect the pump and piping if the outlet is blocked.</span></div>
+      <div class="step-row"><span class="step-num">5</span><span>On/off duty cycling &mdash; simple start-stop control, common on smaller pumps sized with enough margin for the duty.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Selection checklist</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Required flow rate and total head / discharge pressure</span></li>
+      <li><span class="ck-mark">2</span><span>Fluid viscosity, abrasiveness, and any entrained solids or gas</span></li>
+      <li><span class="ck-mark">3</span><span>Net positive suction head (NPSH) available vs required</span></li>
+      <li><span class="ck-mark">4</span><span>Need for precise, repeatable metering vs simple bulk transfer</span></li>
+      <li><span class="ck-mark">5</span><span>Materials of construction compatible with the process fluid</span></li>
+      <li><span class="ck-mark">6</span><span>Drive type and speed control needs (fixed speed vs VFD)</span></li>
+      <li><span class="ck-mark">7</span><span>Overpressure protection appropriate to the pump family</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Common failure &amp; inspection points</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span>Cavitation from insufficient NPSH available, pitting the impeller and causing noise and vibration</span></li>
+      <li><span class="ck-mark">✓</span><span>Mechanical seal leakage &mdash; often the first visible sign of pump trouble on a centrifugal pump</span></li>
+      <li><span class="ck-mark">✓</span><span>Bearing wear from misalignment, vibration, or inadequate lubrication</span></li>
+      <li><span class="ck-mark">✓</span><span>Wear ring clearance opening up over time, dropping efficiency through internal recirculation</span></li>
+      <li><span class="ck-mark">✓</span><span>A centrifugal pump run too close to shutoff head, overheating from lack of flow through the casing</span></li>
+      <li><span class="ck-mark">✓</span><span>A blocked or isolated PD pump discharge with no working relief valve &mdash; a real overpressure hazard</span></li>
+      <li><span class="ck-mark">✓</span><span>Check valve wear on reciprocating PD pumps, showing up as reduced volumetric efficiency</span></li>
+    </ul>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>The single most common pump-selection mistake is picking a centrifugal pump for a metering or high-viscosity duty it was never built for &mdash; and the single most common PD pump mistake is skipping the discharge relief valve because "it'll never actually get blocked."</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">HVAC chilled &amp; hot water circulation</span>
+      <span class="app-chip">Water &amp; wastewater treatment</span>
+      <span class="app-chip">Chemical injection &amp; dosing</span>
+      <span class="app-chip">Oil, fuel &amp; lubricant transfer</span>
+      <span class="app-chip">Fire protection systems</span>
+      <span class="app-chip">Slurry &amp; sludge transport</span>
+      <span class="app-chip">Food &amp; pharmaceutical hygienic transfer</span>
+      <span class="app-chip">Hydraulic power units</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Every pump is either centrifugal (kinetic) or positive displacement &mdash; that split, not size or brand, drives most of its behavior.</span></li>
+      <li><span class="tk-check">✓</span><span>Centrifugal flow falls as pressure rises; PD flow stays nearly constant &mdash; which is why only PD pumps need a mandatory relief valve.</span></li>
+      <li><span class="tk-check">✓</span><span>High viscosity and precise metering both point toward positive displacement, not centrifugal.</span></li>
+      <li><span class="tk-check">✓</span><span>Mechanical seal leakage and cavitation are usually the first signs of centrifugal pump trouble &mdash; check those before assuming a bigger failure.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Pump%20Types%20Explained%3A%20Centrifugal%20vs%20Positive%20Displacement%20%E2%80%94%20What%20a%20pump%20actually%20does%2C%20eight%20common%20pump%20types%2C%20its%20parts%2C%20a%20centrifugal-vs-positive-displacement%20comparison%2C%20a%20selection%20checklist%2C%20and%20common%20failure%20points.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-types-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-types-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Pump%20Types%20Explained%3A%20Centrifugal%20vs%20Positive%20Displacement&text=What%20a%20pump%20actually%20does%2C%20eight%20common%20pump%20types%2C%20its%20parts%2C%20a%20centrifugal-vs-positive-displacement%20comparison%2C%20a%20selection%20checklist%2C%20and%20common%20failure%20points.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-types-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Pump%20Types%20Explained%3A%20Centrifugal%20vs%20Positive%20Displacement&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APump%20Types%20Explained%3A%20Centrifugal%20vs%20Positive%20Displacement%0AWhat%20a%20pump%20actually%20does%2C%20eight%20common%20pump%20types%2C%20its%20parts%2C%20a%20centrifugal-vs-positive-displacement%20comparison%2C%20a%20selection%20checklist%2C%20and%20common%20failure%20points.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-types-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../mechanical/">Mechanical Calculators &amp; References →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="centrifugal-pump-components-explained">Centrifugal Pump Components Explained</a></li><li><a href="centrifugal-pump-curve-explained">Reading a Centrifugal Pump Curve</a></li><li><a href="pump-cavitation-causes-prevention">Pump Cavitation: Causes &amp; Prevention</a></li><li><a href="pump-fan-affinity-laws-explained">Pump &amp; Fan Affinity Laws Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
