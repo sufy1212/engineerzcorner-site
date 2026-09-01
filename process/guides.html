@@ -72,7 +72,7 @@
     <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></svg></div>
     <div><h1>Process/Instrumentation Engineering Guides</h1><div class="hero-sub">Step-by-step method guides — how to actually approach each job, not just the calculator behind it</div></div>
   </div>
-  <div class="intro">Six practical how-to guides covering the method behind this section's calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work.</div>
+  <div class="intro">Seven practical how-to guides covering the method behind this section's calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work.</div>
 
   <div class="mech-tabs">
     <a href="./">Process Index</a>
@@ -97,6 +97,7 @@
     <a href="#g-purge" class="guide-toc-link">4. How to Size a Dilution Purge</a>
     <a href="#g-vessel" class="guide-toc-link">5. How to Estimate Vessel Liquid Volume From a Level Reading</a>
     <a href="#g-erosion" class="guide-toc-link">6. How to Apply the API RP 14E Erosional Velocity Guideline</a>
+    <a href="#g-hazop" class="guide-toc-link">7. How to Perform a Basic HAZOP Study</a>
   </div>
 
   <div class="step" id="g-relief">
@@ -171,6 +172,21 @@
       <li><b>Treat a comfortable margin below the limit as the goal</b>, not the limit itself as a target — operating right at Ve leaves no room for measurement uncertainty or future flow increases.</li>
       <li><b>Remember the guideline's limitations</b> — it doesn't account for solids content, sharp bends, or specific corrosive species (CO₂, H₂S) that can lower the practical erosion threshold well below the generic API 14E number.</li>
     </ol>
+  </div>
+
+  <div class="step" id="g-hazop">
+    <div class="step-head"><span class="step-num">7</span><h2>How to Perform a Basic HAZOP Study</h2></div>
+    <div class="step-desc">A structured method for finding the hazards nobody designed on purpose — a discipline of asking the same set of questions everywhere, not a one-off checklist.</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Divide the P&amp;ID into nodes.</b> Each node should be small enough that a single, coherent design intent applies across the whole node — a pump discharge line up to the next major equipment item, for example, not an entire process unit at once.</li>
+      <li><b>Apply guidewords systematically to each process parameter</b> within the node — combining guidewords (No/Not, More, Less, As Well As, Part Of, Reverse, Other Than) with parameters (flow, pressure, temperature, level, composition) to generate credible deviations, rather than relying on the team to think of deviations unprompted.</li>
+      <li><b>For each credible deviation, identify causes, consequences, and existing safeguards</b>, then judge as a team whether those safeguards are genuinely adequate for the consequence — a safeguard that exists on paper but isn't independent, tested, or reliably available doesn't count as adequate just because it's listed on the P&amp;ID.</li>
+      <li><b>Record and assign every inadequately safeguarded deviation as an action</b>, with a named owner and a closeout deadline — an unresolved finding with no owner tends to simply disappear rather than get fixed.</li>
+      <li><b>Close out actions and re-issue the P&amp;ID</b> once design changes are implemented, and treat the closeout record, not just the original study, as the actual deliverable — a HAZOP whose actions never get formally closed provides little more protection than not having done one.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      A HAZOP finds hazards that emerge from deviations in an already largely fixed design — it's a check on how the system behaves when something goes wrong with flow, pressure, temperature, or composition, not a review of whether the fundamental design concept was sound to begin with. It complements, rather than replaces, inherently safer design reviews that should already have happened earlier in the project.
+    </div>
   </div>
 
   <footer>These guides describe common practice and simplified methods — always confirm against the current edition of the relevant code (API 520/521/526, API RP 14E, ISA-5.1) and your own engineering judgement. <a href="./">← Process Index</a></footer>
