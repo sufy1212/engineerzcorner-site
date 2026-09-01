@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Industrial Sensor Types Explained</title>
+    <link>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</guid>
+    <description>What an industrial sensor actually does, the main types — inductive, capacitive, photoelectric, ultrasonic, RTD/thermocouple, pressure transmitter, level sensor, encoder — how to read a sensing-mode and output spec, and a selection guide.</description>
+    <pubDate>Tue, 01 Sep 2026 18:53:23 GMT</pubDate>
+  </item>
+  <item>
     <title>Cooling Tower Types Explained</title>
     <link>https://www.engineerzcorner.com/posts/cooling-tower-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cooling-tower-types-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
     <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication</title>
-    <link>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bod-bop-bend-allowance-pipe-fabrication-explained.html</guid>
-    <description>BOD (Bend Outside Diameter) and BOP (Bend Center Line) drive piping take-off and fabrication. Formulas, a bend allowance table, and a worked 90° bend example.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>

@@ -1,5 +1,10 @@
 [
   {
+    "t": "Industrial Sensor Types Explained",
+    "u": "posts/industrial-sensor-types-explained",
+    "d": "2026-09-01"
+  },
+  {
     "t": "Cooling Tower Types Explained",
     "u": "posts/cooling-tower-types-explained",
     "d": "2026-09-01"
@@ -42,11 +47,6 @@
   {
     "t": "MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings",
     "u": "posts/mep-sleeves-installation-guide-explained",
-    "d": "2026-08-30"
-  },
-  {
-    "t": "Transformer Turn Ratio (TTR) Test Explained",
-    "u": "posts/transformer-turn-ratio-ttr-test-explained",
     "d": "2026-08-30"
   }
 ]
