@@ -78,7 +78,7 @@
     <div><h1>Comparisons</h1><div class="hero-sub">Head-to-head technology and equipment choices — side by side, so the trade-off is visible at a glance</div></div>
   </div>
   <div class="intro">
-    Ten common equipment and technology decisions, laid out as direct comparisons rather than separate articles — same criteria, side by side, with a plain-language verdict on when each option actually wins. Jump straight to the one you need.
+    Eleven common equipment and technology decisions, laid out as direct comparisons rather than separate articles — same criteria, side by side, with a plain-language verdict on when each option actually wins. Jump straight to the one you need.
   </div>
 
   <div class="guide-toc">
@@ -92,6 +92,7 @@
       <a href="#cmp-motors" class="guide-toc-link">8. Synchronous vs Induction Motors</a>
       <a href="#cmp-battery" class="guide-toc-link">9. Lead-Acid vs Lithium-Ion Batteries</a>
       <a href="#cmp-enclosure" class="guide-toc-link">10. IP Rating vs NEMA Rating</a>
+      <a href="#cmp-transformer" class="guide-toc-link">11. Dry-Type vs Oil-Filled Transformers</a>
   </div>
 
   <div class="step" id="cmp-mccb">
@@ -268,6 +269,26 @@
       </table>
     </div>
     <div class="hint" style="margin:10px 16px 0;">Match the rating system to what your project's governing code and equipment suppliers actually use — don't assume a NEMA 4 enclosure is simply "the same as" a specific IP rating and treat the two as interchangeable, since NEMA ratings bundle in considerations like corrosion resistance that the IP code doesn't directly address. When a project spans both conventions, check the specific published cross-reference tables rather than assuming a clean numeric equivalence.</div>
+  </div>
+
+  <div class="step" id="cmp-transformer">
+    <div class="step-head"><span class="step-num">11</span><h2>Dry-Type vs Oil-Filled Transformers</h2></div>
+    <div class="step-desc">Both step voltage up or down the same way — the split is entirely about how each one cools and insulates its windings.</div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead><tr><th>Criteria</th><th>Dry-Type</th><th>Oil-Filled</th></tr></thead>
+        <tbody>
+      <tr><td>Cooling / insulation medium</td><td>Air, or a cast resin encapsulation, around the windings</td><td>Mineral oil (or synthetic ester) circulating through the windings and radiators</td></tr>
+      <tr><td>Fire risk</td><td>Low — no combustible liquid to catch fire or spill</td><td>Higher — requires fire barriers, containment, or bunding around the unit</td></tr>
+      <tr><td>Typical installation location</td><td>Indoors, inside occupied buildings, near loads</td><td>Outdoors or in a dedicated, fire-rated transformer room/vault</td></tr>
+      <tr><td>Maintenance</td><td>Lower — no oil sampling, no leak monitoring</td><td>Higher — periodic oil testing (dissolved gas analysis) and leak inspection</td></tr>
+      <tr><td>Overload / short-term capacity</td><td>More limited before insulation life is affected</td><td>Generally tolerates overload better due to oil's thermal buffering</td></tr>
+      <tr><td>Typical rating range</td><td>Common up to a few MVA, indoor distribution duty</td><td>Common across the full range, including large substation and utility transformers</td></tr>
+      <tr><td>Environmental exposure</td><td>Better in damp or dirty environments with the right enclosure rating</td><td>Well suited to outdoor exposure; oil leaks are an environmental concern</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin:10px 16px 0;">Dry-type transformers dominate indoor and building-integrated installations specifically because they remove the fire and containment concerns that come with oil, even though they typically cost more per kVA and tolerate less overload — oil-filled remains the default for outdoor, substation, and large power transformers where its cooling efficiency, overload tolerance, and lower relative cost outweigh the fire-safety measures oil requires.</div>
   </div>
 
   <footer><a href="./">← Electrical Index</a></footer>
