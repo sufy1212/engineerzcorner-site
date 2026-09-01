@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circuit Breaker Types Explained: MCB to OCB | Engineerz CorneR</title>
+<meta name="description" content="What a circuit breaker actually does, the main types — MCB, MCCB, ACB, VCB, OCB, SF6, air-blast, GIS — its parts, an interrupting-medium reference, a voltage-class selection guide, and common failure points.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/circuit-breaker-types-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Circuit Breaker Types Explained: MCB to OCB">
+<meta property="og:description" content="What a circuit breaker actually does, eight common breaker types, its parts, an interrupting-medium reference, a voltage-class selection guide, and common failure points.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/circuit-breaker-types-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Circuit Breaker Types Explained: MCB to OCB">
+<meta name="twitter:description" content="What a circuit breaker actually does, eight common breaker types, its parts, an interrupting-medium reference, a voltage-class selection guide, and common failure points.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="circuit-breaker-types-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Circuit Breaker Types Explained: MCB, MCCB, ACB, VCB & OCB Compared",
+      "item": "https://www.engineerzcorner.com/posts/circuit-breaker-types-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Circuit Breaker Types Explained: MCB, MCCB, ACB, VCB & OCB Compared",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+  "description": "What a circuit breaker actually does, eight common breaker types, its parts, an interrupting-medium reference, a voltage-class selection guide, and common failure points.",
+  "url": "https://www.engineerzcorner.com/posts/circuit-breaker-types-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/circuit-breaker-types-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Circuit Breaker Types Explained: MCB, MCCB, ACB, VCB &amp; OCB Compared</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Protection</span>
+    <h1>Circuit Breaker Types Explained: MCB to OCB</h1>
+    <p class="hero-sub">Every circuit breaker does the same basic job &mdash; make and break a circuit, automatically, under fault current &mdash; but how it extinguishes the arc changes completely with voltage class, and that's what actually separates the types.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Protection</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="90" y="76" width="180" height="18" rx="2" fill="#3E4E70" stroke="#7e97ac" stroke-width="1"/>
+      <text x="105" y="66" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">SOURCE</text>
+      <rect x="270" y="45" width="90" height="80" rx="4" fill="#122845" stroke="#C9A034" stroke-width="1.6"/>
+      <line x1="290" y1="100" x2="315" y2="70" stroke="#C9A034" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="290" cy="100" r="4" fill="#E4C878"/>
+      <circle cx="315" cy="70" r="4" fill="#E4C878"/>
+      <line x1="315" y1="70" x2="345" y2="100" stroke="#E4C878" stroke-width="2" stroke-dasharray="3 3"/>
+      <text x="278" y="140" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">BREAKER</text>
+      <line x1="360" y1="85" x2="420" y2="85" stroke="#3E4E70" stroke-width="4"/>
+      <rect x="420" y="76" width="180" height="18" rx="2" fill="#3E4E70" stroke="#7e97ac" stroke-width="1"/>
+      <text x="600" y="66" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">LOAD</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A circuit breaker's job is always the same &mdash; carry normal load current, sense a fault, and interrupt it &mdash; but what actually separates the types is how each one quenches the arc that forms the instant the contacts part.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Type is chosen by voltage class first, current rating second &mdash; an ACB and an MCCB can share a similar current rating and still be completely wrong for each other's application.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Vacuum and SF6 have largely displaced oil and air-blast breakers in new medium- and high-voltage installations, mainly because they need far less maintenance and pose no fire risk from the interrupting medium itself.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The trip unit, not the contacts, is usually what decides whether a breaker actually opens in time &mdash; a breaker with worn contacts but a healthy trip unit will still clear a fault; the reverse is far more dangerous.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What a circuit breaker actually does</h2>
+    <p>A circuit breaker is an electromechanical device inserted into a circuit to carry normal load current continuously and automatically interrupt that current when a fault &mdash; overload, short circuit, or earth fault &mdash; is detected. The hard engineering problem isn't opening the contacts; it's what happens in the instant they separate. Current doesn't stop flowing just because a gap opens &mdash; it keeps arcing across that gap until the arc is stretched, cooled, and starved of ionized gas enough to extinguish. Every breaker type is really just a different answer to that one problem: how to quench the arc, safely and repeatably, at a given voltage and fault level.</p>
+
+    <h2><span class="h2-dot"></span>Types of circuit breakers</h2>
+    <p class="post-lede">Different interrupting media trade off voltage class, breaking capacity, maintenance burden, and cost &mdash; no single type covers the full range from a distribution board to a grid substation.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="9" y1="15" x2="15" y2="9"></line><circle cx="9" cy="15" r="1.4" fill="currentColor" stroke="none"></circle><circle cx="15" cy="9" r="1.4" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><div class="device-name">MCB</div><div class="device-full">Miniature circuit breaker</div></div>
+        </div>
+        <div class="device-desc">Fixed, non-adjustable thermal-magnetic trip up to roughly 100&nbsp;A. The default breaker for final distribution circuits &mdash; lighting, sockets, small appliance feeders &mdash; where the trip setting never needs to change.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="8" y1="14" x2="14" y2="8"></line><circle cx="8" cy="14" r="1.4" fill="currentColor" stroke="none"></circle><circle cx="14" cy="8" r="1.4" fill="currentColor" stroke="none"></circle><line x1="16" y1="16" x2="19" y2="16"></line></svg></div>
+          <div><div class="device-name">MCCB</div><div class="device-full">Moulded case circuit breaker</div></div>
+        </div>
+        <div class="device-desc">Up to a few thousand amps, with an adjustable thermal-magnetic or electronic trip unit inside a moulded insulating case. Sits between the MCB and the ACB &mdash; sub-main distribution, motor and feeder protection.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><rect x="7" y="8" width="10" height="8" rx="1"></rect><line x1="9" y1="12" x2="15" y2="12"></line></svg></div>
+          <div><div class="device-name">ACB</div><div class="device-full">Air circuit breaker</div></div>
+        </div>
+        <div class="device-desc">Draw-out construction rated up to several thousand amps, arc quenched in open air using arc chutes and splitter plates. The standard incomer and bus-coupler breaker on LV switchboards feeding whole buildings or plants.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="8"></rect><line x1="9" y1="14" x2="15" y2="8"></line><circle cx="9" cy="14" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="15" cy="8" r="1.3" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><div class="device-name">VCB</div><div class="device-full">Vacuum circuit breaker</div></div>
+        </div>
+        <div class="device-desc">Contacts separate inside a sealed vacuum interrupter, where the absence of gas makes the arc self-extinguish almost immediately. The dominant medium-voltage breaker today &mdash; compact, low maintenance, no toxic byproducts.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h1.5l1-3 2 6 1-3H16"></path></svg></div>
+          <div><div class="device-name">OCB</div><div class="device-full">Oil circuit breaker</div></div>
+        </div>
+        <div class="device-desc">Contacts open inside mineral oil, which decomposes into a hydrogen-rich gas bubble that helps cool and quench the arc. Largely legacy equipment now &mdash; fire and maintenance concerns pushed most new installs to vacuum or SF6.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><circle cx="12" cy="12" r="4"></circle></svg></div>
+          <div><div class="device-name">SF6 Breaker</div><div class="device-full">Sulfur hexafluoride gas</div></div>
+        </div>
+        <div class="device-desc">Uses SF6 gas, an excellent dielectric and arc-quenching medium, sealed under pressure around the contacts. Covers medium- to extra-high-voltage duty in a far smaller footprint than an equivalent air-blast breaker.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="8" y2="12"></line><line x1="16" y1="12" x2="22" y2="12"></line><path d="M8 6l3 6-3 6"></path><path d="M16 6l-3 6 3 6"></path></svg></div>
+          <div><div class="device-name">Air-Blast Breaker</div><div class="device-full">High-pressure air stream</div></div>
+        </div>
+        <div class="device-desc">A blast of compressed air, released the instant contacts part, sweeps the arc out and cools it. Handled very high voltages and fault levels well, at the cost of noise and a bulky compressed-air system &mdash; now mostly superseded by SF6.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><rect x="7" y="7" width="10" height="10" rx="2"></rect><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><div class="device-name">GIS Breaker</div><div class="device-full">Gas-insulated switchgear</div></div>
+        </div>
+        <div class="device-desc">An SF6 breaker built into a compact, fully enclosed gas-insulated switchgear bay along with the busbars, disconnectors, and CTs. Chosen where space is limited or the environment is too harsh for open-air (AIS) switchgear.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Main parts of a circuit breaker</h2>
+    <ol class="part-list">
+      <li><span class="part-num">1</span><div class="part-text"><b>Frame / enclosure</b><span>Insulating or metal housing that supports and protects all internal components.</span></div></li>
+      <li><span class="part-num">2</span><div class="part-text"><b>Fixed &amp; moving contacts</b><span>Carry load current when closed; separating them is what initiates current interruption.</span></div></li>
+      <li><span class="part-num">3</span><div class="part-text"><b>Arc-quenching medium</b><span>Air, oil, vacuum, or SF6 gas &mdash; whatever cools and de-ionizes the arc so it doesn't restrike.</span></div></li>
+      <li><span class="part-num">4</span><div class="part-text"><b>Arc chute / splitter plates</b><span>On air and oil breakers, stretches and splits the arc into shorter segments to help extinguish it faster.</span></div></li>
+      <li><span class="part-num">5</span><div class="part-text"><b>Operating mechanism</b><span>Spring, solenoid, or pneumatic mechanism that physically drives the contacts open and closed, manually or on a trip signal.</span></div></li>
+      <li><span class="part-num">6</span><div class="part-text"><b>Trip unit</b><span>Thermal-magnetic or electronic release that senses overload and short-circuit current and commands the mechanism to open.</span></div></li>
+      <li><span class="part-num">7</span><div class="part-text"><b>Terminals</b><span>Line and load connection points, sized to the breaker's continuous current rating.</span></div></li>
+      <li><span class="part-num">8</span><div class="part-text"><b>Auxiliary &amp; alarm contacts</b><span>Small extra contacts that mirror breaker status to indication lamps, PLCs, or a SCADA system.</span></div></li>
+    </ol>
+
+    <h2><span class="h2-dot"></span>Interrupting medium reference</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Medium</th><th>Typical voltage class</th><th>Notes</th></tr>
+        <tr><td>Air (open, MCB/MCCB/ACB)</td><td>LV</td><td>Simple, low cost, routine maintenance on ACBs only</td></tr>
+        <tr><td>Oil</td><td>MV &ndash; HV (legacy)</td><td>Fire and oil-degradation concerns, largely phased out</td></tr>
+        <tr><td>Vacuum</td><td>MV</td><td>Very low maintenance, no toxic byproducts, dominant MV choice today</td></tr>
+        <tr><td>SF6 gas</td><td>MV &ndash; EHV</td><td>Excellent dielectric strength, compact for the voltage class, potent greenhouse gas if leaked</td></tr>
+        <tr><td>Compressed air blast</td><td>HV &ndash; EHV (legacy)</td><td>High breaking capacity, noisy, bulky air-supply plant, mostly superseded by SF6</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Selection by voltage class</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Voltage class</th><th>Typical breaker types</th></tr>
+        <tr><td>Low voltage (LV, up to ~1&nbsp;kV)</td><td>MCB, MCCB, ACB</td></tr>
+        <tr><td>Medium voltage (MV, ~1&ndash;36&nbsp;kV)</td><td>Vacuum, SF6</td></tr>
+        <tr><td>High &amp; extra-high voltage (HV/EHV)</td><td>SF6, air-blast (legacy), GIS</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Trip mechanisms</h2>
+    <div class="steps-strip">
+      <div class="step-row"><span class="step-num">1</span><span>Thermal-magnetic &mdash; a bimetal strip trips on sustained overload; a magnetic element trips instantaneously on short-circuit current.</span></div>
+      <div class="step-row"><span class="step-num">2</span><span>Electronic / microprocessor trip &mdash; measures current digitally and applies adjustable long-time, short-time, and instantaneous protection curves.</span></div>
+      <div class="step-row"><span class="step-num">3</span><span>Shunt trip &mdash; a coil energized by an external protection relay or emergency-stop circuit forces the breaker open remotely.</span></div>
+      <div class="step-row"><span class="step-num">4</span><span>Undervoltage release &mdash; trips the breaker automatically if supply voltage drops or is lost, preventing unexpected re-energization.</span></div>
+      <div class="step-row"><span class="step-num">5</span><span>Manual / independent manual operation &mdash; the handle both charges the closing spring and operates the mechanism, independent of operator speed.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Selection checklist</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>System voltage and the breaker's rated voltage class</span></li>
+      <li><span class="ck-mark">2</span><span>Continuous current rating against the actual load, with margin</span></li>
+      <li><span class="ck-mark">3</span><span>Required breaking (interrupting) capacity at the installation point</span></li>
+      <li><span class="ck-mark">4</span><span>Trip unit type and settings &mdash; fixed thermal-magnetic vs adjustable electronic</span></li>
+      <li><span class="ck-mark">5</span><span>Selectivity / discrimination with upstream and downstream breakers</span></li>
+      <li><span class="ck-mark">6</span><span>Fixed vs draw-out construction, based on maintenance and uptime needs</span></li>
+      <li><span class="ck-mark">7</span><span>Environment &mdash; ambient temperature, altitude, and enclosure ingress protection</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Common failure &amp; inspection points</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span>Contact erosion and pitting from repeated fault interruption, reducing current-carrying capacity</span></li>
+      <li><span class="ck-mark">✓</span><span>Trip unit drift or failure &mdash; a breaker that won't trip on a real fault is far more dangerous than one that trips nuisance-fast</span></li>
+      <li><span class="ck-mark">✓</span><span>Loose or overheated terminal connections, often the actual root cause behind a breaker that "trips for no reason"</span></li>
+      <li><span class="ck-mark">✓</span><span>SF6 gas pressure loss on gas breakers, monitored continuously since low pressure compromises both insulation and interruption</span></li>
+      <li><span class="ck-mark">✓</span><span>Mechanism spring fatigue or lubrication issues causing sluggish closing or opening times</span></li>
+      <li><span class="ck-mark">✓</span><span>Poor selectivity coordination, where an upstream breaker trips before the downstream one clears a local fault</span></li>
+      <li><span class="ck-mark">✓</span><span>Insulation degradation in oil breakers, tracked through routine dielectric testing where they're still in service</span></li>
+    </ul>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Most breaker failures trace back to the trip unit or the terminal connections, not the contacts themselves &mdash; a breaker that looks fine on the outside can still fail to clear a fault if its protection settings have drifted or its terminals have loosened over time.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">Final distribution circuits</span>
+      <span class="app-chip">LV switchboard incomers &amp; bus couplers</span>
+      <span class="app-chip">Motor and feeder protection</span>
+      <span class="app-chip">Medium-voltage ring main units</span>
+      <span class="app-chip">Substation transformer feeders</span>
+      <span class="app-chip">Generator and utility interconnection</span>
+      <span class="app-chip">Grid transmission switching</span>
+      <span class="app-chip">Compact gas-insulated substations</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Every breaker carries load and interrupts faults &mdash; the type is really a choice of how the arc gets quenched at that voltage class.</span></li>
+      <li><span class="tk-check">✓</span><span>MCB, MCCB, and ACB cover LV duty at increasing current and breaking capacity; vacuum and SF6 dominate MV and above.</span></li>
+      <li><span class="tk-check">✓</span><span>Oil and air-blast breakers are largely legacy technology, phased out for maintenance, fire risk, and footprint reasons.</span></li>
+      <li><span class="tk-check">✓</span><span>The trip unit and terminal connections fail more often than the contacts &mdash; check those first, not just contact wear.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Circuit%20Breaker%20Types%20Explained%3A%20MCB%2C%20MCCB%2C%20ACB%2C%20VCB%20%26%20OCB%20Compared%20%E2%80%94%20What%20a%20circuit%20breaker%20actually%20does%2C%20eight%20common%20breaker%20types%2C%20its%20parts%2C%20an%20interrupting-medium%20reference%2C%20a%20voltage-class%20selection%20guide%2C%20and%20common%20failure%20points.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcircuit-breaker-types-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcircuit-breaker-types-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Circuit%20Breaker%20Types%20Explained%3A%20MCB%2C%20MCCB%2C%20ACB%2C%20VCB%20%26%20OCB%20Compared&text=What%20a%20circuit%20breaker%20actually%20does%2C%20eight%20common%20breaker%20types%2C%20its%20parts%2C%20an%20interrupting-medium%20reference%2C%20a%20voltage-class%20selection%20guide%2C%20and%20common%20failure%20points.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcircuit-breaker-types-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Circuit%20Breaker%20Types%20Explained%3A%20MCB%2C%20MCCB%2C%20ACB%2C%20VCB%20%26%20OCB%20Compared&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACircuit%20Breaker%20Types%20Explained%3A%20MCB%2C%20MCCB%2C%20ACB%2C%20VCB%20%26%20OCB%20Compared%0AWhat%20a%20circuit%20breaker%20actually%20does%2C%20eight%20common%20breaker%20types%2C%20its%20parts%2C%20an%20interrupting-medium%20reference%2C%20a%20voltage-class%20selection%20guide%2C%20and%20common%20failure%20points.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcircuit-breaker-types-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/">Electrical Calculators &amp; References →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="acb-protection-settings-explained">Essential Protection Settings of Air Circuit Breakers (ACB) Explained</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li><li><a href="icw-icu-ics-icm-short-circuit-ratings-explained">Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs</a></li><li><a href="short-circuit-current-iec-60909-basics">Short Circuit Current: IEC 60909 Basics</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
