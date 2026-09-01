@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Pump Types Explained: Centrifugal to PD</title>
+    <link>https://www.engineerzcorner.com/posts/pump-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
+    <description>What a pump actually does, the main types — centrifugal, gear, screw, vane, diaphragm, piston, peristaltic, progressive cavity — its parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
+    <pubDate>Tue, 01 Sep 2026 03:14:31 GMT</pubDate>
+  </item>
+  <item>
     <title>Circuit Breaker Types Explained: MCB to OCB</title>
     <link>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</link>
     <guid>https://www.engineerzcorner.com/posts/bolt-torque-vs-preload-nut-factor.html</guid>
     <description>Bolt tightening torque from target preload using the short-form torque-tension relationship, and why the nut factor dominates the result more than bolt grade.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
-    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
-    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>
