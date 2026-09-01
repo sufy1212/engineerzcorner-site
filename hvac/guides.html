@@ -81,7 +81,7 @@
     <a href="comparisons">Comparisons</a>
   </div>
   <div class="intro">
-    Ten practical how-to guides covering the method behind this site's HVAC calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work. Each guide stands on its own; jump straight to the one you need.
+    Eleven practical how-to guides covering the method behind this site's HVAC calculators — what order to check things in, what's easy to get wrong by hand, and how the underlying relationships actually work. Each guide stands on its own; jump straight to the one you need.
   </div>
 
   <div class="guide-toc">
@@ -95,6 +95,7 @@
       <a href="#g-vav" class="guide-toc-link">8. How to Select and Balance a VAV Box</a>
       <a href="#g-airbalance" class="guide-toc-link">9. How to Balance an Air Distribution System</a>
       <a href="#g-hvacschem" class="guide-toc-link">10. Reading an HVAC Schematic</a>
+      <a href="#g-ventrate" class="guide-toc-link">11. How to Calculate Ventilation Rates (ASHRAE 62.1 Method)</a>
   </div>
 
   <div class="step" id="g-coolload">
@@ -215,6 +216,25 @@
       <li><b>Use the Symbols Library</b> on this site's HVAC section for unfamiliar diffuser, damper, and equipment symbols as you go.</li>
     </ol>
     <div class="hint" style="margin:10px 16px 0;">Most HVAC schematics use the Symbols Library's ASHRAE/SMACNA-style conventions — diffusers, dampers, coils and equipment. If a symbol looks unfamiliar, check there before assuming it's project-specific.</div>
+  </div>
+
+  <div class="step" id="g-ventrate">
+    <div class="step-head"><span class="step-num">11</span><h2>How to Calculate Ventilation Rates (ASHRAE 62.1 Method)</h2></div>
+    <div class="step-desc">The Ventilation Rate Procedure combines a per-person and a per-area component — skipping either one systematically understates the requirement.</div>
+    <div class="hint" style="margin:0 16px 10px;">
+      ASHRAE 62.1's Ventilation Rate Procedure sets outdoor air requirements as the sum of a people component (accounting for occupant-generated contaminants like CO₂ and bioeffluents) and an area component (accounting for contaminants from the building and furnishings themselves) — a space still needs its area-based outdoor air even at zero occupancy, which is a common point of confusion.
+    </div>
+    <div class="formula-note">Vbz = (Rp × Pz) + (Ra × Az)</div>
+    <ol style="margin:0 16px 14px;padding-left:20px;line-height:1.9;color:var(--ink-dim);">
+      <li><b>Identify the space's occupancy category</b> from the standard's tables — office, classroom, retail, and so on each has its own published Rp (outdoor air per person) and Ra (outdoor air per unit area) rates, since contaminant generation differs meaningfully by space type.</li>
+      <li><b>Determine the design population</b> (Pz) for the space — the standard specifies whether to use the space's default occupant density or an actual expected population, and which one governs depends on the specific application.</li>
+      <li><b>Calculate the breathing zone outdoor air requirement</b> (Vbz) by combining the people component (Rp × Pz) and the area component (Ra × Az, where Az is the zone floor area) — both terms are required, not just whichever is larger.</li>
+      <li><b>Apply the zone air distribution effectiveness</b> to convert Vbz into the actual required zone outdoor airflow (Voz), accounting for how effectively the specific air distribution configuration (ceiling supply, floor supply, etc.) actually delivers outdoor air to the breathing zone rather than short-circuiting straight to return.</li>
+      <li><b>For multiple-zone recirculating systems, apply the system ventilation efficiency calculation</b> to size total outdoor air at the air handler — simply summing each zone's Voz without this step can significantly undersize system outdoor air intake for a multi-zone VAV system.</li>
+    </ol>
+    <div class="hint" style="margin:0 16px 0;">
+      A space calculated purely on a per-person basis will be undersized on outdoor air whenever it's occupied below its design population but still generating area-based contaminants — which is exactly why the area component exists as an independent, non-optional term in the calculation, not a minor addition to the people-based requirement.
+    </div>
   </div>
 
   <footer><a href="./">← HVAC Index</a></footer>
