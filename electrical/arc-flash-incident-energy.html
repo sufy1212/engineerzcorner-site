@@ -10,19 +10,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arc Flash Incident Energy — Engineerz CorneR</title>
-<meta name="description" content="Simplified theoretical (Ralph Lee) incident energy, arc flash boundary and approximate PPE category, for first-pass screening.">
+<meta name="description" content="Incident energy, arc flash boundary and approximate PPE category using the Doughty-Neal-Floyd equations (≤600V) and the Ralph Lee equation (>600V), for first-pass screening.">
 <link rel="canonical" href="https://www.engineerzcorner.com/electrical/arc-flash-incident-energy">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
 <meta property="og:title" content="Arc Flash Incident Energy — Engineerz CorneR">
-<meta property="og:description" content="Simplified theoretical (Ralph Lee) incident energy, arc flash boundary and approximate PPE category, for first-pass screening.">
+<meta property="og:description" content="Incident energy, arc flash boundary and approximate PPE category using the Doughty-Neal-Floyd equations (≤600V) and the Ralph Lee equation (>600V), for first-pass screening.">
 <meta property="og:url" content="https://www.engineerzcorner.com/electrical/arc-flash-incident-energy">
 <meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Arc Flash Incident Energy — Engineerz CorneR">
-<meta name="twitter:description" content="Simplified theoretical (Ralph Lee) incident energy, arc flash boundary and approximate PPE category, for first-pass screening.">
+<meta name="twitter:description" content="Incident energy, arc flash boundary and approximate PPE category using the Doughty-Neal-Floyd equations (≤600V) and the Ralph Lee equation (>600V), for first-pass screening.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +63,7 @@
   "name": "Arc Flash Incident Energy",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (runs in browser)",
-  "description": "Simplified theoretical (Ralph Lee) incident energy, arc flash boundary and approximate PPE category, for first-pass screening.",
+  "description": "Incident energy, arc flash boundary and approximate PPE category using the Doughty-Neal-Floyd equations (≤600V) and the Ralph Lee equation (>600V), for first-pass screening.",
   "url": "https://www.engineerzcorner.com/electrical/arc-flash-incident-energy",
   "offers": {
     "@type": "Offer",
@@ -82,21 +82,54 @@
 <div class="wrap page active" id="page-af">
   <div class="pagehero">
     <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 20h20L12 2z"></path><path d="M12 9v4M12 16h.01"></path></svg></div>
-    <div><h1>Arc Flash Incident Energy</h1><div class="hero-sub">Simplified theoretical estimate — screening only, not a substitute for a full study</div></div>
+    <div><h1>Arc Flash Incident Energy</h1><div class="hero-sub">Screening estimate — not a substitute for a full IEEE 1584-2018 study</div></div>
   </div>
-  <div class="intro">Uses the Ralph Lee theoretical arc-flash equation to give a rough, conservative incident energy estimate at a stated working distance, plus the distance at which incident energy falls to the 1.2 cal/cm² arc-flash-boundary threshold. This is a simplified screening tool only — it ignores equipment class, electrode configuration and gap, enclosure type and grounding, all of which the empirical IEEE 1584-2018 model accounts for. Do not use this output to select PPE or set arc-flash labels; commission a proper IEEE 1584-2018 study for that.</div>
+  <div class="intro">Two public-domain empirical methods, both referenced in NFPA 70E Informative Annex D: the <b>Doughty-Neal-Floyd equations</b> for systems ≤600V (validated on 16–50 kA test data, box or open-air), and the <b>Ralph Lee equation</b> for open-air arcs above 600V. Neither is the proprietary IEEE 1584-2018 regression model — this is a first-pass screening tool only. Do not use this output to select PPE or set arc-flash labels; commission a proper IEEE 1584-2018 study by a qualified person for that.</div>
   <div role="status" aria-live="polite" class="validation-banner neutral" id="afValidation"><span class="vdot"></span><span>Calculating…</span></div>
 
   <div class="step">
-    <div class="step-head"><span class="step-num">1</span><h2>Fault &amp; System Data</h2></div>
+    <div class="step-head"><span class="step-num">1</span><h2>System Voltage Class</h2></div>
+    <div class="radiorow">
+      <label><input type="radio" name="afVclass" value="lv" checked> ≤ 600 V (Doughty-Neal-Floyd)</label>
+      <label><input type="radio" name="afVclass" value="mv"> &gt; 600 V, open air (Ralph Lee)</label>
+    </div>
+  </div>
+
+  <div class="step" id="afLvStep">
+    <div class="step-head"><span class="step-num">2</span><h2>Fault &amp; Enclosure Data (≤600V)</h2></div>
+    <p class="step-desc">Validated for bolted fault current 16–50 kA and distance ≥18 in. Outside that range the result is an extrapolation.</p>
+    <div class="radiorow">
+      <label><input type="radio" name="afConfig" value="box" checked> In a box / enclosure</label>
+      <label><input type="radio" name="afConfig" value="open"> Open air</label>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="afLvIbf">Bolted fault current, Ibf <span class="unit">kA</span></label>
+        <input type="number" id="afLvIbf" value="22" step="0.5" min="0.01">
+        <div class="hint">Pull from SH.01 Short Circuit for a consistent value.</div>
+      </div>
+      <div class="field">
+        <label for="afLvT">Arc / clearing time, t <span class="unit">sec</span></label>
+        <input type="number" id="afLvT" value="0.2" step="0.01" min="0.001">
+        <div class="hint">Total clearing time of the upstream device at this fault level — use the slowest realistic device for the worst case.</div>
+      </div>
+      <div class="field">
+        <label for="afLvD">Working distance, D <span class="unit">inches</span></label>
+        <input type="number" id="afLvD" value="18" step="0.5" min="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step" id="afMvStep" style="display:none;">
+    <div class="step-head"><span class="step-num">2</span><h2>Fault &amp; System Data (&gt;600V, open air)</h2></div>
     <div class="row2">
       <div class="field">
         <label for="afV">System voltage, line-to-line <span class="unit">kV</span></label>
-        <input type="number" id="afV" value="0.4" step="0.1" min="0.001">
+        <input type="number" id="afV" value="4.16" step="0.01" min="0.601">
       </div>
       <div class="field">
         <label for="afIbf">Bolted fault current, Ibf <span class="unit">kA</span></label>
-        <input type="number" id="afIbf" value="25" step="0.5" min="0.01">
+        <input type="number" id="afIbf" value="15" step="0.5" min="0.01">
         <div class="hint">Prospective symmetrical fault current at this point — pull from SH.01 Short Circuit for a consistent value.</div>
       </div>
       <div class="field">
@@ -106,8 +139,8 @@
       </div>
       <div class="field">
         <label for="afD">Working distance, D <span class="unit">mm</span></label>
-        <input type="number" id="afD" value="455" step="5" min="1">
-        <div class="hint">455mm is a common LV switchgear reference distance; use the distance the worker's face/chest would actually be from the arc source.</div>
+        <input type="number" id="afD" value="914" step="5" min="1">
+        <div class="hint">914mm (36in) is a common MV switchgear reference distance; use the distance the worker's face/chest would actually be from the arc source.</div>
       </div>
     </div>
   </div>
@@ -122,13 +155,14 @@
       <div class="stat"><div class="slabel">Arc flash boundary (1.2 cal/cm²)</div><div class="sval" id="afBoundary">—</div></div>
       <div class="stat"><div class="slabel">Approximate PPE category</div><div class="sval amber" id="afCategory">—</div></div>
     </div>
+    <div class="status-banner bad" id="afRangeWarning" style="margin:0 16px 16px;display:none;"></div>
     <details>
       <summary>How this is calculated</summary>
-      <div class="formula-note">E = 2.142×10⁶ × V × Ibf × t / D² &nbsp;(cal/cm², Ralph Lee equation) &nbsp;·&nbsp; D_boundary = √(2.142×10⁶ × V × Ibf × t / 1.2)</div>
+      <div class="formula-note" id="afFormulaNote">—</div>
       <div class="hint" style="margin-top:8px;">PPE category bands shown (Cat 1 ≈4, Cat 2 ≈8, Cat 3 ≈25, Cat 4 ≈40 cal/cm² minimum arc rating) are a common informal reference only, not the NFPA 70E table itself. Always confirm against a current arc-flash study and your governing standard's actual PPE category table before specifying PPE or labels.</div>
     </details>
   </div>
-  <footer>Theoretical screening estimate only — arc-flash PPE selection and equipment labeling require a full IEEE 1584-2018 study by a qualified person.</footer>
+  <footer>Doughty-Neal-Floyd equations: R.L. Doughty, T.E. Neal, H.L. Floyd, "Predicting Incident Energy to Better Manage the Electric Arc Hazard on 600 V Power Distribution Systems," IEEE Trans. Industry Applications, 2000 — the empirical basis carried into IEEE 1584-2002 and referenced in NFPA 70E Informative Annex D. Ralph Lee open-air model: R.H. Lee, "The Other Electrical Hazard: Electric Arc Blast Burns," IEEE Trans. Industry Applications, 1982, as adapted in NFPA 70E Annex D.6. Theoretical/empirical screening estimate only — arc-flash PPE selection and equipment labeling require a full IEEE 1584-2018 study by a qualified person.</footer>
 </div>
 
 <!-- PAGE: SH.17 ARC FLASH INCIDENT ENERGY -->
@@ -140,36 +174,90 @@
   function el(id){ return document.getElementById(id); }
   function fmt(v, d){ if(!isFinite(v)) return '—'; return v.toFixed(d===undefined?2:d); }
   function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
-  // ---------- Arc Flash Incident Energy (simplified, Ralph Lee) ----------
+
+  var lvStep = el('afLvStep'), mvStep = el('afMvStep');
+
+  function categoryLabel(E){
+    if(E>40) return 'Exceeds Cat. 4 — dangerous, review the system';
+    if(E>25) return 'Category 4 (≥40 cal/cm² rated)';
+    if(E>8)  return 'Category 3 (≥25 cal/cm² rated)';
+    if(E>4)  return 'Category 2 (≥8 cal/cm² rated)';
+    if(E>1.2) return 'Category 1 (≥4 cal/cm² rated)';
+    return 'Below 4 — no PPE cat. beyond arc-rated daily wear';
+  }
+
   function calcAf(){
-    if(!el('afV')) return;
-    var V = num('afV'), Ibf = num('afIbf'), t = num('afT'), D = num('afD');
-    var errs = 0;
-    errs += fieldError(el('afV'), (isNaN(V) || V<=0) ? 'Must be greater than 0.' : null);
-    errs += fieldError(el('afIbf'), (isNaN(Ibf) || Ibf<=0) ? 'Must be greater than 0.' : null);
-    errs += fieldError(el('afT'), (isNaN(t) || t<=0) ? 'Must be greater than 0.' : null);
-    errs += fieldError(el('afD'), (isNaN(D) || D<=0) ? 'Must be greater than 0.' : null);
-    if(errs>0){ updateValidationBanner('afValidation', errs); return; }
+    var vclass = document.querySelector('input[name="afVclass"]:checked').value;
+    lvStep.style.display = vclass === 'lv' ? '' : 'none';
+    mvStep.style.display = vclass === 'mv' ? '' : 'none';
 
-    var K = 2.142e6; // IEEE 1584 / modified-Lee constant — returns J/cm²
-    var E = (K*V*Ibf*t)/(D*D)/4.184; // convert J/cm² to cal/cm²
-    var boundary = Math.sqrt((K*V*Ibf*t)/(1.2*4.184));
+    var E, boundaryText, formulaNote, warn = '';
 
-    var cat = 'Below 4 — no PPE cat. beyond arc-rated daily wear';
-    if(E>40) cat = 'Exceeds Cat. 4 — dangerous, review the system';
-    else if(E>25) cat = 'Category 4 (≥40 cal/cm² rated)';
-    else if(E>8) cat = 'Category 3 (≥25 cal/cm² rated)';
-    else if(E>4) cat = 'Category 2 (≥8 cal/cm² rated)';
-    else if(E>1.2) cat = 'Category 1 (≥4 cal/cm² rated)';
+    if (vclass === 'lv') {
+      var config = document.querySelector('input[name="afConfig"]:checked').value;
+      var Ibf = num('afLvIbf'), T = num('afLvT'), D = num('afLvD');
+      var errs = 0;
+      errs += fieldError(el('afLvIbf'), (isNaN(Ibf) || Ibf<=0) ? 'Must be greater than 0.' : null);
+      errs += fieldError(el('afLvT'), (isNaN(T) || T<=0) ? 'Must be greater than 0.' : null);
+      errs += fieldError(el('afLvD'), (isNaN(D) || D<=0) ? 'Must be greater than 0.' : null);
+      if(errs>0){ updateValidationBanner('afValidation', errs); return; }
+
+      if (config === 'open') {
+        E = 5271 * T * Math.pow(D, -1.9593) * (0.0016*Ibf*Ibf - 0.0076*Ibf + 0.8938);
+        var boundaryIn = Math.pow((T/1.2) * (8.434*Ibf*Ibf - 40.06*Ibf + 4711), 0.5104);
+        boundaryText = fmt(boundaryIn,1) + ' in';
+        formulaNote = 'IE = 5271·T·D⁻¹·⁹⁵⁹³·[0.0016·Ibf² − 0.0076·Ibf + 0.8938] cal/cm² (Doughty-Neal-Floyd, open air)';
+      } else {
+        E = 1038.7 * T * Math.pow(D, -1.4738) * (0.0093*Ibf*Ibf - 0.3453*Ibf + 5.9675);
+        var boundaryIn2 = Math.pow((T/1.2) * (9.66*Ibf*Ibf - 358.7*Ibf + 6198), 0.6785);
+        boundaryText = fmt(boundaryIn2,1) + ' in';
+        formulaNote = 'IE = 1038.7·T·D⁻¹·⁴⁷³⁸·[0.0093·Ibf² − 0.3453·Ibf + 5.9675] cal/cm² (Doughty-Neal-Floyd, in a box)';
+      }
+
+      if (Ibf < 16 || Ibf > 50) warn = 'Bolted fault current (' + fmt(Ibf,1) + ' kA) is outside the 16–50 kA validated test range — treat this as an extrapolated estimate.';
+      if (D < 18) warn += (warn ? ' ' : '') + 'Working distance below 18 in. is outside the validated range.';
+
+    } else {
+      var V = num('afV'), Ibf2 = num('afIbf'), t = num('afT'), D2 = num('afD');
+      var errs2 = 0;
+      errs2 += fieldError(el('afV'), (isNaN(V) || V<=0) ? 'Must be greater than 0.' : null);
+      errs2 += fieldError(el('afIbf'), (isNaN(Ibf2) || Ibf2<=0) ? 'Must be greater than 0.' : null);
+      errs2 += fieldError(el('afT'), (isNaN(t) || t<=0) ? 'Must be greater than 0.' : null);
+      errs2 += fieldError(el('afD'), (isNaN(D2) || D2<=0) ? 'Must be greater than 0.' : null);
+      if(errs2>0){ updateValidationBanner('afValidation', errs2); return; }
+
+      var K = 2.142e6; // Ralph Lee / modified-Lee constant — returns J/cm²
+      E = (K*V*Ibf2*t)/(D2*D2)/4.184; // convert J/cm² to cal/cm²
+      var boundaryMm = Math.sqrt((K*V*Ibf2*t)/(1.2*4.184));
+      boundaryText = fmt(boundaryMm,0) + ' mm';
+      formulaNote = 'E = 2.142×10⁶ × V × Ibf × t / D² (cal/cm², Ralph Lee equation) · D_boundary = √(2.142×10⁶ × V × Ibf × t / 1.2)';
+
+      if (V < 0.601) warn = 'Voltage should be above 600V for this method — switch to the ≤600V option instead.';
+    }
 
     setText('afE', fmt(E,2) + ' <small>cal/cm²</small>');
-    setText('afBoundary', fmt(boundary,0) + ' mm');
-    setText('afCategory', cat);
+    setText('afBoundary', boundaryText);
+    setText('afCategory', categoryLabel(E));
+    setText('afFormulaNote', formulaNote);
+
+    var rw = el('afRangeWarning');
+    if (warn) {
+      rw.style.display = '';
+      rw.innerHTML = '<span class="status-dot"></span>' + warn;
+    } else {
+      rw.style.display = 'none';
+    }
+
     updateValidationBanner('afValidation', 0);
   }
-  ['afV','afIbf','afT','afD'].forEach(function(id){
+
+  ['afLvIbf','afLvT','afLvD','afV','afIbf','afT','afD'].forEach(function(id){
     var e = el(id); if(e){ e.addEventListener('input', calcAf); e.addEventListener('change', calcAf); }
   });
+  document.querySelectorAll('input[name="afVclass"], input[name="afConfig"]').forEach(function(e){
+    e.addEventListener('change', calcAf);
+  });
+
   calcAf();
 
 })();
