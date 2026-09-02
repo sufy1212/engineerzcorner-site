@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Data Center Cooling: Air to Immersion</title>
+    <link>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</guid>
+    <description>What data center cooling actually has to solve, the main types — CRAC, CRAH, in-row, rear-door heat exchanger, direct-to-chip liquid cooling, single- and two-phase immersion, free cooling — parts of a liquid cooling loop, a rack-density selection guide, and PUE explained.</description>
+    <pubDate>Wed, 02 Sep 2026 18:17:51 GMT</pubDate>
+  </item>
+  <item>
     <title>Industrial Sensor Types Explained</title>
     <link>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
     <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
     <description>Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV</title>
-    <link>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bms-point-types-explained.html</guid>
-    <description>What each BMS point abbreviation actually means — AI, AO, BI, BO, MI, MO, BV, AV and MV.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>
