@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Pump Types Explained: Centrifugal to PD</title>
+    <link>https://www.engineerzcorner.com/posts/pump-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
+    <description>What a pump actually does, eight common pump types, key parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
+    <pubDate>Wed, 02 Sep 2026 19:24:26 GMT</pubDate>
+  </item>
+  <item>
     <title>Data Center Cooling: Air to Immersion</title>
     <link>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</guid>
@@ -23,13 +30,6 @@
     <guid>https://www.engineerzcorner.com/posts/cooling-tower-types-explained.html</guid>
     <description>What a cooling tower actually does, the main types — counterflow, crossflow, natural draft, forced draft, induced draft, open circuit, closed circuit, hybrid — its parts, a selection guide, and common failure points.</description>
     <pubDate>Tue, 01 Sep 2026 18:49:08 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pump Types Explained: Centrifugal to PD</title>
-    <link>https://www.engineerzcorner.com/posts/pump-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
-    <description>What a pump actually does, the main types — centrifugal, gear, screw, vane, diaphragm, piston, peristaltic, progressive cavity — its parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
-    <pubDate>Tue, 01 Sep 2026 03:14:31 GMT</pubDate>
   </item>
   <item>
     <title>Circuit Breaker Types Explained: MCB to OCB</title>

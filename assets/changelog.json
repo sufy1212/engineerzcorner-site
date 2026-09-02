@@ -126,15 +126,29 @@
   "a": "added"
  },
  {
-  "t": "Circuit Breaker Types Explained: MCB to OCB",
-  "u": "posts/circuit-breaker-types-explained",
-  "d": "2026-09-01",
+  "t": "Pump Types Explained: Centrifugal to PD",
+  "u": "posts/pump-types-explained",
+  "d": "2026-09-02",
   "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Arc Flash Incident Energy",
+  "u": "electrical/arc-flash-incident-energy",
+  "d": "2026-09-02",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "BESS Sizing Calculator",
+  "u": "electrical/bess-sizing-calculator",
+  "d": "2026-09-02",
+  "c": "Electrical",
   "a": "added"
  },
  {
-  "t": "Pump Types Explained: Centrifugal to PD",
-  "u": "posts/pump-types-explained",
+  "t": "Circuit Breaker Types Explained: MCB to OCB",
+  "u": "posts/circuit-breaker-types-explained",
   "d": "2026-09-01",
   "c": "Blog",
   "a": "added"
@@ -562,13 +576,6 @@
  {
   "t": "Cable Schedule Builder",
   "u": "electrical/cable-schedule-builder",
-  "d": "2026-08-27",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Arc Flash Incident Energy",
-  "u": "electrical/arc-flash-incident-energy",
   "d": "2026-08-27",
   "c": "Electrical",
   "a": "updated"

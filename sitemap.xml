@@ -42,9 +42,10 @@
   <url><loc>https://www.engineerzcorner.com/contact</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/defect-finder</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/discipline-cards-v2</loc><lastmod>2026-08-13</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/</loc><lastmod>2026-08-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.engineerzcorner.com/electrical/arc-flash-incident-energy</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/arc-flash-incident-energy</loc><lastmod>2026-09-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/awg-mm2-converter</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/electrical/bess-sizing-calculator</loc><lastmod>2026-09-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/breaker-fuse-sizing-calculator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/busbar-enclosure-sizing</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/cable-derating-calculator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -275,7 +276,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/psychrometric-chart-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pump-fan-affinity-laws-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pump-types-explained</loc><lastmod>2026-09-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pump-types-explained</loc><lastmod>2026-09-02</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/raci-matrix-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
