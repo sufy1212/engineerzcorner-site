@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BESS Sizing Calculator — Power &amp; Energy — Engineerz CorneR</title>
+<meta name="description" content="Size a Battery Energy Storage System: usable energy, nameplate capacity, power rating and C-rate, with a power-vs-energy constraint check.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/bess-sizing-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="BESS Sizing Calculator — Power &amp; Energy — Engineerz CorneR">
+<meta property="og:description" content="Size a Battery Energy Storage System: usable energy, nameplate capacity, power rating and C-rate, with a power-vs-energy constraint check.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/bess-sizing-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BESS Sizing Calculator — Power &amp; Energy — Engineerz CorneR">
+<meta name="twitter:description" content="Size a Battery Energy Storage System: usable energy, nameplate capacity, power rating and C-rate, with a power-vs-energy constraint check.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Electrical", "item": "https://www.engineerzcorner.com/electrical/" },
+    { "@type": "ListItem", "position": 3, "name": "BESS Sizing Calculator", "item": "https://www.engineerzcorner.com/electrical/bess-sizing-calculator" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "BESS Sizing Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Size a Battery Energy Storage System: usable energy, nameplate capacity, power rating and C-rate, with a power-vs-energy constraint check.",
+  "url": "https://www.engineerzcorner.com/electrical/bess-sizing-calculator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">BESS Sizing Calculator</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-bess">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="18" rx="1"></rect><path d="M10 1h4v3h-4z"></path><path d="M9 12h2l-1 4 4-6h-2l1-4z"></path></svg></div>
+    <div><h1>BESS Sizing Calculator</h1><div class="hero-sub">Usable energy · nameplate capacity · power rating · C-rate</div></div>
+  </div>
+
+  <div class="intro">Sizes a commercial/grid-scale Battery Energy Storage System from a required load and duration — separate from the residential off-grid autonomy sizing in the <a href="./ups-battery-autonomy-sizing">UPS Autonomy tool</a> and the Solar Sizing Calculator's daily-load battery step. The distinguishing feature here is the <b>power-vs-energy check</b>: a BESS sized purely for kWh can still fail to deliver the kW you need if its C-rate is too low — a common real-world sizing miss.</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Load &amp; Duration Requirement</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="bessPower">Power to support <span class="unit">kW</span></label>
+        <input type="number" id="bessPower" value="500" step="10" min="0.01">
+      </div>
+      <div class="field">
+        <label for="bessDuration">Required duration at that power <span class="unit">hours</span></label>
+        <input type="number" id="bessDuration" value="2" step="0.25" min="0.01">
+      </div>
+      <div class="field">
+        <label for="bessMargin">Design margin <span class="unit">%</span></label>
+        <input type="number" id="bessMargin" value="10" step="1" min="0">
+        <div class="hint">Applied to both the energy and power results for a first-pass design buffer.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Battery &amp; System Parameters</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="bessDod">Max depth of discharge, DoD <span class="unit">%</span></label>
+        <input type="number" id="bessDod" value="90" step="1" min="1" max="100">
+        <div class="hint">LFP commonly 90–95%; lead-acid typically 50%.</div>
+      </div>
+      <div class="field">
+        <label for="bessInvEff">Inverter / PCS efficiency <span class="unit">%</span></label>
+        <input type="number" id="bessInvEff" value="96" step="0.5" min="1" max="100">
+      </div>
+      <div class="field">
+        <label for="bessBattEff">Battery discharge efficiency <span class="unit">%</span></label>
+        <input type="number" id="bessBattEff" value="97" step="0.5" min="1" max="100">
+        <div class="hint">Losses in the discharge path only. Full round-trip efficiency (charge+discharge) is typically 85–95% for lithium systems and matters for sizing the charging source, not for this capacity result.</div>
+      </div>
+      <div class="field">
+        <label for="bessCrate">Battery C-rate <span class="unit">C</span></label>
+        <input type="number" id="bessCrate" value="0.5" step="0.05" min="0.01">
+        <div class="hint">0.5C is a common grid-storage default (2-hour system). 1C = full discharge in 1 hour.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">Nameplate Capacity Required</span>
+      <span class="rval" id="bessNameplate">– <small>kWh</small></span>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">Power Rating Required</span>
+      <span class="rval" id="bessPowerReq">– <small>kW</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Usable energy required</div><div class="sval" id="bessUsable">—</div></div>
+      <div class="stat"><div class="slabel">Max power at chosen C-rate</div><div class="sval" id="bessMaxPowerCrate">—</div></div>
+      <div class="stat"><div class="slabel">Resulting C-rate at sized power</div><div class="sval amber" id="bessResultCrate">—</div></div>
+      <div class="stat"><div class="slabel">Achieved duration check</div><div class="sval" id="bessAchievedDuration">—</div></div>
+    </div>
+    <div class="status-banner neutral" id="bessConstraint" style="margin:0 16px 16px;"></div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Usable Energy = Power × Duration × (1+Margin) &nbsp;·&nbsp; Nameplate = Usable Energy / (DoD × Inverter Eff × Battery Eff) &nbsp;·&nbsp; Power Rating = Power × (1+Margin) &nbsp;·&nbsp; Max Power at C-rate = Nameplate × C-rate
+      </div>
+      <div class="hint" style="margin-top:8px;">If Max Power at the chosen C-rate is below the required Power Rating, the system is <b>power-constrained</b> — you need a higher C-rate battery or more nameplate capacity than energy alone would suggest, purely to deliver the required kW. This is a genuinely common miss in first-pass BESS sizing: teams size to kWh and only discover the power shortfall after quoting.</div>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">i</span><h2>Reference: BESS Terms</h2></div>
+    <div class="pm-table-wrap" style="margin:0 16px 16px;">
+      <table class="pm-table">
+        <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Nameplate capacity</td><td>Total rated energy storage, before DoD/efficiency losses (kWh)</td></tr>
+          <tr><td>Usable energy</td><td>Nameplate × DoD — what's actually available to discharge</td></tr>
+          <tr><td>Power rating</td><td>Maximum continuous power the system can deliver (kW)</td></tr>
+          <tr><td>C-rate</td><td>Discharge/charge speed relative to capacity — 1C empties a full battery in 1 hour</td></tr>
+          <tr><td>Round-trip efficiency</td><td>Energy out ÷ energy in over a full charge/discharge cycle</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>Sizing relationships (usable energy, DoD, C-rate, round-trip efficiency) follow standard, publicly documented BESS engineering definitions — not a proprietary model. This is a first-pass sizing tool for budgeting and RFQ scoping; final specification should confirm against the manufacturer's actual discharge-rate curves, thermal derating, and (for stationary installations) NFPA 855 spacing/enclosure requirements. <a href="./">← Electrical Index</a></footer>
+</div>
+
+<script>
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function fmt(n,d){ return Number.isFinite(n) ? n.toFixed(d===undefined?2:d) : '–'; }
+
+  function calc(){
+    var P = parseFloat($('bessPower').value);
+    var Dur = parseFloat($('bessDuration').value);
+    var Margin = parseFloat($('bessMargin').value)/100;
+    var DoD = parseFloat($('bessDod').value)/100;
+    var InvEff = parseFloat($('bessInvEff').value)/100;
+    var BattEff = parseFloat($('bessBattEff').value)/100;
+    var Crate = parseFloat($('bessCrate').value);
+
+    if (!(P>0 && Dur>0 && DoD>0 && InvEff>0 && BattEff>0 && Crate>0)) return;
+
+    var usableEnergy = P * Dur * (1+Margin);
+    var nameplate = usableEnergy / (DoD * InvEff * BattEff);
+    var powerReq = P * (1+Margin);
+    var maxPowerAtCrate = nameplate * Crate;
+    var resultCrate = powerReq / nameplate;
+    var achievedDuration = usableEnergy / powerReq;
+
+    $('bessNameplate').innerHTML = fmt(nameplate,1) + ' <small>kWh</small>';
+    $('bessPowerReq').innerHTML = fmt(powerReq,1) + ' <small>kW</small>';
+    $('bessUsable').textContent = fmt(usableEnergy,1) + ' kWh';
+    $('bessMaxPowerCrate').textContent = fmt(maxPowerAtCrate,1) + ' kW';
+    $('bessResultCrate').textContent = fmt(resultCrate,2) + ' C';
+    $('bessAchievedDuration').textContent = fmt(achievedDuration,2) + ' h';
+
+    var banner = $('bessConstraint');
+    if (maxPowerAtCrate < powerReq - 0.001) {
+      banner.className = 'status-banner bad';
+      banner.innerHTML = '<span class="status-dot"></span>Power-constrained: at ' + fmt(Crate,2) + 'C, this nameplate capacity can only deliver ' + fmt(maxPowerAtCrate,1) + ' kW — short of the ' + fmt(powerReq,1) + ' kW required. Increase the C-rate or add nameplate capacity to meet the power requirement.';
+    } else {
+      banner.className = 'status-banner ok';
+      banner.innerHTML = '<span class="status-dot"></span>Energy-constrained (normal case): the sized capacity comfortably covers the required power at ' + fmt(Crate,2) + 'C.';
+    }
+  }
+
+  document.querySelectorAll('#bessPower,#bessDuration,#bessMargin,#bessDod,#bessInvEff,#bessBattEff,#bessCrate').forEach(function(el){
+    el.addEventListener('input', calc);
+    el.addEventListener('change', calc);
+  });
+
+  calc();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
