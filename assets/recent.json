@@ -1,52 +1,52 @@
 [
   {
-    "t": "Data Center Cooling: Air to Immersion",
-    "u": "posts/data-center-cooling-types-explained",
+    "t": "Change Order Impact Calculator",
+    "u": "pm/change-order-impact-calculator",
     "d": "2026-09-02"
   },
   {
-    "t": "Industrial Sensor Types Explained",
-    "u": "posts/industrial-sensor-types-explained",
-    "d": "2026-09-01"
+    "t": "Commercial Terms of Project",
+    "u": "pm/commercial-terms",
+    "d": "2026-09-02"
   },
   {
-    "t": "Cooling Tower Types Explained",
-    "u": "posts/cooling-tower-types-explained",
-    "d": "2026-09-01"
+    "t": "Cost Contingency &amp; Management Reserve Calculator",
+    "u": "pm/cost-contingency-calculator",
+    "d": "2026-09-02"
   },
   {
-    "t": "Pump Types Explained: Centrifugal to PD",
-    "u": "posts/pump-types-explained",
-    "d": "2026-09-01"
+    "t": "Earned Value Management",
+    "u": "pm/evm",
+    "d": "2026-09-02"
   },
   {
-    "t": "Circuit Breaker Types Explained: MCB to OCB",
-    "u": "posts/circuit-breaker-types-explained",
-    "d": "2026-09-01"
+    "t": "PM Glossary",
+    "u": "pm/glossary",
+    "d": "2026-09-02"
   },
   {
-    "t": "Main Components of a 33 kV Substation Explained",
-    "u": "posts/33kv-substation-main-components-explained",
-    "d": "2026-08-30"
+    "t": "Incoterms",
+    "u": "pm/incoterms",
+    "d": "2026-09-02"
   },
   {
-    "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
-    "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
-    "d": "2026-08-30"
+    "t": "Meeting Cost Calculator",
+    "u": "pm/meeting-cost-calculator",
+    "d": "2026-09-02"
   },
   {
-    "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
-    "u": "posts/cav-vs-vav-air-volume-control-explained",
-    "d": "2026-08-30"
+    "t": "Meeting Minutes &amp; Action Items",
+    "u": "pm/meeting-minutes",
+    "d": "2026-09-02"
   },
   {
-    "t": "Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes",
-    "u": "posts/fire-pump-room-installation-commissioning-mistakes",
-    "d": "2026-08-30"
+    "t": "Permit to Work / LOTO Checklist",
+    "u": "pm/permit-to-work",
+    "d": "2026-09-02"
   },
   {
-    "t": "How to Read a Full P&amp;ID: A Complete Worked Walkthrough",
-    "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
-    "d": "2026-08-30"
+    "t": "PMP / PMBOK Reference",
+    "u": "pm/pmp-pmbok-reference",
+    "d": "2026-09-02"
   }
 ]
