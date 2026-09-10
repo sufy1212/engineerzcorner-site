@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arc Flash Hazard Basics: Incident Energy, PPE Categories &amp; Boundaries | Engineerz CorneR</title>
+<meta name="description" content="What drives arc flash incident energy, the main variables in an arc flash study, NFPA 70E PPE categories 1&ndash;4 with cal/cm&sup2; thresholds, the arc flash boundary explained, and practical ways to reduce incident energy.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Arc Flash Hazard Basics: Incident Energy, PPE Categories &amp; Boundaries">
+<meta property="og:description" content="What drives arc flash incident energy, the main variables in an arc flash study, NFPA 70E PPE categories 1-4, the arc flash boundary explained, and practical ways to reduce incident energy.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arc Flash Hazard Basics: Incident Energy, PPE Categories &amp; Boundaries">
+<meta name="twitter:description" content="What drives arc flash incident energy, the main variables in an arc flash study, NFPA 70E PPE categories 1-4, the arc flash boundary explained, and practical ways to reduce incident energy.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="arc-flash-hazard-basics-incident-energy-ppe-categories.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Arc Flash Hazard Basics: Incident Energy, PPE Categories & Boundaries",
+      "item": "https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Arc Flash Hazard Basics: Incident Energy, PPE Categories & Boundaries",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+  "description": "What drives arc flash incident energy, the main variables in an arc flash study, NFPA 70E PPE categories 1-4 with cal/cm2 thresholds, the arc flash boundary explained, and practical ways to reduce incident energy.",
+  "url": "https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Arc Flash Hazard Basics: Incident Energy, PPE Categories &amp; Boundaries</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Safety</span>
+    <h1>Arc Flash Hazard Basics</h1>
+    <p class="hero-sub">An arc flash releases as much thermal energy in a fraction of a second as some industrial furnaces do continuously &mdash; and the PPE category on the label is really just a shorthand for one number: how much of that energy would reach a worker at a defined distance.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Safety</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="150" x2="760" y2="150" stroke="#1E3A5C" stroke-width="1"/>
+      <rect x="100" y="60" width="70" height="70" rx="3" fill="#122845" stroke="#7e97ac" stroke-width="1"/>
+      <path d="M120 95l14-18-4 14 12-2-14 20 4-14z" fill="#E4C878" stroke="#E4C878"/>
+      <text x="96" y="145" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">ARC SOURCE</text>
+      <circle cx="340" cy="95" r="55" fill="none" stroke="#C9A034" stroke-width="1.4" stroke-dasharray="4 4"/>
+      <circle cx="340" cy="95" r="90" fill="none" stroke="#3E4E70" stroke-width="1.2" stroke-dasharray="3 5"/>
+      <text x="300" y="45" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">ARC FLASH BOUNDARY</text>
+      <circle cx="430" cy="95" r="4" fill="#f3eedd"/>
+      <text x="440" y="99" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6">WORKER</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Incident energy &mdash; the thermal energy a worker could absorb at a given distance from an arc &mdash; is the number everything else in an arc flash study derives from, whether it's used to pick a PPE category or set a boundary distance.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Clearing time usually matters more than fault current &mdash; a faster-tripping protective device can cut incident energy dramatically even when the available fault current itself doesn't change.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">NFPA 70E gives two valid methods to select PPE: calculate incident energy directly (Incident Energy Analysis) or use pre-defined lookup tables by equipment and task (the PPE Category Method) &mdash; the two can't be mixed for the same equipment.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A closed panel door reduces risk but doesn't eliminate the need for PPE during switching or abnormal operating conditions &mdash; a point NFPA 70E's 2024 edition specifically clarified.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What an arc flash study actually solves</h2>
+    <p>An arc flash is an electrical fault that jumps through the air between conductors or from a conductor to ground, releasing intense heat, light, pressure, and molten metal in a fraction of a second. Unlike a bolted short circuit, the fault current in an arc flash flows through ionized air rather than a solid connection, so its magnitude and duration depend on the specific equipment, voltage, and available fault current at that point. An arc flash study exists to answer one practical question before anyone works on or near energized equipment: how much thermal energy would reach a worker standing at a normal working distance, and what protection does that require?</p>
+
+    <h2><span class="h2-dot"></span>Main variables that drive incident energy</h2>
+    <p class="post-lede">The IEEE 1584 model (and the older Doughty-Neal-Floyd and Ralph Lee equations it built on) calculates incident energy from a handful of inputs &mdash; changing any one of them changes the result.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7z"></path></svg></div>
+          <div><div class="device-name">Arcing fault current</div><div class="device-full">Not the same as bolted fault current</div></div>
+        </div>
+        <div class="device-desc">The current that actually flows through the arc, typically lower than the bolted three-phase fault current at the same point. Both matter — the arcing current drives incident energy, and the bolted current is used to select protective device settings.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l4 2"></path></svg></div>
+          <div><div class="device-name">Clearing time</div><div class="device-full">How fast the protective device trips</div></div>
+        </div>
+        <div class="device-desc">Incident energy scales directly with how long the arc is allowed to burn — a protective device that trips faster cuts energy roughly in proportion, which is why upstream coordination and maintenance mode switches matter as much as fault current.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4M16 12h4M12 4v4M12 16v4" stroke-width="2.2"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+          <div><div class="device-name">Working distance</div><div class="device-full">Distance from the arc to the worker</div></div>
+        </div>
+        <div class="device-desc">Incident energy falls off sharply with distance — standard working distances are assumed for typical tasks, but any work that requires getting closer than normal (troubleshooting inside an open panel) increases exposure.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 9h16M9 4v16" stroke-width="1.4"></path></svg></div>
+          <div><div class="device-name">Electrode configuration &amp; enclosure</div><div class="device-full">Open air vs. enclosed, box size</div></div>
+        </div>
+        <div class="device-desc">IEEE 1584-2018 models five electrode configurations and accounts for enclosure dimensions — an arc inside a smaller enclosure directs more energy toward the opening a worker would be standing in front of.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"></path></svg></div>
+          <div><div class="device-name">System voltage</div><div class="device-full">Sets which model applies</div></div>
+        </div>
+        <div class="device-desc">The IEEE 1584/Doughty-Neal-Floyd equations cover systems up to 15kV; above that, methods such as the Ralph Lee equation are used instead. Voltage alone doesn't determine severity — it's one input among several.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"></path></svg></div>
+          <div><div class="device-name">Grounding &amp; bus gap</div><div class="device-full">System configuration details</div></div>
+        </div>
+        <div class="device-desc">Grounding configuration and the physical spacing between conductors both influence how readily a fault sustains an arc versus clearing quickly — details that come from the equipment's actual design, not just its nameplate rating.</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Steps in an arc flash study</h2>
+    <ol class="part-list">
+      <li><span class="part-num">1</span><div class="part-text"><b>Data collection</b><span>Single-line diagram, equipment ratings, conductor lengths, protective device settings, and utility fault contribution.</span></div></li>
+      <li><span class="part-num">2</span><div class="part-text"><b>Short-circuit study</b><span>Calculates available bolted fault current at every point in the system, the foundation the arc flash calculation builds on.</span></div></li>
+      <li><span class="part-num">3</span><div class="part-text"><b>Protective device coordination review</b><span>Determines actual clearing time at each location, since this is often the single biggest lever on incident energy.</span></div></li>
+      <li><span class="part-num">4</span><div class="part-text"><b>Incident energy calculation</b><span>Applies IEEE 1584 (or an equivalent recognized method) using fault current, clearing time, working distance, and equipment configuration.</span></div></li>
+      <li><span class="part-num">5</span><div class="part-text"><b>Arc flash boundary determination</b><span>Calculates the distance at which incident energy drops to the threshold requiring arc-rated PPE.</span></div></li>
+      <li><span class="part-num">6</span><div class="part-text"><b>PPE selection</b><span>Chooses arc-rated PPE with a rating that meets or exceeds the calculated incident energy, using the Incident Energy Analysis or PPE Category method — not both, for the same equipment.</span></div></li>
+      <li><span class="part-num">7</span><div class="part-text"><b>Labeling</b><span>Equipment is field-labeled with incident energy (or PPE category), arc flash boundary, and required PPE, per the applicable standard.</span></div></li>
+    </ol>
+
+    <h2><span class="h2-dot"></span>NFPA 70E PPE categories</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Category</th><th>Minimum arc rating</th><th>Typical context</th></tr>
+        <tr><td>Below 1.2 cal/cm&sup2;</td><td>No arc-rated PPE required</td><td>Below the threshold NFPA 70E defines as needing protection</td></tr>
+        <tr><td>Category 1</td><td>4 cal/cm&sup2;</td><td>Panel operations, breaker switching on lower-voltage equipment</td></tr>
+        <tr><td>Category 2</td><td>8 cal/cm&sup2;</td><td>MCC work, disconnect operations</td></tr>
+        <tr><td>Category 3</td><td>25 cal/cm&sup2;</td><td>Switchgear racking, cable work on higher-energy equipment</td></tr>
+        <tr><td>Category 4</td><td>40 cal/cm&sup2;</td><td>Higher-energy switchgear and transformer work</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key term: arc flash boundary</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>What it means</th></tr>
+        <tr><td>Arc flash boundary</td><td>The distance from a potential arc source at which incident energy drops to the level requiring arc-rated PPE — inside this boundary, PPE is required; outside it, it generally isn't</td></tr>
+        <tr><td>Working distance</td><td>The assumed distance between the worker's face/chest and the arc source, used as the reference point for the incident energy calculation</td></tr>
+        <tr><td>Not the same as shock boundaries</td><td>Limited and restricted approach boundaries (for shock protection) are separate distances governed by voltage, not incident energy — both can apply to the same task</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Practical ways to reduce incident energy</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">1</span><span>Faster protective device clearing time — often the single most effective lever, since incident energy scales directly with arc duration</span></li>
+      <li><span class="ck-mark">2</span><span>Maintenance mode switches that temporarily lower instantaneous trip thresholds while work is being performed</span></li>
+      <li><span class="ck-mark">3</span><span>Remote racking and remote switching, which increases the effective working distance to zero for the operator</span></li>
+      <li><span class="ck-mark">4</span><span>Arc-resistant switchgear, designed to direct arc energy away from the operator side of the equipment</span></li>
+      <li><span class="ck-mark">5</span><span>Current-limiting fuses or breakers where applicable, reducing let-through energy</span></li>
+      <li><span class="ck-mark">6</span><span>De-energizing equipment before work whenever it's feasible, which remains the most effective control of all</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Common mistakes &amp; oversights</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span>Assuming a closed panel door removes the need for PPE during switching — NFPA 70E's 2024 edition specifically clarifies it generally doesn't for abnormal operating conditions</span></li>
+      <li><span class="ck-mark">✓</span><span>Mixing the Incident Energy Analysis and PPE Category methods on the same piece of equipment, which isn't permitted</span></li>
+      <li><span class="ck-mark">✓</span><span>Treating arc flash labels as permanent — a study needs updating whenever protective device settings, fault current availability, or equipment changes</span></li>
+      <li><span class="ck-mark">✓</span><span>Confusing the arc flash boundary with shock protection boundaries, which are calculated independently and governed by different rules</span></li>
+      <li><span class="ck-mark">✓</span><span>Overlooking that arcing current, not bolted fault current, drives the incident energy result — a higher bolted fault current doesn't always mean higher incident energy</span></li>
+    </ul>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Clearing time is usually the most practical lever available after a system is already built — protective device settings can often be adjusted with no equipment changes, while fault current, working distance, and enclosure geometry are largely fixed by the installation itself.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">LV switchgear &amp; panelboards</span>
+      <span class="app-chip">Motor control centers</span>
+      <span class="app-chip">Medium-voltage switchgear</span>
+      <span class="app-chip">Industrial facility electrical safety programs</span>
+      <span class="app-chip">Electrical equipment labeling</span>
+      <span class="app-chip">Maintenance &amp; troubleshooting work planning</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Incident energy is the number everything else derives from — the PPE category is a shorthand for it, not an independent judgment.</span></li>
+      <li><span class="tk-check">✓</span><span>Clearing time usually matters as much as, or more than, fault current — a faster-tripping device can meaningfully cut incident energy without any equipment changes.</span></li>
+      <li><span class="tk-check">✓</span><span>NFPA 70E's Incident Energy Analysis and PPE Category methods are both valid but can't be mixed on the same equipment — pick one per piece of equipment and stay consistent.</span></li>
+      <li><span class="tk-check">✓</span><span>A closed door reduces exposure but isn't a substitute for PPE during switching or abnormal conditions — a point the 2024 NFPA 70E edition specifically addressed.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Arc%20Flash%20Hazard%20Basics%3A%20Incident%20Energy%2C%20PPE%20Categories%20%26%20Boundaries%20%E2%80%94%20What%20drives%20arc%20flash%20incident%20energy%2C%20NFPA%2070E%20PPE%20categories%2C%20the%20arc%20flash%20boundary%20explained%2C%20and%20practical%20ways%20to%20reduce%20incident%20energy.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Farc-flash-hazard-basics-incident-energy-ppe-categories" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Farc-flash-hazard-basics-incident-energy-ppe-categories" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Arc%20Flash%20Hazard%20Basics%3A%20Incident%20Energy%2C%20PPE%20Categories%20%26%20Boundaries&text=What%20drives%20arc%20flash%20incident%20energy%2C%20NFPA%2070E%20PPE%20categories%2C%20the%20arc%20flash%20boundary%20explained%2C%20and%20practical%20ways%20to%20reduce%20incident%20energy.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Farc-flash-hazard-basics-incident-energy-ppe-categories" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Arc%20Flash%20Hazard%20Basics%3A%20Incident%20Energy%2C%20PPE%20Categories%20%26%20Boundaries&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AArc%20Flash%20Hazard%20Basics%3A%20Incident%20Energy%2C%20PPE%20Categories%20%26%20Boundaries%0AWhat%20drives%20arc%20flash%20incident%20energy%2C%20NFPA%2070E%20PPE%20categories%2C%20the%20arc%20flash%20boundary%20explained%2C%20and%20practical%20ways%20to%20reduce%20incident%20energy.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Farc-flash-hazard-basics-incident-energy-ppe-categories">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/arc-flash-incident-energy">Arc Flash Incident Energy Calculator →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="short-circuit-current-iec-60909-basics">Short Circuit Current (IEC 60909) Basics</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</a></li><li><a href="permit-to-work-loto-explained">Permit to Work &amp; LOTO</a></li><li><a href="electrical-panel-fat-checklist">Electrical Panel FAT Checklist</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
