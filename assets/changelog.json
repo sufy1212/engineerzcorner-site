@@ -1,5 +1,40 @@
 [
  {
+  "t": "What Is an Inverter? DC-to-AC Conversion Explained",
+  "u": "posts/what-is-an-inverter-dc-ac-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "UPS Architecture, Types &amp; Operating Modes Explained",
+  "u": "posts/ups-architecture-types-operating-modes-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get",
+  "u": "posts/ups-battery-autonomy-sizing-derating-factors",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+  "u": "posts/battery-soc-vs-dod-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "BESS Types &amp; Components Explained",
+  "u": "posts/bess-types-components-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Data Center Cooling: Air to Immersion",
   "u": "posts/data-center-cooling-types-explained",
   "d": "2026-09-02",
@@ -436,13 +471,6 @@
  {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
-  "d": "2026-08-30",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "What Is an Inverter? DC-to-AC Conversion Explained",
-  "u": "posts/what-is-an-inverter-dc-ac-explained",
   "d": "2026-08-30",
   "c": "Blog",
   "a": "updated"
@@ -959,13 +987,6 @@
   "a": "updated"
  },
  {
-  "t": "UPS Architecture, Types &amp; Operating Modes Explained",
-  "u": "posts/ups-architecture-types-operating-modes-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Relay Basics: Construction, Working Principle &amp; Contact Types",
   "u": "posts/relay-basics-construction-working-principle-explained",
   "d": "2026-08-27",
@@ -1325,13 +1346,6 @@
  {
   "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
   "u": "posts/system-voltages-low-medium-high-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get",
-  "u": "posts/ups-battery-autonomy-sizing-derating-factors",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
@@ -1827,13 +1841,6 @@
   "a": "updated"
  },
  {
-  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-  "u": "posts/battery-soc-vs-dod-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Bearing Failures: Root Causes &amp; Prevention",
   "u": "posts/bearing-failure-modes-causes-prevention",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "SOP / Essay Word Checker",
   "u": "study-abroad/sop-word-checker",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "University Fee Comparison",
-  "u": "study-abroad/university-fee-comparison",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"

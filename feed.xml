@@ -4,6 +4,41 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
+    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
+    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
+  </item>
+  <item>
+    <title>BESS Types &amp; Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/bess-types-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bess-types-components-explained.html</guid>
+    <description>Battery Energy Storage System chemistries — LFP, NMC, lead-acid, sodium-ion, vanadium redox flow — compared, the main components inside a BESS (cells, BMS, PCS, EMS, thermal management, fire suppression), a duration-based selection guide, and C-rate explained.</description>
+    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
+  </item>
+  <item>
+    <title>UPS Architecture, Types &amp; Operating Modes Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</guid>
+    <description>How an online double-conversion UPS is built — rectifier/charger, battery bank, inverter, static switch and bypass — plus the three operating modes.</description>
+    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
+  </item>
+  <item>
+    <title>UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get</title>
+    <link>https://www.engineerzcorner.com/posts/ups-battery-autonomy-sizing-derating-factors.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ups-battery-autonomy-sizing-derating-factors.html</guid>
+    <description>Required battery Ah for a UPS from load and backup time, and why depth of discharge, aging.</description>
+    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
+  </item>
+  <item>
+    <title>What Is an Inverter? DC-to-AC Conversion Explained</title>
+    <link>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</guid>
+    <description>How an inverter turns DC into AC — switching, filtering, waveform types (pure sine, modified sine, square wave), key components, and typical uses.</description>
+    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
+  </item>
+  <item>
     <title>Pump Types Explained: Centrifugal to PD</title>
     <link>https://www.engineerzcorner.com/posts/pump-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
@@ -85,13 +120,6 @@
     <link>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained.html</guid>
     <description>How the TTR test verifies winding ratios, polarity and connections, and detects shorted turns — procedure, example readings and acceptance criteria.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>What Is an Inverter? DC-to-AC Conversion Explained</title>
-    <link>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</guid>
-    <description>How an inverter turns DC into AC — switching, filtering, waveform types (pure sine, modified sine, square wave), key components, and typical uses.</description>
     <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
   </item>
   <item>
@@ -183,34 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained.html</guid>
     <description>Passive protection, active systems, detection, suppression and evacuation — the five layers of building fire protection and how they work together.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
-    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
-    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load</title>
-    <link>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</link>
-    <guid>https://www.engineerzcorner.com/posts/beam-bending-basics-section-modulus-deflection.html</guid>
-    <description>Why a beam's bending capacity comes down to two checks — bending stress against section modulus, and deflection against span — not just the applied load.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Bearing Failures: Root Causes &amp; Prevention</title>
-    <link>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bearing-failure-modes-causes-prevention.html</guid>
-    <description>The five most common ways rolling-element bearings actually fail — spalling, lubrication breakdown, contamination, electrical erosion, and false brinelling.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension</title>
-    <link>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</link>
-    <guid>https://www.engineerzcorner.com/posts/belt-drive-sizing-speed-ratio-vs-tension.html</guid>
-    <description>Belt drive speed ratio, belt velocity and shaft torque from pulley diameters and power, and why tension depends on wrap angle and friction, not just geometry.</description>
     <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>
