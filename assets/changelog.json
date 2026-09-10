@@ -35,6 +35,34 @@
   "a": "added"
  },
  {
+  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
+  "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+  "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Power Semiconductors: Si, SiC &amp; GaN",
+  "u": "posts/power-semiconductor-types-si-sic-gan-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Data Center Cooling: Air to Immersion",
   "u": "posts/data-center-cooling-types-explained",
   "d": "2026-09-02",
@@ -1092,13 +1120,6 @@
   "a": "updated"
  },
  {
-  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
   "u": "posts/solar-payback-period-roi-explained",
   "d": "2026-08-27",
@@ -1157,13 +1178,6 @@
  {
   "t": "Industrial Valves Explained: Types &amp; Parts",
   "u": "posts/valve-types-parts-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
-  "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
@@ -1563,13 +1577,6 @@
  {
   "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
   "u": "posts/junction-box-types-parts-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-  "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
@@ -2088,13 +2095,6 @@
  {
   "t": "Score Calculator",
   "u": "study-abroad/score-calculator",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "SOP / Essay Word Checker",
-  "u": "study-abroad/sop-word-checker",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"
