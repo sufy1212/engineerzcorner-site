@@ -63,6 +63,41 @@
   "a": "added"
  },
  {
+  "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
+  "u": "posts/permit-to-work-loto-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
+  "u": "posts/short-circuit-current-iec-60909-basics",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
+  "u": "posts/electrical-panel-fat-checklist",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
+  "u": "posts/breaker-selectivity-discrimination-explained",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Arc Flash Hazard Basics",
+  "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Data Center Cooling: Air to Immersion",
   "u": "posts/data-center-cooling-types-explained",
   "d": "2026-09-02",
@@ -1197,13 +1232,6 @@
   "a": "updated"
  },
  {
-  "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
-  "u": "posts/permit-to-work-loto-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "PID Controller Tuning Basics: What P, I, and D Actually Do",
   "u": "posts/pid-controller-tuning-basics",
   "d": "2026-08-27",
@@ -1325,13 +1353,6 @@
  {
   "t": "Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature",
   "u": "posts/sensible-vs-latent-heat-cooling-load",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
-  "u": "posts/short-circuit-current-iec-60909-basics",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
@@ -1493,13 +1514,6 @@
  {
   "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
   "u": "posts/duct-sizing-velocity-limits-vs-airflow",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-  "u": "posts/electrical-panel-fat-checklist",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
@@ -1869,13 +1883,6 @@
   "a": "updated"
  },
  {
-  "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
-  "u": "posts/breaker-selectivity-discrimination-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
   "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Proof of Funds Calculator",
   "u": "study-abroad/proof-of-funds-calculator",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "Score Calculator",
-  "u": "study-abroad/score-calculator",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"

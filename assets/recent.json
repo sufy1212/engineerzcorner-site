@@ -1,5 +1,30 @@
 [
   {
+    "t": "Arc Flash Hazard Basics",
+    "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
+    "u": "posts/breaker-selectivity-discrimination-explained",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
+    "u": "posts/electrical-panel-fat-checklist",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
+    "u": "posts/permit-to-work-loto-explained",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
+    "u": "posts/short-circuit-current-iec-60909-basics",
+    "d": "2026-09-10"
+  },
+  {
     "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
     "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-09-10"
@@ -23,30 +48,5 @@
     "t": "What Is an Inverter? DC-to-AC Conversion Explained",
     "u": "posts/what-is-an-inverter-dc-ac-explained",
     "d": "2026-09-10"
-  },
-  {
-    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-    "u": "posts/battery-soc-vs-dod-explained",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "BESS Types &amp; Components Explained",
-    "u": "posts/bess-types-components-explained",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "UPS Architecture, Types &amp; Operating Modes Explained",
-    "u": "posts/ups-architecture-types-operating-modes-explained",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get",
-    "u": "posts/ups-battery-autonomy-sizing-derating-factors",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "Arc Flash Incident Energy",
-    "u": "electrical/arc-flash-incident-energy",
-    "d": "2026-09-02"
   }
 ]
