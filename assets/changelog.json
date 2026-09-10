@@ -100,7 +100,28 @@
  {
   "t": "Data Center Cooling: Air to Immersion",
   "u": "posts/data-center-cooling-types-explained",
-  "d": "2026-09-02",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+  "u": "posts/heat-pump-sizing-basics",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+  "d": "2026-09-10",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Refrigerant Types: R-410A to A2L",
+  "u": "posts/refrigerant-types-r410a-to-a2l-explained",
+  "d": "2026-09-10",
   "c": "Blog",
   "a": "added"
  },
@@ -1680,13 +1701,6 @@
   "a": "updated"
  },
  {
-  "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
-  "u": "posts/heat-pump-sizing-basics",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "How to Select a Digital Protection Relay",
   "u": "posts/how-to-select-digital-protection-relay",
   "d": "2026-08-27",
@@ -1925,13 +1939,6 @@
   "a": "updated"
  },
  {
-  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
-  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Valve Type Selector",
   "u": "process/valve-type-selector",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "GPA / CGPA Converter",
   "u": "study-abroad/gpa-converter",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "Proof of Funds Calculator",
-  "u": "study-abroad/proof-of-funds-calculator",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"

@@ -4,6 +4,34 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Chiller Capacity and COP: Where the Compressor's Work Actually Goes</title>
+    <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
+    <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
+    <description>Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input.</description>
+    <pubDate>Thu, 10 Sep 2026 03:06:49 GMT</pubDate>
+  </item>
+  <item>
+    <title>Data Center Cooling: Air to Immersion</title>
+    <link>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</guid>
+    <description>What data center cooling actually has to solve, the main types — CRAC, CRAH, in-row, rear-door heat exchanger, direct-to-chip liquid cooling, single- and two-phase immersion, free cooling — parts of a liquid cooling loop, a rack-density selection guide, and PUE explained.</description>
+    <pubDate>Thu, 10 Sep 2026 03:06:49 GMT</pubDate>
+  </item>
+  <item>
+    <title>Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</title>
+    <link>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics.html</guid>
+    <description>Why heat pump sizing isn't the same exercise as furnace or AC sizing, what COP and capacity-at-temperature actually mean.</description>
+    <pubDate>Thu, 10 Sep 2026 03:06:49 GMT</pubDate>
+  </item>
+  <item>
+    <title>Refrigerant Types: R-410A to A2L</title>
+    <link>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</guid>
+    <description>Why HVAC is transitioning away from R-410A, the ASHRAE 34 safety classification (A1/A2L/B2L), R-32 vs R-454B vs R-1234yf vs natural refrigerants compared by GWP and flammability, what changes for A2L handling, and a selection reference.</description>
+    <pubDate>Thu, 10 Sep 2026 03:06:49 GMT</pubDate>
+  </item>
+  <item>
     <title>Arc Flash Hazard Basics</title>
     <link>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</link>
     <guid>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</guid>
@@ -109,13 +137,6 @@
     <pubDate>Wed, 02 Sep 2026 19:24:26 GMT</pubDate>
   </item>
   <item>
-    <title>Data Center Cooling: Air to Immersion</title>
-    <link>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</guid>
-    <description>What data center cooling actually has to solve, the main types — CRAC, CRAH, in-row, rear-door heat exchanger, direct-to-chip liquid cooling, single- and two-phase immersion, free cooling — parts of a liquid cooling loop, a rack-density selection guide, and PUE explained.</description>
-    <pubDate>Wed, 02 Sep 2026 18:17:51 GMT</pubDate>
-  </item>
-  <item>
     <title>Industrial Sensor Types Explained</title>
     <link>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</guid>
@@ -191,26 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
     <description>A legend sheet is the reference table that defines every symbol, line type and tag format on a P&amp;ID — why everyone reads the same drawing the same way.</description>
     <pubDate>Sat, 29 Aug 2026 09:18:08 GMT</pubDate>
-  </item>
-  <item>
-    <title>P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained.html</guid>
-    <description>What the line under an instrument bubble means — field-mounted, control-room-mounted, or inaccessible — plus how to break down a tag like TT01 using ISA S5.1.</description>
-    <pubDate>Fri, 28 Aug 2026 22:06:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained.html</guid>
-    <description>How to actually read a P&amp;ID — equipment, piping, valves, instrumentation tags, and signal lines — plus ISA tag-naming logic and how a P&amp;ID differs from a PFD.</description>
-    <pubDate>Fri, 28 Aug 2026 22:06:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>33/11 kV Substation: Single Line Diagram &amp; Equipment Overview</title>
-    <link>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</link>
-    <guid>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview.html</guid>
-    <description>How a 33/11 kV substation is built, walked through its single line diagram from incoming line to distribution feeders — every equipment item and its function.</description>
-    <pubDate>Thu, 27 Aug 2026 12:57:42 GMT</pubDate>
   </item>
 </channel></rss>

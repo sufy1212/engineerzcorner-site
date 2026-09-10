@@ -1,5 +1,25 @@
 [
   {
+    "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+    "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Data Center Cooling: Air to Immersion",
+    "u": "posts/data-center-cooling-types-explained",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+    "u": "posts/heat-pump-sizing-basics",
+    "d": "2026-09-10"
+  },
+  {
+    "t": "Refrigerant Types: R-410A to A2L",
+    "u": "posts/refrigerant-types-r410a-to-a2l-explained",
+    "d": "2026-09-10"
+  },
+  {
     "t": "Arc Flash Hazard Basics",
     "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
     "d": "2026-09-10"
@@ -27,26 +47,6 @@
   {
     "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
     "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "Power Semiconductors: Si, SiC &amp; GaN",
-    "u": "posts/power-semiconductor-types-si-sic-gan-explained",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
-    "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "What Is an Inverter? DC-to-AC Conversion Explained",
-    "u": "posts/what-is-an-inverter-dc-ac-explained",
     "d": "2026-09-10"
   }
 ]
