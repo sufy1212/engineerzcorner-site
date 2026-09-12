@@ -7,6 +7,111 @@
   "a": "added"
  },
  {
+  "t": "Alarm Setpoint Band Calculator",
+  "u": "automation/alarm-setpoints",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Deadband / Hysteresis Calculator",
+  "u": "automation/deadband-hysteresis",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "DP Level Transmitter Ranging",
+  "u": "automation/level-transmitter",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Modbus RTU Timing / Baud Rate Calculator",
+  "u": "automation/modbus-timing",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Orifice Plate (DP Flow) Sizing",
+  "u": "automation/orifice-flow-sizing",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "PID Tuning (Reaction Curve)",
+  "u": "automation/pid-tuning",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Relay / Contactor Coil Current & Duty Cycle",
+  "u": "automation/relay-coil-sizing",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "RTD (Pt100) Temperature ↔ Resistance",
+  "u": "automation/rtd-conversion",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Signal Scaling",
+  "u": "automation/signal-scaling",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Thermocouple (Type K) Reference",
+  "u": "automation/thermocouple-reference",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Sizing",
+  "u": "automation/valve-sizing",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "VFD Frequency / Speed Scaling",
+  "u": "automation/vfd-scaling",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Instrument/Sensor Selector",
+  "u": "automation/instrument-selector",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Level Control Loop Simulator",
+  "u": "automation/level-control-simulator",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Intrinsic Safety Entity / Loop Checker",
+  "u": "automation/is-entity-loop-calculator",
+  "d": "2026-09-12",
+  "c": "Automation",
+  "a": "added"
+ },
+ {
   "t": "What Is an Inverter? DC-to-AC Conversion Explained",
   "u": "posts/what-is-an-inverter-dc-ac-explained",
   "d": "2026-09-10",
@@ -294,90 +399,6 @@
   "a": "added"
  },
  {
-  "t": "Alarm Setpoint Band Calculator",
-  "u": "automation/alarm-setpoints",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Deadband / Hysteresis Calculator",
-  "u": "automation/deadband-hysteresis",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "DP Level Transmitter Ranging",
-  "u": "automation/level-transmitter",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Modbus RTU Timing / Baud Rate Calculator",
-  "u": "automation/modbus-timing",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Orifice Plate (DP Flow) Sizing",
-  "u": "automation/orifice-flow-sizing",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "PID Tuning (Reaction Curve)",
-  "u": "automation/pid-tuning",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Relay / Contactor Coil Current & Duty Cycle",
-  "u": "automation/relay-coil-sizing",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "RTD (Pt100) Temperature ↔ Resistance",
-  "u": "automation/rtd-conversion",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Signal Scaling",
-  "u": "automation/signal-scaling",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Thermocouple (Type K) Reference",
-  "u": "automation/thermocouple-reference",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Sizing",
-  "u": "automation/valve-sizing",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "VFD Frequency / Speed Scaling",
-  "u": "automation/vfd-scaling",
-  "d": "2026-08-30",
-  "c": "Automation",
-  "a": "updated"
- },
- {
   "t": "Concrete Volume &amp; Material Estimator",
   "u": "civil/concrete-volume-estimator",
   "d": "2026-08-30",
@@ -662,20 +683,6 @@
   "u": "posts/pid-legend-sheet-explained",
   "d": "2026-08-29",
   "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Instrument/Sensor Selector",
-  "u": "automation/instrument-selector",
-  "d": "2026-08-27",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Level Control Loop Simulator",
-  "u": "automation/level-control-simulator",
-  "d": "2026-08-27",
-  "c": "Automation",
   "a": "updated"
  },
  {
@@ -2088,13 +2095,6 @@
  {
   "t": "Currency Converter",
   "u": "study-abroad/currency-converter",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "Education Loan EMI Calculator",
-  "u": "study-abroad/education-loan-emi-calculator",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"

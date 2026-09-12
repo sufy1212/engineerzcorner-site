@@ -1,52 +1,52 @@
 [
   {
-    "t": "VFD Cable Length / Reflected Wave Calculator",
-    "u": "electrical/vfd-cable-reflected-wave",
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
     "d": "2026-09-12"
   },
   {
-    "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
-    "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
-    "d": "2026-09-10"
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
+    "d": "2026-09-12"
   },
   {
-    "t": "Data Center Cooling: Air to Immersion",
-    "u": "posts/data-center-cooling-types-explained",
-    "d": "2026-09-10"
+    "t": "Instrument/Sensor Selector",
+    "u": "automation/instrument-selector",
+    "d": "2026-09-12"
   },
   {
-    "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
-    "u": "posts/heat-pump-sizing-basics",
-    "d": "2026-09-10"
+    "t": "Intrinsic Safety Entity / Loop Checker",
+    "u": "automation/is-entity-loop-calculator",
+    "d": "2026-09-12"
   },
   {
-    "t": "Refrigerant Types: R-410A to A2L",
-    "u": "posts/refrigerant-types-r410a-to-a2l-explained",
-    "d": "2026-09-10"
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
+    "d": "2026-09-12"
   },
   {
-    "t": "Arc Flash Hazard Basics",
-    "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
-    "d": "2026-09-10"
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
+    "d": "2026-09-12"
   },
   {
-    "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
-    "u": "posts/breaker-selectivity-discrimination-explained",
-    "d": "2026-09-10"
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
+    "d": "2026-09-12"
   },
   {
-    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-    "u": "posts/electrical-panel-fat-checklist",
-    "d": "2026-09-10"
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
+    "d": "2026-09-12"
   },
   {
-    "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
-    "u": "posts/permit-to-work-loto-explained",
-    "d": "2026-09-10"
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
+    "d": "2026-09-12"
   },
   {
-    "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
-    "u": "posts/short-circuit-current-iec-60909-basics",
-    "d": "2026-09-10"
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-09-12"
   }
 ]
