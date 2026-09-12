@@ -1,5 +1,10 @@
 [
   {
+    "t": "VFD Cable Length / Reflected Wave Calculator",
+    "u": "electrical/vfd-cable-reflected-wave",
+    "d": "2026-09-12"
+  },
+  {
     "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
     "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
     "d": "2026-09-10"
@@ -42,11 +47,6 @@
   {
     "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
     "u": "posts/short-circuit-current-iec-60909-basics",
-    "d": "2026-09-10"
-  },
-  {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-09-10"
   }
 ]
