@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VFD Cable Length / Reflected Wave Calculator — Engineerz CorneR</title>
+<meta name="description" content="Estimate reflected-wave voltage doubling risk at the motor terminals from drive DC bus voltage, IGBT rise time, cable propagation velocity and cable run length, checked against a NEMA MG1 Part 31 reference.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/vfd-cable-reflected-wave">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="VFD Cable Length / Reflected Wave Calculator — Engineerz CorneR">
+<meta property="og:description" content="Estimate reflected-wave voltage doubling risk at the motor terminals from drive DC bus voltage, IGBT rise time, cable propagation velocity and cable run length, checked against a NEMA MG1 Part 31 reference.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/vfd-cable-reflected-wave">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VFD Cable Length / Reflected Wave Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Estimate reflected-wave voltage doubling risk at the motor terminals from drive DC bus voltage, IGBT rise time, cable propagation velocity and cable run length, checked against a NEMA MG1 Part 31 reference.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electrical",
+      "item": "https://www.engineerzcorner.com/electrical/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "VFD Cable Length / Reflected Wave Calculator",
+      "item": "https://www.engineerzcorner.com/electrical/vfd-cable-reflected-wave"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "VFD Cable Length / Reflected Wave Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Estimate reflected-wave voltage doubling risk at the motor terminals from drive DC bus voltage, IGBT rise time, cable propagation velocity and cable run length, checked against a NEMA MG1 Part 31 reference.",
+  "url": "https://www.engineerzcorner.com/electrical/vfd-cable-reflected-wave",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">VFD Cable Length / Reflected Wave</span></div></nav>
+
+
+<div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/motor-starting-methods-dol-star-delta-vfd-compared">Motor Starting Methods: DOL, Star-Delta, Soft Start and VFD Compared</a>, <a href="../posts/power-semiconductor-types-si-sic-gan-explained">Power Semiconductor Types: Si, SiC and GaN Explained</a></div></div>
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-vcl">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h3v-6h3v10h3V8h3v14h3V4h4"></path></svg></div>
+    <div><h1>VFD Cable Length / Reflected Wave Calculator</h1><div class="hero-sub">Estimate transmission-line voltage doubling at the motor terminals for a given drive, cable and run length</div></div>
+  </div>
+  <div class="intro">A PWM drive's fast output edges turn a long motor cable into a transmission line: when the cable run is longer than a "critical length" set by the drive's rise time and the cable's propagation velocity, the impedance mismatch at the motor reflects the pulse back and forth, and the motor can see a peak voltage approaching twice the drive's DC bus voltage — well above the sine-wave RMS rating and enough to stress winding insulation over time. This tool estimates that critical length and the resulting peak motor terminal voltage from your drive and cable inputs, as a first-pass screening check.</div>
+  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/power-semiconductor-types-si-sic-gan-explained" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why SiC/GaN drives make reflected-wave problems worse, not better &rarr;</a></div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="vclValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Supply &amp; Drive</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="vclVll">Supply voltage, line-to-line <span class="unit">V rms</span></label>
+        <input type="number" id="vclVll" value="480" step="1" min="1">
+      </div>
+      <div class="field">
+        <label for="vclRise">Drive switching device</label>
+        <select id="vclRise">
+          <option value="1500">Legacy BJT drive (~1500 ns rise time)</option>
+          <option value="150" selected>Standard IGBT VFD (~150 ns)</option>
+          <option value="75">Fast-switching IGBT VFD (~75 ns)</option>
+          <option value="35">SiC / GaN drive (~35 ns)</option>
+          <option value="__custom__">Custom rise time…</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2" id="vclRiseCustomWrap" style="display:none;">
+      <div class="field">
+        <label for="vclRiseCustom">Custom rise time <span class="unit">ns</span></label>
+        <input type="number" id="vclRiseCustom" value="100" step="1" min="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Cable &amp; Run</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="vclCableType">Cable / installation type</label>
+        <select id="vclCableType">
+          <option value="0.5">Shielded VFD cable (v &asymp; 0.50c)</option>
+          <option value="0.6" selected>Unshielded THHN in steel conduit (v &asymp; 0.60c)</option>
+          <option value="0.7">Unshielded, widely-separated conductors (v &asymp; 0.70c)</option>
+          <option value="__custom__">Custom velocity factor…</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="vclLen">Actual cable run length <span class="unit">m</span></label>
+        <input type="number" id="vclLen" value="60" step="1" min="0.1">
+      </div>
+    </div>
+    <div class="row2" id="vclVelCustomWrap" style="display:none;">
+      <div class="field">
+        <label for="vclVelCustom">Custom velocity factor <span class="unit">&times; c</span></label>
+        <input type="number" id="vclVelCustom" value="0.55" step="0.01" min="0.1" max="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">EST. PEAK MOTOR TERMINAL VOLTAGE</span>
+      <span class="rval" id="vclVpeak">0 <small>V</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Critical (reflection-free) cable length</div><div class="sval" id="vclLcrit">—</div></div>
+      <div class="stat"><div class="slabel">Actual length &divide; critical length</div><div class="sval" id="vclRatio">—</div></div>
+      <div class="stat"><div class="slabel">Est. DC bus voltage</div><div class="sval" id="vclVbus">—</div></div>
+      <div class="stat"><div class="slabel">Peak as multiple of rated V<sub>LL</sub></div><div class="sval" id="vclMultiple">—</div></div>
+      <div class="stat"><div class="slabel">NEMA MG1 Part 31 reference (3.1&times; V<sub>LL</sub>, &ge;100 ns rise)</div><div class="sval amber" id="vclNema">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">L_crit = (v &times; t_r) / 2 &nbsp;·&nbsp; V_bus &asymp; 1.41 &times; V_LL &nbsp;·&nbsp; for L &lt; L_crit: V_peak &asymp; V_bus&times;(1 + L/L_crit) &nbsp;·&nbsp; for L &ge; L_crit: V_peak &asymp; 2 &times; V_bus</div>
+      <div class="hint" style="margin-top:8px;">This models the classic transmission-line reflection case: the drive-end impedance is a near-short relative to the cable (large bus capacitance), and the motor-end impedance is high relative to the cable's surge impedance at PWM edge frequencies, so the reflected pulse adds to the incident one and voltage ramps toward double the DC bus voltage as cable length reaches the critical length. It is a first-pass screening estimate, not a substitute for an oscilloscope measurement or the drive manufacturer's own cable-length tables — real installations can see additional ringing overshoot beyond simple doubling from underdamped LC resonance, multiple motors on one feeder, or unterminated cable ends, and long-cable derating tables from drive vendors already build in their own safety margin. If the estimated peak approaches or exceeds the NEMA reference, or the cable run is close to or beyond the critical length, consider a motor-rated (dV/dt or sine-wave) output filter, an inverter-duty motor per NEMA MG1 Part 31 / IEC 60034-25, or shortening the run.</div>
+    </details>
+  </div>
+  <footer>Simplified transmission-line reflection estimate from stated drive and cable parameters only — verify against the drive manufacturer's cable-length and filter-selection tables before final design.</footer>
+</div>
+
+
+
+<script src="vfd-cable-reflected-wave.inline.js"></script>
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
