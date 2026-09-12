@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intrinsic Safety Entity / Loop Checker — Engineerz CorneR</title>
+<meta name="description" content="Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/is-entity-loop-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Intrinsic Safety Entity / Loop Checker — Engineerz CorneR">
+<meta property="og:description" content="Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/is-entity-loop-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Intrinsic Safety Entity / Loop Checker — Engineerz CorneR">
+<meta name="twitter:description" content="Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Automation", "item": "https://www.engineerzcorner.com/automation/" },
+    { "@type": "ListItem", "position": 3, "name": "Intrinsic Safety Entity / Loop Checker", "item": "https://www.engineerzcorner.com/automation/is-entity-loop-calculator" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Intrinsic Safety Entity / Loop Checker",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.",
+  "url": "https://www.engineerzcorner.com/automation/is-entity-loop-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">IS Loop / Entity Concept</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+  <a href="../">Home</a>
+  <a href="../electrical/">Electrical</a>
+  <a href="../mechanical/">Mechanical</a>
+  <a href="../hvac/">HVAC</a>
+  <a href="../civil/">Civil</a>
+  <a href="./" class="current">Automation</a>
+  <a href="../process/">Process</a>
+  <a href="../solar/">Solar</a>
+  <a href="../pm/">Project Management</a>
+  <a href="../general/">General Tools</a>
+  <a href="../study-abroad/">Study Abroad</a>
+  <a href="../interview/">Interview Prep</a>
+</div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-is">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"></path><path d="M3 12l9 5 9-5"></path></svg></div>
+    <div><h1>Intrinsic Safety Entity / Loop Checker</h1><div class="hero-sub">Match a barrier's Voc/Isc/Ca/La against a field device's Vmax/Imax/Ci/Li plus cable capacitance and inductance</div></div>
+  </div>
+<div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
+  <rect x="70" y="30" width="90" height="40" rx="4" class="illo-line illo-blue" stroke-width="2.4" fill="none"/>
+  <text x="115" y="55" text-anchor="middle" class="illo-label" style="font-size:11px;">BARRIER</text>
+  <line x1="160" y1="50" x2="480" y2="50" class="illo-line illo-dim" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="480" y="30" width="90" height="40" rx="4" class="illo-line illo-amber" stroke-width="2.4" fill="none"/>
+  <text x="525" y="55" text-anchor="middle" class="illo-label" style="font-size:11px;">FIELD DEV.</text>
+<text x="686" y="92" text-anchor="end" class="illo-label">IS LOOP</text></svg></div>
+
+  <div class="mech-tabs">
+    <a href="./">Automation Index</a>
+    <a href="signal-scaling">AT.01 Signal Scaling</a>
+    <a href="pid-tuning">AT.02 PID Tuning</a>
+    <a href="valve-sizing">AT.03 Valve Sizing</a>
+    <a href="level-transmitter">AT.04 Level Ranging</a>
+    <a href="vfd-scaling">AT.05 VFD Scaling</a>
+    <a href="notes">AT.06 Notes</a>
+    <a href="symbols">AT.07 Symbols</a>
+    <a href="guides">AT.08 Guides</a>
+    <a href="comparisons">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints">AT.14 Alarm Setpoints</a>
+    <a href="thermocouple-reference">AT.15 Thermocouple Reference</a>
+    <a href="orifice-flow-sizing">AT.16 Orifice Flow Sizing</a>
+    <a href="level-control-simulator">AT.17 Level Control Simulator</a>
+    <a href="is-entity-loop-calculator" class="current">AT.19 IS Loop / Entity Concept</a>
+  </div>
+  <div class="intro">The entity concept (IEC 60079-11 / ANSI-ISA 60079-11) lets you mix certified barriers/isolators and field devices from different manufacturers without a system-level test, as long as the nameplate parameters clear four checks: the barrier's maximum fault voltage and current must not exceed what the field device can accept, and the barrier's allowable external capacitance and inductance must cover the field device's own values plus whatever the cable adds. Enter the datasheet values below to check a specific loop.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="isValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Barrier / Isolator (Associated Apparatus)</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="isVoc">Voc / Uo — max. open-circuit voltage <span class="unit">V</span></label>
+        <input type="number" id="isVoc" value="25.0" step="0.1" min="0">
+      </div>
+      <div class="field">
+        <label for="isIsc">Isc / Io — max. short-circuit current <span class="unit">mA</span></label>
+        <input type="number" id="isIsc" value="93" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="isCa">Ca / Co — max. external capacitance <span class="unit">nF</span></label>
+        <input type="number" id="isCa" value="83" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="isLa">La / Lo — max. external inductance <span class="unit">mH</span></label>
+        <input type="number" id="isLa" value="4.0" step="0.1" min="0">
+      </div>
+      <div class="field">
+        <label for="isPo">Po — max. output power <span class="unit">mW (optional)</span></label>
+        <input type="number" id="isPo" value="" step="1" min="0" placeholder="leave blank to skip">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Field Device (Intrinsically Safe Apparatus)</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="isVmax">Vmax / Ui — max. voltage accepted <span class="unit">V</span></label>
+        <input type="number" id="isVmax" value="28" step="0.1" min="0">
+      </div>
+      <div class="field">
+        <label for="isImax">Imax / Ii — max. current accepted <span class="unit">mA</span></label>
+        <input type="number" id="isImax" value="100" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="isCi">Ci — internal capacitance <span class="unit">nF</span></label>
+        <input type="number" id="isCi" value="5" step="0.1" min="0">
+      </div>
+      <div class="field">
+        <label for="isLi">Li — internal inductance <span class="unit">mH</span></label>
+        <input type="number" id="isLi" value="0" step="0.01" min="0">
+      </div>
+      <div class="field">
+        <label for="isPmax">Pmax / Pi — max. power accepted <span class="unit">mW (optional)</span></label>
+        <input type="number" id="isPmax" value="" step="1" min="0" placeholder="leave blank to skip">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Interconnecting Cable</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="isLen">Cable length <span class="unit">m</span></label>
+        <input type="number" id="isLen" value="200" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="isCkm">Cable capacitance <span class="unit">nF/km</span></label>
+        <input type="number" id="isCkm" value="100" step="1" min="0">
+        <div class="hint">Typical shielded IS instrument cable runs roughly 45–200 nF/km — use the actual cable datasheet value where possible.</div>
+      </div>
+      <div class="field">
+        <label for="isLkm">Cable inductance <span class="unit">mH/km</span></label>
+        <input type="number" id="isLkm" value="0.65" step="0.01" min="0">
+        <div class="hint">Typical shielded IS instrument cable runs roughly 0.4–1.0 mH/km.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">ENTITY CONCEPT CHECK</span>
+      <span class="rval" id="isOverall">—</span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Voltage: Voc vs Vmax</div><div class="sval" id="isChkV">—</div></div>
+      <div class="stat"><div class="slabel">Current: Isc vs Imax</div><div class="sval" id="isChkI">—</div></div>
+      <div class="stat"><div class="slabel">Capacitance: Ca vs Ci + Ccable</div><div class="sval" id="isChkC">—</div></div>
+      <div class="stat"><div class="slabel">Inductance: La vs Li + Lcable</div><div class="sval" id="isChkL">—</div></div>
+      <div class="stat"><div class="slabel">Power: Po vs Pmax</div><div class="sval" id="isChkP">—</div></div>
+      <div class="stat"><div class="slabel">Cable Ccable / Lcable added</div><div class="sval" id="isCableAdd">—</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">Voc &le; Vmax &nbsp;&middot;&nbsp; Isc &le; Imax &nbsp;&middot;&nbsp; Ci + C&#99;able &le; Ca &nbsp;&middot;&nbsp; Li + Lcable &le; La &nbsp;&middot;&nbsp; (Po &le; Pmax, if given)</div>
+      <div class="hint" style="margin-top:8px;">This checks the standard IEC 60079-11 entity-concept relationships only. It does not replace a full system loop certification, does not evaluate FISCO/FNICO fieldbus rules (which use different, model-specific limits), and does not account for multiple field devices sharing one barrier, multi-core/multi-pair cable capacitance coupling between cores, or the hazardous-area gas group and temperature class the parameters were certified for — all of which must also be verified against the equipment's certificates before a loop is installed.</div>
+    </details>
+  </div>
+  <footer>Entity-parameter screening check only — final intrinsic safety loop approval requires the certified apparatus documentation (control drawings, certificates) for the specific gas group and temperature class.</footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function fmt(n, d){ if(!isFinite(n)) return '—'; return n.toFixed(d===undefined?2:d); }
+
+  function calcIS(){
+    var Voc = num('isVoc'), Isc = num('isIsc'), Ca = num('isCa'), La = num('isLa'), Po = num('isPo');
+    var Vmax = num('isVmax'), Imax = num('isImax'), Ci = num('isCi'), Li = num('isLi'), Pmax = num('isPmax');
+    var lenM = num('isLen'), Ckm = num('isCkm'), Lkm = num('isLkm');
+
+    var errs = 0;
+    errs += fieldError(el('isVoc'), (isNaN(Voc)||Voc<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isIsc'), (isNaN(Isc)||Isc<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isCa'), (isNaN(Ca)||Ca<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isLa'), (isNaN(La)||La<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isVmax'), (isNaN(Vmax)||Vmax<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isImax'), (isNaN(Imax)||Imax<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isCi'), (isNaN(Ci)||Ci<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isLi'), (isNaN(Li)||Li<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isLen'), (isNaN(lenM)||lenM<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isCkm'), (isNaN(Ckm)||Ckm<0) ? 'Must be 0 or greater.' : null);
+    errs += fieldError(el('isLkm'), (isNaN(Lkm)||Lkm<0) ? 'Must be 0 or greater.' : null);
+
+    if(errs > 0){
+      updateValidationBanner('isValidation', errs);
+      return;
+    }
+
+    var Ccable = (lenM/1000) * Ckm;      // nF
+    var Lcable = (lenM/1000) * Lkm;      // mH
+    var totalC = Ci + Ccable;
+    var totalL = Li + Lcable;
+
+    var okV = Voc <= Vmax;
+    var okI = Isc <= Imax;
+    var okC = Ca >= totalC;
+    var okL = La >= totalL;
+    var hasPower = !isNaN(Po) && !isNaN(Pmax);
+    var okP = hasPower ? (Po <= Pmax) : null;
+
+    setText('isChkV', fmt(Voc,1)+' V &le; '+fmt(Vmax,1)+' V '+(okV?'\u2713':'\u2717'));
+    setText('isChkI', fmt(Isc,0)+' mA &le; '+fmt(Imax,0)+' mA '+(okI?'\u2713':'\u2717'));
+    setText('isChkC', fmt(totalC,1)+' nF &le; '+fmt(Ca,1)+' nF '+(okC?'\u2713':'\u2717'));
+    setText('isChkL', fmt(totalL,3)+' mH &le; '+fmt(La,3)+' mH '+(okL?'\u2713':'\u2717'));
+    setText('isChkP', hasPower ? (fmt(Po,0)+' mW &le; '+fmt(Pmax,0)+' mW '+(okP?'\u2713':'\u2717')) : 'Not checked (Po/Pmax not entered)');
+    setText('isCableAdd', 'C: '+fmt(Ccable,2)+' nF &nbsp;&middot;&nbsp; L: '+fmt(Lcable,3)+' mH');
+
+    var allOk = okV && okI && okC && okL && (okP === null || okP === true);
+    var banner = el('isValidation');
+    if(allOk){
+      setText('isOverall', 'PASS \u2014 loop meets the entity concept');
+      banner.className = 'validation-banner ok';
+      banner.innerHTML = '<span class="vdot"></span><span>All entered entity parameters clear the IEC 60079-11 checks for this barrier/field-device/cable combination.</span>';
+    } else {
+      var fails = [];
+      if(!okV) fails.push('voltage (Voc &gt; Vmax)');
+      if(!okI) fails.push('current (Isc &gt; Imax)');
+      if(!okC) fails.push('capacitance (Ci + cable &gt; Ca)');
+      if(!okL) fails.push('inductance (Li + cable &gt; La)');
+      if(okP === false) fails.push('power (Po &gt; Pmax)');
+      setText('isOverall', 'FAIL \u2014 does not meet the entity concept');
+      banner.className = 'validation-banner bad';
+      banner.innerHTML = '<span class="vdot"></span><span>Loop fails on: '+fails.join(', ')+'. Pick a different barrier/isolator, shorten the cable run, or use lower-capacitance/inductance cable.</span>';
+    }
+  }
+
+  ['isVoc','isIsc','isCa','isLa','isPo','isVmax','isImax','isCi','isLi','isPmax','isLen','isCkm','isLkm'].forEach(function(id){
+    var e = el(id);
+    if(e){
+      e.addEventListener('input', calcIS);
+      e.addEventListener('change', calcIS);
+    }
+  });
+  calcIS();
+})();
+</script>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
