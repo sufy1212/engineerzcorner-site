@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained | Engineerz CorneR</title>
+<meta name="description" content="Inside a variable frequency drive: how the rectifier, DC bus and IGBT inverter stages turn fixed AC into a variable-frequency PWM output, and why that switching creates the harmonics and reflected-wave issues drives are known for.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained">
+<meta property="og:description" content="Inside a variable frequency drive: how the rectifier, DC bus and IGBT inverter stages turn fixed AC into a variable-frequency PWM output, and why that switching creates the harmonics and reflected-wave issues drives are known for.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained">
+<meta name="twitter:description" content="Inside a variable frequency drive: how the rectifier, DC bus and IGBT inverter stages turn fixed AC into a variable-frequency PWM output, and why that switching creates the harmonics and reflected-wave issues drives are known for.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vfd-internal-architecture-rectifier-dc-bus-inverter-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "VFD Internal Architecture: Rectifier, DC Bus & Inverter Explained", "item": "https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "VFD Internal Architecture: Rectifier, DC Bus & Inverter Explained",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "description": "Inside a variable frequency drive: how the rectifier, DC bus and IGBT inverter stages turn fixed AC into a variable-frequency PWM output, and why that switching creates the harmonics and reflected-wave issues drives are known for.",
+  "url": "https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">VFD Internal Architecture</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Power Electronics</span>
+    <h1>VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained</h1>
+    <p class="hero-sub">Open up a variable frequency drive and there are really only three power stages inside — a rectifier, a DC bus, and an inverter. Everything a VFD does, good and bad, traces back to what happens across those three sections.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Power Electronics</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 190" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 60 Q35 30 50 60 T80 60 T110 60 T140 60" fill="none" stroke="#3EC6E0" stroke-width="2"/>
+      <text x="80" y="20" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">3-PHASE AC IN</text>
+      <rect x="170" y="30" width="110" height="80" rx="4" fill="#122845" stroke="#7e97ac" stroke-width="1"/>
+      <text x="225" y="24" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">RECTIFIER</text>
+      <path d="M195 55 l10 10 -10 10 M215 55 l10 10 -10 10 M235 55 l10 10 -10 10" stroke="#3E8C97" stroke-width="1.6" fill="none"/>
+      <line x1="280" y1="70" x2="330" y2="70" stroke="#3E8C97" stroke-width="2.5"/>
+      <rect x="330" y="30" width="110" height="80" rx="4" fill="#122845" stroke="#7e97ac" stroke-width="1"/>
+      <text x="385" y="24" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">DC BUS</text>
+      <line x1="360" y1="50" x2="360" y2="90" stroke="#3EC6E0" stroke-width="3"/>
+      <line x1="368" y1="50" x2="368" y2="90" stroke="#3EC6E0" stroke-width="1.4"/>
+      <line x1="400" y1="50" x2="400" y2="90" stroke="#3EC6E0" stroke-width="3"/>
+      <line x1="408" y1="50" x2="408" y2="90" stroke="#3EC6E0" stroke-width="1.4"/>
+      <text x="385" y="130" font-family="IBM Plex Mono" font-size="9" fill="#3EC6E0" text-anchor="middle">~678VDC (480VAC in)</text>
+      <line x1="440" y1="70" x2="490" y2="70" stroke="#3E8C97" stroke-width="2.5"/>
+      <rect x="490" y="30" width="110" height="80" rx="4" fill="#122845" stroke="#7e97ac" stroke-width="1"/>
+      <text x="545" y="24" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">INVERTER (IGBT)</text>
+      <rect x="510" y="50" width="14" height="20" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+      <rect x="538" y="50" width="14" height="20" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+      <rect x="566" y="50" width="14" height="20" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+      <line x1="600" y1="70" x2="640" y2="70" stroke="#3E8C97" stroke-width="2.5"/>
+      <path d="M650 55 h6 v10 h6 v10 h6 v-25 h6 v25 h6 v-10 h6 v-10 h6" fill="none" stroke="#3EC6E0" stroke-width="2"/>
+      <text x="690" y="20" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">PWM OUT</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Every VFD's power circuit boils down to three stages in series: a rectifier (AC&rarr;DC), a DC bus (stores &amp; smooths it), and an inverter (DC&rarr;variable-frequency AC) — everything else is support circuitry around those three.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">A 480V drive runs its DC bus at roughly 678VDC — the rectified peak of the incoming line voltage, not some arbitrary control-circuit number.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The inverter doesn't actually produce a sine wave — it produces a rapid series of full-amplitude DC bus pulses of varying width (PWM), and it's the motor's own inductance that filters that into a roughly sinusoidal current.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Those same fast PWM edges are the root cause of two well-known drive side effects — input-side harmonics from the diode bridge, and reflected-wave voltage doubling on long output cables.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Three stages, one job each</h2>
+    <p>A variable frequency drive's entire purpose is to take a fixed-frequency, fixed-voltage AC supply and deliver a variable-frequency, variable-voltage AC output to a motor, so the motor can run at any speed rather than just the one fixed line frequency gives it. The most common way to do that — the voltage-source inverter (VSI) topology — does it in three stages, and nearly every general-purpose drive on the market today follows this same basic layout.</p>
+
+    <h2><span class="h2-dot"></span>The three main sections</h2>
+    <p class="post-lede">Rectifier, DC bus, inverter — first in terms of power flow, in that order.</p>
+
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l3-8 4 16 3-8h4"></path></svg></div>
+          <div><div class="device-name">Rectifier / Converter</div><div class="device-full">AC &rarr; DC</div></div>
+        </div>
+        <div class="device-desc">Converts the incoming three-phase AC to DC — most commonly a six-pulse diode bridge, giving a fixed DC voltage regardless of drive speed setting. Some drives use SCRs or an "active front end" of transistors instead, mainly to enable regeneration back to the line.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="6" x2="7" y2="18"></line><line x1="11" y1="6" x2="11" y2="18"></line><line x1="16" y1="9" x2="16" y2="15"></line><line x1="20" y1="9" x2="20" y2="15"></line></svg></div>
+          <div><div class="device-name">DC Bus</div><div class="device-full">Store &amp; smooth</div></div>
+        </div>
+        <div class="device-desc">Mainly capacitors, storing the rectified power and buffering it against ripple — a 480VAC drive's DC bus sits at roughly 678VDC. Often also includes a link choke/inductor for additional smoothing and a pre-charge circuit to limit inrush current when the drive is first energized.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7"></rect><rect x="13" y="4" width="7" height="7"></rect><rect x="4" y="13" width="7" height="7"></rect><rect x="13" y="13" width="7" height="7"></rect></svg></div>
+          <div><div class="device-name">Inverter</div><div class="device-full">DC &rarr; variable AC</div></div>
+        </div>
+        <div class="device-desc">A bridge of IGBTs (Insulated Gate Bipolar Transistors) that switches the DC bus voltage on and off thousands of times per second across the motor windings, synthesizing a variable-frequency, variable-voltage three-phase output using pulse width modulation.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><circle cx="8" cy="6.5" r="0.8" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><div class="device-name">Control Board</div><div class="device-full">Microprocessor + PWM generator</div></div>
+        </div>
+        <div class="device-desc">Runs the control algorithm, reads current/voltage feedback, and generates the precise PWM gate-switching pattern that determines the inverter's output frequency and voltage — the "brains" directing the two power stages downstream of it.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path></svg></div>
+          <div><div class="device-name">Braking Chopper &amp; Resistor</div><div class="device-full">Deceleration energy dump</div></div>
+        </div>
+        <div class="device-desc">When a load decelerates faster than friction alone can slow it, the motor briefly generates power back into the DC bus; on a standard (non-regenerative) drive, a chopper transistor dumps that energy into a resistor as heat to keep the bus voltage from tripping out.</div>
+      </div>
+      <div class="device-card">
+        <div class="device-card-head">
+          <div class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h4"></path><path d="M3 6h4l2 3 4-6 2 3h4"></path></svg></div>
+          <div><div class="device-name">Output Filter</div><div class="device-full">Optional dV/dt or sine-wave filter</div></div>
+        </div>
+        <div class="device-desc">Slows the inverter's fast voltage edges before they reach the motor cable — relevant when the cable run is long enough to trigger reflected-wave voltage doubling at the motor terminals (see the related calculator below).</div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>How power actually flows through it</h2>
+    <div class="steps-strip">
+      <div class="step-row"><span class="step-num">1</span><span>Fixed-frequency three-phase AC enters the rectifier bridge and is converted to a fixed DC voltage — roughly 1.41&times; the incoming line voltage (480VAC in gives about 678VDC).</span></div>
+      <div class="step-row"><span class="step-num">2</span><span>DC bus capacitors (and often a link choke) store and smooth that DC power, buffering it against line disturbances and the pulsed demand of the inverter stage.</span></div>
+      <div class="step-row"><span class="step-num">3</span><span>The IGBT inverter switches the full DC bus voltage across the motor windings in a pattern of varying-width pulses (PWM) — set by the control board to produce the commanded output frequency and voltage.</span></div>
+      <div class="step-row"><span class="step-num">4</span><span>The motor's own winding inductance filters those voltage pulses into a roughly sinusoidal current, which is what actually drives the motor at the commanded speed.</span></div>
+    </div>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Step 3 is also where two of the drive's best-known side effects come from: the diode-bridge rectifier draws non-sinusoidal current from the line (harmonics), and the inverter's fast switching edges are exactly what can trigger reflected-wave voltage doubling on a long motor cable — worth checking with the <a href="../electrical/vfd-cable-reflected-wave" style="color:inherit;text-decoration:underline;">VFD Cable Length / Reflected Wave calculator</a> before a long run.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Rectifier types compared</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type</th><th>Regeneration</th><th>Line harmonics</th><th>Relative cost</th></tr>
+        <tr><td>Diode bridge (6-pulse)</td><td>No — needs a braking resistor for deceleration energy</td><td>Higher — the industry default unless mitigated</td><td>Lowest</td></tr>
+        <tr><td>SCR-based</td><td>Limited, phase-angle controlled</td><td>Higher still at partial firing angles</td><td>Moderate</td></tr>
+        <tr><td>Active front end (IGBT)</td><td>Yes — can return energy to the line</td><td>Lowest — near-sinusoidal input current</td><td>Highest</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">Pump &amp; fan speed control</span>
+      <span class="app-chip">HVAC compressor/blower control</span>
+      <span class="app-chip">Conveyor &amp; material handling</span>
+      <span class="app-chip">Soft-start alternative for AC motors</span>
+      <span class="app-chip">Regenerative crane &amp; hoist drives</span>
+      <span class="app-chip">Energy savings via affinity laws</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Rectifier, DC bus, inverter — nearly every general-purpose VFD's power circuit is those three stages, in that order, regardless of vendor.</span></li>
+      <li><span class="tk-check">✓</span><span>The DC bus voltage is set by the incoming line voltage through simple rectification, not chosen independently by the drive.</span></li>
+      <li><span class="tk-check">✓</span><span>PWM doesn't create a sine wave directly — it creates a pulse pattern the motor's own inductance smooths into one.</span></li>
+      <li><span class="tk-check">✓</span><span>The same fast switching that makes PWM efficient is the direct cause of the drive's input harmonics and output reflected-wave issues — they're two sides of the same mechanism.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=VFD%20Internal%20Architecture%3A%20Rectifier%2C%20DC%20Bus%20%26%20Inverter%20Explained%20%E2%80%94%20Inside%20a%20variable%20frequency%20drive%27s%20three%20power%20stages.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvfd-internal-architecture-rectifier-dc-bus-inverter-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvfd-internal-architecture-rectifier-dc-bus-inverter-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=VFD%20Internal%20Architecture%3A%20Rectifier%2C%20DC%20Bus%20%26%20Inverter%20Explained&text=Inside%20a%20variable%20frequency%20drive%27s%20three%20power%20stages.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvfd-internal-architecture-rectifier-dc-bus-inverter-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=VFD%20Internal%20Architecture%3A%20Rectifier%2C%20DC%20Bus%20%26%20Inverter%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvfd-internal-architecture-rectifier-dc-bus-inverter-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/vfd-cable-reflected-wave">VFD Cable Length / Reflected Wave Calculator →</a></li><li><a href="../electrical/motor-starting-simulator">Motor Starting Simulator (DOL vs Star-Delta vs VFD) →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="motor-starting-methods-dol-star-delta-vfd-compared">Motor Starting Methods: DOL, Star-Delta, Soft Start and VFD Compared</a></li><li><a href="vfd-speed-scaling-affinity-laws-energy-savings">VFD Speed Scaling: Affinity Laws &amp; Energy Savings</a></li><li><a href="power-semiconductor-types-si-sic-gan-explained">Power Semiconductor Types: Si, SiC &amp; GaN Compared</a></li><li><a href="harmonics-sources-effects-mitigation">Harmonics in Power Systems: Sources, Effects and How to Mitigate Them</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
