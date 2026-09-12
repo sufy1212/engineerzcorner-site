@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>ANSI Relay Numbers: Common Protection Relay Functions</title>
+    <link>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</guid>
+    <description>A working reference for the ANSI device numbers you'll actually run into on protection schemes — 50/51, 27/59, 87, 21, 67, 25 and more.</description>
+    <pubDate>Sat, 12 Sep 2026 16:28:34 GMT</pubDate>
+  </item>
+  <item>
+    <title>How to Read a Full P&amp;ID: A Complete Worked Walkthrough</title>
+    <link>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough.html</link>
+    <guid>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough.html</guid>
+    <description>A start-to-finish walkthrough of reading a P&amp;ID — symbols, tag anatomy, valve types, and a fully worked example tracing one real control loop end to end.</description>
+    <pubDate>Sat, 12 Sep 2026 16:28:34 GMT</pubDate>
+  </item>
+  <item>
+    <title>Single Line Diagram (SLD) Symbols &amp; How to Read One</title>
+    <link>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</link>
+    <guid>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</guid>
+    <description>The standard symbols used on a power single line diagram — generator, transformer, breaker, disconnect, CT/VT, busbar, relay — and the order engineers actually read one in.</description>
+    <pubDate>Sat, 12 Sep 2026 16:28:34 GMT</pubDate>
+  </item>
+  <item>
     <title>IEC 104 Communication Protocol Explained</title>
     <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
@@ -190,27 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</guid>
     <description>CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes</title>
-    <link>https://www.engineerzcorner.com/posts/fire-pump-room-installation-commissioning-mistakes.html</link>
-    <guid>https://www.engineerzcorner.com/posts/fire-pump-room-installation-commissioning-mistakes.html</guid>
-    <description>A correctly selected fire pump still fails if the room isn't installed right — valve position, suction, pressure settings, sensing lines, and controls.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>How to Read a Full P&amp;ID: A Complete Worked Walkthrough</title>
-    <link>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough.html</link>
-    <guid>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough.html</guid>
-    <description>A start-to-finish walkthrough of reading a P&amp;ID — symbols, tag anatomy, valve types, and a fully worked example tracing one real control loop end to end.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings</title>
-    <link>https://www.engineerzcorner.com/posts/mep-sleeves-installation-guide-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/mep-sleeves-installation-guide-explained.html</guid>
-    <description>What an MEP sleeve is, the seven locations they're cast into, why they're used, precautions, and the site sequence from drawing to final inspection.</description>
     <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
   </item>
 </channel></rss>

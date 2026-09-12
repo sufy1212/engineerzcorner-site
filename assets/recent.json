@@ -1,5 +1,20 @@
 [
   {
+    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
+    "u": "posts/ansi-relay-numbers-protection-functions",
+    "d": "2026-09-12"
+  },
+  {
+    "t": "How to Read a Full P&amp;ID: A Complete Worked Walkthrough",
+    "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
+    "d": "2026-09-12"
+  },
+  {
+    "t": "Single Line Diagram (SLD) Symbols &amp; How to Read One",
+    "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
+    "d": "2026-09-12"
+  },
+  {
     "t": "IEC 104 Communication Protocol Explained",
     "u": "posts/iec-104-communication-protocol-explained",
     "d": "2026-09-12"
@@ -32,21 +47,6 @@
   {
     "t": "Level Control Loop Simulator",
     "u": "automation/level-control-simulator",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "DP Level Transmitter Ranging",
-    "u": "automation/level-transmitter",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Modbus RTU Timing / Baud Rate Calculator",
-    "u": "automation/modbus-timing",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Orifice Plate (DP Flow) Sizing",
-    "u": "automation/orifice-flow-sizing",
     "d": "2026-09-12"
   }
 ]
