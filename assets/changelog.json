@@ -217,6 +217,27 @@
   "a": "added"
  },
  {
+  "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
+  "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
+  "d": "2026-09-12",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+  "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+  "d": "2026-09-12",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained",
+  "u": "posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained",
+  "d": "2026-09-12",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "What Is an Inverter? DC-to-AC Conversion Explained",
   "u": "posts/what-is-an-inverter-dc-ac-explained",
   "d": "2026-09-10",
@@ -254,20 +275,6 @@
  {
   "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
   "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
-  "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-  "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
   "d": "2026-09-10",
   "c": "Blog",
   "a": "updated"
@@ -2090,13 +2097,6 @@
   "u": "solar/row-spacing-calculator",
   "d": "2026-08-27",
   "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Visa Points Calculator",
-  "u": "study-abroad/visa-points-calculator",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
   "a": "updated"
  }
 ]

@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
+    <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
+    <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
+    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a comparison of current, torque, cost and complexity.</description>
+    <pubDate>Sat, 12 Sep 2026 16:34:59 GMT</pubDate>
+  </item>
+  <item>
+    <title>VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained</title>
+    <link>https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained.html</guid>
+    <description>Inside a variable frequency drive: how the rectifier, DC bus and IGBT inverter stages turn fixed AC into a variable-frequency PWM output, and why that switching creates the harmonics and reflected-wave issues drives are known for.</description>
+    <pubDate>Sat, 12 Sep 2026 16:34:59 GMT</pubDate>
+  </item>
+  <item>
+    <title>VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings</title>
+    <link>https://www.engineerzcorner.com/posts/vfd-speed-scaling-affinity-laws-energy-savings.html</link>
+    <guid>https://www.engineerzcorner.com/posts/vfd-speed-scaling-affinity-laws-energy-savings.html</guid>
+    <description>Motor speed scaling with VFD output frequency, and why the pump/fan affinity laws mean modest speed cuts trim power consumption by a much larger percentage.</description>
+    <pubDate>Sat, 12 Sep 2026 16:34:59 GMT</pubDate>
+  </item>
+  <item>
     <title>ANSI Relay Numbers: Common Protection Relay Functions</title>
     <link>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</link>
     <guid>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</guid>
@@ -102,13 +123,6 @@
     <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
   </item>
   <item>
-    <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
-    <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
-    <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
-    <description>Why starting current matters, how DOL, star-delta, soft starters and VFDs each tame it differently, and a comparison of current, torque, cost and complexity.</description>
-    <pubDate>Thu, 10 Sep 2026 02:57:11 GMT</pubDate>
-  </item>
-  <item>
     <title>Power Semiconductors: Si, SiC &amp; GaN</title>
     <link>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained.html</guid>
@@ -120,13 +134,6 @@
     <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</link>
     <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
     <description>How string inverters, microinverters and power optimizers differ in where MPPT happens, what a shaded panel costs under each, and how to pick between them.</description>
-    <pubDate>Thu, 10 Sep 2026 02:57:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings</title>
-    <link>https://www.engineerzcorner.com/posts/vfd-speed-scaling-affinity-laws-energy-savings.html</link>
-    <guid>https://www.engineerzcorner.com/posts/vfd-speed-scaling-affinity-laws-energy-savings.html</guid>
-    <description>Motor speed scaling with VFD output frequency, and why the pump/fan affinity laws mean modest speed cuts trim power consumption by a much larger percentage.</description>
     <pubDate>Thu, 10 Sep 2026 02:57:11 GMT</pubDate>
   </item>
   <item>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</guid>
     <description>Cable tray, ladder, trunking, and conduit compared — construction, protection level, typical load, where each is used, and how to choose.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>CAV vs VAV: Constant vs Variable Air Volume Explained</title>
-    <link>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cav-vs-vav-air-volume-control-explained.html</guid>
-    <description>CAV and VAV compared — how each airflow control strategy works, key features, pros and cons, and which building types each one actually suits.</description>
     <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
   </item>
 </channel></rss>

@@ -1,5 +1,25 @@
 [
   {
+    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
+    "d": "2026-09-12"
+  },
+  {
+    "t": "VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained",
+    "u": "posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained",
+    "d": "2026-09-12"
+  },
+  {
+    "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
+    "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
+    "d": "2026-09-12"
+  },
+  {
+    "t": "VFD Cable Length / Reflected Wave Calculator",
+    "u": "electrical/vfd-cable-reflected-wave",
+    "d": "2026-09-12"
+  },
+  {
     "t": "ANSI Relay Numbers: Common Protection Relay Functions",
     "u": "posts/ansi-relay-numbers-protection-functions",
     "d": "2026-09-12"
@@ -27,26 +47,6 @@
   {
     "t": "Alarm Setpoint Band Calculator",
     "u": "automation/alarm-setpoints",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Deadband / Hysteresis Calculator",
-    "u": "automation/deadband-hysteresis",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Instrument/Sensor Selector",
-    "u": "automation/instrument-selector",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Intrinsic Safety Entity / Loop Checker",
-    "u": "automation/is-entity-loop-calculator",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Level Control Loop Simulator",
-    "u": "automation/level-control-simulator",
     "d": "2026-09-12"
   }
 ]
