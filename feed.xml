@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>IEC 104 Communication Protocol Explained</title>
+    <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
+    <description>What IEC 60870-5-104 does, how it extends IEC 101 over TCP/IP, the master-slave request/response model, a security reference, and where it's used in SCADA.</description>
+    <pubDate>Sat, 12 Sep 2026 16:23:29 GMT</pubDate>
+  </item>
+  <item>
+    <title>IEC 61850 Digital Substation Protocol Explained</title>
+    <link>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained.html</guid>
+    <description>How IEC 61850 replaces hardwired substation panels with GOOSE, Sampled Values and MMS over Ethernet — the process/bay/station architecture, what each service actually carries, and the security tradeoffs.</description>
+    <pubDate>Sat, 12 Sep 2026 16:23:29 GMT</pubDate>
+  </item>
+  <item>
     <title>Chiller Capacity and COP: Where the Compressor's Work Actually Goes</title>
     <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</link>
     <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection.html</guid>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/mep-sleeves-installation-guide-explained.html</guid>
     <description>What an MEP sleeve is, the seven locations they're cast into, why they're used, precautions, and the site sequence from drawing to final inspection.</description>
     <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>Transformer Turn Ratio (TTR) Test Explained</title>
-    <link>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained.html</guid>
-    <description>How the TTR test verifies winding ratios, polarity and connections, and detects shorted turns — procedure, example readings and acceptance criteria.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>Legend Sheet in a P&amp;ID Explained</title>
-    <link>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained.html</guid>
-    <description>A legend sheet is the reference table that defines every symbol, line type and tag format on a P&amp;ID — why everyone reads the same drawing the same way.</description>
-    <pubDate>Sat, 29 Aug 2026 09:18:08 GMT</pubDate>
   </item>
 </channel></rss>

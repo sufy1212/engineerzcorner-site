@@ -182,6 +182,20 @@
   "a": "added"
  },
  {
+  "t": "IEC 104 Communication Protocol Explained",
+  "u": "posts/iec-104-communication-protocol-explained",
+  "d": "2026-09-12",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "IEC 61850 Digital Substation Protocol Explained",
+  "u": "posts/iec-61850-digital-substation-protocol-explained",
+  "d": "2026-09-12",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "What Is an Inverter? DC-to-AC Conversion Explained",
   "u": "posts/what-is-an-inverter-dc-ac-explained",
   "d": "2026-09-10",
@@ -1645,13 +1659,6 @@
   "a": "updated"
  },
  {
-  "t": "IEC 104 Communication Protocol Explained",
-  "u": "posts/iec-104-communication-protocol-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
   "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Application Timeline Planner",
   "u": "study-abroad/application-timeline-planner",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "Cost of Living Calculator",
-  "u": "study-abroad/cost-of-living-calculator",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"

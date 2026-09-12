@@ -1,5 +1,15 @@
 [
   {
+    "t": "IEC 104 Communication Protocol Explained",
+    "u": "posts/iec-104-communication-protocol-explained",
+    "d": "2026-09-12"
+  },
+  {
+    "t": "IEC 61850 Digital Substation Protocol Explained",
+    "u": "posts/iec-61850-digital-substation-protocol-explained",
+    "d": "2026-09-12"
+  },
+  {
     "t": "Alarm Setpoint Band Calculator",
     "u": "automation/alarm-setpoints",
     "d": "2026-09-12"
@@ -37,16 +47,6 @@
   {
     "t": "Orifice Plate (DP Flow) Sizing",
     "u": "automation/orifice-flow-sizing",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "PID Tuning (Reaction Curve)",
-    "u": "automation/pid-tuning",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Relay / Contactor Coil Current & Duty Cycle",
-    "u": "automation/relay-coil-sizing",
     "d": "2026-09-12"
   }
 ]
