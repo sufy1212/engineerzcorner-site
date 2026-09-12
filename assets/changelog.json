@@ -112,6 +112,76 @@
   "a": "added"
  },
  {
+  "t": "Heat Exchanger Sizing (LMTD)",
+  "u": "process/heat-exchanger-lmtd-sizing",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "NPSH Available Calculator",
+  "u": "process/npsh-available-calculator",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Wall Thickness — ASME B31.3",
+  "u": "process/pipe-wall-thickness-asme-b31-3",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Relief Valve (PSV) Sizing",
+  "u": "process/relief-valve-sizing",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Valve Type Selector",
+  "u": "process/valve-type-selector",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Cavitation/Flashing Check",
+  "u": "process/cavitation-flashing-check",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Process Line Sizing",
+  "u": "process/line-sizing-velocity",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Dilution Purge Gas Sizing",
+  "u": "process/purge-gas-sizing",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Vessel/Tank Volume &amp; Level",
+  "u": "process/vessel-volume-level",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Tank Breathing / Venting Loss Calculator (API 2000)",
+  "u": "process/tank-breathing-loss-api2000",
+  "d": "2026-09-12",
+  "c": "Process",
+  "a": "added"
+ },
+ {
   "t": "What Is an Inverter? DC-to-AC Conversion Explained",
   "u": "posts/what-is-an-inverter-dc-ac-explained",
   "d": "2026-09-10",
@@ -620,34 +690,6 @@
   "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
   "d": "2026-08-30",
   "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Heat Exchanger Sizing (LMTD)",
-  "u": "process/heat-exchanger-lmtd-sizing",
-  "d": "2026-08-30",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "NPSH Available Calculator",
-  "u": "process/npsh-available-calculator",
-  "d": "2026-08-30",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Pipe Wall Thickness — ASME B31.3",
-  "u": "process/pipe-wall-thickness-asme-b31-3",
-  "d": "2026-08-30",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Relief Valve (PSV) Sizing",
-  "u": "process/relief-valve-sizing",
-  "d": "2026-08-30",
-  "c": "Process",
   "a": "updated"
  },
  {
@@ -1953,41 +1995,6 @@
   "a": "updated"
  },
  {
-  "t": "Valve Type Selector",
-  "u": "process/valve-type-selector",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Cavitation/Flashing Check",
-  "u": "process/cavitation-flashing-check",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Process Line Sizing",
-  "u": "process/line-sizing-velocity",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Dilution Purge Gas Sizing",
-  "u": "process/purge-gas-sizing",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Vessel/Tank Volume &amp; Level",
-  "u": "process/vessel-volume-level",
-  "d": "2026-08-27",
-  "c": "Process",
-  "a": "updated"
- },
- {
   "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
   "u": "solar/grid-tie-off-grid-comparator",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Cost of Living Calculator",
   "u": "study-abroad/cost-of-living-calculator",
-  "d": "2026-08-27",
-  "c": "Study Abroad",
-  "a": "updated"
- },
- {
-  "t": "Currency Converter",
-  "u": "study-abroad/currency-converter",
   "d": "2026-08-27",
   "c": "Study Abroad",
   "a": "updated"
