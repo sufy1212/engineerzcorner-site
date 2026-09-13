@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Solar Panel Cross-Section: The Layers Explained</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</guid>
+    <description>What's actually inside a solar panel — tempered glass, EVA encapsulant, the cells themselves, backsheet, frame and junction box — layer by layer, plus what bypass diodes do and why.</description>
+    <pubDate>Sun, 13 Sep 2026 19:51:40 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar PV System Components Explained: From Panel to Load</title>
+    <link>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-pv-system-components-explained.html</guid>
+    <description>What's actually in a solar PV system — panels, charge controller, battery bank, inverter, and balance of system — and how energy flows from sunlight to load.</description>
+    <pubDate>Sun, 13 Sep 2026 19:51:40 GMT</pubDate>
+  </item>
+  <item>
     <title>Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared</title>
     <link>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</link>
     <guid>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared.html</guid>
@@ -198,19 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</guid>
     <description>What a circuit breaker actually does, the main types — MCB, MCCB, ACB, VCB, OCB, SF6, air-blast, GIS — its parts, an interrupting-medium reference, a voltage-class selection guide, and common failure points.</description>
     <pubDate>Tue, 01 Sep 2026 03:03:46 GMT</pubDate>
-  </item>
-  <item>
-    <title>Main Components of a 33 kV Substation Explained</title>
-    <link>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained.html</guid>
-    <description>Every stage of a 33 kV substation feeding a 0.433 kV LT network — HT switchgear, transformer feeder, power transformer, LT panel and outgoing distribution.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit</title>
-    <link>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained.html</guid>
-    <description>Cable tray, ladder, trunking, and conduit compared — construction, protection level, typical load, where each is used, and how to choose.</description>
-    <pubDate>Sun, 30 Aug 2026 03:32:21 GMT</pubDate>
   </item>
 </channel></rss>

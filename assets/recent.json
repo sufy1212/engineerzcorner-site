@@ -1,5 +1,15 @@
 [
   {
+    "t": "Solar Panel Cross-Section: The Layers Explained",
+    "u": "posts/solar-panel-cross-section-layers-explained",
+    "d": "2026-09-13"
+  },
+  {
+    "t": "Solar PV System Components Explained: From Panel to Load",
+    "u": "posts/solar-pv-system-components-explained",
+    "d": "2026-09-13"
+  },
+  {
     "t": "Panel Schedule Builder",
     "u": "electrical/panel-schedule-builder",
     "d": "2026-09-13"
@@ -37,16 +47,6 @@
   {
     "t": "Single Line Diagram (SLD) Symbols &amp; How to Read One",
     "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "IEC 104 Communication Protocol Explained",
-    "u": "posts/iec-104-communication-protocol-explained",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "IEC 61850 Digital Substation Protocol Explained",
-    "u": "posts/iec-61850-digital-substation-protocol-explained",
     "d": "2026-09-12"
   }
 ]

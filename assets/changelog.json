@@ -84,6 +84,20 @@
   "a": "added"
  },
  {
+  "t": "Solar PV System Components Explained: From Panel to Load",
+  "u": "posts/solar-pv-system-components-explained",
+  "d": "2026-09-13",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Solar Panel Cross-Section: The Layers Explained",
+  "u": "posts/solar-panel-cross-section-layers-explained",
+  "d": "2026-09-13",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "VFD Cable Length / Reflected Wave Calculator",
   "u": "electrical/vfd-cable-reflected-wave",
   "d": "2026-09-12",
@@ -1288,13 +1302,6 @@
   "a": "updated"
  },
  {
-  "t": "Solar PV System Components Explained: From Panel to Load",
-  "u": "posts/solar-pv-system-components-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Solar System Sizing: From Daily Load to Panel Count",
   "u": "posts/solar-system-sizing-load-to-panel-count",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "CO2 Offset &amp; Environmental Savings Calculator",
   "u": "solar/co2-offset-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
-  "u": "solar/dc-cable-voltage-drop-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
