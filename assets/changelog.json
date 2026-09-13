@@ -7,6 +7,83 @@
   "a": "added"
  },
  {
+  "t": "Heat Exchanger Sizing (LMTD)",
+  "u": "process/heat-exchanger-lmtd-sizing",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "NPSH Available Calculator",
+  "u": "process/npsh-available-calculator",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Wall Thickness — ASME B31.3",
+  "u": "process/pipe-wall-thickness-asme-b31-3",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Relief Valve (PSV) Sizing",
+  "u": "process/relief-valve-sizing",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Valve Type Selector",
+  "u": "process/valve-type-selector",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Cavitation/Flashing Check",
+  "u": "process/cavitation-flashing-check",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Process Line Sizing",
+  "u": "process/line-sizing-velocity",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Dilution Purge Gas Sizing",
+  "u": "process/purge-gas-sizing",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Vessel/Tank Volume &amp; Level",
+  "u": "process/vessel-volume-level",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Tank Breathing / Venting Loss Calculator (API 2000)",
+  "u": "process/tank-breathing-loss-api2000",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Instrument Index / I/O List Builder",
+  "u": "process/instrument-index-io-list-builder",
+  "d": "2026-09-13",
+  "c": "Process",
+  "a": "added"
+ },
+ {
   "t": "VFD Cable Length / Reflected Wave Calculator",
   "u": "electrical/vfd-cable-reflected-wave",
   "d": "2026-09-12",
@@ -116,76 +193,6 @@
   "u": "automation/is-entity-loop-calculator",
   "d": "2026-09-12",
   "c": "Automation",
-  "a": "added"
- },
- {
-  "t": "Heat Exchanger Sizing (LMTD)",
-  "u": "process/heat-exchanger-lmtd-sizing",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "NPSH Available Calculator",
-  "u": "process/npsh-available-calculator",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Pipe Wall Thickness — ASME B31.3",
-  "u": "process/pipe-wall-thickness-asme-b31-3",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Relief Valve (PSV) Sizing",
-  "u": "process/relief-valve-sizing",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Valve Type Selector",
-  "u": "process/valve-type-selector",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Cavitation/Flashing Check",
-  "u": "process/cavitation-flashing-check",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Process Line Sizing",
-  "u": "process/line-sizing-velocity",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Dilution Purge Gas Sizing",
-  "u": "process/purge-gas-sizing",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Vessel/Tank Volume &amp; Level",
-  "u": "process/vessel-volume-level",
-  "d": "2026-09-12",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Tank Breathing / Venting Loss Calculator (API 2000)",
-  "u": "process/tank-breathing-loss-api2000",
-  "d": "2026-09-12",
-  "c": "Process",
   "a": "added"
  },
  {
@@ -2088,13 +2095,6 @@
  {
   "t": "DC Cable Sizing &amp; Voltage Drop Calculator",
   "u": "solar/dc-cable-voltage-drop-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Inverter Sizing Calculator",
-  "u": "solar/inverter-sizing-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
