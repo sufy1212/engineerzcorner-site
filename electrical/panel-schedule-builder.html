@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Schedule Builder — Engineerz CorneR</title>
+<meta name="description" content="Build an electrical panel schedule circuit by circuit — breaker size, phase assignment and connected load — with automatic per-phase totals, imbalance percentage and panel loading check.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/panel-schedule-builder">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Panel Schedule Builder — Engineerz CorneR">
+<meta property="og:description" content="Build an electrical panel schedule circuit by circuit — breaker size, phase assignment and connected load — with automatic per-phase totals, imbalance percentage and panel loading check.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/panel-schedule-builder">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Panel Schedule Builder — Engineerz CorneR">
+<meta name="twitter:description" content="Build an electrical panel schedule circuit by circuit — breaker size, phase assignment and connected load — with automatic per-phase totals, imbalance percentage and panel loading check.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Electrical", "item": "https://www.engineerzcorner.com/electrical/" },
+    { "@type": "ListItem", "position": 3, "name": "Panel Schedule Builder", "item": "https://www.engineerzcorner.com/electrical/panel-schedule-builder" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Panel Schedule Builder",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Build an electrical panel schedule circuit by circuit — breaker size, phase assignment and connected load — with automatic per-phase totals, imbalance percentage and panel loading check.",
+  "url": "https://www.engineerzcorner.com/electrical/panel-schedule-builder",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Panel Schedule Builder</span></div></nav>
+
+
+<div class="ec-related-post"><div class="ec-related-post-inner">Related reading: <a href="../posts/single-line-diagram-sld-symbols-how-to-read-one">Single Line Diagram (SLD) Symbols &amp; How to Read One</a>, <a href="../posts/star-delta-connection-explained">Star (Y) and Delta (&Delta;) Connections Explained</a></div></div>
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-psb">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="8" y1="7" x2="16" y2="7"></line><line x1="8" y1="11" x2="16" y2="11"></line><line x1="8" y1="15" x2="16" y2="15"></line><line x1="8" y1="19" x2="12" y2="19"></line></svg></div>
+    <div><h1>Panel Schedule Builder</h1><div class="hero-sub">Circuit-by-circuit panel schedule with automatic per-phase totals, imbalance check and panel loading</div></div>
+  </div>
+  <div class="intro">Build out a panel schedule the way it actually gets used on a job — one row per circuit, breaker size, which phase(s) it lands on, and its connected load. As you add circuits, this totals the connected load on each phase, flags how far out of balance they are, and checks the total against the panel's main breaker rating. Nothing is saved between visits — generate and copy the schedule before closing the tab.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="psbValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Panel Information</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="psbName">Panel name / ID</label>
+        <input type="text" id="psbName" value="PANEL LP-1" maxlength="40">
+      </div>
+      <div class="field">
+        <label for="psbType">Panel type</label>
+        <select id="psbType">
+          <option value="3p208" selected>3-Phase 4-Wire, 208Y/120V</option>
+          <option value="3p480">3-Phase 4-Wire, 480Y/277V</option>
+          <option value="3p240d">3-Phase 3-Wire, 240V Delta</option>
+          <option value="1p240">1-Phase 3-Wire, 120/240V (split-phase)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="psbMain">Main breaker / bus rating <span class="unit">A</span></label>
+        <input type="number" id="psbMain" value="225" step="1" min="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Circuits</h2></div>
+    <div class="pm-table-wrap"><table class="pm-table">
+      <thead><tr><th style="min-width:60px;">Ckt #</th><th style="min-width:180px;">Description</th><th style="min-width:90px;">Breaker (A)</th><th style="min-width:90px;">Phase</th><th style="min-width:100px;">Load (VA)</th><th></th></tr></thead>
+      <tbody id="psbTbody"></tbody>
+    </table></div>
+    <button type="button" class="pm-add-btn" id="psbAddBtn">+ Add Circuit</button>
+    <div class="hint" style="margin:8px 16px 0;">Phase options adjust to the panel type. For a 2-pole circuit spanning two legs (e.g. a 240V load), pick a two-letter option like "AB" — the load is split evenly across both legs for the balance check below. A 3-pole circuit uses "ABC" and splits evenly three ways.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">TOTAL CONNECTED LOAD</span>
+      <span class="rval" id="psbTotalVA">0 <small>VA</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Phase A load</div><div class="sval" id="psbPhaseA">0 VA</div></div>
+      <div class="stat"><div class="slabel">Phase B load</div><div class="sval" id="psbPhaseB">0 VA</div></div>
+      <div class="stat"><div class="slabel">Phase C load</div><div class="sval" id="psbPhaseC">0 VA</div></div>
+      <div class="stat"><div class="slabel">Phase imbalance</div><div class="sval amber" id="psbImbalance">0%</div></div>
+      <div class="stat"><div class="slabel">Est. total current</div><div class="sval" id="psbTotalAmps">0 A</div></div>
+      <div class="stat"><div class="slabel">Panel loading (vs main rating)</div><div class="sval amber" id="psbLoading">0%</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">Per-phase VA = &Sigma; (circuit load &divide; number of legs it spans) &nbsp;&middot;&nbsp; Imbalance % = (max phase &minus; min phase) / average phase &times; 100 &nbsp;&middot;&nbsp; Total current &asymp; total VA / (&radic;3 &times; V<sub>LL</sub>) for 3-phase, or per-leg VA / 120 for split-phase</div>
+      <div class="hint" style="margin-top:8px;">This is a connected-load schedule, not a demand-load calculation — it does not apply NEC demand factors for continuous loads, motor loads, or diversity, and the 80% continuous-load derating on the main breaker isn't applied automatically. A panel loaded near 100% of the main rating on paper may still need a demand-factor check before it's actually acceptable. Phase imbalance above roughly 5-10% is generally worth rebalancing circuits to reduce neutral current and uneven voltage drop.</div>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Generate Schedule</h2></div>
+    <div class="row2" style="align-items:end;">
+      <div class="field" style="margin-bottom:0;">
+        <button id="psbGenBtn" type="button" class="pm-gen-btn">Generate schedule text</button>
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <button id="psbCopyBtn" type="button" class="pm-copy-btn">Copy text</button>
+        <span id="psbCopyStatus" class="hint" style="display:inline-block;margin-top:8px;"></span>
+      </div>
+    </div>
+    <div class="field">
+      <label for="psbOutput">Panel schedule</label>
+      <textarea id="psbOutput" rows="14" readonly style="width:100%;background:var(--sheet-2);border:1px solid var(--line);color:var(--ink);font-family:var(--font-mono);font-size:11.5px;padding:10px;border-radius:5px;"></textarea>
+    </div>
+  </div>
+
+  <footer>Connected-load schedule only — apply NEC demand factors and the 80% continuous-load rule before sizing conductors or the main breaker from this. Nothing here is saved anywhere — copy or export before closing the tab.</footer>
+</div>
+
+
+
+<script src="panel-schedule-builder.inline.js"></script>
+
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
