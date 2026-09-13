@@ -1,5 +1,10 @@
 [
   {
+    "t": "Panel Schedule Builder",
+    "u": "electrical/panel-schedule-builder",
+    "d": "2026-09-13"
+  },
+  {
     "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
     "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-09-12"
@@ -42,11 +47,6 @@
   {
     "t": "IEC 61850 Digital Substation Protocol Explained",
     "u": "posts/iec-61850-digital-substation-protocol-explained",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "Alarm Setpoint Band Calculator",
-    "u": "automation/alarm-setpoints",
     "d": "2026-09-12"
   }
 ]

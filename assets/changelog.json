@@ -1,5 +1,12 @@
 [
  {
+  "t": "Panel Schedule Builder",
+  "u": "electrical/panel-schedule-builder",
+  "d": "2026-09-13",
+  "c": "Electrical",
+  "a": "added"
+ },
+ {
   "t": "VFD Cable Length / Reflected Wave Calculator",
   "u": "electrical/vfd-cable-reflected-wave",
   "d": "2026-09-12",
@@ -2088,13 +2095,6 @@
  {
   "t": "Inverter Sizing Calculator",
   "u": "solar/inverter-sizing-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Row Spacing &amp; Self-Shading Calculator",
-  "u": "solar/row-spacing-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
