@@ -7,6 +7,13 @@
   "a": "added"
  },
  {
+  "t": "Single Line Diagram (SLD) Symbols &amp; How to Read One",
+  "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
+  "d": "2026-09-17",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Panel Schedule Builder",
   "u": "electrical/panel-schedule-builder",
   "d": "2026-09-13",
@@ -243,13 +250,6 @@
   "d": "2026-09-12",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Single Line Diagram (SLD) Symbols &amp; How to Read One",
-  "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
-  "d": "2026-09-12",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
@@ -2095,13 +2095,6 @@
  {
   "t": "Charge Controller Sizing Calculator",
   "u": "solar/charge-controller-sizing-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "CO2 Offset &amp; Environmental Savings Calculator",
-  "u": "solar/co2-offset-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
