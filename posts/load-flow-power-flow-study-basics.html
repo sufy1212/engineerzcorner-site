@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Load Flow (Power Flow) Study Basics | Engineerz CorneR</title>
+<meta name="description" content="What a load flow study actually calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and protection coordination studies, and how to read the results.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Load Flow (Power Flow) Study Basics">
+<meta property="og:description" content="What a load flow study actually calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and protection coordination studies, and how to read the results.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Load Flow (Power Flow) Study Basics">
+<meta name="twitter:description" content="What a load flow study actually calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and protection coordination studies, and how to read the results.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="load-flow-power-flow-study-basics.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Load Flow (Power Flow) Study Basics", "item": "https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Load Flow (Power Flow) Study Basics",
+  "datePublished": "2026-09-17",
+  "dateModified": "2026-09-17",
+  "description": "What a load flow study actually calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and protection coordination studies, and how to read the results.",
+  "url": "https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Load Flow Study Basics</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Intermediate</span>
+    <h1>Load Flow (Power Flow) Study Basics</h1>
+    <p class="hero-sub">Before a short-circuit study, a protection coordination study, or an arc flash study can mean anything, someone has to establish what the system actually looks like under normal, everyday operation. That's what a load flow study does.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Intermediate &middot; Power System Studies</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 180" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="90" r="20" fill="none" stroke="#3EC6E0" stroke-width="2"/>
+      <text x="80" y="95" font-family="IBM Plex Mono" font-size="10" fill="#3EC6E0" text-anchor="middle">SLACK</text>
+      <line x1="100" y1="90" x2="280" y2="60" stroke="#7e97ac" stroke-width="2"/>
+      <line x1="100" y1="90" x2="280" y2="120" stroke="#7e97ac" stroke-width="2"/>
+      <circle cx="300" cy="60" r="18" fill="none" stroke="#e7e1ce" stroke-width="2"/>
+      <text x="300" y="64" font-family="IBM Plex Mono" font-size="9" fill="#e7e1ce" text-anchor="middle">PV</text>
+      <circle cx="300" cy="120" r="18" fill="none" stroke="#7e97ac" stroke-width="2"/>
+      <text x="300" y="124" font-family="IBM Plex Mono" font-size="9" fill="#7e97ac" text-anchor="middle">PQ</text>
+      <line x1="318" y1="60" x2="480" y2="90" stroke="#7e97ac" stroke-width="2"/>
+      <line x1="318" y1="120" x2="480" y2="90" stroke="#7e97ac" stroke-width="2"/>
+      <circle cx="500" cy="90" r="18" fill="none" stroke="#7e97ac" stroke-width="2"/>
+      <text x="500" y="94" font-family="IBM Plex Mono" font-size="9" fill="#7e97ac" text-anchor="middle">PQ</text>
+      <line x1="518" y1="90" x2="640" y2="90" stroke="#3EC6E0" stroke-width="2"/>
+      <text x="580" y="80" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">P, Q</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A load flow study calculates the steady-state voltage magnitude and phase angle at every bus in a system, along with real and reactive power flow on every line, under a defined loading condition.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Every bus is classified as one of three types &mdash; slack, PV, or PQ &mdash; and which two of the four bus quantities (voltage, angle, real power, reactive power) are known versus solved-for depends entirely on that classification.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Because the power-flow equations are non-linear, load flow is solved iteratively &mdash; commonly by the Newton-Raphson method, with Gauss-Seidel and Fast Decoupled Load Flow as alternative solution methods.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A validated load flow model is the input that short-circuit analysis, protection coordination, and arc flash hazard calculations are built on &mdash; not a parallel, independent study.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What a load flow study actually calculates</h2>
+    <p>A load flow (or power flow) study calculates four quantities at every bus in an electrical network under a defined, steady-state loading condition: voltage magnitude, voltage phase angle, real power (P), and reactive power (Q). It also produces the real and reactive power flowing on every line connecting those buses, plus total system losses. It's a snapshot of how the system actually behaves under a chosen set of load and generation conditions &mdash; not a fault condition, not a transient event, just ordinary steady-state operation.</p>
+
+    <h2><span class="h2-dot"></span>The three bus types</h2>
+    <p class="post-lede">Every bus in the model is one of three types, and the type determines which two of the four bus quantities are already known going in.</p>
+    <div class="type-grid">
+      <div class="type-card"><b>Slack (Swing) Bus</b><span>Voltage magnitude and phase angle are fixed as the reference for the whole system, usually set at the largest generator or the utility connection point. Real and reactive power at this bus are the unknowns &mdash; it supplies whatever power balances total generation, load, and system losses.</span></div>
+      <div class="type-card"><b>PV Bus (Generator Bus)</b><span>Real power output and voltage magnitude are specified &mdash; typical of a generator held at a set voltage by its excitation system. Reactive power and voltage angle are solved for.</span></div>
+      <div class="type-card"><b>PQ Bus (Load Bus)</b><span>Real and reactive power demand are specified from load data. Voltage magnitude and angle at that bus are the unknowns the study solves for &mdash; this is the bus type most ordinary load points in a system are modeled as.</span></div>
+    </div>
+
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Bus Type</th><th>Voltage (V)</th><th>Angle (&delta;)</th><th>Real Power (P)</th><th>Reactive Power (Q)</th></tr>
+        <tr><td>Slack</td><td>Known</td><td>Known</td><td>Unknown</td><td>Unknown</td></tr>
+        <tr><td>PV</td><td>Known</td><td>Unknown</td><td>Known</td><td>Unknown</td></tr>
+        <tr><td>PQ</td><td>Unknown</td><td>Unknown</td><td>Known</td><td>Known</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why it has to be solved iteratively</h2>
+    <p>The equations relating power, voltage, and angle at each bus are non-linear, so there's no direct algebraic solution for a network of any real size &mdash; the study has to be solved iteratively, starting from an initial voltage guess and refining it until the mismatch between calculated and specified power at every bus falls within a set tolerance. The <strong>Newton-Raphson method</strong> is the most widely used solution technique for practical systems because of its fast convergence; <strong>Gauss-Seidel</strong> is an older, simpler iterative method; and <strong>Fast Decoupled Load Flow (FDLF)</strong> is a simplified variant that trades some accuracy for significantly faster computation on large networks.</p>
+
+    <h2><span class="h2-dot"></span>Where it fits among power system studies</h2>
+    <div class="steps-strip">
+      <div class="step-row"><span class="step-num">1</span><span>Load flow establishes normal operating voltages, line loadings, and losses &mdash; and validates that the system model itself is built correctly before anything else is calculated from it.</span></div>
+      <div class="step-row"><span class="step-num">2</span><span>Short-circuit analysis uses that same validated model to calculate fault current levels at every bus, since pre-fault operating conditions affect motor and generator fault contributions.</span></div>
+      <div class="step-row"><span class="step-num">3</span><span>Protection coordination uses the short-circuit results to set relay and breaker time-current curves so faults clear selectively.</span></div>
+      <div class="step-row"><span class="step-num">4</span><span>Arc flash hazard calculations (per IEEE 1584) then use the fault current and clearing time from the previous two studies to determine incident energy and required PPE category.</span></div>
+    </div>
+
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Load flow doesn't feed directly into an arc flash calculation the way short-circuit and coordination results do &mdash; its real value at that stage is confirming voltage drops and transformer/line loadings are within acceptable limits, and that the system model is sound before it's used for the studies that follow.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Typical acceptance criteria</h2>
+    <p>There's no single universal number, but a commonly cited industrial design target limits steady-state bus voltage drop under maximum load to roughly 5&ndash;8%, with a wider allowance &mdash; typically 15&ndash;20% &mdash; permitted momentarily during large motor starting, when reactive power demand spikes briefly. The actual limits applied on a given project come from the utility's service agreement, the equipment manufacturer's tolerance, or an applicable standard such as ANSI C84.1, and should always be confirmed against the specific project's design criteria rather than assumed.</p>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">New facility electrical design</span>
+      <span class="app-chip">Voltage drop &amp; loading verification</span>
+      <span class="app-chip">Input to short-circuit &amp; arc flash studies</span>
+      <span class="app-chip">Capacity/expansion planning</span>
+      <span class="app-chip">Utility interconnection studies</span>
+      <span class="app-chip">Renewable/DG integration studies</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>A load flow study solves for voltage magnitude, angle, real power, and reactive power at every bus under a defined steady-state loading condition &mdash; not a fault or transient event.</span></li>
+      <li><span class="tk-check">✓</span><span>Which quantities are known versus solved-for at a bus depends entirely on whether it's classified slack, PV, or PQ.</span></li>
+      <li><span class="tk-check">✓</span><span>The non-linear power-flow equations require iterative solution &mdash; Newton-Raphson is the standard method for real-world systems.</span></li>
+      <li><span class="tk-check">✓</span><span>A validated load flow model is the foundation that short-circuit, protection coordination, and arc flash studies are built on, in that order &mdash; not a standalone or parallel analysis.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Load%20Flow%20(Power%20Flow)%20Study%20Basics%20%E2%80%94%20bus%20types%2C%20solution%20methods%2C%20and%20where%20it%20fits%20among%20power%20system%20studies.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fload-flow-power-flow-study-basics" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fload-flow-power-flow-study-basics" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Load%20Flow%20(Power%20Flow)%20Study%20Basics&text=Bus%20types%2C%20solution%20methods%2C%20and%20where%20it%20fits%20among%20power%20system%20studies.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fload-flow-power-flow-study-basics" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Load%20Flow%20(Power%20Flow)%20Study%20Basics&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fload-flow-power-flow-study-basics">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="short-circuit-current-iec-60909-basics">Prospective Short-Circuit Current: Why It Falls the Further You Are From Source</a></li><li><a href="arc-flash-hazard-basics-incident-energy-ppe-categories">Arc Flash Hazard Basics: Incident Energy &amp; PPE Categories</a></li><li><a href="ansi-relay-numbers-protection-functions">ANSI Relay Numbers &amp; Protection Functions</a></li><li><a href="single-line-diagram-sld-symbols-how-to-read-one">Single Line Diagram (SLD) Symbols &amp; How to Read One</a></li><li><a href="kw-kva-kvar-difference-explained">kW vs kVA vs kVAR: The Difference Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
