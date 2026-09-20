@@ -1,5 +1,12 @@
 [
  {
+  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+  "u": "civil/pipe-flow-capacity",
+  "d": "2026-09-20",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
   "t": "Load Flow (Power Flow) Study Basics",
   "u": "posts/load-flow-power-flow-study-basics",
   "d": "2026-09-17",
@@ -604,13 +611,6 @@
  {
   "t": "Grade / Slope Calculator",
   "u": "civil/grade-slope",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-  "u": "civil/pipe-flow-capacity",
   "d": "2026-08-30",
   "c": "Civil",
   "a": "updated"
