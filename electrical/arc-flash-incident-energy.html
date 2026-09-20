@@ -230,7 +230,7 @@
       E = (K*V*Ibf2*t)/(D2*D2)/4.184; // convert J/cm² to cal/cm²
       var boundaryMm = Math.sqrt((K*V*Ibf2*t)/(1.2*4.184));
       boundaryText = fmt(boundaryMm,0) + ' mm';
-      formulaNote = 'E = 2.142×10⁶ × V × Ibf × t / D² (cal/cm², Ralph Lee equation) · D_boundary = √(2.142×10⁶ × V × Ibf × t / 1.2)';
+      formulaNote = 'E = 2.142×10⁶ × V × Ibf × t / D² ÷ 4.184 (cal/cm², Ralph Lee equation; the 2.142×10⁶ form gives J/cm²) · D_boundary = √(2.142×10⁶ × V × Ibf × t / (1.2 × 4.184)) mm';
 
       if (V < 0.601) warn = 'Voltage should be above 600V for this method — switch to the ≤600V option instead.';
     }

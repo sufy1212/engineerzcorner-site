@@ -171,13 +171,18 @@
     var BattEff = parseFloat($('bessBattEff').value)/100;
     var Crate = parseFloat($('bessCrate').value);
 
-    if (!(P>0 && Dur>0 && DoD>0 && InvEff>0 && BattEff>0 && Crate>0)) return;
+    if (!(P>0 && Dur>0 && Margin>=0 && DoD>0 && DoD<=1 && InvEff>0 && InvEff<=1 && BattEff>0 && BattEff<=1 && Crate>0)) {
+      var bad = $('bessConstraint');
+      bad.className = 'status-banner bad';
+      bad.innerHTML = '<span class="status-dot"></span>Check inputs: power, duration and C-rate must be above 0, margin cannot be negative, and DoD / efficiencies must be between 1 and 100%.';
+      return;
+    }
 
     var usableEnergy = P * Dur * (1+Margin);
     var nameplate = usableEnergy / (DoD * InvEff * BattEff);
     var powerReq = P * (1+Margin);
-    var maxPowerAtCrate = nameplate * Crate;
-    var resultCrate = powerReq / nameplate;
+    var maxPowerAtCrate = nameplate * Crate * InvEff; // AC-side power the battery can deliver through the inverter
+    var resultCrate = powerReq / InvEff / nameplate; // C-rate on the DC battery side
     var achievedDuration = usableEnergy / powerReq;
 
     $('bessNameplate').innerHTML = fmt(nameplate,1) + ' <small>kWh</small>';
