@@ -145,7 +145,7 @@
     <div class="step-head"><span class="step-num">✓</span><h2>Full-Flow Capacity</h2></div>
     <div class="result-line">
       <span class="rlabel">DISCHARGE, Q (full)</span>
-      <span class="rval" id="pfQ">—</span>
+      <span class="rval" id="pfDischarge">—</span>
     </div>
     <div class="stat-grid" style="margin:0 16px 16px;">
       <div class="stat"><div class="slabel">Velocity (full)</div><div class="sval" id="pfV">—</div></div>
@@ -178,7 +178,7 @@
   function calc(){
     var Dmm = num('pfDiam'), slopePct = num('pfSlope'), n = num('pfN');
     if(isNaN(Dmm) || isNaN(slopePct) || isNaN(n) || Dmm<=0 || slopePct<=0){
-      setText('pfQ','—'); setText('pfV','—'); setText('pfArea','—'); return;
+      setText('pfDischarge','—'); setText('pfV','—'); setText('pfArea','—'); return;
     }
     var D = Dmm/1000; // m
     var S = slopePct/100;
@@ -186,7 +186,7 @@
     var R = D/4;
     var Q = (1/n) * A * Math.pow(R, 2/3) * Math.sqrt(S); // m3/s
     var V = Q/A;
-    setText('pfQ', fmt(Q,4) + ' m³/s  (' + fmt(Q*1000,1) + ' L/s)');
+    setText('pfDischarge', fmt(Q,4) + ' m³/s  (' + fmt(Q*1000,1) + ' L/s)');
     setText('pfV', fmt(V,2) + ' m/s');
     setText('pfArea', fmt(A,4) + ' m²');
   }
