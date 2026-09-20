@@ -1,5 +1,15 @@
 [
   {
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
+    "d": "2026-09-20"
+  },
+  {
+    "t": "BESS Sizing Calculator",
+    "u": "electrical/bess-sizing-calculator",
+    "d": "2026-09-20"
+  },
+  {
     "t": "Circular Pipe Flow Capacity (Manning's Equation)",
     "u": "civil/pipe-flow-capacity",
     "d": "2026-09-20"
@@ -38,15 +48,5 @@
     "t": "Solar PV System Components Explained: From Panel to Load",
     "u": "posts/solar-pv-system-components-explained",
     "d": "2026-09-13"
-  },
-  {
-    "t": "Panel Schedule Builder",
-    "u": "electrical/panel-schedule-builder",
-    "d": "2026-09-13"
-  },
-  {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-09-12"
   }
 ]
