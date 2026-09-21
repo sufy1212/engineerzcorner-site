@@ -1,5 +1,12 @@
 [
  {
+  "t": "Education Loan EMI Calculator",
+  "u": "study-abroad/education-loan-emi-calculator",
+  "d": "2026-09-21",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
   "t": "Arc Flash Incident Energy",
   "u": "electrical/arc-flash-incident-energy",
   "d": "2026-09-20",
@@ -2088,13 +2095,6 @@
  {
   "t": "Solar Payback & ROI Calculator",
   "u": "solar/solar-payback-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Panel Tilt & Orientation Calculator",
-  "u": "solar/panel-tilt-orientation-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
