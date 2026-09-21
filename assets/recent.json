@@ -1,5 +1,10 @@
 [
   {
+    "t": "Power Factor Correction & Capacitor Banks Explained",
+    "u": "posts/power-factor-correction-capacitor-banks-explained",
+    "d": "2026-09-21"
+  },
+  {
     "t": "Education Loan EMI Calculator",
     "u": "study-abroad/education-loan-emi-calculator",
     "d": "2026-09-21"
@@ -43,10 +48,5 @@
     "t": "Single Line Diagram (SLD) Symbols & How to Read One",
     "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
     "d": "2026-09-17"
-  },
-  {
-    "t": "Solar Panel Cross-Section: The Layers Explained",
-    "u": "posts/solar-panel-cross-section-layers-explained",
-    "d": "2026-09-13"
   }
 ]

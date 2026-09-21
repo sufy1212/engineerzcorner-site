@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Power Factor Correction &amp; Capacitor Banks Explained</title>
+    <link>https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained.html</guid>
+    <description>Why low power factor costs money, how to size a capacitor bank (worked example), where to install it, and the harmonic resonance trap detuned reactors solve.</description>
+    <pubDate>Mon, 21 Sep 2026 11:27:33 GMT</pubDate>
+  </item>
+  <item>
     <title>Arc Flash Hazard Basics</title>
     <link>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</link>
     <guid>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
     <description>What a pump actually does, eight common pump types, key parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
     <pubDate>Wed, 02 Sep 2026 19:24:26 GMT</pubDate>
-  </item>
-  <item>
-    <title>Industrial Sensor Types Explained</title>
-    <link>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</guid>
-    <description>What an industrial sensor actually does, the main types — inductive, capacitive, photoelectric, ultrasonic, RTD/thermocouple, pressure transmitter, level sensor, encoder — how to read a sensing-mode and output spec, and a selection guide.</description>
-    <pubDate>Tue, 01 Sep 2026 18:53:23 GMT</pubDate>
   </item>
 </channel></rss>
