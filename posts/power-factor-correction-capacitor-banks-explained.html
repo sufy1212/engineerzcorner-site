@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Factor Correction: Capacitor Banks | Engineerz CorneR</title>
+<meta name="description" content="Why low power factor costs money, how to size a capacitor bank (worked example), where to install it, and the harmonic resonance trap detuned reactors solve.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Power Factor Correction &amp; Capacitor Banks Explained">
+<meta property="og:description" content="Why low power factor costs money, how to size a capacitor bank (worked example), where to install it, and the harmonic resonance trap detuned reactors solve.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Power Factor Correction &amp; Capacitor Banks Explained">
+<meta name="twitter:description" content="Why low power factor costs money, how to size a capacitor bank (worked example), where to install it, and the harmonic resonance trap detuned reactors solve.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="power-factor-correction-capacitor-banks-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Power Factor Correction & Capacitor Banks Explained", "item": "https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Power Factor Correction & Capacitor Banks Explained",
+  "datePublished": "2026-09-21",
+  "dateModified": "2026-09-21",
+  "description": "Why low power factor costs money, how to size a capacitor bank (worked example), where to install it, and the harmonic resonance trap detuned reactors solve.",
+  "url": "https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Power Factor Correction</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚡ Electrical &middot; Intermediate</span>
+    <h1>Power Factor Correction &amp; Capacitor Banks Explained</h1>
+    <p class="hero-sub">A low power factor means your cables, transformers and generators carry current that does no useful work &mdash; and your utility may bill you for it. Here's how a capacitor bank fixes that, how to size one, and the harmonic trap that catches people out.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Intermediate &middot; Power Quality</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 180" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Power triangle before and after correction, next to a one-line diagram of a capacitor bank on a bus">
+      <!-- power triangle: before (PF 0.80) -->
+      <polygon points="80,150 240,150 240,30" fill="none" stroke="#7e97ac" stroke-width="2"/>
+      <!-- after (PF 0.95) -->
+      <polygon points="80,150 240,150 240,97" fill="rgba(62,198,224,.12)" stroke="#3EC6E0" stroke-width="2"/>
+      <line x1="256" y1="30" x2="256" y2="97" stroke="#3EC6E0" stroke-width="2" stroke-dasharray="4 3"/>
+      <line x1="251" y1="30" x2="261" y2="30" stroke="#3EC6E0" stroke-width="2"/>
+      <line x1="251" y1="97" x2="261" y2="97" stroke="#3EC6E0" stroke-width="2"/>
+      <text x="268" y="68" font-family="IBM Plex Mono" font-size="10" fill="#3EC6E0">Qc</text>
+      <text x="160" y="168" font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6" text-anchor="middle">kW (unchanged)</text>
+      <text x="118" y="84" font-family="IBM Plex Mono" font-size="9" fill="#7e97ac" transform="rotate(-36 118 84)">kVA before</text>
+      <text x="126" y="128" font-family="IBM Plex Mono" font-size="9" fill="#3EC6E0" transform="rotate(-18 126 128)">kVA after</text>
+      <!-- one-line: source, bus, motor load, capacitor bank -->
+      <circle cx="380" cy="90" r="16" fill="none" stroke="#e7e1ce" stroke-width="2"/>
+      <path d="M372 90 q4 -8 8 0 t8 0" fill="none" stroke="#e7e1ce" stroke-width="1.6"/>
+      <line x1="396" y1="90" x2="690" y2="90" stroke="#7e97ac" stroke-width="3"/>
+      <text x="380" y="122" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">supply</text>
+      <line x1="500" y1="90" x2="500" y2="126" stroke="#7e97ac" stroke-width="2"/>
+      <circle cx="500" cy="142" r="16" fill="none" stroke="#7e97ac" stroke-width="2"/>
+      <text x="500" y="146" font-family="IBM Plex Mono" font-size="11" fill="#7e97ac" text-anchor="middle">M</text>
+      <text x="500" y="172" font-family="IBM Plex Mono" font-size="9" fill="#8FB0B6" text-anchor="middle">inductive load</text>
+      <line x1="620" y1="90" x2="620" y2="118" stroke="#3EC6E0" stroke-width="2"/>
+      <line x1="604" y1="118" x2="636" y2="118" stroke="#3EC6E0" stroke-width="3"/>
+      <line x1="604" y1="128" x2="636" y2="128" stroke="#3EC6E0" stroke-width="3"/>
+      <line x1="620" y1="128" x2="620" y2="146" stroke="#3EC6E0" stroke-width="2"/>
+      <text x="620" y="172" font-family="IBM Plex Mono" font-size="9" fill="#3EC6E0" text-anchor="middle">capacitor bank</text>
+      <path d="M602 112 C 570 96, 540 104, 522 130" fill="none" stroke="#3EC6E0" stroke-width="1.6" stroke-dasharray="4 3"/>
+      <text x="566" y="86" font-family="IBM Plex Mono" font-size="9" fill="#3EC6E0" text-anchor="middle">local kVAR</text>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Power factor is real power (kW) divided by apparent power (kVA). A low value means more current for the same useful work &mdash; bigger cables and transformers, more I&sup2;R loss, more voltage drop, and often a utility penalty.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">A capacitor supplies the reactive power that motors and transformers need right where it's used, so it no longer has to travel from the source. The size required is Q<sub>c</sub> = P &times; (tan &phi;<sub>1</sub> &minus; tan &phi;<sub>2</sub>).</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Correcting from 0.80 to 0.95 cuts line current by about 16% and upstream I&sup2;R losses by about 29% &mdash; but the load's own kW and kWh don't change.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Capacitors and system inductance can resonate. Near VFDs and other harmonic-producing loads, an untuned bank can amplify harmonics &mdash; which is why detuned (reactor-fitted) banks exist.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why low power factor costs money</h2>
+    <p>If you're not sure how kW, kVA and kVAR relate, start with <a href="kw-kva-kvar-difference-explained">kW vs kVA vs kVAR</a>. The short version: motors, transformers and other inductive equipment draw reactive current to build their magnetic fields. That current does no work, but it still flows through every cable, breaker and winding upstream. For a three-phase load the current is I = P / (&radic;3 &times; V &times; PF), so a load at 0.80 PF draws 25% more current than the same kW at unity.</p>
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span><strong>Capacity is used up.</strong> Transformers, generators, cables and switchgear are limited by kVA, not kW. Reactive current takes room that real load could have used.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Losses rise with the square of current.</strong> Extra reactive current means extra I&sup2;R heating in every cable and winding upstream of the load.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Voltage drop increases.</strong> More current through the same impedance drops more voltage &mdash; see <a href="voltage-drop-lv-feeders-explained">voltage drop in LV feeders</a>.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Utility charges.</strong> Many utilities bill a penalty below a set power factor (thresholds around 0.90&ndash;0.95 are common) or charge on kVA demand instead of kW. The rules differ by utility, so check your tariff.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>How a capacitor bank corrects it</h2>
+    <p>An inductive load's reactive power is lagging; a capacitor's is leading. Place a capacitor next to the load and the two exchange reactive power with each other instead of drawing it all from the source. The supply now only has to provide the remaining kVAR, so kVA and current fall while kW stays the same.</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Required capacitor size:</strong> Q<sub>c</sub> = P &times; (tan &phi;<sub>1</sub> &minus; tan &phi;<sub>2</sub>), where &phi; = cos<sup>&minus;1</sup>(PF). P is the load in kW, &phi;<sub>1</sub> comes from the existing power factor and &phi;<sub>2</sub> from the target. The result is in kVAR. The <a href="../electrical/power-factor-correction">Power Factor Correction calculator</a> does this for you.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Worked example: 400 kW at 0.80, corrected to 0.95</h2>
+    <p class="post-lede">A 415 V three-phase plant drawing 400 kW at a power factor of 0.80.</p>
+    <div class="steps-strip">
+      <div class="step-row"><span class="step-num">1</span><span>Before correction: S<sub>1</sub> = 400 / 0.80 = 500 kVA, and Q<sub>1</sub> = 400 &times; tan(cos<sup>&minus;1</sup>0.80) = 400 &times; 0.750 = 300 kVAR.</span></div>
+      <div class="step-row"><span class="step-num">2</span><span>Target PF 0.95: tan(cos<sup>&minus;1</sup>0.95) = 0.3287, so the supply only has to deliver Q<sub>2</sub> = 400 &times; 0.3287 = 131.5 kVAR (S<sub>2</sub> = 400 / 0.95 = 421 kVA).</span></div>
+      <div class="step-row"><span class="step-num">3</span><span>Capacitor needed: Q<sub>c</sub> = 300 &minus; 131.5 = <strong>168.5 kVAR</strong>. Banks come in steps, so round up to a real combination such as 7 &times; 25 kVAR = 175 kVAR, which lands at PF 0.954.</span></div>
+      <div class="step-row"><span class="step-num">4</span><span>Effect: line current at 415 V falls from about 696 A to about 586 A (&minus;15.8%). Upstream I&sup2;R loss falls by 1 &minus; (0.80/0.95)&sup2; &asymp; 29%.</span></div>
+    </div>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Correction doesn't reduce what the load itself consumes &mdash; the kWh at the meter stay the same. The savings come from avoided penalties, lower upstream losses, and capacity released on transformers, generators and cables.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Quick multiplier table</h2>
+    <p>Multiply the load in kW by the number in the table to get the capacitor kVAR needed. It's just tan &phi;<sub>1</sub> &minus; tan &phi;<sub>2</sub>, worked out for common cases.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Existing PF</th><th>To 0.95</th><th>To 0.98</th><th>To 1.00</th></tr>
+        <tr><td>0.70</td><td>0.692</td><td>0.817</td><td>1.020</td></tr>
+        <tr><td>0.75</td><td>0.553</td><td>0.679</td><td>0.882</td></tr>
+        <tr><td>0.80</td><td>0.421</td><td>0.547</td><td>0.750</td></tr>
+        <tr><td>0.85</td><td>0.291</td><td>0.417</td><td>0.620</td></tr>
+        <tr><td>0.90</td><td>0.156</td><td>0.281</td><td>0.484</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Where to install the capacitors</h2>
+    <p class="post-lede">The closer to the load, the more of the network you unload &mdash; but the more banks you have to buy and maintain.</p>
+    <div class="type-grid">
+      <div class="type-card"><b>Individual (at the load)</b><span>One capacitor per motor, switched with it. Relieves the whole feeder. Keep the capacitor kVAR below the motor's no-load reactive power (commonly about 90%) so it can't over-excite the motor when it coasts down. Never connect one on the output of a VFD.</span></div>
+      <div class="type-card"><b>Group</b><span>One bank serving several loads that start and stop together, such as a motor control centre section. Fewer banks than individual, with most of the feeder benefit.</span></div>
+      <div class="type-card"><b>Central (main LV bus)</b><span>An automatic bank at the incomer or main distribution board. The most common choice: cheapest per kVAR and easy to maintain, but it doesn't unload feeders downstream of the bus.</span></div>
+      <div class="type-card"><b>Medium-voltage bank</b><span>Used on large plants and utility substations where the load is fed at MV. Sized and protected as part of the substation design.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Fixed, automatic, thyristor or detuned?</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type</th><th>Best for</th><th>Watch out for</th></tr>
+        <tr><td>Fixed</td><td>A single motor or steady load</td><td>Over-correction when the load drops</td></tr>
+        <tr><td>Automatic (APFC)</td><td>Varying load on a main LV bus</td><td>Needs a regulator and CT; use capacitor-duty contactors</td></tr>
+        <tr><td>Thyristor-switched</td><td>Fast-cycling loads such as welders, cranes, presses</td><td>Higher cost</td></tr>
+        <tr><td>Detuned (with reactor)</td><td>Networks with VFDs, UPS or rectifiers</td><td>Capacitors need a higher voltage rating; slightly lower net kVAR</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>The harmonic resonance trap</h2>
+    <p>The system's inductance (mainly the transformer) and the bank's capacitance form a parallel resonant circuit. Its resonant harmonic order is roughly h<sub>r</sub> &asymp; &radic;(S<sub>sc</sub> / Q<sub>c</sub>), where S<sub>sc</sub> is the short-circuit level at the bank's bus and Q<sub>c</sub> is the bank size in the same units. If h<sub>r</sub> lands near a harmonic that the plant produces, the current at that frequency is magnified.</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Example:</strong> a 1000 kVA transformer with 6% impedance gives about 16.7 MVA of short-circuit level on a stiff supply. Add a 675 kVAR bank and h<sub>r</sub> = &radic;(16,667 / 675) &asymp; 4.97 &mdash; almost exactly the 5th harmonic, which is what a six-pulse VFD injects. The bank fixes the power factor and overloads itself.</div>
+    </div>
+    <p>A <strong>detuned</strong> bank puts a reactor in series with each capacitor so the resonance is pushed below the lowest harmonic the loads produce. The reactor percentage sets where:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Reactor</th><th>Tuned to order</th><th>Typical use</th><th>Cap voltage on 400 V</th></tr>
+        <tr><td>5.67%</td><td>4.2</td><td>5th-harmonic dominant (VFDs, UPS)</td><td>&ge; 424 V</td></tr>
+        <tr><td>7%</td><td>3.8</td><td>5th dominant, some 3rd</td><td>&ge; 430 V</td></tr>
+        <tr><td>14%</td><td>2.7</td><td>Heavy 3rd harmonic</td><td>&ge; 465 V</td></tr>
+      </table>
+    </div>
+    <p>The last column is the voltage each capacitor sees, V/(1 &minus; p), so pick the next standard capacitor rating above it. See <a href="harmonics-sources-effects-mitigation">harmonic sources, effects and mitigation</a> for where these harmonics come from.</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>A widely quoted manufacturer rule of thumb compares the harmonic-generating load to the transformer rating: up to about 15% standard capacitors are usually fine, 15&ndash;25% use over-rated capacitors, 25&ndash;60% use detuned reactors, and above 60% a harmonic filter is needed. Use it for screening only &mdash; confirm with a harmonic study or your capacitor supplier.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Mistakes to avoid</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">✓</span><span><strong>A fixed bank sized for peak load.</strong> If the load in the example falls to 100 kW at 0.80 PF it needs only 75 kVAR, but a fixed 175 kVAR bank leaves 100 kVAR of leading reactive power &mdash; a power factor of 0.71 leading, and a voltage rise. Use an automatic bank for varying loads.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Correcting all the way to 1.00.</strong> The extra saving is small and the risk of over-correction is real. 0.95&ndash;0.98 is the usual target unless your utility asks for more.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Forgetting voltage.</strong> A capacitor's kVAR is quoted at its rated voltage and scales with V&sup2;. A 415 V bank on a 400 V system delivers about 93% of its label.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Undersized cable and protection.</strong> Size them for roughly 1.3&ndash;1.5&times; the bank's rated current to allow for tolerance and harmonics. 175 kVAR at 415 V is about 244 A rated, so plan for around 350 A.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Ordinary contactors and no inrush control.</strong> Switching a capacitor draws a very large inrush current. Use capacitor-duty contactors, and inrush-limiting reactors where banks are switched in steps.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Touching a "dead" bank.</strong> Capacitors hold charge after they're switched off. Discharge devices bring it down over time, but wait, isolate, and verify the residual voltage before working on one.</span></li>
+      <li><span class="ck-mark">✓</span><span><strong>Running a bank on a generator.</strong> Generators tolerate little leading reactive power. Check with the manufacturer before connecting a capacitor bank to generator supply.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Common applications</h2>
+    <div class="app-chips">
+      <span class="app-chip">Factory main LV bus</span>
+      <span class="app-chip">Motor &amp; compressor loads</span>
+      <span class="app-chip">HVAC chiller plants</span>
+      <span class="app-chip">Utility PF penalty avoidance</span>
+      <span class="app-chip">Transformer capacity release</span>
+      <span class="app-chip">Commercial building MDBs</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Low power factor raises current for the same kW, which costs capacity, losses and voltage drop &mdash; and sometimes a utility penalty.</span></li>
+      <li><span class="tk-check">✓</span><span>Q<sub>c</sub> = P &times; (tan &phi;<sub>1</sub> &minus; tan &phi;<sub>2</sub>). Round up to real bank steps, and check the result against the capacitor's voltage rating.</span></li>
+      <li><span class="tk-check">✓</span><span>Correction saves penalties, losses and capacity, not the load's own kWh. Aim for about 0.95&ndash;0.98 rather than unity.</span></li>
+      <li><span class="tk-check">✓</span><span>Use an automatic bank when load varies, so it never over-corrects at light load.</span></li>
+      <li><span class="tk-check">✓</span><span>Where VFDs, UPS or rectifiers are present, check resonance (h<sub>r</sub> &asymp; &radic;(S<sub>sc</sub>/Q<sub>c</sub>)) and use a detuned bank instead of a plain one.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Power%20Factor%20Correction%20%26%20Capacitor%20Banks%20Explained%20%E2%80%94%20sizing%2C%20placement%2C%20and%20the%20harmonic%20resonance%20trap.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-factor-correction-capacitor-banks-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-factor-correction-capacitor-banks-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Power%20Factor%20Correction%20%26%20Capacitor%20Banks%20Explained&text=Sizing%2C%20placement%2C%20and%20the%20harmonic%20resonance%20trap.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-factor-correction-capacitor-banks-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Power%20Factor%20Correction%20%26%20Capacitor%20Banks%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpower-factor-correction-capacitor-banks-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/power-factor-correction">Power Factor Correction →</a></li><li><a href="../electrical/capacitor-bank-sizing">Capacitor Bank Sizing Calculator →</a></li><li><a href="../electrical/harmonics-thd-estimate">Harmonics THD Estimate →</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="kw-kva-kvar-difference-explained">kW vs kVA vs kVAR: The Difference Explained</a></li><li><a href="harmonics-sources-effects-mitigation">Harmonics: Sources, Effects and Mitigation</a></li><li><a href="harmonics-thd-k-factor-transformer-derating">Harmonics, THD and K-Factor: Transformer Derating</a></li><li><a href="voltage-drop-lv-feeders-explained">Voltage Drop in LV Feeders Explained</a></li><li><a href="lv-panel-types-explained">LV Panel Types Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
