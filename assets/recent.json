@@ -1,5 +1,20 @@
 [
   {
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
+    "d": "2026-09-20"
+  },
+  {
+    "t": "BESS Sizing Calculator",
+    "u": "electrical/bess-sizing-calculator",
+    "d": "2026-09-20"
+  },
+  {
+    "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+    "u": "civil/pipe-flow-capacity",
+    "d": "2026-09-20"
+  },
+  {
     "t": "Arc Flash Hazard Basics",
     "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
     "d": "2026-09-17"
@@ -20,7 +35,7 @@
     "d": "2026-09-17"
   },
   {
-    "t": "Single Line Diagram (SLD) Symbols & How to Read One",
+    "t": "Single Line Diagram (SLD) Symbols &amp; How to Read One",
     "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
     "d": "2026-09-17"
   },
@@ -33,20 +48,5 @@
     "t": "Solar PV System Components Explained: From Panel to Load",
     "u": "posts/solar-pv-system-components-explained",
     "d": "2026-09-13"
-  },
-  {
-    "t": "Panel Schedule Builder",
-    "u": "electrical/panel-schedule-builder",
-    "d": "2026-09-13"
-  },
-  {
-    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
-    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
-    "d": "2026-09-12"
-  },
-  {
-    "t": "VFD Internal Architecture: Rectifier, DC Bus & Inverter Explained",
-    "u": "posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained",
-    "d": "2026-09-12"
   }
 ]

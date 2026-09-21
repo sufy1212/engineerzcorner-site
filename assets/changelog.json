@@ -1,5 +1,26 @@
 [
  {
+  "t": "Arc Flash Incident Energy",
+  "u": "electrical/arc-flash-incident-energy",
+  "d": "2026-09-20",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "BESS Sizing Calculator",
+  "u": "electrical/bess-sizing-calculator",
+  "d": "2026-09-20",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+  "u": "civil/pipe-flow-capacity",
+  "d": "2026-09-20",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
   "t": "Load Flow (Power Flow) Study Basics",
   "u": "posts/load-flow-power-flow-study-basics",
   "d": "2026-09-17",
@@ -518,20 +539,6 @@
   "a": "updated"
  },
  {
-  "t": "Arc Flash Incident Energy",
-  "u": "electrical/arc-flash-incident-energy",
-  "d": "2026-09-02",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "BESS Sizing Calculator",
-  "u": "electrical/bess-sizing-calculator",
-  "d": "2026-09-02",
-  "c": "Electrical",
-  "a": "added"
- },
- {
   "t": "Circuit Breaker Types Explained: MCB to OCB",
   "u": "posts/circuit-breaker-types-explained",
   "d": "2026-09-01",
@@ -604,13 +611,6 @@
  {
   "t": "Grade / Slope Calculator",
   "u": "civil/grade-slope",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-  "u": "civil/pipe-flow-capacity",
   "d": "2026-08-30",
   "c": "Civil",
   "a": "updated"
