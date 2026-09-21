@@ -177,7 +177,7 @@
         years = parseFloat(T.value), moratoriumYears = parseFloat(M.value) || 0;
 
     if(isNaN(principal) || principal<=0 || isNaN(annualRate) || annualRate<0 || isNaN(years) || years<=0){
-      document.getElementById('emiMonthly').textContent = '—';
+      ['emiMonthly','emiCapitalized','emiInterest','emiTotal','emiMoratoriumInterest'].forEach(function(id){ var e = document.getElementById(id); if(e) e.textContent = '—'; });
       return;
     }
 
@@ -192,6 +192,10 @@
       emi = capitalized / n;
     } else {
       emi = capitalized * r * Math.pow(1+r, n) / (Math.pow(1+r, n) - 1);
+    }
+    if(!isFinite(emi) || !isFinite(capitalized)){
+      ['emiMonthly','emiCapitalized','emiInterest','emiTotal','emiMoratoriumInterest'].forEach(function(id){ var e = document.getElementById(id); if(e) e.textContent = '—'; });
+      return;
     }
     var totalRepayment = emi * n;
     var totalInterest = totalRepayment - capitalized + moratoriumInterest; // interest over full life, moratorium + repayment
