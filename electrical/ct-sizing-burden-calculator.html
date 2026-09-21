@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%235FD3E3'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CT Sizing &amp; Burden Calculator — Engineerz CorneR</title>
+<meta name="description" content="Size a current transformer: standard ratio, connected burden with lead-wire loss, accuracy limit factor, saturation check and short-circuit withstand.">
+<link rel="canonical" href="https://www.engineerzcorner.com/electrical/ct-sizing-burden-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="CT Sizing &amp; Burden Calculator — Engineerz CorneR">
+<meta property="og:description" content="Size a current transformer: standard ratio, connected burden with lead-wire loss, accuracy limit factor, saturation check and short-circuit withstand.">
+<meta property="og:url" content="https://www.engineerzcorner.com/electrical/ct-sizing-burden-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CT Sizing &amp; Burden Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Size a current transformer: standard ratio, connected burden with lead-wire loss, accuracy limit factor, saturation check and short-circuit withstand.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/common-blocks.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Electrical", "item": "https://www.engineerzcorner.com/electrical/" },
+    { "@type": "ListItem", "position": 3, "name": "CT Sizing & Burden Calculator", "item": "https://www.engineerzcorner.com/electrical/ct-sizing-burden-calculator" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CT Sizing & Burden Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Size a current transformer: standard ratio, connected burden with lead-wire loss, accuracy limit factor, saturation check and short-circuit withstand.",
+  "url": "https://www.engineerzcorner.com/electrical/ct-sizing-burden-calculator",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Electrical</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">CT Sizing &amp; Burden Calculator</span></div></nav>
+
+<a href="./" class="back-link" style="display:inline-block;margin:16px 0 0 16px;">&larr; Back to full toolkit</a>
+<div class="wrap page active" id="page-ct-sizing">
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4"></path></svg></div>
+    <div><h1>CT Sizing &amp; Burden Calculator</h1><div class="hero-sub">Ratio · burden (VA) · accuracy limit factor · short-circuit withstand</div></div>
+  </div>
+
+  <div class="intro">Selects a current transformer for a protection or metering circuit: the standard primary ratio, the connected burden <b>including lead-wire loss</b>, the standard rated burden to specify, and a saturation check against your maximum fault current. Lead loss is the classic surprise &mdash; it scales with the <b>square</b> of the secondary current, so a 5&nbsp;A secondary carries 25&times; the lead burden of a 1&nbsp;A secondary over the same cable. Related tools: <a href="./short-circuit-calculator">Short Circuit Calculator</a> (for the fault current), <a href="./selectivity-coordination-calculator">Selectivity &amp; Coordination</a>, and <a href="../posts/power-transformer-ct-pt-construction-explained">how CTs and PTs are built</a>.</div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Circuit &amp; CT Ratio</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="ctApp">Application</label>
+        <select id="ctApp">
+          <option value="prot" selected>Protection (P-class, e.g. 5P20)</option>
+          <option value="meter">Metering (class 0.5 / 1)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ctLoad">Maximum continuous load current <span class="unit">A</span></label>
+        <input type="number" id="ctLoad" value="400" step="10" min="0.1">
+      </div>
+      <div class="field">
+        <label for="ctMargin">Headroom above load current <span class="unit">%</span></label>
+        <input type="number" id="ctMargin" value="20" step="5" min="0">
+        <div class="hint">The primary rating is the next standard value at or above load &times; (1 + headroom).</div>
+      </div>
+      <div class="field">
+        <label for="ctSec">Rated secondary current</label>
+        <select id="ctSec">
+          <option value="5" selected>5 A</option>
+          <option value="1">1 A</option>
+        </select>
+        <div class="hint">1 A is preferred for long secondary cable runs.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Secondary Burden</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="ctDevVA">Relay / meter burden <span class="unit">VA</span></label>
+        <input type="number" id="ctDevVA" value="1" step="0.1" min="0">
+        <div class="hint">Sum of all devices in the loop, at rated secondary current (from datasheets).</div>
+      </div>
+      <div class="field">
+        <label for="ctLen">Lead length, one way <span class="unit">m</span></label>
+        <input type="number" id="ctLen" value="25" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="ctCsa">Lead cross-section <span class="unit">mm&sup2; Cu</span></label>
+        <select id="ctCsa">
+          <option value="1.5">1.5</option>
+          <option value="2.5">2.5</option>
+          <option value="4" selected>4</option>
+          <option value="6">6</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ctLoop">Lead loop factor</label>
+        <select id="ctLoop">
+          <option value="2" selected>&times; 2 &mdash; phase + return (earth-fault)</option>
+          <option value="1">&times; 1 &mdash; balanced 3-phase star</option>
+          <option value="3">&times; 3 &mdash; delta-connected</option>
+        </select>
+        <div class="hint">&times; 2 is the conservative choice for residual (earth-fault) connections.</div>
+      </div>
+      <div class="field">
+        <label for="ctTemp">Lead temperature <span class="unit">&deg;C</span></label>
+        <select id="ctTemp">
+          <option value="20">20 &deg;C</option>
+          <option value="75" selected>75 &deg;C (conservative)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ctContact">Terminal / contact resistance <span class="unit">&Omega;</span></label>
+        <input type="number" id="ctContact" value="0.05" step="0.01" min="0">
+      </div>
+      <div class="field">
+        <label for="ctRct">CT secondary winding resistance, R<sub>ct</sub> <span class="unit">&Omega;</span></label>
+        <input type="number" id="ctRct" value="0.3" step="0.05" min="0">
+        <div class="hint">From the CT datasheet. Typically 0.1&ndash;0.5 &Omega; for 5 A CTs and 2&ndash;10 &Omega; for 1 A CTs.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Fault Data &amp; Accuracy Class</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="ctIf">Maximum through-fault current <span class="unit">kA</span></label>
+        <input type="number" id="ctIf" value="10" step="0.5" min="0.01">
+        <div class="hint">Symmetrical RMS, at the CT location.</div>
+      </div>
+      <div class="field">
+        <label for="ctTime">Fault clearing time <span class="unit">s</span></label>
+        <input type="number" id="ctTime" value="1" step="0.1" min="0.01">
+      </div>
+      <div class="field">
+        <label for="ctFreq">System frequency</label>
+        <select id="ctFreq">
+          <option value="50" selected>50 Hz</option>
+          <option value="60">60 Hz</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2" id="ctProtFields">
+      <div class="field">
+        <label for="ctAlf">Rated accuracy limit factor, ALF</label>
+        <select id="ctAlf">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20" selected>20</option>
+          <option value="30">30</option>
+        </select>
+        <div class="hint">The &ldquo;20&rdquo; in 5P20.</div>
+      </div>
+      <div class="field">
+        <label for="ctRated">Rated burden of the CT, S<sub>n</sub> <span class="unit">VA</span></label>
+        <select id="ctRated">
+          <option value="2.5">2.5</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15" selected>15</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ctXR">System X/R ratio</label>
+        <input type="number" id="ctXR" value="10" step="1" min="0">
+        <div class="hint">Used only for the DC-offset saturation figure.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">✓</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">Recommended CT Ratio</span>
+      <span class="rval" id="ctRatio">– <small>A</small></span>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">Connected Burden (total)</span>
+      <span class="rval" id="ctBurden">– <small>VA</small></span>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">Rated Burden to Specify (IEC)</span>
+      <span class="rval" id="ctSpecify">– <small>VA</small></span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Load as % of rated primary</div><div class="sval" id="ctUtil">—</div></div>
+      <div class="stat"><div class="slabel">ANSI equivalent burden</div><div class="sval" id="ctAnsi">—</div></div>
+      <div class="stat"><div class="slabel">Lead loop resistance</div><div class="sval" id="ctRlead">—</div></div>
+      <div class="stat"><div class="slabel">Lead burden</div><div class="sval amber" id="ctVAlead">—</div></div>
+      <div class="stat"><div class="slabel">Same leads on the other secondary</div><div class="sval" id="ctVAother">—</div></div>
+      <div class="stat"><div class="slabel">Min. thermal rating I<sub>th</sub> (1 s)</div><div class="sval" id="ctIth">—</div></div>
+      <div class="stat"><div class="slabel">Min. dynamic rating I<sub>dyn</sub> (peak)</div><div class="sval" id="ctIdyn">—</div></div>
+    </div>
+    <div class="status-banner neutral" id="ctStatus" style="margin:0 16px 16px;"></div>
+    <div id="ctProtResults">
+      <div class="stat-grid" style="margin:0 16px 16px;">
+        <div class="stat"><div class="slabel">Required overcurrent multiple, n = I<sub>f</sub> / I<sub>pn</sub></div><div class="sval" id="ctN">—</div></div>
+        <div class="stat"><div class="slabel">Effective ALF at this burden</div><div class="sval amber" id="ctAlfEff">—</div></div>
+        <div class="stat"><div class="slabel">Rated ALF needed for this burden</div><div class="sval" id="ctAlfReq">—</div></div>
+        <div class="stat"><div class="slabel">CT limiting e.m.f., E<sub>al</sub></div><div class="sval" id="ctEal">—</div></div>
+        <div class="stat"><div class="slabel">Saturation voltage needed, steady-state</div><div class="sval" id="ctVss">—</div></div>
+        <div class="stat"><div class="slabel">Saturation voltage needed, full DC offset</div><div class="sval" id="ctVoff">—</div></div>
+      </div>
+    </div>
+    <div class="status-banner neutral" id="ctNote" style="margin:0 16px 16px;display:none;"></div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">
+        Primary rating I<sub>pn</sub> = next standard value &ge; I<sub>load</sub> &times; (1 + headroom) &nbsp;·&nbsp; R<sub>lead</sub> = &rho; &times; L &times; k / A, with &rho; = 0.0175 &times; (1 + 0.00393 &times; (T &minus; 20)) &Omega;&middot;mm&sup2;/m &nbsp;·&nbsp; S<sub>b</sub> = S<sub>device</sub> + I<sub>sn</sub>&sup2; &times; (R<sub>lead</sub> + R<sub>contact</sub>) &nbsp;·&nbsp; S<sub>ct</sub> = I<sub>sn</sub>&sup2; &times; R<sub>ct</sub> &nbsp;·&nbsp; Effective ALF = ALF &times; (S<sub>n</sub> + S<sub>ct</sub>) / (S<sub>b</sub> + S<sub>ct</sub>) &nbsp;·&nbsp; n = I<sub>f</sub> / I<sub>pn</sub> &nbsp;·&nbsp; Saturation voltage = n &times; I<sub>sn</sub> &times; (R<sub>ct</sub> + S<sub>b</sub>/I<sub>sn</sub>&sup2;), multiplied by (1 + X/R) for full DC offset &nbsp;·&nbsp; I<sub>th</sub> = I<sub>f</sub> &times; &radic;t &nbsp;·&nbsp; I<sub>dyn</sub> &asymp; 2.5 &times; I<sub>f</sub> (2.6 at 60 Hz)
+      </div>
+      <div class="hint" style="margin-top:8px;">A P-class CT keeps its rated composite error up to the point where the effective ALF is at least the overcurrent multiple n. If the effective ALF falls short, the CT can saturate during the fault and the relay sees a distorted, reduced current. Fix it with a larger cross-section, a shorter run, a 1 A secondary, a higher ratio, a higher rated ALF or rated burden, or a PX / TPS class CT. The DC-offset figure matters mainly for high-speed and differential schemes; P-class CTs are not specified for transient offset.</div>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">i</span><h2>Reference: CT Terms</h2></div>
+    <div class="pm-table-wrap" style="margin:0 16px 16px;">
+      <table class="pm-table">
+        <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Rated primary / secondary</td><td>The CT ratio, e.g. 500/5 A. Standard IEC primaries: 10, 12.5, 15, 20, 25, 30, 40, 50, 60, 75 and their decimal multiples</td></tr>
+          <tr><td>Burden (VA)</td><td>Apparent power the secondary circuit draws at rated secondary current &mdash; devices plus leads plus contacts</td></tr>
+          <tr><td>Rated burden S<sub>n</sub></td><td>The burden the CT is guaranteed to meet its class at. IEC standard values: 2.5, 5, 10, 15, 30 VA</td></tr>
+          <tr><td>5P20</td><td>Protection class: composite error &le; 5% at 20 &times; rated primary current, at rated burden</td></tr>
+          <tr><td>Accuracy limit factor (ALF)</td><td>The multiple of rated current up to which the class error is guaranteed at rated burden. It drops as the connected burden rises</td></tr>
+          <tr><td>Class X / PX</td><td>Defined by knee-point voltage and R<sub>ct</sub> instead of a fixed ALF; used for differential and high-impedance schemes</td></tr>
+          <tr><td>I<sub>th</sub> / I<sub>dyn</sub></td><td>Rated short-time thermal current (usually 1 s) and rated dynamic (peak) current the CT must survive</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>First-pass CT selection using the IEC 61869-2 effective-ALF relationship and the IEEE C37.110 saturation-voltage approach. Confirm against the CT manufacturer's data (excitation curve, R<sub>ct</sub> at working temperature, ratio list), the relay manufacturer's stated CT requirements, and your protection-coordination study. Never open-circuit a CT secondary while the primary is energised. <a href="./">← Electrical Index</a></footer>
+</div>
+
+<script>
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function fmt(n,d){ return Number.isFinite(n) ? n.toFixed(d===undefined?2:d) : '–'; }
+
+  var BASE = [10,12.5,15,20,25,30,40,50,60,75];
+  var STD = [];
+  [1,10,100].forEach(function(m){ BASE.forEach(function(b){ STD.push(b*m); }); });
+  STD.sort(function(a,b){ return a-b; });
+  var IEC_VA = [2.5,5,10,15,30];
+  var ALF_STD = [5,10,15,20,30];
+  var ANSI = [['B-0.1',2.5],['B-0.2',5],['B-0.5',12.5],['B-1',25],['B-2',50],['B-4',100],['B-8',200]];
+  var RHO20 = 0.0175, ALPHA = 0.00393;
+
+  function nextStd(list, x){
+    for (var i = 0; i < list.length; i++){ if (list[i] >= x - 1e-9) return list[i]; }
+    return null;
+  }
+
+  var rctDirty = false;
+
+  function setBanner(el, cls, html){
+    el.className = 'status-banner ' + cls;
+    el.innerHTML = '<span class="status-dot"></span>' + html;
+  }
+
+  function clearResults(){
+    ['ctUtil','ctAnsi','ctRlead','ctVAlead','ctVAother','ctIth','ctIdyn','ctN','ctAlfEff','ctAlfReq','ctEal','ctVss','ctVoff'].forEach(function(id){ $(id).textContent = '—'; });
+    $('ctRatio').innerHTML = '– <small>A</small>';
+    $('ctBurden').innerHTML = '– <small>VA</small>';
+    $('ctSpecify').innerHTML = '– <small>VA</small>';
+    $('ctNote').style.display = 'none';
+  }
+
+  function calc(){
+    var prot = $('ctApp').value === 'prot';
+    $('ctProtFields').style.display = prot ? '' : 'none';
+    $('ctProtResults').style.display = prot ? '' : 'none';
+
+    var Iload = parseFloat($('ctLoad').value);
+    var head  = parseFloat($('ctMargin').value);
+    var Isn   = parseFloat($('ctSec').value);
+    var Pdev  = parseFloat($('ctDevVA').value);
+    var L     = parseFloat($('ctLen').value);
+    var A     = parseFloat($('ctCsa').value);
+    var k     = parseFloat($('ctLoop').value);
+    var T     = parseFloat($('ctTemp').value);
+    var Rc    = parseFloat($('ctContact').value);
+    var Rct   = parseFloat($('ctRct').value);
+    var If    = parseFloat($('ctIf').value) * 1000;
+    var t     = parseFloat($('ctTime').value);
+    var f     = parseFloat($('ctFreq').value);
+    var ALF   = parseFloat($('ctAlf').value);
+    var Sn    = parseFloat($('ctRated').value);
+    var XR    = parseFloat($('ctXR').value);
+
+    var ok = Iload > 0 && head >= 0 && Pdev >= 0 && L >= 0 && A > 0 && Rc >= 0 && Rct >= 0 && If > 0 && t > 0;
+    if (prot) ok = ok && ALF > 0 && Sn > 0 && XR >= 0;
+    if (!ok){
+      clearResults();
+      setBanner($('ctStatus'), 'bad', 'Check inputs: load current, fault current and clearing time must be above 0, and burdens, resistances, headroom and X/R cannot be negative.');
+      return;
+    }
+
+    var Ipn = nextStd(STD, Iload * (1 + head/100));
+    var rho = RHO20 * (1 + ALPHA * (T - 20));
+    var Rlead = rho * L * k / A;
+    var I2 = Isn * Isn;
+    var VAlead = I2 * Rlead;
+    var VAcont = I2 * Rc;
+    var Sb = Pdev + VAlead + VAcont;
+    var Rb = Sb / I2;
+    var Sct = I2 * Rct;
+    var other = (Isn === 5) ? 1 : 5;
+    var VAother = other * other * Rlead;
+    var iecVA = nextStd(IEC_VA, Sb);
+    var ansi = null;
+    if (Isn === 5){ for (var i = 0; i < ANSI.length; i++){ if (ANSI[i][1] >= Sb - 1e-9){ ansi = ANSI[i]; break; } } }
+
+    $('ctBurden').innerHTML = fmt(Sb,2) + ' <small>VA</small>';
+    $('ctSpecify').innerHTML = (iecVA === null ? '&gt; 30' : fmt(iecVA,1)) + ' <small>VA</small>';
+    $('ctRlead').textContent = fmt(Rlead,3) + ' \u03A9';
+    $('ctVAlead').textContent = fmt(VAlead,2) + ' VA';
+    $('ctVAother').textContent = fmt(VAother,2) + ' VA at ' + other + ' A';
+    $('ctAnsi').textContent = Isn !== 5 ? 'n/a (5 A only)' : (ansi ? ansi[0] + ' (' + ansi[1] + ' VA)' : '> B-8');
+    $('ctIth').textContent = fmt(If/1000 * Math.sqrt(t), 1) + ' kA';
+    $('ctIdyn').textContent = fmt((f === 60 ? 2.6 : 2.5) * If/1000, 1) + ' kA';
+
+    if (Ipn === null){
+      $('ctRatio').innerHTML = '&gt; 7500 / ' + Isn + ' <small>A</small>';
+      $('ctUtil').textContent = '—';
+    } else {
+      $('ctRatio').innerHTML = Ipn + ' / ' + Isn + ' <small>A</small>';
+      $('ctUtil').textContent = fmt(Iload / Ipn * 100, 0) + ' %';
+    }
+
+    var note = $('ctNote');
+    var notes = [];
+    if (iecVA === null) notes.push('The connected burden exceeds 30 VA, the largest IEC standard rating. Shorten the run or use a larger cable' + (Isn === 5 ? ', or move to a 1 A secondary (the same leads would then burden ' + fmt(Rlead,2) + ' VA instead of ' + fmt(VAlead,2) + ' VA).' : '.'));
+    if (Ipn === null) notes.push('The required primary current is above the standard list (7500 A). Check the manufacturer for special ratios.');
+
+    var banner = $('ctStatus');
+    if (prot){
+      if (Ipn === null){
+        ['ctN','ctAlfEff','ctAlfReq','ctEal','ctVss','ctVoff'].forEach(function(id){ $(id).textContent = '—'; });
+        setBanner(banner, 'warn', 'No standard primary rating found, so the saturation check could not be run.');
+      } else {
+        var n = If / Ipn;
+        var alfEff = ALF * (Sn + Sct) / (Sb + Sct);
+        var alfReq = n * (Sb + Sct) / (Sn + Sct);
+        var alfNext = nextStd(ALF_STD, alfReq);
+        var Eal = ALF * Isn * (Rct + Sn / I2);
+        var Vss = n * Isn * (Rct + Rb);
+        var Voff = Vss * (1 + XR);
+        $('ctN').textContent = fmt(n,1) + ' \u00D7';
+        $('ctAlfEff').textContent = fmt(alfEff,1);
+        $('ctAlfReq').textContent = alfNext === null ? fmt(alfReq,1) + ' (above 30)' : fmt(alfReq,1) + ' \u2192 use ' + alfNext;
+        $('ctEal').textContent = fmt(Eal,1) + ' V';
+        $('ctVss').textContent = fmt(Vss,1) + ' V';
+        $('ctVoff').textContent = fmt(Voff,0) + ' V';
+        if (Sb > Sn + 1e-9){
+          notes.push('The connected burden (' + fmt(Sb,2) + ' VA) is above the rated burden you selected (' + fmt(Sn,1) + ' VA), so the CT is outside its stated class. The effective ALF above already accounts for this.');
+        }
+        if (alfEff >= n){
+          setBanner(banner, 'ok', 'Saturation check passed: effective ALF ' + fmt(alfEff,1) + ' covers the ' + fmt(n,1) + '\u00D7 fault multiple (margin ' + fmt(alfEff / n,2) + '\u00D7).');
+        } else {
+          setBanner(banner, 'bad', 'Saturation risk: effective ALF ' + fmt(alfEff,1) + ' is below the ' + fmt(n,1) + '\u00D7 fault multiple. ' + (alfNext === null ? 'Even ALF 30 is not enough at this burden; reduce the burden, raise the ratio, or use a PX / TPS class CT.' : 'Specify ALF ' + alfNext + ' at this rated burden, or reduce the connected burden.'));
+        }
+      }
+    } else {
+      if (iecVA === null){
+        setBanner(banner, 'bad', 'Burden above 30 VA: no standard metering rating fits. Reduce the burden first.');
+      } else {
+        var pct = Sb / iecVA * 100;
+        if (pct >= 25 - 1e-9){
+          setBanner(banner, 'ok', 'Specify ' + fmt(iecVA,1) + ' VA: the connected burden is ' + fmt(pct,0) + '% of it, inside the 25\u2013100% range where the class accuracy is guaranteed (IEC 61869-2).');
+        } else {
+          setBanner(banner, 'warn', 'The connected burden is only ' + fmt(pct,0) + '% of the smallest standard rating that covers it (' + fmt(iecVA,1) + ' VA), below the 25% floor for class accuracy. Add a dummy burden or ask the manufacturer for a lower rated burden.');
+        }
+      }
+    }
+
+    if (notes.length){
+      setBanner(note, 'warn', notes.join(' '));
+      note.style.display = '';
+    } else {
+      note.style.display = 'none';
+    }
+  }
+
+  $('ctRct').addEventListener('input', function(){ rctDirty = true; });
+  $('ctSec').addEventListener('change', function(){
+    if (!rctDirty){ $('ctRct').value = ($('ctSec').value === '5') ? '0.3' : '5'; }
+  });
+
+  document.querySelectorAll('#page-ct-sizing input, #page-ct-sizing select').forEach(function(el){
+    el.addEventListener('input', calc);
+    el.addEventListener('change', calc);
+  });
+
+  calc();
+})();
+</script>
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
