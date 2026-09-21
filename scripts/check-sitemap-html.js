@@ -68,6 +68,17 @@ function extractTitle(relPath) {
   return title.replace(/<[^>]+>/g, "").trim();
 }
 
+// Titles come out of the HTML still entity-encoded ("&amp;"). Decode once, then
+// encode once on the way back in, so we can never double-encode ("&amp;amp;").
+function decodeEntities(s) {
+  return s.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi, (m, e) => {
+    e = e.toLowerCase();
+    if (e[0] === "#") return String.fromCodePoint(e[1] === "x" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10));
+    return { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " }[e];
+  });
+}
+function encodeEntities(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
 let sitemapHtml = fs.readFileSync(SITEMAP_PATH, "utf8");
 let totalAdded = 0;
 const addedLog = [];
@@ -94,8 +105,9 @@ for (const [dir, sectionId] of Object.entries(DIR_TO_SECTION_ID)) {
   if (!missing.length) continue;
 
   const newLines = missing.map(({ rel, slug }) => {
-    const title = extractTitle(rel);
-    const label = title.toLowerCase();
+    const plain = decodeEntities(extractTitle(rel));
+    const title = encodeEntities(plain);
+    const label = encodeEntities(plain.toLowerCase());
     const href = slug === dir ? `${dir}/` : slug; // index page keeps trailing slash style used elsewhere
     return `        <a href="${href}" data-label="${label}">${title}</a>`;
   });
@@ -116,6 +128,33 @@ for (const [dir, sectionId] of Object.entries(DIR_TO_SECTION_ID)) {
 
   totalAdded += missing.length;
   missing.forEach(({ rel }) => addedLog.push(`  + ${rel} → #${sectionId}`));
+}
+
+// ---- Root-level pages (games, About, Contact, ...) live in the "Site" card, which
+// is hand-ordered, so missing ones are inserted just before Privacy Policy rather
+// than re-sorting the whole grid.
+{
+  const ROOT_SKIP = new Set(["index.html", "404.html", "sitemap.html"]);
+  const rootFiles = fs.readdirSync(ROOT).filter(f => f.endsWith(".html") && !ROOT_SKIP.has(f))
+    .filter(f => !/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(fs.readFileSync(path.join(ROOT, f), "utf8")));
+  const siteRe = /(<section class="sm-card" id="sm-site"[\s\S]*?<div class="sm-card-grid">\n)([\s\S]*?)(\n?\s*<\/div>\s*\n\s*<\/section>)/;
+  const sm = sitemapHtml.match(siteRe);
+  if (sm) {
+    const have = new Set([...sm[2].matchAll(/href="([^"]+)"/g)].map(m => m[1].replace(/^\/|\/$/g, "")));
+    const missingRoot = rootFiles.filter(f => !have.has(f.slice(0, -5)));
+    if (missingRoot.length) {
+      const lines = missingRoot.sort().map(f => {
+        const plain = decodeEntities(extractTitle(f));
+        return `        <a href="${f.slice(0, -5)}" data-label="${encodeEntities(plain.toLowerCase())}">${encodeEntities(plain)}</a>`;
+      }).join("\n");
+      let body = sm[2];
+      const priv = body.indexOf('        <a href="privacy-policy"');
+      body = priv === -1 ? body.replace(/\n?$/, "\n") + lines : body.slice(0, priv) + lines + "\n" + body.slice(priv);
+      sitemapHtml = sitemapHtml.slice(0, sm.index) + sm[1] + body + sm[3] + sitemapHtml.slice(sm.index + sm[0].length);
+      totalAdded += missingRoot.length;
+      missingRoot.forEach(f => addedLog.push(`  + ${f} \u2192 #sm-site`));
+    }
+  }
 }
 
 // Self-heal the search placeholder so a hardcoded count can't go stale again.

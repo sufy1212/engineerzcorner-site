@@ -50,8 +50,11 @@ function extractTitle(relPath) {
     const t = html.match(/<title>([\s\S]*?)<\/title>/i);
     title = t ? t[1].split(/—|\|/)[0] : relPath;
   }
-  return title.replace(/<[^>]+>/g, "").trim();
+  return decodeEntities(title.replace(/<[^>]+>/g, "")).trim();
 }
+
+// Titles are stored as plain text; every renderer escapes on output.
+function decodeEntities(s){return String(s).replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi,function(m,e){e=e.toLowerCase();if(e[0]==="#")return String.fromCodePoint(e[1]==="x"?parseInt(e.slice(2),16):parseInt(e.slice(1),10));return{amp:"&",lt:"<",gt:">",quot:"\"",apos:"'",nbsp:" "}[e]})}
 
 function cleanPathFor(rel) {
   const base = path.basename(rel);
