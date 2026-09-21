@@ -14,6 +14,13 @@
   "a": "added"
  },
  {
+  "t": "CT Sizing & Burden Calculator",
+  "u": "electrical/ct-sizing-burden-calculator",
+  "d": "2026-09-21",
+  "c": "Electrical",
+  "a": "added"
+ },
+ {
   "t": "Arc Flash Incident Energy",
   "u": "electrical/arc-flash-incident-energy",
   "d": "2026-09-20",
@@ -2088,13 +2095,6 @@
  {
   "t": "Battery State-of-Charge Simulator",
   "u": "solar/battery-soc-simulator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "PV String Sizing & Voltage Calculator",
-  "u": "solar/pv-string-sizing-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"

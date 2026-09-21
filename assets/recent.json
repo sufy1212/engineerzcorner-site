@@ -1,5 +1,10 @@
 [
   {
+    "t": "CT Sizing & Burden Calculator",
+    "u": "electrical/ct-sizing-burden-calculator",
+    "d": "2026-09-21"
+  },
+  {
     "t": "Power Factor Correction & Capacitor Banks Explained",
     "u": "posts/power-factor-correction-capacitor-banks-explained",
     "d": "2026-09-21"
@@ -42,11 +47,6 @@
   {
     "t": "How to Read a Wiring Diagram (Beginner's Guide)",
     "u": "posts/how-to-read-a-wiring-diagram-beginners-guide",
-    "d": "2026-09-17"
-  },
-  {
-    "t": "Single Line Diagram (SLD) Symbols & How to Read One",
-    "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
     "d": "2026-09-17"
   }
 ]
