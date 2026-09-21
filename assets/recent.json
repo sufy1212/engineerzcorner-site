@@ -1,5 +1,10 @@
 [
   {
+    "t": "Power Transformer, CT & PT: Internal Construction",
+    "u": "posts/power-transformer-ct-pt-construction-explained",
+    "d": "2026-09-21"
+  },
+  {
     "t": "CT Sizing & Burden Calculator",
     "u": "electrical/ct-sizing-burden-calculator",
     "d": "2026-09-21"
@@ -42,11 +47,6 @@
   {
     "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
     "u": "posts/short-circuit-current-iec-60909-basics",
-    "d": "2026-09-17"
-  },
-  {
-    "t": "How to Read a Wiring Diagram (Beginner's Guide)",
-    "u": "posts/how-to-read-a-wiring-diagram-beginners-guide",
     "d": "2026-09-17"
   }
 ]

@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Power Transformer, CT &amp; PT: Internal Construction</title>
+    <link>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</guid>
+    <description>The internal construction of a power transformer, current transformer (CT), and potential transformer (PT/VT) — parts, ratings, and a side-by-side comparison.</description>
+    <pubDate>Mon, 21 Sep 2026 20:05:07 GMT</pubDate>
+  </item>
+  <item>
     <title>Power Factor Correction &amp; Capacitor Banks Explained</title>
     <link>https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained.html</guid>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/ups-battery-autonomy-sizing-derating-factors.html</guid>
     <description>Required battery Ah for a UPS from load and backup time, and why depth of discharge, aging.</description>
     <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pump Types Explained: Centrifugal to PD</title>
-    <link>https://www.engineerzcorner.com/posts/pump-types-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
-    <description>What a pump actually does, eight common pump types, key parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
-    <pubDate>Wed, 02 Sep 2026 19:24:26 GMT</pubDate>
   </item>
 </channel></rss>

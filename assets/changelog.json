@@ -21,6 +21,13 @@
   "a": "added"
  },
  {
+  "t": "Power Transformer, CT & PT: Internal Construction",
+  "u": "posts/power-transformer-ct-pt-construction-explained",
+  "d": "2026-09-21",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Arc Flash Incident Energy",
   "u": "electrical/arc-flash-incident-energy",
   "d": "2026-09-20",
@@ -1255,13 +1262,6 @@
  {
   "t": "Power System Protection Relays: The Complete Reference Guide",
   "u": "posts/power-system-protection-relays-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Power Transformer, CT & PT: Internal Construction",
-  "u": "posts/power-transformer-ct-pt-construction-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
