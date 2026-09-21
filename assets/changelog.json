@@ -1,26 +1,5 @@
 [
  {
-  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-  "u": "civil/pipe-flow-capacity",
-  "d": "2026-09-20",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Arc Flash Incident Energy",
-  "u": "electrical/arc-flash-incident-energy",
-  "d": "2026-09-20",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "BESS Sizing Calculator",
-  "u": "electrical/bess-sizing-calculator",
-  "d": "2026-09-20",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
   "t": "Load Flow (Power Flow) Study Basics",
   "u": "posts/load-flow-power-flow-study-basics",
   "d": "2026-09-17",
@@ -35,7 +14,7 @@
   "a": "added"
  },
  {
-  "t": "Single Line Diagram (SLD) Symbols &amp; How to Read One",
+  "t": "Single Line Diagram (SLD) Symbols & How to Read One",
   "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
   "d": "2026-09-17",
   "c": "Blog",
@@ -119,7 +98,7 @@
   "a": "updated"
  },
  {
-  "t": "Vessel/Tank Volume &amp; Level",
+  "t": "Vessel/Tank Volume & Level",
   "u": "process/vessel-volume-level",
   "d": "2026-09-13",
   "c": "Process",
@@ -280,7 +259,7 @@
   "a": "added"
  },
  {
-  "t": "How to Read a Full P&amp;ID: A Complete Worked Walkthrough",
+  "t": "How to Read a Full P&ID: A Complete Worked Walkthrough",
   "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
   "d": "2026-09-12",
   "c": "Blog",
@@ -308,7 +287,7 @@
   "a": "updated"
  },
  {
-  "t": "VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained",
+  "t": "VFD Internal Architecture: Rectifier, DC Bus & Inverter Explained",
   "u": "posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained",
   "d": "2026-09-12",
   "c": "Blog",
@@ -322,7 +301,7 @@
   "a": "updated"
  },
  {
-  "t": "UPS Architecture, Types &amp; Operating Modes Explained",
+  "t": "UPS Architecture, Types & Operating Modes Explained",
   "u": "posts/ups-architecture-types-operating-modes-explained",
   "d": "2026-09-10",
   "c": "Blog",
@@ -343,7 +322,7 @@
   "a": "updated"
  },
  {
-  "t": "BESS Types &amp; Components Explained",
+  "t": "BESS Types & Components Explained",
   "u": "posts/bess-types-components-explained",
   "d": "2026-09-10",
   "c": "Blog",
@@ -357,14 +336,14 @@
   "a": "updated"
  },
  {
-  "t": "Power Semiconductors: Si, SiC &amp; GaN",
+  "t": "Power Semiconductors: Si, SiC & GaN",
   "u": "posts/power-semiconductor-types-si-sic-gan-explained",
   "d": "2026-09-10",
   "c": "Blog",
   "a": "added"
  },
  {
-  "t": "Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job",
+  "t": "Permit to Work & LOTO: Why the Lock Belongs to the Person, Not the Job",
   "u": "posts/permit-to-work-loto-explained",
   "d": "2026-09-10",
   "c": "Blog",
@@ -413,7 +392,7 @@
   "a": "added"
  },
  {
-  "t": "Cost Contingency &amp; Management Reserve Calculator",
+  "t": "Cost Contingency & Management Reserve Calculator",
   "u": "pm/cost-contingency-calculator",
   "d": "2026-09-02",
   "c": "Project Management",
@@ -434,7 +413,7 @@
   "a": "updated"
  },
  {
-  "t": "Resource Loading &amp; Utilization Calculator",
+  "t": "Resource Loading & Utilization Calculator",
   "u": "pm/resource-loading-calculator",
   "d": "2026-09-02",
   "c": "Project Management",
@@ -469,7 +448,7 @@
   "a": "updated"
  },
  {
-  "t": "Meeting Minutes &amp; Action Items",
+  "t": "Meeting Minutes & Action Items",
   "u": "pm/meeting-minutes",
   "d": "2026-09-02",
   "c": "Project Management",
@@ -539,6 +518,20 @@
   "a": "updated"
  },
  {
+  "t": "Arc Flash Incident Energy",
+  "u": "electrical/arc-flash-incident-energy",
+  "d": "2026-09-02",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "BESS Sizing Calculator",
+  "u": "electrical/bess-sizing-calculator",
+  "d": "2026-09-02",
+  "c": "Electrical",
+  "a": "added"
+ },
+ {
   "t": "Circuit Breaker Types Explained: MCB to OCB",
   "u": "posts/circuit-breaker-types-explained",
   "d": "2026-09-01",
@@ -560,7 +553,7 @@
   "a": "added"
  },
  {
-  "t": "Concrete Volume &amp; Material Estimator",
+  "t": "Concrete Volume & Material Estimator",
   "u": "civil/concrete-volume-estimator",
   "d": "2026-08-30",
   "c": "Civil",
@@ -581,7 +574,7 @@
   "a": "updated"
  },
  {
-  "t": "Beam Bending &amp; Deflection",
+  "t": "Beam Bending & Deflection",
   "u": "civil/beam-bending",
   "d": "2026-08-30",
   "c": "Civil",
@@ -595,7 +588,7 @@
   "a": "updated"
  },
  {
-  "t": "Cut &amp; Fill Volume (Average End Area)",
+  "t": "Cut & Fill Volume (Average End Area)",
   "u": "civil/cut-fill-volume",
   "d": "2026-08-30",
   "c": "Civil",
@@ -616,7 +609,14 @@
   "a": "updated"
  },
  {
-  "t": "Rebar Development Length &amp; Weight",
+  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+  "u": "civil/pipe-flow-capacity",
+  "d": "2026-08-30",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Rebar Development Length & Weight",
   "u": "civil/rebar-development",
   "d": "2026-08-30",
   "c": "Civil",
@@ -658,7 +658,7 @@
   "a": "updated"
  },
  {
-  "t": "Date &amp; Business-Day Calculator",
+  "t": "Date & Business-Day Calculator",
   "u": "general/date-calculator",
   "d": "2026-08-30",
   "c": "General Tools",
@@ -672,7 +672,7 @@
   "a": "updated"
  },
  {
-  "t": "Markup, Margin &amp; % Change",
+  "t": "Markup, Margin & % Change",
   "u": "general/markup-margin",
   "d": "2026-08-30",
   "c": "General Tools",
@@ -735,14 +735,14 @@
   "a": "updated"
  },
  {
-  "t": "MEP Sleeves: Why, Where &amp; How They're Used in Commercial Buildings",
+  "t": "MEP Sleeves: Why, Where & How They're Used in Commercial Buildings",
   "u": "posts/mep-sleeves-installation-guide-explained",
   "d": "2026-08-30",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Fire Pump Room: 10 Common Installation &amp; Commissioning Mistakes",
+  "t": "Fire Pump Room: 10 Common Installation & Commissioning Mistakes",
   "u": "posts/fire-pump-room-installation-commissioning-mistakes",
   "d": "2026-08-30",
   "c": "Blog",
@@ -784,21 +784,21 @@
   "a": "new"
  },
  {
-  "t": "P&amp;ID Instrument Bubbles: Line Types &amp; Tag Anatomy Explained",
+  "t": "P&ID Instrument Bubbles: Line Types & Tag Anatomy Explained",
   "u": "posts/pid-instrument-bubble-symbols-tag-anatomy-explained",
   "d": "2026-08-29",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "P&amp;ID (Piping &amp; Instrumentation Diagram) Explained",
+  "t": "P&ID (Piping & Instrumentation Diagram) Explained",
   "u": "posts/pid-piping-instrumentation-diagram-explained",
   "d": "2026-08-29",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Legend Sheet in a P&amp;ID Explained",
+  "t": "Legend Sheet in a P&ID Explained",
   "u": "posts/pid-legend-sheet-explained",
   "d": "2026-08-29",
   "c": "Blog",
@@ -826,7 +826,7 @@
   "a": "updated"
  },
  {
-  "t": "Busbar &amp; Enclosure Sizing",
+  "t": "Busbar & Enclosure Sizing",
   "u": "electrical/busbar-enclosure-sizing",
   "d": "2026-08-27",
   "c": "Electrical",
@@ -875,14 +875,14 @@
   "a": "updated"
  },
  {
-  "t": "Three-Phase Power &amp; Current Calculator",
+  "t": "Three-Phase Power & Current Calculator",
   "u": "electrical/three-phase-power-calculator",
   "d": "2026-08-27",
   "c": "Electrical",
   "a": "updated"
  },
  {
-  "t": "Transformer &amp; Generator Sizing",
+  "t": "Transformer & Generator Sizing",
   "u": "electrical/transformer-generator-sizing",
   "d": "2026-08-27",
   "c": "Electrical",
@@ -903,21 +903,21 @@
   "a": "updated"
  },
  {
-  "t": "3-Phase Fault &amp; Coordination Simulator",
+  "t": "3-Phase Fault & Coordination Simulator",
   "u": "electrical/three-phase-fault-simulator",
   "d": "2026-08-27",
   "c": "Electrical",
   "a": "updated"
  },
  {
-  "t": "Voltage Drop &amp; Cable Sizing Simulator",
+  "t": "Voltage Drop & Cable Sizing Simulator",
   "u": "electrical/voltage-drop-simulator",
   "d": "2026-08-27",
   "c": "Electrical",
   "a": "updated"
  },
  {
-  "t": "AWG &harr; mm&sup2; Wire Size Converter",
+  "t": "AWG ↔ mm² Wire Size Converter",
   "u": "electrical/awg-mm2-converter",
   "d": "2026-08-27",
   "c": "Electrical",
@@ -1022,7 +1022,7 @@
   "a": "updated"
  },
  {
-  "t": "Heat Pump Balance Point &amp; Backup Heat",
+  "t": "Heat Pump Balance Point & Backup Heat",
   "u": "hvac/heat-pump-balance-point-calculator",
   "d": "2026-08-27",
   "c": "HVAC",
@@ -1057,7 +1057,7 @@
   "a": "updated"
  },
  {
-  "t": "Duct Sizing &amp; Air Changes",
+  "t": "Duct Sizing & Air Changes",
   "u": "hvac/duct-sizing-calculator",
   "d": "2026-08-27",
   "c": "HVAC",
@@ -1085,14 +1085,14 @@
   "a": "updated"
  },
  {
-  "t": "Fan Static &amp; Total Pressure",
+  "t": "Fan Static & Total Pressure",
   "u": "hvac/fan-static-total-pressure-calculator",
   "d": "2026-08-27",
   "c": "HVAC",
   "a": "updated"
  },
  {
-  "t": "Belt &amp; Pulley Drive Simulator",
+  "t": "Belt & Pulley Drive Simulator",
   "u": "mechanical/belt-drive-simulator",
   "d": "2026-08-27",
   "c": "Mechanical",
@@ -1106,7 +1106,7 @@
   "a": "updated"
  },
  {
-  "t": "Duct Sizing &amp; Air Changes",
+  "t": "Duct Sizing & Air Changes",
   "u": "mechanical/duct-sizing-calculator",
   "d": "2026-08-27",
   "c": "Mechanical",
@@ -1120,14 +1120,14 @@
   "a": "updated"
  },
  {
-  "t": "Pipe Flow &amp; Head Loss",
+  "t": "Pipe Flow & Head Loss",
   "u": "mechanical/pipe-flow-head-loss-calculator",
   "d": "2026-08-27",
   "c": "Mechanical",
   "a": "updated"
  },
  {
-  "t": "Pump Power &amp; NPSH",
+  "t": "Pump Power & NPSH",
   "u": "mechanical/pump-power-npsh-calculator",
   "d": "2026-08-27",
   "c": "Mechanical",
@@ -1183,7 +1183,7 @@
   "a": "updated"
  },
  {
-  "t": "How to Calculate &amp; Select Supply Air Terminal &amp; Return Air Terminal",
+  "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
   "u": "posts/supply-return-air-terminal-sizing-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1204,14 +1204,14 @@
   "a": "updated"
  },
  {
-  "t": "Relay Basics: Construction, Working Principle &amp; Contact Types",
+  "t": "Relay Basics: Construction, Working Principle & Contact Types",
   "u": "posts/relay-basics-construction-working-principle-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "SCADA (Supervisory Control &amp; Data Acquisition) Explained",
+  "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
   "u": "posts/scada-supervisory-control-data-acquisition-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1239,7 +1239,7 @@
   "a": "updated"
  },
  {
-  "t": "Power Transformer, CT &amp; PT: Internal Construction",
+  "t": "Power Transformer, CT & PT: Internal Construction",
   "u": "posts/power-transformer-ct-pt-construction-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1288,7 +1288,7 @@
   "a": "updated"
  },
  {
-  "t": "Manning&#x27;s Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
+  "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
   "u": "posts/pipe-flow-capacity-mannings-equation-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1309,7 +1309,7 @@
   "a": "updated"
  },
  {
-  "t": "Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out",
+  "t": "Solar Payback Period & ROI: What the Simple Formula Leaves Out",
   "u": "posts/solar-payback-period-roi-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1358,7 +1358,7 @@
   "a": "updated"
  },
  {
-  "t": "Industrial Valves Explained: Types &amp; Parts",
+  "t": "Industrial Valves Explained: Types & Parts",
   "u": "posts/valve-types-parts-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1414,7 +1414,7 @@
   "a": "updated"
  },
  {
-  "t": "Power Transformers Explained: Construction &amp; Working Principle",
+  "t": "Power Transformers Explained: Construction & Working Principle",
   "u": "posts/power-transformer-construction-working-principle",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1442,7 +1442,7 @@
   "a": "updated"
  },
  {
-  "t": "Pump &amp; Fan Affinity Laws: Why Speed Changes Cube the Power",
+  "t": "Pump & Fan Affinity Laws: Why Speed Changes Cube the Power",
   "u": "posts/pump-fan-affinity-laws-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1470,7 +1470,7 @@
   "a": "updated"
  },
  {
-  "t": "Retaining Wall Design Basics: Why Overturning, Sliding &amp; Bearing All Have to Pass",
+  "t": "Retaining Wall Design Basics: Why Overturning, Sliding & Bearing All Have to Pass",
   "u": "posts/retaining-wall-design-basics-overturning-sliding-bearing",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1484,7 +1484,7 @@
   "a": "updated"
  },
  {
-  "t": "Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows",
+  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
   "u": "posts/row-spacing-inter-row-shading-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1505,7 +1505,7 @@
   "a": "updated"
  },
  {
-  "t": "Signal Scaling: Turning a 4&ndash;20mA Loop Into an Engineering Value",
+  "t": "Signal Scaling: Turning a 4–20mA Loop Into an Engineering Value",
   "u": "posts/signal-scaling-4-20ma-engineering-units",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1519,14 +1519,14 @@
   "a": "updated"
  },
  {
-  "t": "Solar Panel Tilt &amp; Orientation: Why Latitude Isn't the Whole Answer",
+  "t": "Solar Panel Tilt & Orientation: Why Latitude Isn't the Whole Answer",
   "u": "posts/solar-panel-tilt-orientation-annual-yield",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases",
+  "t": "System Voltages Explained: Low, Medium & High Voltage Levels and Phases",
   "u": "posts/system-voltages-low-medium-high-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1561,14 +1561,14 @@
   "a": "updated"
  },
  {
-  "t": "FM-200 System Diagram: Components &amp; How It Works Explained",
+  "t": "FM-200 System Diagram: Components & How It Works Explained",
   "u": "posts/fm-200-clean-agent-system-components-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Gas Detector Types &amp; Working Principles Explained",
+  "t": "Gas Detector Types & Working Principles Explained",
   "u": "posts/gas-detector-types-working-principles-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1582,7 +1582,7 @@
   "a": "updated"
  },
  {
-  "t": "Facility &amp; Property Management: Key Codes &amp; Standards Reference",
+  "t": "Facility & Property Management: Key Codes & Standards Reference",
   "u": "posts/facility-management-codes-standards-reference",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1596,21 +1596,21 @@
   "a": "updated"
  },
  {
-  "t": "Icw, Icu, Ics &amp; Icm Explained: Four kA Ratings, Four Different Jobs",
+  "t": "Icw, Icu, Ics & Icm Explained: Four kA Ratings, Four Different Jobs",
   "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar &amp; More",
+  "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar & More",
   "u": "posts/lv-panel-types-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Chiller Machine: Main Parts &amp; Functions",
+  "t": "Chiller Machine: Main Parts & Functions",
   "u": "posts/chiller-machine-parts-functions-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1666,14 +1666,14 @@
   "a": "updated"
  },
  {
-  "t": "MCB, MCCB, ACB, RCCB &amp; More: Electrical Switchgear &amp; Protection Devices Explained",
+  "t": "MCB, MCCB, ACB, RCCB & More: Electrical Switchgear & Protection Devices Explained",
   "u": "posts/electrical-switchgear-protection-devices-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "FM-200, Novec 1230, CO2 &amp; Foam: Fire Suppression Systems Explained",
+  "t": "FM-200, Novec 1230, CO2 & Foam: Fire Suppression Systems Explained",
   "u": "posts/fire-suppression-systems-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1694,14 +1694,14 @@
   "a": "updated"
  },
  {
-  "t": "HVAC MEP Thumb Rules &amp; Formulas: Quick Reference for Engineers",
+  "t": "HVAC MEP Thumb Rules & Formulas: Quick Reference for Engineers",
   "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "HVAC &amp; Plumbing Default Design Values: The Quick Reference",
+  "t": "HVAC & Plumbing Default Design Values: The Quick Reference",
   "u": "posts/hvac-plumbing-default-design-values",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1715,7 +1715,7 @@
   "a": "updated"
  },
  {
-  "t": "IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification",
+  "t": "IECEx / ATEX Zones vs NEC Class & Division: Hazardous Area Classification",
   "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1729,14 +1729,14 @@
   "a": "updated"
  },
  {
-  "t": "Junction Boxes Explained: Types, Parts &amp; Ratings",
+  "t": "Junction Boxes Explained: Types, Parts & Ratings",
   "u": "posts/junction-box-types-parts-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Earthing &amp; Grounding Systems Explained: Why Resistance Is the Whole Game",
+  "t": "Earthing & Grounding Systems Explained: Why Resistance Is the Whole Game",
   "u": "posts/earthing-grounding-systems-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1771,14 +1771,14 @@
   "a": "updated"
  },
  {
-  "t": "Cut &amp; Fill Volume: How the Average End Area Method Actually Works",
+  "t": "Cut & Fill Volume: How the Average End Area Method Actually Works",
   "u": "posts/cut-fill-volume-average-end-area-method-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Deadband &amp; Hysteresis: Why a Single Setpoint Isn't Enough",
+  "t": "Deadband & Hysteresis: Why a Single Setpoint Isn't Enough",
   "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1792,14 +1792,14 @@
   "a": "updated"
  },
  {
-  "t": "What Is an ELV System? Types, Components &amp; the BIM Engineer's Role",
+  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
   "u": "posts/elv-extra-low-voltage-systems-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Grade &amp; Slope: Why Percent, Ratio and Degrees Aren&#x27;t the Same Number",
+  "t": "Grade & Slope: Why Percent, Ratio and Degrees Aren't the Same Number",
   "u": "posts/grade-slope-percent-ratio-degrees-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1827,7 +1827,7 @@
   "a": "updated"
  },
  {
-  "t": "IS, IEC &amp; IEEE Codes: The Standards Behind Electrical Engineering",
+  "t": "IS, IEC & IEEE Codes: The Standards Behind Electrical Engineering",
   "u": "posts/is-iec-ieee-electrical-standards-reference",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1848,7 +1848,7 @@
   "a": "updated"
  },
  {
-  "t": "Lighting Design by the Lumen Method: Why Luminaire Count Isn't Just Lumens &divide; Lux",
+  "t": "Lighting Design by the Lumen Method: Why Luminaire Count Isn't Just Lumens ÷ Lux",
   "u": "posts/lighting-lumen-method-luminaire-count",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1876,7 +1876,7 @@
   "a": "updated"
  },
  {
-  "t": "NPSH Margin: Why 'NPSHa &gt; NPSHr' Isn't Enough on Its Own",
+  "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
   "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1904,14 +1904,14 @@
   "a": "updated"
  },
  {
-  "t": "BOD &amp; BOP in Pipe Bending: The Key to Piping Take-Off &amp; Fabrication",
+  "t": "BOD & BOP in Pipe Bending: The Key to Piping Take-Off & Fabrication",
   "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "33/11 kV Substation: Single Line Diagram &amp; Equipment Overview",
+  "t": "33/11 kV Substation: Single Line Diagram & Equipment Overview",
   "u": "posts/33-11kv-substation-diagram-equipment-overview",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1925,14 +1925,14 @@
   "a": "updated"
  },
  {
-  "t": "Access Control System (ACS) Explained: Components, Architecture &amp; Site Work",
+  "t": "Access Control System (ACS) Explained: Components, Architecture & Site Work",
   "u": "posts/access-control-system-acs-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "ATS, MTS, ECB &amp; Switch Disconnectors: Transfer &amp; Isolation Switching Devices Explained",
+  "t": "ATS, MTS, ECB & Switch Disconnectors: Transfer & Isolation Switching Devices Explained",
   "u": "posts/ats-mts-ecb-switch-disconnector-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -1988,7 +1988,7 @@
   "a": "updated"
  },
  {
-  "t": "Bearing Failures: Root Causes &amp; Prevention",
+  "t": "Bearing Failures: Root Causes & Prevention",
   "u": "posts/bearing-failure-modes-causes-prevention",
   "d": "2026-08-27",
   "c": "Blog",
@@ -2023,7 +2023,7 @@
   "a": "updated"
  },
  {
-  "t": "Cable Size &amp; Current Capacity: A Practical Selection Guide",
+  "t": "Cable Size & Current Capacity: A Practical Selection Guide",
   "u": "posts/cable-size-current-capacity-guide",
   "d": "2026-08-27",
   "c": "Blog",
@@ -2037,7 +2037,7 @@
   "a": "updated"
  },
  {
-  "t": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency &amp; the BEP",
+  "t": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency & the BEP",
   "u": "posts/centrifugal-pump-curve-explained",
   "d": "2026-08-27",
   "c": "Blog",
@@ -2065,7 +2065,7 @@
   "a": "updated"
  },
  {
-  "t": "Shading &amp; Soiling Loss Estimator",
+  "t": "Shading & Soiling Loss Estimator",
   "u": "solar/shading-soiling-loss-calculator",
   "d": "2026-08-27",
   "c": "Solar",
@@ -2079,21 +2079,21 @@
   "a": "updated"
  },
  {
-  "t": "PV String Sizing &amp; Voltage Calculator",
+  "t": "PV String Sizing & Voltage Calculator",
   "u": "solar/pv-string-sizing-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
  },
  {
-  "t": "Solar Payback &amp; ROI Calculator",
+  "t": "Solar Payback & ROI Calculator",
   "u": "solar/solar-payback-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
  },
  {
-  "t": "Panel Tilt &amp; Orientation Calculator",
+  "t": "Panel Tilt & Orientation Calculator",
   "u": "solar/panel-tilt-orientation-calculator",
   "d": "2026-08-27",
   "c": "Solar",
