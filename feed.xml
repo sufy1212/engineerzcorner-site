@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Modbus vs PROFIBUS vs Foundation Fieldbus Explained</title>
+    <link>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained.html</guid>
+    <description>Modbus RTU/TCP, PROFIBUS DP/PA, and Foundation Fieldbus H1 compared with verified specs — physical layer, baud rate, max devices, distance, topology and where each is actually used.</description>
+    <pubDate>Fri, 25 Sep 2026 10:08:08 GMT</pubDate>
+  </item>
+  <item>
     <title>Power Transformer, CT &amp; PT: Internal Construction</title>
     <link>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained.html</guid>
