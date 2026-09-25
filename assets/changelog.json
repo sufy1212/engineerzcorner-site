@@ -1,5 +1,33 @@
 [
  {
+  "t": "IEC 104 Communication Protocol Explained",
+  "u": "posts/iec-104-communication-protocol-explained",
+  "d": "2026-09-25",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
+  "u": "posts/scada-supervisory-control-data-acquisition-explained",
+  "d": "2026-09-25",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
+  "u": "posts/plc-vs-dcs-vs-scada-explained",
+  "d": "2026-09-25",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Modbus vs PROFIBUS vs Foundation Fieldbus Explained",
+  "u": "posts/modbus-vs-profibus-vs-fieldbus-explained",
+  "d": "2026-09-25",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Education Loan EMI Calculator",
   "u": "study-abroad/education-loan-emi-calculator",
   "d": "2026-09-21",
@@ -292,13 +320,6 @@
   "d": "2026-09-12",
   "c": "Automation",
   "a": "added"
- },
- {
-  "t": "IEC 104 Communication Protocol Explained",
-  "u": "posts/iec-104-communication-protocol-explained",
-  "d": "2026-09-12",
-  "c": "Blog",
-  "a": "updated"
  },
  {
   "t": "IEC 61850 Digital Substation Protocol Explained",
@@ -1239,22 +1260,8 @@
   "a": "updated"
  },
  {
-  "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
-  "u": "posts/scada-supervisory-control-data-acquisition-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Pipe Routing Guide: 13 Rules Every Layout Should Follow",
   "u": "posts/pipe-routing-guide-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
-  "u": "posts/plc-vs-dcs-vs-scada-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
@@ -2088,13 +2095,6 @@
  {
   "t": "Shading & Soiling Loss Estimator",
   "u": "solar/shading-soiling-loss-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Battery State-of-Charge Simulator",
-  "u": "solar/battery-soc-simulator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"

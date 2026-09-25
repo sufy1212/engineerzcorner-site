@@ -4,11 +4,32 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>IEC 104 Communication Protocol Explained</title>
+    <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
+    <description>What IEC 60870-5-104 does, how it extends IEC 101 over TCP/IP, the master-slave request/response model, a security reference, and where it's used in SCADA.</description>
+    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
+  </item>
+  <item>
     <title>Modbus vs PROFIBUS vs Foundation Fieldbus Explained</title>
     <link>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained.html</guid>
     <description>Modbus RTU/TCP, PROFIBUS DP/PA, and Foundation Fieldbus H1 compared with verified specs — physical layer, baud rate, max devices, distance, topology and where each is actually used.</description>
-    <pubDate>Fri, 25 Sep 2026 10:08:08 GMT</pubDate>
+    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
+  </item>
+  <item>
+    <title>PLC vs DCS vs SCADA Explained: Real Industrial Comparison</title>
+    <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
+    <description>PLC, DCS and SCADA compared for real industrial use — control type, speed, architecture, redundancy, and where control execution happens.</description>
+    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
+  </item>
+  <item>
+    <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
+    <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
+    <description>How SCADA works — the field/communication/supervisory architecture, the 5-step monitor-to-action loop, components, protocols, and SCADA vs DCS compared.</description>
+    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
   </item>
   <item>
     <title>Power Transformer, CT &amp; PT: Internal Construction</title>
@@ -109,13 +130,6 @@
     <pubDate>Sat, 12 Sep 2026 16:28:34 GMT</pubDate>
   </item>
   <item>
-    <title>IEC 104 Communication Protocol Explained</title>
-    <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
-    <description>What IEC 60870-5-104 does, how it extends IEC 101 over TCP/IP, the master-slave request/response model, a security reference, and where it's used in SCADA.</description>
-    <pubDate>Sat, 12 Sep 2026 16:23:29 GMT</pubDate>
-  </item>
-  <item>
     <title>IEC 61850 Digital Substation Protocol Explained</title>
     <link>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained.html</guid>
@@ -197,27 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
     <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
-    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
-  </item>
-  <item>
-    <title>BESS Types &amp; Components Explained</title>
-    <link>https://www.engineerzcorner.com/posts/bess-types-components-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/bess-types-components-explained.html</guid>
-    <description>Battery Energy Storage System chemistries — LFP, NMC, lead-acid, sodium-ion, vanadium redox flow — compared, the main components inside a BESS (cells, BMS, PCS, EMS, thermal management, fire suppression), a duration-based selection guide, and C-rate explained.</description>
-    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
-  </item>
-  <item>
-    <title>UPS Architecture, Types &amp; Operating Modes Explained</title>
-    <link>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ups-architecture-types-operating-modes-explained.html</guid>
-    <description>How an online double-conversion UPS is built — rectifier/charger, battery bank, inverter, static switch and bypass — plus the three operating modes.</description>
-    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
-  </item>
-  <item>
-    <title>UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get</title>
-    <link>https://www.engineerzcorner.com/posts/ups-battery-autonomy-sizing-derating-factors.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ups-battery-autonomy-sizing-derating-factors.html</guid>
-    <description>Required battery Ah for a UPS from load and backup time, and why depth of discharge, aging.</description>
     <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
   </item>
 </channel></rss>
