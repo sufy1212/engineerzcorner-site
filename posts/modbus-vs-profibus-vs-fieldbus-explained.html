@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modbus vs PROFIBUS vs Foundation Fieldbus Explained | Engineerz CorneR</title>
+<meta name="description" content="Modbus RTU/TCP, PROFIBUS DP/PA, and Foundation Fieldbus H1 compared with verified specs — physical layer, baud rate, max devices, distance, topology and where each is actually used.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Modbus vs PROFIBUS vs Foundation Fieldbus Explained">
+<meta property="og:description" content="Modbus RTU/TCP, PROFIBUS DP/PA, and Foundation Fieldbus H1 compared with verified specs — physical layer, baud rate, max devices, distance, topology and where each is actually used.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modbus vs PROFIBUS vs Foundation Fieldbus Explained">
+<meta name="twitter:description" content="Physical layer, baud rate, max devices, distance and topology — Modbus, PROFIBUS and Foundation Fieldbus compared with verified specs.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="modbus-vs-profibus-vs-fieldbus-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Modbus vs PROFIBUS vs Foundation Fieldbus Explained", "item": "https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Modbus vs PROFIBUS vs Foundation Fieldbus Explained",
+  "datePublished": "2026-09-25",
+  "dateModified": "2026-09-25",
+  "description": "Modbus RTU/TCP, PROFIBUS DP/PA, and Foundation Fieldbus H1 compared with verified specs — physical layer, baud rate, max devices, distance, topology and where each is actually used.",
+  "url": "https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Modbus vs PROFIBUS vs Fieldbus</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#128268; Automation &middot; Communication Protocols</span>
+    <h1>Modbus vs PROFIBUS vs Foundation Fieldbus Explained</h1>
+    <p class="hero-sub">All three move data between field devices and a controller over one shared cable instead of a rack of individual 4&ndash;20mA home runs. They still get lumped together as &ldquo;fieldbus stuff.&rdquo; They're not interchangeable &mdash; each one trades off speed, distance, device count and bus power differently. Here's what actually separates them, with the real numbers.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Industrial Communication</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modbus daisy-chain bus, PROFIBUS bus with drop lines, and Foundation Fieldbus trunk-and-spur topology, side by side">
+      <line x1="30" y1="130" x2="730" y2="130" stroke="#3EC6E0" stroke-width="2" opacity=".25"/>
+      <text x="30" y="146" font-family="IBM Plex Mono" font-size="9" fill="#c9dfe6">MODBUS &middot; PROFIBUS &middot; FOUNDATION FIELDBUS</text>
+      <g font-family="IBM Plex Mono" font-size="8.5" fill="#c9dfe6">
+        <line x1="45" y1="58" x2="205" y2="58" stroke="#7e97ac" stroke-width="2"/>
+        <circle cx="45" cy="58" r="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <circle cx="105" cy="58" r="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <circle cx="165" cy="58" r="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <circle cx="205" cy="58" r="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="125" y="108" text-anchor="middle">MODBUS RTU</text>
+        <text x="125" y="120" text-anchor="middle" fill="#7e97ac">RS-485 daisy chain</text>
+
+        <line x1="300" y1="58" x2="460" y2="58" stroke="#7e97ac" stroke-width="2"/>
+        <line x1="335" y1="58" x2="335" y2="80" stroke="#7e97ac" stroke-width="1.4"/>
+        <rect x="325" y="80" width="20" height="12" rx="2" fill="none" stroke="#3EC6E0" stroke-width="1.4"/>
+        <line x1="395" y1="58" x2="395" y2="80" stroke="#7e97ac" stroke-width="1.4"/>
+        <rect x="385" y="80" width="20" height="12" rx="2" fill="none" stroke="#3EC6E0" stroke-width="1.4"/>
+        <line x1="425" y1="58" x2="425" y2="80" stroke="#7e97ac" stroke-width="1.4"/>
+        <rect x="415" y="80" width="20" height="12" rx="2" fill="none" stroke="#3EC6E0" stroke-width="1.4"/>
+        <text x="380" y="108" text-anchor="middle">PROFIBUS DP</text>
+        <text x="380" y="120" text-anchor="middle" fill="#7e97ac">bus with drops</text>
+
+        <line x1="560" y1="58" x2="700" y2="58" stroke="#7e97ac" stroke-width="2"/>
+        <line x1="595" y1="58" x2="595" y2="84" stroke="#7e97ac" stroke-width="1.4"/>
+        <circle cx="595" cy="90" r="5" fill="none" stroke="#3EC6E0" stroke-width="1.4"/>
+        <line x1="640" y1="58" x2="640" y2="76" stroke="#7e97ac" stroke-width="1.4"/>
+        <line x1="640" y1="76" x2="620" y2="92" stroke="#7e97ac" stroke-width="1.2"/>
+        <line x1="640" y1="76" x2="660" y2="92" stroke="#7e97ac" stroke-width="1.2"/>
+        <circle cx="620" cy="97" r="5" fill="none" stroke="#3EC6E0" stroke-width="1.4"/>
+        <circle cx="660" cy="97" r="5" fill="none" stroke="#3EC6E0" stroke-width="1.4"/>
+        <text x="630" y="118" text-anchor="middle">FOUNDATION FIELDBUS H1</text>
+        <text x="630" y="130" text-anchor="middle" fill="#7e97ac">trunk + spurs, bus-powered</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Modbus RTU is the simplest and cheapest: master/slave polling over RS-485, up to 32 devices per segment (247 addressable with repeaters), 1200&nbsp;m at 9600 baud.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">PROFIBUS DP runs fast cyclic I/O on RS-485 (9.6&nbsp;kbit/s&ndash;12&nbsp;Mbit/s, up to 126 stations with repeaters); PROFIBUS PA is a <em>different physical layer</em> built for slow, bus-powered process instruments.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Foundation Fieldbus H1 shares PA's 31.25&nbsp;kbit/s bus-powered physical layer (IEC 61158-2) but runs a different protocol on top &mdash; function blocks and publisher/subscriber messaging instead of simple master/slave polling.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">These don't really compete head-on. DP, PA and H1 sit at different points on the speed-vs-distance-vs-intrinsic-safety curve, and in practice the choice is usually already made by what the instrument or PLC vendor supports.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why three protocols for the same job</h2>
+    <p>All three replace a rack of individual point-to-point wires &mdash; one 4&ndash;20mA loop per instrument, one hardwired I/O per device &mdash; with a single shared cable that many devices talk over. But they were built to solve different problems. Modbus asks &ldquo;how simple and cheap can this be?&rdquo; PROFIBUS DP asks &ldquo;how fast can I scan a rack of remote I/O?&rdquo; PROFIBUS PA and Foundation Fieldbus H1 both ask &ldquo;how do I communicate <em>and</em> power a transmitter safely, over the same two wires, in a hazardous area?&rdquo; That last question is why PA and H1 end up looking so similar at the physical layer &mdash; they were standardized against the same IEC spec &mdash; while differing in what rides on top of it.</p>
+
+    <h2><span class="h2-dot"></span>1. Modbus &mdash; RTU and TCP</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 9h10M7 13h6M7 17h4"></path></svg></div>
+        <div><div class="fs-name">Modbus</div><div class="fs-full">RTU (serial) &amp; TCP (Ethernet)</div></div>
+      </div>
+      <p class="fs-desc">An open, master/slave application-layer protocol from 1979, deliberately kept simple. Modbus RTU carries the same message structure over RS-485 serial; Modbus TCP wraps it in TCP/IP on ordinary Ethernet, typically on port 502. Because it's a de facto standard rather than an IEC-governed one, implementations are cheap and near-universal &mdash; but there's no vendor certification body policing conformance the way there is for PROFIBUS or Fieldbus.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Spec</th><th>Modbus RTU</th><th>Modbus TCP</th></tr>
+        <tr><td>Physical layer</td><td>RS-485 (RS-232/RS-422 also used)</td><td>Standard Ethernet</td></tr>
+        <tr><td>Speed</td><td>9600&ndash;19200 baud typical, up to 115200</td><td>10/100 Mbit/s (switch-dependent)</td></tr>
+        <tr><td>Max devices/segment</td><td>32 (standard 1&nbsp;unit-load transceivers)</td><td>No practical ceiling &mdash; switched network</td></tr>
+        <tr><td>Addressable range</td><td>247 slave addresses (1&ndash;247), reachable via repeaters</td><td>IP-addressed, one connection per device</td></tr>
+        <tr><td>Max distance</td><td>~1200&nbsp;m at 9600 baud (shorter at higher baud)</td><td>~100&nbsp;m per copper segment, unlimited with switches/fiber</td></tr>
+        <tr><td>Topology</td><td>Daisy-chain bus, 120&Omega; termination both ends</td><td>Star, via switches</td></tr>
+        <tr><td>Bus power</td><td>No</td><td>No</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>2. PROFIBUS &mdash; DP and PA</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><path d="M9 12h6M15 8l1.5-1M15 16l1.5 1"></path></svg></div>
+        <div><div class="fs-name">PROFIBUS</div><div class="fs-full">DP (Decentralized Periphery) &amp; PA (Process Automation)</div></div>
+      </div>
+      <p class="fs-desc">PROFIBUS isn't one physical layer &mdash; DP and PA are standardized separately and bridged together. DP is the fast, RS-485 branch used for PLC-to-remote-I/O and drives. PA is the slow, bus-powered, intrinsically-safe-capable branch used for process transmitters in hazardous areas, joined to a DP network through a DP/PA coupler or link.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Spec</th><th>PROFIBUS DP</th><th>PROFIBUS PA</th></tr>
+        <tr><td>Physical layer</td><td>RS-485 (IEC 61784)</td><td>MBP &mdash; Manchester Bus Powered (IEC 61158-2)</td></tr>
+        <tr><td>Speed</td><td>9.6&nbsp;kbit/s&ndash;12&nbsp;Mbit/s, selectable</td><td>31.25&nbsp;kbit/s, fixed</td></tr>
+        <tr><td>Max devices/segment</td><td>32 without a repeater; up to 126 station addresses (0&ndash;125) with repeaters</td><td>~32 max, practically 8&ndash;12 (fewer in Ex zones &mdash; roughly 9 in Group&nbsp;IIC, 23 in Group&nbsp;IIB)</td></tr>
+        <tr><td>Max distance</td><td>1200&nbsp;m at 9.6&nbsp;kbit/s down to ~100&nbsp;m at 12&nbsp;Mbit/s</td><td>Up to 1900&nbsp;m per segment</td></tr>
+        <tr><td>Topology</td><td>Daisy-chain bus, terminated both ends</td><td>Bus or tree, via segment couplers</td></tr>
+        <tr><td>Bus power</td><td>No &mdash; devices need separate 24V DC</td><td>Yes &mdash; power and data share the two-wire cable</td></tr>
+        <tr><td>Intrinsic safety</td><td>Not inherent (device-dependent)</td><td>Yes &mdash; built for Zone 0/1 hazardous areas</td></tr>
+      </table>
+    </div>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Bridging DP to PA:</strong> a DP/PA coupler or link sits between the two, and the PA side keeps its own 32-node segment limit (the coupler/link itself counts as one node, so up to 31 field devices per PA segment behind it). A single DP/PA link can typically front several PA segments &mdash; check the specific coupler's datasheet rather than assuming one number across vendors.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>3. Foundation Fieldbus H1</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="6" height="6" rx="1"></rect><rect x="15" y="4" width="6" height="6" rx="1"></rect><rect x="15" y="16" width="6" height="6" rx="1"></rect><path d="M9 13h4v-6M13 13v6h2"></path></svg></div>
+        <div><div class="fs-name">Foundation Fieldbus H1</div><div class="fs-full">FieldComm Group, IEC 61158-2</div></div>
+      </div>
+      <p class="fs-desc">H1 uses the <em>same</em> 31.25&nbsp;kbit/s Manchester-encoded, bus-powered physical layer as PROFIBUS PA &mdash; both were standardized under IEC 61158-2. Where it differs is above the physical layer: H1 is built around function blocks executing inside the field devices themselves, with publisher/subscriber messaging and explicit clock synchronization for scheduled, isochronous control &mdash; not a simple master polls, slave answers exchange.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Spec</th><th>Foundation Fieldbus H1</th></tr>
+        <tr><td>Physical layer</td><td>MBP, IEC 61158-2 (same as PROFIBUS PA)</td></tr>
+        <tr><td>Speed</td><td>31.25&nbsp;kbit/s, fixed</td></tr>
+        <tr><td>Max devices/segment</td><td>32 max; project standards commonly cap it at 10&ndash;16 for power &amp; spare-capacity margin</td></tr>
+        <tr><td>Max distance</td><td>1900&nbsp;m per segment (1200&nbsp;m trunk + spurs up to 120&nbsp;m each); up to 4 repeaters can extend it further, each adding another segment's worth of trunk</td></tr>
+        <tr><td>Topology</td><td>Point-to-point, bus-with-spurs, daisy-chain, tree, or mixed</td></tr>
+        <tr><td>Bus power</td><td>Yes &mdash; 19&ndash;26V DC supplied and conditioned on the trunk</td></tr>
+        <tr><td>Intrinsic safety</td><td>Yes &mdash; five recognized models (Entity, FISCO, FNICO, HPTC, DART), each trading device count for power budget differently</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Side-by-side comparison</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Feature</th><th>Modbus RTU</th><th>PROFIBUS DP</th><th>PROFIBUS PA</th><th>FF H1</th></tr>
+        <tr><td>Governing body</td><td>Modbus.org (de facto)</td><td>PI (IEC 61158/61784)</td><td>PI (IEC 61158-2)</td><td>FieldComm Group (IEC 61158-2)</td></tr>
+        <tr><td>Message model</td><td>Master/slave polling</td><td>Master/slave, cyclic</td><td>Master/slave, cyclic</td><td>Publisher/subscriber, scheduled</td></tr>
+        <tr><td>Typical role</td><td>Low-cost meters, drives, RTUs, BMS integration</td><td>Fast remote I/O, drives, factory automation</td><td>Process transmitters, control valves</td><td>Process transmitters with in-device control</td></tr>
+        <tr><td>Bus-powered devices</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Built for Ex/IS areas</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Cost to implement</td><td>Lowest</td><td>Moderate</td><td>Higher (segment design, barriers)</td><td>Higher (segment design, barriers)</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Where each one actually shows up</h2>
+    <div class="app-chips">
+      <span class="app-chip">Modbus &mdash; VFDs, energy meters, BMS/HVAC integration, solar inverters &amp; charge controllers</span>
+      <span class="app-chip">Modbus &mdash; low-cost SCADA RTUs, remote wellheads over radio</span>
+      <span class="app-chip">PROFIBUS DP &mdash; PLC to remote I/O racks, CNC and robotics cells, packaging lines</span>
+      <span class="app-chip">PROFIBUS PA &mdash; refinery &amp; petrochemical transmitters, tank farms</span>
+      <span class="app-chip">FF H1 &mdash; DCS-integrated process transmitters, control valves with embedded PID</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>Practical differences that catch people out</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Modbus RTU has no real conformance body.</strong> &ldquo;Modbus compatible&rdquo; can still mean subtly different register maps or word ordering between vendors &mdash; always check the device's Modbus map, don't assume.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>PROFIBUS DP termination is not a generic 120&Omega; resistor.</strong> The standard PROFIBUS connector bundles the termination with a small bias network built in &mdash; plugging a plain resistor across A/B without it can leave the bus in an unreliable idle state.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>PA and H1 segments are power-budget limited, not just device-count limited.</strong> Adding a device isn't just about the 32-node ceiling &mdash; each one draws quiescent current from a fixed segment supply, and Ex-rated segments have a much smaller budget than general-purpose ones.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>FF H1 spur length is capped at 120&nbsp;m regardless of trunk length.</strong> A long trunk doesn't buy a longer spur &mdash; each spur is limited independently, and non-Ex spurs get a longer allowance than Ex ones.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Modbus TCP isn't automatically faster in practice.</strong> The wire speed is much higher than RTU, but polling overhead, network hops and PLC scan-time coupling can erase most of that advantage for small, chatty exchanges.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>How the choice actually gets made</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>It's rarely a green-field decision</b><span>Most projects inherit a protocol from an existing DCS/PLC platform, an instrument vendor's product line, or a plant standard. The three questions worth asking are: does it need to run in a hazardous area, does an instrument need bus power, and how fast does the loop actually need to update.</span></div>
+      <div class="signal-card b"><b>PA and H1 aren't really rivals</b><span>They share a physical layer and solve the same problem &mdash; the choice between them usually comes down to which DCS the plant already runs, not a technical shootout. Mixing them on the same physical segment isn't supported.</span></div>
+      <div class="signal-card c"><b>Modbus is the default when nothing forces otherwise</b><span>For a standalone drive, meter, or BMS point with no hazardous-area or bus-power requirement, Modbus RTU or TCP is usually the cheapest, most broadly supported option &mdash; which is exactly why it's outlasted several &ldquo;better&rdquo; protocols.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Modbus RTU/TCP: simplest and cheapest, master/slave, no bus power, no inherent intrinsic safety &mdash; the default when nothing else forces a different choice.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>PROFIBUS DP: fast cyclic RS-485 for remote I/O and drives, up to 12&nbsp;Mbit/s, up to 126 stations with repeaters.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>PROFIBUS PA: same protocol family as DP but a different, bus-powered, intrinsically-safe physical layer (IEC 61158-2) for process instruments, fixed at 31.25&nbsp;kbit/s.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Foundation Fieldbus H1: shares PA's physical layer but runs function-block, publisher/subscriber messaging on top, built for scheduled, deterministic control in the field device itself.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Device count and distance in PA/H1 segments are set by power budget as much as by the 32-node protocol ceiling &mdash; always check the segment's actual current budget, not just the node limit.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Modbus%20vs%20PROFIBUS%20vs%20Foundation%20Fieldbus%20Explained%20%E2%80%94%20physical%20layer%2C%20baud%20rate%2C%20max%20devices%2C%20distance%20and%20topology%20compared.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmodbus-vs-profibus-vs-fieldbus-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmodbus-vs-profibus-vs-fieldbus-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Modbus%20vs%20PROFIBUS%20vs%20Foundation%20Fieldbus%20Explained&text=Physical%20layer%2C%20baud%20rate%2C%20max%20devices%2C%20distance%20and%20topology%20compared.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmodbus-vs-profibus-vs-fieldbus-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Modbus%20vs%20PROFIBUS%20vs%20Foundation%20Fieldbus%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmodbus-vs-profibus-vs-fieldbus-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../automation/modbus-timing">Modbus RTU Timing / Baud Rate Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="scada-supervisory-control-data-acquisition-explained">SCADA (Supervisory Control &amp; Data Acquisition) Explained</a></li><li><a href="iec-104-communication-protocol-explained">IEC 104 Communication Protocol Explained</a></li><li><a href="iec-61850-digital-substation-protocol-explained">IEC 61850 Digital Substation Protocol Explained</a></li><li><a href="plc-vs-dcs-vs-scada-explained">PLC vs DCS vs SCADA Explained</a></li><li><a href="signal-scaling-4-20ma-engineering-units">4-20mA Signal Scaling Explained</a></li><li><a href="iecex-zones-vs-class-division-hazardous-areas">IECEx/ATEX Zones vs NEC Class &amp; Division</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../changelog">Changelog</a> &nbsp;&middot;&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
