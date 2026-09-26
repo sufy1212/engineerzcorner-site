@@ -1,8 +1,13 @@
 [
   {
-    "t": "NPSH Available Explained: What Actually Feeds the Calculation",
+    "t": "NPSH Available Explained",
     "u": "posts/npsh-available-explained",
-    "d": "2026-09-25"
+    "d": "2026-09-26"
+  },
+  {
+    "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
+    "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
+    "d": "2026-09-26"
   },
   {
     "t": "IEC 104 Communication Protocol Explained",
@@ -43,15 +48,5 @@
     "t": "Education Loan EMI Calculator",
     "u": "study-abroad/education-loan-emi-calculator",
     "d": "2026-09-21"
-  },
-  {
-    "t": "Arc Flash Incident Energy",
-    "u": "electrical/arc-flash-incident-energy",
-    "d": "2026-09-20"
-  },
-  {
-    "t": "BESS Sizing Calculator",
-    "u": "electrical/bess-sizing-calculator",
-    "d": "2026-09-20"
   }
 ]

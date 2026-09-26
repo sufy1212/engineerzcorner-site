@@ -1,5 +1,19 @@
 [
  {
+  "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
+  "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
+  "d": "2026-09-26",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "NPSH Available Explained",
+  "u": "posts/npsh-available-explained",
+  "d": "2026-09-26",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "IEC 104 Communication Protocol Explained",
   "u": "posts/iec-104-communication-protocol-explained",
   "d": "2026-09-25",
@@ -1904,13 +1918,6 @@
   "a": "updated"
  },
  {
-  "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
-  "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Password Entropy Explained: What Actually Makes a Password Hard to Crack",
   "u": "posts/password-entropy-explained",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Solar Sizing Calculator",
   "u": "solar/solar-sizing-calculator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Shading & Soiling Loss Estimator",
-  "u": "solar/shading-soiling-loss-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
