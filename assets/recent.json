@@ -5,6 +5,11 @@
     "d": "2026-09-26"
   },
   {
+    "t": "Dimensional Analysis Explained",
+    "u": "posts/dimensional-analysis-unit-conversion-explained",
+    "d": "2026-09-26"
+  },
+  {
     "t": "Markup vs Margin Explained",
     "u": "posts/markup-vs-margin-explained",
     "d": "2026-09-26"
@@ -43,10 +48,5 @@
     "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
     "u": "posts/scada-supervisory-control-data-acquisition-explained",
     "d": "2026-09-25"
-  },
-  {
-    "t": "Power Transformer, CT & PT: Internal Construction",
-    "u": "posts/power-transformer-ct-pt-construction-explained",
-    "d": "2026-09-21"
   }
 ]

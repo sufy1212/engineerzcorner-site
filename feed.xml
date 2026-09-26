@@ -8,7 +8,14 @@
     <link>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</guid>
     <description>Decimal, binary, octal and hex are all the same number in different bases — what a base actually means, why hex exists as shorthand for binary, and how to convert between them by hand.</description>
-    <pubDate>Sat, 26 Sep 2026 04:44:58 GMT</pubDate>
+    <pubDate>Sat, 26 Sep 2026 15:27:44 GMT</pubDate>
+  </item>
+  <item>
+    <title>Dimensional Analysis Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</guid>
+    <description>Unit conversion errors almost always come from memorizing factors instead of tracking units through the arithmetic — how dimensional analysis catches the mistake before the answer does.</description>
+    <pubDate>Sat, 26 Sep 2026 15:27:44 GMT</pubDate>
   </item>
   <item>
     <title>Markup vs Margin Explained</title>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
     <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
-    <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
-  </item>
-  <item>
-    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
-    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
-    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
-    <description>The 8 stages of an LV panel FAT — visual/mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation.</description>
     <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
   </item>
 </channel></rss>
