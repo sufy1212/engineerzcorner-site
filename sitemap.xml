@@ -172,7 +172,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained</loc><lastmod>2026-08-30</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -207,7 +207,6 @@
   <url><loc>https://www.engineerzcorner.com/posts/concrete-volume-material-takeoff-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/conduit-fill-why-the-percentage-limit-exists</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/control-valve-components-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/npsh-available-explained</loc><lastmod>2026-09-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/control-valve-cv-sizing-oversizing-mistake</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/cooling-tower-types-explained</loc><lastmod>2026-09-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/critical-path-method-cpm-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -265,9 +264,10 @@
   <url><loc>https://www.engineerzcorner.com/posts/motor-starting-methods-dol-star-delta-vfd-compared</loc><lastmod>2026-09-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/mppt-vs-pwm-solar-charge-controllers</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/nfpa-fire-protection-design-standards-reference</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/npsh-margin-why-passing-on-paper-can-still-cavitate</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/npsh-available-explained</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/npsh-margin-why-passing-on-paper-can-still-cavitate</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/password-entropy-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained</loc><lastmod>2026-09-10</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pid-controller-tuning-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pid-instrument-bubble-symbols-tag-anatomy-explained</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
@@ -359,7 +359,7 @@
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-09-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-08-30</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>

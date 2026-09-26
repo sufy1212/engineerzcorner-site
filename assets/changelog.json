@@ -14,6 +14,20 @@
   "a": "added"
  },
  {
+  "t": "Percentage Points vs Percent Change: Why They're Not the Same Number",
+  "u": "posts/percentage-points-vs-percent-change-explained",
+  "d": "2026-09-26",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Markup vs Margin Explained",
+  "u": "posts/markup-vs-margin-explained",
+  "d": "2026-09-26",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "IEC 104 Communication Protocol Explained",
   "u": "posts/iec-104-communication-protocol-explained",
   "d": "2026-09-25",
@@ -1925,13 +1939,6 @@
   "a": "updated"
  },
  {
-  "t": "Percentage Points vs Percent Change: Why They're Not the Same Number",
-  "u": "posts/percentage-points-vs-percent-change-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Basics of Fire Protection in Buildings Explained",
   "u": "posts/basics-of-fire-protection-in-buildings-explained",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
   "u": "solar/grid-tie-off-grid-comparator",
-  "d": "2026-08-27",
-  "c": "Solar",
-  "a": "updated"
- },
- {
-  "t": "Solar Sizing Calculator",
-  "u": "solar/solar-sizing-calculator",
   "d": "2026-08-27",
   "c": "Solar",
   "a": "updated"
