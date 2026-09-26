@@ -4,32 +4,46 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Dimensional Analysis Explained: Why Tracking Units Beats Memorizing Conversion Factors</title>
-    <link>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</guid>
-    <description>Conversion factors are fractions equal to 1 — set them up so the unwanted units cancel and the arithmetic checks itself.</description>
-    <pubDate>Sat, 26 Sep 2026 00:10:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Binary, Hex &amp; Octal Explained: How Number Base Conversion Actually Works</title>
+    <title>Binary, Hex &amp; Octal Explained</title>
     <link>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</guid>
-    <description>What a base actually means, why hex maps 4 bits to 1 digit exactly, and how to convert between decimal, binary, octal and hex by hand.</description>
-    <pubDate>Sat, 26 Sep 2026 00:05:00 GMT</pubDate>
+    <description>Decimal, binary, octal and hex are all the same number in different bases — what a base actually means, why hex exists as shorthand for binary, and how to convert between them by hand.</description>
+    <pubDate>Sat, 26 Sep 2026 15:27:44 GMT</pubDate>
   </item>
   <item>
-    <title>Markup vs Margin: Why the Same Percentage Means Two Different Prices</title>
+    <title>Dimensional Analysis Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</guid>
+    <description>Unit conversion errors almost always come from memorizing factors instead of tracking units through the arithmetic — how dimensional analysis catches the mistake before the answer does.</description>
+    <pubDate>Sat, 26 Sep 2026 15:27:44 GMT</pubDate>
+  </item>
+  <item>
+    <title>Markup vs Margin Explained</title>
     <link>https://www.engineerzcorner.com/posts/markup-vs-margin-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/markup-vs-margin-explained.html</guid>
-    <description>Markup divides profit by cost, margin divides it by price — the same 30% target produces two different quotes, and the gap widens as the percentage climbs.</description>
-    <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Markup and margin use the same two numbers — cost and price — but divide by a different one, so the same percentage means two different prices depending on which you mean.</description>
+    <pubDate>Sat, 26 Sep 2026 04:44:58 GMT</pubDate>
   </item>
   <item>
-    <title>NPSH Available Explained: What Actually Feeds the Calculation</title>
+    <title>Percentage Points vs Percent Change: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained.html</guid>
+    <description>Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, and how mixing them up leads to real reporting errors.</description>
+    <pubDate>Sat, 26 Sep 2026 03:48:33 GMT</pubDate>
+  </item>
+  <item>
+    <title>NPSH Available Explained</title>
     <link>https://www.engineerzcorner.com/posts/npsh-available-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/npsh-available-explained.html</guid>
     <description>NPSHa broken down term by term — source pressure head, static elevation, suction-line friction losses, and vapor pressure — and why temperature quietly decides most marginal cases.</description>
-    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
+    <pubDate>Sat, 26 Sep 2026 03:44:15 GMT</pubDate>
+  </item>
+  <item>
+    <title>NPSH Margin: Why 'NPSHa &gt; NPSHr' Isn't Enough on Its Own</title>
+    <link>https://www.engineerzcorner.com/posts/npsh-margin-why-passing-on-paper-can-still-cavitate.html</link>
+    <guid>https://www.engineerzcorner.com/posts/npsh-margin-why-passing-on-paper-can-still-cavitate.html</guid>
+    <description>Pump hydraulic and shaft power sizing, and why an NPSH margin needs a safety factor beyond simply having available head exceed required head.</description>
+    <pubDate>Sat, 26 Sep 2026 03:44:15 GMT</pubDate>
   </item>
   <item>
     <title>IEC 104 Communication Protocol Explained</title>
@@ -198,47 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
     <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
     <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
-  </item>
-  <item>
-    <title>Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist</title>
-    <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
-    <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
-    <description>The 8 stages of an LV panel FAT — visual/mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation.</description>
-    <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
-  </item>
-  <item>
-    <title>Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job</title>
-    <link>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained.html</guid>
-    <description>What a permit to work actually authorizes, why lockout/tagout requires one lock per person rather than one lock per job.</description>
-    <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
-  </item>
-  <item>
-    <title>Power Semiconductors: Si, SiC &amp; GaN</title>
-    <link>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained.html</guid>
-    <description>Silicon IGBT/MOSFET, silicon carbide (SiC), and gallium nitride (GaN) power semiconductors compared — bandgap, switching frequency, voltage range, and losses — where each one fits, a selection guide by application, and the key terms explained.</description>
-    <pubDate>Thu, 10 Sep 2026 02:57:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
-    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
-    <description>How string inverters, microinverters and power optimizers differ in where MPPT happens, what a shaded panel costs under each, and how to pick between them.</description>
-    <pubDate>Thu, 10 Sep 2026 02:57:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>What Is an Inverter? DC-to-AC Conversion Explained</title>
-    <link>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/what-is-an-inverter-dc-ac-explained.html</guid>
-    <description>How an inverter turns DC into AC — switching, filtering, waveform types (pure sine, modified sine, square wave), key components, and typical uses.</description>
-    <pubDate>Thu, 10 Sep 2026 02:57:11 GMT</pubDate>
-  </item>
-  <item>
-    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
-    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
-    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
-    <pubDate>Thu, 10 Sep 2026 02:53:50 GMT</pubDate>
   </item>
 </channel></rss>
