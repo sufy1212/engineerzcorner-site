@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>NPSH Available Explained: What Actually Feeds the Calculation</title>
+    <link>https://www.engineerzcorner.com/posts/npsh-available-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/npsh-available-explained.html</guid>
+    <description>NPSHa broken down term by term — source pressure head, static elevation, suction-line friction losses, and vapor pressure — and why temperature quietly decides most marginal cases.</description>
+    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
+  </item>
+  <item>
     <title>IEC 104 Communication Protocol Explained</title>
     <link>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/iec-104-communication-protocol-explained.html</guid>
