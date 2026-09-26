@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary, Hex &amp; Octal Explained | Engineerz CorneR</title>
+<meta name="description" content="Decimal, binary, octal and hex are all the same number in different bases — what a base actually means, why hex exists as shorthand for binary, and how to convert between them by hand.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Binary, Hex &amp; Octal Explained: How Number Base Conversion Actually Works">
+<meta property="og:description" content="Every base counts the same way — digits run out, and a new column opens up. What changes is only how quickly that happens, and why hex exists purely as compact shorthand for binary.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-general.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Binary, Hex &amp; Octal Explained: How Number Base Conversion Actually Works">
+<meta name="twitter:description" content="What a base actually means, why hex exists as shorthand for binary, and how to convert between decimal, binary, octal and hex by hand.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-general.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Binary, Hex & Octal Explained: How Number Base Conversion Actually Works", "item": "https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Binary, Hex & Octal Explained: How Number Base Conversion Actually Works",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "Decimal, binary, octal and hex are all the same number in different bases — what a base actually means, why hex exists as shorthand for binary, and how to convert between them by hand.",
+  "url": "https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Binary, Hex &amp; Octal Explained: How Number Base Conversion Actually Works</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#128202; General &middot; Numbers &amp; Units</span>
+    <h1>Binary, Hex &amp; Octal Explained</h1>
+    <p class="hero-sub">Decimal, binary, octal and hex all count the same way &mdash; a digit runs out and a new column opens. What changes between them is only how fast that happens.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Number Bases</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A "base" is just how many digits exist before you have to carry into a new column &mdash; base 10 carries at 10, base 2 carries at 2.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Binary is what hardware actually stores; hex and octal exist purely so humans don't have to read long strings of 1s and 0s.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Hex converts to binary 1 digit &rarr; 4 bits at a time, and octal 1 digit &rarr; 3 bits &mdash; no long division needed for either conversion.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The same bit pattern reads as a different-looking number in every base &mdash; the underlying value never changes, only its written form does.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What a base actually is</h2>
+    <p>A number base is simply how many distinct digits are available before a column runs out and forces a carry into the next one. <b>Decimal</b> (base 10) uses ten digits, 0&ndash;9, and carries once a column would need a "10." <b>Binary</b> (base 2) has only two digits, 0 and 1, so it carries at every single step &mdash; that's why binary numbers look so much longer than their decimal equivalents for the same value. <b>Octal</b> (base 8) and <b>hexadecimal</b> (base 16) sit on either side of binary as more compact ways of writing the exact same underlying value, using 8 and 16 digits respectively &mdash; hex borrows A&ndash;F for the digits beyond 9.</p>
+    <p>None of this changes what the number <i>is</i>. Decimal 13, binary 1101, and hex D are three different labels for the identical quantity &mdash; the same way "13," "thirteen," and "XIII" all name the same count without changing it.</p>
+
+    <h2><span class="h2-dot"></span>The formulas</h2>
+    <div class="formula-box">Value &nbsp;=&nbsp; &Sigma; ( digit &times; base<sup>position</sup> )</div>
+    <div class="formula-note">Every positional number system works this way &mdash; each digit is worth its face value times the base raised to its column position, counting from 0 on the right.</div>
+    <div class="formula-box">Decimal 13 &nbsp;=&nbsp; (1&times;2<sup>3</sup>) + (1&times;2<sup>2</sup>) + (0&times;2<sup>1</sup>) + (1&times;2<sup>0</sup>) &nbsp;=&nbsp; Binary 1101</div>
+    <div class="formula-note">Reading the same identity in reverse: each binary digit's column is worth a power of 2, and summing the ones that are "1" gives back the decimal value.</div>
+
+    <h2><span class="h2-dot"></span>Why hex exists at all</h2>
+    <p>Hardware only ever stores binary &mdash; every register, address, and byte is fundamentally a string of 1s and 0s. The problem is readability: a 16-bit value in binary is sixteen characters of 1s and 0s, easy to mistype and hard to eyeball. Hex solves this because 16 is a power of 2 (2<sup>4</sup>), so exactly <b>4 binary bits map to exactly 1 hex digit</b>, with no remainder and no rounding. That's the entire reason hex is used everywhere in electronics and programming &mdash; memory addresses, color codes, MAC addresses &mdash; it's not a different kind of number, just a 4x-shorter way of writing the same bits. Octal does the same job at 3 bits per digit, which is why it shows up in older Unix file permissions but has mostly been superseded by hex.</p>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Binary &rarr; Hex</b><span>Group bits into 4s from the right, convert each group to one hex digit: 1101 1010 &rarr; D, A &rarr; 0xDA.</span></div>
+      <div class="signal-card hot"><b>Binary &rarr; Octal</b><span>Group bits into 3s from the right, convert each group to one octal digit: 011 010 &rarr; 3, 2 &rarr; 032.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Converting decimal to another base</h2>
+    <p>Going the other direction &mdash; decimal into binary, octal, or hex &mdash; uses repeated division: divide by the target base, record the remainder, and keep dividing the quotient until it reaches zero. Reading the remainders from last to first gives the converted number. For decimal 13 into binary: 13&divide;2 = 6 remainder 1, 6&divide;2 = 3 remainder 0, 3&divide;2 = 1 remainder 1, 1&divide;2 = 0 remainder 1 &mdash; read bottom to top, that's 1101. The same procedure works for any target base; only the divisor changes.</p>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Base (radix)</td><td>The number of distinct digits a system uses before carrying to a new column</td></tr>
+        <tr><td>Bit</td><td>A single binary digit &mdash; either 0 or 1</td></tr>
+        <tr><td>Nibble</td><td>4 bits &mdash; exactly the amount needed to represent one hex digit</td></tr>
+        <tr><td>Byte</td><td>8 bits &mdash; commonly written as exactly two hex digits, e.g. 0xFF</td></tr>
+        <tr><td>0x / 0b prefix</td><td>Common notation marking a literal as hexadecimal (0x) or binary (0b) in code, so it isn't misread as decimal</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>A base is just how many digits exist before carrying &mdash; the value being represented never changes between bases, only how it's written.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Binary is what hardware actually stores; hex and octal are purely human-readable shorthand for the same bits.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Hex maps 4 bits to 1 digit exactly, with no remainder &mdash; that's why it's the standard shorthand rather than an arbitrary choice.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Converting binary to hex or octal is grouping and lookup, not division; converting decimal to another base uses repeated division and remainders.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Always check the base a number is written in before reading it &mdash; "10" means two in binary, eight in octal, and sixteen in hex.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Binary%2C%20Hex%20%26%20Octal%20Explained%3A%20How%20Number%20Base%20Conversion%20Actually%20Works&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbinary-hex-octal-number-base-conversion-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbinary-hex-octal-number-base-conversion-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Binary%2C%20Hex%20%26%20Octal%20Explained%3A%20How%20Number%20Base%20Conversion%20Actually%20Works&text=What%20a%20base%20actually%20means%2C%20why%20hex%20exists%20as%20shorthand%20for%20binary%2C%20and%20how%20to%20convert%20between%20them%20by%20hand.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbinary-hex-octal-number-base-conversion-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Binary%2C%20Hex%20%26%20Octal%20Explained%3A%20How%20Number%20Base%20Conversion%20Actually%20Works&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ABinary%2C%20Hex%20%26%20Octal%20Explained%3A%20How%20Number%20Base%20Conversion%20Actually%20Works%0AWhat%20a%20base%20actually%20means%20and%20how%20to%20convert%20between%20them%20by%20hand.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fbinary-hex-octal-number-base-conversion-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../general/base-converter">Number Base Converter &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="4-20ma-current-loop-basics">4&ndash;20mA Current Loop Basics</a></li><li><a href="markup-vs-margin-explained">Markup vs Margin: Why the Same Percentage Means Two Different Prices</a></li><li><a href="password-entropy-explained">Password Entropy Explained: What Actually Makes a Password Hard to Crack</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../general/base-converter">Try the Number Base Converter &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
