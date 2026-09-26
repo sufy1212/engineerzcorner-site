@@ -1,5 +1,10 @@
 [
   {
+    "t": "Binary, Hex & Octal Explained",
+    "u": "posts/binary-hex-octal-number-base-conversion-explained",
+    "d": "2026-09-26"
+  },
+  {
     "t": "Markup vs Margin Explained",
     "u": "posts/markup-vs-margin-explained",
     "d": "2026-09-26"
@@ -42,11 +47,6 @@
   {
     "t": "Power Transformer, CT & PT: Internal Construction",
     "u": "posts/power-transformer-ct-pt-construction-explained",
-    "d": "2026-09-21"
-  },
-  {
-    "t": "CT Sizing & Burden Calculator",
-    "u": "electrical/ct-sizing-burden-calculator",
     "d": "2026-09-21"
   }
 ]

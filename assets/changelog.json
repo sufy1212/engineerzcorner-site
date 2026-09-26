@@ -28,6 +28,13 @@
   "a": "added"
  },
  {
+  "t": "Binary, Hex & Octal Explained",
+  "u": "posts/binary-hex-octal-number-base-conversion-explained",
+  "d": "2026-09-26",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "IEC 104 Communication Protocol Explained",
   "u": "posts/iec-104-communication-protocol-explained",
   "d": "2026-09-25",
@@ -2090,13 +2097,6 @@
   "u": "posts/chilled-water-hvac-system-explained",
   "d": "2026-08-27",
   "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
-  "u": "solar/grid-tie-off-grid-comparator",
-  "d": "2026-08-27",
-  "c": "Solar",
   "a": "updated"
  }
 ]

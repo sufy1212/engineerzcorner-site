@@ -4,11 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Binary, Hex &amp; Octal Explained</title>
+    <link>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</guid>
+    <description>Decimal, binary, octal and hex are all the same number in different bases — what a base actually means, why hex exists as shorthand for binary, and how to convert between them by hand.</description>
+    <pubDate>Sat, 26 Sep 2026 04:44:58 GMT</pubDate>
+  </item>
+  <item>
     <title>Markup vs Margin Explained</title>
     <link>https://www.engineerzcorner.com/posts/markup-vs-margin-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/markup-vs-margin-explained.html</guid>
     <description>Markup and margin use the same two numbers — cost and price — but divide by a different one, so the same percentage means two different prices depending on which you mean.</description>
-    <pubDate>Sat, 26 Sep 2026 03:48:33 GMT</pubDate>
+    <pubDate>Sat, 26 Sep 2026 04:44:58 GMT</pubDate>
   </item>
   <item>
     <title>Percentage Points vs Percent Change: Why They're Not the Same Number</title>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</link>
     <guid>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist.html</guid>
     <description>The 8 stages of an LV panel FAT — visual/mechanical inspection, insulation resistance, hi-pot, functional, protection and interlock tests, and documentation.</description>
-    <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
-  </item>
-  <item>
-    <title>Permit to Work &amp; LOTO: Why the Lock Belongs to the Person, Not the Job</title>
-    <link>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/permit-to-work-loto-explained.html</guid>
-    <description>What a permit to work actually authorizes, why lockout/tagout requires one lock per person rather than one lock per job.</description>
     <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
   </item>
 </channel></rss>
