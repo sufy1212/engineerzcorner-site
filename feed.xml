@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>LMTD Heat Exchanger Sizing</title>
+    <link>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained.html</guid>
+    <description>Log-mean temperature difference explained — why it isn't just an average of the two ends, why counter-current beats co-current for the same terminal temperatures, and where the F correction factor comes in.</description>
+    <pubDate>Sun, 27 Sep 2026 05:53:34 GMT</pubDate>
+  </item>
+  <item>
+    <title>NPSH Available Explained</title>
+    <link>https://www.engineerzcorner.com/posts/npsh-available-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/npsh-available-explained.html</guid>
+    <description>NPSHa broken down term by term — source pressure head, static elevation, suction-line friction losses, and vapor pressure — and why temperature quietly decides most marginal cases.</description>
+    <pubDate>Sun, 27 Sep 2026 05:53:34 GMT</pubDate>
+  </item>
+  <item>
     <title>Binary, Hex &amp; Octal Explained</title>
     <link>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</guid>
@@ -30,13 +44,6 @@
     <guid>https://www.engineerzcorner.com/posts/percentage-points-vs-percent-change-explained.html</guid>
     <description>Why 'up 5 percentage points' and 'up 5 percent' are two different numbers, and how mixing them up leads to real reporting errors.</description>
     <pubDate>Sat, 26 Sep 2026 03:48:33 GMT</pubDate>
-  </item>
-  <item>
-    <title>NPSH Available Explained</title>
-    <link>https://www.engineerzcorner.com/posts/npsh-available-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/npsh-available-explained.html</guid>
-    <description>NPSHa broken down term by term — source pressure head, static elevation, suction-line friction losses, and vapor pressure — and why temperature quietly decides most marginal cases.</description>
-    <pubDate>Sat, 26 Sep 2026 03:44:15 GMT</pubDate>
   </item>
   <item>
     <title>NPSH Margin: Why 'NPSHa &gt; NPSHr' Isn't Enough on Its Own</title>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</guid>
     <description>Why HVAC is transitioning away from R-410A, the ASHRAE 34 safety classification (A1/A2L/B2L), R-32 vs R-454B vs R-1234yf vs natural refrigerants compared by GWP and flammability, what changes for A2L handling, and a selection reference.</description>
     <pubDate>Thu, 10 Sep 2026 03:06:49 GMT</pubDate>
-  </item>
-  <item>
-    <title>Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together</title>
-    <link>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/breaker-selectivity-discrimination-explained.html</guid>
-    <description>What selectivity (discrimination) between breakers actually means, the Ir &lt; Isd &lt; Ii hierarchy behind it.</description>
-    <pubDate>Thu, 10 Sep 2026 03:02:25 GMT</pubDate>
   </item>
 </channel></rss>
