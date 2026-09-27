@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order-of-Magnitude Checks Explained | Engineerz CorneR</title>
+<meta name="description" content="A one-line estimate rounded to a single significant figure catches most decimal-point and unit-slip errors before they reach a real calculation — how order-of-magnitude checks actually work.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Order-of-Magnitude Checks: How to Catch a Wrong Answer Before It Ships">
+<meta property="og:description" content="A decimal point or unit slip usually moves the answer by a factor of 10, 1000, or more — a rough estimate rounded to one significant figure catches that instantly, before the detailed math does.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-general.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Order-of-Magnitude Checks: How to Catch a Wrong Answer Before It Ships">
+<meta name="twitter:description" content="A rough estimate rounded to one significant figure catches most decimal-point and unit-slip errors before the detailed calculation does.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-general.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Order-of-Magnitude Checks: How to Catch a Wrong Answer Before It Ships", "item": "https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Order-of-Magnitude Checks: How to Catch a Wrong Answer Before It Ships",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "A one-line estimate rounded to a single significant figure catches most decimal-point and unit-slip errors before they reach a real calculation — how order-of-magnitude checks actually work.",
+  "url": "https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Order-of-Magnitude Checks: How to Catch a Wrong Answer Before It Ships</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#128202; General &middot; Engineering Judgment</span>
+    <h1>Order-of-Magnitude Checks</h1>
+    <p class="hero-sub">A misplaced decimal point or a mixed-up unit almost never moves an answer by 10% &mdash; it moves it by a factor of 10, 1000, or more. That's exactly the kind of error a rough estimate catches instantly.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Engineering Judgment</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">An order-of-magnitude estimate rounds every input to its nearest power of 10 &mdash; it's meant to be fast and rough, not precise.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Decimal-point slips and unit mix-ups (mm vs m, kW vs W) show up as a mismatch of 10&times;, 1,000&times;, or more &mdash; exactly the scale a rough estimate is built to catch.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The check only works run <i>before</i> looking at the detailed answer &mdash; running it after tends to anchor the estimate toward whatever number you already have in front of you.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A rough estimate that's off by 20&ndash;30% from the detailed calculation is normal and expected &mdash; it's a magnitude check, not a substitute for the real math.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What the check is actually for</h2>
+    <p>An order-of-magnitude check isn't about getting a precise number &mdash; it's about confirming the detailed calculation landed in the right neighborhood. The idea is to round every input to one significant figure, do the arithmetic in your head or on the back of an envelope, and see whether the result comes out within roughly the same power of 10 as the full calculation. It won't catch a 15% error. It will catch the errors that actually cause real damage: a misplaced decimal point, a unit left in the wrong scale, or an exponent typed in wrong &mdash; the kind of mistake that moves an answer by a factor of ten or more without the arithmetic itself looking obviously broken.</p>
+
+    <h2><span class="h2-dot"></span>Why this catches what unit-tracking doesn't</h2>
+    <p>Dimensional analysis (tracking units through a calculation) catches a different class of error &mdash; using the wrong <i>kind</i> of unit, like feeding a pressure in psi into a formula expecting Pa. An order-of-magnitude check catches something dimensional analysis lets straight through: using the right kind of unit at the wrong <i>scale</i>. Entering "1500" when a field expects kilowatts but the source data was in watts is dimensionally consistent &mdash; the units cancel just fine &mdash; and yet the answer is 1,000&times; too large. Only a rough magnitude estimate flags that kind of mistake, because dimensional analysis has no opinion on scale, only on kind.</p>
+
+    <h2><span class="h2-dot"></span>Doing the estimate</h2>
+    <div class="formula-box">Rough Estimate &nbsp;=&nbsp; (1 sig-fig value) &times; 10<sup>exponent</sup> &nbsp;&times;&nbsp; ... for every input, then combine</div>
+    <div class="formula-note">Round each input hard, keep only the leading digit and its power of 10, and let the powers of 10 add or subtract as the calculation multiplies or divides &mdash; the leading digits barely matter for this purpose.</div>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Rough estimate: ~4,000</b><span>Rounding each input to one significant figure and multiplying gives a same-order-of-magnitude sanity check.</span></div>
+      <div class="signal-card hot"><b>Detailed answer: 3.8 million</b><span>A 1,000&times; gap between the rough estimate and the full calculation is the signature of a missed unit-scale conversion somewhere in the input chain.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>When to run it</h2>
+    <p>The check works best run <i>before</i> you see the detailed result, using only the raw inputs &mdash; the moment you've already seen the calculated answer, your rough estimate quietly starts drifting toward confirming it rather than checking it independently. Running the estimate first, then comparing, keeps the two genuinely independent. It's also worth re-running whenever an input changes source or unit convention &mdash; a spreadsheet fed from a new data source is exactly where a scale mismatch tends to sneak in unnoticed.</p>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Order of magnitude</td><td>A power-of-10 scale for a quantity &mdash; two numbers are "the same order of magnitude" if they're within roughly a factor of 10 of each other</td></tr>
+        <tr><td>Significant figure</td><td>A meaningful digit in a number; rounding "to one sig-fig" keeps only the leading digit and its power of 10</td></tr>
+        <tr><td>Fermi estimate</td><td>A rough, rapid estimate built from simplified assumptions, used to bound a problem before doing the detailed work</td></tr>
+        <tr><td>Unit-scale slip</td><td>Using the correct type of unit at the wrong prefix or scale (e.g., mm entered where m was expected)</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>An order-of-magnitude check rounds inputs to one significant figure &mdash; it's meant to catch scale errors, not to replace the detailed calculation.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Decimal-point and unit-scale slips typically show up as a mismatch of 10&times; or more &mdash; exactly what a rough estimate is built to flag.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Dimensional analysis catches the wrong kind of unit; an order-of-magnitude check catches the right kind of unit at the wrong scale &mdash; the two checks are complementary, not redundant.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Run the rough estimate before looking at the detailed answer, or it stops being an independent check.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>A 20&ndash;30% gap between the rough estimate and the detailed answer is normal; a 10&times; or greater gap is the signal worth investigating.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Order-of-Magnitude%20Checks%3A%20How%20to%20Catch%20a%20Wrong%20Answer%20Before%20It%20Ships&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forder-of-magnitude-sanity-check-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forder-of-magnitude-sanity-check-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Order-of-Magnitude%20Checks%3A%20How%20to%20Catch%20a%20Wrong%20Answer%20Before%20It%20Ships&text=A%20rough%20estimate%20rounded%20to%20one%20significant%20figure%20catches%20most%20decimal-point%20and%20unit-slip%20errors%20before%20the%20detailed%20math%20does.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forder-of-magnitude-sanity-check-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Order-of-Magnitude%20Checks%3A%20How%20to%20Catch%20a%20Wrong%20Answer%20Before%20It%20Ships&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AOrder-of-Magnitude%20Checks%3A%20How%20to%20Catch%20a%20Wrong%20Answer%20Before%20It%20Ships%0AA%20rough%20estimate%20catches%20decimal-point%20and%20unit-slip%20errors%20before%20the%20detailed%20math%20does.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forder-of-magnitude-sanity-check-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../general/sanity-checker">Engineering Sanity-Checker &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="dimensional-analysis-unit-conversion-explained">Dimensional Analysis Explained: Why Tracking Units Beats Memorizing Conversion Factors</a></li><li><a href="binary-hex-octal-number-base-conversion-explained">Binary, Hex &amp; Octal Explained: How Number Base Conversion Actually Works</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../general/sanity-checker">Try the Engineering Sanity-Checker &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
