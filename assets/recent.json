@@ -1,5 +1,20 @@
 [
   {
+    "t": "CT Sizing & Burden Explained",
+    "u": "posts/ct-sizing-burden-explained",
+    "d": "2026-09-27"
+  },
+  {
+    "t": "How to Select a Digital Protection Relay",
+    "u": "posts/how-to-select-digital-protection-relay",
+    "d": "2026-09-27"
+  },
+  {
+    "t": "Power Transformer, CT & PT: Internal Construction",
+    "u": "posts/power-transformer-ct-pt-construction-explained",
+    "d": "2026-09-27"
+  },
+  {
     "t": "LMTD Heat Exchanger Sizing",
     "u": "posts/lmtd-heat-exchanger-explained",
     "d": "2026-09-27"
@@ -33,20 +48,5 @@
     "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
     "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
     "d": "2026-09-26"
-  },
-  {
-    "t": "IEC 104 Communication Protocol Explained",
-    "u": "posts/iec-104-communication-protocol-explained",
-    "d": "2026-09-25"
-  },
-  {
-    "t": "Modbus vs PROFIBUS vs Foundation Fieldbus Explained",
-    "u": "posts/modbus-vs-profibus-vs-fieldbus-explained",
-    "d": "2026-09-25"
-  },
-  {
-    "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
-    "u": "posts/plc-vs-dcs-vs-scada-explained",
-    "d": "2026-09-25"
   }
 ]

@@ -14,6 +14,27 @@
   "a": "added"
  },
  {
+  "t": "Power Transformer, CT & PT: Internal Construction",
+  "u": "posts/power-transformer-ct-pt-construction-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "How to Select a Digital Protection Relay",
+  "u": "posts/how-to-select-digital-protection-relay",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "CT Sizing & Burden Explained",
+  "u": "posts/ct-sizing-burden-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
   "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
   "d": "2026-09-26",
@@ -96,13 +117,6 @@
   "d": "2026-09-21",
   "c": "Electrical",
   "a": "added"
- },
- {
-  "t": "Power Transformer, CT & PT: Internal Construction",
-  "u": "posts/power-transformer-ct-pt-construction-explained",
-  "d": "2026-09-21",
-  "c": "Blog",
-  "a": "updated"
  },
  {
   "t": "Arc Flash Incident Energy",
@@ -1897,13 +1911,6 @@
   "a": "updated"
  },
  {
-  "t": "How to Select a Digital Protection Relay",
-  "u": "posts/how-to-select-digital-protection-relay",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "IS, IEC & IEEE Codes: The Standards Behind Electrical Engineering",
   "u": "posts/is-iec-ieee-electrical-standards-reference",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Cable Size & Current Capacity: A Practical Selection Guide",
   "u": "posts/cable-size-current-capacity-guide",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Centrifugal Pump Components Explained",
-  "u": "posts/centrifugal-pump-components-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
