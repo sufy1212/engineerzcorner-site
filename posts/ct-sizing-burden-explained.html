@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CT Sizing &amp; Burden Explained | Engineerz CorneR</title>
+<meta name="description" content="Ratio, burden, accuracy class, and short-circuit withstand — the four specs behind every current transformer, and why a CT that reads perfectly at normal load can still fail during a fault.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/ct-sizing-burden-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="CT Sizing &amp; Burden Explained: Why Undersizing a Current Transformer Breaks Protection">
+<meta property="og:description" content="A CT can meter perfectly at rated load and still saturate during a fault — burden, accuracy class, and ALF explained, and why lead length quietly eats into all three.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/ct-sizing-burden-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CT Sizing &amp; Burden Explained: Why Undersizing a Current Transformer Breaks Protection">
+<meta name="twitter:description" content="Ratio, burden, accuracy class, and short-circuit withstand — why a CT that reads perfectly at normal load can still saturate and under-report a fault.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ct-sizing-burden-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "CT Sizing & Burden Explained: Why Undersizing a Current Transformer Breaks Protection", "item": "https://www.engineerzcorner.com/posts/ct-sizing-burden-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CT Sizing & Burden Explained: Why Undersizing a Current Transformer Breaks Protection",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "Ratio, burden, accuracy class, and short-circuit withstand — the four specs behind every current transformer, and why a CT that reads perfectly at normal load can still fail during a fault.",
+  "url": "https://www.engineerzcorner.com/posts/ct-sizing-burden-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/ct-sizing-burden-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">CT Sizing &amp; Burden Explained: Why Undersizing a Current Transformer Breaks Protection</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Protection &amp; Metering</span>
+    <h1>CT Sizing &amp; Burden Explained</h1>
+    <p class="hero-sub">A current transformer can meter perfectly all day at rated load and still saturate the instant a real fault hits &mdash; because normal load and fault current test completely different specs.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Instrument Transformers</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Metering and protection CTs are built to opposite goals &mdash; a metering CT is meant to saturate on fault current to protect the meter, a protection CT is meant to stay accurate through it.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Burden isn't just the relay or meter's rated VA &mdash; lead-wire resistance adds to it, and long or thin secondary wiring can be the larger share of the total.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A protection CT's accuracy class only holds up to its Accuracy Limit Factor (ALF) &mdash; past that multiple of rated current, the core saturates and the relay stops seeing the true fault current.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Short-circuit withstand (thermal and dynamic) is a separate spec from accuracy &mdash; a CT can be accurate and still not survive the fault current physically.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Metering and protection want opposite behavior</h2>
+    <p>A current transformer steps primary current down to a standard secondary value &mdash; usually 5 A or 1 A &mdash; that relays and meters are built to accept. What separates a <b>metering CT</b> from a <b>protection CT</b> isn't the ratio, it's what each is designed to do once current climbs well above normal. A metering CT (class 0.5, 1, or 3) is meant to stay accurate near rated load, where billing and measurement actually happen, and is allowed &mdash; even expected &mdash; to saturate on high fault current, which protects the sensitive metering equipment behind it from a surge it was never meant to see. A protection CT (class 5P, 10P, or PX) does the opposite: it has to stay accurate <i>through</i> the fault, often to many times rated current, because that's exactly when the relay needs a faithful signal to decide whether and how fast to trip.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="35" width="60" height="30" rx="4" fill="none" stroke="#3E8C97" stroke-width="2.2"/>
+        <path d="M15 50 h10 M75 50 h10" stroke="#D9782E" stroke-width="2.2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>Ratio &amp; Rated Secondary Current</h3>
+        <ul class="fm-causes">
+          <li>Standard ratio (e.g., 400/5, 400/1) chosen with headroom above the maximum continuous load current, not sized tight to it</li>
+          <li>The secondary rating (1 A or 5 A) has to match what the connected relay or meter is actually built to accept</li>
+          <li>Oversizing the ratio too far above actual load current wastes accuracy at the low end &mdash; the CT spends its normal operating life in the least accurate part of its range</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 50 h20 M60 50 h20" stroke="#5FD3E3" stroke-width="2.2"/>
+        <rect x="40" y="40" width="20" height="20" rx="3" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Burden (VA)</h3>
+        <ul class="fm-causes">
+          <li>The total load the CT secondary has to drive &mdash; the connected relay or meter's rated burden, plus the resistance of the secondary lead wiring itself</li>
+          <li>Lead-wire burden grows with distance and shrinks with a larger conductor cross-section; long runs on small-gauge wire can outweigh the device burden entirely</li>
+          <li>Actual connected burden has to be checked against the CT's rated burden at its stated accuracy &mdash; a CT accurate at its rated 15 VA burden isn't automatically accurate wired at 25 VA of real-world load</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 70 L40 40 L60 55 L80 20" fill="none" stroke="#D9782E" stroke-width="2.2"/>
+        <circle cx="60" cy="55" r="3" fill="#D9782E"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>Accuracy Class &amp; ALF</h3>
+        <ul class="fm-causes">
+          <li>A protection CT's class (e.g., 5P20) states two things at once: the error limit at its Accuracy Limit Factor (5% error, in this case) and the ALF itself (20&times; rated current)</li>
+          <li>Below the ALF, the CT reproduces primary current faithfully; past it, the core saturates and secondary current stops tracking the real fault current</li>
+          <li>High-impedance protection schemes instead specify a class PX CT by its knee-point voltage &mdash; the point where a further rise in exciting voltage produces a disproportionate rise in exciting current, marking the onset of saturation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 20 L30 60 L50 80 L70 60 L70 20" fill="none" stroke="#3E8C97" stroke-width="2.2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Short-Circuit Withstand</h3>
+        <ul class="fm-causes">
+          <li>Thermal withstand (Ith) &mdash; the rms current the CT primary can carry for a defined time (typically 1 second) without thermal damage</li>
+          <li>Dynamic withstand (Idyn) &mdash; the peak asymmetrical current the winding and mounting can survive mechanically during the first cycle of a fault</li>
+          <li>A separate check from accuracy class entirely &mdash; a CT can be perfectly accurate and still not survive the mechanical and thermal stress of the system's actual fault level</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The formula for connected burden</h2>
+    <div class="formula-box">Burden (VA) &nbsp;=&nbsp; I<sub>sec</sub><sup>2</sup> &times; (R<sub>device</sub> + R<sub>leads</sub>)</div>
+    <div class="formula-note">R<sub>leads</sub> is the round-trip resistance of the secondary wiring &mdash; out to the relay and back &mdash; not just the one-way length, which is why lead burden climbs faster with distance than it might first appear.</div>
+
+    <h2><span class="h2-dot"></span>Working through the sizing</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Determine the maximum continuous primary current and select a standard ratio with reasonable headroom above it.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Confirm the secondary current rating (1 A or 5 A) matches what the connected relay or meter accepts.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Sum the connected burden: device burden (VA) plus the round-trip resistance loss of the secondary leads.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">Choose the accuracy class for the application &mdash; metering class for measurement, protection class with sufficient ALF (or PX with adequate knee-point voltage) for relaying.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Verify the stated accuracy actually holds at the real connected burden, not just the CT's rated burden on the nameplate.</span></div>
+      <div class="step"><span class="flow-num">6</span><span class="txt">Check thermal (Ith) and dynamic (Idyn) short-circuit withstand against the system's actual fault level, separately from the accuracy check.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Where it actually goes wrong</h2>
+    <p>The failure that's easy to miss at design stage: a CT specified years ago for an electromechanical relay with a high burden gets reused with a modern digital relay whose input burden is a fraction of that &mdash; which is usually fine, since lower burden generally improves accuracy margin. The opposite mistake is more damaging and far more common &mdash; long secondary cable runs to a remote panel, sized on installed convenience rather than calculated lead resistance, quietly pushing connected burden above what the CT was rated for. The CT still reads correctly at load current, so nothing looks wrong during commissioning. It's only during an actual fault, when the core saturates earlier than the protection scheme assumed, that the relay under-reads the fault current and either fails to trip or trips slower than it was coordinated to.</p>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Burden</td><td>The total VA load a CT secondary drives &mdash; connected device burden plus secondary lead-wire resistance loss</td></tr>
+        <tr><td>ALF</td><td>Accuracy Limit Factor &mdash; the multiple of rated current up to which a protection CT holds its stated accuracy class before saturating</td></tr>
+        <tr><td>Knee point voltage</td><td>For class PX CTs, the exciting voltage beyond which a further increase produces a disproportionate rise in exciting current &mdash; marks the onset of saturation</td></tr>
+        <tr><td>Ith / Idyn</td><td>Thermal and dynamic short-circuit withstand ratings &mdash; the current the CT can survive for a defined time, or as a peak, without damage</td></tr>
+        <tr><td>Class 5P20</td><td>Protection CT notation: 5% maximum composite error, holding through 20&times; rated current before saturating</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>What each spec is sensitive to</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 40 h10 l4 -8 5 16 5 -16 4 8 h6" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+        </svg>
+        <b>Burden Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 45 h20" stroke="#D9782E" stroke-width="2"/>
+          <path d="M20 45 l4 -6 M40 45 l-4 -6" stroke="#D9782E" stroke-width="1.6"/>
+        </svg>
+        <b>Lead-Length Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 16 L30 32 L42 44 L30 56 L18 44 L30 32" fill="none" stroke="#3E8C97" stroke-width="2"/>
+        </svg>
+        <b>Fault-Level Dependent</b>
+      </div>
+    </div>
+    <p>A CT sized correctly for today's system fault level can end up under-rated after a network reinforcement raises available fault current at the same busbar &mdash; the ALF and short-circuit withstand that were adequate before no longer are. Both checks belong on the list whenever upstream fault levels change, not just at initial design.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Metering CTs are meant to saturate on fault current to protect meters; protection CTs are meant to stay accurate through the fault &mdash; the two classes serve opposite goals.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Burden includes the secondary lead-wire resistance, not just the connected device's rated VA &mdash; long or thin lead runs can dominate the total.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>A protection CT's accuracy class only holds up to its ALF (or, for class PX, up to its knee-point voltage) &mdash; past that, the core saturates.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Short-circuit thermal (Ith) and dynamic (Idyn) withstand are separate specs from accuracy &mdash; both need checking against actual system fault level.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>A CT reading correctly at normal load tells you nothing about its behavior during a fault &mdash; that's a completely different part of its rating.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=CT%20Sizing%20%26%20Burden%20Explained%3A%20Why%20Undersizing%20a%20Current%20Transformer%20Breaks%20Protection&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fct-sizing-burden-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fct-sizing-burden-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=CT%20Sizing%20%26%20Burden%20Explained%3A%20Why%20Undersizing%20a%20Current%20Transformer%20Breaks%20Protection&text=Ratio%2C%20burden%2C%20accuracy%20class%2C%20and%20short-circuit%20withstand%20%E2%80%94%20why%20a%20CT%20that%20reads%20perfectly%20at%20normal%20load%20can%20still%20fail%20during%20a%20fault.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fct-sizing-burden-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=CT%20Sizing%20%26%20Burden%20Explained%3A%20Why%20Undersizing%20a%20Current%20Transformer%20Breaks%20Protection&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACT%20Sizing%20%26%20Burden%20Explained%0AWhy%20a%20CT%20that%20reads%20perfectly%20at%20normal%20load%20can%20still%20fail%20during%20a%20fault.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fct-sizing-burden-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../electrical/ct-sizing-burden-calculator">CT Sizing &amp; Burden Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="power-transformer-ct-pt-construction-explained">Power Transformer, CT &amp; PT Construction Explained</a></li><li><a href="how-to-select-digital-protection-relay">How to Select a Digital Protection Relay</a></li><li><a href="ansi-relay-numbers-protection-functions">ANSI Relay Numbers &amp; Protection Functions</a></li><li><a href="short-circuit-current-iec-60909-basics">Short-Circuit Current: IEC 60909 Basics</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../electrical/ct-sizing-burden-calculator">Try the CT Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
