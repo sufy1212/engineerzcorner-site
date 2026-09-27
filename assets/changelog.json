@@ -49,6 +49,20 @@
   "a": "added"
  },
  {
+  "t": "Binary, Hex & Octal Explained",
+  "u": "posts/binary-hex-octal-number-base-conversion-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Elapsed Time Calculations",
+  "u": "posts/elapsed-time-duration-calculations-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
   "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
   "d": "2026-09-26",
@@ -65,13 +79,6 @@
  {
   "t": "Markup vs Margin Explained",
   "u": "posts/markup-vs-margin-explained",
-  "d": "2026-09-26",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Binary, Hex & Octal Explained",
-  "u": "posts/binary-hex-octal-number-base-conversion-explained",
   "d": "2026-09-26",
   "c": "Blog",
   "a": "added"
@@ -2088,13 +2095,6 @@
  {
   "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
   "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Cable Glands: What They Do and How to Get the Selection Right",
-  "u": "posts/cable-gland-overview-selection-guide",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
