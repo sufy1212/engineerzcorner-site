@@ -35,6 +35,20 @@
   "a": "added"
  },
  {
+  "t": "Dimensional Analysis Explained",
+  "u": "posts/dimensional-analysis-unit-conversion-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Order-of-Magnitude Checks",
+  "u": "posts/order-of-magnitude-sanity-check-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
   "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
   "d": "2026-09-26",
@@ -58,13 +72,6 @@
  {
   "t": "Binary, Hex & Octal Explained",
   "u": "posts/binary-hex-octal-number-base-conversion-explained",
-  "d": "2026-09-26",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Dimensional Analysis Explained",
-  "u": "posts/dimensional-analysis-unit-conversion-explained",
   "d": "2026-09-26",
   "c": "Blog",
   "a": "added"
@@ -2088,13 +2095,6 @@
  {
   "t": "Cable Glands: What They Do and How to Get the Selection Right",
   "u": "posts/cable-gland-overview-selection-guide",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Cable Size & Current Capacity: A Practical Selection Guide",
-  "u": "posts/cable-size-current-capacity-guide",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"

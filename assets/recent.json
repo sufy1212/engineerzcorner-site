@@ -1,5 +1,15 @@
 [
   {
+    "t": "Dimensional Analysis Explained",
+    "u": "posts/dimensional-analysis-unit-conversion-explained",
+    "d": "2026-09-27"
+  },
+  {
+    "t": "Order-of-Magnitude Checks",
+    "u": "posts/order-of-magnitude-sanity-check-explained",
+    "d": "2026-09-27"
+  },
+  {
     "t": "CT Sizing & Burden Explained",
     "u": "posts/ct-sizing-burden-explained",
     "d": "2026-09-27"
@@ -30,11 +40,6 @@
     "d": "2026-09-26"
   },
   {
-    "t": "Dimensional Analysis Explained",
-    "u": "posts/dimensional-analysis-unit-conversion-explained",
-    "d": "2026-09-26"
-  },
-  {
     "t": "Markup vs Margin Explained",
     "u": "posts/markup-vs-margin-explained",
     "d": "2026-09-26"
@@ -42,11 +47,6 @@
   {
     "t": "Percentage Points vs Percent Change: Why They're Not the Same Number",
     "u": "posts/percentage-points-vs-percent-change-explained",
-    "d": "2026-09-26"
-  },
-  {
-    "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
-    "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
     "d": "2026-09-26"
   }
 ]
