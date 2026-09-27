@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elapsed Time Calculations Explained | Engineerz CorneR</title>
+<meta name="description" content="Why subtracting clock times like decimal numbers gives the wrong answer — time runs on base 60 for seconds and minutes and base 24 for hours, and borrowing across those bases is where the errors creep in.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Elapsed Time Calculations Explained: Why Time Isn't Base 10">
+<meta property="og:description" content="Subtract 9:15 from 14:40 like ordinary decimal numbers and you'll get the wrong answer — time runs on base 60 for minutes and seconds, and borrowing across that base is where the mistakes happen.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-general.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elapsed Time Calculations Explained: Why Time Isn't Base 10">
+<meta name="twitter:description" content="Time runs on base 60 for minutes and seconds, not base 10 — subtracting clock times like ordinary decimals is exactly where the errors creep in.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-general.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Elapsed Time Calculations Explained: Why Time Isn't Base 10", "item": "https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Elapsed Time Calculations Explained: Why Time Isn't Base 10",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "Why subtracting clock times like decimal numbers gives the wrong answer — time runs on base 60 for seconds and minutes and base 24 for hours, and borrowing across those bases is where the errors creep in.",
+  "url": "https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Elapsed Time Calculations Explained: Why Time Isn't Base 10</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#128202; General &middot; Numbers &amp; Units</span>
+    <h1>Elapsed Time Calculations</h1>
+    <p class="hero-sub">14:40 minus 9:15 isn't 5.25 &mdash; it's 5 hours 25 minutes. Subtract clock times like ordinary decimals and the answer comes out wrong every time the minutes don't line up.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Numbers &amp; Units</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Minutes and seconds run on base 60, not base 10 &mdash; treating "1.5 hours" as 1 hour 50 minutes instead of 1 hour 30 minutes is the same kind of mistake in reverse.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Subtracting clock times sometimes needs to "borrow" 60 minutes from the hours column, the same way decimal subtraction borrows 10 from the next column over.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A span that crosses midnight needs 24 hours added before the subtraction makes sense, or the result comes out negative.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Converting a duration to decimal hours for timesheets or billing means dividing the minutes by 60, not just moving a decimal point &mdash; 45 minutes is 0.75 hours, not 0.45.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why clock arithmetic isn't decimal arithmetic</h2>
+    <p>A clock reading of 2:45 isn't the number 2.45 &mdash; it's 2 hours and 45 out of the next 60 minutes. Treating it like an ordinary decimal is the single most common source of time-math errors: subtracting 9:15 from 14:40 by ordinary decimal subtraction would give "5.25," which looks like it should mean 5 hours 25 minutes, but 0.25 of an hour is 15 minutes, not 25. The correct answer is 5 hours 25 minutes purely by coincidence of these particular numbers &mdash; change either time slightly and decimal subtraction stops working, because minutes carry in blocks of 60, not 10.</p>
+
+    <h2><span class="h2-dot"></span>Subtracting times: when you need to borrow</h2>
+    <p>Subtracting two clock times works one column at a time, hours and minutes separately &mdash; until the minutes being subtracted are larger than the minutes being subtracted from. At that point, just like borrowing 10 from the tens column in decimal subtraction, you borrow 60 minutes from the hours column.</p>
+    <div class="formula-box">14:20 &minus; 9:45 &nbsp;&rarr;&nbsp; borrow: 13:80 &minus; 9:45 &nbsp;=&nbsp; 4:35</div>
+    <div class="formula-note">14:20 became 13 hours plus 80 minutes (14&times;60+20 = 860 minutes, same total) so that 80 &minus; 45 doesn't go negative. The hours then subtract normally: 13 &minus; 9 = 4.</div>
+
+    <h2><span class="h2-dot"></span>Spans that cross midnight</h2>
+    <p>A shift running from 22:00 to 06:00 can't be subtracted directly &mdash; 06:00 minus 22:00 gives a negative number, because the subtraction doesn't know the clock rolled over to a new day. The fix is to add 24 hours to the end time before subtracting, which accounts for the day boundary being crossed:</p>
+    <div class="formula-box">06:00 + 24:00 &minus; 22:00 &nbsp;=&nbsp; 30:00 &minus; 22:00 &nbsp;=&nbsp; 8:00</div>
+    <div class="formula-note">An 8-hour shift, correctly, once the day rollover is accounted for — without the +24:00 adjustment the raw subtraction would wrongly suggest a negative duration.</div>
+
+    <h2><span class="h2-dot"></span>Converting to decimal hours</h2>
+    <p>Timesheets and billing often need a duration expressed as decimal hours rather than hours-and-minutes &mdash; and this conversion divides by 60, it doesn't just move a decimal point. 45 minutes is <code>45 &divide; 60 = 0.75</code> hours, not 0.45. A duration of 5 hours 25 minutes becomes <code>5 + (25&divide;60) = 5.417</code> hours. Skipping the division and writing "5.25" for "5 hours 25 minutes" is a subtle-looking error that compounds badly across a full timesheet or invoice.</p>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Sexagesimal</td><td>A base-60 counting system &mdash; the reason minutes and seconds each run 0&ndash;59 before carrying, inherited from ancient Babylonian mathematics</td></tr>
+        <tr><td>Borrowing</td><td>Taking a unit from the next larger place value to allow a subtraction to complete without going negative &mdash; 60 minutes from an hour, just as 10 units are borrowed from a tens column in decimal</td></tr>
+        <tr><td>Decimal hours</td><td>A duration expressed as a single number of hours with a fractional part, found by dividing the minutes portion by 60</td></tr>
+        <tr><td>24-hour rollover</td><td>The adjustment needed when a time span crosses midnight, adding 24 hours to the later clock reading before subtracting</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Minutes and seconds run on base 60, not base 10 &mdash; subtracting clock times as if they were ordinary decimals gives the wrong answer whenever borrowing is needed.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Borrowing in time subtraction moves 60 minutes into the minutes column, the same logic as borrowing 10 in decimal subtraction &mdash; just a different base.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>A span crossing midnight needs 24 hours added to the end time before subtracting, or the result comes out negative.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Converting minutes to decimal hours means dividing by 60, not moving a decimal point &mdash; 45 minutes is 0.75 hours, not 0.45.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Whenever a time calculation is done by hand, checking it against a rough estimate first catches most of these base-60 slip-ups before they reach a timesheet.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Elapsed%20Time%20Calculations%20Explained%3A%20Why%20Time%20Isn%27t%20Base%2010&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Felapsed-time-duration-calculations-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Felapsed-time-duration-calculations-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Elapsed%20Time%20Calculations%20Explained%3A%20Why%20Time%20Isn%27t%20Base%2010&text=Time%20runs%20on%20base%2060%20for%20minutes%20and%20seconds%2C%20not%20base%2010%20%E2%80%94%20subtracting%20clock%20times%20like%20ordinary%20decimals%20is%20where%20the%20errors%20creep%20in.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Felapsed-time-duration-calculations-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Elapsed%20Time%20Calculations%20Explained%3A%20Why%20Time%20Isn%27t%20Base%2010&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AElapsed%20Time%20Calculations%20Explained%0ATime%20runs%20on%20base%2060%2C%20not%20base%2010.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Felapsed-time-duration-calculations-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../general/time-duration-calculator">Time Duration Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="binary-hex-octal-number-base-conversion-explained">Binary, Hex &amp; Octal Explained: How Number Base Conversion Actually Works</a></li><li><a href="dimensional-analysis-unit-conversion-explained">Dimensional Analysis Explained: Why Tracking Units Beats Memorizing Conversion Factors</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../general/time-duration-calculator">Try the Time Duration Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
