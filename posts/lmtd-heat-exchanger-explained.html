@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LMTD Heat Exchanger Sizing Explained | Engineerz CorneR</title>
+<meta name="description" content="Log-mean temperature difference explained — why it isn't just an average of the two ends, why counter-current beats co-current for the same terminal temperatures, and where the F correction factor comes in.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="LMTD Heat Exchanger Sizing Explained">
+<meta property="og:description" content="Why the driving temperature difference in a heat exchanger is a log-mean, not a simple average, and why flow arrangement changes the required area for the same duty.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LMTD Heat Exchanger Sizing Explained">
+<meta name="twitter:description" content="Terminal temperature differences, flow arrangement, the overall heat transfer coefficient, and the F correction factor — the four pieces behind every LMTD sizing calc.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lmtd-heat-exchanger-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "LMTD Heat Exchanger Sizing Explained", "item": "https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LMTD Heat Exchanger Sizing Explained",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "Log-mean temperature difference explained — why it isn't just an average of the two ends, why counter-current beats co-current for the same terminal temperatures, and where the F correction factor comes in.",
+  "url": "https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">LMTD Heat Exchanger Sizing Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Heat Transfer</span>
+    <h1>LMTD Heat Exchanger Sizing</h1>
+    <p class="hero-sub">The temperature difference driving heat transfer isn't a simple average of the two ends &mdash; it's a log-mean, and getting the flow arrangement wrong changes how much area the exchanger actually needs.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Heat Transfer</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">LMTD is a log-mean, not an arithmetic average &mdash; using a simple average of the two terminal temperature differences overstates the driving force and undersizes the exchanger.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Counter-current flow gives a larger LMTD than co-current for the identical inlet and outlet temperatures &mdash; meaning less area for the same duty.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A correction factor F is needed the moment the exchanger isn't purely counter-current &mdash; most real shell-and-tube units, with multiple passes, fall into this category.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The overall heat transfer coefficient U isn't fixed for the life of the exchanger &mdash; fouling builds up in service and pulls U down, shrinking the same exchanger's effective capacity over time.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why "log-mean" and not just "mean"</h2>
+    <p>Inside a heat exchanger, the temperature difference between the hot and cold streams isn't constant along its length &mdash; it's largest at one end and smallest at the other, and it doesn't shrink in a straight line between them. Averaging the two end values arithmetically would overstate the real driving force, because the temperature difference decays exponentially rather than linearly. The <b>log-mean temperature difference (LMTD)</b> accounts for that curve, and it's always smaller than the simple arithmetic average of the two ends &mdash; usually only slightly, but the gap grows as the two terminal differences pull further apart.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 25 h70" stroke="#D9782E" stroke-width="2.2"/>
+        <path d="M15 75 h70" stroke="#5FD3E3" stroke-width="2.2"/>
+        <path d="M15 25 v50 M85 25 v50" stroke="#3E8C97" stroke-width="1.6" stroke-dasharray="3 3"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>Terminal Temperature Differences (&Delta;T1, &Delta;T2)</h3>
+        <ul class="fm-causes">
+          <li>The gap between hot and cold stream temperatures at each end of the exchanger &mdash; not the inlet and outlet temperatures of either stream alone</li>
+          <li>Which stream temperature pairs with which at each end depends entirely on the flow arrangement, so the two must be assigned consistently before anything is calculated</li>
+          <li>These two numbers are the only inputs LMTD actually needs, beyond deciding which one is called &Delta;T1 versus &Delta;T2</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 35 h50" stroke="#D9782E" stroke-width="2.2" marker-end="url(#a1)"/>
+        <path d="M65 65 h-50" stroke="#5FD3E3" stroke-width="2.2" marker-end="url(#a2)"/>
+        <defs>
+          <marker id="a1" markerWidth="6" markerHeight="6" refX="4" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4 Z" fill="#D9782E"/></marker>
+          <marker id="a2" markerWidth="6" markerHeight="6" refX="4" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4 Z" fill="#5FD3E3"/></marker>
+        </defs>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Flow Arrangement</h3>
+        <ul class="fm-causes">
+          <li><b>Counter-current:</b> the two streams flow in opposite directions &mdash; the hot stream's outlet meets the cold stream's inlet, keeping a driving temperature difference along the full length</li>
+          <li><b>Co-current (parallel):</b> both streams flow the same direction &mdash; the temperature difference is largest at the shared inlet end and collapses fast, so the outlet end contributes little further heat transfer</li>
+          <li>For the same four terminal temperatures, counter-current always produces a larger LMTD, meaning less required area for the identical duty</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="24" fill="none" stroke="#3E8C97" stroke-width="2.2"/>
+        <path d="M35 50 h30 M50 35 v30" stroke="#3E8C97" stroke-width="1.6"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>Overall Heat Transfer Coefficient (U)</h3>
+        <ul class="fm-causes">
+          <li>Combines every resistance to heat transfer between the two fluids &mdash; film coefficients on each side, wall conduction, and any fouling layer &mdash; into a single number</li>
+          <li>Not a fixed property of the metal; it changes with fluid velocity, physical properties, and the exchanger geometry, so it has to be estimated or measured for the actual service</li>
+          <li>Fouling builds up over time in service and lowers U, which is why a clean-condition sizing calc is usually run against a fouled-condition design case as well</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="30" width="60" height="40" rx="4" fill="none" stroke="#D9782E" stroke-width="2.2"/>
+        <path d="M20 50 h60" stroke="#D9782E" stroke-width="1.6" stroke-dasharray="4 3"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Correction Factor (F)</h3>
+        <ul class="fm-causes">
+          <li>The LMTD formula assumes pure counter-current or pure co-current flow; most shell-and-tube exchangers use multiple tube passes or crossflow, which fall short of that ideal</li>
+          <li>F is a multiplier (0 to 1) applied to the counter-current LMTD to correct for the real flow pattern, read from standard charts based on the temperature ranges and number of passes</li>
+          <li>A design that skips F on a multi-pass exchanger overstates the effective driving force and undersizes the required area</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The formulas</h2>
+    <div class="formula-box">LMTD &nbsp;=&nbsp; (&Delta;T1 &minus; &Delta;T2) &nbsp;/&nbsp; ln(&Delta;T1 / &Delta;T2)</div>
+    <div class="formula-note">Undefined when &Delta;T1 equals &Delta;T2 exactly &mdash; in that limiting case, LMTD simply equals that common value.</div>
+    <div class="formula-box">Q &nbsp;=&nbsp; U &times; A &times; F &times; LMTD</div>
+    <div class="formula-note">Heat duty (Q) links required area (A) to the overall coefficient (U), the flow-arrangement correction (F), and the log-mean driving force &mdash; rearranged to solve for A once Q, U and F are known.</div>
+
+    <h2><span class="h2-dot"></span>Working through the calculation</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Establish inlet and outlet temperatures for both the hot and cold streams from the process duty.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Decide the flow arrangement and pair up the stream temperatures at each end to get &Delta;T1 and &Delta;T2.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Calculate LMTD = (&Delta;T1 &minus; &Delta;T2) / ln(&Delta;T1/&Delta;T2).</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">If the exchanger isn't purely counter-current, look up the correction factor F for the actual pass arrangement.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Estimate the overall heat transfer coefficient U for the fluids, geometry, and expected fouling condition.</span></div>
+      <div class="step"><span class="flow-num">6</span><span class="txt">Solve for required area: A = Q / (U &times; F &times; LMTD).</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>LMTD</td><td>Log-mean temperature difference &mdash; the effective driving temperature difference across a heat exchanger, accounting for its exponential decay along the length</td></tr>
+        <tr><td>Counter-current</td><td>Flow arrangement where the two streams move in opposite directions, maximizing LMTD for given terminal temperatures</td></tr>
+        <tr><td>Co-current (parallel flow)</td><td>Flow arrangement where both streams move the same direction, producing a smaller LMTD than counter-current for the same temperatures</td></tr>
+        <tr><td>U (overall coefficient)</td><td>A single number combining every resistance to heat transfer between the two fluids, including fouling</td></tr>
+        <tr><td>F (correction factor)</td><td>A multiplier applied to counter-current LMTD to account for multi-pass or crossflow exchangers that aren't purely counter-current</td></tr>
+        <tr><td>Fouling</td><td>Deposit buildup on heat transfer surfaces over time in service, which lowers U and reduces effective capacity</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>What each term is sensitive to</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 40 h10 l4 -8 5 16 5 -16 4 8 h6" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+        </svg>
+        <b>Flow-Arrangement Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="16" fill="none" stroke="#D9782E" stroke-width="2"/>
+          <path d="M30 20 v10 l7 5" stroke="#D9782E" stroke-width="1.8" fill="none"/>
+        </svg>
+        <b>Time-in-Service Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="16" width="28" height="28" rx="3" fill="none" stroke="#3E8C97" stroke-width="2"/>
+        </svg>
+        <b>Pass-Count Dependent</b>
+      </div>
+    </div>
+    <p>A brand-new exchanger sized only against clean-condition U will show reduced performance as fouling accumulates, which is why fouling factors are built into U from the start rather than added as an afterthought. Similarly, adding tube passes for compactness pulls F further from 1, quietly working against the extra length gained &mdash; the two design choices trade off against each other rather than both being free wins.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>LMTD is a log-mean, not an arithmetic average &mdash; it's always smaller than the simple average of the two terminal &Delta;Ts.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Counter-current flow produces a larger LMTD than co-current for the same four terminal temperatures, meaning less required area.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Multi-pass or crossflow exchangers need a correction factor F applied to the counter-current LMTD &mdash; skipping it undersizes the area.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>U isn't a fixed property &mdash; it depends on fluid velocity, geometry, and fouling, and typically needs both a clean and a fouled design case.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Required area comes from A = Q / (U &times; F &times; LMTD) &mdash; every term in that equation has its own separate source of uncertainty.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=LMTD%20Heat%20Exchanger%20Sizing%20Explained&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flmtd-heat-exchanger-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flmtd-heat-exchanger-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=LMTD%20Heat%20Exchanger%20Sizing%20Explained&text=Why%20the%20driving%20temperature%20difference%20in%20a%20heat%20exchanger%20is%20a%20log-mean%2C%20not%20an%20average%2C%20and%20why%20flow%20arrangement%20changes%20the%20required%20area.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flmtd-heat-exchanger-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=LMTD%20Heat%20Exchanger%20Sizing%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ALMTD%20Heat%20Exchanger%20Sizing%20Explained%0AWhy%20the%20driving%20temperature%20difference%20is%20a%20log-mean%2C%20not%20an%20average.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Flmtd-heat-exchanger-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../process/heat-exchanger-lmtd-sizing">Heat Exchanger Sizing (LMTD) Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="npsh-available-explained">NPSH Available Explained: What Actually Feeds the Calculation</a></li><li><a href="control-valve-components-explained">Control Valve Components Explained</a></li><li><a href="cavitation-vs-flashing-control-valve-explained">Cavitation vs. Flashing in Control Valves: What's the Difference?</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/heat-exchanger-lmtd-sizing">Try the LMTD Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
