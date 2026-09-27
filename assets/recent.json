@@ -1,5 +1,15 @@
 [
   {
+    "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
+    "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
+    "d": "2026-09-27"
+  },
+  {
+    "t": "Tank Breathing Losses",
+    "u": "posts/tank-breathing-losses-api2000-explained",
+    "d": "2026-09-27"
+  },
+  {
     "t": "Binary, Hex & Octal Explained",
     "u": "posts/binary-hex-octal-number-base-conversion-explained",
     "d": "2026-09-27"
@@ -38,15 +48,5 @@
     "t": "LMTD Heat Exchanger Sizing",
     "u": "posts/lmtd-heat-exchanger-explained",
     "d": "2026-09-27"
-  },
-  {
-    "t": "NPSH Available Explained",
-    "u": "posts/npsh-available-explained",
-    "d": "2026-09-27"
-  },
-  {
-    "t": "Markup vs Margin Explained",
-    "u": "posts/markup-vs-margin-explained",
-    "d": "2026-09-26"
   }
 ]

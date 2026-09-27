@@ -63,6 +63,20 @@
   "a": "added"
  },
  {
+  "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
+  "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Tank Breathing Losses",
+  "u": "posts/tank-breathing-losses-api2000-explained",
+  "d": "2026-09-27",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
   "u": "posts/npsh-margin-why-passing-on-paper-can-still-cavitate",
   "d": "2026-09-26",
@@ -1358,13 +1372,6 @@
   "a": "updated"
  },
  {
-  "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
-  "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Star (Y) and Delta (Δ) Connections Explained",
   "u": "posts/star-delta-connection-explained",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
   "u": "posts/bms-point-types-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
-  "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
