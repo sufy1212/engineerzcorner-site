@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tank Breathing Losses Explained (API 2000) | Engineerz CorneR</title>
+<meta name="description" content="A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, sized by the API 2000 simplified method.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Tank Breathing Losses Explained (API 2000)">
+<meta property="og:description" content="Why a tank that's never filled or emptied still needs to vent — thermal breathing from day-night temperature swings, and working losses from filling and emptying, sized per API 2000.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tank Breathing Losses Explained (API 2000)">
+<meta name="twitter:description" content="Thermal breathing and working losses are the two normal venting mechanisms behind every atmospheric storage tank — and fire-case venting is a separate, much larger check entirely.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tank-breathing-losses-api2000-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Tank Breathing Losses Explained (API 2000)", "item": "https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tank Breathing Losses Explained (API 2000)",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, sized by the API 2000 simplified method.",
+  "url": "https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Tank Breathing Losses Explained (API 2000)</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Storage &amp; Venting</span>
+    <h1>Tank Breathing Losses</h1>
+    <p class="hero-sub">A tank that's never filled or emptied still has to vent &mdash; the sun rising and setting is enough on its own. That's normal breathing, and it's a separate calculation from filling and emptying entirely.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; API 2000</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Thermal breathing happens with the tank standing completely still &mdash; day-night ambient temperature swings alone expand and contract the vapor space enough to need venting.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Working losses are separate and additive &mdash; filling pushes vapor out (outbreathing), emptying draws air in (inbreathing), on top of whatever thermal breathing is already doing.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The normal vent has to be sized to the larger combined requirement, not to thermal or working loss alone &mdash; the two occur together, not as alternatives.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Normal venting and fire-case venting are entirely different calculations with entirely different flow rates &mdash; a normal vent sized correctly says nothing about fire-case adequacy.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two separate reasons a tank vents</h2>
+    <p>An atmospheric storage tank needs a way to breathe simply because its vapor space isn't a fixed volume of gas &mdash; it expands and contracts, and something has to give. There are two distinct, additive mechanisms behind that movement, and API 2000 treats them separately before combining them.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="10" fill="none" stroke="#D9782E" stroke-width="2.2"/>
+        <path d="M30 12 v6 M30 42 v6 M12 30 h6 M42 30 h6" stroke="#D9782E" stroke-width="1.8"/>
+        <path d="M60 45 a10 10 0 1 0 0.1 0" fill="none" stroke="#3E8C97" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>Thermal Breathing</h3>
+        <ul class="fm-causes">
+          <li>Day-night ambient temperature swings heat and cool the vapor space, expanding it during the day (outbreathing) and contracting it overnight (inbreathing)</li>
+          <li>Happens with zero liquid movement &mdash; an idle, sealed tank still needs to vent purely from this effect</li>
+          <li>API 2000's simplified method gives thermal breathing rate as a function of tank capacity alone, from standard lookup tables (Table 1)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="20" width="40" height="55" rx="3" fill="none" stroke="#5FD3E3" stroke-width="2.2"/>
+        <path d="M50 20 v-10 M45 14 l5 -4 5 4" stroke="#D9782E" stroke-width="2" fill="none"/>
+        <path d="M50 75 v10 M45 81 l5 4 5 -4" stroke="#3E8C97" stroke-width="2" fill="none"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Working Losses</h3>
+        <ul class="fm-causes">
+          <li><b>Filling:</b> the incoming liquid displaces vapor, pushing it out through the vent &mdash; outbreathing driven directly by the fill rate</li>
+          <li><b>Emptying:</b> the falling liquid level draws air in to replace the departing volume &mdash; inbreathing driven by the pump-out rate</li>
+          <li>API 2000's simplified method (Table 2) approximates the working venting rate as proportional to the maximum filling or emptying rate, in air-equivalent volume</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="25" y="30" width="50" height="35" rx="4" fill="none" stroke="#D9782E" stroke-width="2.2"/>
+        <circle cx="50" cy="25" r="6" fill="none" stroke="#D9782E" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>Normal Vent (PV Valve) Sizing</h3>
+        <ul class="fm-causes">
+          <li>Total outbreathing = thermal outbreathing + working outbreathing; total inbreathing = thermal inbreathing + working inbreathing &mdash; both totals matter, sized separately</li>
+          <li>The normal (pressure/vacuum relief) vent is sized to the larger of the two combined totals, at its rated set pressure and set vacuum</li>
+          <li>These are normal operating conditions &mdash; not an emergency or upset case, which is why this is called "normal" venting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 20 L65 50 H35 Z" fill="none" stroke="#3E8C97" stroke-width="2.2"/>
+        <path d="M50 35 v10 M50 50 v3" stroke="#3E8C97" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Fire-Case Venting (Separate Check)</h3>
+        <ul class="fm-causes">
+          <li>External fire exposure boils liquid inside the tank at a rate far exceeding anything normal breathing or working losses produce</li>
+          <li>Sized by an entirely different method (API 2000's fire-exposure equations, based on wetted surface area) and usually requires a much larger emergency vent or relief device</li>
+          <li>A tank's normal vent being correctly sized says nothing about whether its fire-case venting is adequate &mdash; the two are independent checks against independent requirements</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Working through the simplified method</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Determine tank shell capacity (and diameter, for larger tanks) as the basis for the thermal breathing lookup.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Read thermal outbreathing and inbreathing rates from API 2000 Table 1 for that capacity.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Calculate working outbreathing from the maximum filling rate, and working inbreathing from the maximum emptying (pump-out) rate, per API 2000 Table 2.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">Add thermal and working requirements separately for each direction: total outbreathing and total inbreathing.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Size the normal vent (PV valve) to the larger of the two totals, at its rated set pressure and set vacuum.</span></div>
+      <div class="step"><span class="flow-num">6</span><span class="txt">Check fire-case venting separately, using the wetted-surface-area method &mdash; never substitute the normal vent sizing for it.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Thermal breathing</td><td>Vapor space expansion and contraction from ambient temperature changes, occurring even with no liquid movement</td></tr>
+        <tr><td>Working loss</td><td>Vapor displaced (outbreathing) or air drawn in (inbreathing) as a direct result of filling or emptying the tank</td></tr>
+        <tr><td>Outbreathing / Inbreathing</td><td>Vapor leaving the tank (outbreathing, from heating or filling) versus air entering it (inbreathing, from cooling or emptying)</td></tr>
+        <tr><td>Normal vent</td><td>The pressure/vacuum relief device sized for everyday thermal and working venting, as distinct from emergency or fire-case venting</td></tr>
+        <tr><td>Fire-case venting</td><td>Emergency venting sized for the much higher vapor generation rate caused by external fire exposure, calculated separately from normal venting</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>What each mechanism is sensitive to</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="16" width="28" height="28" rx="3" fill="none" stroke="#3E8C97" stroke-width="2"/>
+        </svg>
+        <b>Capacity Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 40 h10 l4 -8 5 16 5 -16 4 8 h6" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+        </svg>
+        <b>Fill/Empty-Rate Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="16" fill="none" stroke="#D9782E" stroke-width="2"/>
+          <path d="M30 20 v10 l7 5" stroke="#D9782E" stroke-width="1.8" fill="none"/>
+        </svg>
+        <b>Ambient-Swing Dependent</b>
+      </div>
+    </div>
+    <p>A tank in an intermittent or idle service is easy to underestimate &mdash; with no scheduled fills or draws, it's tempting to assume it needs no venting attention at all. Thermal breathing keeps happening regardless, driven purely by daily ambient temperature swings, which is exactly why API 2000's thermal table has no filling or emptying rate as an input at all.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Thermal breathing happens with the tank completely idle &mdash; ambient temperature swings alone are enough to require normal venting.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Working losses from filling and emptying are additive to thermal breathing, not alternatives to it.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>The normal vent is sized to the larger combined total &mdash; outbreathing or inbreathing &mdash; not to either mechanism in isolation.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Fire-case venting is a completely separate calculation with much higher flow requirements &mdash; a correctly sized normal vent doesn't imply fire-case adequacy.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>An idle tank in intermittent service still needs its normal vent checked &mdash; thermal breathing doesn't stop just because the tank isn't being filled or emptied.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Tank%20Breathing%20Losses%20Explained%20(API%202000)&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftank-breathing-losses-api2000-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftank-breathing-losses-api2000-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Tank%20Breathing%20Losses%20Explained%20(API%202000)&text=Why%20a%20tank%20that%27s%20never%20filled%20or%20emptied%20still%20needs%20to%20vent%20%E2%80%94%20thermal%20breathing%20and%20working%20losses%20explained.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftank-breathing-losses-api2000-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Tank%20Breathing%20Losses%20Explained%20(API%202000)&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ATank%20Breathing%20Losses%20Explained%20(API%202000)%0AWhy%20a%20tank%20that%27s%20never%20filled%20or%20emptied%20still%20needs%20to%20vent.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ftank-breathing-losses-api2000-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../process/tank-breathing-loss-api2000">Tank Breathing / Venting Loss Calculator (API 2000) &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="psv-types-conventional-bellows-pilot-operated-compared">PSV Types: Conventional, Bellows &amp; Pilot-Operated Compared</a></li><li><a href="control-valve-components-explained">Control Valve Components Explained</a></li><li><a href="lmtd-heat-exchanger-explained">LMTD Heat Exchanger Sizing Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/tank-breathing-loss-api2000">Try the Tank Breathing Loss Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
