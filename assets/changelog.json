@@ -21,6 +21,20 @@
   "a": "added"
  },
  {
+  "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
+  "u": "posts/pipe-flow-capacity-mannings-equation-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Rational Method: How Peak Stormwater Runoff Is Estimated",
+  "u": "posts/rational-method-peak-runoff-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Available Explained",
   "u": "posts/npsh-available-explained",
   "d": "2026-09-27",
@@ -1407,13 +1421,6 @@
   "a": "updated"
  },
  {
-  "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
-  "u": "posts/pipe-flow-capacity-mannings-equation-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Rebar Development Length: Why Bar Diameter Decides the Embedment, Not Rules of Thumb",
   "u": "posts/rebar-development-length-lap-splice-explained",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Bearing Failures: Root Causes & Prevention",
   "u": "posts/bearing-failure-modes-causes-prevention",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
-  "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"

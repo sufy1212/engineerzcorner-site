@@ -1,5 +1,15 @@
 [
   {
+    "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
+    "u": "posts/pipe-flow-capacity-mannings-equation-explained",
+    "d": "2026-09-28"
+  },
+  {
+    "t": "Rational Method: How Peak Stormwater Runoff Is Estimated",
+    "u": "posts/rational-method-peak-runoff-explained",
+    "d": "2026-09-28"
+  },
+  {
     "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
     "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
     "d": "2026-09-28"
@@ -37,16 +47,6 @@
   {
     "t": "CT Sizing & Burden Explained",
     "u": "posts/ct-sizing-burden-explained",
-    "d": "2026-09-27"
-  },
-  {
-    "t": "How to Select a Digital Protection Relay",
-    "u": "posts/how-to-select-digital-protection-relay",
-    "d": "2026-09-27"
-  },
-  {
-    "t": "Power Transformer, CT & PT: Internal Construction",
-    "u": "posts/power-transformer-ct-pt-construction-explained",
     "d": "2026-09-27"
   }
 ]
