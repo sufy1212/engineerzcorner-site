@@ -103,7 +103,7 @@
         <ul class="fm-causes">
           <li>Day-night ambient temperature swings heat and cool the vapor space, expanding it during the day (outbreathing) and contracting it overnight (inbreathing)</li>
           <li>Happens with zero liquid movement &mdash; an idle, sealed tank still needs to vent purely from this effect</li>
-          <li>API 2000 gives thermal breathing rates from tables keyed mainly to tank capacity; newer editions can add other factors such as vapor pressure or latitude, so use the edition your project specifies</li>
+          <li>In the current (7th) edition, thermal outbreathing and inbreathing come from equations based on tank volume, site latitude and an insulation reduction factor; the inbreathing factor also depends on the stored liquid's vapor pressure and average storage temperature. Older editions used lookup tables keyed mainly to tank capacity, so results differ between editions</li>
         </ul>
       </div>
     </div>
@@ -119,7 +119,7 @@
         <ul class="fm-causes">
           <li><b>Filling:</b> the incoming liquid displaces vapor, pushing it out through the vent &mdash; outbreathing driven directly by the fill rate</li>
           <li><b>Emptying:</b> the falling liquid level draws air in to replace the departing volume &mdash; inbreathing driven by the pump-out rate</li>
-          <li>Working venting is driven by the maximum filling or emptying rate; API 2000 gives the conversion to an air-equivalent vent flow, and the factors depend on the liquid's volatility, so check the current edition</li>
+          <li>Working venting is driven by the maximum filling or emptying rate; API 2000 converts it to an air-equivalent vent flow using factors that depend on whether the liquid is volatile or non-volatile (by vapor pressure), so check the current edition</li>
         </ul>
       </div>
     </div>
@@ -156,8 +156,8 @@
 
     <h2><span class="h2-dot"></span>Working through the calculation</h2>
     <div class="flow-strip">
-      <div class="step"><span class="flow-num">1</span><span class="txt">Determine tank shell capacity (and diameter, for larger tanks) as the basis for the thermal breathing lookup.</span></div>
-      <div class="step"><span class="flow-num">2</span><span class="txt">Read thermal outbreathing and inbreathing rates from the API 2000 thermal venting table (or equation) for that capacity.</span></div>
+      <div class="step"><span class="flow-num">1</span><span class="txt">Collect the basis data: tank volume, site latitude, insulation, and the stored liquid's vapor pressure and average storage temperature.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Calculate thermal outbreathing and inbreathing using the thermal venting method in the edition your project specifies.</span></div>
       <div class="step"><span class="flow-num">3</span><span class="txt">Calculate working outbreathing from the maximum filling rate, and working inbreathing from the maximum emptying (pump-out) rate, using the working-loss factors given in API 2000.</span></div>
       <div class="step"><span class="flow-num">4</span><span class="txt">Add thermal and working requirements separately for each direction: total outbreathing and total inbreathing.</span></div>
       <div class="step"><span class="flow-num">5</span><span class="txt">Size the normal vent (PV valve) to the larger of the two totals, at its rated set pressure and set vacuum.</span></div>
@@ -182,7 +182,7 @@
         <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
           <rect x="16" y="16" width="28" height="28" rx="3" fill="none" stroke="#3E8C97" stroke-width="2"/>
         </svg>
-        <b>Capacity Dependent</b>
+        <b>Volume &amp; Site Dependent</b>
       </div>
       <div class="mon-card">
         <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +198,7 @@
         <b>Ambient-Swing Dependent</b>
       </div>
     </div>
-    <p>A tank in an intermittent or idle service is easy to underestimate &mdash; with no scheduled fills or draws, it's tempting to assume it needs no venting attention at all. Thermal breathing keeps happening regardless, driven purely by daily ambient temperature swings, which is why thermal venting is calculated without any filling or emptying rate as an input.</p>
+    <p>A tank in an intermittent or idle service is easy to underestimate &mdash; with no scheduled fills or draws, it's tempting to assume it needs no venting attention at all. Thermal breathing keeps happening regardless, driven purely by daily ambient temperature swings, which is why thermal venting is calculated from tank, site and product data rather than from any filling or emptying rate.</p>
 
     <h2><span class="h2-dot"></span>Key takeaways</h2>
     <ul class="takeaways">
