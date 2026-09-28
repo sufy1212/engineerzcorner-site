@@ -4,6 +4,20 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Elapsed Time Calculations</title>
+    <link>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained.html</guid>
+    <description>Why subtracting clock times like decimal numbers gives the wrong answer — time runs on base 60 for seconds and minutes and base 24 for hours, and borrowing across those bases is where the errors creep in.</description>
+    <pubDate>Mon, 28 Sep 2026 03:03:16 GMT</pubDate>
+  </item>
+  <item>
+    <title>Tank Breathing Losses</title>
+    <link>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</guid>
+    <description>A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, with normal venting requirements estimated using API 2000-style methods (confirm against the current edition).</description>
+    <pubDate>Mon, 28 Sep 2026 03:03:16 GMT</pubDate>
+  </item>
+  <item>
     <title>DC/AC Ratio &amp; Inverter Clipping</title>
     <link>https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained.html</guid>
@@ -67,24 +81,10 @@
     <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
   </item>
   <item>
-    <title>Tank Breathing Losses</title>
-    <link>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</guid>
-    <description>A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, sized by the API 2000 simplified method.</description>
-    <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
-  </item>
-  <item>
     <title>Binary, Hex &amp; Octal Explained</title>
     <link>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</guid>
     <description>Decimal, binary, octal and hex are all the same number in different bases — what a base actually means, why hex exists as shorthand for binary, and how to convert between them by hand.</description>
-    <pubDate>Sun, 27 Sep 2026 17:42:36 GMT</pubDate>
-  </item>
-  <item>
-    <title>Elapsed Time Calculations</title>
-    <link>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained.html</guid>
-    <description>Why subtracting clock times like decimal numbers gives the wrong answer — time runs on base 60 for seconds and minutes and base 24 for hours, and borrowing across those bases is where the errors creep in.</description>
     <pubDate>Sun, 27 Sep 2026 17:42:36 GMT</pubDate>
   </item>
   <item>
