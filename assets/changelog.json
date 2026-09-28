@@ -35,6 +35,27 @@
   "a": "added"
  },
  {
+  "t": "Refrigerant Types: R-410A to A2L",
+  "u": "posts/refrigerant-types-r410a-to-a2l-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "HVAC System Components Explained",
+  "u": "posts/hvac-system-components-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Superheat & Subcooling Explained",
+  "u": "posts/superheat-subcooling-refrigerant-charge-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Available Explained",
   "u": "posts/npsh-available-explained",
   "d": "2026-09-27",
@@ -565,13 +586,6 @@
   "d": "2026-09-10",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Refrigerant Types: R-410A to A2L",
-  "u": "posts/refrigerant-types-r410a-to-a2l-explained",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Cost Contingency & Management Reserve Calculator",
@@ -1834,13 +1848,6 @@
   "a": "updated"
  },
  {
-  "t": "HVAC System Components Explained",
-  "u": "posts/hvac-system-components-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "IECEx / ATEX Zones vs NEC Class & Division: Hazardous Area Classification",
   "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
   "d": "2026-08-27",
@@ -2088,13 +2095,6 @@
  {
   "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
   "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Bearing Failures: Root Causes & Prevention",
-  "u": "posts/bearing-failure-modes-causes-prevention",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"

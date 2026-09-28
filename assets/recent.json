@@ -1,5 +1,20 @@
 [
   {
+    "t": "HVAC System Components Explained",
+    "u": "posts/hvac-system-components-explained",
+    "d": "2026-09-28"
+  },
+  {
+    "t": "Refrigerant Types: R-410A to A2L",
+    "u": "posts/refrigerant-types-r410a-to-a2l-explained",
+    "d": "2026-09-28"
+  },
+  {
+    "t": "Superheat & Subcooling Explained",
+    "u": "posts/superheat-subcooling-refrigerant-charge-explained",
+    "d": "2026-09-28"
+  },
+  {
     "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
     "u": "posts/pipe-flow-capacity-mannings-equation-explained",
     "d": "2026-09-28"
@@ -32,21 +47,6 @@
   {
     "t": "Elapsed Time Calculations",
     "u": "posts/elapsed-time-duration-calculations-explained",
-    "d": "2026-09-27"
-  },
-  {
-    "t": "Dimensional Analysis Explained",
-    "u": "posts/dimensional-analysis-unit-conversion-explained",
-    "d": "2026-09-27"
-  },
-  {
-    "t": "Order-of-Magnitude Checks",
-    "u": "posts/order-of-magnitude-sanity-check-explained",
-    "d": "2026-09-27"
-  },
-  {
-    "t": "CT Sizing & Burden Explained",
-    "u": "posts/ct-sizing-burden-explained",
     "d": "2026-09-27"
   }
 ]
