@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DC/AC Ratio &amp; Inverter Clipping Explained | Engineerz CorneR</title>
+<meta name="description" content="An array almost never delivers its nameplate power, so sizing the inverter to the array's full rating usually wastes money — the DC/AC ratio and clipping trade-off explained.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="DC/AC Ratio &amp; Inverter Clipping Explained: Why a Smaller Inverter Can Be the Right Call">
+<meta property="og:description" content="An array almost never delivers its nameplate power, so sizing the inverter to the array's full rating usually wastes money — the DC/AC ratio and clipping trade-off explained.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-solar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DC/AC Ratio &amp; Inverter Clipping Explained: Why a Smaller Inverter Can Be the Right Call">
+<meta name="twitter:description" content="An array almost never delivers its nameplate power, so sizing the inverter to the array's full rating usually wastes money — the DC/AC ratio and clipping trade-off explained.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-solar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},{"@type":"ListItem","position":2,"name":"Posts","item":"https://www.engineerzcorner.com/posts/"},{"@type":"ListItem","position":3,"name":"DC/AC Ratio & Inverter Clipping Explained: Why a Smaller Inverter Can Be the Right Call","item":"https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"DC/AC Ratio & Inverter Clipping Explained: Why a Smaller Inverter Can Be the Right Call","datePublished":"2026-09-26","dateModified":"2026-09-26","description":"An array almost never delivers its nameplate power, so sizing the inverter to the array's full rating usually wastes money — the DC/AC ratio and clipping trade-off explained.","url":"https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained","author":{"@type":"Organization","name":"Engineerz CorneR"},"publisher":{"@type":"Organization","name":"Engineerz CorneR","logo":{"@type":"ImageObject","url":"https://www.engineerzcorner.com/og-image.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained"}}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">DC/AC Ratio &amp; Inverter Clipping Explained: Why a Smaller Inverter Can Be the Right Call</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9728; Solar &middot; Inverter Sizing</span>
+    <h1>DC/AC Ratio &amp; Inverter Clipping</h1>
+    <p class="hero-sub">A 6.6 kW array on a 5 kW inverter sounds undersized. In practice the array rarely produces its full nameplate power, so the small amount of energy clipped can cost less than the inverter capacity saved.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Solar / Grid-Tie</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">DC/AC ratio is array DC nameplate divided by inverter AC rating &mdash; a ratio above 1.0 is normal, not a mistake.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Panels are rated at STC; real operating conditions (heat, soiling, wiring, mismatch) keep peak output below nameplate.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Clipping happens when array power exceeds the inverter's AC limit &mdash; the inverter moves off the maximum power point and the excess is lost.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The right ratio is an energy-versus-cost trade-off checked by simulation, not a fixed number.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why the array rarely hits nameplate</h2>
+    <p>A panel's rating is its output under Standard Test Conditions: 1000 W/m&sup2; irradiance at a 25&deg;C cell temperature. Real operation seldom matches both. Cells run hotter than 25&deg;C in sunshine and lose output through the module's negative power temperature coefficient, irradiance is often below 1000 W/m&sup2;, and soiling, wiring losses and module mismatch take further cuts. The result is that a clear-day peak is typically noticeably below the array's DC nameplate. An inverter sized to the full nameplate would spend almost its whole life below its rated output.</p>
+
+    <div class="formula-box">DC/AC ratio &nbsp;=&nbsp; Array DC nameplate (kW<sub>p</sub>) &nbsp;/&nbsp; Inverter AC rating (kW)</div>
+    <div class="formula-note">Also called the inverter loading ratio (ILR). Grid-tie designs commonly sit somewhere above 1.0 and often in the 1.1&ndash;1.4 range, but the best value depends on climate, tilt, temperature and inverter cost.</div>
+
+    <h2><span class="h2-dot"></span>What clipping actually is</h2>
+    <p>An inverter can only push out as much AC power as its rating allows. When the array could produce more than that, the inverter shifts its operating point away from the array's maximum power point, so the array delivers only what the inverter can export. The energy above the AC limit is not stored or diverted &mdash; it is simply not harvested (unless the system is DC-coupled to a battery that can absorb it). Clipping is concentrated around midday on clear days, and is worst when irradiance is high and modules are cool.</p>
+
+    <h2><span class="h2-dot"></span>A worked example</h2>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>6.6 kW<sub>p</sub> array, 5 kW inverter</b><span>DC/AC ratio = 6.6 / 5 = 1.32.</span></div>
+      <div class="signal-card hot"><b>Peak output at ~80% of nameplate</b><span>6.6 &times; 0.80 &asymp; 5.3 kW, so only about 0.3 kW is clipped and only during the sunniest hours &mdash; illustrative figures, not a prediction.</span></div>
+    </div>
+    <p>Because the excess above 5 kW occurs for a small fraction of the year, the annual energy lost is usually a small percentage of production. The 5 kW inverter costs less than a 6.6 kW unit, and the array produces more energy in the shoulder hours of morning and evening, when it would otherwise be underusing a large inverter.</p>
+
+    <h2><span class="h2-dot"></span>Trade-offs of a higher ratio</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Higher DC/AC ratio</th><th>Effect</th></tr>
+        <tr><td>Lower inverter cost per kW of array</td><td>Smaller, cheaper inverter for the same panel count</td></tr>
+        <tr><td>More energy in low-light hours</td><td>Inverter operates closer to its efficient range for longer</td></tr>
+        <tr><td>More clipped energy at midday</td><td>Losses rise faster as the ratio climbs past what the site supports</td></tr>
+        <tr><td>Higher DC-side stress on the inverter</td><td>Must stay inside its maximum DC input voltage and current limits</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Limits that override the ratio</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">!</span><span><b>Voltage and current limits.</b> Cold-morning Voc must stay below the inverter's maximum DC voltage, and each MPPT input has a maximum current and a usable voltage window. Oversizing the array does not relax these.</span></li>
+      <li><span class="tk-check">!</span><span><b>Manufacturer and warranty limits.</b> Many inverters specify a maximum allowed DC input power or ratio; exceeding it can void the warranty.</span></li>
+      <li><span class="tk-check">!</span><span><b>Grid and export rules.</b> Utilities and local rules may cap inverter AC output or export, which sets the AC side of the ratio for you. Check the rules that apply to your site.</span></li>
+      <li><span class="tk-check">!</span><span><b>Off-grid systems differ.</b> Stand-alone and hybrid inverters are sized to the continuous load plus motor-starting surge, not to a DC/AC ratio.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>DC/AC ratio = array DC nameplate &divide; inverter AC rating; ratios above 1.0 are normal for grid-tie.</span></li>
+      <li><span class="tk-check">✓</span><span>Real peak output sits below nameplate because of temperature, irradiance and system losses, so full-nameplate inverter sizing usually wastes capacity.</span></li>
+      <li><span class="tk-check">✓</span><span>Clipping is lost energy at the sunniest hours; check the annual loss with a yield simulation before settling on a ratio.</span></li>
+      <li><span class="tk-check">✓</span><span>Voltage, current, warranty and grid limits cap how far you can oversize the array.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=DC%2FAC%20Ratio%20%26%20Inverter%20Clipping%20Explained%3A%20Why%20a%20Smaller%20Inverter%20Can%20Be%20the%20Right%20Call&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-ac-ratio-inverter-clipping-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-ac-ratio-inverter-clipping-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=DC%2FAC%20Ratio%20%26%20Inverter%20Clipping%20Explained%3A%20Why%20a%20Smaller%20Inverter%20Can%20Be%20the%20Right%20Call&text=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-ac-ratio-inverter-clipping-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=DC%2FAC%20Ratio%20%26%20Inverter%20Clipping%20Explained%3A%20Why%20a%20Smaller%20Inverter%20Can%20Be%20the%20Right%20Call&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fdc-ac-ratio-inverter-clipping-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../solar/inverter-sizing-calculator">Inverter Sizing Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="solar-inverter-topologies-string-vs-micro-vs-optimizer">String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</a></li><li><a href="pv-string-sizing-voltage">PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</a></li><li><a href="solar-panel-derating-factors-explained">Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../solar/inverter-sizing-calculator">Try the Inverter Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
