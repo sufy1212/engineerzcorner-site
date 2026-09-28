@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relief Valve Orifice Sizing Explained (API 520) | Engineerz CorneR</title>
+<meta name="description" content="Set pressure, allowable overpressure, back pressure, and required relieving rate — the inputs that decide a relief valve's required orifice area under API 520, and why the scenario matters more than the formula.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Relief Valve Orifice Sizing Explained (API 520)">
+<meta property="og:description" content="The orifice area formula is the easy part — the required relieving rate that feeds it comes from whichever overpressure scenario governs, and getting that scenario wrong sizes everything after it wrong too.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Relief Valve Orifice Sizing Explained (API 520)">
+<meta name="twitter:description" content="Set pressure, allowable overpressure, back pressure, and required relieving rate — the four inputs that decide a relief valve's required orifice area.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="relief-valve-sizing-api520-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Relief Valve Orifice Sizing Explained (API 520)", "item": "https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Relief Valve Orifice Sizing Explained (API 520)",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "Set pressure, allowable overpressure, back pressure, and required relieving rate — the inputs that decide a relief valve's required orifice area under API 520, and why the scenario matters more than the formula.",
+  "url": "https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Relief Valve Orifice Sizing Explained (API 520)</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Pressure Relief</span>
+    <h1>Relief Valve Orifice Sizing</h1>
+    <p class="hero-sub">The orifice area formula is only ever as good as the relieving rate fed into it &mdash; and that number comes from whichever overpressure scenario actually governs, not from the formula itself.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; API 520</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Relieving pressure isn't set pressure &mdash; it's set pressure plus the allowable overpressure percentage, and that percentage depends on which scenario and how many valves are installed.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Back pressure comes in two forms &mdash; superimposed (already there before the valve opens) and built-up (created by the valve's own discharge flow) &mdash; and each affects valve type selection differently.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The required relieving rate is the output of a separate overpressure-scenario study, not an input you choose &mdash; the orifice sizing formula only ever processes whatever that study hands it.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Calculated orifice area is rounded up to the next standard API letter-designated orifice, not built to the exact calculated number &mdash; valves come in a fixed catalog of sizes.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Set pressure and relieving pressure aren't the same number</h2>
+    <p>A relief valve's <b>set pressure</b> is where it's adjusted to begin opening &mdash; the value stamped on the valve and checked at test bench. But the pressure the valve actually has to handle at full capacity, the <b>relieving pressure</b>, is higher: set pressure plus an allowable overpressure. That margin exists because a spring-loaded valve doesn't snap instantly from closed to fully open at set pressure &mdash; it needs a bit of extra pressure rise to lift fully and pass rated flow. Code allows 10% overpressure for a single valve on non-fire service, 16% where multiple valves are installed, and typically 21% for a fire-case scenario &mdash; three different numbers for what's conceptually the same margin, because the applicable code case changes with the situation.</p>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 70 h60" stroke="#3E8C97" stroke-width="2"/>
+        <path d="M30 70 v-30" stroke="#D9782E" stroke-width="2.2"/>
+        <path d="M30 40 l-6 10 h12 z" fill="#D9782E"/>
+        <path d="M70 70 v-45" stroke="#5FD3E3" stroke-width="2.2"/>
+        <path d="M70 25 l-6 10 h12 z" fill="#5FD3E3"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">1</span>Set Pressure &amp; Overpressure</h3>
+        <ul class="fm-causes">
+          <li>Relieving pressure = set pressure &times; (1 + allowable overpressure %), plus atmospheric pressure if working in gauge units</li>
+          <li>The allowable overpressure percentage is fixed by code for the applicable case &mdash; it isn't a value chosen freely to make the sizing come out favorably</li>
+          <li>Set pressure itself is normally required to sit at or below the equipment's MAWP, not chosen independently of it</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 60 h60 M20 60 v-10 M80 60 v-15" stroke="#D9782E" stroke-width="2.2"/>
+        <path d="M50 60 v20" stroke="#3E8C97" stroke-width="2" stroke-dasharray="3 3"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">2</span>Back Pressure</h3>
+        <ul class="fm-causes">
+          <li><b>Superimposed back pressure:</b> already present in the discharge system before the valve opens, from a common header or downstream equipment</li>
+          <li><b>Built-up back pressure:</b> generated by the valve's own flow through the discharge piping as it relieves</li>
+          <li>High or variable back pressure limits conventional PSVs and often pushes the selection toward balanced-bellows or pilot-operated designs, which tolerate it far better</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 50 h15 l10 -20 10 40 10 -30 10 20 h15" fill="none" stroke="#5FD3E3" stroke-width="2.2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">3</span>Required Relieving Rate</h3>
+        <ul class="fm-causes">
+          <li>Comes from whichever overpressure scenario governs for that equipment &mdash; blocked outlet, external fire, control valve failure, tube rupture, and others each give a different rate</li>
+          <li>Sizing the orifice always uses the largest (governing) rate among all applicable scenarios, not an average or a typical one</li>
+          <li>Determining this rate is its own separate engineering study &mdash; the orifice sizing formula has no way to check whether the number fed into it is actually the right one</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fm-card">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="22" fill="none" stroke="#3E8C97" stroke-width="2.2"/>
+        <circle cx="50" cy="50" r="10" fill="none" stroke="#D9782E" stroke-width="2"/>
+      </svg>
+      <div>
+        <h3><span class="fm-num">4</span>Orifice Area &amp; Standard Sizes</h3>
+        <ul class="fm-causes">
+          <li>The calculated required area is a continuous number; actual valves are manufactured in a fixed catalog of standard API letter-designated orifices (D through T)</li>
+          <li>The result is always rounded up to the next standard size at or above the calculated requirement &mdash; never down, and never built to the exact calculated area</li>
+          <li>A calculated area landing just above a standard size still requires the next size up &mdash; there's no partial-size option</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The formulas</h2>
+    <div class="formula-box">A (vapor/gas) &nbsp;=&nbsp; W &nbsp;/&nbsp; (C &times; K<sub>d</sub> &times; P<sub>1</sub> &times; K<sub>b</sub> &times; K<sub>c</sub>) &nbsp;&times;&nbsp; &radic;(T &times; Z / M)</div>
+    <div class="formula-note">W is the required relieving rate (mass flow); P1 is relieving pressure (absolute); Kd is the discharge coefficient; Kb corrects for back pressure; Kc corrects for a rupture disc in combination, where applicable.</div>
+    <div class="formula-box">A (liquid) &nbsp;=&nbsp; Q &nbsp;/&nbsp; (38 &times; K<sub>d</sub> &times; K<sub>w</sub> &times; K<sub>c</sub> &times; K<sub>v</sub>) &nbsp;&times;&nbsp; &radic;(SG / (P<sub>1</sub> &minus; P<sub>2</sub>))</div>
+    <div class="formula-note">Q is the required relieving rate (volumetric); Kw corrects for back pressure on a balanced-bellows valve; Kv corrects for viscosity at low Reynolds numbers &mdash; both formulas share the same shape: rate divided by a set of correction-factor-adjusted constants, scaled by a pressure or property term under a square root.</div>
+
+    <h2><span class="h2-dot"></span>Working through the sizing</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Identify the governing overpressure scenario (blocked outlet, fire, control valve failure, etc.) and obtain the required relieving rate from that study.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Set the valve's set pressure at or below equipment MAWP, and determine the allowable overpressure % for the governing case.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Calculate relieving pressure: set pressure &times; (1 + overpressure %), converted to absolute.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">Determine superimposed and built-up back pressure, and select a valve type (conventional, balanced-bellows, or pilot-operated) that tolerates it.</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Calculate required orifice area using the API 520 vapor or liquid formula, with the appropriate correction factors.</span></div>
+      <div class="step"><span class="flow-num">6</span><span class="txt">Round up to the next standard API letter-designated orifice size at or above the calculated area.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Common terms, decoded</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Set pressure</td><td>The pressure at which a relief valve is adjusted to begin opening</td></tr>
+        <tr><td>Overpressure</td><td>The allowable pressure rise above set pressure needed for the valve to reach full rated flow</td></tr>
+        <tr><td>Relieving pressure</td><td>Set pressure plus allowable overpressure &mdash; the pressure the orifice sizing calculation is actually based on</td></tr>
+        <tr><td>Superimposed back pressure</td><td>Discharge-side pressure already present before the valve opens, from shared header or downstream equipment</td></tr>
+        <tr><td>Built-up back pressure</td><td>Discharge-side pressure created by the valve's own flow through the outlet piping while relieving</td></tr>
+        <tr><td>Kd</td><td>Discharge coefficient &mdash; an empirical factor accounting for real flow losses through the specific valve design, versus ideal flow</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>What each factor is sensitive to</h2>
+    <div class="mon-grid">
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 40 h10 l4 -8 5 16 5 -16 4 8 h6" fill="none" stroke="#5FD3E3" stroke-width="2"/>
+        </svg>
+        <b>Relieving-Rate Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 45 h20" stroke="#D9782E" stroke-width="2"/>
+          <path d="M20 45 l4 -6 M40 45 l-4 -6" stroke="#D9782E" stroke-width="1.6"/>
+        </svg>
+        <b>Back-Pressure Dependent</b>
+      </div>
+      <div class="mon-card">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="16" fill="none" stroke="#3E8C97" stroke-width="2"/>
+        </svg>
+        <b>Fluid-Property Dependent</b>
+      </div>
+    </div>
+    <p>Molecular weight and specific heat ratio (vapor) or specific gravity and viscosity (liquid) all feed directly into the sizing formula &mdash; a relief scenario that changes the relieving fluid's composition, such as a two-phase or changing-composition fire case, needs the property values re-evaluated for that specific case rather than reused from the original design basis.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Relieving pressure is set pressure plus allowable overpressure, not set pressure alone &mdash; and the overpressure percentage is fixed by the applicable code case.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Superimposed and built-up back pressure are two different things, and high or variable back pressure pushes valve selection toward balanced-bellows or pilot-operated types.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>The required relieving rate comes from a separate overpressure-scenario study &mdash; the orifice formula can't validate whether that input is correct.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Calculated orifice area always rounds up to the next standard API letter-designated size, never down and never to an exact custom size.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Fluid properties (molecular weight, specific gravity, viscosity) feed directly into the sizing formula and need re-checking whenever the governing scenario changes the relieving fluid.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Relief%20Valve%20Orifice%20Sizing%20Explained%20(API%20520)&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelief-valve-sizing-api520-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelief-valve-sizing-api520-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Relief%20Valve%20Orifice%20Sizing%20Explained%20(API%20520)&text=Set%20pressure%2C%20overpressure%2C%20back%20pressure%2C%20and%20required%20relieving%20rate%20%E2%80%94%20the%20inputs%20behind%20every%20PSV%20orifice%20sizing%20calc.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelief-valve-sizing-api520-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Relief%20Valve%20Orifice%20Sizing%20Explained%20(API%20520)&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ARelief%20Valve%20Orifice%20Sizing%20Explained%20(API%20520)%0ASet%20pressure%2C%20overpressure%2C%20back%20pressure%2C%20and%20required%20relieving%20rate%20explained.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelief-valve-sizing-api520-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../process/relief-valve-sizing">Relief Valve (PSV) Sizing Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="psv-types-conventional-bellows-pilot-operated-compared">PSV Types: Conventional, Bellows &amp; Pilot-Operated Compared</a></li><li><a href="tank-breathing-losses-api2000-explained">Tank Breathing Losses Explained (API 2000)</a></li><li><a href="control-valve-components-explained">Control Valve Components Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/relief-valve-sizing">Try the Relief Valve Sizing Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
