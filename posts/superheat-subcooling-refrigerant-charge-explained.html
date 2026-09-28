@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superheat &amp; Subcooling Explained | Engineerz CorneR</title>
+<meta name="description" content="Superheat and subcooling are just temperature differences from saturation — but read together with suction and liquid pressures they separate low charge, overcharge, restrictions and airflow problems.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Superheat & Subcooling Explained: What They Tell You About Refrigerant Charge">
+<meta property="og:description" content="Superheat and subcooling are just temperature differences from saturation — but read together with suction and liquid pressures they separate low charge, overcharge, restrictions and airflow problems.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-hvac.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Superheat & Subcooling Explained: What They Tell You About Refrigerant Charge">
+<meta name="twitter:description" content="Superheat and subcooling are just temperature differences from saturation — but read together with suction and liquid pressures they separate low charge, overcharge, restrictions and airflow problems.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-hvac.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},{"@type":"ListItem","position":2,"name":"Posts","item":"https://www.engineerzcorner.com/posts/"},{"@type":"ListItem","position":3,"name":"Superheat & Subcooling Explained: What They Tell You About Refrigerant Charge","item":"https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Superheat & Subcooling Explained: What They Tell You About Refrigerant Charge","datePublished":"2026-09-26","dateModified":"2026-09-26","description":"Superheat and subcooling are just temperature differences from saturation — but read together with suction and liquid pressures they separate low charge, overcharge, restrictions and airflow problems.","url":"https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained","author":{"@type":"Organization","name":"Engineerz CorneR"},"publisher":{"@type":"Organization","name":"Engineerz CorneR","logo":{"@type":"ImageObject","url":"https://www.engineerzcorner.com/og-image.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained"}}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Superheat &amp; Subcooling Explained: What They Tell You About Refrigerant Charge</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">❄ HVAC &middot; Refrigeration Cycle</span>
+    <h1>Superheat &amp; Subcooling Explained</h1>
+    <p class="hero-sub">Gauge pressure alone can't tell you whether a system is low on charge. Superheat and subcooling &mdash; how far the refrigerant sits from its saturation temperature &mdash; can.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; HVAC / Refrigeration</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Superheat is measured on the low side: suction line temperature minus the saturation temperature at suction pressure.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Subcooling is measured on the high side: saturation temperature at liquid pressure minus liquid line temperature.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Which one you charge to depends on the metering device &mdash; subcooling for TXV systems, superheat for fixed-orifice systems.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">One reading is ambiguous; the pair, together with the pressures, points to a specific fault.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Both are distances from saturation</h2>
+    <p>For a pure refrigerant, the temperature at which it boils or condenses is fixed by its pressure. Read the pressure on a gauge, look up the matching saturation temperature on a pressure&ndash;temperature chart for that refrigerant, and you know where the refrigerant sits on the boundary between liquid and vapor. <b>Superheat</b> is how far above that boundary the vapor has been heated after the evaporator finishes boiling it. <b>Subcooling</b> is how far below the boundary the liquid has been cooled after the condenser finishes condensing it.</p>
+
+    <div class="formula-box">Superheat &nbsp;=&nbsp; T<sub>suction line</sub> &minus; T<sub>sat</sub>(P<sub>suction</sub>)</div>
+    <div class="formula-note">Suction line temperature is measured near the evaporator outlet or compressor inlet, with the sensor insulated so ambient air doesn't skew it.</div>
+    <div class="formula-box">Subcooling &nbsp;=&nbsp; T<sub>sat</sub>(P<sub>liquid</sub>) &minus; T<sub>liquid line</sub></div>
+    <div class="formula-note">Liquid line temperature is measured near the condenser outlet. For blends with temperature glide, use the dew point for superheat and the bubble point for subcooling.</div>
+
+    <h2><span class="h2-dot"></span>Why each one matters</h2>
+    <div class="signal-grid">
+      <div class="signal-card hot"><b>Superheat protects the compressor</b><span>It confirms only vapor is returning. Too little superheat risks liquid reaching the compressor; too much means the evaporator is starved and the compressor runs hot.</span></div>
+      <div class="signal-card cold"><b>Subcooling protects the metering device</b><span>It confirms solid liquid is reaching the expansion device. Too little and flash gas forms in the liquid line, cutting capacity.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Which one you charge to</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Metering device</th><th>Typically charged by</th><th>Why</th></tr>
+        <tr><td>TXV / EEV</td><td>Subcooling</td><td>The valve modulates to hold evaporator superheat, so superheat barely changes with charge &mdash; subcooling is the sensitive indicator</td></tr>
+        <tr><td>Fixed orifice / piston</td><td>Superheat</td><td>The orifice can't adjust, so superheat varies with charge and load and is the sensitive indicator</td></tr>
+      </table>
+    </div>
+    <p>Target values are set by the equipment manufacturer &mdash; often a subcooling target on the nameplate or a superheat table keyed to indoor wet-bulb and outdoor dry-bulb temperature. Use those rather than a generic number.</p>
+
+    <h2><span class="h2-dot"></span>Reading the pair together</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Condition</th><th>Superheat</th><th>Subcooling</th><th>Suction pressure</th></tr>
+        <tr><td>Low charge</td><td>High</td><td>Low</td><td>Low</td></tr>
+        <tr><td>Overcharge</td><td>Normal to low</td><td>High</td><td>Normal to high (head pressure high)</td></tr>
+        <tr><td>Liquid line restriction</td><td>High</td><td>High</td><td>Low</td></tr>
+        <tr><td>Low evaporator airflow</td><td>Low</td><td>Normal</td><td>Low (coil may ice)</td></tr>
+      </table>
+    </div>
+    <p>These are general trends, not a diagnosis by themselves. Confirm airflow, filter and coil condition, and measurement accuracy before adding or removing refrigerant &mdash; a bad sensor placement or a dirty coil produces the same numbers as a charge problem.</p>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Superheat = suction line temp &minus; saturation temp at suction pressure; subcooling = saturation temp at liquid pressure &minus; liquid line temp.</span></li>
+      <li><span class="tk-check">✓</span><span>Charge to subcooling on TXV systems and to superheat on fixed-orifice systems, using the manufacturer's targets.</span></li>
+      <li><span class="tk-check">✓</span><span>High superheat with low subcooling points to low charge; high subcooling with high head pressure points to overcharge.</span></li>
+      <li><span class="tk-check">✓</span><span>High superheat with high subcooling points to a restriction, not a charge shortage.</span></li>
+      <li><span class="tk-check">✓</span><span>Rule out airflow and measurement problems before changing the charge.</span></li>
+    </ul>
+
+  </div>
+
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Superheat%20%26%20Subcooling%20Explained%3A%20What%20They%20Tell%20You%20About%20Refrigerant%20Charge&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsuperheat-subcooling-refrigerant-charge-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsuperheat-subcooling-refrigerant-charge-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Superheat%20%26%20Subcooling%20Explained%3A%20What%20They%20Tell%20You%20About%20Refrigerant%20Charge&text=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsuperheat-subcooling-refrigerant-charge-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Superheat%20%26%20Subcooling%20Explained%3A%20What%20They%20Tell%20You%20About%20Refrigerant%20Charge&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsuperheat-subcooling-refrigerant-charge-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../hvac/refrigerant-charge-superheat-subcooling-calculator">Refrigerant Charge: Superheat &amp; Subcooling Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="hvac-system-components-explained">HVAC System Components Explained</a></li><li><a href="refrigerant-types-r410a-to-a2l-explained">Refrigerant Types Explained: R-410A to Low-GWP A2L</a></li><li><a href="chiller-capacity-cop-condenser-heat-rejection">Chiller Capacity and COP: Where the Compressor's Work Actually Goes</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../hvac/refrigerant-charge-superheat-subcooling-calculator">Try the Superheat / Subcooling Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
