@@ -8,14 +8,21 @@
     <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
     <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
     <description>Three ways a relief valve holds its disc shut until set pressure — how back pressure and dirty service decide between conventional, bellows, or pilot-operated.</description>
-    <pubDate>Sun, 27 Sep 2026 17:46:35 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
+  </item>
+  <item>
+    <title>Relief Valve Orifice Sizing</title>
+    <link>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</guid>
+    <description>Set pressure, allowable overpressure, back pressure, and required relieving rate — the inputs that decide a relief valve's required orifice area under API 520, and why the scenario matters more than the formula.</description>
+    <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
   </item>
   <item>
     <title>Tank Breathing Losses</title>
     <link>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</guid>
     <description>A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, sized by the API 2000 simplified method.</description>
-    <pubDate>Sun, 27 Sep 2026 17:46:35 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
   </item>
   <item>
     <title>Binary, Hex &amp; Octal Explained</title>
@@ -205,12 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/vfd-speed-scaling-affinity-laws-energy-savings.html</guid>
     <description>Motor speed scaling with VFD output frequency, and why the pump/fan affinity laws mean modest speed cuts trim power consumption by a much larger percentage.</description>
     <pubDate>Sat, 12 Sep 2026 16:34:59 GMT</pubDate>
-  </item>
-  <item>
-    <title>ANSI Relay Numbers: Common Protection Relay Functions</title>
-    <link>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ansi-relay-numbers-protection-functions.html</guid>
-    <description>A working reference for the ANSI device numbers you'll actually run into on protection schemes — 50/51, 27/59, 87, 21, 67, 25 and more.</description>
-    <pubDate>Sat, 12 Sep 2026 16:28:34 GMT</pubDate>
   </item>
 </channel></rss>

@@ -172,7 +172,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained</loc><lastmod>2026-08-30</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-09-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-09-28</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -293,7 +293,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/power-transformer-ct-pt-construction-explained</loc><lastmod>2026-09-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared</loc><lastmod>2026-09-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared</loc><lastmod>2026-09-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/psychrometric-chart-basics</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pump-fan-affinity-laws-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -303,6 +303,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained</loc><lastmod>2026-09-10</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained</loc><lastmod>2026-09-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/retaining-wall-components-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/retaining-wall-design-basics-overturning-sliding-bearing</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/risk-register-probability-impact-scoring</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
@@ -328,7 +329,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/star-delta-connection-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained</loc><lastmod>2026-09-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained</loc><lastmod>2026-09-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/transformer-generator-sizing-motor-starting</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/transformer-turn-ratio-ttr-test-explained</loc><lastmod>2026-08-30</lastmod><priority>0.6</priority></url>

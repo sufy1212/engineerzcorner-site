@@ -1,5 +1,26 @@
 [
  {
+  "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
+  "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Tank Breathing Losses",
+  "u": "posts/tank-breathing-losses-api2000-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Relief Valve Orifice Sizing",
+  "u": "posts/relief-valve-sizing-api520-explained",
+  "d": "2026-09-28",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "NPSH Available Explained",
   "u": "posts/npsh-available-explained",
   "d": "2026-09-27",
@@ -58,20 +79,6 @@
  {
   "t": "Elapsed Time Calculations",
   "u": "posts/elapsed-time-duration-calculations-explained",
-  "d": "2026-09-27",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
-  "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
-  "d": "2026-09-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Tank Breathing Losses",
-  "u": "posts/tank-breathing-losses-api2000-explained",
   "d": "2026-09-27",
   "c": "Blog",
   "a": "added"
@@ -2088,13 +2095,6 @@
  {
   "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
   "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
-  "u": "posts/bms-point-types-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
