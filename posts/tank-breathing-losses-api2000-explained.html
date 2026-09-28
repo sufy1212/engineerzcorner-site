@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tank Breathing Losses Explained (API 2000) | Engineerz CorneR</title>
-<meta name="description" content="A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, sized by the API 2000 simplified method.">
+<meta name="description" content="A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, with normal venting requirements estimated using API 2000-style methods (confirm against the current edition).">
 <link rel="canonical" href="https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <meta property="og:type" content="article">
@@ -47,7 +47,7 @@
   "headline": "Tank Breathing Losses Explained (API 2000)",
   "datePublished": "2026-09-26",
   "dateModified": "2026-09-26",
-  "description": "A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, sized by the API 2000 simplified method.",
+  "description": "A sealed, idle storage tank still vents every day — thermal breathing from ambient temperature swings, plus working losses from filling and emptying, with normal venting requirements estimated using API 2000-style methods (confirm against the current edition).",
   "url": "https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained",
   "author": {"@type": "Organization", "name": "Engineerz CorneR"},
   "publisher": {
@@ -103,7 +103,7 @@
         <ul class="fm-causes">
           <li>Day-night ambient temperature swings heat and cool the vapor space, expanding it during the day (outbreathing) and contracting it overnight (inbreathing)</li>
           <li>Happens with zero liquid movement &mdash; an idle, sealed tank still needs to vent purely from this effect</li>
-          <li>API 2000's simplified method gives thermal breathing rate as a function of tank capacity alone, from standard lookup tables (Table 1)</li>
+          <li>API 2000 gives thermal breathing rates from tables keyed mainly to tank capacity; newer editions can add other factors such as vapor pressure or latitude, so use the edition your project specifies</li>
         </ul>
       </div>
     </div>
@@ -119,7 +119,7 @@
         <ul class="fm-causes">
           <li><b>Filling:</b> the incoming liquid displaces vapor, pushing it out through the vent &mdash; outbreathing driven directly by the fill rate</li>
           <li><b>Emptying:</b> the falling liquid level draws air in to replace the departing volume &mdash; inbreathing driven by the pump-out rate</li>
-          <li>API 2000's simplified method (Table 2) approximates the working venting rate as proportional to the maximum filling or emptying rate, in air-equivalent volume</li>
+          <li>Working venting is driven by the maximum filling or emptying rate; API 2000 gives the conversion to an air-equivalent vent flow, and the factors depend on the liquid's volatility, so check the current edition</li>
         </ul>
       </div>
     </div>
@@ -154,11 +154,11 @@
       </div>
     </div>
 
-    <h2><span class="h2-dot"></span>Working through the simplified method</h2>
+    <h2><span class="h2-dot"></span>Working through the calculation</h2>
     <div class="flow-strip">
       <div class="step"><span class="flow-num">1</span><span class="txt">Determine tank shell capacity (and diameter, for larger tanks) as the basis for the thermal breathing lookup.</span></div>
-      <div class="step"><span class="flow-num">2</span><span class="txt">Read thermal outbreathing and inbreathing rates from API 2000 Table 1 for that capacity.</span></div>
-      <div class="step"><span class="flow-num">3</span><span class="txt">Calculate working outbreathing from the maximum filling rate, and working inbreathing from the maximum emptying (pump-out) rate, per API 2000 Table 2.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Read thermal outbreathing and inbreathing rates from the API 2000 thermal venting table (or equation) for that capacity.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Calculate working outbreathing from the maximum filling rate, and working inbreathing from the maximum emptying (pump-out) rate, using the working-loss factors given in API 2000.</span></div>
       <div class="step"><span class="flow-num">4</span><span class="txt">Add thermal and working requirements separately for each direction: total outbreathing and total inbreathing.</span></div>
       <div class="step"><span class="flow-num">5</span><span class="txt">Size the normal vent (PV valve) to the larger of the two totals, at its rated set pressure and set vacuum.</span></div>
       <div class="step"><span class="flow-num">6</span><span class="txt">Check fire-case venting separately, using the wetted-surface-area method &mdash; never substitute the normal vent sizing for it.</span></div>
@@ -198,7 +198,7 @@
         <b>Ambient-Swing Dependent</b>
       </div>
     </div>
-    <p>A tank in an intermittent or idle service is easy to underestimate &mdash; with no scheduled fills or draws, it's tempting to assume it needs no venting attention at all. Thermal breathing keeps happening regardless, driven purely by daily ambient temperature swings, which is exactly why API 2000's thermal table has no filling or emptying rate as an input at all.</p>
+    <p>A tank in an intermittent or idle service is easy to underestimate &mdash; with no scheduled fills or draws, it's tempting to assume it needs no venting attention at all. Thermal breathing keeps happening regardless, driven purely by daily ambient temperature swings, which is why thermal venting is calculated without any filling or emptying rate as an input.</p>
 
     <h2><span class="h2-dot"></span>Key takeaways</h2>
     <ul class="takeaways">

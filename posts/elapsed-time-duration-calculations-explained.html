@@ -73,7 +73,7 @@
   <div class="hero-inner">
     <span class="post-tag">&#128202; General &middot; Numbers &amp; Units</span>
     <h1>Elapsed Time Calculations</h1>
-    <p class="hero-sub">14:40 minus 9:15 isn't 5.25 &mdash; it's 5 hours 25 minutes. Subtract clock times like ordinary decimals and the answer comes out wrong every time the minutes don't line up.</p>
+    <p class="hero-sub">14:20 minus 9:45 isn't 4.75 &mdash; it's 4 hours 35 minutes. Subtract clock times like ordinary decimals and the answer comes out wrong whenever the minutes need to borrow.</p>
     <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Numbers &amp; Units</span></div>
   </div>
 </div>
@@ -90,7 +90,7 @@
   <div class="post-body">
 
     <h2><span class="h2-dot"></span>Why clock arithmetic isn't decimal arithmetic</h2>
-    <p>A clock reading of 2:45 isn't the number 2.45 &mdash; it's 2 hours and 45 out of the next 60 minutes. Treating it like an ordinary decimal is the single most common source of time-math errors: subtracting 9:15 from 14:40 by ordinary decimal subtraction would give "5.25," which looks like it should mean 5 hours 25 minutes, but 0.25 of an hour is 15 minutes, not 25. The correct answer is 5 hours 25 minutes purely by coincidence of these particular numbers &mdash; change either time slightly and decimal subtraction stops working, because minutes carry in blocks of 60, not 10.</p>
+    <p>A clock reading of 2:45 isn't the number 2.45 &mdash; it's 2 hours and 45 out of the next 60 minutes. Treating it like an ordinary decimal is the single most common source of time-math errors. Subtract 9:45 from 14:20 as if they were decimals and you get 14.20 &minus; 9.45 = 4.75, which reads as 4 hours 75 minutes &mdash; not a valid time. The correct answer is 4 hours 35 minutes. Decimal subtraction only happens to give sensible digits when no borrowing is needed (for example 14:40 &minus; 9:15 = 5:25), which is why the mistake is easy to miss until a case that borrows comes along.</p>
 
     <h2><span class="h2-dot"></span>Subtracting times: when you need to borrow</h2>
     <p>Subtracting two clock times works one column at a time, hours and minutes separately &mdash; until the minutes being subtracted are larger than the minutes being subtracted from. At that point, just like borrowing 10 from the tens column in decimal subtraction, you borrow 60 minutes from the hours column.</p>
