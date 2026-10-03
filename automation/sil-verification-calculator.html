@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIL Verification (PFDavg) Calculator — Engineerz CorneR</title>
+<meta name="description" content="Check a safety function against SIL 1-4: PFDavg per subsystem, 1oo1/1oo2/2oo2/2oo3 voting, common cause, SFF/HFT limits and pass/fail against a target SIL.">
+<link rel="canonical" href="https://www.engineerzcorner.com/automation/sil-verification-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="SIL Verification (PFDavg) Calculator — Engineerz CorneR">
+<meta property="og:description" content="Check a safety function against SIL 1-4: PFDavg per subsystem, 1oo1/1oo2/2oo2/2oo3 voting, common cause, SFF/HFT limits and pass/fail against a target SIL.">
+<meta property="og:url" content="https://www.engineerzcorner.com/automation/sil-verification-calculator">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SIL Verification (PFDavg) Calculator — Engineerz CorneR">
+<meta name="twitter:description" content="Check a safety function against SIL 1-4: PFDavg per subsystem, 1oo1/1oo2/2oo2/2oo3 voting, common cause, SFF/HFT limits and pass/fail against a target SIL.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Automation", "item": "https://www.engineerzcorner.com/automation/" },
+    { "@type": "ListItem", "position": 3, "name": "SIL Verification (PFDavg) Calculator", "item": "https://www.engineerzcorner.com/automation/sil-verification-calculator" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SIL Verification (PFDavg) Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Check a safety function against SIL 1-4: PFDavg per subsystem, 1oo1/1oo2/2oo2/2oo3 voting, common cause, SFF/HFT limits and pass/fail against a target SIL.",
+  "url": "https://www.engineerzcorner.com/automation/sil-verification-calculator",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Automation</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">IS Loop / Entity Concept</span></div></nav>
+
+
+<a class="skip-link" href="#mainContent">Skip to sheet content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+  <a href="../">Home</a>
+  <a href="../electrical/">Electrical</a>
+  <a href="../mechanical/">Mechanical</a>
+  <a href="../hvac/">HVAC</a>
+  <a href="../civil/">Civil</a>
+  <a href="./" class="current">Automation</a>
+  <a href="../process/">Process</a>
+  <a href="../solar/">Solar</a>
+  <a href="../pm/">Project Management</a>
+  <a href="../general/">General Tools</a>
+  <a href="../study-abroad/">Study Abroad</a>
+  <a href="../interview/">Interview Prep</a>
+</div>
+</nav>
+
+
+<main id="mainContent">
+<div class="wrap page active" id="page-auto-sil">
+
+  <div class="pagehero">
+    <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+    <div><h1>SIL Verification (PFDavg) Calculator</h1><div class="hero-sub">Low-demand safety function check: PFDavg, voting, common cause and SFF/HFT limits against a target SIL</div></div>
+  </div>
+<div class="hero-illo"><svg viewBox="0 0 700 100" role="img" aria-hidden="true">
+  <rect x="60" y="30" width="150" height="40" rx="6" fill="none" class="illo-line illo-amber" stroke-width="2"/>
+  <rect x="275" y="30" width="150" height="40" rx="6" fill="none" class="illo-line illo-amber" stroke-width="2"/>
+  <rect x="490" y="30" width="150" height="40" rx="6" fill="none" class="illo-line illo-amber" stroke-width="2"/>
+  <line x1="210" y1="50" x2="275" y2="50" class="illo-line illo-dim" stroke-width="2"/>
+  <line x1="425" y1="50" x2="490" y2="50" class="illo-line illo-dim" stroke-width="2"/>
+<text x="686" y="92" text-anchor="end" class="illo-label">SENSOR · LOGIC · FINAL ELEMENT</text></svg></div>
+
+  <div class="mech-tabs">
+    <a href="./">Automation Index</a>
+    <a href="signal-scaling">AT.01 Signal Scaling</a>
+    <a href="pid-tuning">AT.02 PID Tuning</a>
+    <a href="valve-sizing">AT.03 Valve Sizing</a>
+    <a href="level-transmitter">AT.04 Level Ranging</a>
+    <a href="vfd-scaling">AT.05 VFD Scaling</a>
+    <a href="notes">AT.06 Notes</a>
+    <a href="symbols">AT.07 Symbols</a>
+    <a href="guides">AT.08 Guides</a>
+    <a href="comparisons">AT.09 Comparisons</a>
+    <a href="deadband-hysteresis">AT.10 Deadband/Hysteresis</a>
+    <a href="rtd-conversion">AT.11 RTD Conversion</a>
+    <a href="relay-coil-sizing">AT.12 Relay Coil Sizing</a>
+    <a href="modbus-timing">AT.13 Modbus Timing</a>
+    <a href="alarm-setpoints">AT.14 Alarm Setpoints</a>
+    <a href="thermocouple-reference">AT.15 Thermocouple Reference</a>
+    <a href="orifice-flow-sizing">AT.16 Orifice Flow Sizing</a>
+    <a href="level-control-simulator">AT.17 Level Control Simulator</a>
+    <a href="is-entity-loop-calculator" class="current">AT.19 IS Loop / Entity Concept</a>
+    <a href="sil-verification-calculator">AT.20 SIL Verification</a>
+  </div>
+  <div class="intro">Enter each subsystem of a safety instrumented function (sensor, logic solver and final element) with its dangerous undetected failure rate, voting and device data. The calculator sums the simplified PFDavg values for a low-demand function, finds the SIL band, applies the Route 1H architectural constraint table, and compares the result with your target SIL. It is a screening check: see the <a href="../posts/functional-safety-sil-explained">Functional Safety &amp; SIL Explained</a> post for the background.</div>
+  <div role="status" aria-live="polite" class="validation-banner neutral" id="silValidation"><span class="vdot"></span><span>Calculating…</span></div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h2>Function Settings</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="silTarget">Target SIL (from your risk assessment)</label>
+        <select id="silTarget">
+          <option value="1">SIL 1</option>
+          <option value="2" selected>SIL 2</option>
+          <option value="3">SIL 3</option>
+          <option value="4">SIL 4</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="silTI">Proof test interval <span class="unit">years</span></label>
+        <input type="number" id="silTI" value="1" step="0.25" min="0">
+      </div>
+      <div class="field">
+        <label for="silBeta">Common cause factor &beta; <span class="unit">%</span></label>
+        <input type="number" id="silBeta" value="5" step="1" min="0" max="100">
+        <div class="hint">Applies to 1oo2 and 2oo3 groups. Use the &beta; from your SIL study; a few percent to ten percent is a typical range for screening.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h2>Sensor Subsystem</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="snVote">Voting architecture</label>
+        <select id="snVote">
+          <option value="1oo1" selected>1oo1 (HFT 0)</option>
+          <option value="1oo2">1oo2 (HFT 1)</option>
+          <option value="2oo2">2oo2 (HFT 0)</option>
+          <option value="2oo3">2oo3 (HFT 1)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="snLam">&lambda;DU per channel <span class="unit">FIT (10&#8315;&#8313; /h)</span></label>
+        <input type="number" id="snLam" value="200" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="snType">Element type</label>
+        <select id="snType">
+          <option value="A">Type A (simple)</option>
+          <option value="B" selected>Type B (complex / microprocessor)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="snSff">Safe failure fraction <span class="unit">%</span></label>
+        <input type="number" id="snSff" value="90" step="1" min="0" max="100">
+      </div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Logic Solver Subsystem</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="lgVote">Voting architecture</label>
+        <select id="lgVote">
+          <option value="1oo1" selected>1oo1 (HFT 0)</option>
+          <option value="1oo2">1oo2 (HFT 1)</option>
+          <option value="2oo2">2oo2 (HFT 0)</option>
+          <option value="2oo3">2oo3 (HFT 1)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lgLam">&lambda;DU per channel <span class="unit">FIT (10&#8315;&#8313; /h)</span></label>
+        <input type="number" id="lgLam" value="22.8" step="0.1" min="0">
+      </div>
+      <div class="field">
+        <label for="lgType">Element type</label>
+        <select id="lgType">
+          <option value="A">Type A (simple)</option>
+          <option value="B" selected>Type B (complex / microprocessor)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lgSff">Safe failure fraction <span class="unit">%</span></label>
+        <input type="number" id="lgSff" value="99" step="1" min="0" max="100">
+      </div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">4</span><h2>Final Element Subsystem (valve, actuator, solenoid)</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="feVote">Voting architecture</label>
+        <select id="feVote">
+          <option value="1oo1" selected>1oo1 (HFT 0)</option>
+          <option value="1oo2">1oo2 (HFT 1)</option>
+          <option value="2oo2">2oo2 (HFT 0)</option>
+          <option value="2oo3">2oo3 (HFT 1)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="feLam">&lambda;DU per channel <span class="unit">FIT (10&#8315;&#8313; /h)</span></label>
+        <input type="number" id="feLam" value="1000" step="1" min="0">
+      </div>
+      <div class="field">
+        <label for="feType">Element type</label>
+        <select id="feType">
+          <option value="A" selected>Type A (simple)</option>
+          <option value="B">Type B (complex / microprocessor)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="feSff">Safe failure fraction <span class="unit">%</span></label>
+        <input type="number" id="feSff" value="60" step="1" min="0" max="100">
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">&#10003;</span><h2>Results</h2></div>
+    <div class="result-line">
+      <span class="rlabel">SIL VERIFICATION</span>
+      <span class="rval" id="silOverall">&mdash;</span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Sensor PFDavg &middot; share &middot; arch. max SIL</div><div class="sval" id="snRes">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Logic solver PFDavg &middot; share &middot; arch. max SIL</div><div class="sval" id="lgRes">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Final element PFDavg &middot; share &middot; arch. max SIL</div><div class="sval" id="feRes">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Total PFDavg</div><div class="sval amber" id="silTotal">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Risk reduction factor (1/PFDavg)</div><div class="sval" id="silRRF">&mdash;</div></div>
+      <div class="stat"><div class="slabel">SIL band from PFDavg</div><div class="sval" id="silBand">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Architectural limit (lowest subsystem)</div><div class="sval" id="silArch">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Claimable SIL (lower of the two)</div><div class="sval amber" id="silClaim">&mdash;</div></div>
+    </div>
+    <details>
+      <summary>How this is calculated</summary>
+      <div class="formula-note">1oo1: &lambda;DU&middot;TI/2 &nbsp;&middot;&nbsp; 2oo2: &lambda;DU&middot;TI<br>1oo2: [(1&minus;&beta;)&lambda;DU&middot;TI]&sup2;/3 + &beta;&lambda;DU&middot;TI/2<br>2oo3: [(1&minus;&beta;)&lambda;DU&middot;TI]&sup2; + &beta;&lambda;DU&middot;TI/2<br>Total PFDavg = sensor + logic solver + final element</div>
+      <div class="hint" style="margin-top:8px;">Low-demand bands (IEC 61508): SIL 1 = PFDavg &ge;10&#8315;&sup2; to &lt;10&#8315;&sup1;, SIL 2 = &ge;10&#8315;&sup3; to &lt;10&#8315;&sup2;, SIL 3 = &ge;10&#8315;&#8308; to &lt;10&#8315;&sup3;, SIL 4 = &ge;10&#8315;&#8309; to &lt;10&#8315;&#8308;. Architectural limit comes from the Route 1H table (IEC 61508-2) using element type, SFF and the HFT implied by the voting (1oo1 and 2oo2 = 0, 1oo2 and 2oo3 = 1). This tool does not model repair time, diagnostics-driven partial stroke tests, imperfect proof tests, high-demand/continuous mode (PFH), systematic capability or the safety lifecycle, and the simplified equations lose accuracy when &lambda;DU&middot;TI is not much smaller than 1. Use certified failure data from each device&rsquo;s safety manual, and a qualified functional safety engineer for the final verification.</div>
+    </details>
+  </div>
+  <footer>Screening estimate for a low-demand safety instrumented function. A SIL claim also needs systematic capability, lifecycle compliance and documented verification under IEC 61508/61511.</footer>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  function num(id){ var e = document.getElementById(id); return e ? parseFloat(e.value) : NaN; }
+  function el(id){ return document.getElementById(id); }
+  function setText(id, html){ var e = el(id); if(e) e.innerHTML = html; }
+  function sci(n){
+    if(!isFinite(n) || n<=0) return '0';
+    var s = n.toExponential(2).split('e');
+    return s[0]+'&times;10<sup>'+String(parseInt(s[1],10)).replace('-','&minus;')+'</sup>';
+  }
+  var HFT = {'1oo1':0,'1oo2':1,'2oo2':0,'2oo3':1};
+  var TAB_A = [[1,2,3],[2,3,4],[3,4,4],[3,4,4]];
+  var TAB_B = [[0,1,2],[1,2,3],[2,3,4],[3,4,4]];
+  function archMax(type, sff, hft){
+    var r = sff < 60 ? 0 : sff < 90 ? 1 : sff < 99 ? 2 : 3;
+    var c = Math.min(hft, 2);
+    return (type === 'B' ? TAB_B : TAB_A)[r][c];
+  }
+  function pfd(vote, lamHr, ti, beta){
+    var x = lamHr * ti;
+    if(vote === '1oo1') return x/2;
+    if(vote === '2oo2') return x;
+    if(vote === '1oo2') return Math.pow((1-beta)*x,2)/3 + beta*x/2;
+    return Math.pow((1-beta)*x,2) + beta*x/2;
+  }
+  function bandSil(p){
+    if(p < 1e-4) return 4;
+    if(p < 1e-3) return 3;
+    if(p < 1e-2) return 2;
+    if(p < 1e-1) return 1;
+    return 0;
+  }
+  function silText(n){ return n === 0 ? 'No SIL' : 'SIL '+n; }
+  var PRE = ['sn','lg','fe'];
+
+  function calc(){
+    var ti = num('silTI'), beta = num('silBeta')/100, target = parseInt(el('silTarget').value,10);
+    var errs = 0;
+    errs += fieldError(el('silTI'), (isNaN(ti)||ti<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('silBeta'), (isNaN(beta)||beta<0||beta>1) ? 'Must be between 0 and 100.' : null);
+    var subs = [];
+    PRE.forEach(function(p){
+      var lam = num(p+'Lam'), sff = num(p+'Sff');
+      errs += fieldError(el(p+'Lam'), (isNaN(lam)||lam<0) ? 'Must be 0 or greater.' : null);
+      errs += fieldError(el(p+'Sff'), (isNaN(sff)||sff<0||sff>100) ? 'Must be between 0 and 100.' : null);
+      subs.push({p:p, lam:lam, sff:sff, vote:el(p+'Vote').value, type:el(p+'Type').value});
+    });
+    if(errs > 0){ updateValidationBanner('silValidation', errs); return; }
+
+    var tiH = ti*8760, total = 0, archMin = 4, warn = false;
+    subs.forEach(function(s){
+      s.pfd = pfd(s.vote, s.lam*1e-9, tiH, beta);
+      s.arch = archMax(s.type, s.sff, HFT[s.vote]);
+      total += s.pfd;
+      if(s.arch < archMin) archMin = s.arch;
+      if(s.lam*1e-9*tiH > 0.1) warn = true;
+    });
+    subs.forEach(function(s){
+      var share = total > 0 ? (s.pfd/total*100) : 0;
+      setText(s.p+'Res', sci(s.pfd)+' &middot; '+share.toFixed(0)+'% &middot; '+(s.arch===0?'not allowed':'SIL '+s.arch));
+    });
+    var band = total > 0 ? bandSil(total) : 4;
+    var claim = Math.min(band, archMin);
+    setText('silTotal', sci(total));
+    setText('silRRF', total > 0 ? (1/total).toLocaleString('en-US',{maximumFractionDigits:0}) : '&mdash;');
+    setText('silBand', silText(band));
+    setText('silArch', archMin===0 ? 'Not allowed (SFF too low for Type B at HFT 0)' : silText(archMin));
+    setText('silClaim', silText(claim));
+
+    var pass = claim >= target;
+    var banner = el('silValidation');
+    setText('silOverall', (pass ? 'PASS' : 'FAIL')+' \u2014 '+silText(claim)+' vs target SIL '+target);
+    if(pass){
+      banner.className = 'validation-banner ok';
+      banner.innerHTML = '<span class="vdot"></span><span>PFDavg and architectural constraints both support SIL '+target+' or better for these inputs.'+(warn?' Caution: a channel has \u03bbDU\u00b7TI above 0.1, where the simplified equations become less accurate.':'')+'</span>';
+    } else {
+      var why = [];
+      if(band < target) why.push('PFDavg is in the '+silText(band)+' band (needs &lt; '+sci(Math.pow(10,-target))+' for SIL '+target+')');
+      if(archMin < target) why.push('architectural constraints limit the function to '+(archMin===0?'no SIL':'SIL '+archMin)+' (raise HFT, SFF or use a different element)');
+      banner.className = 'validation-banner bad';
+      banner.innerHTML = '<span class="vdot"></span><span>Target SIL '+target+' not met: '+why.join('; ')+'. The subsystem with the largest PFDavg share is the first place to improve.'+(warn?' Caution: a channel has \u03bbDU\u00b7TI above 0.1, where the simplified equations become less accurate.':'')+'</span>';
+    }
+  }
+  var ids = ['silTarget','silTI','silBeta'];
+  PRE.forEach(function(p){ ids.push(p+'Vote',p+'Lam',p+'Type',p+'Sff'); });
+  ids.forEach(function(id){
+    var e = el(id);
+    if(e){ e.addEventListener('input', calc); e.addEventListener('change', calc); }
+  });
+  calc();
+})();
+</script>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
