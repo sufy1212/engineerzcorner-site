@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Functional Safety &amp; SIL Explained</title>
+    <link>https://www.engineerzcorner.com/posts/functional-safety-sil-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/functional-safety-sil-explained.html</guid>
+    <description>What a Safety Integrity Level really measures: PFDavg and PFH bands, SFF/HFT architectural constraints, voting, and a worked SIF example (IEC 61508/61511).</description>
+    <pubDate>Sat, 03 Oct 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Tank Breathing Losses</title>
     <link>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</guid>
