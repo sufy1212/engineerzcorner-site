@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functional Safety &amp; SIL Explained | Engineerz CorneR</title>
+<meta name="description" content="What a Safety Integrity Level really measures: PFDavg and PFH bands, SFF/HFT architectural constraints, voting, and a worked SIF example (IEC 61508/61511).">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/functional-safety-sil-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Functional Safety &amp; SIL Explained">
+<meta property="og:description" content="What a Safety Integrity Level really measures: PFDavg and PFH bands, SFF/HFT architectural constraints, voting, and a worked SIF example (IEC 61508/61511).">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/functional-safety-sil-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Functional Safety &amp; SIL Explained">
+<meta name="twitter:description" content="SIL, PFDavg, SFF and HFT explained, with a worked safety instrumented function example.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="functional-safety-sil-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Functional Safety & SIL Explained", "item": "https://www.engineerzcorner.com/posts/functional-safety-sil-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Functional Safety & SIL Explained",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "description": "What a Safety Integrity Level really measures: PFDavg and PFH bands, SFF/HFT architectural constraints, voting, and a worked SIF example (IEC 61508/61511).",
+  "url": "https://www.engineerzcorner.com/posts/functional-safety-sil-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/functional-safety-sil-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Functional Safety &amp; SIL</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#128737; Automation &middot; Functional Safety</span>
+    <h1>Functional Safety &amp; SIL Explained</h1>
+    <p class="hero-sub">A SIL is not a rating you buy on a datasheet. It is a target for how much a specific safety function must reduce risk, and it is only claimed when failure probability, hardware architecture and engineering process all pass together. Here is what the number means, where the bands come from, and how a real loop gets checked against them.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 61508 / IEC 61511</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A safety instrumented function: sensor, logic solver and final element in series, with the four SIL bands below">
+      <g font-family="IBM Plex Mono" font-size="9" fill="#c9dfe6">
+        <rect x="60" y="28" width="150" height="40" rx="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="135" y="52" text-anchor="middle">SENSOR</text>
+        <rect x="305" y="28" width="150" height="40" rx="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="380" y="52" text-anchor="middle">LOGIC SOLVER</text>
+        <rect x="550" y="28" width="150" height="40" rx="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="625" y="52" text-anchor="middle">FINAL ELEMENT</text>
+        <line x1="210" y1="48" x2="305" y2="48" stroke="#7e97ac" stroke-width="2"/>
+        <line x1="455" y1="48" x2="550" y2="48" stroke="#7e97ac" stroke-width="2"/>
+        <rect x="60" y="92" width="160" height="14" fill="#3EC6E0" opacity=".25"/>
+        <rect x="230" y="92" width="160" height="14" fill="#3EC6E0" opacity=".42"/>
+        <rect x="400" y="92" width="160" height="14" fill="#3EC6E0" opacity=".62"/>
+        <rect x="570" y="92" width="130" height="14" fill="#3EC6E0" opacity=".85"/>
+        <text x="140" y="120" text-anchor="middle">SIL 1</text>
+        <text x="310" y="120" text-anchor="middle">SIL 2</text>
+        <text x="480" y="120" text-anchor="middle">SIL 3</text>
+        <text x="635" y="120" text-anchor="middle">SIL 4</text>
+        <text x="60" y="142" fill="#7e97ac">PFDavg 10&#8315;&#185; &#8594; 10&#8315;&#8309; (low demand): the whole loop must fit one band</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">SIL belongs to a <em>safety function</em> (sensor, logic solver and final element together), not to a single transmitter or valve. Devices only carry a SIL <em>capability</em>.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">In low demand mode, SIL 1&ndash;4 map to PFDavg bands of 10&#8315;&sup1;&ndash;10&#8315;&sup2; down to 10&#8315;&#8309;&ndash;10&#8315;&#8308;. In high demand or continuous mode they map to PFH bands per hour.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A good PFDavg number is necessary but not enough. Hardware fault tolerance (HFT), safe failure fraction (SFF), systematic capability and the safety lifecycle all have to support the same SIL.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Proof test interval and valve failure rates usually decide the outcome. Redundancy helps, but common cause failure limits how much.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What functional safety actually means</h2>
+    <p>Functional safety is safety that depends on something <em>working</em>. A relief valve, a high-high trip that closes a shutdown valve, a light curtain that stops a press: each only protects anyone if the function is carried out when called upon. That is different from inherent safety (a thicker vessel wall, a lower inventory), where nothing has to act.</p>
+    <p>Because these functions are built from sensors, programmable logic and actuators that can all fail, the standards ask for an <em>evidence-based argument</em> that the function will work with a stated reliability. The Safety Integrity Level is the shorthand for how demanding that argument must be.</p>
+
+    <h2><span class="h2-dot"></span>The standards family</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Standard</th><th>Scope</th><th>Who it is written for</th></tr>
+        <tr><td>IEC 61508</td><td>Generic umbrella for electrical, electronic and programmable electronic safety systems; defines SIL 1&ndash;4</td><td>Device and system manufacturers</td></tr>
+        <tr><td>IEC 61511</td><td>Process-sector implementation of IEC 61508 for safety instrumented systems</td><td>Designers, integrators and plant owners</td></tr>
+        <tr><td>ISO 13849-1</td><td>Machinery safety-related control parts; uses Performance Levels PL a&ndash;e</td><td>Machine builders</td></tr>
+        <tr><td>IEC 62061</td><td>Machinery functional safety; uses SIL 1&ndash;3 (SIL 4 is not used for machinery)</td><td>Machine builders</td></tr>
+      </table>
+    </div>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Which one applies to you:</strong> a plant installing a high-level trip uses IEC 61511. A transmitter manufacturer proving its device is SIL-capable works to IEC 61508. A guarded machine line uses ISO 13849-1 or IEC 62061. IEC 61511-1 was developed as the process-sector implementation of IEC 61508:2010, and its scope covers SIL 1 up to SIL 4, with SIL 1 as the floor below which it does not apply.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The safety instrumented function</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+        <div><div class="fs-name">SIF vs SIS</div><div class="fs-full">Function vs the system that carries it out</div></div>
+      </div>
+      <p class="fs-desc">A <strong>safety instrumented function (SIF)</strong> is one specific protective action against one specific hazard, for example &ldquo;close the inlet valve when level reaches high-high&rdquo;. It is built from three subsystems in series: sensor(s), a logic solver, and final element(s). The <strong>safety instrumented system (SIS)</strong> is the collection of hardware that implements one or more SIFs. Each SIF gets its own required SIL, set by the hazard it addresses, so one SIS can contain SIL 1 and SIL 2 functions side by side.</p>
+    </div>
+
+    <h2><span class="h2-dot"></span>What the SIL bands are</h2>
+    <p>A SIL is defined by how often the function may fail dangerously. Which measure applies depends on how often the function is called on. Low demand mode means at most about one demand per year, which covers most process trips. High demand or continuous mode means more than one demand per year, which is typical of machinery.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>SIL</th><th>PFDavg (low demand)</th><th>Risk reduction factor (1/PFDavg)</th><th>PFH per hour (high / continuous)</th></tr>
+        <tr><td>SIL 1</td><td>&ge;10&#8315;&sup2; to &lt;10&#8315;&sup1;</td><td>10 to 100</td><td>&ge;10&#8315;&#8310; to &lt;10&#8315;&#8309;</td></tr>
+        <tr><td>SIL 2</td><td>&ge;10&#8315;&sup3; to &lt;10&#8315;&sup2;</td><td>100 to 1,000</td><td>&ge;10&#8315;&#8311; to &lt;10&#8315;&#8310;</td></tr>
+        <tr><td>SIL 3</td><td>&ge;10&#8315;&#8308; to &lt;10&#8315;&sup3;</td><td>1,000 to 10,000</td><td>&ge;10&#8315;&#8312; to &lt;10&#8315;&#8311;</td></tr>
+        <tr><td>SIL 4</td><td>&ge;10&#8315;&#8309; to &lt;10&#8315;&#8308;</td><td>10,000 to 100,000</td><td>&ge;10&#8315;&#8313; to &lt;10&#8315;&#8312;</td></tr>
+      </table>
+    </div>
+    <p>The numbers describe the <em>whole function</em>. The sensor, logic solver and final element PFDavg values add up, and the sum has to land inside the target band.</p>
+
+    <h2><span class="h2-dot"></span>Where the required SIL comes from</h2>
+    <p>Nobody picks a SIL because it sounds safe. It comes out of a hazard and risk assessment. The plant defines a tolerable frequency for the hazardous outcome, then credits each independent protection layer for the risk it removes. Whatever risk reduction is still missing is assigned to the SIF. A layer of protection analysis (LOPA) is one common way to do this arithmetic; risk graphs and risk matrices are others.</p>
+    <div class="eq">Illustrative LOPA: initiating event 0.2 /yr &middot; tolerable outcome 10&#8315;&#8308; /yr &middot; one other layer, PFD 0.1<br>Required SIF PFD &le; 10&#8315;&#8308; &divide; (0.2 &times; 0.1) = 5 &times; 10&#8315;&sup3; &rarr; RRF &ge; 200 &rarr; <strong>SIL 2</strong></div>
+    <p>Those inputs are made-up round numbers to show the method. A real study uses the company's own risk criteria and credited layers.</p>
+
+    <h2><span class="h2-dot"></span>What it takes to claim a SIL</h2>
+    <p>Hitting the PFDavg band is only one of several gates. A SIF has to pass all of them:</p>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Random hardware failures.</strong> The summed PFDavg (or PFH) of sensor, logic solver and final element sits inside the target band.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Architectural constraints.</strong> Each subsystem has enough hardware fault tolerance for its safe failure fraction and device type (tables below).</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Systematic capability (SC1&ndash;SC4).</strong> Systematic faults, such as design and software errors, cannot be calculated away. A device&rsquo;s SC says how rigorous its development process was.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Lifecycle and management.</strong> Specification, verification, proof testing, change control and competence are all part of the claim. A calculation without them is not a SIL.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Failure rates, SFF and device type</h2>
+    <p>Safety data sheets split a device&rsquo;s failure rate into categories. Safe failures push the process toward the safe state. Dangerous failures stop the function from working, and the question is whether the device&rsquo;s own diagnostics catch them.</p>
+    <div class="eq">&lambda;D = &lambda;DD + &lambda;DU (dangerous detected + dangerous undetected)<br>SFF = (&lambda;S + &lambda;DD) &divide; (&lambda;S + &lambda;D) &nbsp;&nbsp;&middot;&nbsp;&nbsp; DC = &lambda;DD &divide; &lambda;D</div>
+    <p>Only &lambda;DU matters for PFDavg, because undetected dangerous failures sit hidden until a proof test or a real demand finds them. Example: &lambda;S = 4&times;10&#8315;&#8311;, &lambda;DD = 3&times;10&#8315;&#8311;, &lambda;DU = 1&times;10&#8315;&#8311; per hour gives SFF = 87.5% and diagnostic coverage = 75%.</p>
+    <p>Devices are also classed by complexity. <strong>Type A</strong> elements have well-defined failure modes and no complex software, such as a pressure switch or a simple valve. <strong>Type B</strong> elements are complex, typically with a microprocessor, such as an electronic pressure transmitter.</p>
+
+    <h3>Architectural constraints, Route 1H (IEC 61508-2)</h3>
+    <p>This table gives the maximum SIL a subsystem can claim for its type, SFF and hardware fault tolerance (HFT). HFT of 1 means one dangerous fault can occur without losing the function.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>SFF</th><th>Type A: HFT 0 / 1 / 2</th><th>Type B: HFT 0 / 1 / 2</th></tr>
+        <tr><td>&lt;60%</td><td>SIL 1 / SIL 2 / SIL 3</td><td>Not allowed / SIL 1 / SIL 2</td></tr>
+        <tr><td>60% to &lt;90%</td><td>SIL 2 / SIL 3 / SIL 4</td><td>SIL 1 / SIL 2 / SIL 3</td></tr>
+        <tr><td>90% to &lt;99%</td><td>SIL 3 / SIL 4 / SIL 4</td><td>SIL 2 / SIL 3 / SIL 4</td></tr>
+        <tr><td>&ge;99%</td><td>SIL 3 / SIL 4 / SIL 4</td><td>SIL 3 / SIL 4 / SIL 4</td></tr>
+      </table>
+    </div>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Reading it:</strong> the 87.5% SFF Type B transmitter above, used alone (HFT 0), is capped at SIL 1 on this table. Pair it with a second transmitter (HFT 1) and the cap rises to SIL 2; reaching SIL 3 needs an SFF of 90% or more at HFT 1. A second route, Route 2H, replaces SFF with proven failure-rate data and a minimum HFT per SIL; use whichever route your standard and device certificates allow.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Voting architectures and PFDavg</h2>
+    <p>Redundancy is written as MooN: M channels must agree out of N to trip. 1oo2 trips if either channel sees the demand, so it is more likely to catch a dangerous failure but also more likely to trip spuriously. The simplified low-demand equations below use the proof test interval TI and a common cause fraction &beta;.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Voting</th><th>HFT</th><th>Simplified PFDavg</th></tr>
+        <tr><td>1oo1</td><td>0</td><td>&lambda;DU &times; TI / 2</td></tr>
+        <tr><td>1oo2</td><td>1</td><td>[(1&minus;&beta;) &lambda;DU TI]&sup2; / 3 + &beta; &lambda;DU TI / 2</td></tr>
+        <tr><td>2oo2</td><td>0</td><td>&lambda;DU &times; TI</td></tr>
+        <tr><td>2oo3</td><td>1</td><td>[(1&minus;&beta;) &lambda;DU TI]&sup2; + &beta; &lambda;DU TI / 2</td></tr>
+      </table>
+    </div>
+    <p>These ignore repair time, diagnostics and imperfect proof tests, so treat them as screening estimates. IEC 61508-6 gives fuller equations, and a certified SIL verification tool is the normal route for a final answer.</p>
+
+    <h2><span class="h2-dot"></span>Worked example: a high-level trip</h2>
+    <p>The values below are illustrative, not from any datasheet. Proof test interval TI = 1 year (8,760 h), &beta; = 5%.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Case</th><th>Sensor</th><th>Logic</th><th>Valve</th><th>Total PFDavg</th><th>Result</th></tr>
+        <tr><td>A. All 1oo1</td><td>8.8&times;10&#8315;&#8308;</td><td>1.0&times;10&#8315;&#8308;</td><td>4.4&times;10&#8315;&sup3;</td><td>5.4&times;10&#8315;&sup3;</td><td>SIL 2 band (RRF &asymp; 187)</td></tr>
+        <tr><td>B. Valve 1oo2</td><td>8.8&times;10&#8315;&#8308;</td><td>1.0&times;10&#8315;&#8308;</td><td>2.4&times;10&#8315;&#8308;</td><td>1.2&times;10&#8315;&sup3;</td><td>SIL 2 band (RRF &asymp; 821)</td></tr>
+        <tr><td>C. Sensor and valve 1oo2</td><td>4.5&times;10&#8315;&#8309;</td><td>1.0&times;10&#8315;&#8308;</td><td>2.4&times;10&#8315;&#8308;</td><td>3.9&times;10&#8315;&#8308;</td><td>SIL 3 band (RRF &asymp; 2,585)</td></tr>
+      </table>
+    </div>
+    <p>Inputs: sensor &lambda;DU = 2&times;10&#8315;&#8311;/h, valve &lambda;DU = 1&times;10&#8315;&#8310;/h, logic solver PFDavg taken as 1.0&times;10&#8315;&#8308;. Three things stand out. First, the valve dominates in case A, which is typical: final elements are usually the weakest link. Second, fixing only the valve in case B still lands just inside SIL 2, because the sensor and logic contributions now matter. Third, case C reaches the SIL 3 PFDavg band, but the SIF only <em>claims</em> SIL 3 if each subsystem also passes the architectural constraints, systematic capability and lifecycle gates above.</p>
+    <p>Proof test interval is the other lever. In case A, halving TI to six months cuts the total from 5.4&times;10&#8315;&sup3; to 2.7&times;10&#8315;&sup3;, because PFDavg scales almost linearly with TI for a 1oo1 subsystem.</p>
+
+    <h2><span class="h2-dot"></span>Machinery: Performance Levels</h2>
+    <p>ISO 13849-1 uses Performance Levels based on the dangerous failure rate per hour (PFHd). The correspondence with SIL is informative, not a substitution rule.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>PL</th><th>PFHd per hour</th><th>Roughly equivalent to</th></tr>
+        <tr><td>a</td><td>&ge;10&#8315;&#8309; to &lt;10&#8315;&#8308;</td><td>No SIL equivalent</td></tr>
+        <tr><td>b</td><td>&ge;3&times;10&#8315;&#8310; to &lt;10&#8315;&#8309;</td><td>SIL 1 (upper part)</td></tr>
+        <tr><td>c</td><td>&ge;10&#8315;&#8310; to &lt;3&times;10&#8315;&#8310;</td><td>SIL 1</td></tr>
+        <tr><td>d</td><td>&ge;10&#8315;&#8311; to &lt;10&#8315;&#8310;</td><td>SIL 2</td></tr>
+        <tr><td>e</td><td>&ge;10&#8315;&#8312; to &lt;10&#8315;&#8311;</td><td>SIL 3</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>&ldquo;We bought a SIL 3 transmitter, so the loop is SIL 3.&rdquo;</strong> A SIL 3 capable device is a building block. The loop still has to meet PFDavg, architecture and lifecycle requirements with the actual valve, logic solver and test plan.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Using a vendor PFDavg without checking its test interval.</strong> A datasheet number is only valid for the proof test interval and assumptions stated in the safety manual.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Assuming proof tests are perfect.</strong> If the test does not exercise every dangerous failure mode, the real PFDavg is worse than the simplified formula says.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Adding redundancy and ignoring common cause.</strong> Two identical transmitters on the same tapping share failure causes. &beta; puts a floor under what duplication can buy, and 1oo2 also raises the spurious trip rate.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Mixing up SIL with the PL or the demand mode.</strong> A low-demand PFDavg band cannot be applied to a high-demand function, and a PL is not automatically a SIL.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>How it fits with what you already have</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>Alarms are not a SIF</b><span>A basic process control alarm that asks an operator to act can be credited as a protection layer, but only a function that meets the SIL requirements counts as a SIF.</span></div>
+      <div class="signal-card b"><b>Relief devices sit alongside</b><span>A pressure safety valve is an independent mechanical layer. It is credited in the risk study, then the SIF covers what is left.</span></div>
+      <div class="signal-card c"><b>Hazardous-area rules are separate</b><span>Zone classification and intrinsic safety control ignition risk in the plant. Functional safety is about whether the protective function works when called.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>SIL is a property of a safety function, set by a risk assessment and verified for the whole sensor, logic and final element chain.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Low demand bands run from PFDavg 10&#8315;&sup1;&ndash;10&#8315;&sup2; (SIL 1) to 10&#8315;&#8309;&ndash;10&#8315;&#8308; (SIL 4); high demand uses PFH per hour.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>PFDavg alone never grants a SIL: architectural constraints (SFF, HFT, device type), systematic capability and the lifecycle must hold too.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Final elements and proof test intervals usually drive the number; redundancy helps but common cause failure limits it.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Simplified equations are for screening. Confirm real designs against IEC 61508/61511 and a qualified functional safety engineer.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Functional%20Safety%20%26%20SIL%20Explained%20%E2%80%94%20what%20a%20Safety%20Integrity%20Level%20really%20measures.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffunctional-safety-sil-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffunctional-safety-sil-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Functional%20Safety%20%26%20SIL%20Explained&text=PFDavg%20bands%2C%20SFF%2C%20HFT%20and%20a%20worked%20SIF%20example.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffunctional-safety-sil-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Functional%20Safety%20%26%20SIL%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffunctional-safety-sil-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="plc-vs-dcs-vs-scada-explained">PLC vs DCS vs SCADA Explained</a></li><li><a href="alarm-setpoint-bands-high-highhigh-explained">Alarm Setpoint Bands: High, High-High Explained</a></li><li><a href="relief-valve-sizing-api520-explained">Relief Valve Orifice Sizing</a></li><li><a href="control-valve-components-explained">Control Valve Components Explained</a></li><li><a href="iecex-zones-vs-class-division-hazardous-areas">IECEx/ATEX Zones vs NEC Class &amp; Division</a></li><li><a href="pid-piping-instrumentation-diagram-explained">P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../changelog">Changelog</a> &nbsp;&middot;&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
