@@ -213,7 +213,7 @@
         <tr><td>C. Sensor and valve 1oo2</td><td>4.5&times;10&#8315;&#8309;</td><td>1.0&times;10&#8315;&#8308;</td><td>2.4&times;10&#8315;&#8308;</td><td>3.9&times;10&#8315;&#8308;</td><td>SIL 3 band (RRF &asymp; 2,585)</td></tr>
       </table>
     </div>
-    <p>Inputs: sensor &lambda;DU = 2&times;10&#8315;&#8311;/h, valve &lambda;DU = 1&times;10&#8315;&#8310;/h, logic solver PFDavg taken as 1.0&times;10&#8315;&#8308;. Three things stand out. First, the valve dominates in case A, which is typical: final elements are usually the weakest link. Second, fixing only the valve in case B still lands just inside SIL 2, because the sensor and logic contributions now matter. Third, case C reaches the SIL 3 PFDavg band, but the SIF only <em>claims</em> SIL 3 if each subsystem also passes the architectural constraints, systematic capability and lifecycle gates above.</p>
+    <p>Inputs: sensor &lambda;DU = 200 FIT (2&times;10&#8315;&#8311;/h), valve &lambda;DU = 1,000 FIT (1&times;10&#8315;&#8310;/h), logic solver &lambda;DU = 22.8 FIT (PFDavg &asymp; 1.0&times;10&#8315;&#8308;). You can run your own numbers in the <a href="../automation/sil-verification-calculator">SIL Verification Calculator</a>. Three things stand out. First, the valve dominates in case A, which is typical: final elements are usually the weakest link. Second, fixing only the valve in case B still lands just inside SIL 2, because the sensor and logic contributions now matter. Third, case C reaches the SIL 3 PFDavg band, but the SIF only <em>claims</em> SIL 3 if each subsystem also passes the architectural constraints, systematic capability and lifecycle gates above.</p>
     <p>Proof test interval is the other lever. In case A, halving TI to six months cuts the total from 5.4&times;10&#8315;&sup3; to 2.7&times;10&#8315;&sup3;, because PFDavg scales almost linearly with TI for a 1oo1 subsystem.</p>
 
     <h2><span class="h2-dot"></span>Machinery: Performance Levels</h2>
@@ -269,7 +269,7 @@
   <div class="post-related">
     <h2>Related</h2>
     <p class="post-related-label">Related reading</p>
-    <ul><li><a href="plc-vs-dcs-vs-scada-explained">PLC vs DCS vs SCADA Explained</a></li><li><a href="alarm-setpoint-bands-high-highhigh-explained">Alarm Setpoint Bands: High, High-High Explained</a></li><li><a href="relief-valve-sizing-api520-explained">Relief Valve Orifice Sizing</a></li><li><a href="control-valve-components-explained">Control Valve Components Explained</a></li><li><a href="iecex-zones-vs-class-division-hazardous-areas">IECEx/ATEX Zones vs NEC Class &amp; Division</a></li><li><a href="pid-piping-instrumentation-diagram-explained">P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</a></li></ul>
+    <ul><li><a href="../automation/sil-verification-calculator">SIL Verification (PFDavg) Calculator</a></li><li><a href="plc-vs-dcs-vs-scada-explained">PLC vs DCS vs SCADA Explained</a></li><li><a href="alarm-setpoint-bands-high-highhigh-explained">Alarm Setpoint Bands: High, High-High Explained</a></li><li><a href="relief-valve-sizing-api520-explained">Relief Valve Orifice Sizing</a></li><li><a href="control-valve-components-explained">Control Valve Components Explained</a></li><li><a href="iecex-zones-vs-class-division-hazardous-areas">IECEx/ATEX Zones vs NEC Class &amp; Division</a></li><li><a href="pid-piping-instrumentation-diagram-explained">P&amp;ID (Piping &amp; Instrumentation Diagram) Explained</a></li></ul>
   </div>
 
   <div class="post-foot">
