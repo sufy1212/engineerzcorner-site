@@ -4,11 +4,39 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Alarm Setpoint Bands: Why High and High-High Are Different Alarms</title>
+    <link>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/alarm-setpoint-bands-high-highhigh-explained.html</guid>
+    <description>Why alarms come in High/High-High and Low/Low-Low pairs, not single trip points, and how a reset deadband on each keeps the alarm list from flooding operators.</description>
+    <pubDate>Sat, 03 Oct 2026 04:30:43 GMT</pubDate>
+  </item>
+  <item>
     <title>Functional Safety &amp; SIL Explained</title>
     <link>https://www.engineerzcorner.com/posts/functional-safety-sil-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/functional-safety-sil-explained.html</guid>
     <description>What a Safety Integrity Level really measures: PFDavg and PFH bands, SFF/HFT architectural constraints, voting, and a worked SIF example (IEC 61508/61511).</description>
-    <pubDate>Sat, 03 Oct 2026 09:00:00 GMT</pubDate>
+    <pubDate>Sat, 03 Oct 2026 04:30:43 GMT</pubDate>
+  </item>
+  <item>
+    <title>IECEx / ATEX Zones vs NEC Class &amp; Division: Hazardous Area Classification</title>
+    <link>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iecex-zones-vs-class-division-hazardous-areas.html</guid>
+    <description>How the IEC 60079/ATEX Zone system compares to the North American NEC Class &amp; Division system — equivalency table, gas/dust groups, and Ex protection types.</description>
+    <pubDate>Sat, 03 Oct 2026 04:30:43 GMT</pubDate>
+  </item>
+  <item>
+    <title>PLC vs DCS vs SCADA Explained: Real Industrial Comparison</title>
+    <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
+    <description>PLC, DCS and SCADA compared for real industrial use — control type, speed, architecture, redundancy, and where control execution happens.</description>
+    <pubDate>Sat, 03 Oct 2026 04:30:43 GMT</pubDate>
+  </item>
+  <item>
+    <title>Relief Valve Orifice Sizing</title>
+    <link>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</guid>
+    <description>Set pressure, allowable overpressure, back pressure, and required relieving rate — the inputs that decide a relief valve's required orifice area under API 520, and why the scenario matters more than the formula.</description>
+    <pubDate>Sat, 03 Oct 2026 04:30:43 GMT</pubDate>
   </item>
   <item>
     <title>Tank Breathing Losses</title>
@@ -78,13 +106,6 @@
     <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
     <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
     <description>Three ways a relief valve holds its disc shut until set pressure — how back pressure and dirty service decide between conventional, bellows, or pilot-operated.</description>
-    <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
-  </item>
-  <item>
-    <title>Relief Valve Orifice Sizing</title>
-    <link>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</guid>
-    <description>Set pressure, allowable overpressure, back pressure, and required relieving rate — the inputs that decide a relief valve's required orifice area under API 520, and why the scenario matters more than the formula.</description>
     <pubDate>Mon, 28 Sep 2026 02:50:42 GMT</pubDate>
   </item>
   <item>
@@ -179,13 +200,6 @@
     <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
   </item>
   <item>
-    <title>PLC vs DCS vs SCADA Explained: Real Industrial Comparison</title>
-    <link>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained.html</guid>
-    <description>PLC, DCS and SCADA compared for real industrial use — control type, speed, architecture, redundancy, and where control execution happens.</description>
-    <pubDate>Fri, 25 Sep 2026 11:04:19 GMT</pubDate>
-  </item>
-  <item>
     <title>SCADA (Supervisory Control &amp; Data Acquisition) Explained</title>
     <link>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/scada-supervisory-control-data-acquisition-explained.html</guid>
@@ -198,26 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/power-factor-correction-capacitor-banks-explained.html</guid>
     <description>Why low power factor costs money, how to size a capacitor bank (worked example), where to install it, and the harmonic resonance trap detuned reactors solve.</description>
     <pubDate>Mon, 21 Sep 2026 11:27:33 GMT</pubDate>
-  </item>
-  <item>
-    <title>Arc Flash Hazard Basics</title>
-    <link>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</link>
-    <guid>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</guid>
-    <description>What drives arc flash incident energy, the main variables in an arc flash study, NFPA 70E PPE categories 1&amp;ndash;4 with cal/cm&amp;sup2; thresholds, the arc flash boundary explained, and practical ways to reduce incident energy.</description>
-    <pubDate>Thu, 17 Sep 2026 06:22:33 GMT</pubDate>
-  </item>
-  <item>
-    <title>Load Flow (Power Flow) Study Basics</title>
-    <link>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics.html</guid>
-    <description>What a load flow study actually calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and protection coordination studies, and how to read the results.</description>
-    <pubDate>Thu, 17 Sep 2026 06:22:33 GMT</pubDate>
-  </item>
-  <item>
-    <title>Prospective Short-Circuit Current: Why It Falls the Further You Are From Source</title>
-    <link>https://www.engineerzcorner.com/posts/short-circuit-current-iec-60909-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/short-circuit-current-iec-60909-basics.html</guid>
-    <description>How prospective short-circuit current is calculated per IEC 60909, why it's highest at the transformer and drops downstream.</description>
-    <pubDate>Thu, 17 Sep 2026 06:22:33 GMT</pubDate>
   </item>
 </channel></rss>

@@ -7,6 +7,34 @@
   "a": "added"
  },
  {
+  "t": "Relief Valve Orifice Sizing",
+  "u": "posts/relief-valve-sizing-api520-explained",
+  "d": "2026-10-03",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
+  "u": "posts/plc-vs-dcs-vs-scada-explained",
+  "d": "2026-10-03",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "IECEx / ATEX Zones vs NEC Class & Division: Hazardous Area Classification",
+  "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
+  "d": "2026-10-03",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+  "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+  "d": "2026-10-03",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
   "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
   "d": "2026-09-28",
@@ -19,13 +47,6 @@
   "d": "2026-09-28",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Relief Valve Orifice Sizing",
-  "u": "posts/relief-valve-sizing-api520-explained",
-  "d": "2026-09-28",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
@@ -170,13 +191,6 @@
  {
   "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
   "u": "posts/scada-supervisory-control-data-acquisition-explained",
-  "d": "2026-09-25",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
-  "u": "posts/plc-vs-dcs-vs-scada-explained",
   "d": "2026-09-25",
   "c": "Blog",
   "a": "updated"
@@ -1862,13 +1876,6 @@
   "a": "updated"
  },
  {
-  "t": "IECEx / ATEX Zones vs NEC Class & Division: Hazardous Area Classification",
-  "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Ingress Protection (IP) Ratings Explained",
   "u": "posts/ingress-protection-ip-rating-explained",
   "d": "2026-08-27",
@@ -2088,20 +2095,6 @@
  {
   "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
   "u": "posts/4-20ma-current-loop-basics",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
-  "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
-  "u": "posts/air-changes-per-hour-ventilation-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"

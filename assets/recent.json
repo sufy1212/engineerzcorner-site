@@ -1,5 +1,30 @@
 [
   {
+    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+    "d": "2026-10-03"
+  },
+  {
+    "t": "Functional Safety & SIL Explained",
+    "u": "posts/functional-safety-sil-explained",
+    "d": "2026-10-03"
+  },
+  {
+    "t": "IECEx / ATEX Zones vs NEC Class & Division: Hazardous Area Classification",
+    "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
+    "d": "2026-10-03"
+  },
+  {
+    "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
+    "u": "posts/plc-vs-dcs-vs-scada-explained",
+    "d": "2026-10-03"
+  },
+  {
+    "t": "Relief Valve Orifice Sizing",
+    "u": "posts/relief-valve-sizing-api520-explained",
+    "d": "2026-10-03"
+  },
+  {
     "t": "Tank Breathing Losses",
     "u": "posts/tank-breathing-losses-api2000-explained",
     "d": "2026-09-28"
@@ -22,31 +47,6 @@
   {
     "t": "HVAC System Components Explained",
     "u": "posts/hvac-system-components-explained",
-    "d": "2026-09-28"
-  },
-  {
-    "t": "Refrigerant Types: R-410A to A2L",
-    "u": "posts/refrigerant-types-r410a-to-a2l-explained",
-    "d": "2026-09-28"
-  },
-  {
-    "t": "Superheat & Subcooling Explained",
-    "u": "posts/superheat-subcooling-refrigerant-charge-explained",
-    "d": "2026-09-28"
-  },
-  {
-    "t": "Manning's Equation: How Pipe Slope, Roughness and Diameter Set Flow Capacity",
-    "u": "posts/pipe-flow-capacity-mannings-equation-explained",
-    "d": "2026-09-28"
-  },
-  {
-    "t": "Rational Method: How Peak Stormwater Runoff Is Estimated",
-    "u": "posts/rational-method-peak-runoff-explained",
-    "d": "2026-09-28"
-  },
-  {
-    "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
-    "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
     "d": "2026-09-28"
   }
 ]
