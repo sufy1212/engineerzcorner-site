@@ -1,52 +1,52 @@
 [
   {
-    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
-    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+    "t": "Alarm Setpoint Band Calculator",
+    "u": "automation/alarm-setpoints",
     "d": "2026-10-03"
   },
   {
-    "t": "Functional Safety & SIL Explained",
-    "u": "posts/functional-safety-sil-explained",
+    "t": "Deadband / Hysteresis Calculator",
+    "u": "automation/deadband-hysteresis",
     "d": "2026-10-03"
   },
   {
-    "t": "IECEx / ATEX Zones vs NEC Class & Division: Hazardous Area Classification",
-    "u": "posts/iecex-zones-vs-class-division-hazardous-areas",
+    "t": "Instrument/Sensor Selector",
+    "u": "automation/instrument-selector",
     "d": "2026-10-03"
   },
   {
-    "t": "PLC vs DCS vs SCADA Explained: Real Industrial Comparison",
-    "u": "posts/plc-vs-dcs-vs-scada-explained",
+    "t": "Intrinsic Safety Entity / Loop Checker",
+    "u": "automation/is-entity-loop-calculator",
     "d": "2026-10-03"
   },
   {
-    "t": "Relief Valve Orifice Sizing",
-    "u": "posts/relief-valve-sizing-api520-explained",
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
     "d": "2026-10-03"
   },
   {
-    "t": "Tank Breathing Losses",
-    "u": "posts/tank-breathing-losses-api2000-explained",
-    "d": "2026-09-28"
+    "t": "DP Level Transmitter Ranging",
+    "u": "automation/level-transmitter",
+    "d": "2026-10-03"
   },
   {
-    "t": "Elapsed Time Calculations",
-    "u": "posts/elapsed-time-duration-calculations-explained",
-    "d": "2026-09-28"
+    "t": "Modbus RTU Timing / Baud Rate Calculator",
+    "u": "automation/modbus-timing",
+    "d": "2026-10-03"
   },
   {
-    "t": "DC/AC Ratio & Inverter Clipping",
-    "u": "posts/dc-ac-ratio-inverter-clipping-explained",
-    "d": "2026-09-28"
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
+    "d": "2026-10-03"
   },
   {
-    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-    "d": "2026-09-28"
+    "t": "PID Tuning (Reaction Curve)",
+    "u": "automation/pid-tuning",
+    "d": "2026-10-03"
   },
   {
-    "t": "HVAC System Components Explained",
-    "u": "posts/hvac-system-components-explained",
-    "d": "2026-09-28"
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-10-03"
   }
 ]
