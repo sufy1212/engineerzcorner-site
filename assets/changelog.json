@@ -1913,190 +1913,190 @@
  {
   "t": "Relief Valve Orifice Sizing",
   "u": "posts/relief-valve-sizing-api520-explained",
-  "d": "2026-10-03",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
   "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
-  "d": "2026-09-28",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Tank Breathing Losses",
   "u": "posts/tank-breathing-losses-api2000-explained",
-  "d": "2026-09-28",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Rational Method: How Peak Stormwater Runoff Is Estimated",
   "u": "posts/rational-method-peak-runoff-explained",
-  "d": "2026-09-28",
+  "d": "2026-10-05",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "Refrigerant Types: R-410A to A2L",
   "u": "posts/refrigerant-types-r410a-to-a2l-explained",
-  "d": "2026-09-28",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Superheat & Subcooling Explained",
   "u": "posts/superheat-subcooling-refrigerant-charge-explained",
-  "d": "2026-09-28",
+  "d": "2026-10-05",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
   "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-  "d": "2026-09-28",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "SCADA (Supervisory Control & Data Acquisition) Explained",
   "u": "posts/scada-supervisory-control-data-acquisition-explained",
-  "d": "2026-09-25",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Single Line Diagram (SLD) Symbols & How to Read One",
   "u": "posts/single-line-diagram-sld-symbols-how-to-read-one",
-  "d": "2026-09-17",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Prospective Short-Circuit Current: Why It Falls the Further You Are From Source",
   "u": "posts/short-circuit-current-iec-60909-basics",
-  "d": "2026-09-17",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Solar PV System Components Explained: From Panel to Load",
   "u": "posts/solar-pv-system-components-explained",
-  "d": "2026-09-13",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Solar Panel Cross-Section: The Layers Explained",
   "u": "posts/solar-panel-cross-section-layers-explained",
-  "d": "2026-09-13",
+  "d": "2026-10-05",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
   "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
-  "d": "2026-09-12",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "VFD Internal Architecture: Rectifier, DC Bus & Inverter Explained",
   "u": "posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained",
-  "d": "2026-09-12",
+  "d": "2026-10-05",
   "c": "Blog",
-  "a": "added"
+  "a": "updated"
  },
  {
   "t": "What Is an Inverter? DC-to-AC Conversion Explained",
   "u": "posts/what-is-an-inverter-dc-ac-explained",
-  "d": "2026-09-10",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "UPS Architecture, Types & Operating Modes Explained",
   "u": "posts/ups-architecture-types-operating-modes-explained",
-  "d": "2026-09-10",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "UPS Battery Sizing: Why the Nameplate Ah Never Matches What You Actually Get",
   "u": "posts/ups-battery-autonomy-sizing-derating-factors",
-  "d": "2026-09-10",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Pump Types Explained: Centrifugal to PD",
   "u": "posts/pump-types-explained",
-  "d": "2026-09-02",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
-  "d": "2026-08-30",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
-  "t": "Symbol Match",
-  "u": "symbol-match",
-  "d": "2026-08-29",
-  "c": "Games",
-  "a": "new"
- },
- {
-  "t": "Process & Instrumentation Interview Questions",
-  "u": "interview/process",
-  "d": "2026-08-29",
-  "c": "Interview Prep",
-  "a": "new"
- },
- {
   "t": "How to Calculate & Select Supply Air Terminal & Return Air Terminal",
   "u": "posts/supply-return-air-terminal-sizing-explained",
-  "d": "2026-08-27",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Types of Earthing Systems: 9 Electrode Types Explained",
   "u": "posts/types-of-earthing-systems-explained",
-  "d": "2026-08-27",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Types of HVAC Fans",
   "u": "posts/types-of-hvac-fans-explained",
-  "d": "2026-08-27",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Relay Basics: Construction, Working Principle & Contact Types",
   "u": "posts/relay-basics-construction-working-principle-explained",
-  "d": "2026-08-27",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Pre-Commissioning vs Commissioning: What's the Difference",
   "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
-  "d": "2026-08-27",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
  },
  {
   "t": "Star (Y) and Delta (Δ) Connections Explained",
   "u": "posts/star-delta-connection-explained",
-  "d": "2026-08-27",
+  "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
+ },
+ {
+  "t": "The PPP Project Lifecycle: From Identification to Handback",
+  "u": "posts/ppp-project-lifecycle-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
+  "u": "posts/psychrometric-chart-basics",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
  }
 ]

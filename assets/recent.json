@@ -1,52 +1,52 @@
 [
   {
-    "t": "Functional Safety & SIL Explained",
-    "u": "posts/functional-safety-sil-explained",
+    "t": "The PPP Project Lifecycle: From Identification to Handback",
+    "u": "posts/ppp-project-lifecycle-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "Gas Detector Types & Working Principles Explained",
-    "u": "posts/gas-detector-types-working-principles-explained",
+    "t": "Pre-Commissioning vs Commissioning: What's the Difference",
+    "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "Gas Insulated Substation (GIS) Explained",
-    "u": "posts/gas-insulated-substation-gis-explained",
+    "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
+    "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
     "d": "2026-10-05"
   },
   {
-    "t": "Grade & Slope: Why Percent, Ratio and Degrees Aren't the Same Number",
-    "u": "posts/grade-slope-percent-ratio-degrees-explained",
+    "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
+    "u": "posts/psychrometric-chart-basics",
     "d": "2026-10-05"
   },
   {
-    "t": "Harmonics in Power Systems: Sources, Effects and How to Mitigate Them",
-    "u": "posts/harmonics-sources-effects-mitigation",
+    "t": "Cavitation in Pumps: Causes, Warning Signs, and Prevention",
+    "u": "posts/pump-cavitation-causes-prevention",
     "d": "2026-10-05"
   },
   {
-    "t": "Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer",
-    "u": "posts/harmonics-thd-k-factor-transformer-derating",
+    "t": "Pump & Fan Affinity Laws: Why Speed Changes Cube the Power",
+    "u": "posts/pump-fan-affinity-laws-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
-    "u": "posts/heat-pump-sizing-basics",
+    "t": "Pump Types Explained: Centrifugal to PD",
+    "u": "posts/pump-types-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
-    "u": "posts/hira-vs-jsa-vs-sop-explained",
+    "t": "PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String",
+    "u": "posts/pv-string-sizing-voltage",
     "d": "2026-10-05"
   },
   {
-    "t": "How to Read a Full P&ID: A Complete Worked Walkthrough",
-    "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
+    "t": "RACI Matrix Explained: Who's Responsible vs. Who's Accountable",
+    "u": "posts/raci-matrix-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "How to Read a Wiring Diagram (Beginner's Guide)",
-    "u": "posts/how-to-read-a-wiring-diagram-beginners-guide",
+    "t": "Rational Method: How Peak Stormwater Runoff Is Estimated",
+    "u": "posts/rational-method-peak-runoff-explained",
     "d": "2026-10-05"
   }
 ]
