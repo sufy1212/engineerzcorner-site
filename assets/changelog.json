@@ -112,6 +112,90 @@
   "a": "updated"
  },
  {
+  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+  "u": "civil/pipe-flow-capacity",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Concrete Volume & Material Estimator",
+  "u": "civil/concrete-volume-estimator",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Slab-on-Grade Quick Thickness",
+  "u": "civil/slab-on-grade-thickness",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Staircase Geometry Check",
+  "u": "civil/staircase-geometry",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Beam Bending & Deflection",
+  "u": "civil/beam-bending",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Column Axial Capacity",
+  "u": "civil/column-capacity",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Cut & Fill Volume (Average End Area)",
+  "u": "civil/cut-fill-volume",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Footing Bearing Sizing",
+  "u": "civil/footing-sizing",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Grade / Slope Calculator",
+  "u": "civil/grade-slope",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Rebar Development Length & Weight",
+  "u": "civil/rebar-development",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Retaining Wall Stability",
+  "u": "civil/retaining-wall",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
+  "u": "civil/trench-safe-slope",
+  "d": "2026-10-05",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
   "t": "Functional Safety & SIL Explained",
   "u": "posts/functional-safety-sil-explained",
   "d": "2026-10-03",
@@ -347,13 +431,6 @@
   "u": "electrical/bess-sizing-calculator",
   "d": "2026-09-20",
   "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-  "u": "civil/pipe-flow-capacity",
-  "d": "2026-09-20",
-  "c": "Civil",
   "a": "updated"
  },
  {
@@ -768,83 +845,6 @@
   "d": "2026-09-01",
   "c": "Blog",
   "a": "added"
- },
- {
-  "t": "Concrete Volume & Material Estimator",
-  "u": "civil/concrete-volume-estimator",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Slab-on-Grade Quick Thickness",
-  "u": "civil/slab-on-grade-thickness",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Staircase Geometry Check",
-  "u": "civil/staircase-geometry",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Beam Bending & Deflection",
-  "u": "civil/beam-bending",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Column Axial Capacity",
-  "u": "civil/column-capacity",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Cut & Fill Volume (Average End Area)",
-  "u": "civil/cut-fill-volume",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Footing Bearing Sizing",
-  "u": "civil/footing-sizing",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Grade / Slope Calculator",
-  "u": "civil/grade-slope",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Rebar Development Length & Weight",
-  "u": "civil/rebar-development",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Retaining Wall Stability",
-  "u": "civil/retaining-wall",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
-  "u": "civil/trench-safe-slope",
-  "d": "2026-08-30",
-  "c": "Civil",
-  "a": "updated"
  },
  {
   "t": "Age Calculator",
