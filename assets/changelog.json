@@ -1050,6 +1050,454 @@
   "a": "added"
  },
  {
+  "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
+  "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "DC/AC Ratio & Inverter Clipping",
+  "u": "posts/dc-ac-ratio-inverter-clipping-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Elapsed Time Calculations",
+  "u": "posts/elapsed-time-duration-calculations-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "CT Sizing & Burden Explained",
+  "u": "posts/ct-sizing-burden-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Dimensional Analysis Explained",
+  "u": "posts/dimensional-analysis-unit-conversion-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Binary, Hex & Octal Explained",
+  "u": "posts/binary-hex-octal-number-base-conversion-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Arc Flash Hazard Basics",
+  "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "ANSI Relay Numbers: Common Protection Relay Functions",
+  "u": "posts/ansi-relay-numbers-protection-functions",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+  "u": "posts/battery-soc-vs-dod-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "BESS Types & Components Explained",
+  "u": "posts/bess-types-components-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
+  "u": "posts/electrical-panel-fat-checklist",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
+  "u": "posts/breaker-selectivity-discrimination-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Data Center Cooling: Air to Immersion",
+  "u": "posts/data-center-cooling-types-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Circuit Breaker Types Explained: MCB to OCB",
+  "u": "posts/circuit-breaker-types-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cooling Tower Types Explained",
+  "u": "posts/cooling-tower-types-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Fire Pump Room: 10 Common Installation & Commissioning Mistakes",
+  "u": "posts/fire-pump-room-installation-commissioning-mistakes",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Main Components of a 33 kV Substation Explained",
+  "u": "posts/33kv-substation-main-components-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
+  "u": "posts/cav-vs-vav-air-volume-control-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
+  "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
+  "u": "posts/earthing-vs-grounding-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "FM-200 System Diagram: Components & How It Works Explained",
+  "u": "posts/fm-200-clean-agent-system-components-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
+  "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Facility & Property Management: Key Codes & Standards Reference",
+  "u": "posts/facility-management-codes-standards-reference",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Facility Management: Monthly Invoice Processing",
+  "u": "posts/facility-management-monthly-invoice-processing",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Machine: Main Parts & Functions",
+  "u": "posts/chiller-machine-parts-functions-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
+  "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
+  "u": "posts/concrete-volume-material-takeoff-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Components Explained",
+  "u": "posts/control-valve-components-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
+  "u": "posts/critical-path-method-cpm-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "How to Select the Right DC Cable Size in PV Systems",
+  "u": "posts/dc-cable-size-selection-pv-systems",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Dissolved Gas Analysis (DGA) Explained",
+  "u": "posts/dissolved-gas-analysis-dga-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
+  "u": "posts/duct-sizing-velocity-limits-vs-airflow",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "MCB, MCCB, ACB, RCCB & More: Electrical Switchgear & Protection Devices Explained",
+  "u": "posts/electrical-switchgear-protection-devices-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "FM-200, Novec 1230, CO2 & Foam: Fire Suppression Systems Explained",
+  "u": "posts/fire-suppression-systems-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Earthing & Grounding Systems Explained: Why Resistance Is the Whole Game",
+  "u": "posts/earthing-grounding-systems-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
+  "u": "posts/flame-retardant-vs-flame-resistant-cables",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Conduit Fill: Why 40% Isn't an Arbitrary Number",
+  "u": "posts/conduit-fill-why-the-percentage-limit-exists",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake",
+  "u": "posts/control-valve-cv-sizing-oversizing-mistake",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cut & Fill Volume: How the Average End Area Method Actually Works",
+  "u": "posts/cut-fill-volume-average-end-area-method-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Deadband & Hysteresis: Why a Single Setpoint Isn't Enough",
+  "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Earned Value Management: Reading Project Health From Three Numbers",
+  "u": "posts/earned-value-management-basics",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "33/11 kV Substation: Single Line Diagram & Equipment Overview",
+  "u": "posts/33-11kv-substation-diagram-equipment-overview",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
+  "u": "posts/4-20ma-current-loop-basics",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
+  "u": "posts/acb-protection-settings-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Access Control System (ACS) Explained: Components, Architecture & Site Work",
+  "u": "posts/access-control-system-acs-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
+  "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
+  "u": "posts/air-changes-per-hour-ventilation-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "ATS, MTS, ECB & Switch Disconnectors: Transfer & Isolation Switching Devices Explained",
+  "u": "posts/ats-mts-ecb-switch-disconnector-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Basics of Fire Protection in Buildings Explained",
+  "u": "posts/basics-of-fire-protection-in-buildings-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
+  "u": "posts/beam-bending-basics-section-modulus-deflection",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Bearing Failures: Root Causes & Prevention",
+  "u": "posts/bearing-failure-modes-causes-prevention",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
+  "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "BMS Point Types Explained: AI, AO, BI, BO, MI, MO, BV, AV, MV",
+  "u": "posts/bms-point-types-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "BOD & BOP in Pipe Bending: The Key to Piping Take-Off & Fabrication",
+  "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
+  "u": "posts/bolt-torque-vs-preload-nut-factor",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Busbar Sizing: Why the Short-Circuit Check Often Governs, Not the Continuous Rating",
+  "u": "posts/busbar-sizing-thermal-electrodynamic-withstand",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Cable Glands: What They Do and How to Get the Selection Right",
+  "u": "posts/cable-gland-overview-selection-guide",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Cable Size & Current Capacity: A Practical Selection Guide",
+  "u": "posts/cable-size-current-capacity-guide",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
+  "u": "posts/cavitation-vs-flashing-control-valve-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Centrifugal Pump Components Explained",
+  "u": "posts/centrifugal-pump-components-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency & the BEP",
+  "u": "posts/centrifugal-pump-curve-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
+  "u": "posts/chilled-water-hvac-system-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
+  "u": "posts/elv-extra-low-voltage-systems-explained",
+  "d": "2026-10-05",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Functional Safety & SIL Explained",
   "u": "posts/functional-safety-sil-explained",
   "d": "2026-10-03",
@@ -1076,13 +1524,6 @@
   "d": "2026-10-03",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
-  "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
-  "d": "2026-10-03",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
@@ -1141,20 +1582,6 @@
   "a": "updated"
  },
  {
-  "t": "DC/AC Ratio & Inverter Clipping",
-  "u": "posts/dc-ac-ratio-inverter-clipping-explained",
-  "d": "2026-09-28",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Elapsed Time Calculations",
-  "u": "posts/elapsed-time-duration-calculations-explained",
-  "d": "2026-09-28",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "NPSH Available Explained",
   "u": "posts/npsh-available-explained",
   "d": "2026-09-27",
@@ -1183,32 +1610,11 @@
   "a": "updated"
  },
  {
-  "t": "CT Sizing & Burden Explained",
-  "u": "posts/ct-sizing-burden-explained",
-  "d": "2026-09-27",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Dimensional Analysis Explained",
-  "u": "posts/dimensional-analysis-unit-conversion-explained",
-  "d": "2026-09-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Order-of-Magnitude Checks",
   "u": "posts/order-of-magnitude-sanity-check-explained",
   "d": "2026-09-27",
   "c": "Blog",
   "a": "added"
- },
- {
-  "t": "Binary, Hex & Octal Explained",
-  "u": "posts/binary-hex-octal-number-base-conversion-explained",
-  "d": "2026-09-27",
-  "c": "Blog",
-  "a": "updated"
  },
  {
   "t": "NPSH Margin: Why 'NPSHa > NPSHr' Isn't Enough on Its Own",
@@ -1288,13 +1694,6 @@
   "a": "updated"
  },
  {
-  "t": "Arc Flash Hazard Basics",
-  "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
-  "d": "2026-09-17",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Solar PV System Components Explained: From Panel to Load",
   "u": "posts/solar-pv-system-components-explained",
   "d": "2026-09-13",
@@ -1318,13 +1717,6 @@
  {
   "t": "How to Read a Full P&ID: A Complete Worked Walkthrough",
   "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
-  "d": "2026-09-12",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "ANSI Relay Numbers: Common Protection Relay Functions",
-  "u": "posts/ansi-relay-numbers-protection-functions",
   "d": "2026-09-12",
   "c": "Blog",
   "a": "updated"
@@ -1372,20 +1764,6 @@
   "a": "updated"
  },
  {
-  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-  "u": "posts/battery-soc-vs-dod-explained",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "BESS Types & Components Explained",
-  "u": "posts/bess-types-components-explained",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Power Semiconductors: Si, SiC & GaN",
   "u": "posts/power-semiconductor-types-si-sic-gan-explained",
   "d": "2026-09-10",
@@ -1400,36 +1778,8 @@
   "a": "updated"
  },
  {
-  "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-  "u": "posts/electrical-panel-fat-checklist",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
-  "u": "posts/breaker-selectivity-discrimination-explained",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Data Center Cooling: Air to Immersion",
-  "u": "posts/data-center-cooling-types-explained",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
   "u": "posts/heat-pump-sizing-basics",
-  "d": "2026-09-10",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
-  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
   "d": "2026-09-10",
   "c": "Blog",
   "a": "updated"
@@ -1440,20 +1790,6 @@
   "d": "2026-09-02",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Circuit Breaker Types Explained: MCB to OCB",
-  "u": "posts/circuit-breaker-types-explained",
-  "d": "2026-09-01",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Cooling Tower Types Explained",
-  "u": "posts/cooling-tower-types-explained",
-  "d": "2026-09-01",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Industrial Sensor Types Explained",
@@ -1472,34 +1808,6 @@
  {
   "t": "MEP Sleeves: Why, Where & How They're Used in Commercial Buildings",
   "u": "posts/mep-sleeves-installation-guide-explained",
-  "d": "2026-08-30",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Fire Pump Room: 10 Common Installation & Commissioning Mistakes",
-  "u": "posts/fire-pump-room-installation-commissioning-mistakes",
-  "d": "2026-08-30",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Main Components of a 33 kV Substation Explained",
-  "u": "posts/33kv-substation-main-components-explained",
-  "d": "2026-08-30",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "CAV vs VAV: Constant vs Variable Air Volume Explained",
-  "u": "posts/cav-vs-vav-air-volume-control-explained",
-  "d": "2026-08-30",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Cable Tray vs Cable Ladder vs Cable Trunking vs Conduit",
-  "u": "posts/cable-tray-vs-ladder-vs-trunking-vs-conduit-explained",
   "d": "2026-08-30",
   "c": "Blog",
   "a": "updated"
@@ -1787,314 +2095,6 @@
  {
   "t": "Retaining Wall Components Explained",
   "u": "posts/retaining-wall-components-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Retaining Wall Design Basics: Why Overturning, Sliding & Bearing All Have to Pass",
-  "u": "posts/retaining-wall-design-basics-overturning-sliding-bearing",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Risk Register Basics: Turning Probability × Impact Into Priority",
-  "u": "posts/risk-register-probability-impact-scoring",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
-  "u": "posts/row-spacing-inter-row-shading-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "S-Curves Explained: Why Project Progress Isn't a Straight Line",
-  "u": "posts/s-curve-project-progress-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature",
-  "u": "posts/sensible-vs-latent-heat-cooling-load",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Signal Scaling: Turning a 4–20mA Loop Into an Engineering Value",
-  "u": "posts/signal-scaling-4-20ma-engineering-units",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Soil Bearing Capacity: Why It Decides Your Footing Size, Not Just Column Load",
-  "u": "posts/soil-bearing-capacity-footing-sizing",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Solar Panel Tilt & Orientation: Why Latitude Isn't the Whole Answer",
-  "u": "posts/solar-panel-tilt-orientation-annual-yield",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "System Voltages Explained: Low, Medium & High Voltage Levels and Phases",
-  "u": "posts/system-voltages-low-medium-high-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Wind Turbines Explained: How Wind Becomes Electricity",
-  "u": "posts/wind-turbine-components-working-principle",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Work Breakdown Structure (WBS): Scope, Decomposed Into Work You Can Assign",
-  "u": "posts/work-breakdown-structure-wbs-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Fire Fighting: NFPA Fire Protection System Design Standards Reference",
-  "u": "posts/nfpa-fire-protection-design-standards-reference",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
-  "u": "posts/earthing-vs-grounding-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "FM-200 System Diagram: Components & How It Works Explained",
-  "u": "posts/fm-200-clean-agent-system-components-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Gas Detector Types & Working Principles Explained",
-  "u": "posts/gas-detector-types-working-principles-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Erosional vs. Economic Velocity: Which One Actually Sizes Your Pipe?",
-  "u": "posts/erosional-vs-economic-velocity-line-sizing-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Facility & Property Management: Key Codes & Standards Reference",
-  "u": "posts/facility-management-codes-standards-reference",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Facility Management: Monthly Invoice Processing",
-  "u": "posts/facility-management-monthly-invoice-processing",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Icw, Icu, Ics & Icm Explained: Four kA Ratings, Four Different Jobs",
-  "u": "posts/icw-icu-ics-icm-short-circuit-ratings-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "LV Panel Types Explained: Switchgear, MCC, PFC, VFD, Feeder Pillar & More",
-  "u": "posts/lv-panel-types-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Chiller Machine: Main Parts & Functions",
-  "u": "posts/chiller-machine-parts-functions-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
-  "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Concrete Volume Takeoff: From Cubic Meters to Bags of Cement",
-  "u": "posts/concrete-volume-material-takeoff-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Components Explained",
-  "u": "posts/control-valve-components-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Critical Path Method (CPM): The Chain That Sets Your Finish Date",
-  "u": "posts/critical-path-method-cpm-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "How to Select the Right DC Cable Size in PV Systems",
-  "u": "posts/dc-cable-size-selection-pv-systems",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Dissolved Gas Analysis (DGA) Explained",
-  "u": "posts/dissolved-gas-analysis-dga-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
-  "u": "posts/duct-sizing-velocity-limits-vs-airflow",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "MCB, MCCB, ACB, RCCB & More: Electrical Switchgear & Protection Devices Explained",
-  "u": "posts/electrical-switchgear-protection-devices-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "FM-200, Novec 1230, CO2 & Foam: Fire Suppression Systems Explained",
-  "u": "posts/fire-suppression-systems-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Gas Insulated Substation (GIS) Explained",
-  "u": "posts/gas-insulated-substation-gis-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
-  "u": "posts/hira-vs-jsa-vs-sop-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "HVAC MEP Thumb Rules & Formulas: Quick Reference for Engineers",
-  "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "HVAC & Plumbing Default Design Values: The Quick Reference",
-  "u": "posts/hvac-plumbing-default-design-values",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Ingress Protection (IP) Ratings Explained",
-  "u": "posts/ingress-protection-ip-rating-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Junction Boxes Explained: Types, Parts & Ratings",
-  "u": "posts/junction-box-types-parts-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Earthing & Grounding Systems Explained: Why Resistance Is the Whole Game",
-  "u": "posts/earthing-grounding-systems-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "MPPT vs PWM Solar Charge Controllers: What Actually Changes",
-  "u": "posts/mppt-vs-pwm-solar-charge-controllers",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
-  "u": "posts/flame-retardant-vs-flame-resistant-cables",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Conduit Fill: Why 40% Isn't an Arbitrary Number",
-  "u": "posts/conduit-fill-why-the-percentage-limit-exists",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Cv Sizing: Why Oversizing Is the Most Common Mistake",
-  "u": "posts/control-valve-cv-sizing-oversizing-mistake",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Cut & Fill Volume: How the Average End Area Method Actually Works",
-  "u": "posts/cut-fill-volume-average-end-area-method-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Deadband & Hysteresis: Why a Single Setpoint Isn't Enough",
-  "u": "posts/deadband-hysteresis-why-controls-dont-chatter",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Earned Value Management: Reading Project Health From Three Numbers",
-  "u": "posts/earned-value-management-basics",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
