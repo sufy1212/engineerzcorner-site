@@ -896,6 +896,160 @@
   "a": "updated"
  },
  {
+  "t": "Education Loan EMI Calculator",
+  "u": "study-abroad/education-loan-emi-calculator",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "updated"
+ },
+ {
+  "t": "Battery State-of-Charge Simulator",
+  "u": "solar/battery-soc-simulator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Charge Controller Sizing Calculator",
+  "u": "solar/charge-controller-sizing-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "CO2 Offset & Environmental Savings Calculator",
+  "u": "solar/co2-offset-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "DC Cable Sizing & Voltage Drop Calculator",
+  "u": "solar/dc-cable-voltage-drop-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
+  "u": "solar/grid-tie-off-grid-comparator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Inverter Sizing Calculator",
+  "u": "solar/inverter-sizing-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Panel Tilt & Orientation Calculator",
+  "u": "solar/panel-tilt-orientation-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "PV String Sizing & Voltage Calculator",
+  "u": "solar/pv-string-sizing-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Row Spacing & Self-Shading Calculator",
+  "u": "solar/row-spacing-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Shading & Soiling Loss Estimator",
+  "u": "solar/shading-soiling-loss-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Solar Payback & ROI Calculator",
+  "u": "solar/solar-payback-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Solar Sizing Calculator",
+  "u": "solar/solar-sizing-calculator",
+  "d": "2026-10-05",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Application Timeline Planner",
+  "u": "study-abroad/application-timeline-planner",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "Cost of Living Calculator",
+  "u": "study-abroad/cost-of-living-calculator",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "Currency Converter",
+  "u": "study-abroad/currency-converter",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "GPA / CGPA Converter",
+  "u": "study-abroad/gpa-converter",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "Proof of Funds Calculator",
+  "u": "study-abroad/proof-of-funds-calculator",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "Score Calculator",
+  "u": "study-abroad/score-calculator",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "SOP / Essay Word Checker",
+  "u": "study-abroad/sop-word-checker",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "University Fee Comparison",
+  "u": "study-abroad/university-fee-comparison",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
+  "t": "Visa Points Calculator",
+  "u": "study-abroad/visa-points-calculator",
+  "d": "2026-10-05",
+  "c": "Study Abroad",
+  "a": "added"
+ },
+ {
   "t": "Functional Safety & SIL Explained",
   "u": "posts/functional-safety-sil-explained",
   "d": "2026-10-03",
@@ -1096,13 +1250,6 @@
   "u": "posts/modbus-vs-profibus-vs-fieldbus-explained",
   "d": "2026-09-25",
   "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Education Loan EMI Calculator",
-  "u": "study-abroad/education-loan-emi-calculator",
-  "d": "2026-09-21",
-  "c": "Study Abroad",
   "a": "added"
  },
  {
@@ -1948,153 +2095,6 @@
  {
   "t": "Earned Value Management: Reading Project Health From Three Numbers",
   "u": "posts/earned-value-management-basics",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
-  "u": "posts/elv-extra-low-voltage-systems-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Grade & Slope: Why Percent, Ratio and Degrees Aren't the Same Number",
-  "u": "posts/grade-slope-percent-ratio-degrees-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Harmonics in Power Systems: Sources, Effects and How to Mitigate Them",
-  "u": "posts/harmonics-sources-effects-mitigation",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer",
-  "u": "posts/harmonics-thd-k-factor-transformer-derating",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "IS, IEC & IEEE Codes: The Standards Behind Electrical Engineering",
-  "u": "posts/is-iec-ieee-electrical-standards-reference",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "K-Rated Transformers: What K-Factor Means and When You Need One",
-  "u": "posts/k-rated-transformer-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "kW, kVA, and kVAR: What Actually Separates Them",
-  "u": "posts/kw-kva-kvar-difference-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Lighting Design by the Lumen Method: Why Luminaire Count Isn't Just Lumens ÷ Lux",
-  "u": "posts/lighting-lumen-method-luminaire-count",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Load Estimation: The First Step in Electrical Design",
-  "u": "posts/load-estimation-first-step-electrical-design",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "LV Panel Estimating: Why a Budgetary BOQ Starts With the Incomer, Not the Steel",
-  "u": "posts/lv-panel-estimate-boq-from-incomer",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "IEC 61439 Forms of Construction: Form 1 to Form 4 Explained",
-  "u": "posts/lv-panel-forms-of-construction-iec-61439",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Password Entropy Explained: What Actually Makes a Password Hard to Crack",
-  "u": "posts/password-entropy-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Basics of Fire Protection in Buildings Explained",
-  "u": "posts/basics-of-fire-protection-in-buildings-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "BOD & BOP in Pipe Bending: The Key to Piping Take-Off & Fabrication",
-  "u": "posts/bod-bop-bend-allowance-pipe-fabrication-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "33/11 kV Substation: Single Line Diagram & Equipment Overview",
-  "u": "posts/33-11kv-substation-diagram-equipment-overview",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-  "u": "posts/acb-protection-settings-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Access Control System (ACS) Explained: Components, Architecture & Site Work",
-  "u": "posts/access-control-system-acs-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "ATS, MTS, ECB & Switch Disconnectors: Transfer & Isolation Switching Devices Explained",
-  "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
-  "u": "posts/beam-bending-basics-section-modulus-deflection",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Bolt Torque vs Preload: Why K-Factor Is the Number That Actually Matters",
-  "u": "posts/bolt-torque-vs-preload-nut-factor",
-  "d": "2026-08-27",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
-  "u": "posts/cavitation-vs-flashing-control-valve-explained",
   "d": "2026-08-27",
   "c": "Blog",
   "a": "updated"
