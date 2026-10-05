@@ -1,52 +1,52 @@
 [
   {
-    "t": "Functional Safety & SIL Explained",
-    "u": "posts/functional-safety-sil-explained",
-    "d": "2026-10-03"
-  },
-  {
     "t": "Alarm Setpoint Band Calculator",
     "u": "automation/alarm-setpoints",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "Deadband / Hysteresis Calculator",
     "u": "automation/deadband-hysteresis",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "Instrument/Sensor Selector",
     "u": "automation/instrument-selector",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "Intrinsic Safety Entity / Loop Checker",
     "u": "automation/is-entity-loop-calculator",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "Level Control Loop Simulator",
     "u": "automation/level-control-simulator",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "DP Level Transmitter Ranging",
     "u": "automation/level-transmitter",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "Modbus RTU Timing / Baud Rate Calculator",
     "u": "automation/modbus-timing",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "Orifice Plate (DP Flow) Sizing",
     "u": "automation/orifice-flow-sizing",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
   },
   {
     "t": "PID Tuning (Reaction Curve)",
     "u": "automation/pid-tuning",
-    "d": "2026-10-03"
+    "d": "2026-10-05"
+  },
+  {
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-10-05"
   }
 ]
