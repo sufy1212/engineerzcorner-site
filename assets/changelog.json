@@ -427,6 +427,111 @@
   "a": "updated"
  },
  {
+  "t": "Age Calculator",
+  "u": "general/age-calculator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Number Base Converter",
+  "u": "general/base-converter",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "BMI Calculator",
+  "u": "general/bmi-calculator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Date & Business-Day Calculator",
+  "u": "general/date-calculator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Fraction ↔ Decimal (Feet-Inches)",
+  "u": "general/fraction-decimal",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Markup, Margin & % Change",
+  "u": "general/markup-margin",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Password Generator",
+  "u": "general/password-generator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Percentage Calculator",
+  "u": "general/percentage-calculator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Site Term Translator",
+  "u": "general/term-translator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Text Case Converter",
+  "u": "general/text-case-converter",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Time Duration Calculator",
+  "u": "general/time-duration-calculator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Tip Calculator",
+  "u": "general/tip-calculator",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Unit Converter",
+  "u": "general/unit-converter",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Engineering Glossary",
+  "u": "general/engineering-glossary",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
+  "t": "Engineering Sanity-Checker",
+  "u": "general/sanity-checker",
+  "d": "2026-10-05",
+  "c": "General Tools",
+  "a": "updated"
+ },
+ {
   "t": "Functional Safety & SIL Explained",
   "u": "posts/functional-safety-sil-explained",
   "d": "2026-10-03",
@@ -1043,97 +1148,6 @@
   "a": "added"
  },
  {
-  "t": "Age Calculator",
-  "u": "general/age-calculator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Number Base Converter",
-  "u": "general/base-converter",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "BMI Calculator",
-  "u": "general/bmi-calculator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Date & Business-Day Calculator",
-  "u": "general/date-calculator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Fraction ↔ Decimal (Feet-Inches)",
-  "u": "general/fraction-decimal",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Markup, Margin & % Change",
-  "u": "general/markup-margin",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Password Generator",
-  "u": "general/password-generator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Percentage Calculator",
-  "u": "general/percentage-calculator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Site Term Translator",
-  "u": "general/term-translator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Text Case Converter",
-  "u": "general/text-case-converter",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Time Duration Calculator",
-  "u": "general/time-duration-calculator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Tip Calculator",
-  "u": "general/tip-calculator",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Unit Converter",
-  "u": "general/unit-converter",
-  "d": "2026-08-30",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
   "t": "Transformer Turn Ratio (TTR) Test Explained",
   "u": "posts/transformer-turn-ratio-ttr-test-explained",
   "d": "2026-08-30",
@@ -1208,20 +1222,6 @@
   "u": "posts/pid-legend-sheet-explained",
   "d": "2026-08-29",
   "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Engineering Glossary",
-  "u": "general/engineering-glossary",
-  "d": "2026-08-27",
-  "c": "General Tools",
-  "a": "updated"
- },
- {
-  "t": "Engineering Sanity-Checker",
-  "u": "general/sanity-checker",
-  "d": "2026-08-27",
-  "c": "General Tools",
   "a": "updated"
  },
  {
