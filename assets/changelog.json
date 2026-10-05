@@ -532,6 +532,83 @@
   "a": "updated"
  },
  {
+  "t": "Refrigerant Charge — Superheat / Subcooling",
+  "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Balance Point & Backup Heat",
+  "u": "hvac/heat-pump-balance-point-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "SEER / EER / COP Converter",
+  "u": "hvac/seer-eer-cop-converter",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Air Changes per Hour",
+  "u": "hvac/air-changes-per-hour-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Refrigeration / Chiller Capacity",
+  "u": "hvac/chiller-capacity-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible + Latent Cooling Load",
+  "u": "hvac/cooling-load-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing & Air Changes",
+  "u": "hvac/duct-sizing-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Pipe Insulation Heat Loss",
+  "u": "hvac/pipe-insulation-heat-loss-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible Heat / Supply Airflow",
+  "u": "hvac/sensible-heat-airflow-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Psychrometric Chart Simulator",
+  "u": "hvac/psychrometric-chart-simulator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Fan Static & Total Pressure",
+  "u": "hvac/fan-static-total-pressure-calculator",
+  "d": "2026-10-05",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
   "t": "Functional Safety & SIL Explained",
   "u": "posts/functional-safety-sil-explained",
   "d": "2026-10-03",
@@ -1222,83 +1299,6 @@
   "u": "posts/pid-legend-sheet-explained",
   "d": "2026-08-29",
   "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Refrigerant Charge — Superheat / Subcooling",
-  "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Heat Pump Balance Point & Backup Heat",
-  "u": "hvac/heat-pump-balance-point-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "SEER / EER / COP Converter",
-  "u": "hvac/seer-eer-cop-converter",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Air Changes per Hour",
-  "u": "hvac/air-changes-per-hour-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Refrigeration / Chiller Capacity",
-  "u": "hvac/chiller-capacity-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Sensible + Latent Cooling Load",
-  "u": "hvac/cooling-load-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Duct Sizing & Air Changes",
-  "u": "hvac/duct-sizing-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Pipe Insulation Heat Loss",
-  "u": "hvac/pipe-insulation-heat-loss-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Sensible Heat / Supply Airflow",
-  "u": "hvac/sensible-heat-airflow-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Psychrometric Chart Simulator",
-  "u": "hvac/psychrometric-chart-simulator",
-  "d": "2026-08-27",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Fan Static & Total Pressure",
-  "u": "hvac/fan-static-total-pressure-calculator",
-  "d": "2026-08-27",
-  "c": "HVAC",
   "a": "updated"
  },
  {

@@ -1,52 +1,52 @@
 [
   {
-    "t": "Age Calculator",
-    "u": "general/age-calculator",
+    "t": "Air Changes per Hour",
+    "u": "hvac/air-changes-per-hour-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Number Base Converter",
-    "u": "general/base-converter",
+    "t": "Refrigeration / Chiller Capacity",
+    "u": "hvac/chiller-capacity-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "BMI Calculator",
-    "u": "general/bmi-calculator",
+    "t": "Sensible + Latent Cooling Load",
+    "u": "hvac/cooling-load-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Date & Business-Day Calculator",
-    "u": "general/date-calculator",
+    "t": "Duct Sizing & Air Changes",
+    "u": "hvac/duct-sizing-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Engineering Glossary",
-    "u": "general/engineering-glossary",
+    "t": "Fan Static & Total Pressure",
+    "u": "hvac/fan-static-total-pressure-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Fraction ↔ Decimal (Feet-Inches)",
-    "u": "general/fraction-decimal",
+    "t": "Heat Pump Balance Point & Backup Heat",
+    "u": "hvac/heat-pump-balance-point-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Markup, Margin & % Change",
-    "u": "general/markup-margin",
+    "t": "Pipe Insulation Heat Loss",
+    "u": "hvac/pipe-insulation-heat-loss-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Password Generator",
-    "u": "general/password-generator",
+    "t": "Psychrometric Chart Simulator",
+    "u": "hvac/psychrometric-chart-simulator",
     "d": "2026-10-05"
   },
   {
-    "t": "Percentage Calculator",
-    "u": "general/percentage-calculator",
+    "t": "Refrigerant Charge — Superheat / Subcooling",
+    "u": "hvac/refrigerant-charge-superheat-subcooling-calculator",
     "d": "2026-10-05"
   },
   {
-    "t": "Engineering Sanity-Checker",
-    "u": "general/sanity-checker",
+    "t": "SEER / EER / COP Converter",
+    "u": "hvac/seer-eer-cop-converter",
     "d": "2026-10-05"
   }
 ]
