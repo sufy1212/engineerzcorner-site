@@ -1,5 +1,10 @@
 [
   {
+    "t": "Functional Safety & SIL Explained",
+    "u": "posts/functional-safety-sil-explained",
+    "d": "2026-10-03"
+  },
+  {
     "t": "Alarm Setpoint Band Calculator",
     "u": "automation/alarm-setpoints",
     "d": "2026-10-03"
@@ -42,11 +47,6 @@
   {
     "t": "PID Tuning (Reaction Curve)",
     "u": "automation/pid-tuning",
-    "d": "2026-10-03"
-  },
-  {
-    "t": "Relay / Contactor Coil Current & Duty Cycle",
-    "u": "automation/relay-coil-sizing",
     "d": "2026-10-03"
   }
 ]
