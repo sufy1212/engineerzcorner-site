@@ -1,52 +1,52 @@
 [
   {
-    "t": "33/11 kV Substation: Single Line Diagram & Equipment Overview",
-    "u": "posts/33-11kv-substation-diagram-equipment-overview",
+    "t": "Functional Safety & SIL Explained",
+    "u": "posts/functional-safety-sil-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "Main Components of a 33 kV Substation Explained",
-    "u": "posts/33kv-substation-main-components-explained",
+    "t": "Gas Detector Types & Working Principles Explained",
+    "u": "posts/gas-detector-types-working-principles-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "4-20mA Current Loops: Why Industry Still Trusts an Analog Signal",
-    "u": "posts/4-20ma-current-loop-basics",
+    "t": "Gas Insulated Substation (GIS) Explained",
+    "u": "posts/gas-insulated-substation-gis-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "Essential Protection Settings of Air Circuit Breakers (ACB) Explained",
-    "u": "posts/acb-protection-settings-explained",
+    "t": "Grade & Slope: Why Percent, Ratio and Degrees Aren't the Same Number",
+    "u": "posts/grade-slope-percent-ratio-degrees-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "Access Control System (ACS) Explained: Components, Architecture & Site Work",
-    "u": "posts/access-control-system-acs-explained",
+    "t": "Harmonics in Power Systems: Sources, Effects and How to Mitigate Them",
+    "u": "posts/harmonics-sources-effects-mitigation",
     "d": "2026-10-05"
   },
   {
-    "t": "AHU, FAHU, FCU, FMAHU, CSAHU: What Is the Difference?",
-    "u": "posts/ahu-fahu-fcu-fmahu-csahu-difference-explained",
+    "t": "Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer",
+    "u": "posts/harmonics-thd-k-factor-transformer-derating",
     "d": "2026-10-05"
   },
   {
-    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
-    "u": "posts/air-changes-per-hour-ventilation-explained",
+    "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+    "u": "posts/heat-pump-sizing-basics",
     "d": "2026-10-05"
   },
   {
-    "t": "Alarm Setpoint Bands: Why High and High-High Are Different Alarms",
-    "u": "posts/alarm-setpoint-bands-high-highhigh-explained",
+    "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
+    "u": "posts/hira-vs-jsa-vs-sop-explained",
     "d": "2026-10-05"
   },
   {
-    "t": "ANSI Relay Numbers: Common Protection Relay Functions",
-    "u": "posts/ansi-relay-numbers-protection-functions",
+    "t": "How to Read a Full P&ID: A Complete Worked Walkthrough",
+    "u": "posts/how-to-read-a-full-pid-worked-walkthrough",
     "d": "2026-10-05"
   },
   {
-    "t": "Arc Flash Hazard Basics",
-    "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
+    "t": "How to Read a Wiring Diagram (Beginner's Guide)",
+    "u": "posts/how-to-read-a-wiring-diagram-beginners-guide",
     "d": "2026-10-05"
   }
 ]
