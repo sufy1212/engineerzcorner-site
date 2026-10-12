@@ -1,5 +1,10 @@
 [
   {
+    "t": "SPD & Lightning Protection Explained",
+    "u": "posts/surge-protection-spd-lightning-protection-explained",
+    "d": "2026-10-12"
+  },
+  {
     "t": "The PPP Project Lifecycle: From Identification to Handback",
     "u": "posts/ppp-project-lifecycle-explained",
     "d": "2026-10-05"
@@ -42,11 +47,6 @@
   {
     "t": "RACI Matrix Explained: Who's Responsible vs. Who's Accountable",
     "u": "posts/raci-matrix-explained",
-    "d": "2026-10-05"
-  },
-  {
-    "t": "Rational Method: How Peak Stormwater Runoff Is Estimated",
-    "u": "posts/rational-method-peak-runoff-explained",
     "d": "2026-10-05"
   }
 ]

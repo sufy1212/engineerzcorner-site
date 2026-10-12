@@ -173,7 +173,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/33-11kv-substation-diagram-equipment-overview</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/33kv-substation-main-components-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/4-20ma-current-loop-basics</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-10-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/</loc><lastmod>2026-10-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/acb-protection-settings-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/access-control-system-acs-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/ahu-fahu-fcu-fmahu-csahu-difference-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -236,7 +236,6 @@
   <url><loc>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/fm-200-clean-agent-system-components-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/functional-safety-sil-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/gas-detector-types-working-principles-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/gas-insulated-substation-gis-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/grade-slope-percent-ratio-degrees-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -334,6 +333,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/star-delta-connection-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -373,7 +373,7 @@
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-10-05</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
