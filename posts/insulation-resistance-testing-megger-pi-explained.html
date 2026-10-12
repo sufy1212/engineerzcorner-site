@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insulation Resistance Testing Explained | Engineerz CorneR</title>
+<meta name="description" content="IEC 60364-6 / BS 7671 test voltages and minimums, motor spot IR and polarization index per IEEE 43, temperature correction and worked examples.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Insulation Resistance Testing Explained">
+<meta property="og:description" content="IEC 60364-6 / BS 7671 test voltages and minimums, motor spot IR and polarization index per IEEE 43, temperature correction and worked examples.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insulation Resistance Testing Explained">
+<meta name="twitter:description" content="Test voltages, minimum values, polarization index and temperature correction, with worked examples.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="insulation-resistance-testing-megger-pi-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Insulation Resistance Testing Explained", "item": "https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Insulation Resistance Testing Explained",
+  "datePublished": "2026-10-12",
+  "dateModified": "2026-10-12",
+  "description": "IEC 60364-6 / BS 7671 test voltages and minimums, motor spot IR and polarization index per IEEE 43, temperature correction and worked examples.",
+  "url": "https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Insulation Resistance Testing</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Testing</span>
+    <h1>Insulation Resistance Testing Explained</h1>
+    <p class="hero-sub">A megger reading is one number, and whether it is a pass depends on the test voltage, the circuit, the winding temperature and how the reading changes over time. This is how to choose the voltage, read the result and avoid the usual false passes.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 60364-6 / BS 7671 / IEEE 43</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Insulation resistance rising over ten minutes with the one-minute and ten-minute readings marked">
+      <g font-family="IBM Plex Mono" font-size="9" fill="#c9dfe6">
+        <line x1="120" y1="115" x2="640" y2="115" stroke="#7e97ac" stroke-width="1.5"/>
+        <line x1="120" y1="20" x2="120" y2="115" stroke="#7e97ac" stroke-width="1.5"/>
+        <path d="M120 105 C150 70 190 55 260 45 C360 35 500 30 620 28" fill="none" stroke="#3EC6E0" stroke-width="2.5"/>
+        <line x1="190" y1="115" x2="190" y2="60" stroke="#7e97ac" stroke-dasharray="3 3"/>
+        <circle cx="190" cy="60" r="4" fill="#3EC6E0"/>
+        <text x="190" y="130" text-anchor="middle">R1min</text>
+        <line x1="620" y1="115" x2="620" y2="28" stroke="#7e97ac" stroke-dasharray="3 3"/>
+        <circle cx="620" cy="28" r="4" fill="#3EC6E0"/>
+        <text x="620" y="130" text-anchor="middle">R10min</text>
+        <text x="130" y="30">IR (M&#937;)</text>
+        <text x="380" y="75" text-anchor="middle">PI = R10min / R1min</text>
+        <text x="120" y="145" fill="#7e97ac">Absorption current fades, so a healthy winding keeps climbing</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">For LV installations the standard sets the test voltage by circuit voltage: 250 V DC for SELV/PELV, 500 V DC up to 500 V, 1000 V DC above 500 V.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Minimum values are 0.5 M&#937; for SELV/PELV and 1 M&#937; for the other two bands. A new, healthy installation reads far above that.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">For motors and generators a single reading is not enough. The polarization index (PI = R10min / R1min) shows whether the winding is dry and clean, and IR must be corrected to 40 &deg;C.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Most bad results are test setup errors: live circuits, wrong voltage, electronics and SPDs left connected, or readings compared across different temperatures.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>What the test measures</h2>
+    <p>An insulation resistance test applies a known DC voltage between conductors, or between conductors and earth, and measures the small current that flows. Ohm's law gives the resistance. The circuit must be dead and isolated, and DC is used because it measures leakage through and over the insulation without the capacitive current an AC test would add. It is different from the protective conductor continuity test and from RCD testing: it says something about the quality of the insulation itself.</p>
+    <p>Current through insulation is the sum of a charging current that dies out in seconds, an absorption current that decays over minutes, and a steady conduction (leakage) current. That is why the reading keeps rising during a test on a clean, dry winding, and why the time of the reading matters.</p>
+
+    <h2><span class="h2-dot"></span>LV installations: voltage and minimum values</h2>
+    <p>IEC 60364-6, and BS 7671 in its Table 64, set the test voltage and the minimum acceptable value by nominal circuit voltage.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Nominal circuit voltage</th><th>Test voltage (DC)</th><th>Minimum insulation resistance</th></tr>
+        <tr><td>SELV and PELV</td><td>250 V</td><td>0.5 M&#937;</td></tr>
+        <tr><td>Up to and including 500 V (including 230/400 V)</td><td>500 V</td><td>1 M&#937;</td></tr>
+        <tr><td>Above 500 V</td><td>1000 V</td><td>1 M&#937;</td></tr>
+      </table>
+    </div>
+    <p>Two details catch people out. First, the lower 0.5 M&#937; limit belongs to SELV/PELV circuits; if a 230 V circuit is tested at a reduced 250 V (for example because surge protective devices cannot be removed), the result must still reach 1 M&#937;. Second, these are pass/fail minimums, not typical values. New installations normally read tens or hundreds of megohms, so a reading that scrapes over 1 M&#937; is a warning to look for moisture, damage or a nail through a cable. Example: a 230 V circuit reading 0.7 M&#937; at 500 V fails.</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Pairs to test:</strong> live conductors (L and N tied together) to earth, and, where the installation allows, between live conductors. Test the whole board first; if the board reads low, split it into circuits to find the one pulling the value down.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Set-up checklist before pressing TEST</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Isolate and prove dead.</strong> Insulation testing on a live circuit is dangerous and gives meaningless readings.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Disconnect or bridge voltage-sensitive equipment:</strong> dimmers, electronic drives, control units and <a href="surge-protection-spd-lightning-protection-explained">surge protective devices</a>. A 500 V test can damage them or read the SPD instead of the cable.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Select the voltage for the circuit,</strong> not the highest the tester offers. Testing a SELV circuit at 500 V can damage its insulation.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Discharge afterward.</strong> The cable dielectric stores energy at 500 or 1000 V, so let the tester discharge or short the conductors to earth before touching them.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Motors and generators: spot reading, PI and temperature</h2>
+    <p>For rotating machines IEEE 43 is the reference. It uses a spot insulation resistance reading at 1 minute and the polarization index, and it expects both.</p>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 3 5-8 4 4"></path></svg></div>
+        <div><div class="fs-name">PI = R10min / R1min</div><div class="fs-full">Both readings from one continuous test at the same voltage and temperature</div></div>
+      </div>
+      <p class="fs-desc">IEEE 43 gives a recommended minimum PI of 2.0 for thermal class B, F and H insulation, which covers most motors in service, and 1.5 for older class A insulation. A PI close to 1 means the reading is flat: leakage current dominates, which points to moisture or contamination. Dielectric absorption ratio (DAR = R60s / R30s) is a shorter version of the same idea when a 10-minute test is impractical.</p>
+    </div>
+    <p>For the spot value, commonly quoted minimums at 40 &deg;C are the rated voltage in kV plus 1 M&#937; for older or field-wound windings, 100 M&#937; for modern form-wound AC coils, and 5 M&#937; for random-wound and low-voltage stators. The test voltage rises with the machine's rating. For windings rated below 1000 V IEEE 43 calls for 500 V DC; for higher ratings use the standard's table, which steps up to several kilovolts.</p>
+
+    <h2><span class="h2-dot"></span>Correct to 40 &deg;C</h2>
+    <p>Insulation resistance falls as temperature rises, roughly halving for every 10 &deg;C. Readings are corrected to 40 &deg;C before comparing with the minimum:</p>
+    <p><strong>R40 = Kt &times; R(T)</strong>, with <strong>Kt = 0.5<sup>(40 &minus; T)/10</sup></strong></p>
+    <p>Worked example, a 415 V random-wound motor tested at a winding temperature of 28 &deg;C. R1min = 60 M&#937; and R10min = 150 M&#937;.</p>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span>Kt = 0.5<sup>1.2</sup> = 0.435, so R40 = 0.435 &times; 60 = 26 M&#937;. That is above the 5 M&#937; minimum for a random-wound stator.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span>PI = 150 / 60 = 2.5, above the class B/F/H minimum of 2.0.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span>A cold winding reads high, so an uncorrected 60 M&#937; flatters it; the same winding at 20 &deg;C would show 80 M&#937; raw, which corrects to 20 M&#937;.</span></li>
+    </ul>
+    <p>For a 6.6 kV older winding the kV + 1 rule gives 7.6 M&#937;; a modern form-wound machine at the same voltage is held to 100 M&#937;. PI is largely independent of temperature because both readings shift together, which is why it is a useful cross-check.</p>
+
+    <h2><span class="h2-dot"></span>Reading the result</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>High and rising</b><span>Dry, clean insulation. IR climbs through the test and PI is comfortably above the minimum.</span></div>
+      <div class="signal-card b"><b>Low but rising</b><span>Contamination or moisture that may dry out. Clean or bake out, then retest and trend.</span></div>
+      <div class="signal-card c"><b>Low and flat</b><span>Leakage dominates. A PI near or below 1.0 means a winding with conductive moisture or damage; do not energize until investigated.</span></div>
+    </div>
+    <p>A single reading tells you little by itself. Log readings with the temperature and humidity, and compare against the previous test on the same equipment. A steady downward trend over years is the real warning, even when each value is above the minimum.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Comparing readings at different temperatures</strong> without correcting to 40 &deg;C.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Testing at 250 V and applying the 0.5 M&#937; limit to a 230 V circuit.</strong> The limit follows the circuit's voltage class, not the test voltage you chose.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Leaving electronics or SPDs connected</strong> and either damaging them or measuring them instead of the wiring.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Testing a cold motor below the dew point.</strong> Condensation on the windings gives a poor reading that a short warm-up would fix.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Not discharging</strong> the cable or winding afterward.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>LV: 250 V / 0.5 M&#937; for SELV and PELV, 500 V / 1 M&#937; up to 500 V, 1000 V / 1 M&#937; above 500 V.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>The minimum is a floor, not a target. Investigate readings that are low compared with similar circuits or earlier tests.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Motors: use the 1-minute spot reading and PI. Minimum PI is 2.0 for class B, F and H.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Correct to 40 &deg;C with Kt = 0.5<sup>(40&minus;T)/10</sup> before comparing.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm limits and test voltages in the standard edition and equipment manufacturer's instructions for your project.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Insulation%20Resistance%20Testing%20Explained%20%E2%80%94%20test%20voltages%2C%20minimums%2C%20PI%20and%20temperature%20correction.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finsulation-resistance-testing-megger-pi-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finsulation-resistance-testing-megger-pi-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Insulation%20Resistance%20Testing%20Explained&text=Test%20voltages%2C%20minimums%2C%20PI%20and%20temperature%20correction.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finsulation-resistance-testing-megger-pi-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Insulation%20Resistance%20Testing%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finsulation-resistance-testing-megger-pi-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="electrical-panel-fat-checklist">Electrical Panel FAT Checklist</a></li><li><a href="pre-commissioning-vs-commissioning-electrical-explained">Pre-Commissioning vs Commissioning</a></li><li><a href="transformer-turn-ratio-ttr-test-explained">Transformer Turn Ratio (TTR) Test</a></li><li><a href="surge-protection-spd-lightning-protection-explained">SPD &amp; Lightning Protection Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../changelog">Changelog</a> &nbsp;&middot;&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
