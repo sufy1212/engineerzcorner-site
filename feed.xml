@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>SPD &amp; Lightning Protection Explained</title>
+    <link>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained.html</guid>
+    <description>Lightning protection levels, SPD Types 1/2/3, Uc, Up and lead length (IEC 62305, IEC 61643-11), with a worked check against impulse withstand.</description>
+    <pubDate>Mon, 12 Oct 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>The PPP Project Lifecycle: From Identification to Handback</title>
     <link>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</guid>
