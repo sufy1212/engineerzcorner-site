@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPD &amp; Lightning Protection Explained | Engineerz CorneR</title>
+<meta name="description" content="Lightning protection levels, SPD Types 1/2/3, Uc, Up and lead length (IEC 62305, IEC 61643-11), with a worked check against impulse withstand.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="SPD &amp; Lightning Protection Explained">
+<meta property="og:description" content="Lightning protection levels, SPD Types 1/2/3, Uc, Up and lead length (IEC 62305, IEC 61643-11), with a worked check against impulse withstand.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SPD &amp; Lightning Protection Explained">
+<meta name="twitter:description" content="SPD Types 1, 2 and 3, lightning protection levels, Uc, Up and lead length, with a worked selection example.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="surge-protection-spd-lightning-protection-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "SPD & Lightning Protection Explained", "item": "https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SPD & Lightning Protection Explained",
+  "datePublished": "2026-10-12",
+  "dateModified": "2026-10-12",
+  "description": "Lightning protection levels, SPD Types 1/2/3, Uc, Up and lead length (IEC 62305, IEC 61643-11), with a worked check against impulse withstand.",
+  "url": "https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Surge &amp; Lightning Protection</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Protection</span>
+    <h1>SPD &amp; Lightning Protection Explained</h1>
+    <p class="hero-sub">Lightning protection keeps the strike off the structure; surge protection keeps what it leaves behind off the equipment. They are two halves of one design, and an SPD with a good datasheet still fails when the lightning level, the Type, the voltage rating and the lead length are not chosen together.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 62305 / IEC 61643-11 / IEC 60364-5-53</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cascade of surge protective devices: Type 1 at the service entrance, Type 2 at the distribution board, Type 3 at the equipment">
+      <g font-family="IBM Plex Mono" font-size="9" fill="#c9dfe6">
+        <path d="M60 10 44 40h12l-5 20 20-30H59z" fill="#3EC6E0" opacity=".85"/>
+        <rect x="130" y="28" width="150" height="40" rx="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="205" y="46" text-anchor="middle">TYPE 1</text>
+        <text x="205" y="59" text-anchor="middle" fill="#7e97ac">10/350 &#181;s &middot; Iimp</text>
+        <rect x="320" y="28" width="150" height="40" rx="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="395" y="46" text-anchor="middle">TYPE 2</text>
+        <text x="395" y="59" text-anchor="middle" fill="#7e97ac">8/20 &#181;s &middot; In / Imax</text>
+        <rect x="510" y="28" width="150" height="40" rx="6" fill="none" stroke="#3EC6E0" stroke-width="1.6"/>
+        <text x="585" y="46" text-anchor="middle">TYPE 3</text>
+        <text x="585" y="59" text-anchor="middle" fill="#7e97ac">1.2/50 &amp; 8/20 combination</text>
+        <line x1="280" y1="48" x2="320" y2="48" stroke="#7e97ac" stroke-width="2"/>
+        <line x1="470" y1="48" x2="510" y2="48" stroke="#7e97ac" stroke-width="2"/>
+        <line x1="75" y1="48" x2="130" y2="48" stroke="#7e97ac" stroke-width="2"/>
+        <text x="205" y="92" text-anchor="middle">SERVICE ENTRANCE</text>
+        <text x="395" y="92" text-anchor="middle">DISTRIBUTION BOARD</text>
+        <text x="585" y="92" text-anchor="middle">EQUIPMENT</text>
+        <rect x="130" y="108" width="530" height="10" fill="#3EC6E0" opacity=".25"/>
+        <rect x="130" y="108" width="176" height="10" fill="#3EC6E0" opacity=".7"/>
+        <text x="130" y="140" fill="#7e97ac">Each stage takes less current and lowers the voltage a little more</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A lightning protection system (LPS) catches the strike and carries the current to earth. It does not stop surges entering through power and data lines, which is the job of <em>SPDs</em>.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Type 1 SPDs are tested with the 10/350 &micro;s lightning current (Iimp). Type 2 use 8/20 &micro;s (In, Imax). Type 3 use a 1.2/50 &micro;s, 8/20 &micro;s combination wave. Their kA values are not interchangeable.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Uc must sit above the highest normal system voltage, and Up must sit below what the protected equipment can withstand. For 230/400 V equipment that is 1.5 to 6 kV depending on category.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Wiring matters as much as the device. Every metre of lead adds roughly 1 kV for each kA/&micro;s of surge current, which can wipe out the protection level you paid for.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two problems, two layers</h2>
+    <p>A direct strike to a building is a high-energy event. The LPS (air terminals, down conductors, earth termination) gives the current a controlled path so it does not go through the structure. Even with a perfect LPS, a large part of the current ends up on earthing and on incoming services, and nearby strikes induce voltages in cables without touching the building at all.</p>
+    <p>Surge protective devices handle that second problem. They are voltage-limiting or voltage-switching components that sit between conductors and earth, stay out of the way at normal voltage, and divert the surge when the voltage rises. The standards treat the two layers together: IEC 62305 for the lightning risk and protection measures, IEC 61643-11 for the SPD product, IEC 60364-5-53 for selecting and installing SPDs in low-voltage installations.</p>
+
+    <h2><span class="h2-dot"></span>Lightning protection levels</h2>
+    <p>IEC 62305-1 defines four lightning protection levels (LPL I to IV). Each fixes a maximum lightning current, used to design components such as LPS conductors and Type 1 SPDs, and a minimum current, which sets the rolling sphere radius and therefore how many strikes the air termination is expected to intercept.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>LPL</th><th>Max peak current</th><th>Min peak current</th><th>Interception efficiency</th><th>Rolling sphere radius</th></tr>
+        <tr><td>I</td><td>200 kA</td><td>3 kA</td><td>0.99</td><td>20 m</td></tr>
+        <tr><td>II</td><td>150 kA</td><td>5 kA</td><td>0.97</td><td>30 m</td></tr>
+        <tr><td>III</td><td>100 kA</td><td>10 kA</td><td>0.91</td><td>45 m</td></tr>
+        <tr><td>IV</td><td>100 kA</td><td>16 kA</td><td>0.84</td><td>60 m</td></tr>
+      </table>
+    </div>
+    <p>The same classes set the other air-termination geometry in IEC 62305-3: mesh size of 5&times;5, 10&times;10, 15&times;15 and 20&times;20 m, and typical down conductor spacing of 10, 10, 15 and 20 m for classes I to IV. Which level a structure needs is not a free choice. IEC 62305-2 requires a risk assessment covering loss of human life, loss of public services, loss of cultural heritage and economic loss, and the chosen level must bring the calculated risk below the tolerable value.</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Protection level vs. strike current:</strong> a higher efficiency does not mean the system survives a bigger strike, it means it intercepts a larger share of strikes, including weaker ones that a coarser sphere would let through to the roof or wall.</div>
+    </div>
+
+    <h2><span class="h2-dot"></span>SPD Types and what they are tested with</h2>
+    <p>IEC 61643-11 classifies low-voltage power SPDs by test class, which maps to the Types used on datasheets and in IEC 60364.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type (Class)</th><th>Test waveform and rating</th><th>Typical location</th><th>What it is for</th></tr>
+        <tr><td>Type 1 (Class I)</td><td>10/350 &micro;s impulse current, Iimp</td><td>Service entrance, main board of a building with an LPS or exposed overhead supply</td><td>Takes partial lightning current conducted along the incoming conductors</td></tr>
+        <tr><td>Type 2 (Class II)</td><td>8/20 &micro;s current, In and Imax</td><td>Distribution and sub-distribution boards</td><td>Limits residual and induced surges; the workhorse device</td></tr>
+        <tr><td>Type 3 (Class III)</td><td>Combination wave: 1.2/50 &micro;s open-circuit voltage, 8/20 &micro;s short-circuit current</td><td>Close to sensitive equipment, socket outlets</td><td>Final voltage trimming at the load</td></tr>
+      </table>
+    </div>
+    <p>The 10/350 &micro;s wave has a long tail and carries far more charge and energy than an 8/20 &micro;s wave of the same peak. That is why a Type 1 rated 12.5 kA (10/350) and a Type 2 rated 40 kA Imax (8/20) are different duties, and why comparing the two kA numbers on a datasheet tells you nothing. Combined Type 1+2 devices are tested to both.</p>
+
+    <h2><span class="h2-dot"></span>The ratings that matter on a datasheet</h2>
+    <div class="fs-card">
+      <div class="fs-card-head">
+        <div class="fs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></div>
+        <div><div class="fs-name">Uc and Up</div><div class="fs-full">Maximum continuous operating voltage and voltage protection level</div></div>
+      </div>
+      <p class="fs-desc"><strong>Uc</strong> is the highest voltage the SPD can sit across continuously without conducting. It has to clear the highest voltage the system will actually see, including the usual 10% supply tolerance: for line-to-neutral connection on a 230/400 V TN or TT system that means at least 1.1 &times; 230 = 253 V, and datasheets commonly show 275 V or 320 V. IT systems and neutral-to-earth connections in TT systems have their own, higher requirements in IEC 60364-5-53, so check the selection table rather than reusing the TN number. <strong>Up</strong> is the peak voltage that appears across the SPD terminals while it is diverting its rated surge. Lower is better for the equipment, but only if Uc, Type and installation are also right.</p>
+    </div>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Iimp (Type 1):</strong> peak current of the 10/350 &micro;s impulse the SPD must withstand, rated per protection mode.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>In (Type 2):</strong> nominal 8/20 &micro;s discharge current the device survives repeatedly through its life. This is the number to design with.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Imax (Type 2):</strong> the 8/20 &micro;s current the device survives once. It is not a reliable basis for choosing between products.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Short-circuit and follow-current ratings, and backup protection:</strong> the SPD needs the upstream fuse or breaker its manufacturer specifies, and a rating that matches the prospective fault level at its terminals.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>What Up has to beat: impulse withstand</h2>
+    <p>IEC 60664-1 groups equipment into overvoltage categories, each with a rated impulse withstand voltage. The values below are for 230/400 V supplies. The SPD at a board only protects what is connected downstream of it if its Up (plus lead effects) stays below the withstand of the equipment actually connected.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Category</th><th>Typical equipment</th><th>Impulse withstand, 230/400 V</th></tr>
+        <tr><td>IV</td><td>At the origin of the installation: meters, main incoming equipment</td><td>6 kV</td></tr>
+        <tr><td>III</td><td>Fixed installation: distribution boards, switchgear, fixed motors</td><td>4 kV</td></tr>
+        <tr><td>II</td><td>Appliances and portable tools connected to socket outlets</td><td>2.5 kV</td></tr>
+        <tr><td>I</td><td>Sensitive electronics protected by external means</td><td>1.5 kV</td></tr>
+      </table>
+    </div>
+    <p>A common design target is Up at or below about 80% of the withstand of the equipment being protected, to leave margin for ageing and wiring effects. That margin is a design convention, not a clause of the standard.</p>
+
+    <h2><span class="h2-dot"></span>Sizing the Type 1 duty</h2>
+    <p>For a structure with an LPS, a simplified way to estimate the lightning current each Type 1 pole may see starts from the maximum current for the chosen level and the usual assumption that half of it flows into the earth termination and half is shared among the services entering the building.</p>
+    <p>Illustrative case: LPL III (100 kA), one three-phase TN-S supply as the only incoming service, protected conductors L1, L2, L3 and N. Current into services = 100 kA &times; 0.5 = 50 kA. Shared equally across four conductors, that is 12.5 kA (10/350 &micro;s) per pole, which is why 12.5 kA is a widely used Type 1 rating. More services entering (data, water pipes, a second feeder) lowers the share per conductor, and a lower LPL reduces the starting current. Treat this as a screening estimate; IEC 62305-4 and IEC 60364-5-53 give the full method.</p>
+
+    <h2><span class="h2-dot"></span>Coordination and lead length</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>Cascade the stages</b><span>Type 1 at the entrance takes the bulk of the energy with a higher Up. Type 2 downstream trims what is left. The two must be coordinated so the downstream device is not overloaded.</span></div>
+      <div class="signal-card b"><b>Separation or decoupling</b><span>Many manufacturers require around 10 m of cable between a Type 1 and a Type 2 for energy coordination, or a decoupling inductor if the run is shorter. Use the figure in the product documentation, not a rule of thumb.</span></div>
+      <div class="signal-card c"><b>Keep leads short</b><span>Connecting conductors have inductance of about 1 &micro;H per metre, so the surge di/dt creates a voltage drop on every metre of lead. Keep total lead length as short as practicable, commonly under 0.5 m.</span></div>
+    </div>
+    <p>Worked example of lead effect. Take a Type 2 with Up = 1.5 kV. A surge near the nominal rating of 20 kA rising over 8 &micro;s has an average slope of roughly 2.5 kA/&micro;s. With 1 &micro;H/m: a 0.5 m total lead adds about 1.25 kV, giving about 2.75 kV at the equipment; a 1 m lead adds about 2.5 kV, giving about 4.0 kV. The first fits Category III (4 kV) but not Category II (2.5 kV); the second uses up the entire Category III withstand. The device did not change, only the wiring did. The average slope understates the steepest part of the front, so real peaks can be higher.</p>
+
+    <h2><span class="h2-dot"></span>Earthing and bonding make it work</h2>
+    <p>An SPD can only divert a surge to a place that can take it. Equipotential bonding of incoming metalwork, a low-impedance earth termination and a short, direct SPD earth connection are what keep voltages between systems under control. An SPD fed by a long, thin earth lead is a decoration. For the earthing side see <a href="earthing-grounding-systems-explained">Earthing &amp; Grounding Systems Explained</a> and <a href="types-of-earthing-systems-explained">Types of Earthing Systems</a>; ground resistance can be estimated with the <a href="../electrical/earthing-rod-resistance">earthing rod</a> and <a href="../electrical/earthing-grid-resistance">earthing grid</a> calculators.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Comparing Iimp with Imax.</strong> They come from different waveforms and different duties. Select by Type first, then by Iimp or In, then by Up.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Only fitting Type 2 on a building with an LPS.</strong> Direct strike current can enter along services; the entrance needs Type 1 or a combined 1+2 device.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Choosing the lowest Up and ignoring Uc.</strong> An SPD with a Uc below the real system voltage will age quickly or fail on a normal supply swell.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Long, looped connecting leads.</strong> They add volts per metre and can defeat the protection level before the surge reaches the load.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Fit and forget.</strong> SPDs wear out. Check status indicators or remote contacts, and inspect after severe storms or known surge events.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>The LPL comes from a risk assessment under IEC 62305-2 and fixes the maximum current (200, 150, 100, 100 kA) and sphere radius (20, 30, 45, 60 m).</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Type 1 handles 10/350 &micro;s lightning current at the entrance, Type 2 handles 8/20 &micro;s surges at boards, Type 3 does final trimming at the load.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Choose Uc above the maximum system voltage and Up (including lead drop) below the impulse withstand of the equipment: 6, 4, 2.5 and 1.5 kV for categories IV to I at 230/400 V.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Lead length and earthing can cancel a good Up. Roughly 1 kV per metre per kA/&micro;s is the number to remember.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Examples here are screening estimates. Confirm the design against IEC 62305, IEC 60364-5-53 and the SPD manufacturer's documentation.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=SPD%20%26%20Lightning%20Protection%20Explained%20%E2%80%94%20SPD%20types%2C%20Uc%2C%20Up%20and%20lightning%20protection%20levels.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsurge-protection-spd-lightning-protection-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsurge-protection-spd-lightning-protection-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=SPD%20%26%20Lightning%20Protection%20Explained&text=SPD%20types%2C%20Uc%2C%20Up%20and%20a%20worked%20selection.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsurge-protection-spd-lightning-protection-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=SPD%20%26%20Lightning%20Protection%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsurge-protection-spd-lightning-protection-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="earthing-grounding-systems-explained">Earthing &amp; Grounding Systems Explained</a></li><li><a href="types-of-earthing-systems-explained">Types of Earthing Systems Explained</a></li><li><a href="../electrical/earthing-rod-resistance">Earthing Rod Resistance Calculator</a></li><li><a href="../electrical/earthing-grid-resistance">Earthing Grid Resistance Calculator</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../changelog">Changelog</a> &nbsp;&middot;&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
