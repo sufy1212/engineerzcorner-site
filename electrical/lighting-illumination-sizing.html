@@ -11,19 +11,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lighting / Illumination Sizing — Engineerz CorneR</title>
-<meta name="description" content="Luminaire count for a target lux level, using the lumen method.">
+<meta name="description" content="Luminaire count by the lumen method, plus room index, an even layout grid, spacing-to-height check and lighting power density.">
 <link rel="canonical" href="https://www.engineerzcorner.com/electrical/lighting-illumination-sizing">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
 <meta property="og:title" content="Lighting / Illumination Sizing — Engineerz CorneR">
-<meta property="og:description" content="Luminaire count for a target lux level, using the lumen method.">
+<meta property="og:description" content="Luminaire count by the lumen method, plus room index, an even layout grid, spacing-to-height check and lighting power density.">
 <meta property="og:url" content="https://www.engineerzcorner.com/electrical/lighting-illumination-sizing">
 <meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lighting / Illumination Sizing — Engineerz CorneR">
-<meta name="twitter:description" content="Luminaire count for a target lux level, using the lumen method.">
+<meta name="twitter:description" content="Luminaire count by the lumen method, plus room index, an even layout grid, spacing-to-height check and lighting power density.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-electrical.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +64,7 @@
   "name": "Lighting / Illumination Sizing",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (runs in browser)",
-  "description": "Luminaire count for a target lux level, using the lumen method.",
+  "description": "Luminaire count by the lumen method, plus room index, an even layout grid, spacing-to-height check and lighting power density.",
   "url": "https://www.engineerzcorner.com/electrical/lighting-illumination-sizing",
   "offers": {
     "@type": "Offer",
@@ -85,7 +85,7 @@
 <div class="wrap page active" id="page-lighting">
   <div class="pagehero">
     <div class="hero-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></div>
-    <div><h1>Lighting / Illumination Sizing</h1><div class="hero-sub">Lumen method — fitting count for a target lux level</div></div>
+    <div><h1>Lighting / Illumination Sizing</h1><div class="hero-sub">Lumen method — fitting count, room index and layout check</div></div>
   </div>
   <div class="intro">Number of luminaires needed to hit a target average illuminance in a room, using the standard lumen method: required lumens are spread across the room area and derated by how much of that light actually lands on the working plane (utilization factor) and how much output is lost to dirt and lamp aging over time (maintenance factor). A quick layout check, not a point-by-point photometric design.</div>
   <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/lighting-lumen-method-luminaire-count" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why luminaire count needs more than lumens &divide; target lux &rarr;</a></div>
@@ -149,6 +149,51 @@
       <div class="hint" style="margin-top:8px;">This gives an average illuminance and fitting count only — it doesn't check uniformity, glare, fitting spacing/mounting height ratios, or emergency lighting requirements, all of which need a proper photometric layout for a final design.</div>
     </details>
   </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">+</span><h2>Layout &amp; Room Index</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="ltgCeil">Ceiling height <span class="unit">m</span></label>
+        <input type="number" id="ltgCeil" value="3" step="0.1">
+      </div>
+      <div class="field">
+        <label for="ltgWp">Work plane height <span class="unit">m</span></label>
+        <input type="number" id="ltgWp" value="0.85" step="0.05">
+        <div class="hint">0.85 m is a common desk height; Hm is measured from here to the luminaires.</div>
+      </div>
+      <div class="field">
+        <label for="ltgShr">Max spacing-to-height ratio</label>
+        <input type="number" id="ltgShr" value="1.2" step="0.05" min="0.1">
+        <div class="hint">Take this from the luminaire datasheet. 1.2 is only a placeholder.</div>
+      </div>
+      <div class="field">
+        <label for="ltgWatt">Power per luminaire <span class="unit">W</span></label>
+        <input type="number" id="ltgWatt" value="40" step="1" min="0">
+        <div class="hint">Optional, for the power density result.</div>
+      </div>
+    </div>
+    <div class="result-line">
+      <span class="rlabel">RECOMMENDED LAYOUT</span>
+      <span class="rval" id="ltgLayout">&mdash;</span>
+    </div>
+    <div class="stat-grid" style="margin:0 16px 16px;">
+      <div class="stat"><div class="slabel">Mounting height above work plane, Hm</div><div class="sval" id="ltgHm">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Room index, K</div><div class="sval" id="ltgK">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Spacing along length / width</div><div class="sval" id="ltgSpacing">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Distance to walls (half spacing)</div><div class="sval" id="ltgWall">&mdash;</div></div>
+      <div class="stat"><div class="slabel">S / Hm along length / width</div><div class="sval" id="ltgSHR">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Average lux at grid count</div><div class="sval" id="ltgGridLux">&mdash;</div></div>
+      <div class="stat"><div class="slabel">Power density</div><div class="sval" id="ltgWm2">&mdash;</div></div>
+    </div>
+    <div role="status" aria-live="polite" class="validation-banner neutral" id="ltgLayoutNote" style="margin:0 16px 16px;"><span class="vdot"></span><span>Enter the room heights to see the layout.</span></div>
+    <details>
+      <summary>How the layout is chosen</summary>
+      <div class="formula-note">
+        Hm = ceiling height &minus; work plane height &nbsp;&middot;&nbsp; <b>K = (L &times; W) / (Hm &times; (L + W))</b> &nbsp;&middot;&nbsp; spacing S = room dimension / number of fittings in that direction, with half a spacing to the walls.
+      </div>
+      <div class="hint" style="margin-top:8px;">The grid is the smallest rectangular layout of at least the required fittings whose spacing is not more than the S/Hm limit times Hm and whose two spacings are within about 1.7 : 1 of each other. K tells you which row of the manufacturer's utilization table to read UF from: a low K (a small floor under a tall ceiling) usually means a lower UF. The result checks spacing only, not uniformity or glare.</div>
+    </details>
+  </div>
   <footer>Lumen method average-illuminance estimate only — verify with manufacturer photometric data for a final layout.</footer>
 </div>
 
@@ -188,6 +233,76 @@
     var e = el(id); if(e){ e.addEventListener('input', calcLighting); e.addEventListener('change', calcLighting); }
   });
   calcLighting();
+
+  // ---------- Layout & room index ----------
+  function pickGrid(L, W, n, maxS){
+    var best = null, extra = Math.ceil(n*0.5) + 4;
+    for(var cnt = n; cnt <= n + extra && !best; cnt++){
+      for(var nx = 1; nx <= cnt; nx++){
+        if(cnt % nx) continue;
+        var ny = cnt / nx, sx = L/nx, sy = W/ny, ar = sx/sy;
+        if(ar < 0.6 || ar > 1.7) continue;
+        if(Math.max(sx, sy) > maxS) continue;
+        var score = Math.abs(Math.log(ar));
+        if(!best || score < best.score) best = {nx:nx, ny:ny, sx:sx, sy:sy, score:score};
+      }
+    }
+    return best;
+  }
+  function calcLayout(){
+    if(!el('ltgCeil')) return;
+    var L = num('ltgLen'), W = num('ltgWid'), E = num('ltgLux'), lm = num('ltgLumens'), uf = num('ltgUf'), mf = num('ltgMf');
+    var H = num('ltgCeil'), hwp = num('ltgWp'), shr = num('ltgShr'), watt = num('ltgWatt');
+    var errs = 0;
+    errs += fieldError(el('ltgCeil'), (isNaN(H) || H<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('ltgWp'), (isNaN(hwp) || hwp<0 || hwp>=H) ? 'Must be 0 or more and below the ceiling height.' : null);
+    errs += fieldError(el('ltgShr'), (isNaN(shr) || shr<=0) ? 'Must be greater than 0.' : null);
+    errs += fieldError(el('ltgWatt'), (isNaN(watt) || watt<0) ? 'Cannot be negative.' : null);
+    var base = [L,W,E,lm,uf,mf].every(function(v){ return isFinite(v) && v>0; });
+    var note = el('ltgLayoutNote');
+    if(errs>0 || !base){
+      ['ltgLayout','ltgHm','ltgK','ltgSpacing','ltgWall','ltgSHR','ltgGridLux','ltgWm2'].forEach(function(id){ setText(id,'—'); });
+      if(note){ note.className = 'validation-banner neutral'; note.innerHTML = '<span class="vdot"></span><span>Enter valid room and luminaire values to see the layout.</span>'; }
+      return;
+    }
+    var area = L*W, hm = H - hwp, K = area/(hm*(L+W));
+    var n = Math.ceil((E*area)/(uf*mf)/lm);
+    var g = pickGrid(L, W, n, shr*hm), within = !!g;
+    if(!g){
+      var bestc = null;
+      for(var nx = 1; nx <= 60; nx++){
+        for(var ny = 1; ny <= 60; ny++){
+          if(nx*ny < n || nx*ny > n + Math.ceil(n*0.5) + 4) continue;
+          var sx = L/nx, sy = W/ny, ar = sx/sy;
+          var s = nx*ny*1000 + Math.abs(Math.log(ar))*100 + Math.max(sx,sy);
+          if(!bestc || s < bestc.score) bestc = {nx:nx, ny:ny, sx:sx, sy:sy, score:s};
+        }
+      }
+      g = bestc;
+    }
+    var cnt = g.nx*g.ny, lux = cnt*lm*uf*mf/area;
+    setText('ltgLayout', g.nx + ' × ' + g.ny + ' <small>= ' + cnt + ' fittings</small>');
+    setText('ltgHm', fmt(hm,2) + ' m');
+    setText('ltgK', fmt(K,2));
+    setText('ltgSpacing', fmt(g.sx,2) + ' / ' + fmt(g.sy,2) + ' m');
+    setText('ltgWall', fmt(g.sx/2,2) + ' / ' + fmt(g.sy/2,2) + ' m');
+    setText('ltgSHR', fmt(g.sx/hm,2) + ' / ' + fmt(g.sy/hm,2));
+    setText('ltgGridLux', fmt(lux,0) + ' lux');
+    setText('ltgWm2', (watt>0 ? fmt(cnt*watt/area,1) + ' W/m²' : '—'));
+    if(note){
+      var msg, cls;
+      if(!within){ cls='bad'; msg = 'No even grid keeps spacing within ' + fmt(shr*hm,2) + ' m (S/Hm ' + fmt(shr,2) + '). The closest grid is shown; use more fittings or a luminaire with a wider distribution.'; }
+      else if(cnt > n){ cls='ok'; msg = 'The lumen method needs ' + n + ', but an even grid needs ' + cnt + ' fittings to fit the room.'; }
+      else { cls='ok'; msg = 'The lumen method count of ' + n + ' fits an even grid with spacing inside the S/Hm limit.'; }
+      if(K < 1) msg += ' Room index is below 1, so check that the utilization factor you entered is not optimistic.';
+      note.className = 'validation-banner ' + cls;
+      note.innerHTML = '<span class="vdot"></span><span>' + msg + '</span>';
+    }
+  }
+  ['ltgLen','ltgWid','ltgLux','ltgLumens','ltgUf','ltgMf','ltgCeil','ltgWp','ltgShr','ltgWatt'].forEach(function(id){
+    var e = el(id); if(e){ e.addEventListener('input', calcLayout); e.addEventListener('change', calcLayout); }
+  });
+  calcLayout();
 
 })();
 </script>
