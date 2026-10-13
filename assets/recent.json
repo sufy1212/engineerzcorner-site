@@ -1,5 +1,10 @@
 [
   {
+    "t": "Lighting / Illumination Sizing",
+    "u": "electrical/lighting-illumination-sizing",
+    "d": "2026-10-13"
+  },
+  {
     "t": "Genset Ratings: ESP, PRP, COP, LTP",
     "u": "posts/genset-ratings-esp-prp-cop-ltp-iso-8528-explained",
     "d": "2026-10-13"
@@ -42,11 +47,6 @@
   {
     "t": "Cavitation in Pumps: Causes, Warning Signs, and Prevention",
     "u": "posts/pump-cavitation-causes-prevention",
-    "d": "2026-10-05"
-  },
-  {
-    "t": "Pump & Fan Affinity Laws: Why Speed Changes Cube the Power",
-    "u": "posts/pump-fan-affinity-laws-explained",
     "d": "2026-10-05"
   }
 ]
