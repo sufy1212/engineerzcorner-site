@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipe Wall Thickness (ASME B31.3) | Engineerz CorneR</title>
+<meta name="description" content="ASME B31.3 pressure design thickness, corrosion allowance and the 12.5% mill tolerance, with a worked NPS 6 example and schedule selection.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pipe Wall Thickness (ASME B31.3)">
+<meta property="og:description" content="ASME B31.3 pressure design thickness, corrosion allowance and the 12.5% mill tolerance, with a worked NPS 6 example and schedule selection.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pipe Wall Thickness (ASME B31.3)">
+<meta name="twitter:description" content="How the pressure design thickness, corrosion allowance and mill tolerance combine into the pipe schedule you order.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pipe-wall-thickness-asme-b31-3-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Pipe Wall Thickness (ASME B31.3)", "item": "https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pipe Wall Thickness (ASME B31.3)",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "description": "ASME B31.3 pressure design thickness, corrosion allowance and the 12.5% mill tolerance, with a worked NPS 6 example and schedule selection.",
+  "url": "https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pipe Wall Thickness (ASME B31.3)</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Piping</span>
+    <h1>Pipe Wall Thickness (ASME B31.3)</h1>
+    <p class="hero-sub">The pressure formula gives you the wall the pipe needs to hold the pressure. The pipe you order has to be thicker, because the mill is allowed to deliver a thinner wall than the one on the label and corrosion will remove some more.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; ASME B31.3</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Pressure design thickness t = PD / 2(SEW + PY) is only the wall needed to contain internal pressure. It is the starting point, not the thickness you order.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Add the corrosion, erosion and mechanical allowance c to get the minimum required thickness tm = t + c.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">For new seamless pipe, divide tm by 0.875 to cover the 12.5% mill under-tolerance, then pick the next standard schedule at or above that figure.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The mill tolerance is a purchasing allowance. It is not applied when evaluating pipe already in service.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>The pressure design equation</h2>
+    <p>ASME B31.3 gives the pressure design thickness of straight pipe under internal pressure (paragraph 304.1.2) as:</p>
+    <p><strong>t = P &times; D / [ 2 ( S &times; E &times; W + P &times; Y ) ]</strong></p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Symbol</th><th>Meaning</th><th>Where it comes from</th></tr>
+        <tr><td>P</td><td>Internal design gauge pressure</td><td>Process design basis, not the operating pressure</td></tr>
+        <tr><td>D</td><td>Outside diameter of the pipe</td><td>Actual OD from ASME B36.10M / B36.19M (NPS 6 is 6.625 in, not 6 in)</td></tr>
+        <tr><td>S</td><td>Allowable stress at the design temperature</td><td>B31.3 Table A-1, for the pipe material</td></tr>
+        <tr><td>E</td><td>Quality factor</td><td>B31.3 Table A-1A or A-1B, by pipe type and weld</td></tr>
+        <tr><td>W</td><td>Weld joint strength reduction factor</td><td>1.0 unless the temperature range calls for a lower value</td></tr>
+        <tr><td>Y</td><td>Coefficient</td><td>B31.3 Table 304.1.1, by material and temperature</td></tr>
+      </table>
+    </div>
+    <p>Use consistent units: pressure and stress in psi with diameters in inches, or in MPa with millimetres. For ferritic steels at or below 900 &deg;F (482 &deg;C), Y = 0.4. The equation applies to thin-wall pipe, where t is less than D/6; thicker wall pipe needs a different approach in the code.</p>
+
+    <h2><span class="h2-dot"></span>From pressure thickness to the pipe you order</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Calculate the pressure design thickness t from the equation above.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Add the allowance c (corrosion, erosion, and thread or groove depth where there is one): tm = t + c.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Cover the mill tolerance. For seamless pipe with a 12.5% under-tolerance, nominal thickness must be at least tm / 0.875.</span></div>
+      <div class="step"><span class="flow-num">4</span><span class="txt">Choose the next standard wall thickness at or above that value from ASME B36.10M (carbon and alloy steel) or B36.19M (stainless).</span></div>
+      <div class="step"><span class="flow-num">5</span><span class="txt">Check: the selected wall less 12.5% must still be at least tm.</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Worked example: NPS 6 carbon steel</h2>
+    <p>Design pressure 1000 psig, NPS 6 (D = 6.625 in), carbon steel with S = 15,000 psi at the design temperature, seamless so E = 1, W = 1, Y = 0.4, allowance c = 0.05 in.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+        <tr><td>Pressure design thickness t</td><td>1000 &times; 6.625 / [2 (15,000 + 1000 &times; 0.4)] = 6625 / 30,800</td><td>0.215 in</td></tr>
+        <tr><td>Minimum required thickness tm</td><td>0.215 + 0.050</td><td>0.265 in</td></tr>
+        <tr><td>Nominal after mill tolerance</td><td>0.265 / 0.875</td><td>0.303 in</td></tr>
+        <tr><td>Schedule 40 check</td><td>Wall 0.280 in, less 12.5% = 0.245 in, against tm of 0.265 in</td><td>Fails</td></tr>
+        <tr><td>Schedule 80 check</td><td>Wall 0.432 in, less 12.5% = 0.378 in, against tm of 0.265 in</td><td>Passes</td></tr>
+      </table>
+    </div>
+    <p>The pressure thickness of 0.215 in looks as if Schedule 40 would be plenty. It is not: allowance and mill tolerance together take the requirement above the 0.280 in wall, so the line has to go to Schedule 80, unless a thickness between the two is specified and available. The thin-wall condition holds because D/6 = 1.10 in, far above t.</p>
+    <p>Sensitivity on the same pipe: a 0.125 in allowance instead of 0.05 raises tm to 0.340 in and the nominal to 0.389 in; a lower allowable stress of 12,000 psi (a hotter design temperature) gives t = 0.267 in and a nominal of 0.362 in. Both still land on Schedule 80, but they eat into the margin that the 0.378 in minimum wall gives.</p>
+
+    <h2><span class="h2-dot"></span>Three thicknesses that get confused</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Name</th><th>Meaning</th><th>Used for</th></tr>
+        <tr><td>t</td><td>Pressure design thickness</td><td>Containing the pressure; the base for everything else</td></tr>
+        <tr><td>tm</td><td>t plus allowances</td><td>Minimum thickness the pipe must actually have</td></tr>
+        <tr><td>Nominal</td><td>tm divided by 0.875 for seamless pipe, then rounded up to a schedule</td><td>What goes on the purchase order and the piping class</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>When the mill tolerance does and does not apply</h2>
+    <p>The 12.5% under-tolerance is a manufacturing allowance and is the usual figure for seamless carbon steel pipe such as ASTM A106 and A53. It belongs in new design and purchasing, where the delivered wall may be thinner than the nominal. For pipe already installed, the retirement thickness used in inspection under API 570 is based on the pressure design thickness plus any allowances, without the mill tolerance. Welded pipe and other product specifications can state a different tolerance, so take the figure from the pipe specification being bought.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>Using nominal pipe size as D</td><td>NPS 6 has a 6.625 in outside diameter; using 6 gives a thinner result</td></tr>
+        <tr><td>Reading S at room temperature</td><td>Allowable stress falls with temperature, so the wall must be sized at the design temperature</td></tr>
+        <tr><td>Mixing units</td><td>MPa with inches, or bar without conversion, is out by an order of magnitude</td></tr>
+        <tr><td>Leaving out E or W</td><td>Welded pipe and high temperature service can carry factors below 1.0</td></tr>
+        <tr><td>Skipping the mill tolerance</td><td>The delivered wall can be 12.5% under nominal, and the margin vanishes</td></tr>
+        <tr><td>Treating the result as the whole design</td><td>This equation covers internal pressure only; external pressure, weight, thermal loads and flexibility are separate checks</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>t = PD / 2(SEW + PY) is the pressure thickness; add allowance c for tm, then divide by 0.875 for new seamless pipe.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Use the actual outside diameter, allowable stress at design temperature, and consistent units.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Y is 0.4 for ferritic steel at or below 900 &deg;F (482 &deg;C); other cases come from Table 304.1.1.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Pick the next standard schedule at or above the nominal thickness, then check wall less 12.5% against tm.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm all values against the edition of ASME B31.3 and the pipe specification for your project.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Pipe%20Wall%20Thickness%20(ASME%20B31.3)%20%E2%80%94%20pressure%20thickness%2C%20allowance%20and%20mill%20tolerance.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-wall-thickness-asme-b31-3-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-wall-thickness-asme-b31-3-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Pipe%20Wall%20Thickness%20(ASME%20B31.3)&text=Pressure%20thickness%2C%20allowance%20and%20mill%20tolerance%2C%20with%20a%20worked%20NPS%206%20example." target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Pipe%20Wall%20Thickness%20(ASME%20B31.3)&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APipe%20Wall%20Thickness%20(ASME%20B31.3)%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-wall-thickness-asme-b31-3-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../process/pipe-wall-thickness-asme-b31-3">Pipe Wall Thickness Calculator (ASME B31.3) &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="relief-valve-sizing-api520-explained">Relief Valve Orifice Sizing Explained (API 520)</a></li><li><a href="erosional-vs-economic-velocity-line-sizing-explained">Erosional vs Economic Velocity in Line Sizing</a></li><li><a href="pipe-thermal-expansion-why-long-runs-move-more">Pipe Thermal Expansion: Why Long Runs Move More</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/pipe-wall-thickness-asme-b31-3">Try the Pipe Wall Thickness Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
