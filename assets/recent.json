@@ -1,5 +1,10 @@
 [
   {
+    "t": "Pipe Wall Thickness (ASME B31.3)",
+    "u": "posts/pipe-wall-thickness-asme-b31-3-explained",
+    "d": "2026-10-15"
+  },
+  {
     "t": "Lighting / Illumination Sizing",
     "u": "electrical/lighting-illumination-sizing",
     "d": "2026-10-13"
@@ -42,11 +47,6 @@
   {
     "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
     "u": "posts/psychrometric-chart-basics",
-    "d": "2026-10-05"
-  },
-  {
-    "t": "Cavitation in Pumps: Causes, Warning Signs, and Prevention",
-    "u": "posts/pump-cavitation-causes-prevention",
     "d": "2026-10-05"
   }
 ]
