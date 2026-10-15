@@ -1,5 +1,15 @@
 [
   {
+    "t": "Contingency vs Management Reserve",
+    "u": "posts/contingency-vs-management-reserve-project-budget-explained",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Cost Contingency & Management Reserve Calculator",
+    "u": "pm/cost-contingency-calculator",
+    "d": "2026-10-15"
+  },
+  {
     "t": "RTD vs Thermocouple Explained",
     "u": "posts/rtd-vs-thermocouple-pt100-type-k-explained",
     "d": "2026-10-15"
@@ -38,15 +48,5 @@
     "t": "Lighting Design Beyond Lux",
     "u": "posts/lighting-design-beyond-lux-en-12464-1-en-1838",
     "d": "2026-10-12"
-  },
-  {
-    "t": "SPD & Lightning Protection Explained",
-    "u": "posts/surge-protection-spd-lightning-protection-explained",
-    "d": "2026-10-12"
-  },
-  {
-    "t": "The PPP Project Lifecycle: From Identification to Handback",
-    "u": "posts/ppp-project-lifecycle-explained",
-    "d": "2026-10-05"
   }
 ]
