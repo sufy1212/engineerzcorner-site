@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contingency vs Management Reserve | Engineerz CorneR</title>
+<meta name="description" content="Contingency, management reserve and the project budget stack, AACE estimate classes, and a worked example that turns a risk register into a contingency figure.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Contingency vs Management Reserve">
+<meta property="og:description" content="Contingency, management reserve and the project budget stack, AACE estimate classes, and a worked example that turns a risk register into a contingency figure.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contingency vs Management Reserve">
+<meta name="twitter:description" content="The budget stack from base estimate to total budget, and how a risk register becomes a contingency figure.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="contingency-vs-management-reserve-project-budget-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Contingency vs Management Reserve",
+      "item": "https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Contingency vs Management Reserve",
+  "description": "Contingency, management reserve and the project budget stack, AACE estimate classes, and a worked example that turns a risk register into a contingency figure.",
+  "url": "https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Contingency vs Management Reserve</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">📊 Project Management &middot; Cost</span>
+    <h1>Contingency vs Management Reserve</h1>
+    <p class="hero-sub">Both are money held back for things going wrong, but they cover different kinds of wrong and sit in different places in the budget. Mixing them up either hides risk inside the baseline or lets the project quietly spend its safety net.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Project Management</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 160" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Budget stack: base estimate, contingency, cost baseline, management reserve, total budget">
+      <g font-family="IBM Plex Mono" font-size="10">
+        <rect x="70" y="100" width="150" height="36" fill="#122845" stroke="#8FD94A" stroke-width="1.5"/><text x="145" y="122" text-anchor="middle" fill="#E4C99A">BASE ESTIMATE</text>
+        <rect x="70" y="72" width="150" height="26" fill="#18325A" stroke="#C08A4E" stroke-width="1.5"/><text x="145" y="89" text-anchor="middle" fill="#E4C99A">CONTINGENCY</text>
+        <rect x="260" y="72" width="150" height="64" fill="none" stroke="#8FD94A" stroke-width="1.5" stroke-dasharray="4 3"/><text x="335" y="108" text-anchor="middle" fill="#E4C99A">COST BASELINE</text>
+        <rect x="260" y="44" width="150" height="26" fill="#18325A" stroke="#D9534F" stroke-width="1.5"/><text x="335" y="61" text-anchor="middle" fill="#E4C99A">MGMT RESERVE</text>
+        <rect x="450" y="44" width="150" height="92" fill="none" stroke="#8FB0B6" stroke-width="1.5"/><text x="525" y="94" text-anchor="middle" fill="#E4C99A">PROJECT BUDGET</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Contingency covers identified risks, the known-unknowns from the risk register, and is included in the cost baseline. The project manager can usually spend it.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Management reserve covers unforeseen events, the unknown-unknowns. It sits outside the cost baseline, is part of the project budget, and needs management approval to release.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A contingency number should come from the risks, not a flat percentage: expected value from the register gives a defensible starting point.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">An estimate's accuracy range depends on how far the design is defined. A Class 5 concept estimate can swing from &minus;50% to +100%.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>The budget stack</h2>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>Base estimate</b><span>defined scope</span></div>
+        <div class="f-op">&plus;</div>
+        <div class="f-chip"><b>Contingency</b><span>identified risks</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-result"><b>Cost baseline</b><span>what the PM manages to</span></div>
+      </div>
+    </div>
+    <div class="formula-note">Project budget = cost baseline + management reserve. The reserve is held above the baseline, so a spend from it is a decision above the project manager, not a line in the project's own cost report.</div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th></th><th>Contingency</th><th>Management reserve</th></tr>
+        <tr><td>Covers</td><td>Risks identified in the register (known-unknowns)</td><td>Unforeseen events and scope (unknown-unknowns)</td></tr>
+        <tr><td>Where it sits</td><td>Inside the cost baseline</td><td>Outside the baseline, inside the budget</td></tr>
+        <tr><td>Who releases it</td><td>Usually the project manager, under the agreed rules</td><td>Sponsor or management</td></tr>
+        <tr><td>Sized from</td><td>The risk register and the estimate's maturity</td><td>Organizational policy and project uncertainty</td></tr>
+      </table>
+    </div>
+    <div class="rule-box">
+      <b>Spending either one should leave a trace</b>
+      <span>When contingency is used, tie the draw to the risk that occurred and close or re-score that line in the register. When management reserve is released, the baseline changes through change control. Otherwise the budget ends up showing overruns that look like estimating errors.</span>
+    </div>
+
+    <h2><span class="h2-dot"></span>From a risk register to a contingency figure</h2>
+    <p>The simplest risk-based method is expected monetary value: probability times cost impact for each risk, summed. Here is a register for a project with a base estimate of 2,000,000.</p>
+    <div class="example-box">
+      <h3>Expected monetary value per risk</h3>
+      <div class="result-line"><span>Supplier delivery delay</span><b>30% &times; 120,000 = 36,000</b></div>
+      <div class="result-line"><span>Rework from design changes</span><b>50% &times; 40,000 = 20,000</b></div>
+      <div class="result-line"><span>Unforeseen ground conditions</span><b>20% &times; 250,000 = 50,000</b></div>
+      <div class="result-line"><span>Equipment failure at commissioning</span><b>10% &times; 400,000 = 40,000</b></div>
+      <div class="result-line"><span>Permit delay</span><b>60% &times; 25,000 = 15,000</b></div>
+      <div class="result-line"><span>Sum = contingency</span><b>161,000 (8.05% of base)</b></div>
+    </div>
+    <p>Feeding this into the stack: cost baseline = 2,000,000 + 161,000 = 2,161,000. With a management reserve of 5% of the baseline (108,050), the total project budget is 2,269,050, which is 269,050 or 13.45% over the base estimate. That is exactly what your <a href="../pm/cost-contingency-calculator">cost contingency calculator</a> does when you enter 8.05% contingency and 5% reserve.</p>
+
+    <h2><span class="h2-dot"></span>What the expected value does not tell you</h2>
+    <p>Expected value is an average, and some risks are all-or-nothing. The equipment failure above is a 10% chance of 400,000, so its 40,000 contribution is never the amount actually spent: it is either nothing or the whole loss. Treating the five risks as independent and each at its stated impact, the chances work out like this:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Question</th><th>Answer</th></tr>
+        <tr><td>Chance that none of the five risks occurs</td><td>10%</td></tr>
+        <tr><td>Chance that total impact is within the 161,000 contingency</td><td>66%</td></tr>
+        <tr><td>Contingency for a 50% chance of being enough (P50)</td><td>65,000</td></tr>
+        <tr><td>Contingency for an 80% chance of being enough (P80)</td><td>290,000</td></tr>
+        <tr><td>All five occurring together</td><td>835,000</td></tr>
+      </table>
+    </div>
+    <p>So the expected-value contingency of 161,000 has about a 66% chance of covering this register (the average sits above P50 because a few large risks skew the distribution), and covering it with 80% confidence takes 290,000. Many owners set funding at a higher confidence than the estimate itself, so the gap between P50 and P80 is a real policy question and not a rounding detail. These numbers assume independent risks, fixed impacts and a complete register; a real analysis uses ranges and correlation, usually through simulation.</p>
+
+    <h2><span class="h2-dot"></span>Estimate class sets the uncertainty</h2>
+    <p>AACE recommended practice 18R-97 classifies capital project estimates by how much of the project is defined. The expected accuracy range is the typical variation low and high after contingency has been applied (at a 50% level of confidence), so it describes the estimate's uncertainty and is not itself the contingency.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Class</th><th>Project definition</th><th>Typical purpose</th><th>Low</th><th>High</th></tr>
+        <tr><td>5</td><td>0&ndash;2%</td><td>Concept screening</td><td>&minus;20% to &minus;50%</td><td>+30% to +100%</td></tr>
+        <tr><td>4</td><td>1&ndash;15%</td><td>Study or feasibility</td><td>&minus;15% to &minus;30%</td><td>+20% to +50%</td></tr>
+        <tr><td>3</td><td>10&ndash;40%</td><td>Budget authorization</td><td>&minus;10% to &minus;20%</td><td>+10% to +30%</td></tr>
+        <tr><td>2</td><td>30&ndash;70%</td><td>Control or bid</td><td>&minus;5% to &minus;15%</td><td>+5% to +20%</td></tr>
+        <tr><td>1</td><td>50&ndash;100%</td><td>Check estimate</td><td>&minus;3% to &minus;10%</td><td>+3% to +15%</td></tr>
+      </table>
+    </div>
+    <p>Reading it: a Class 3 estimate of 2,000,000 has an expected actual cost typically between 1,600,000 and 2,600,000 (that is, &minus;20% to +30%, the outer limits of the typical range). The same project at Class 5 could land from 1,000,000 to 4,000,000. The lower the class number, the less contingency the remaining uncertainty needs, which is why contingency percentages should fall as design matures. The class definitions vary slightly between published summaries, so quote them from the document itself.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>A flat 10% on everything</td><td>It ignores the actual risks and the estimate's maturity, so it is too much on some projects and not enough on others</td></tr>
+        <tr><td>Hiding contingency inside line items</td><td>Padding each activity makes the risk invisible and impossible to release or re-score</td></tr>
+        <tr><td>Treating management reserve as extra contingency</td><td>The project spends it on identified risks, and nothing is left for the unforeseen</td></tr>
+        <tr><td>Using expected value as the guarantee</td><td>It is the average, not the amount that is enough for most outcomes</td></tr>
+        <tr><td>Never releasing unused contingency</td><td>Contingency tied to risks that have passed should be reviewed and returned as the project proceeds</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Cost baseline = base estimate + contingency. Project budget = baseline + management reserve.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Contingency is for identified risks and inside the baseline; management reserve is for unknowns and needs approval.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Size contingency from the register: probability &times; impact, summed, then check what confidence level that actually gives.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Estimate class (AACE 18R-97) shows how wide the uncertainty is; Class 5 is &minus;50% to +100%, Class 1 about &minus;10% to +15%.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm definitions and ranges against your organization's policy and the standards you work to.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Contingency%20vs%20Management%20Reserve%20%E2%80%94%20the%20budget%20stack%2C%20expected%20value%20and%20AACE%20estimate%20classes.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcontingency-vs-management-reserve-project-budget-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcontingency-vs-management-reserve-project-budget-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Contingency%20vs%20Management%20Reserve&amp;text=The%20budget%20stack%2C%20expected%20value%20and%20AACE%20estimate%20classes.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcontingency-vs-management-reserve-project-budget-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Contingency%20vs%20Management%20Reserve&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AContingency%20vs%20Management%20Reserve%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcontingency-vs-management-reserve-project-budget-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Keep reading</p>
+    <ul>
+      <li><a href="risk-register-probability-impact-scoring">Risk Register Basics: Turning Probability &times; Impact Into Priority &rarr;</a></li>
+      <li><a href="earned-value-management-basics">Earned Value Management Basics &rarr;</a></li>
+      <li><a href="critical-path-method-cpm-explained">Critical Path Method Explained &rarr;</a></li>
+    </ul>
+    <p class="post-related-label">Try the tool</p>
+    <ul><li><a href="../pm/cost-contingency-calculator">Cost Contingency &amp; Management Reserve Calculator &rarr;</a></li><li><a href="../pm/risk-register">Risk Register &rarr;</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
