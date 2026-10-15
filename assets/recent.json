@@ -1,52 +1,52 @@
 [
   {
+    "t": "Fractions to Decimals Explained",
+    "u": "posts/tape-measure-fractions-to-decimals-explained",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Number Base Converter",
+    "u": "general/base-converter",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Fraction ↔ Decimal (Feet-Inches)",
+    "u": "general/fraction-decimal",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Markup, Margin & % Change",
+    "u": "general/markup-margin",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Password Generator",
+    "u": "general/password-generator",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Percentage Calculator",
+    "u": "general/percentage-calculator",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Engineering Sanity-Checker",
+    "u": "general/sanity-checker",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Time Duration Calculator",
+    "u": "general/time-duration-calculator",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Unit Converter",
+    "u": "general/unit-converter",
+    "d": "2026-10-15"
+  },
+  {
     "t": "Tank Volume vs Level Explained",
     "u": "posts/horizontal-tank-volume-vs-level-heads-explained",
     "d": "2026-10-15"
-  },
-  {
-    "t": "Contingency vs Management Reserve",
-    "u": "posts/contingency-vs-management-reserve-project-budget-explained",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Cost Contingency & Management Reserve Calculator",
-    "u": "pm/cost-contingency-calculator",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "RTD vs Thermocouple Explained",
-    "u": "posts/rtd-vs-thermocouple-pt100-type-k-explained",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "RTD (Pt100) Temperature ↔ Resistance",
-    "u": "automation/rtd-conversion",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Thermocouple (Type K) Reference",
-    "u": "automation/thermocouple-reference",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Pipe Wall Thickness (ASME B31.3)",
-    "u": "posts/pipe-wall-thickness-asme-b31-3-explained",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Lighting / Illumination Sizing",
-    "u": "electrical/lighting-illumination-sizing",
-    "d": "2026-10-13"
-  },
-  {
-    "t": "Genset Ratings: ESP, PRP, COP, LTP",
-    "u": "posts/genset-ratings-esp-prp-cop-ltp-iso-8528-explained",
-    "d": "2026-10-13"
-  },
-  {
-    "t": "Insulation Resistance Testing Explained",
-    "u": "posts/insulation-resistance-testing-megger-pi-explained",
-    "d": "2026-10-12"
   }
 ]
