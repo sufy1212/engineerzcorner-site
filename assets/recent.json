@@ -1,5 +1,20 @@
 [
   {
+    "t": "RTD vs Thermocouple Explained",
+    "u": "posts/rtd-vs-thermocouple-pt100-type-k-explained",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
+    "d": "2026-10-15"
+  },
+  {
+    "t": "Thermocouple (Type K) Reference",
+    "u": "automation/thermocouple-reference",
+    "d": "2026-10-15"
+  },
+  {
     "t": "Pipe Wall Thickness (ASME B31.3)",
     "u": "posts/pipe-wall-thickness-asme-b31-3-explained",
     "d": "2026-10-15"
@@ -32,21 +47,6 @@
   {
     "t": "The PPP Project Lifecycle: From Identification to Handback",
     "u": "posts/ppp-project-lifecycle-explained",
-    "d": "2026-10-05"
-  },
-  {
-    "t": "Pre-Commissioning vs Commissioning: What's the Difference",
-    "u": "posts/pre-commissioning-vs-commissioning-electrical-explained",
-    "d": "2026-10-05"
-  },
-  {
-    "t": "Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type",
-    "u": "posts/psv-types-conventional-bellows-pilot-operated-compared",
-    "d": "2026-10-05"
-  },
-  {
-    "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
-    "u": "posts/psychrometric-chart-basics",
     "d": "2026-10-05"
   }
 ]
