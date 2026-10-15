@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tank Volume vs Level Explained | Engineerz CorneR</title>
+<meta name="description" content="Why horizontal tank level and volume are not proportional, the circular segment formula, and how 2:1, hemispherical and torispherical heads change the answer.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Tank Volume vs Level Explained">
+<meta property="og:description" content="Why horizontal tank level and volume are not proportional, the circular segment formula, and how 2:1, hemispherical and torispherical heads change the answer.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tank Volume vs Level Explained">
+<meta name="twitter:description" content="Level is not volume in a horizontal tank. The segment formula and what the heads add.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-process.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="horizontal-tank-volume-vs-level-heads-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/"},
+    {"@type": "ListItem", "position": 3, "name": "Tank Volume vs Level Explained", "item": "https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tank Volume vs Level Explained",
+  "datePublished": "2026-10-15",
+  "dateModified": "2026-10-15",
+  "description": "Why horizontal tank level and volume are not proportional, the circular segment formula, and how 2:1, hemispherical and torispherical heads change the answer.",
+  "url": "https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained",
+  "author": {"@type": "Organization", "name": "Engineerz CorneR"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {"@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained"}
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Tank Volume vs Level Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Vessels</span>
+    <h1>Tank Volume vs Level Explained</h1>
+    <p class="hero-sub">A horizontal tank that reads 10% on its level transmitter holds about 5% of its volume, and one that reads 90% holds almost 95%. The tank heads add more on top. Here is the geometry behind both effects.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Process</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">In a vertical tank, level and volume are proportional. In a horizontal tank they are not: the round cross-section is narrow at the bottom and top.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Shell volume at level h is the circular segment area times the length: A = R&sup2;(&theta; &minus; sin&theta;)/2, with &theta; = 2 acos((R &minus; h)/R).</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Dished heads add volume that flat-head calculations leave out. A 2:1 elliptical head holds &pi;D&sup3;/24, a hemispherical head &pi;D&sup3;/12.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Alarm and trip levels set as a percentage of level correspond to much smaller volumes near the bottom, which matters for pump suction and holdup.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Vertical is linear, horizontal is not</h2>
+    <p>For a vertical cylinder the cross-section is constant, so V = &pi;R&sup2;h and 50% of the level is 50% of the volume. In a horizontal cylinder the liquid surface width changes with height: very narrow near the bottom, widest at the centerline, narrow again near the top. A given rise in level therefore adds little volume at the extremes and a lot around the middle.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Level (% of diameter)</th><th>Shell volume (% of full)</th></tr>
+        <tr><td>10%</td><td>5.2%</td></tr>
+        <tr><td>25%</td><td>19.6%</td></tr>
+        <tr><td>50%</td><td>50.0%</td></tr>
+        <tr><td>75%</td><td>80.4%</td></tr>
+        <tr><td>90%</td><td>94.8%</td></tr>
+        </table>
+    </div>
+    <p>These are for the cylindrical shell only. By symmetry 50% level is exactly 50% volume. Because the curve is symmetric, the volume at 90% level is 100% minus the volume at 10%.</p>
+
+    <h2><span class="h2-dot"></span>The shell formula</h2>
+    <div class="flow-strip">
+      <div class="step"><span class="flow-num">1</span><span class="txt">Get the half-angle from the level: &theta; = 2 &times; acos((R &minus; h) / R), in radians, where h is the liquid depth from the bottom and R the inside radius.</span></div>
+      <div class="step"><span class="flow-num">2</span><span class="txt">Circular segment area: A = R&sup2; (&theta; &minus; sin&theta;) / 2.</span></div>
+      <div class="step"><span class="flow-num">3</span><span class="txt">Shell liquid volume: V = A &times; L, with L the length of the cylindrical section.</span></div>
+    </div>
+    <p>Use the inside diameter, and include the straight flange of each head in L when the heads have one. This is the calculation your <a href="../process/vessel-volume-level">vessel volume and level calculator</a> performs, with flat heads assumed.</p>
+
+    <h2><span class="h2-dot"></span>What the heads add</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Head type</th><th>Volume of one head</th><th>Depth</th></tr>
+        <tr><td>2:1 semi-elliptical</td><td>&pi; D&sup3; / 24 &asymp; 0.1309 D&sup3;</td><td>D / 4</td></tr>
+        <tr><td>Hemispherical</td><td>&pi; D&sup3; / 12 &asymp; 0.2618 D&sup3;</td><td>D / 2</td></tr>
+        <tr><td>ASME flanged and dished (100% crown, 6% knuckle)</td><td>&asymp; 0.0809 D&sup3;</td><td>Shallower than 2:1</td></tr>
+        <tr><td>Flat</td><td>None</td><td>&mdash;</td></tr>
+      </table>
+    </div>
+    <p>These are volumes inside the head, excluding any straight flange. Two 2:1 heads together make one full ellipsoid. That gives a neat result for the partially filled case: the liquid in a pair of heads at level h is the full ellipsoid volume times the fraction of a sphere filled to that depth, h&sup2;(3R &minus; h) / (4R&sup3;). The same factor applies to hemispherical heads. A torispherical head is flatter than an ellipsoid, so using the elliptical formula for its partial volume is only an approximation.</p>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>Horizontal tank, inside diameter 2 m, shell length 6 m, liquid depth 0.5 m (25% level), with 2:1 elliptical heads.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+        <tr><td>Half-angle</td><td>&theta; = 2 acos(0.5 / 1)</td><td>2.0944 rad</td></tr>
+        <tr><td>Segment area</td><td>1&sup2; &times; (2.0944 &minus; 0.8660) / 2</td><td>0.6142 m&sup2;</td></tr>
+        <tr><td>Shell liquid volume</td><td>0.6142 &times; 6</td><td>3.685 m&sup3;</td></tr>
+        <tr><td>Heads full (both)</td><td>&pi; &times; 2&sup3; / 12</td><td>2.094 m&sup3;</td></tr>
+        <tr><td>Sphere fraction at h = 0.5</td><td>0.5&sup2; &times; (3 &minus; 0.5) / (4 &times; 1&sup3;)</td><td>0.1562</td></tr>
+        <tr><td>Liquid in the heads</td><td>2.094 &times; 0.1562</td><td>0.327 m&sup3;</td></tr>
+        <tr><td>Total liquid volume</td><td>3.685 + 0.327</td><td>4.012 m&sup3;</td></tr>
+        <tr><td>Total tank volume</td><td>&pi; &times; 1&sup2; &times; 6 + 2.094</td><td>20.944 m&sup3;</td></tr>
+        <tr><td>Percent full</td><td>4.012 / 20.944</td><td>19.2%</td></tr>
+      </table>
+    </div>
+    <p>Ignoring the heads gives 3.685 m&sup3;, which is 8.2% less liquid than the true 4.012 m&sup3;. The heads hold 10.0% of the full capacity of this fairly short tank (shell length three times the diameter), so the longer the shell compared with the diameter, the smaller the head effect. For the other head types the full volume of both heads on the same 2 m tank is 4.19 m&sup3; for hemispherical and 1.29 m&sup3; for ASME flanged and dished, against 2.09 m&sup3; for 2:1 elliptical.</p>
+
+    <h2><span class="h2-dot"></span>Why it matters in the plant</h2>
+    <p>Level transmitters measure level, so alarm and trip points are set in percent of range, but operators and process calculations need volume. In a horizontal drum, a low-level alarm at 10% corresponds to only about 5% of the shell volume, and a high-level alarm at 90% leaves about 5% of the volume above it. Residence time, holdup for pump suction and available surge volume must all be calculated from volume, which is why a strapping table or the formula, not a straight-line scale, is used to convert.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>Scaling volume linearly with level in a horizontal tank</td><td>Over- or under-states the volume at the ends of the range by a large factor</td></tr>
+        <tr><td>Using outside diameter</td><td>Volume is based on the inside diameter, and wall thickness shifts the result</td></tr>
+        <tr><td>Forgetting the heads</td><td>On a short tank the heads can be around a tenth of the capacity</td></tr>
+        <tr><td>Leaving out the straight flange</td><td>The head volume formulas exclude it, so add it to the shell length</td></tr>
+        <tr><td>Measuring h from the wrong datum</td><td>Level must be from the bottom inside surface of the shell, not the nozzle or the tangent line</td></tr>
+        <tr><td>Applying elliptical formulas exactly to a torispherical head</td><td>It is flatter, so the partial volume is only approximated</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Vertical tanks are linear in level; horizontal tanks are not. 10% level is about 5% volume, 25% is about 20%, and 50% is exactly 50%.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Shell volume = A &times; L with A = R&sup2;(&theta; &minus; sin&theta;)/2 and &theta; = 2 acos((R &minus; h)/R).</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Head volumes: 2:1 elliptical &pi;D&sup3;/24, hemispherical &pi;D&sup3;/12, ASME flanged and dished about 0.0809 D&sup3;, each excluding the straight flange.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Add the liquid in the heads, which is the full head volume times h&sup2;(3R &minus; h)/(4R&sup3;) for a pair of elliptical or hemispherical heads.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Check dimensions against the vessel datasheet; use the vendor strapping table where one exists.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Tank%20Volume%20vs%20Level%20Explained%20%E2%80%94%20why%20level%20is%20not%20volume%20in%20a%20horizontal%20tank.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhorizontal-tank-volume-vs-level-heads-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhorizontal-tank-volume-vs-level-heads-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Tank%20Volume%20vs%20Level%20Explained&text=Why%20level%20is%20not%20volume%20in%20a%20horizontal%20tank.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhorizontal-tank-volume-vs-level-heads-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Tank%20Volume%20vs%20Level%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ATank%20Volume%20vs%20Level%20Explained%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhorizontal-tank-volume-vs-level-heads-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../process/vessel-volume-level">Vessel/Tank Volume &amp; Level Calculator &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="tank-breathing-losses-api2000-explained">Tank Breathing Losses Explained (API 2000)</a></li><li><a href="npsh-available-explained">NPSH Available Explained</a></li><li><a href="pipe-wall-thickness-asme-b31-3-explained">Pipe Wall Thickness (ASME B31.3)</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../process/vessel-volume-level">Try the Tank Volume Calculator &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
