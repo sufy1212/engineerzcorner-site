@@ -104,7 +104,7 @@
     <a href="comparisons">PR.09 Comparisons</a>
   </div>
 
-  <div class="intro">Assumes flat (or negligible) tank heads — dished/elliptical head volume isn't included, so treat results as a close approximation for heads that are a small fraction of the shell length.</div>
+  <div class="intro">Choose a head type: flat (shell only, the default), 2:1 semi-elliptical, hemispherical, or ASME flanged &amp; dished (approximated). Dimensions are inside, tangent to tangent.</div>
   <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/horizontal-tank-volume-vs-level-heads-explained" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: why horizontal tank level is not volume, and what the heads add &rarr;</a></div>
   <div role="status" aria-live="polite" class="validation-banner neutral" id="vvlValidation"><span class="vdot"></span><span>Calculating…</span></div>
 
@@ -119,6 +119,16 @@
         </label>
       </div>
       <div class="field">
+        <label for="vvlHead">Head type</label>
+        <select id="vvlHead">
+          <option value="flat">Flat (none)</option>
+          <option value="ell">2:1 semi-elliptical</option>
+          <option value="hemi">Hemispherical</option>
+          <option value="fd">ASME flanged &amp; dished (approx.)</option>
+        </select>
+        <div class="hint" id="vvlHeadHint">Shell only, no head volume.</div>
+      </div>
+      <div class="field">
         <label for="vvlD">Diameter, D <span class="unit">m</span></label>
         <input type="number" id="vvlD" value="2.0" step="0.1">
       </div>
@@ -129,7 +139,7 @@
       <div class="field">
         <label for="vvlH">Liquid level, h <span class="unit">m</span></label>
         <input type="number" id="vvlH" value="0.8" step="0.05">
-        <div class="hint">Measured from the bottom of the shell (horizontal) or from the base (vertical).</div>
+        <div class="hint" id="vvlLevelHint">Measured from the bottom of the shell (horizontal) or from the base (vertical).</div>
       </div>
     </div>
   </div>
@@ -145,14 +155,16 @@
       <div class="stat"><div class="slabel">Percent full</div><div class="sval amber" id="vvlPct">—</div></div>
       <div class="stat"><div class="slabel">Liquid volume (US gal)</div><div class="sval" id="vvlGal">—</div></div>
       <div class="stat"><div class="slabel">Liquid volume (bbl)</div><div class="sval" id="vvlBbl">—</div></div>
+      <div class="stat"><div class="slabel">Liquid in heads</div><div class="sval" id="vvlHeadLiq">—</div></div>
+      <div class="stat"><div class="slabel">Both heads, full</div><div class="sval" id="vvlHeadFull">—</div></div>
     </div>
     <details>
       <summary>How this is calculated</summary>
       <div class="formula-note" id="vvlFormula">—</div>
-      <div class="hint" style="margin-top:8px;">Vertical: V = πR²h. Horizontal: partial volume uses the circular-segment area A = R²(θ−sinθ)/2 with θ = 2·acos((R−h)/R), then V = A·L. 1 m³ = 264.172 US gal = 6.2898 bbl (42-US-gal oil barrel).</div>
+      <div class="hint" style="margin-top:8px;">Vertical: V = πR²h. Horizontal: partial volume uses the circular-segment area A = R²(θ−sinθ)/2 with θ = 2·acos((R−h)/R), then V = A·L. With dished heads: one head holds (2/3)πR²a when full (a = head depth). Horizontal: liquid in the pair of heads = 2 × that × h²(3R−h)/(4R³). Vertical: bottom or top head caps use πR²x²(3a−x)/(3a²). 1 m³ = 264.172 US gal = 6.2898 bbl (42-US-gal oil barrel).</div>
     </details>
   </div>
-  <footer>Flat-head approximation — for dished, elliptical or spherical heads, add the head volume separately. <a href="./">← Process Index</a></footer>
+  <footer>Inside dimensions, tangent to tangent; straight flanges belong in the shell length. Dished-head partial volumes assume an ellipsoidal shape. <a href="./">← Process Index</a></footer>
 
 </div>
 </main>
@@ -170,28 +182,53 @@
   function fmt(v,d){return isFinite(v)?v.toFixed(d===undefined?2:d):"—";}
   function setText(id,html){var e=el(id);if(e)e.innerHTML=html;}
 
+  var HEAD_NOTE = {
+    flat: "Shell only, no head volume.",
+    ell: "Depth D/4. Each head holds πD³/24 when full.",
+    hemi: "Depth D/2. Each head holds πD³/12 when full.",
+    fd: "Approximated as an ellipsoid of the same volume, 0.0809 D³ per head (100% crown, 6% knuckle)."
+  };
   function calc(){
     if(!el("vvlD")) return;
     var orient=(document.querySelector('input[name="vvlOrient"]:checked')||{}).value||"horizontal";
-    el("vvlLlabel").innerHTML = orient==="horizontal" ? 'Shell length, L <span class="unit">m</span>' : 'Total height, H <span class="unit">m</span>';
+    var head=el("vvlHead") ? el("vvlHead").value : "flat";
+    var vert = orient==="vertical";
+    el("vvlLlabel").innerHTML = vert ? 'Shell height, H <span class="unit">m</span>' : 'Shell length, L <span class="unit">m</span>';
+    setText("vvlHeadHint", HEAD_NOTE[head]);
+    setText("vvlLevelHint", vert ? (head==="flat" ? "Measured from the base." : "Measured from the bottom of the vessel (apex of the bottom head).") : "Measured from the bottom inside of the shell.");
 
     var D=num("vvlD"), L=num("vvlL"), h=num("vvlH"), errs=0;
+    var R=D/2;
+    // head depth a (apex to tangent line); full volume of one head = (2/3)πR²a
+    var a = head==="ell" ? D/4 : head==="hemi" ? D/2 : head==="fd" ? 0.0809*12/(2*Math.PI)*D : 0;
+    var hmax = vert ? L + 2*a : D;
     errs+=fieldError(el("vvlD"), isNaN(D)||D<=0 ? "Diameter must be greater than 0." : null);
     errs+=fieldError(el("vvlL"), isNaN(L)||L<=0 ? "Must be greater than 0." : null);
-    errs+=fieldError(el("vvlH"), isNaN(h)||h<0 ? "Level can't be negative." : (h>D ? "Level can't exceed the diameter." : null));
+    errs+=fieldError(el("vvlH"), isNaN(h)||h<0 ? "Level can't be negative." : (h>hmax ? (vert ? "Level can't exceed the vessel height ("+fmt(hmax,2)+" m)." : "Level can't exceed the diameter.") : null));
     if(errs>0){ updateValidationBanner("vvlValidation",errs); return; }
 
-    var R=D/2, total, partial, formula;
-    if(orient==="vertical"){
-      total = Math.PI*R*R*L;
-      partial = Math.PI*R*R*h;
-      formula = "V(h) = πR²h = "+fmt(partial,4)+" m³ &nbsp;·&nbsp; V(total) = πR²H = "+fmt(total,4)+" m³";
+    var Vh = (2/3)*Math.PI*R*R*a;          // one head, full
+    var cyl = Math.PI*R*R*L, total = cyl + 2*Vh, partial, headLiq = 0, formula;
+    if(vert){
+      var capArea = function(x){ return Math.PI*R*R*x*x*(3*a-x)/(3*a*a); };   // dished cap from apex to height x
+      if(a===0){
+        partial = Math.PI*R*R*h;
+        formula = "V(h) = πR²h = "+fmt(partial,4)+" m³ &nbsp;·&nbsp; V(total) = πR²H = "+fmt(total,4)+" m³";
+      } else {
+        var bottom = h<=a ? capArea(h) : Vh;
+        var mid = h>a ? Math.PI*R*R*Math.min(h-a, L) : 0;
+        var top = h>a+L ? Vh - capArea(2*a+L-h) : 0;
+        headLiq = bottom + top;
+        partial = bottom + mid + top;
+        formula = "Bottom head "+fmt(bottom,4)+" + shell "+fmt(mid,4)+" + top head "+fmt(top,4)+" = "+fmt(partial,4)+" m³ &nbsp;·&nbsp; head depth a = "+fmt(a,3)+" m, one head = "+fmt(Vh,4)+" m³ when full";
+      }
     } else {
-      total = Math.PI*R*R*L;
       var theta = 2*Math.acos(Math.max(-1,Math.min(1,(R-h)/R)));
       var segArea = R*R*(theta - Math.sin(theta))/2;
-      partial = segArea*L;
-      formula = "θ = "+fmt(theta,4)+" rad &nbsp;·&nbsp; A(segment) = "+fmt(segArea,4)+" m² &nbsp;·&nbsp; V(h) = A·L = "+fmt(partial,4)+" m³";
+      var shellLiq = segArea*L;
+      if(a>0){ headLiq = 2*Vh*h*h*(3*R-h)/(4*R*R*R); }
+      partial = shellLiq + headLiq;
+      formula = "θ = "+fmt(theta,4)+" rad &nbsp;·&nbsp; A(segment) = "+fmt(segArea,4)+" m² &nbsp;·&nbsp; shell A·L = "+fmt(shellLiq,4)+" m³"+(a>0 ? " &nbsp;·&nbsp; heads: 2 × "+fmt(Vh,4)+" × h²(3R−h)/(4R³) = "+fmt(headLiq,4)+" m³ &nbsp;·&nbsp; total "+fmt(partial,4)+" m³" : "");
     }
 
     var pct = total>0 ? (partial/total*100) : 0;
@@ -200,10 +237,12 @@
     setText("vvlPct", fmt(pct,1)+"%");
     setText("vvlGal", fmt(partial*264.172,0)+" gal");
     setText("vvlBbl", fmt(partial*6.2898,2)+" bbl");
+    setText("vvlHeadLiq", a>0 ? fmt(headLiq,3)+" m³" : "—");
+    setText("vvlHeadFull", a>0 ? fmt(2*Vh,3)+" m³" : "—");
     setText("vvlFormula", formula);
     updateValidationBanner("vvlValidation",0);
   }
-  ["vvlD","vvlL","vvlH"].forEach(function(id){
+  ["vvlD","vvlL","vvlH","vvlHead"].forEach(function(id){
     var e=el(id); if(e){ e.addEventListener("input",calc); e.addEventListener("change",calc); }
   });
   document.querySelectorAll('input[name="vvlOrient"]').forEach(function(r){ r.addEventListener("change",calc); });
