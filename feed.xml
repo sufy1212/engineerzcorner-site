@@ -4,46 +4,53 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Contingency vs Management Reserve</title>
+    <link>https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained.html</guid>
+    <description>Contingency, management reserve and the project budget stack, AACE estimate classes, and a worked example that turns a risk register into a contingency figure.</description>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>RTD vs Thermocouple Explained</title>
     <link>https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained.html</guid>
     <description>How Pt100 RTDs and thermocouples measure temperature, IEC 60751 and 60584 tolerance classes, lead and cold-junction errors, with worked examples.</description>
-    <pubDate>Thu, 15 Oct 2026 07:19:29 GMT</pubDate>
+    <pubDate>Thu, 15 Oct 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Pipe Wall Thickness (ASME B31.3)</title>
     <link>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained.html</guid>
     <description>ASME B31.3 pressure design thickness, corrosion allowance and the 12.5% mill tolerance, with a worked NPS 6 example and schedule selection.</description>
-    <pubDate>Thu, 15 Oct 2026 07:14:57 GMT</pubDate>
+    <pubDate>Wed, 14 Oct 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Genset Ratings: ESP, PRP, COP, LTP</title>
     <link>https://www.engineerzcorner.com/posts/genset-ratings-esp-prp-cop-ltp-iso-8528-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/genset-ratings-esp-prp-cop-ltp-iso-8528-explained.html</guid>
     <description>ISO 8528-1 ratings ESP, PRP, COP and LTP, average load factor, derating and fuel autonomy, with a worked comparison for the same 320 kW load.</description>
-    <pubDate>Tue, 13 Oct 2026 03:33:51 GMT</pubDate>
+    <pubDate>Tue, 13 Oct 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Insulation Resistance Testing Explained</title>
     <link>https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained.html</guid>
     <description>IEC 60364-6 / BS 7671 test voltages and minimums, motor spot IR and polarization index per IEEE 43, temperature correction and worked examples.</description>
-    <pubDate>Mon, 12 Oct 2026 17:55:13 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 15:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Lighting Design Beyond Lux</title>
     <link>https://www.engineerzcorner.com/posts/lighting-design-beyond-lux-en-12464-1-en-1838.html</link>
     <guid>https://www.engineerzcorner.com/posts/lighting-design-beyond-lux-en-12464-1-en-1838.html</guid>
     <description>EN 12464-1 lux, uniformity and glare targets, room index, layout spacing and EN 1838 emergency lighting, with a worked 6 x 5 m office example.</description>
-    <pubDate>Mon, 12 Oct 2026 17:50:56 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
   </item>
   <item>
     <title>SPD &amp; Lightning Protection Explained</title>
     <link>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained.html</guid>
     <description>Lightning protection levels, SPD Types 1/2/3, Uc, Up and lead length (IEC 62305, IEC 61643-11), with a worked check against impulse withstand.</description>
-    <pubDate>Mon, 12 Oct 2026 03:25:13 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>The PPP Project Lifecycle: From Identification to Handback</title>
@@ -211,6 +218,48 @@
     <link>https://www.engineerzcorner.com/posts/signal-scaling-4-20ma-engineering-units.html</link>
     <guid>https://www.engineerzcorner.com/posts/signal-scaling-4-20ma-engineering-units.html</guid>
     <description>How a PLC or DCS converts a raw 4-20mA transmitter signal into an engineering unit like level, pressure, or flow.</description>
+    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+  </item>
+  <item>
+    <title>Single Line Diagram (SLD) Symbols &amp; How to Read One</title>
+    <link>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</link>
+    <guid>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</guid>
+    <description>The standard symbols used on a power single line diagram — generator, transformer, breaker, disconnect, CT/VT, busbar, relay — and the order engineers actually read one in.</description>
+    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+  </item>
+  <item>
+    <title>Slab-on-Grade Thickness: What Actually Drives the Number</title>
+    <link>https://www.engineerzcorner.com/posts/slab-on-grade-thickness-subgrade-support-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/slab-on-grade-thickness-subgrade-support-explained.html</guid>
+    <description>Why slab-on-grade thickness comes from load, subgrade support and concrete strength together — not a flat default — and why the subgrade matters too.</description>
+    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+  </item>
+  <item>
+    <title>Soil Bearing Capacity: Why It Decides Your Footing Size, Not Just Column Load</title>
+    <link>https://www.engineerzcorner.com/posts/soil-bearing-capacity-footing-sizing.html</link>
+    <guid>https://www.engineerzcorner.com/posts/soil-bearing-capacity-footing-sizing.html</guid>
+    <description>Why footing area is set by the weaker of two numbers — column load and what the soil beneath it can safely carry.</description>
+    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+  </item>
+  <item>
+    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
+    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
+    <description>How string inverters, microinverters and power optimizers differ in where MPPT happens, what a shaded panel costs under each, and how to pick between them.</description>
+    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Panel Cross-Section: The Layers Explained</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</guid>
+    <description>What's actually inside a solar panel — tempered glass, EVA encapsulant, the cells themselves, backsheet, frame and junction box — layer by layer, plus what bypass diodes do and why.</description>
+    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained.html</guid>
+    <description>The STC nameplate rating on a solar panel assumes lab conditions no rooftop ever sees.</description>
     <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
   </item>
 </channel></rss>
