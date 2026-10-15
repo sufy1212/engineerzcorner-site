@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RTD vs Thermocouple Explained | Engineerz CorneR</title>
+<meta name="description" content="How Pt100 RTDs and thermocouples measure temperature, IEC 60751 and 60584 tolerance classes, lead and cold-junction errors, with worked examples.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="RTD vs Thermocouple Explained">
+<meta property="og:description" content="How Pt100 RTDs and thermocouples measure temperature, IEC 60751 and 60584 tolerance classes, lead and cold-junction errors, with worked examples.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTD vs Thermocouple Explained">
+<meta name="twitter:description" content="Pt100 and Type K compared: tolerance classes, lead resistance and cold-junction compensation.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rtd-vs-thermocouple-pt100-type-k-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RTD vs Thermocouple Explained",
+      "item": "https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "RTD vs Thermocouple Explained",
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+  "description": "How Pt100 RTDs and thermocouples measure temperature, IEC 60751 and 60584 tolerance classes, lead and cold-junction errors, with worked examples.",
+  "url": "https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">RTD vs Thermocouple Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">🔌 Automation &middot; Instrumentation</span>
+    <h1>RTD vs Thermocouple Explained</h1>
+    <p class="hero-sub">A Pt100 and a Type K thermocouple both end up as a temperature on the screen, but one changes its resistance and the other generates a tiny voltage. That difference decides how each one goes wrong: lead resistance for one, cold-junction error for the other.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 60751 / IEC 60584</span></div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 760 160" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pt100 resistance rises from 100 to 138.51 ohms between 0 and 100 degrees; Type K produces about 41 microvolts per degree">
+      <line x1="0" y1="140" x2="760" y2="140" stroke="#1E3A5C" stroke-width="1"/>
+      <g font-family="IBM Plex Mono" font-size="10" fill="#8FB0B6">
+        <rect x="70" y="40" width="270" height="70" rx="8" fill="#122845" stroke="#8FD94A" stroke-width="1.5"/>
+        <text x="205" y="64" text-anchor="middle" fill="#E4C99A" font-size="12">Pt100 RTD</text>
+        <text x="205" y="84" text-anchor="middle">100.00 &#937; at 0 &#176;C</text>
+        <text x="205" y="100" text-anchor="middle">138.51 &#937; at 100 &#176;C</text>
+        <rect x="420" y="40" width="270" height="70" rx="8" fill="#122845" stroke="#8FD94A" stroke-width="1.5"/>
+        <text x="555" y="64" text-anchor="middle" fill="#E4C99A" font-size="12">Type K thermocouple</text>
+        <text x="555" y="84" text-anchor="middle">about 41 &#181;V per &#176;C</text>
+        <text x="555" y="100" text-anchor="middle">needs a cold-junction reference</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">An RTD changes resistance with temperature: a Pt100 reads 100.00 &#937; at 0 &deg;C and 138.51 &#937; at 100 &deg;C. A thermocouple generates a small voltage from the temperature difference between its two junctions.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Each has its own signature error. For RTDs it is lead resistance (about 2.6 &deg;C per ohm in a 2-wire Pt100). For thermocouples it is the cold-junction temperature, whose error passes straight into the reading.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Tolerance is a formula, not a single number: Class A Pt100 is &plusmn;(0.15 + 0.002|t|) &deg;C, and a Type K Class 2 is the larger of &plusmn;2.5 &deg;C and 0.75% of reading.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">RTDs are the accurate, stable choice at moderate temperatures. Thermocouples cover higher temperatures, with Type K rated up to about 1200 &deg;C, and are the more rugged and faster option.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Two different physical effects</h2>
+    <p>A resistance temperature detector (RTD) is a length of platinum whose resistance rises predictably with temperature. A Pt100 is defined as 100 &#937; at 0 &deg;C with a temperature coefficient of 0.00385 per degree, so the change between 0 and 100 &deg;C is 38.5 &#937;, which is about 0.385 &#937; per &deg;C near ambient.</p>
+    <p>A thermocouple is two dissimilar metal wires joined at the measuring (hot) junction. The voltage it produces depends on the difference between the hot junction and the reference (cold) junction, not on the hot junction alone. Type K (nickel-chromium / nickel-aluminium) is the industrial default, with a sensitivity of about 41 &micro;V per &deg;C; Type J gives about 52 &micro;V per &deg;C.</p>
+
+    <h2><span class="h2-dot"></span>Pt100: from temperature to resistance</h2>
+    <p>Above 0 &deg;C the IEC 60751 relationship is R(t) = R<sub>0</sub> (1 + A t + B t&sup2;), with R<sub>0</sub> = 100 &#937;, A = 3.9083&times;10<sup>&minus;3</sup> and B = &minus;5.775&times;10<sup>&minus;7</sup>. Below 0 &deg;C a cubic term is added.</p>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>R(t)</b><span>ohms</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-chip"><b>100</b><span>R<sub>0</sub> at 0 &deg;C</span></div>
+        <div class="f-op">&times;</div>
+        <div class="f-result"><b>1 + A t + B t&sup2;</b><span>0 to 850 &deg;C</span></div>
+      </div>
+    </div>
+    <div class="formula-note">Check at 100 &deg;C: 100 &times; (1 + 0.39083 &minus; 0.005775) = 138.51 &#937;. At 150 &deg;C the same equation gives 157.33 &#937;.</div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Temperature</th><th>Pt100 resistance</th></tr>
+        <tr><td>&minus;100 &deg;C</td><td>60.26 &#937;</td></tr>
+        <tr><td>0 &deg;C</td><td>100.00 &#937;</td></tr>
+        <tr><td>100 &deg;C</td><td>138.51 &#937;</td></tr>
+        <tr><td>250 &deg;C</td><td>194.10 &#937;</td></tr>
+        <tr><td>400 &deg;C</td><td>247.09 &#937;</td></tr>
+        <tr><td>600 &deg;C</td><td>313.71 &#937;</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Lead resistance: 2-, 3- and 4-wire</h2>
+    <p>The transmitter measures the whole loop, so the cable resistance is added to the sensor's. With a 2-wire connection nothing cancels it. On a Pt100 each ohm of lead resistance reads as roughly 2.6 &deg;C.</p>
+    <p>Worked example: 50 m of 1.5 mm&sup2; copper to the sensor, so 100 m of conductor in the loop. R = 0.0172 &times; 100 / 1.5 = 1.15 &#937;, which reads as about 3.0 &deg;C too high. A 3-wire connection lets the transmitter measure one lead and subtract it, so it cancels the error as long as the leads match in length and gauge, leaving a small residual. A 4-wire connection measures the sensor with separate current and sense pairs and removes lead resistance entirely, which is why it is used for calibration and high-accuracy work.</p>
+
+    <h2><span class="h2-dot"></span>RTD tolerance classes (IEC 60751)</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Class</th><th>Tolerance (&deg;C)</th><th>At 0 &deg;C</th><th>At 100 &deg;C</th><th>At 400 &deg;C</th></tr>
+        <tr><td>AA</td><td>&plusmn;(0.10 + 0.0017|t|)</td><td>&plusmn;0.10</td><td>&plusmn;0.27</td><td>&plusmn;0.78</td></tr>
+        <tr><td>A</td><td>&plusmn;(0.15 + 0.002|t|)</td><td>&plusmn;0.15</td><td>&plusmn;0.35</td><td>&plusmn;0.95</td></tr>
+        <tr><td>B</td><td>&plusmn;(0.30 + 0.005|t|)</td><td>&plusmn;0.30</td><td>&plusmn;0.80</td><td>&plusmn;2.30</td></tr>
+      </table>
+    </div>
+    <p>The classes also have validity ranges, which differ between wire-wound and film elements: for wire-wound, Class A covers &minus;100 to +450 &deg;C and Class B &minus;196 to +600 &deg;C; film elements are narrower (Class A &minus;30 to +300 &deg;C, Class B &minus;50 to +500 &deg;C). At 150 &deg;C, Class A allows &plusmn;0.45 &deg;C and Class B allows &plusmn;1.05 &deg;C. The tolerance describes the sensing element; a complete assembly, wiring and transmitter add their own error.</p>
+
+    <h2><span class="h2-dot"></span>Thermocouple tolerance classes (IEC 60584-1)</h2>
+    <p>For types K, N and J, Class 1 is &plusmn;1.5 &deg;C up to 375 &deg;C and &plusmn;0.4% of reading above; Class 2 is &plusmn;2.5 &deg;C up to 333 &deg;C and &plusmn;0.75% above. Equivalently, the larger of the fixed value and the percentage applies. Type K Class 1 is defined from &minus;40 to 1000 &deg;C and Class 2 from &minus;40 to 1200 &deg;C. The values assume a 0 &deg;C reference junction.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type K</th><th>At 400 &deg;C</th><th>At 800 &deg;C</th></tr>
+        <tr><td>Class 1: larger of &plusmn;1.5 &deg;C or 0.4%</td><td>&plusmn;1.6 &deg;C</td><td>&plusmn;3.2 &deg;C</td></tr>
+        <tr><td>Class 2: larger of &plusmn;2.5 &deg;C or 0.75%</td><td>&plusmn;3.0 &deg;C</td><td>&plusmn;6.0 &deg;C</td></tr>
+      </table>
+    </div>
+    <p>Compare a Class A Pt100 at 400 &deg;C: &plusmn;0.95 &deg;C. That gap, and the better long-term stability of an RTD, is why RTDs win wherever the temperature allows.</p>
+
+    <h2><span class="h2-dot"></span>Cold-junction compensation</h2>
+    <p>The thermocouple's voltage is the difference between the hot junction and the reference junction at the instrument terminals. Old practice held the reference in an ice bath at 0 &deg;C. Instruments now measure the terminal block temperature, usually with a thermistor or RTD, and add the equivalent voltage electronically. That is cold-junction compensation (CJC).</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div>Any error in the measured cold-junction temperature passes one for one into the reading. With a sensitivity of about 41 &micro;V/&deg;C, a 5 &deg;C error at the terminals is about 0.2 mV of error, and 5 &deg;C of temperature error on the screen.</div>
+    </div>
+    <p>Run the thermocouple wire, or compensating cable of the same type, all the way to the CJC point. Copper in between creates new junctions at the wrong places, and the instrument cannot compensate for them. The signal is also tiny (tens of microvolts per degree), so it is more exposed to noise than an RTD reading.</p>
+
+    <h2><span class="h2-dot"></span>Choosing between them</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th></th><th>Pt100 RTD</th><th>Type K thermocouple</th></tr>
+        <tr><td>Signal</td><td>Resistance, about 0.385 &#937;/&deg;C</td><td>Voltage, about 41 &micro;V/&deg;C</td></tr>
+        <tr><td>Typical range</td><td>To about 600 &deg;C for common classes</td><td>&minus;200 to about 1200 &deg;C</td></tr>
+        <tr><td>Accuracy</td><td>Class A &plusmn;0.15 &deg;C at 0 &deg;C</td><td>Class 1 &plusmn;1.5 &deg;C or 0.4%</td></tr>
+        <tr><td>Signature error</td><td>Lead resistance</td><td>Cold-junction temperature</td></tr>
+        <tr><td>Strengths</td><td>Accuracy and stability</td><td>Range, speed and ruggedness</td></tr>
+        <tr><td>Needs</td><td>3- or 4-wire for good accuracy</td><td>CJC and matched extension cable</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>2-wire Pt100 on a long run</td><td>Lead resistance reads as a steady offset of several degrees</td></tr>
+        <tr><td>Mismatched 3-wire leads</td><td>The cancellation only works if the leads match, so unequal legs leave an error</td></tr>
+        <tr><td>Copper cable on a thermocouple</td><td>It adds junctions between the sensor and the CJC point</td></tr>
+        <tr><td>Wrong thermocouple type in the instrument</td><td>The conversion table does not match the wires, so readings are consistently wrong</td></tr>
+        <tr><td>Quoting the element tolerance as system accuracy</td><td>Wiring, CJC and the transmitter add error on top</td></tr>
+        <tr><td>Specifying the tightest class everywhere</td><td>Class AA costs more and is more sensitive to installation stress, with no benefit on a loose loop</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Pt100: 100.00 &#937; at 0 &deg;C, 138.51 &#937; at 100 &deg;C, about 0.385 &#937;/&deg;C. Type K: about 41 &micro;V/&deg;C relative to the cold junction.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Use 3- or 4-wire for RTDs; in 2-wire each ohm of lead resistance is about 2.6 &deg;C.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Tolerances are formulas: Class A Pt100 &plusmn;(0.15 + 0.002|t|); Type K Class 2 the larger of &plusmn;2.5 &deg;C or 0.75%.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Cold-junction error equals reading error, so keep the thermocouple wire type all the way to the CJC.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm classes, ranges and conversion tables against the standard edition and the sensor datasheet.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=RTD%20vs%20Thermocouple%20Explained%20%E2%80%94%20Pt100%20vs%20Type%20K%2C%20tolerance%20classes%20and%20cold-junction%20error.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frtd-vs-thermocouple-pt100-type-k-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frtd-vs-thermocouple-pt100-type-k-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=RTD%20vs%20Thermocouple%20Explained&text=Pt100%20vs%20Type%20K%2C%20tolerance%20classes%20and%20cold-junction%20error.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frtd-vs-thermocouple-pt100-type-k-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=RTD%20vs%20Thermocouple%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ARTD%20vs%20Thermocouple%20Explained%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frtd-vs-thermocouple-pt100-type-k-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../automation/rtd-conversion">RTD (Pt100) Temperature &harr; Resistance &rarr;</a></li><li><a href="../automation/thermocouple-reference">Type K Thermocouple Reference &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="industrial-sensor-types-explained">Industrial Sensor Types Explained</a></li><li><a href="4-20ma-current-loop-basics">4-20mA Current Loops Explained</a></li><li><a href="signal-scaling-4-20ma-engineering-units">Signal Scaling: 4-20mA to Engineering Units</a></li><li><a href="alarm-setpoint-bands-high-highhigh-explained">Alarm Setpoint Bands Explained</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
