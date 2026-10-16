@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orifice Plate Flow Sizing Explained | Engineerz CorneR</title>
+<meta name="description" content="How an orifice plate turns differential pressure into flow: the square-root law, beta ratio, discharge coefficient and turndown, with a worked sizing example.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Orifice Plate Flow Sizing Explained">
+<meta property="og:description" content="How an orifice plate turns differential pressure into flow: the square-root law, beta ratio, discharge coefficient and turndown, with a worked sizing example.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orifice Plate Flow Sizing Explained">
+<meta name="twitter:description" content="The square-root law, beta ratio, discharge coefficient and why turndown is limited.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="orifice-plate-flow-sizing-beta-differential-pressure-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Orifice Plate Flow Sizing Explained",
+      "item": "https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Orifice Plate Flow Sizing Explained",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+  "description": "How an orifice plate turns differential pressure into flow: the square-root law, beta ratio, discharge coefficient and turndown, with a worked sizing example.",
+  "url": "https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Orifice Plate Flow Sizing Explained</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">🔌 Automation &middot; Flow</span>
+    <h1>Orifice Plate Flow Sizing Explained</h1>
+    <p class="hero-sub">An orifice plate does not measure flow. It makes a pressure drop that grows with the square of the flow, and a transmitter and an equation turn that back into a flow reading. Sizing is choosing how big that pressure drop should be.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; ISO 5167</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Flow is proportional to the square root of differential pressure. Doubling the flow needs four times the DP, and half the flow gives a quarter of the signal.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The beta ratio, bore diameter over pipe diameter, sets the trade-off: a smaller beta gives a bigger signal and more permanent pressure loss, a larger beta the opposite.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Q = Cd &times; (&pi;/4)d&sup2; &times; &radic;[2&Delta;P / (&rho;(1 &minus; &beta;&#8308;))], with Cd around 0.6 for a sharp-edged plate. For gases an expansibility factor also applies.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Because of the square-root law, accuracy falls off fast at low flow. Typical turndown for an orifice meter is only about 3:1 to 5:1.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>How an orifice plate measures flow</h2>
+    <p>An orifice plate is a thin plate with a precisely machined hole (the bore) clamped between pipe flanges. The fluid accelerates through the bore, so its pressure falls. A differential pressure (DP) transmitter measures the drop between a tapping upstream and one at or just downstream of the plate, and the flow follows from the energy balance, with a discharge coefficient Cd to cover the real behaviour of the jet.</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Q = Cd &times; (&pi;/4) d&sup2; &times; &radic;[ 2&Delta;P / ( &rho; (1 &minus; &beta;&#8308;) ) ]</strong> where &beta; = d / D. The (1 &minus; &beta;&#8308;) term is the velocity-of-approach correction for the fluid already moving in the pipe.</div>
+    </div>
+    <p>Cd for a sharp-edged plate is about 0.6 and depends on &beta;, Reynolds number and the tap arrangement. The standard (ISO 5167-2) gives Cd as an equation of those quantities, and a simple fixed 0.6 is only good for rough sizing.</p>
+
+    <h2><span class="h2-dot"></span>Worked example: flow from a bore and a DP</h2>
+    <p>Water (998 kg/m&sup3;) in a 100 mm pipe through a 50 mm bore, measuring 25 kPa, with Cd = 0.6.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+        <tr><td>Beta ratio</td><td>50 / 100</td><td>0.50</td></tr>
+        <tr><td>Bore area</td><td>&pi;/4 &times; 0.05&sup2;</td><td>19.635 &times; 10<sup>&minus;3</sup> m&sup2;</td></tr>
+        <tr><td>Velocity term</td><td>&radic;[2 &times; 25,000 / (998 &times; (1 &minus; 0.5&#8308;))]</td><td>7.31 m/s</td></tr>
+        <tr><td>Flow</td><td>0.6 &times; 1.9635 &times; 10<sup>&minus;3</sup> &times; 7.31</td><td>8.61 L/s = 31.0 m&sup3;/h</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Sizing the other way: bore for a design flow</h2>
+    <p>To size a plate, fix the flow you need to measure at its maximum and the DP you are willing to have there, then solve for the bore. For 50 m&sup3;/h of water at 40 kPa in the same 100 mm pipe, iterating the equation gives d &asymp; 55.9 mm, &beta; &asymp; 0.56. The solution cannot be written in closed form because &beta; appears inside the equation, which is why tools solve it by iteration.</p>
+    <p>The choice of design DP is a compromise. A bigger DP at full flow gives a stronger signal and better low-flow performance, but it also means more permanent pressure loss, which is lost pumping energy. In practice the design DP is chosen from the available transmitter ranges and the pressure loss the process can tolerate.</p>
+
+    <h2><span class="h2-dot"></span>Why turndown is limited</h2>
+    <p>Since DP follows the square of the flow, the signal collapses at low flow. Suppose the transmitter's error is &plusmn;0.1% of its span, and the flow range is set so full flow equals the full DP span. The flow error is roughly half the relative DP error:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Flow</th><th>DP as % of span</th><th>Approx. flow error (reading)</th></tr>
+        <tr><td>100%</td><td>100.00%</td><td>&plusmn;0.05%</td></tr>
+        <tr><td>50%</td><td>25.00%</td><td>&plusmn;0.20%</td></tr>
+        <tr><td>25%</td><td>6.25%</td><td>&plusmn;0.80%</td></tr>
+        <tr><td>10%</td><td>1.00%</td><td>&plusmn;5.00%</td></tr>
+        </table>
+    </div>
+    <p>The error stays small down to about 50% flow, then grows quickly, and at 10% flow the same transmitter gives around &plusmn;5%. That is the reason orifice meters are normally quoted with a turndown of about 3:1 to 5:1 (flow range of about 20&ndash;33% to 100%). The error values are for illustration; real uncertainty also includes the discharge coefficient, the plate condition and installation effects.</p>
+
+    <h2><span class="h2-dot"></span>Limits of the standard and of a simple calculation</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Item</th><th>Typical requirement</th></tr>
+        <tr><td>Bore</td><td>d greater than 12.5 mm</td></tr>
+        <tr><td>Pipe diameter</td><td>D between 50 mm and 1000 mm (ISO 5167-2)</td></tr>
+        <tr><td>Beta ratio</td><td>0.1 to 0.75 in the standard; 0.2 to 0.75 in normal practice</td></tr>
+        <tr><td>Reynolds number</td><td>A minimum applies, for example above 5,000 for &beta; of 0.2 to 0.45 and above 10,000 for larger &beta; (one manufacturer's limits for corner-tap plates)</td></tr>
+        <tr><td>Fluid</td><td>Single-phase, subsonic, non-pulsating flow</td></tr>
+        <tr><td>Installation</td><td>Long straight pipe upstream and downstream, with lengths depending on the fittings and &beta;</td></tr>
+      </table>
+    </div>
+    <p>Outside these limits, or for gas, steam, fiscal metering and custody transfer, use a full calculation to ISO 5167 (or AGA Report 3 for natural gas). For compressible fluids an expansibility factor below 1 corrects for the gas expanding as its pressure falls across the plate. A fixed Cd, as in the quick sizing above and in the calculator, is for preliminary work and field checks.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>Using flow-condition density incorrectly</td><td>Density must be at actual line pressure and temperature, especially for gases</td></tr>
+        <tr><td>Ignoring expansibility on gas</td><td>The calculated flow is too high when the pressure drop is significant</td></tr>
+        <tr><td>Choosing &beta; outside 0.2&ndash;0.75</td><td>The constant Cd assumption stops holding</td></tr>
+        <tr><td>Sizing the transmitter for full flow only</td><td>Low-flow operation then falls in the noisy bottom of the span</td></tr>
+        <tr><td>Worn or damaged upstream edge</td><td>Cd shifts, and the meter reads wrong with no visible fault</td></tr>
+        <tr><td>Short straight runs</td><td>Swirl and distorted profiles change the reading</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Q = Cd &times; (&pi;/4)d&sup2; &times; &radic;[2&Delta;P / (&rho;(1 &minus; &beta;&#8308;))]; flow goes with &radic;&Delta;P.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>&beta; trades signal strength against permanent pressure loss; keep it between about 0.2 and 0.75.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Turndown is limited to about 3:1 to 5:1 because DP falls as the square of the flow.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Use the full ISO 5167 or AGA-3 calculation for gas, fiscal and high-accuracy work.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm limits and Cd equations against the standard edition and the plate manufacturer.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Orifice%20Plate%20Flow%20Sizing%20Explained%20%E2%80%94%20square-root%20law%2C%20beta%20ratio%20and%20turndown.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forifice-plate-flow-sizing-beta-differential-pressure-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forifice-plate-flow-sizing-beta-differential-pressure-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Orifice%20Plate%20Flow%20Sizing%20Explained&text=Square-root%20law%2C%20beta%20ratio%20and%20turndown.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forifice-plate-flow-sizing-beta-differential-pressure-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Orifice%20Plate%20Flow%20Sizing%20Explained&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AOrifice%20Plate%20Flow%20Sizing%20Explained%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Forifice-plate-flow-sizing-beta-differential-pressure-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../automation/orifice-flow-sizing">Orifice Plate (DP Flow) Sizing &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="industrial-sensor-types-explained">Industrial Sensor Types Explained</a></li><li><a href="4-20ma-current-loop-basics">4-20mA Current Loops Explained</a></li><li><a href="pipe-flow-head-loss-reynolds-number-regime">Pipe Flow, Head Loss &amp; Reynolds Number</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
