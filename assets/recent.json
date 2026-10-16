@@ -1,5 +1,15 @@
 [
   {
+    "t": "Cable Derating Factors Worked Through",
+    "u": "posts/cable-derating-factors-worked-through-explained",
+    "d": "2026-10-16"
+  },
+  {
+    "t": "Cable Derating Factor Calculator",
+    "u": "electrical/cable-derating-calculator",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Vessel Purging and Inerting Explained",
     "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
     "d": "2026-10-15"
@@ -37,16 +47,6 @@
   {
     "t": "Engineering Sanity-Checker",
     "u": "general/sanity-checker",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Time Duration Calculator",
-    "u": "general/time-duration-calculator",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Unit Converter",
-    "u": "general/unit-converter",
     "d": "2026-10-15"
   }
 ]
