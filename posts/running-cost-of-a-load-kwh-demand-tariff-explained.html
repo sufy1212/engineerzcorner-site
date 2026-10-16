@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What a Load Really Costs to Run | Engineerz CorneR</title>
+<meta name="description" content="From nameplate kW to the electricity bill: load factor, efficiency, tiered tariffs, demand charges and marginal rate, with a worked motor example.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="What a Load Really Costs to Run">
+<meta property="og:description" content="From nameplate kW to the electricity bill: load factor, efficiency, tiered tariffs, demand charges and marginal rate, with a worked motor example.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What a Load Really Costs to Run">
+<meta name="twitter:description" content="Nameplate kW to the bill: load factor, efficiency, tiered tariffs, demand charges and marginal rate.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="running-cost-of-a-load-kwh-demand-tariff-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "What a Load Really Costs to Run", "item": "https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What a Load Really Costs to Run",
+  "datePublished": "2026-10-17",
+  "dateModified": "2026-10-17",
+  "description": "From nameplate kW to the electricity bill: load factor, efficiency, tiered tariffs, demand charges and marginal rate, with a worked motor example.",
+  "url": "https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Running Cost</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Energy</span>
+    <h1>What a Load Really Costs to Run</h1>
+    <p class="hero-sub">Nameplate kW times hours is where an estimate starts, not where it ends. The real cost depends on how hard the load actually runs, how efficient it is, and which part of the tariff the last kilowatt-hour lands in.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Energy</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Energy = input power &times; hours. Input power is shaft or output power divided by efficiency, not the nameplate rating.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Most loads run below nameplate. A load factor of 0.75 and a 93% efficient motor turn a 30 kW rating into about 24 kW drawn from the supply.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">With tiered tariffs, the rate that matters for savings is the marginal rate of the top block, not the average (effective) rate on the bill.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Demand charges, fixed fees, taxes and time-of-use periods are billed on top of energy and are not in a simple kWh &times; rate estimate.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>From nameplate to metered power</h2>
+    <p>A motor nameplate gives the rated shaft output. The utility meter sees the electrical input, which is larger because of losses, and smaller than nameplate whenever the load is below full output:</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Input kW = Rated kW &times; load factor &divide; efficiency</strong>, then <strong>kWh = input kW &times; hours</strong>.</div>
+    </div>
+    <p>Worked example: a 30 kW motor driving a pump at 75% load, with an assumed efficiency of 93% at that load (take the real figure from the motor datasheet), running 16 hours a day for 26 days a month.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+        <tr><td>Input power</td><td>30 &times; 0.75 &divide; 0.93</td><td>24.19 kW</td></tr>
+        <tr><td>Daily energy</td><td>24.19 &times; 16 h</td><td>387.1 kWh</td></tr>
+        <tr><td>Monthly energy</td><td>387.1 &times; 26 days</td><td>10,065 kWh</td></tr>
+        <tr><td>Naive nameplate estimate</td><td>30 &times; 16 &times; 26</td><td>12,480 kWh (24% too high)</td></tr>
+      </table>
+    </div>
+    <p>Using the nameplate overstates this motor's energy by about 24%. For a more accurate input, use measured current and voltage with the power factor, or a power meter, instead of assuming a load factor.</p>
+
+    <h2><span class="h2-dot"></span>Flat rate vs tiered rate</h2>
+    <p>At a flat 0.12 per kWh the month costs 10,065 &times; 0.12 = 1,207.74. A two-block tariff charges a lower rate up to a monthly limit and a higher rate above it. With the first 5,000 kWh at 0.10 and everything above at 0.14:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Block</th><th>kWh</th><th>Rate</th><th>Cost</th></tr>
+        <tr><td>Tier 1</td><td>5,000</td><td>0.10</td><td>500.00</td></tr>
+        <tr><td>Tier 2</td><td>5,065</td><td>0.14</td><td>709.03</td></tr>
+        <tr><td><b>Total</b></td><td><b>10,065</b></td><td><b>0.1201 effective</b></td><td><b>1,209.03</b></td></tr>
+      </table>
+    </div>
+    <p>The effective rate on the bill is 0.1201, but the next kWh saved or used is charged at the marginal rate of 0.14. That is the number to use when valuing an efficiency measure.</p>
+
+    <h2><span class="h2-dot"></span>Valuing a saving: use the marginal rate</h2>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>Cut 2 kW of input</b><span>2 kW &times; 16 h &times; 26 days = 832 kWh a month. At the marginal 0.14 that is 116.48 a month, or 1,398 a year.</span></div>
+      <div class="signal-card b"><b>Valued at the average rate</b><span>The same saving at 0.1201 would read as 99.95 a month, understating it while the usage sits in the top block.</span></div>
+      <div class="signal-card c"><b>Premium motor</b><span>Efficiency 93% to 95% at the same load: input falls from 24.19 to 23.68 kW, saving 212 kWh a month, 29.66 a month, 356 a year. A cost premium of 800 pays back in about 2.2 years (assumed figures).</span></div>
+    </div>
+
+    <h2><span class="h2-dot"></span>What a kWh &times; rate estimate leaves out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Item</th><th>How it is billed</th><th>Effect</th></tr>
+        <tr><td>Demand charge</td><td>Per kW of peak demand in the billing period</td><td>Depends on when the load runs, not only how long</td></tr>
+        <tr><td>Time of use</td><td>Different rates by time of day or season</td><td>Moving a load can change the rate it pays</td></tr>
+        <tr><td>Power factor</td><td>Penalty or kVA-based charges in some tariffs</td><td>Low power factor raises the bill without raising kWh</td></tr>
+        <tr><td>Fixed charges and taxes</td><td>Per month or as a percentage</td><td>Raise the cost per kWh at low usage</td></tr>
+      </table>
+    </div>
+    <p>For scale, if the tariff above also had a demand charge of 12 per kW-month and this motor's 24.2 kW were the site peak, that adds 290.32 a month, about 24% on top of the 1,209.03 energy cost. That is an illustrative rate; real values vary widely by utility and region. Power factor correction can reduce the kVA a tariff bills, as described in <a href="power-factor-correction-capacitor-banks-explained">Power Factor Correction Explained</a>.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Using nameplate kW as the running load.</strong> Most equipment runs below its rating.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Forgetting efficiency.</strong> The meter sees input power, which is higher than shaft output.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Valuing savings at the average rate.</strong> Reductions come off the top block first.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Multiplying one month by 12.</strong> Seasonal loads and tariffs make that wrong; sum the months instead.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Ignoring demand and fixed charges.</strong> They can be a large share of a small industrial bill.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Input kW = rated kW &times; load factor &divide; efficiency; kWh = input kW &times; hours.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Compute tiered bills block by block; value savings at the marginal rate.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Demand, time-of-use, power factor, fixed charges and taxes sit outside a simple kWh &times; rate estimate.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Replace assumed load factors and efficiencies with measured or datasheet values before making a decision.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm tariff details against the utility's current rate schedule.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=What%20a%20Load%20Really%20Costs%20to%20Run%20%E2%80%94%20nameplate%20kW%2C%20tariffs%20and%20the%20marginal%20rate.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frunning-cost-of-a-load-kwh-demand-tariff-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frunning-cost-of-a-load-kwh-demand-tariff-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=What%20a%20Load%20Really%20Costs%20to%20Run&text=Nameplate%20kW%2C%20tariffs%20and%20the%20marginal%20rate.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frunning-cost-of-a-load-kwh-demand-tariff-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=What%20a%20Load%20Really%20Costs%20to%20Run&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AWhat%20a%20Load%20Really%20Costs%20to%20Run%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frunning-cost-of-a-load-kwh-demand-tariff-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../electrical/energy-cost-calculator">Energy Cost / kWh Bill Estimator &rarr;</a></li><li><a href="vfd-speed-scaling-affinity-laws-energy-savings">VFD Speed Scaling &amp; Energy Savings</a></li><li><a href="power-factor-correction-capacitor-banks-explained">Power Factor Correction Explained</a></li><li><a href="motor-starting-methods-dol-star-delta-vfd-compared">Motor Starting Methods Compared</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../changelog">Changelog</a> &nbsp;&middot;&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
