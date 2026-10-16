@@ -1,5 +1,10 @@
 [
   {
+    "t": "Change Order Cost and Schedule Impact",
+    "u": "posts/change-order-cost-and-schedule-impact-explained",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Cable Derating Factors Worked Through",
     "u": "posts/cable-derating-factors-worked-through-explained",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Percentage Calculator",
     "u": "general/percentage-calculator",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Engineering Sanity-Checker",
-    "u": "general/sanity-checker",
     "d": "2026-10-15"
   }
 ]
