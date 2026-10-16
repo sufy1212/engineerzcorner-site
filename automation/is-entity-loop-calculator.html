@@ -10,19 +10,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Intrinsic Safety Entity / Loop Checker — Engineerz CorneR</title>
-<meta name="description" content="Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.">
+<meta name="description" content="Check a barrier against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable C and L, per the IEC 60079-11 entity concept.">
 <link rel="canonical" href="https://www.engineerzcorner.com/automation/is-entity-loop-calculator">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Engineerz CorneR">
 <meta property="og:title" content="Intrinsic Safety Entity / Loop Checker — Engineerz CorneR">
-<meta property="og:description" content="Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.">
+<meta property="og:description" content="Check a barrier against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable C and L, per the IEC 60079-11 entity concept.">
 <meta property="og:url" content="https://www.engineerzcorner.com/automation/is-entity-loop-calculator">
 <meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Intrinsic Safety Entity / Loop Checker — Engineerz CorneR">
-<meta name="twitter:description" content="Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.">
+<meta name="twitter:description" content="Check a barrier against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable C and L, per the IEC 60079-11 entity concept.">
 <meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-automation.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
   "name": "Intrinsic Safety Entity / Loop Checker",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (runs in browser)",
-  "description": "Check a barrier or isolator against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable capacitance and inductance, per the IEC 60079-11 entity concept.",
+  "description": "Check a barrier against a field device's entity parameters (Voc/Isc/Ca/La vs Vmax/Imax/Ci/Li) plus cable C and L, per the IEC 60079-11 entity concept.",
   "url": "https://www.engineerzcorner.com/automation/is-entity-loop-calculator",
   "offers": {
     "@type": "Offer",
@@ -121,6 +121,7 @@
     <a href="sil-verification-calculator">AT.20 SIL Verification</a>
   </div>
   <div class="intro">The entity concept (IEC 60079-11 / ANSI-ISA 60079-11) lets you mix certified barriers/isolators and field devices from different manufacturers without a system-level test, as long as the nameplate parameters clear four checks: the barrier's maximum fault voltage and current must not exceed what the field device can accept, and the barrier's allowable external capacitance and inductance must cover the field device's own values plus whatever the cable adds. Enter the datasheet values below to check a specific loop.</div>
+  <div class="further-reading-link" style="margin:0 0 16px;"><a href="../posts/intrinsic-safety-entity-parameters-explained" style="font-size:12.5px;color:var(--amber-deep);text-decoration:none;font-weight:600;">&#128214; Read: the five entity checks, cable limits and the combined L and C rule &rarr;</a></div>
   <div role="status" aria-live="polite" class="validation-banner neutral" id="isValidation"><span class="vdot"></span><span>Calculating…</span></div>
 
   <div class="step">
@@ -212,7 +213,7 @@
     <details>
       <summary>How this is calculated</summary>
       <div class="formula-note">Voc &le; Vmax &nbsp;&middot;&nbsp; Isc &le; Imax &nbsp;&middot;&nbsp; Ci + C&#99;able &le; Ca &nbsp;&middot;&nbsp; Li + Lcable &le; La &nbsp;&middot;&nbsp; (Po &le; Pmax, if given)</div>
-      <div class="hint" style="margin-top:8px;">This checks the standard IEC 60079-11 entity-concept relationships only. It does not replace a full system loop certification, does not evaluate FISCO/FNICO fieldbus rules (which use different, model-specific limits), and does not account for multiple field devices sharing one barrier, multi-core/multi-pair cable capacitance coupling between cores, or the hazardous-area gas group and temperature class the parameters were certified for — all of which must also be verified against the equipment's certificates before a loop is installed.</div>
+      <div class="hint" style="margin-top:8px;">This checks the standard IEC 60079-11 entity-concept relationships only. It does not replace a full system loop certification, does not evaluate FISCO/FNICO fieldbus rules (which use different, model-specific limits), and does not apply the combined L and C reduction (commonly 50% of Co and Lo when the external Ci and Li both exceed 1% of Co and Lo) that some control drawings require, does not account for multiple field devices sharing one barrier, multi-core/multi-pair cable capacitance coupling between cores, or the hazardous-area gas group and temperature class the parameters were certified for — all of which must also be verified against the equipment's certificates before a loop is installed.</div>
     </details>
   </div>
   <footer>Entity-parameter screening check only — final intrinsic safety loop approval requires the certified apparatus documentation (control drawings, certificates) for the specific gas group and temperature class.</footer>
