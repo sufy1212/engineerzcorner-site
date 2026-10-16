@@ -1,5 +1,10 @@
 [
   {
+    "t": "Relay Coil Current and Flyback Protection",
+    "u": "posts/relay-coil-current-duty-cycle-flyback-protection-explained",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Energy Cost / kWh Bill Estimator",
     "u": "electrical/energy-cost-calculator",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Cable Derating Factors Worked Through",
     "u": "posts/cable-derating-factors-worked-through-explained",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Cable Derating Factor Calculator",
-    "u": "electrical/cable-derating-calculator",
     "d": "2026-10-16"
   }
 ]
