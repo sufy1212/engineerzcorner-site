@@ -251,7 +251,7 @@
       <li><b>Harmonic derating for the neutral conductor</b> on circuits with significant triplen harmonic content (common with certain nonlinear loads), where neutral current can actually exceed phase current rather than the near-zero level assumed in a balanced linear-load design — this can require a full-sized neutral conductor to be treated as an additional loaded conductor for grouping purposes, rather than ignored.</li>
     </ol>
     <div class="hint" style="margin:0 16px 0;">
-      All applicable factors multiply together, not add — a 0.87 ambient factor and a 0.80 grouping factor together give 0.696, not a combined "13% + 20% = 33%" reduction. Applying factors additively instead of multiplicatively is a common hand-calculation error that quietly under-derates a cable.
+      All applicable factors multiply together, not add — a 0.87 ambient factor and a 0.80 grouping factor together give 0.696, not a combined "13% + 20% = 33%" reduction. Applying factors additively instead of multiplicatively is a common hand-calculation error: it gives a lower combined factor than the true product (0.67 instead of 0.696 here), so it over-derates and oversizes the cable, and the gap widens as the factors get smaller. The unsafe mistake is the opposite one, applying only the worst factor and ignoring the others.
     </div>
   </div>
   <div class="step" id="g-selectivity">
