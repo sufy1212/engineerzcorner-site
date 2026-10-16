@@ -1,5 +1,10 @@
 [
   {
+    "t": "Resource Loading and Utilization",
+    "u": "posts/resource-loading-utilization-leveling-vs-smoothing-explained",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Change Order Impact Calculator",
     "u": "pm/change-order-impact-calculator",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Markup, Margin & % Change",
     "u": "general/markup-margin",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Password Generator",
-    "u": "general/password-generator",
     "d": "2026-10-15"
   }
 ]
