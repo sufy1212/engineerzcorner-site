@@ -28,6 +28,13 @@
   "a": "updated"
  },
  {
+  "t": "Change Order Impact Calculator",
+  "u": "pm/change-order-impact-calculator",
+  "d": "2026-10-16",
+  "c": "Project Management",
+  "a": "updated"
+ },
+ {
   "t": "Vessel Purging and Inerting Explained",
   "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
   "d": "2026-10-15",
@@ -835,13 +842,6 @@
  {
   "t": "Meeting Cost Calculator",
   "u": "pm/meeting-cost-calculator",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
-  "t": "Change Order Impact Calculator",
-  "u": "pm/change-order-impact-calculator",
   "d": "2026-10-05",
   "c": "Project Management",
   "a": "updated"

@@ -1,5 +1,10 @@
 [
   {
+    "t": "Change Order Impact Calculator",
+    "u": "pm/change-order-impact-calculator",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Change Order Cost and Schedule Impact",
     "u": "posts/change-order-cost-and-schedule-impact-explained",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Password Generator",
     "u": "general/password-generator",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Percentage Calculator",
-    "u": "general/percentage-calculator",
     "d": "2026-10-15"
   }
 ]
