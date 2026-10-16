@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Order Cost and Schedule Impact | Engineerz CorneR</title>
+<meta name="description" content="How to price a change order, why only approved changes move the baseline, and when extra work earns time: critical path and float, with worked examples.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Change Order Cost and Schedule Impact">
+<meta property="og:description" content="How to price a change order, why only approved changes move the baseline, and when extra work earns time: critical path and float, with worked examples.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Change Order Cost and Schedule Impact">
+<meta name="twitter:description" content="Pricing a change order, the approved-only baseline and when a change earns a time extension.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="change-order-cost-and-schedule-impact-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Change Order Cost and Schedule Impact",
+      "item": "https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Change Order Cost and Schedule Impact",
+  "description": "How to price a change order, why only approved changes move the baseline, and when extra work earns time: critical path and float, with worked examples.",
+  "url": "https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Change Order Cost and Schedule Impact</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">📊 Project Management &middot; Contracts</span>
+    <h1>Change Order Cost and Schedule Impact</h1>
+    <p class="hero-sub">A change order has two prices: the money for the changed work and the time it takes. They are worked out separately, approved separately in effect, and only an approved change moves the contract baseline.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Project Management</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Price = direct cost of the changed work plus the overhead and profit the contract allows. Use the contract's method, because the order of the markups changes the number.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Only approved change orders move the contract value and the completion date. Pending ones are exposure, and rejected ones are history.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Extra work earns a time extension only if it delays completion. A change that uses up float without reaching the critical path moves nothing.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A 20% markup on cost is a 16.7% margin on price. The two are not the same number, and mixing them up shorts the price.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Pricing the changed work</h2>
+    <p>A change order is a written agreement that modifies the original contract. Its price starts from the direct cost the change causes: labour, materials, equipment and subcontractors. Contract-specified overhead and profit go on top. Pricing guidance consistently makes two points: charge for a cost only when the change causes it and the contract allows it, and apply the markup method the contract states, because where it is silent each side will argue for its own.</p>
+    <div class="example-box">
+      <h3>Example: added feeders</h3>
+      <div class="result-line"><span>Labour: 120 h &times; $65</span><b>7,800</b></div>
+      <div class="result-line"><span>Materials</span><b>9,500</b></div>
+      <div class="result-line"><span>Equipment hire</span><b>1,200</b></div>
+      <div class="result-line"><span>Direct cost</span><b>18,500</b></div>
+      <div class="result-line"><span>12% combined overhead and profit</span><b>2,220</b></div>
+      <div class="result-line"><span>Change order price</span><b>20,720</b></div>
+    </div>
+    <p>If the contract instead defines 8% overhead on direct cost, then 4% profit on direct cost plus overhead, the same job prices as 18,500 + 1,480 + 799.20 = 20,779.20. The two methods differ by 59.20 here, which is why the sequence in the contract language matters. Include the impact costs the change really causes, such as remobilisation or extra supervision, and keep them separate from items already covered by the overhead percentage, so nothing is counted twice.</p>
+
+    <h2><span class="h2-dot"></span>Markup is not margin</h2>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>Markup</b><span>(price &minus; cost) / cost</span></div>
+        <div class="f-op">&ne;</div>
+        <div class="f-result"><b>Margin</b><span>(price &minus; cost) / price</span></div>
+      </div>
+    </div>
+    <p>A contract that allows a 20% markup on change cost gives a margin of 0.20 / 1.20 = 16.67% of the price, and it covers overhead as well as profit, so none of it is pure profit. To end up with a 20% margin you need a 25% markup. The detail is in <a href="markup-vs-margin-explained">Markup vs Margin Explained</a>.</p>
+
+    <h2><span class="h2-dot"></span>Only approved changes move the baseline</h2>
+    <p>Until a change is formally agreed, it is a proposal or a claim. Keeping three lists, approved, pending and rejected, shows committed impact separately from what is still being negotiated. Here is a log on a 5,000,000 contract with a 180-day schedule:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Change order</th><th>Cost</th><th>Days</th><th>Status</th></tr>
+        <tr><td>CO-1 Added feeders</td><td>+20,720</td><td>+5</td><td>Approved</td></tr>
+        <tr><td>CO-2 Scope reduction</td><td>-35,000</td><td>+0</td><td>Approved</td></tr>
+        <tr><td>CO-3 Added lab fit-out</td><td>+64,000</td><td>+12</td><td>Pending</td></tr>
+        <tr><td>CO-4 Alternate finish</td><td>+15,000</td><td>+3</td><td>Rejected</td></tr>
+        </table>
+    </div>
+    <div class="rule-box">
+      <b>Revised contract = original + approved changes only</b>
+      <span>Approved cost: -14,280 so revised value 4,985,720. Approved days: +5 so revised schedule 185 days. Pending exposure: +64,000 and +12 days, which would take the contract to 5,049,720 and 197 days if approved. Pending is 1.3% of the revised value.</span>
+    </div>
+    <p>This is the same arithmetic as the <a href="../pm/change-order-impact-calculator">change order impact calculator</a>. Treating a submitted change as if it were agreed hides real budget and schedule exposure until it is too late to react. Negative values are valid: a scope reduction or a schedule pull-in lowers the totals, as CO-2 does here.</p>
+
+    <h2><span class="h2-dot"></span>When extra work earns extra time</h2>
+    <p>Additional duration of work is not automatically additional contract time. In critical path terms the completion date only moves if the change delays the critical path. A change on a path with float first uses the float. A change that merely consumes float on a non-critical path does not entitle anyone to a time extension, and concurrent delay (a client-caused change and a contractor-caused delay hitting the critical path together) needs separate treatment under the contract.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Activity affected</th><th>Total float</th><th>Added duration</th><th>Completion delay</th></tr>
+        <tr><td>Non-critical task</td><td>10 days</td><td>8 days</td><td>0 days (2 days of float left)</td></tr>
+        <tr><td>Non-critical task</td><td>10 days</td><td>14 days</td><td>4 days</td></tr>
+        <tr><td>Critical task</td><td>0 days</td><td>8 days</td><td>8 days</td></tr>
+      </table>
+    </div>
+    <p>To prove it, show the change inserted into the current schedule, usually as a time impact analysis, with the updated critical path. If no current CPM schedule is kept, the argument becomes one expert's opinion against another's. The method is explained in <a href="critical-path-method-cpm-explained">Critical Path Method Explained</a>.</p>
+
+    <h2><span class="h2-dot"></span>Protecting the claim</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Read how the contract treats cumulative impact. Many forms include waivers, which makes the change order the one chance to price all related impacts.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Where the work must proceed before price is agreed (under a change directive, for example), send written notice reserving rights to cost, time and markup.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Be aware that in some jurisdictions an agreed overhead markup on a change has been held to cover overhead for the delay it causes. Whether that applies depends on the contract and the law, so take advice before relying on a separate delay claim.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>Pricing only the new work</td><td>Remobilisation, rework and extra supervision caused by the change are left out</td></tr>
+        <tr><td>Counting pending changes in the revised value</td><td>The budget looks settled when it is not</td></tr>
+        <tr><td>Asking for time on every change</td><td>Time is only due when the critical path is delayed</td></tr>
+        <tr><td>Mixing markup and margin</td><td>A 20% markup is not a 20% margin</td></tr>
+        <tr><td>Applying overhead and profit in the wrong order</td><td>The contract's sequence can change the total</td></tr>
+        <tr><td>No schedule evidence</td><td>The time claim cannot be demonstrated</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Change order price = direct cost + contract-allowed overhead and profit, using the contract's own method.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Revised contract value and schedule include approved changes only; track pending exposure on its own.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Time follows the critical path: work on a non-critical path that stays within float earns no extension.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>20% markup = 16.67% margin; 20% margin needs a 25% markup.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm all entitlements and notice requirements against your contract and applicable law.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Change%20Order%20Cost%20and%20Schedule%20Impact%20%E2%80%94%20pricing%20a%20change%20order%20and%20when%20it%20earns%20time.&amp;url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fchange-order-cost-and-schedule-impact-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fchange-order-cost-and-schedule-impact-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&amp;title=Change%20Order%20Cost%20and%20Schedule%20Impact&amp;text=Pricing%20a%20change%20order%20and%20when%20it%20earns%20time.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fchange-order-cost-and-schedule-impact-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Change%20Order%20Cost%20and%20Schedule%20Impact&amp;body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AChange%20Order%20Cost%20and%20Schedule%20Impact%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fchange-order-cost-and-schedule-impact-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Keep reading</p>
+    <ul>
+      <li><a href="contingency-vs-management-reserve-project-budget-explained">Contingency vs Management Reserve &rarr;</a></li>
+      <li><a href="critical-path-method-cpm-explained">Critical Path Method Explained &rarr;</a></li>
+      <li><a href="markup-vs-margin-explained">Markup vs Margin Explained &rarr;</a></li>
+    </ul>
+    <p class="post-related-label">Try the tool</p>
+    <ul><li><a href="../pm/change-order-impact-calculator">Change Order Impact Calculator &rarr;</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
