@@ -70,6 +70,13 @@
   "a": "updated"
  },
  {
+  "t": "Energy Cost / kWh Bill Estimator",
+  "u": "electrical/energy-cost-calculator",
+  "d": "2026-10-16",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
   "t": "Vessel Purging and Inerting Explained",
   "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
   "d": "2026-10-15",
@@ -506,13 +513,6 @@
  {
   "t": "Earthing Rod Resistance",
   "u": "electrical/earthing-rod-resistance",
-  "d": "2026-10-05",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Energy Cost / kWh Bill Estimator",
-  "u": "electrical/energy-cost-calculator",
   "d": "2026-10-05",
   "c": "Electrical",
   "a": "updated"

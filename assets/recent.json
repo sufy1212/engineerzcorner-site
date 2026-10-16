@@ -1,5 +1,10 @@
 [
   {
+    "t": "Energy Cost / kWh Bill Estimator",
+    "u": "electrical/energy-cost-calculator",
+    "d": "2026-10-16"
+  },
+  {
     "t": "What a Load Really Costs to Run",
     "u": "posts/running-cost-of-a-load-kwh-demand-tariff-explained",
     "d": "2026-10-16"
@@ -43,10 +48,5 @@
     "t": "Cable Derating Factor Calculator",
     "u": "electrical/cable-derating-calculator",
     "d": "2026-10-16"
-  },
-  {
-    "t": "Vessel Purging and Inerting Explained",
-    "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
-    "d": "2026-10-15"
   }
 ]
