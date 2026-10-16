@@ -1,5 +1,10 @@
 [
   {
+    "t": "Intrinsic Safety Entity / Loop Checker",
+    "u": "automation/is-entity-loop-calculator",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Intrinsic Safety Entity Parameters",
     "u": "posts/intrinsic-safety-entity-parameters-explained",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Fractions to Decimals Explained",
     "u": "posts/tape-measure-fractions-to-decimals-explained",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Number Base Converter",
-    "u": "general/base-converter",
     "d": "2026-10-15"
   }
 ]

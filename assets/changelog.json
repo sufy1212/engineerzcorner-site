@@ -56,6 +56,13 @@
   "a": "updated"
  },
  {
+  "t": "Intrinsic Safety Entity / Loop Checker",
+  "u": "automation/is-entity-loop-calculator",
+  "d": "2026-10-16",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
   "t": "Vessel Purging and Inerting Explained",
   "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
   "d": "2026-10-15",
@@ -243,13 +250,6 @@
   "d": "2026-10-12",
   "c": "Blog",
   "a": "added"
- },
- {
-  "t": "Intrinsic Safety Entity / Loop Checker",
-  "u": "automation/is-entity-loop-calculator",
-  "d": "2026-10-05",
-  "c": "Automation",
-  "a": "updated"
  },
  {
   "t": "SIL Verification (PFDavg) Calculator",
