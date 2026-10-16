@@ -1,5 +1,10 @@
 [
   {
+    "t": "What a Load Really Costs to Run",
+    "u": "posts/running-cost-of-a-load-kwh-demand-tariff-explained",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Intrinsic Safety Entity / Loop Checker",
     "u": "automation/is-entity-loop-calculator",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Vessel Purging and Inerting Explained",
     "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Fractions to Decimals Explained",
-    "u": "posts/tape-measure-fractions-to-decimals-explained",
     "d": "2026-10-15"
   }
 ]
