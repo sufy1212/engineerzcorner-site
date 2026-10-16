@@ -1,5 +1,15 @@
 [
   {
+    "t": "Intrinsic Safety Entity Parameters",
+    "u": "posts/intrinsic-safety-entity-parameters-explained",
+    "d": "2026-10-16"
+  },
+  {
+    "t": "Resource Loading & Utilization Calculator",
+    "u": "pm/resource-loading-calculator",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Resource Loading and Utilization",
     "u": "posts/resource-loading-utilization-leveling-vs-smoothing-explained",
     "d": "2026-10-16"
@@ -37,16 +47,6 @@
   {
     "t": "Number Base Converter",
     "u": "general/base-converter",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Fraction ↔ Decimal (Feet-Inches)",
-    "u": "general/fraction-decimal",
-    "d": "2026-10-15"
-  },
-  {
-    "t": "Markup, Margin & % Change",
-    "u": "general/markup-margin",
     "d": "2026-10-15"
   }
 ]
