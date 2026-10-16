@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1930'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%233EC6E0'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cable Derating Factors Worked Through | Engineerz CorneR</title>
+<meta name="description" content="How ambient and grouping factors multiply into one derating factor, the square-root rule for temperature, and a worked cable selection with the In and Iz check.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Cable Derating Factors Worked Through">
+<meta property="og:description" content="How ambient and grouping factors multiply into one derating factor, the square-root rule for temperature, and a worked cable selection with the In and Iz check.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cable Derating Factors Worked Through">
+<meta name="twitter:description" content="Ambient and grouping factors multiplied, the temperature rule and a worked cable selection.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cable-derating-factors-worked-through-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.engineerzcorner.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Posts", "item": "https://www.engineerzcorner.com/posts/" },
+    { "@type": "ListItem", "position": 3, "name": "Cable Derating Factors Worked Through", "item": "https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cable Derating Factors Worked Through",
+  "datePublished": "2026-10-16",
+  "dateModified": "2026-10-16",
+  "description": "How ambient and grouping factors multiply into one derating factor, the square-root rule for temperature, and a worked cable selection with the In and Iz check.",
+  "url": "https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained",
+  "author": { "@type": "Organization", "name": "Engineerz CorneR" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": { "@type": "ImageObject", "url": "https://www.engineerzcorner.com/og-image.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained" }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Cable Derating</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Cables</span>
+    <h1>Cable Derating Factors Worked Through</h1>
+    <p class="hero-sub">The ampacity in the table is for one cable in one reference condition. Heat from the room and from neighbouring cables take some of it away, and the factors that account for that multiply, they do not add.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; IEC 60364-5-52</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Tabulated ampacity assumes a reference condition, 30 &deg;C ambient for cables in air. A hotter room or a grouped run lowers the current the cable can carry.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">The ambient factor follows Ca = &radic;[(T<sub>max</sub> &minus; T<sub>amb</sub>) / (T<sub>max</sub> &minus; 30)], which reproduces the standard table to two decimals above 30 &deg;C.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Factors multiply: 0.91 &times; 0.65 = 0.59. Applying only the worst factor, or adding the reductions, gives the wrong answer.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Choose the cable so its tabulated current is at least In divided by the combined factor, then check Ib &le; In &le; Iz.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Why a cable has to be derated</h2>
+    <p>A conductor's current rating is set by how hot the insulation may get: 70 &deg;C for PVC, 90 &deg;C for XLPE. The current heats the conductor, and the heat has to flow out to the surroundings. If the surroundings are already warm, or other cables are heating the same space, less temperature rise is available, so the permitted current falls. The tabulated ampacity is for a defined reference condition, and every departure from it gets a correction factor.</p>
+
+    <h2><span class="h2-dot"></span>Ambient temperature factor</h2>
+    <p>The heat a cable can shed is proportional to its temperature rise above ambient, and the heating is proportional to I&sup2;R. A cable running at its maximum conductor temperature in a hotter room has a smaller rise available, so the permitted current scales with the square root of the ratio of rises:</p>
+    <div class="info-strip">
+      <div class="dot"></div>
+      <div><strong>Ca = &radic;[ (T<sub>max</sub> &minus; T<sub>amb</sub>) / (T<sub>max</sub> &minus; T<sub>ref</sub>) ]</strong> with T<sub>ref</sub> = 30 &deg;C for cables in air.</div>
+    </div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Ambient</th><th>PVC (70 &deg;C)</th><th>XLPE (90 &deg;C)</th></tr>
+        <tr><td>30 &deg;C</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>35 &deg;C</td><td>0.94</td><td>0.96</td></tr>
+        <tr><td>40 &deg;C</td><td>0.87</td><td>0.91</td></tr>
+        <tr><td>45 &deg;C</td><td>0.79</td><td>0.87</td></tr>
+        <tr><td>50 &deg;C</td><td>0.71</td><td>0.82</td></tr>
+        </table>
+    </div>
+    <p>These match the IEC 60364-5-52 correction table at 35, 40, 45 and 50 &deg;C (for example 0.87 and 0.91 at 40 &deg;C). Below 30 &deg;C the table values are slightly smoothed, so read them from the standard rather than the formula. XLPE loses less because it has more temperature headroom above 30 &deg;C.</p>
+
+    <h2><span class="h2-dot"></span>Grouping factor</h2>
+    <p>Cables run together each heat the others. For circuits bunched or enclosed in air, the reduction factors in IEC 60364-5-52 depend on the number of circuits or multicore cables:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Circuits</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>9</th><th>12</th><th>16</th><th>20</th></tr>
+        <tr><td>Factor</td><td>1.00</td><td>0.80</td><td>0.70</td><td>0.65</td><td>0.60</td><td>0.57</td><td>0.50</td><td>0.45</td><td>0.41</td><td>0.38</td></tr>
+      </table>
+    </div>
+    <p>These are for the bunched case. Spaced, single-layer arrangements on trays or ladders have their own, less severe factors, and ducts in the ground have separate tables. The factors assume a uniform group of equally sized, equally loaded cables, and they do not apply to multilayer groups; for multilayer routing you need a calculation method, not a table lookup.</p>
+
+    <h2><span class="h2-dot"></span>Combine them by multiplying</h2>
+    <p>Each correction acts on the same temperature rise, so the effects compound. The combined factor is the product of every applicable factor, including soil resistivity, burial depth or harmonic loading where those apply.</p>
+    <div class="signal-grid">
+      <div class="signal-card a"><b>Multiply</b><span>0.91 &times; 0.65 = 0.5915. This is the correct combined factor.</span></div>
+      <div class="signal-card b"><b>Adding reductions</b><span>1 &minus; 0.09 &minus; 0.35 = 0.56. Lower than the product, so it over-derates and oversizes the cable.</span></div>
+      <div class="signal-card c"><b>Worst factor only</b><span>0.65 ignores the ambient effect and under-derates, which is the unsafe mistake.</span></div>
+    </div>
+    <p>A smaller case shows the same pattern: 0.87 &times; 0.80 = 0.696, while adding the reductions (13% and 20%) gives 0.67. Both shortcuts are wrong, but only ignoring a factor leaves the cable running hotter than designed.</p>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>A circuit with design current Ib = 95 A is protected by a 100 A breaker (In). It is wired in XLPE multicore cable on a perforated tray, in a 40 &deg;C ambient, bunched with three other circuits (four circuits in all).</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+        <tr><td>Ambient factor, XLPE at 40 &deg;C</td><td>&radic;[(90 &minus; 40) / (90 &minus; 30)]</td><td>0.91</td></tr>
+        <tr><td>Grouping factor, 4 circuits</td><td>From the table</td><td>0.65</td></tr>
+        <tr><td>Combined factor</td><td>0.91 &times; 0.65</td><td>0.592</td></tr>
+        <tr><td>Required tabulated current</td><td>In / combined = 100 / 0.592</td><td>&ge; 169 A</td></tr>
+        <tr><td>Check: derated Iz &ge; In &ge; Ib</td><td>Choose the first size whose tabulated current is at least 169 A, then Iz = tabulated &times; 0.592</td><td>Iz &ge; 100 A &ge; 95 A</td></tr>
+      </table>
+    </div>
+    <p>The same circuit in PVC needs more: Ca = 0.87, so the combined factor is 0.87 &times; 0.65 = 0.566 and the tabulated current must be at least 177 A, about 5% more than XLPE. The tabulated value comes from your cable table for the installation method; nothing in this calculation replaces that lookup.</p>
+
+    <h2><span class="h2-dot"></span>The protection check</h2>
+    <p>The conditions in IEC 60364-4-43 for overload protection are Ib &le; In &le; Iz and I&#8322; &le; 1.45 Iz, where I&#8322; is the current that makes the device operate within its conventional time. For circuit breakers I&#8322; is 1.45 In, so once In &le; Iz is satisfied the second condition holds too. Iz here is the derated current-carrying capacity of the cable in its actual installation, which is why the factors matter: selecting the cable from the underated table can leave In above the real Iz.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <ul class="checklist">
+      <li><span class="ck-mark">&#10003;</span><span><strong>Using the grouping factor from the wrong arrangement.</strong> Bunched, single-layer and buried-duct tables differ widely.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Counting circuits wrongly.</strong> The table works in circuits or multicore cables, and a three-phase circuit of single-core cables counts as one circuit.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Forgetting the neutral.</strong> With heavy harmonic loads the neutral carries current and may have to be counted as a loaded conductor.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Taking the reference ambient from the wrong table.</strong> 30 &deg;C is the air reference; buried cables use a 20 &deg;C ground reference.</span></li>
+      <li><span class="ck-mark">&#10003;</span><span><strong>Stopping at current capacity.</strong> Voltage drop and fault withstand are separate checks on the same cable.</span></li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Ca = &radic;[(T<sub>max</sub> &minus; T<sub>amb</sub>) / (T<sub>max</sub> &minus; 30)]: 0.87 (PVC) and 0.91 (XLPE) at 40 &deg;C.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Bunched grouping factors fall from 0.80 for two circuits to 0.38 for twenty.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Multiply every applicable factor; adding over-derates, and using only one under-derates.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Required tabulated current = In / combined factor, and then check Ib &le; In &le; Iz.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Take final factors from IEC 60364-5-52 or your cable datasheet for the exact installation method.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Cable%20Derating%20Factors%20Worked%20Through%20%E2%80%94%20ambient%20and%20grouping%20factors%20and%20a%20worked%20selection.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-derating-factors-worked-through-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-derating-factors-worked-through-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Cable%20Derating%20Factors%20Worked%20Through&text=Ambient%20and%20grouping%20factors%20and%20a%20worked%20selection.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-derating-factors-worked-through-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Cable%20Derating%20Factors%20Worked%20Through&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACable%20Derating%20Factors%20Worked%20Through%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-derating-factors-worked-through-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../electrical/cable-derating-calculator">Cable Derating Factor Calculator &rarr;</a></li><li><a href="../electrical/cable-sizing-calculator">Cable Sizing Calculator &rarr;</a></li><li><a href="cable-size-current-capacity-guide">Cable Size &amp; Current Capacity Guide</a></li><li><a href="voltage-drop-lv-feeders-explained">Voltage Drop in LV Feeders Explained</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../changelog">Changelog</a> &nbsp;&middot;&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
