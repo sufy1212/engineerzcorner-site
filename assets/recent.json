@@ -1,5 +1,20 @@
 [
   {
+    "t": "Orifice Plate Flow Sizing Explained",
+    "u": "posts/orifice-plate-flow-sizing-beta-differential-pressure-explained",
+    "d": "2026-10-16"
+  },
+  {
+    "t": "Orifice Plate (DP Flow) Sizing",
+    "u": "automation/orifice-flow-sizing",
+    "d": "2026-10-16"
+  },
+  {
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-10-16"
+  },
+  {
     "t": "Relay Coil Current and Flyback Protection",
     "u": "posts/relay-coil-current-duty-cycle-flyback-protection-explained",
     "d": "2026-10-16"
@@ -32,21 +47,6 @@
   {
     "t": "Resource Loading and Utilization",
     "u": "posts/resource-loading-utilization-leveling-vs-smoothing-explained",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Change Order Impact Calculator",
-    "u": "pm/change-order-impact-calculator",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Change Order Cost and Schedule Impact",
-    "u": "posts/change-order-cost-and-schedule-impact-explained",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Cable Derating Factors Worked Through",
-    "u": "posts/cable-derating-factors-worked-through-explained",
     "d": "2026-10-16"
   }
 ]
