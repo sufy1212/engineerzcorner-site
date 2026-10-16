@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relay Coil Current and Flyback Protection | Engineerz CorneR</title>
+<meta name="description" content="Relay coil current and power from V/R, duty cycle, hot-coil resistance, and flyback diode options with their effect on dropout time and switch voltage.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Relay Coil Current and Flyback Protection">
+<meta property="og:description" content="Relay coil current and power from V/R, duty cycle, hot-coil resistance, and flyback diode options with their effect on dropout time and switch voltage.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Relay Coil Current and Flyback Protection">
+<meta name="twitter:description" content="Coil current, duty cycle and the flyback diode trade-off between spike clamping and release time.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="relay-coil-current-duty-cycle-flyback-protection-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Relay Coil Current and Flyback Protection",
+      "item": "https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Relay Coil Current and Flyback Protection",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+  "description": "Relay coil current and power from V/R, duty cycle, hot-coil resistance, and flyback diode options with their effect on dropout time and switch voltage.",
+  "url": "https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Relay Coil Current and Flyback Protection</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">🔌 Automation &middot; Control Circuits</span>
+    <h1>Relay Coil Current and Flyback Protection</h1>
+    <p class="hero-sub">A relay coil is a resistor while it is on and an inductor when it turns off. Sizing the driver means knowing the first, and protecting the switch means dealing with the second.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Control Circuits</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">In steady state a DC coil is a resistor: I = V / R and P = V&sup2; / R. Add up the coil currents on one output card or supply.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Copper coil resistance rises with temperature, so a hot coil draws less current at the same voltage and needs a higher voltage to pick up.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Turning a DC coil off makes a voltage spike. A flyback diode clamps it to about 0.7&ndash;1.5 V, but it slows contact release.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">AC coils draw a much higher current while pulling in than while sealed, which the simple V/R calculation does not capture.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>Coil current and power</h2>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>I</b><span>V &divide; R</span></div>
+        <div class="f-op">&amp;</div>
+        <div class="f-result"><b>P</b><span>V&sup2; &divide; R</span></div>
+      </div>
+    </div>
+    <p>Worked example: a 24 V DC coil with a 600 &#937; winding resistance draws I = 24 / 600 = 40 mA and dissipates P = 24&sup2; / 600 = 0.96 W. The load on a PLC output point, an interposing relay driver or a 24 V supply is the sum of the coil currents that can be on together, so ten of these coils need 0.4 A. Compare it with the output point's rated current and the supply rating on their datasheets.</p>
+
+    <h2><span class="h2-dot"></span>Voltage and temperature change the answer</h2>
+    <p>The coil is copper wire, and copper's resistance rises by about 0.39% per &deg;C: R(T) = R<sub>20</sub> &times; [1 + 0.00393 &times; (T &minus; 20)]. A coil that heats from 20 &deg;C to 70 &deg;C, from its own dissipation and ambient temperature, goes from 600 to 718 &#937;, a 20% increase.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Condition</th><th>Resistance</th><th>Current</th><th>Power</th></tr>
+        <tr><td>24 V, 20 &deg;C coil</td><td>600 &#937;</td><td>40.0 mA</td><td>0.96 W</td></tr>
+        <tr><td>24 V, coil at 70 &deg;C</td><td>718 &#937;</td><td>33.4 mA</td><td>0.80 W</td></tr>
+        <tr><td>21.6 V (&minus;10% supply), 20 &deg;C</td><td>600 &#937;</td><td>36.0 mA</td><td>0.78 W</td></tr>
+      </table>
+    </div>
+    <p>Less current in a hot coil also means less magnetic force for the same voltage, so the voltage needed to pull in the relay rises as the coil warms. Datasheets state pick-up and drop-out voltages at a reference temperature, and the worst case for reliable pick-up is a hot coil on a low supply. Coil resistance is also specified with a tolerance, commonly around &plusmn;10%, so use the datasheet range, not a single value.</p>
+
+    <h2><span class="h2-dot"></span>Duty cycle and heating</h2>
+    <p>A coil rated for continuous duty can stay energised indefinitely. Some contactor coils are rated intermittent, with a maximum on-time or duty percentage, which must not be exceeded. Duty cycle is on-time divided by the cycle period:</p>
+    <p>For a coil energised 12 s in every 60 s: duty = 12 / 60 = 20%, that is 720 s (12 min) energised per hour, and the time-weighted average power is 0.96 &times; 0.20 = 0.192 W. Average power is useful for sizing a supply or transformer. Heating of the coil itself depends on the power while it is on and on how well it sheds heat, so a short duty cycle does not excuse exceeding the rating for the on-time.</p>
+
+    <h2><span class="h2-dot"></span>The turn-off spike</h2>
+    <p>The coil stores energy, &frac12;LI&sup2;, in its magnetic field. When the switch opens, the current cannot stop instantly, and the coil produces whatever voltage it needs to keep it flowing: V = L &times; di/dt. Without protection that spike is limited only by stray capacitance and arcing, and it appears across the switch contact or output transistor. It is the arc seen across mechanical contacts that open on an inductive load.</p>
+    <p>For scale, a coil with an assumed 1 H of inductance at 40 mA stores &frac12; &times; 1 &times; 0.04&sup2; = 0.8 mJ. The inductance of real coils varies widely, so take it from the datasheet or a measurement.</p>
+
+    <h2><span class="h2-dot"></span>Flyback diode and its trade-off</h2>
+    <p>A diode across the coil, cathode to the positive terminal, gives the current a path to circulate when the switch opens. The voltage across the coil is clamped at the diode's forward drop, around 0.7&ndash;1.5 V. The cost is that the current now decays slowly through the coil and the diode, so the armature releases later. For a DC relay the contacts can open noticeably late; one source reports dropout time increasing by a factor of 5&ndash;10 compared with no suppression, depending on the relay.</p>
+    <p>Adding a series resistor or a series Zener diode lets the coil voltage rise to a higher level while it discharges, so the energy is dissipated faster, at the price of a higher voltage at the switch. Illustrative comparison for the 24 V, 600 &#937; coil with an assumed 1 H inductance, ideal components, and release taken when the current falls to 20% of nominal:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Suppression</th><th>Peak voltage at the switch</th><th>Time for current to fall to 20%</th></tr>
+        <tr><td>None</td><td>Hundreds of volts, arcing</td><td>Very fast</td></tr>
+        <tr><td>Diode alone</td><td>about 24.7 V</td><td>2.5 ms</td></tr>
+        <tr><td>Diode + 600 &#937; series resistor</td><td>about 48 V</td><td>1.3 ms</td></tr>
+        <tr><td>Diode + 24 V Zener in series</td><td>about 48 V</td><td>0.8 ms</td></tr>
+      </table>
+    </div>
+    <p>The numbers show the shape of the trade-off: the zener or resistor option releases roughly 2 to 3 times sooner than the diode alone here, while the voltage at the switch roughly doubles, so the switch must withstand it. Real relays add mechanical release time, and the factors depend on the relay and on L, so measure dropout with the suppression you choose. Whichever option you use, fit it across the coil terminals as close to the coil as possible. A diode must be rated for the coil current and for a reverse voltage above the supply, and for AC coils the common choices are an RC snubber or a varistor, not a diode.</p>
+
+    <h2><span class="h2-dot"></span>AC coils and inrush</h2>
+    <p>An AC coil draws far more current while the armature is open, because the air gap is large and its impedance low, than after it seals and the impedance rises. Inrush is typically several times the sealed current, so a control transformer or output card must handle the pull-in current as well as the holding current. If the armature jams and cannot close, the high current continues and burns the coil out. The V/R calculation applies to DC coils only; for AC coils use the datasheet's inrush and holding VA.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>Using nameplate current for an AC coil</td><td>Inrush is far higher than the sealed current</td></tr>
+        <tr><td>Assuming 20 &deg;C resistance in a hot panel</td><td>Coil current falls and pick-up becomes marginal on a low supply</td></tr>
+        <tr><td>No suppression on an inductive load</td><td>The spike damages the output transistor or arcs across contacts</td></tr>
+        <tr><td>A plain diode on a coil that must release quickly</td><td>Contacts open late, which can matter for interlocks and safety functions</td></tr>
+        <tr><td>Diode fitted backwards</td><td>It conducts when the coil is energised and shorts the supply</td></tr>
+        <tr><td>Adding up only the average current</td><td>Several coils energised together set the peak load</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>DC coil: I = V/R and P = V&sup2;/R; sum the coils that can be on at once.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Copper coil resistance rises about 0.39% per &deg;C, so a hot coil draws less and picks up less readily.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Duty cycle = on-time / period; average power = coil power &times; duty.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>A flyback diode clamps the spike to about 0.7&ndash;1.5 V but delays release; a series zener or resistor releases faster at a higher switch voltage.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>AC coils need inrush and holding VA from the datasheet, and RC or varistor suppression instead of a diode.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Relay%20Coil%20Current%20and%20Flyback%20Protection%20%E2%80%94%20coil%20current%2C%20duty%20cycle%20and%20flyback%20diodes.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelay-coil-current-duty-cycle-flyback-protection-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelay-coil-current-duty-cycle-flyback-protection-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Relay%20Coil%20Current%20and%20Flyback%20Protection&text=Coil%20current%2C%20duty%20cycle%20and%20flyback%20diodes.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelay-coil-current-duty-cycle-flyback-protection-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Relay%20Coil%20Current%20and%20Flyback%20Protection&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ARelay%20Coil%20Current%20and%20Flyback%20Protection%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frelay-coil-current-duty-cycle-flyback-protection-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../automation/relay-coil-sizing">Relay / Contactor Coil Current &amp; Duty Cycle &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="relay-basics-construction-working-principle-explained">Relay Basics: Construction &amp; Working Principle</a></li><li><a href="plc-components-explained">PLC Components Explained</a></li><li><a href="power-system-protection-relays-explained">Power System Protection Relays Explained</a></li><li><a href="./">&larr; Back to all posts</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
