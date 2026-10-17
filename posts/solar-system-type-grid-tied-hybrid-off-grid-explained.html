@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid-Tied, Hybrid or Off-Grid Solar | Engineerz CorneR</title>
+<meta name="description" content="How grid-tied, hybrid and off-grid solar systems differ, why grid-tied panels shut down in an outage, and how to size backup battery capacity.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Grid-Tied, Hybrid or Off-Grid Solar">
+<meta property="og:description" content="How grid-tied, hybrid and off-grid solar systems differ, why grid-tied panels shut down in an outage, and how to size backup battery capacity.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-solar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Grid-Tied, Hybrid or Off-Grid Solar">
+<meta name="twitter:description" content="Why grid-tied solar goes dark in an outage and how to size battery backup.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-solar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},{"@type":"ListItem","position":2,"name":"Posts","item":"https://www.engineerzcorner.com/posts/"},{"@type":"ListItem","position":3,"name":"Grid-Tied, Hybrid or Off-Grid Solar","item":"https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Grid-Tied, Hybrid or Off-Grid Solar","datePublished":"2026-10-18","dateModified":"2026-10-18","description":"How grid-tied, hybrid and off-grid solar systems differ, why grid-tied panels shut down in an outage, and how to size backup battery capacity.","url":"https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained","author":{"@type":"Organization","name":"Engineerz CorneR"},"publisher":{"@type":"Organization","name":"Engineerz CorneR","logo":{"@type":"ImageObject","url":"https://www.engineerzcorner.com/og-image.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained"}}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+</head>
+<body>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Grid-Tied, Hybrid or Off-Grid Solar</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9728; Solar &middot; System Design</span>
+    <h1>Grid-Tied, Hybrid or Off-Grid Solar</h1>
+    <p class="hero-sub">The first decision in a solar design is not the panel count. It is whether the system is allowed to keep running when the grid does not, and that one choice sets the battery, the inverter and most of the cost.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Solar / System Type</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A standard grid-tied system has no battery and shuts down within a fraction of a second of a grid failure, even in full sun. That is deliberate: it is called anti-islanding.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">A hybrid system adds a battery and an islanding-capable inverter plus a transfer device, so selected loads keep running through an outage.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Off-grid has no utility at all. The battery must cover several cloudy days, so it dominates the cost.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Battery energy is sized from the critical load: kWh = load &times; hours (or days) &divide; usable depth of discharge, with a margin for inverter losses.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <h2><span class="h2-dot"></span>The three architectures</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th></th><th>Grid-tied</th><th>Hybrid (grid + battery)</th><th>Off-grid</th></tr>
+        <tr><td>Utility connection</td><td>Yes</td><td>Yes</td><td>None</td></tr>
+        <tr><td>Battery</td><td>No</td><td>Yes, sized for critical loads</td><td>Yes, sized for autonomy days</td></tr>
+        <tr><td>In a grid outage</td><td>Solar shuts down, no power</td><td>Critical loads keep running</td><td>Not applicable</td></tr>
+        <tr><td>Exports to grid</td><td>Yes, where net metering or feed-in applies</td><td>Yes, as set up</td><td>No</td></tr>
+        <tr><td>Relative cost and complexity</td><td>Lowest</td><td>Medium to high</td><td>Highest, batteries dominate</td></tr>
+        <tr><td>Fits best when</td><td>The grid is reliable and outages are tolerable</td><td>Outages matter, or tariffs reward storage</td><td>No grid at the site</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Why grid-tied panels go dark in an outage</h2>
+    <p>A grid-tie inverter synchronises with the utility voltage and frequency and feeds power into that waveform. If the grid disappears while the inverter keeps energising the lines, it could back-feed a downed line and endanger the people repairing it. So grid-connected inverters certified to UL 1741 and IEEE 1547 must detect the loss of the grid and stop, typically within a fraction of a second. This applies whether the system uses string inverters or microinverters. After the grid returns, the standard also requires a delay, commonly stated as around five minutes, before reconnecting.</p>
+    <p>Some products offer limited daytime power to a designated outlet without a battery, but a system that keeps the house running through an outage needs the hybrid arrangement below.</p>
+
+    <h2><span class="h2-dot"></span>What a hybrid system adds</h2>
+    <div class="signal-grid">
+      <div class="signal-card cold"><b>Battery</b><span>Stores energy from the array or the grid for use during an outage and, depending on the tariff, at peak times.</span></div>
+      <div class="signal-card hot"><b>Islanding-capable inverter</b><span>Forms its own local grid when the utility fails. Not every hybrid inverter can do this, so check the datasheet.</span></div>
+      <div class="signal-card cold"><b>Transfer device and critical-load panel</b><span>Physically separates the house from the grid before the inverter forms the island, and feeds only the circuits you chose to back up.</span></div>
+    </div>
+    <p>A battery inverter can also be added to an existing grid-tied solar inverter, which keeps operating inside the island while the battery inverter forms it. The available backup power is limited by the smallest of the inverter's continuous rating, the battery's discharge rate and the critical load itself, so a large battery does not help if the inverter cannot supply the loads, particularly motor starting surges.</p>
+
+    <h2><span class="h2-dot"></span>Sizing the battery for backup</h2>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>Battery kWh</b><span>nominal</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-chip"><b>Critical load kW &times; hours</b><span>energy needed</span></div>
+        <div class="f-op">&divide;</div>
+        <div class="f-result"><b>Usable DoD</b><span>fraction</span></div>
+      </div>
+    </div>
+    <div class="formula-note">Backup hours = battery kWh &times; DoD &divide; average critical load kW. Add roughly 15&ndash;20% for inverter losses.</div>
+    <p>Worked example: a fridge, router, lighting and a few outlets average 0.6 kW. To ride through a 12-hour outage the system must deliver 0.6 &times; 12 = 7.2 kWh. With 90% usable depth of discharge, the battery needs 7.2 &divide; 0.9 = 8.0 kWh nominal, before inverter losses. In the other direction, a 10 kWh battery at 90% DoD carries the same load for 10 &times; 0.9 &divide; 0.6 = 15 hours. If the outage is during the day, the array can recharge the battery and extend the time further, but plan the battery for the worst case.</p>
+
+    <h2><span class="h2-dot"></span>Sizing an off-grid battery</h2>
+    <p>Off-grid, the battery has to cover the load through days with little sun. The usual planning target is one to three days of autonomy, so the energy needed is the daily load times the days of autonomy, divided by usable depth of discharge. For a 10 kWh/day load with 2 days of autonomy and 80% usable depth of discharge:</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+        <tr><td>Energy to cover</td><td>10 kWh/day &times; 2 days</td><td>20 kWh</td></tr>
+        <tr><td>Nominal capacity</td><td>20 &divide; 0.8</td><td>25 kWh</td></tr>
+        <tr><td>With 15&ndash;20% for inverter losses</td><td>25 &times; 1.15 to 1.20</td><td>28.7 to 30.0 kWh</td></tr>
+      </table>
+    </div>
+    <p>That is about three times the daily load held in storage, and it is why batteries are the largest cost in an off-grid system. A backup generator for the long tail of multi-day bad weather often costs less than adding a third or fourth day of battery. The array and the charge controller are then sized so the system recovers the battery in poor-sun months; see <a href="solar-system-sizing-load-to-panel-count">sizing from load to panel count</a>.</p>
+
+    <h2><span class="h2-dot"></span>Net metering and economics</h2>
+    <p>The value of a grid-tied system depends on what the utility pays for exported energy. Under net metering the export offsets what you import, and under a feed-in tariff it is paid at a set rate. Where export is credited at a low rate, self-consumption, and so storage, becomes more attractive. These rules differ by country, state and utility and change often, so check the current tariff before assuming a payback. The payback side is covered in <a href="solar-payback-period-roi-explained">Solar Payback and ROI Explained</a>.</p>
+
+    <h2><span class="h2-dot"></span>Mistakes that catch people out</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Mistake</th><th>What goes wrong</th></tr>
+        <tr><td>Assuming solar panels keep the lights on in an outage</td><td>A standard grid-tied system shuts down by design</td></tr>
+        <tr><td>Backing up the whole house</td><td>Cost and battery size jump; most of the benefit comes from the critical loads</td></tr>
+        <tr><td>Buying a hybrid inverter without checking islanding</td><td>Some hybrid inverters manage solar and battery but cannot form a grid during an outage</td></tr>
+        <tr><td>Sizing the battery without the inverter limit</td><td>Backup power is capped by the inverter and discharge rate</td></tr>
+        <tr><td>Ignoring motor starting loads</td><td>A pump or compressor surge can trip a small inverter</td></tr>
+        <tr><td>Using nominal battery capacity as usable</td><td>Depth-of-discharge limits and losses reduce what you can draw</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">&#10003;</span><span>Grid-tied has no backup by design (anti-islanding); hybrid adds battery, an islanding-capable inverter and a transfer device; off-grid has no utility.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Backup battery = critical load kW &times; hours &divide; usable DoD, plus about 15&ndash;20% for inverter losses.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Off-grid battery = daily load &times; autonomy days &divide; usable DoD; one to three days is the usual target.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Check inverter islanding capability, continuous rating and surge capacity as well as battery capacity.</span></li>
+      <li><span class="tk-check">&#10003;</span><span>Confirm tariff rules and local interconnection requirements before choosing a system type.</span></li>
+    </ul>
+
+  </div>
+
+    <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it —</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Grid-Tied%2C%20Hybrid%20or%20Off-Grid%20Solar%20%E2%80%94%20why%20grid-tied%20solar%20goes%20dark%20in%20an%20outage.&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-system-type-grid-tied-hybrid-off-grid-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-system-type-grid-tied-hybrid-off-grid-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Grid-Tied%2C%20Hybrid%20or%20Off-Grid%20Solar&text=Why%20grid-tied%20solar%20goes%20dark%20in%20an%20outage.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-system-type-grid-tied-hybrid-off-grid-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Grid-Tied%2C%20Hybrid%20or%20Off-Grid%20Solar&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AGrid-Tied%2C%20Hybrid%20or%20Off-Grid%20Solar%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-system-type-grid-tied-hybrid-off-grid-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Try the calculator</p>
+    <ul><li><a href="../solar/grid-tie-off-grid-comparator">Grid-Tie vs Off-Grid vs Hybrid Selector &rarr;</a></li></ul>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="battery-soc-vs-dod-explained">Battery SOC vs DoD Explained</a></li><li><a href="solar-pv-system-components-explained">Solar PV System Components Explained</a></li><li><a href="solar-system-sizing-load-to-panel-count">Solar System Sizing: From Load to Panel Count</a></li><li><a href="dc-ac-ratio-inverter-clipping-explained">DC/AC Ratio &amp; Inverter Clipping</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+    <a class="try-tool" href="../solar/grid-tie-off-grid-comparator">Try the System Type Selector &rarr;</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
