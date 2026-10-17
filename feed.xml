@@ -4,213 +4,213 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Level Control of an Integrating Process</title>
-    <link>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained.html</guid>
-    <description>Why tank level is an integrating process, why P-only control leaves an offset, and how PI damping depends on Kp and Ki, with numbers you can reproduce.</description>
-    <pubDate>Sat, 17 Oct 2026 13:33:52 GMT</pubDate>
+    <title>Arc Flash Hazard Basics</title>
+    <link>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</link>
+    <guid>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</guid>
+    <description>What drives arc flash incident energy, the variables in a study, NFPA 70E PPE categories 1–4, the arc flash boundary, and ways to reduce incident energy.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Grid-Tied, Hybrid or Off-Grid Solar</title>
-    <link>https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-system-type-grid-tied-hybrid-off-grid-explained.html</guid>
-    <description>How grid-tied, hybrid and off-grid solar systems differ, why grid-tied panels shut down in an outage, and how to size backup battery capacity.</description>
-    <pubDate>Sat, 17 Oct 2026 05:10:19 GMT</pubDate>
+    <title>BESS Types &amp; Components Explained</title>
+    <link>https://www.engineerzcorner.com/posts/bess-types-components-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/bess-types-components-explained.html</guid>
+    <description>BESS chemistries (LFP, NMC, lead-acid, sodium-ion, flow) compared, main components (cells, BMS, PCS, EMS), selection by duration, and C-rate explained.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Orifice Plate Flow Sizing Explained</title>
-    <link>https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/orifice-plate-flow-sizing-beta-differential-pressure-explained.html</guid>
-    <description>How an orifice plate turns differential pressure into flow: the square-root law, beta ratio, discharge coefficient and turndown, with a worked sizing example.</description>
-    <pubDate>Fri, 16 Oct 2026 19:06:13 GMT</pubDate>
+    <title>Binary, Hex &amp; Octal Explained</title>
+    <link>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/binary-hex-octal-number-base-conversion-explained.html</guid>
+    <description>Decimal, binary, octal and hex are one number in different bases: what a base means, why hex shortens binary, and how to convert by hand.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Relay Coil Current and Flyback Protection</title>
-    <link>https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained.html</guid>
-    <description>Relay coil current and power from V/R, duty cycle, hot-coil resistance, and flyback diode options with their effect on dropout time and switch voltage.</description>
-    <pubDate>Fri, 16 Oct 2026 19:02:29 GMT</pubDate>
+    <title>Circuit Breaker Types Explained: MCB to OCB</title>
+    <link>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/circuit-breaker-types-explained.html</guid>
+    <description>What a circuit breaker does, the main types (MCB, MCCB, ACB, VCB, OCB, SF6, GIS), their parts, interrupting media, voltage-class selection and failure points.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>What a Load Really Costs to Run</title>
-    <link>https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/running-cost-of-a-load-kwh-demand-tariff-explained.html</guid>
-    <description>From nameplate kW to the electricity bill: load factor, efficiency, tiered tariffs, demand charges and marginal rate, with a worked motor example.</description>
-    <pubDate>Fri, 16 Oct 2026 18:59:10 GMT</pubDate>
+    <title>Cooling Tower Types Explained</title>
+    <link>https://www.engineerzcorner.com/posts/cooling-tower-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/cooling-tower-types-explained.html</guid>
+    <description>What a cooling tower does, the main types (counterflow, crossflow, natural, forced and induced draft, open, closed, hybrid), parts, selection and failures.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Intrinsic Safety Entity Parameters</title>
-    <link>https://www.engineerzcorner.com/posts/intrinsic-safety-entity-parameters-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/intrinsic-safety-entity-parameters-explained.html</guid>
-    <description>How the entity concept matches a barrier to a field device: Uo, Io, Po, Co and Lo against Ui, Ii, Pi, Ci and Li plus cable, with a worked loop check.</description>
-    <pubDate>Fri, 16 Oct 2026 10:23:44 GMT</pubDate>
+    <title>CT Sizing &amp; Burden Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ct-sizing-burden-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/ct-sizing-burden-explained.html</guid>
+    <description>Ratio, burden, accuracy class and short-circuit withstand: the four specs behind every CT, and why one that reads well at normal load can fail in a fault.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Resource Loading and Utilization</title>
-    <link>https://www.engineerzcorner.com/posts/resource-loading-utilization-leveling-vs-smoothing-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/resource-loading-utilization-leveling-vs-smoothing-explained.html</guid>
-    <description>How to read resource loading and utilization, why a healthy team average hides overloaded people, and when to use resource leveling or smoothing.</description>
-    <pubDate>Fri, 16 Oct 2026 10:20:17 GMT</pubDate>
+    <title>Data Center Cooling: Air to Immersion</title>
+    <link>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained.html</guid>
+    <description>Data center cooling types (CRAC, CRAH, in-row, rear-door, direct-to-chip, immersion, free cooling), liquid loop parts, rack-density selection and PUE explained.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Change Order Cost and Schedule Impact</title>
-    <link>https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/change-order-cost-and-schedule-impact-explained.html</guid>
-    <description>How to price a change order, why only approved changes move the baseline, and when extra work earns time: critical path and float, with worked examples.</description>
-    <pubDate>Fri, 16 Oct 2026 10:15:39 GMT</pubDate>
+    <title>DC/AC Ratio &amp; Inverter Clipping</title>
+    <link>https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained.html</guid>
+    <description>An array rarely delivers its nameplate power, so sizing the inverter to the full array rating wastes money: the DC/AC ratio and clipping trade-off explained.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Cable Derating Factors Worked Through</title>
-    <link>https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/cable-derating-factors-worked-through-explained.html</guid>
-    <description>How ambient and grouping factors multiply into one derating factor, the square-root rule for temperature, and a worked cable selection with the In and Iz check.</description>
-    <pubDate>Fri, 16 Oct 2026 06:08:25 GMT</pubDate>
+    <title>Dimensional Analysis Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained.html</guid>
+    <description>Unit conversion errors come from memorizing factors instead of tracking units through the arithmetic: how dimensional analysis catches the mistake early.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Vessel Purging and Inerting Explained</title>
-    <link>https://www.engineerzcorner.com/posts/vessel-purging-dilution-turnovers-loc-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/vessel-purging-dilution-turnovers-loc-explained.html</guid>
-    <description>Dilution purge turnovers, pressure-swing cycles and NFPA 69 oxygen targets, with worked examples for taking a vessel from air to a safe oxygen level.</description>
-    <pubDate>Thu, 15 Oct 2026 20:57:28 GMT</pubDate>
+    <title>Elapsed Time Calculations</title>
+    <link>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained.html</guid>
+    <description>Why subtracting clock times like decimals gives the wrong answer: time is base 60 for minutes and seconds and base 24 for hours, and borrowing causes errors.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Fractions to Decimals Explained</title>
-    <link>https://www.engineerzcorner.com/posts/tape-measure-fractions-to-decimals-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/tape-measure-fractions-to-decimals-explained.html</guid>
-    <description>Convert tape-measure fractions to decimal inches and millimetres, round decimals to the nearest 1/16, 1/32 or 1/64, and know which results repeat.</description>
-    <pubDate>Thu, 15 Oct 2026 20:54:15 GMT</pubDate>
+    <title>How to Read a Wiring Diagram (Beginner's Guide)</title>
+    <link>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide.html</link>
+    <guid>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide.html</guid>
+    <description>What a wiring diagram shows, how it differs from a schematic and a single line diagram, the common symbols and how wires are numbered: a beginner&amp;#x27;s guide.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Tank Volume vs Level Explained</title>
-    <link>https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained.html</guid>
-    <description>Why horizontal tank level and volume are not proportional, the circular segment formula, and how 2:1, hemispherical and torispherical heads change the answer.</description>
-    <pubDate>Thu, 15 Oct 2026 20:50:01 GMT</pubDate>
+    <title>IEC 61850 Digital Substation Protocol Explained</title>
+    <link>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained.html</guid>
+    <description>How IEC 61850 replaces hardwired substation panels with GOOSE, Sampled Values and MMS over Ethernet: the architecture, what each service carries, and security.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Contingency vs Management Reserve</title>
-    <link>https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/contingency-vs-management-reserve-project-budget-explained.html</guid>
-    <description>Contingency, management reserve and the project budget stack, AACE estimate classes, and a worked example that turns a risk register into a contingency figure.</description>
-    <pubDate>Thu, 15 Oct 2026 07:22:57 GMT</pubDate>
+    <title>Industrial Sensor Types Explained</title>
+    <link>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained.html</guid>
+    <description>What an industrial sensor does, the main types (inductive, capacitive, photoelectric, ultrasonic, RTD, pressure, level, encoder) and how to select one.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>RTD vs Thermocouple Explained</title>
-    <link>https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/rtd-vs-thermocouple-pt100-type-k-explained.html</guid>
-    <description>How Pt100 RTDs and thermocouples measure temperature, IEC 60751 and 60584 tolerance classes, lead and cold-junction errors, with worked examples.</description>
-    <pubDate>Thu, 15 Oct 2026 07:19:29 GMT</pubDate>
+    <title>LMTD Heat Exchanger Sizing</title>
+    <link>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained.html</guid>
+    <description>Log-mean temperature difference explained: why it isn&amp;#x27;t a simple average, why counter-current beats co-current, and where the F correction factor comes in.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Pipe Wall Thickness (ASME B31.3)</title>
-    <link>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained.html</guid>
-    <description>ASME B31.3 pressure design thickness, corrosion allowance and the 12.5% mill tolerance, with a worked NPS 6 example and schedule selection.</description>
-    <pubDate>Thu, 15 Oct 2026 07:14:57 GMT</pubDate>
+    <title>Load Flow (Power Flow) Study Basics</title>
+    <link>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics.html</link>
+    <guid>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics.html</guid>
+    <description>What a load flow study calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and coordination studies, and how to read results.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Genset Ratings: ESP, PRP, COP, LTP</title>
-    <link>https://www.engineerzcorner.com/posts/genset-ratings-esp-prp-cop-ltp-iso-8528-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/genset-ratings-esp-prp-cop-ltp-iso-8528-explained.html</guid>
-    <description>ISO 8528-1 ratings ESP, PRP, COP and LTP, average load factor, derating and fuel autonomy, with a worked comparison for the same 320 kW load.</description>
-    <pubDate>Tue, 13 Oct 2026 03:33:51 GMT</pubDate>
+    <title>Markup vs Margin Explained</title>
+    <link>https://www.engineerzcorner.com/posts/markup-vs-margin-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/markup-vs-margin-explained.html</guid>
+    <description>Markup and margin use the same two numbers, cost and price, but divide by different ones, so one percentage means two different prices.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Insulation Resistance Testing Explained</title>
-    <link>https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/insulation-resistance-testing-megger-pi-explained.html</guid>
-    <description>IEC 60364-6 / BS 7671 test voltages and minimums, motor spot IR and polarization index per IEEE 43, temperature correction and worked examples.</description>
-    <pubDate>Mon, 12 Oct 2026 17:55:13 GMT</pubDate>
+    <title>Modbus vs PROFIBUS vs Foundation Fieldbus Explained</title>
+    <link>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained.html</guid>
+    <description>Modbus RTU/TCP, PROFIBUS DP/PA and Foundation Fieldbus H1 compared: physical layer, baud rate, devices, distance, topology and where each is used.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Lighting Design Beyond Lux</title>
-    <link>https://www.engineerzcorner.com/posts/lighting-design-beyond-lux-en-12464-1-en-1838.html</link>
-    <guid>https://www.engineerzcorner.com/posts/lighting-design-beyond-lux-en-12464-1-en-1838.html</guid>
-    <description>EN 12464-1 lux, uniformity and glare targets, room index, layout spacing and EN 1838 emergency lighting, with a worked 6 x 5 m office example.</description>
-    <pubDate>Mon, 12 Oct 2026 17:50:56 GMT</pubDate>
+    <title>NPSH Available Explained</title>
+    <link>https://www.engineerzcorner.com/posts/npsh-available-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/npsh-available-explained.html</guid>
+    <description>NPSHa term by term: source pressure head, static elevation, suction friction losses and vapor pressure, and why temperature quietly decides marginal cases.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>SPD &amp; Lightning Protection Explained</title>
-    <link>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained.html</guid>
-    <description>Lightning protection levels, SPD Types 1/2/3, Uc, Up and lead length (IEC 62305, IEC 61643-11), with a worked check against impulse withstand.</description>
-    <pubDate>Mon, 12 Oct 2026 03:25:13 GMT</pubDate>
+    <title>Order-of-Magnitude Checks</title>
+    <link>https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained.html</guid>
+    <description>A one-line estimate rounded to one significant figure catches most decimal-point and unit-slip errors before they reach a real calculation.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>The PPP Project Lifecycle: From Identification to Handback</title>
-    <link>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/ppp-project-lifecycle-explained.html</guid>
-    <description>The eight stages a Public-Private Partnership moves through, from project identification to handback, and the enablers that hold the whole lifecycle together.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pre-Commissioning vs Commissioning: What's the Difference</title>
-    <link>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pre-commissioning-vs-commissioning-electrical-explained.html</guid>
-    <description>Pre-commissioning happens before a system is energized; commissioning happens after. The checks each phase covers, why order matters, and where FAT/SAT fit in.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Conventional vs. Balanced Bellows vs. Pilot-Operated PSV: Choosing a Relief Valve Type</title>
-    <link>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</link>
-    <guid>https://www.engineerzcorner.com/posts/psv-types-conventional-bellows-pilot-operated-compared.html</guid>
-    <description>Three ways a relief valve holds its disc shut until set pressure — how back pressure and dirty service decide between conventional, bellows, or pilot-operated.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Reading a Psychrometric Chart: The Five Lines That Matter</title>
-    <link>https://www.engineerzcorner.com/posts/psychrometric-chart-basics.html</link>
-    <guid>https://www.engineerzcorner.com/posts/psychrometric-chart-basics.html</guid>
-    <description>How a psychrometric chart is built from dry-bulb temperature, humidity ratio, relative humidity, wet-bulb temperature, and enthalpy.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Cavitation in Pumps: Causes, Warning Signs, and Prevention</title>
-    <link>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pump-cavitation-causes-prevention.html</guid>
-    <description>What pump cavitation actually is, why NPSH available has to beat NPSH required, the field symptoms that give it away, and a practical prevention checklist.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pump &amp; Fan Affinity Laws: Why Speed Changes Cube the Power</title>
-    <link>https://www.engineerzcorner.com/posts/pump-fan-affinity-laws-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pump-fan-affinity-laws-explained.html</guid>
-    <description>Flow scales linearly with speed, head scales with the square, and power scales with the cube.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+    <title>Power Semiconductors: Si, SiC &amp; GaN</title>
+    <link>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained.html</guid>
+    <description>Silicon IGBT/MOSFET, SiC and GaN power semiconductors compared on bandgap, switching frequency, voltage range and losses, with selection by application.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
     <title>Pump Types Explained: Centrifugal to PD</title>
     <link>https://www.engineerzcorner.com/posts/pump-types-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/pump-types-explained.html</guid>
     <description>What a pump actually does, eight common pump types, key parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>PV String Sizing: Why Voltage, Not Wattage, Decides Panels Per String</title>
-    <link>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage.html</link>
-    <guid>https://www.engineerzcorner.com/posts/pv-string-sizing-voltage.html</guid>
-    <description>Why a cold morning can push string voltage past an inverter's limit, how the temperature coefficient drives that swing.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
-  </item>
-  <item>
-    <title>RACI Matrix Explained: Who's Responsible vs. Who's Accountable</title>
-    <link>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/raci-matrix-explained.html</guid>
-    <description>Why projects stall when nobody owns a decision, what Responsible, Accountable, Consulted and Informed actually mean.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
     <title>Rational Method: How Peak Stormwater Runoff Is Estimated</title>
     <link>https://www.engineerzcorner.com/posts/rational-method-peak-runoff-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/rational-method-peak-runoff-explained.html</guid>
-    <description>Q = C × i × A looks simple, but the runoff coefficient, the time of concentration and the design storm behind the intensity decide whether the peak flow you size a pipe for is realistic.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+    <description>Q = C × i × A looks simple, but the runoff coefficient, time of concentration and design storm decide whether the peak flow you size for is realistic.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>Rebar Development Length: Why Bar Diameter Decides the Embedment, Not Rules of Thumb</title>
-    <link>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained.html</guid>
-    <description>Why development length is a function of bar diameter and concrete/steel strength, not a flat number, how lap splices scale off it, and what hooks buy you.</description>
-    <pubDate>Mon, 05 Oct 2026 17:28:31 GMT</pubDate>
+    <title>Refrigerant Types: R-410A to A2L</title>
+    <link>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</guid>
+    <description>Why HVAC is leaving R-410A, ASHRAE 34 classes (A1, A2L, B2L), R-32, R-454B and R-1234yf compared by GWP and flammability, A2L handling and selection.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Relief Valve Orifice Sizing</title>
+    <link>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</guid>
+    <description>Set pressure, allowable overpressure, back pressure and relieving rate decide a relief valve&amp;#x27;s orifice area under API 520, and the scenario matters most.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Single Line Diagram (SLD) Symbols &amp; How to Read One</title>
+    <link>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</link>
+    <guid>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</guid>
+    <description>The standard symbols on a power single line diagram (generator, transformer, breaker, disconnect, CT/VT, busbar, relay) and the order engineers read one in.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Panel Cross-Section: The Layers Explained</title>
+    <link>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</guid>
+    <description>What&amp;#x27;s inside a solar panel, layer by layer: glass, EVA encapsulant, cells, backsheet, frame and junction box, plus what bypass diodes do.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Superheat &amp; Subcooling Explained</title>
+    <link>https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained.html</guid>
+    <description>Superheat and subcooling are temperature differences from saturation; with suction and liquid pressures they separate low charge, overcharge and restrictions.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Tank Breathing Losses</title>
+    <link>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</guid>
+    <description>A sealed, idle tank still vents daily: thermal breathing plus working losses, estimated with API 2000-style methods (confirm the current edition).</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained</title>
+    <link>https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained.html</guid>
+    <description>Inside a VFD: how the rectifier, DC bus and IGBT inverter turn fixed AC into variable-frequency PWM, and why that creates harmonics and reflected-wave issues.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Level Control of an Integrating Process</title>
+    <link>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained.html</guid>
+    <description>Why tank level is an integrating process, why P-only control leaves an offset, and how PI damping depends on Kp and Ki, with numbers you can reproduce.</description>
+    <pubDate>Sat, 17 Oct 2026 13:33:52 GMT</pubDate>
   </item>
 </channel></rss>
