@@ -1,5 +1,25 @@
 [
   {
+    "t": "Arc Flash Incident Energy",
+    "u": "electrical/arc-flash-incident-energy",
+    "d": "2026-10-17"
+  },
+  {
+    "t": "Panel Schedule Builder",
+    "u": "electrical/panel-schedule-builder",
+    "d": "2026-10-17"
+  },
+  {
+    "t": "VFD Cable Length / Reflected Wave Calculator",
+    "u": "electrical/vfd-cable-reflected-wave",
+    "d": "2026-10-17"
+  },
+  {
+    "t": "Level Control Loop Simulator",
+    "u": "automation/level-control-simulator",
+    "d": "2026-10-17"
+  },
+  {
     "t": "Level Control of an Integrating Process",
     "u": "posts/level-control-integrating-process-pi-tuning-explained",
     "d": "2026-10-17"
@@ -27,26 +47,6 @@
   {
     "t": "Relay / Contactor Coil Current & Duty Cycle",
     "u": "automation/relay-coil-sizing",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Relay Coil Current and Flyback Protection",
-    "u": "posts/relay-coil-current-duty-cycle-flyback-protection-explained",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Energy Cost / kWh Bill Estimator",
-    "u": "electrical/energy-cost-calculator",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "What a Load Really Costs to Run",
-    "u": "posts/running-cost-of-a-load-kwh-demand-tariff-explained",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Intrinsic Safety Entity / Loop Checker",
-    "u": "automation/is-entity-loop-calculator",
     "d": "2026-10-16"
   }
 ]
