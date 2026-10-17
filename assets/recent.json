@@ -1,5 +1,10 @@
 [
   {
+    "t": "Grid-Tied, Hybrid or Off-Grid Solar",
+    "u": "posts/solar-system-type-grid-tied-hybrid-off-grid-explained",
+    "d": "2026-10-17"
+  },
+  {
     "t": "Orifice Plate Flow Sizing Explained",
     "u": "posts/orifice-plate-flow-sizing-beta-differential-pressure-explained",
     "d": "2026-10-16"
@@ -42,11 +47,6 @@
   {
     "t": "Resource Loading & Utilization Calculator",
     "u": "pm/resource-loading-calculator",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Resource Loading and Utilization",
-    "u": "posts/resource-loading-utilization-leveling-vs-smoothing-explained",
     "d": "2026-10-16"
   }
 ]
