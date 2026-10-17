@@ -1,5 +1,15 @@
 [
   {
+    "t": "Level Control of an Integrating Process",
+    "u": "posts/level-control-integrating-process-pi-tuning-explained",
+    "d": "2026-10-17"
+  },
+  {
+    "t": "Grid-Tie vs Off-Grid vs Hybrid Selector",
+    "u": "solar/grid-tie-off-grid-comparator",
+    "d": "2026-10-17"
+  },
+  {
     "t": "Grid-Tied, Hybrid or Off-Grid Solar",
     "u": "posts/solar-system-type-grid-tied-hybrid-off-grid-explained",
     "d": "2026-10-17"
@@ -37,16 +47,6 @@
   {
     "t": "Intrinsic Safety Entity / Loop Checker",
     "u": "automation/is-entity-loop-calculator",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Intrinsic Safety Entity Parameters",
-    "u": "posts/intrinsic-safety-entity-parameters-explained",
-    "d": "2026-10-16"
-  },
-  {
-    "t": "Resource Loading & Utilization Calculator",
-    "u": "pm/resource-loading-calculator",
     "d": "2026-10-16"
   }
 ]
