@@ -83,8 +83,8 @@ nav.nt-nav a.nt-back:hover{color:#fff}
 .warn-card p{font-size:12.5px;line-height:1.6;margin:0;color:inherit;opacity:.94}
 
 /* Field checklist two-panel */
-.two-col{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0 20px}
-@media(min-width:600px){.two-col{grid-template-columns:1fr 1fr}}
+.two-col{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin:18px 0 20px}
+@media(min-width:600px){.two-col{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .check-panel,.std-panel{border-radius:10px;padding:18px 20px}
 .check-panel{background:#e9f6f5;border:1px solid #bfe4e0}
 .std-panel{background:#fdf1e0;border:1px solid #f0d6ad}
