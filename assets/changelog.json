@@ -252,6 +252,13 @@
   "a": "added"
  },
  {
+  "t": "Tank Breathing / Venting Loss Calculator (API 2000)",
+  "u": "process/tank-breathing-loss-api2000",
+  "d": "2026-10-17",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
   "t": "Orifice Plate Flow Sizing Explained",
   "u": "posts/orifice-plate-flow-sizing-beta-differential-pressure-explained",
   "d": "2026-10-16",
@@ -1241,13 +1248,6 @@
  {
   "t": "Process Line Sizing",
   "u": "process/line-sizing-velocity",
-  "d": "2026-10-05",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Tank Breathing / Venting Loss Calculator (API 2000)",
-  "u": "process/tank-breathing-loss-api2000",
   "d": "2026-10-05",
   "c": "Process",
   "a": "updated"
