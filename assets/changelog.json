@@ -1,5 +1,40 @@
 [
  {
+  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+  "u": "posts/battery-soc-vs-dod-explained",
+  "d": "2026-10-19",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
+  "u": "posts/row-spacing-inter-row-shading-explained",
+  "d": "2026-10-19",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+  "d": "2026-10-19",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Solar Payback Period & ROI: What the Simple Formula Leaves Out",
+  "u": "posts/solar-payback-period-roi-explained",
+  "d": "2026-10-19",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
+  "t": "Solar System Sizing: From Daily Load to Panel Count",
+  "u": "posts/solar-system-sizing-load-to-panel-count",
+  "d": "2026-10-19",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-17",
@@ -1421,13 +1456,6 @@
   "a": "updated"
  },
  {
-  "t": "Battery SoC vs DoD: Why They're Not the Same Number",
-  "u": "posts/battery-soc-vs-dod-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
   "u": "posts/electrical-panel-fat-checklist",
   "d": "2026-10-05",
@@ -2067,34 +2095,6 @@
  {
   "t": "kW, kVA, and kVAR: What Actually Separates Them",
   "u": "posts/kw-kva-kvar-difference-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Lighting Design by the Lumen Method: Why Luminaire Count Isn't Just Lumens &divide; Lux",
-  "u": "posts/lighting-lumen-method-luminaire-count",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Load Estimation: The First Step in Electrical Design",
-  "u": "posts/load-estimation-first-step-electrical-design",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "LV Panel Estimating: Why a Budgetary BOQ Starts With the Incomer, Not the Steel",
-  "u": "posts/lv-panel-estimate-boq-from-incomer",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "IEC 61439 Forms of Construction: Form 1 to Form 4 Explained",
-  "u": "posts/lv-panel-forms-of-construction-iec-61439",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "added"

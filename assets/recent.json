@@ -1,5 +1,30 @@
 [
   {
+    "t": "Battery SoC vs DoD: Why They're Not the Same Number",
+    "u": "posts/battery-soc-vs-dod-explained",
+    "d": "2026-10-19"
+  },
+  {
+    "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
+    "u": "posts/row-spacing-inter-row-shading-explained",
+    "d": "2026-10-19"
+  },
+  {
+    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+    "d": "2026-10-19"
+  },
+  {
+    "t": "Solar Payback Period & ROI: What the Simple Formula Leaves Out",
+    "u": "posts/solar-payback-period-roi-explained",
+    "d": "2026-10-19"
+  },
+  {
+    "t": "Solar System Sizing: From Daily Load to Panel Count",
+    "u": "posts/solar-system-sizing-load-to-panel-count",
+    "d": "2026-10-19"
+  },
+  {
     "t": "Arc Flash Hazard Basics",
     "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
     "d": "2026-10-17"
@@ -22,31 +47,6 @@
   {
     "t": "Cooling Tower Types Explained",
     "u": "posts/cooling-tower-types-explained",
-    "d": "2026-10-17"
-  },
-  {
-    "t": "CT Sizing & Burden Explained",
-    "u": "posts/ct-sizing-burden-explained",
-    "d": "2026-10-17"
-  },
-  {
-    "t": "Data Center Cooling: Air to Immersion",
-    "u": "posts/data-center-cooling-types-explained",
-    "d": "2026-10-17"
-  },
-  {
-    "t": "DC/AC Ratio & Inverter Clipping",
-    "u": "posts/dc-ac-ratio-inverter-clipping-explained",
-    "d": "2026-10-17"
-  },
-  {
-    "t": "Dimensional Analysis Explained",
-    "u": "posts/dimensional-analysis-unit-conversion-explained",
-    "d": "2026-10-17"
-  },
-  {
-    "t": "Elapsed Time Calculations",
-    "u": "posts/elapsed-time-duration-calculations-explained",
     "d": "2026-10-17"
   }
 ]

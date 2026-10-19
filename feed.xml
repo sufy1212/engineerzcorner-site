@@ -4,6 +4,41 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
+    <link>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/battery-soc-vs-dod-explained.html</guid>
+    <description>Why SoC and DoD are two views of the same battery, how SoC is actually estimated in the field, and why chemistry sets the DoD limit that protects cycle life.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
+    <title>Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows</title>
+    <link>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained.html</guid>
+    <description>Why ground-mount and rooftop solar rows need a minimum gap, how the winter-solstice sun angle sets that gap, and the ground coverage ratio trade-off behind it.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
+    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
+    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer.html</guid>
+    <description>How string inverters, microinverters and power optimizers differ in where MPPT happens, what a shaded panel costs under each, and how to pick between them.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out</title>
+    <link>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained.html</guid>
+    <description>Why simple payback (cost divided by annual savings) overstates solar economics, and what degradation and rising electricity prices do to the real payback.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar System Sizing: From Daily Load to Panel Count</title>
+    <link>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-system-sizing-load-to-panel-count.html</guid>
+    <description>How to go from a daily energy load in kWh to an array size in kW, why peak sun hours (not daylight hours) matters, and where the derating factors go.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
     <title>Arc Flash Hazard Basics</title>
     <link>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</link>
     <guid>https://www.engineerzcorner.com/posts/arc-flash-hazard-basics-incident-energy-ppe-categories.html</guid>
@@ -177,40 +212,5 @@
     <guid>https://www.engineerzcorner.com/posts/single-line-diagram-sld-symbols-how-to-read-one.html</guid>
     <description>The standard symbols on a power single line diagram (generator, transformer, breaker, disconnect, CT/VT, busbar, relay) and the order engineers read one in.</description>
     <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Solar Panel Cross-Section: The Layers Explained</title>
-    <link>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-panel-cross-section-layers-explained.html</guid>
-    <description>What&amp;#x27;s inside a solar panel, layer by layer: glass, EVA encapsulant, cells, backsheet, frame and junction box, plus what bypass diodes do.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Superheat &amp; Subcooling Explained</title>
-    <link>https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained.html</guid>
-    <description>Superheat and subcooling are temperature differences from saturation; with suction and liquid pressures they separate low charge, overcharge and restrictions.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Tank Breathing Losses</title>
-    <link>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained.html</guid>
-    <description>A sealed, idle tank still vents daily: thermal breathing plus working losses, estimated with API 2000-style methods (confirm the current edition).</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>VFD Internal Architecture: Rectifier, DC Bus &amp; Inverter Explained</title>
-    <link>https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/vfd-internal-architecture-rectifier-dc-bus-inverter-explained.html</guid>
-    <description>Inside a VFD: how the rectifier, DC bus and IGBT inverter turn fixed AC into variable-frequency PWM, and why that creates harmonics and reflected-wave issues.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Level Control of an Integrating Process</title>
-    <link>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained.html</guid>
-    <description>Why tank level is an integrating process, why P-only control leaves an offset, and how PI damping depends on Kp and Ki, with numbers you can reproduce.</description>
-    <pubDate>Sat, 17 Oct 2026 13:33:52 GMT</pubDate>
   </item>
 </channel></rss>
