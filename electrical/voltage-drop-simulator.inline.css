@@ -2,3 +2,5 @@
 .site-footer{max-width:1180px;margin:32px auto 0;padding:20px 18px 76px;border-top:1px solid var(--line,#E1E3F0);font-family:var(--font-mono,"IBM Plex Mono",monospace);font-size:11px;line-height:1.6;color:var(--ink-faint,#8D91AA);display:flex;flex-wrap:wrap;gap:10px 14px;justify-content:space-between;align-items:center}
 .site-footer a{color:var(--ink-dim,#5B6470);text-decoration:none}
 .site-footer a:hover{color:var(--ink,#181B29);text-decoration:underline}
+
+.result-panel{overflow-x:auto}
