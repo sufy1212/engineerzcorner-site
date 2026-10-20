@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="assets/common-blocks.js"></script>
+<script src="assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purge Run: Nitrogen Purge Game | Engineerz CorneR</title>
+<meta name="description" content="A graphical vessel purging game: choose dilution or pressure-swing purging, reach the oxygen target below the LOC and use as little nitrogen as you can.">
+<link rel="canonical" href="https://www.engineerzcorner.com/purge-run">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Purge Run: Nitrogen Purge Game | Engineerz CorneR">
+<meta property="og:description" content="Purge a vessel from air to a safe oxygen level against the clock, with the least nitrogen.">
+<meta property="og:url" content="https://www.engineerzcorner.com/purge-run">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Purge Run: Nitrogen Purge Game | Engineerz CorneR">
+<meta name="twitter:description" content="Purge a vessel from air to a safe oxygen level against the clock, with the least nitrogen.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/common-blocks.css">
+<link rel="stylesheet" href="purge-run.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
+<link rel="stylesheet" href="assets/sidebars.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+    {"@type":"ListItem","position":2,"name":"Purge Run","item":"https://www.engineerzcorner.com/purge-run"}
+  ]
+}
+</script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#0C0F1E;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#5FA0FF;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#5FA0FF;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="./">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Purge Run</span></div></nav>
+
+
+<nav class="pr-nav">
+  <span class="pr-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="pr-back" href="games">← All games</a>
+</nav>
+
+<div class="pr-arena">
+<div class="pr-arena-grid"></div>
+<div class="wrap">
+
+  <div class="pr-hero">
+    <div class="pr-hero-inner">
+      <div class="pr-eyebrow"><span class="pr-eyebrow-dot"></span> Process safety game</div>
+      <h1 class="pr-title">Purge <span class="glow">Run</span></h1>
+      <p class="pr-sub">Take each vessel from air to a safe oxygen level. Pick a method, set the flow, time or pressure cycles, and watch the oxygen curve against the LOC and your target. Use as little nitrogen as you can.</p>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div class="pr-card" id="startScreen">
+    <div class="pr-start-stats">
+      <span class="pr-chip" id="starTotal">Stars: <b>0 / 15</b></span>
+      <span class="pr-chip">5 vessels</span>
+    </div>
+    <ul class="pr-how">
+      <li><span class="pr-how-num">1</span><span>The <b>target</b> sits below the limiting oxygen concentration (LOC): LOC minus 2 points with continuous monitoring, or 60% of LOC without it.</span></li>
+      <li><span class="pr-how-num">2</span><span><b>Dilution</b>: oxygen falls as C = C&#8320;e<sup>&minus;&eta;Qt/V</sup>, so turnovers N = ln(C&#8320;/C&#8321;) and nitrogen used = Q &times; t. <b>Pressure swing</b>: each cycle divides oxygen by the pressure ratio.</span></li>
+      <li><span class="pr-how-num">3</span><span>Reach the target inside the time limit for two stars. Use within 20% of the least nitrogen for three. Start at 20.9% O&#8322;.</span></li>
+    </ul>
+    <div class="pr-levels" id="levels"></div>
+    <button class="ecs-share-btn ecs-dark" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> Share my stars</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="pr-card">
+      <span class="pr-bank-tag" style="--disc-color:#22D3EE;">Purge a vessel</span>
+      <h2 class="pr-bank-title" id="lvTitle">&mdash;</h2>
+      <p class="pr-note" id="lvNote">&mdash;</p>
+      <div class="pr-brief" id="brief"></div>
+      <p class="pr-note" id="ruleLine">&mdash;</p>
+      <div class="pr-stage"><canvas id="cv" aria-label="Oxygen concentration against time with LOC and target lines"></canvas></div>
+      <div class="pr-seg"><button id="btnDil" class="on" type="button">Dilution</button><button id="btnPress" type="button">Pressure swing</button></div>
+      <div id="dilCtl">
+        <div class="pr-ctl"><label>Nitrogen flow <b id="qVal">&mdash;</b></label><input type="range" id="qIn"></div>
+        <div class="pr-ctl"><label>Run time <b id="tVal">&mdash;</b></label><input type="range" id="tIn"></div>
+      </div>
+      <div id="preCtl" class="hidden">
+        <div class="pr-ctl"><label>Pressurise to <b id="pVal">&mdash;</b></label><input type="range" id="pIn"></div>
+        <div class="pr-ctl"><label>Cycles <b id="nVal">&mdash;</b></label><input type="range" id="nIn"></div>
+        <p class="pr-note">Perfect mixing is assumed in each pressure cycle. Each cycle also takes 3 minutes to vent, and pressurising runs at the maximum nitrogen flow.</p>
+      </div>
+      <p class="pr-note" id="prev">&mdash;</p>
+      <button class="pr-btn" id="runBtn">Run purge</button>
+      <div class="pr-fb hidden" id="res"></div>
+      <div style="height:10px;"></div>
+      <button class="pr-btn hidden" id="nextBtn">Next vessel</button>
+      <div style="height:10px;"></div>
+      <button class="pr-btn ghost" id="menuBtn">All vessels</button>
+    </div>
+  </div>
+
+  <div class="reftable-section">
+    <h2>About Purge Run</h2>
+    <p class="reftable-note">The game uses the textbook models: perfect-mixing dilution with a mixing-factor allowance for real vessels, and ideal-gas pressure swing. Real purges need measurement at the worst point in the vessel, and the LOC and margins must come from the fuel's data and the standard you work to (NFPA 69 as summarised in the post).</p>
+    <p class="reftable-note">The full explanation is in <a href="posts/vessel-purging-dilution-turnovers-loc-explained">Vessel Purging and Inerting Explained</a>, and the <a href="process/purge-gas-sizing">purge gas sizing calculator</a> does the dilution maths. This is practice, not a procedure for a real vessel.</p>
+  </div>
+
+  <div class="pr-footer">More reference material lives in the <a href="./">discipline hubs</a>.</div>
+
+</div>
+</div>
+
+<div class="pr-toast" id="toast"></div>
+
+<script src="purge-run.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtn"), function () {
+    var stars = document.getElementById("starTotal").textContent.replace("Stars:","").trim();
+    return {
+      title: "Purge Run — Engineerz CorneR",
+      text: "I have " + stars + " stars in Purge Run \u26A1 Can you beat me?",
+      url: "https://www.engineerzcorner.com/purge-run"
+    };
+  });
+});
+</script>
+
+<a href="./" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="about">About</a> &nbsp;·&nbsp; <a href="contact">Contact</a> &nbsp;·&nbsp; <a href="privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="changelog">Changelog</a> &nbsp;·&nbsp; <a href="feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
