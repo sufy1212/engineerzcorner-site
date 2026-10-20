@@ -148,6 +148,11 @@
       <span class="rlabel">RESULT DATE</span>
       <span class="rval" id="dcResultDate">—</span>
     </div>
+    <div class="result-line">
+      <span class="rlabel">AFTER N WORKING DAYS</span>
+      <span class="rval" id="dcBizResult">—</span>
+    </div>
+    <div class="hint" style="margin:0 16px 14px;">The second result steps day by day from the start date (the start day is not counted) and skips non-working days and holidays from step 3.</div>
   </div>
 
   <div class="step">
@@ -169,6 +174,27 @@
     <div class="stat-grid" style="margin:0 16px 16px;">
       <div class="stat"><div class="slabel">Weeks + days</div><div class="sval" id="dcWeeks">—</div></div>
       <div class="stat"><div class="slabel">Weekdays (Mon–Fri)</div><div class="sval amber" id="dcWeekdays">—</div></div>
+      <div class="stat"><div class="slabel">Working days (week + holidays from step 3)</div><div class="sval amber" id="dcWorkdays">—</div></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h2>Working Week &amp; Holidays</h2></div>
+    <div class="row2">
+      <div class="field">
+        <label for="dcWorkWeek">Working week</label>
+        <select id="dcWorkWeek">
+          <option value="satsun">Monday&ndash;Friday (weekend Sat&ndash;Sun)</option>
+          <option value="frisat">Sunday&ndash;Thursday (weekend Fri&ndash;Sat)</option>
+          <option value="sunonly">Monday&ndash;Saturday (Sunday off)</option>
+        </select>
+        <div class="hint" id="dcWeekNote">&nbsp;</div>
+      </div>
+      <div class="field">
+        <label for="dcHolidays">Public holidays to skip</label>
+        <textarea id="dcHolidays" rows="4" placeholder="One date per line, YYYY-MM-DD"></textarea>
+        <div class="hint" id="dcHolidayNote">0 holidays recognised</div>
+      </div>
     </div>
   </div>
   <div class="reftable-section">
@@ -176,7 +202,7 @@
     <p class="reftable-note">Calendar-day math counts every day in a range; business-day math skips weekends. This matters whenever a contract specifies a term like "10 business days" for a submittal or payment — the actual calendar date that falls on depends entirely on how many weekends land inside the window, so calendar-day and business-day counts diverge quickly on longer spans.</p><p class="reftable-note">Two modes are available: add or subtract a number of days from a given date (for example, "45 days from today"), or count the number of days between two given dates — useful for verifying a schedule duration or checking exactly how many days remain before a deadline.</p>
   </div>
 
-  <footer>Weekday count treats Saturday and Sunday as non-working days only — it doesn't know about public holidays.</footer>
+  <footer>The Mon–Fri weekday count treats Saturday and Sunday as non-working days only. The working-day results use the working week and holidays you enter in step 3; check which days and holidays your contract counts.</footer>
 
 </div>
 </main>
@@ -187,6 +213,7 @@
 </footer>
 
 <script src="../assets/app.js"></script>
+<script src="date-calculator.inline.js"></script>
 
 
 <a href="../" class="ecr-home-fab" aria-label="Go to homepage">
