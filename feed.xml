@@ -4,6 +4,13 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Vessel Purging and Inerting Explained</title>
+    <link>https://www.engineerzcorner.com/posts/vessel-purging-dilution-turnovers-loc-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/vessel-purging-dilution-turnovers-loc-explained.html</guid>
+    <description>Dilution purge turnovers, pressure-swing cycles and NFPA 69 oxygen targets, with worked examples for taking a vessel from air to a safe oxygen level.</description>
+    <pubDate>Tue, 20 Oct 2026 09:56:02 GMT</pubDate>
+  </item>
+  <item>
     <title>Calendar Days vs Business Days Explained</title>
     <link>https://www.engineerzcorner.com/posts/calendar-days-vs-business-days-contract-deadlines-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/calendar-days-vs-business-days-contract-deadlines-explained.html</guid>
@@ -204,13 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained.html</guid>
     <description>Why HVAC is leaving R-410A, ASHRAE 34 classes (A1, A2L, B2L), R-32, R-454B and R-1234yf compared by GWP and flammability, A2L handling and selection.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Relief Valve Orifice Sizing</title>
-    <link>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained.html</guid>
-    <description>Set pressure, allowable overpressure, back pressure and relieving rate decide a relief valve&amp;#x27;s orifice area under API 520, and the scenario matters most.</description>
     <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
 </channel></rss>
