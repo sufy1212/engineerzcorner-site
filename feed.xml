@@ -4,18 +4,18 @@
   <link>https://www.engineerzcorner.com/posts/index.html</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Calendar Days vs Business Days Explained</title>
+    <link>https://www.engineerzcorner.com/posts/calendar-days-vs-business-days-contract-deadlines-explained.html</link>
+    <guid>https://www.engineerzcorner.com/posts/calendar-days-vs-business-days-contract-deadlines-explained.html</guid>
+    <description>How to count calendar and business days for contract deadlines: inclusive vs exclusive counts, weekends, holidays, month ends and leap years, with examples.</description>
+    <pubDate>Tue, 20 Oct 2026 19:34:58 GMT</pubDate>
+  </item>
+  <item>
     <title>Vessel Purging and Inerting Explained</title>
     <link>https://www.engineerzcorner.com/posts/vessel-purging-dilution-turnovers-loc-explained.html</link>
     <guid>https://www.engineerzcorner.com/posts/vessel-purging-dilution-turnovers-loc-explained.html</guid>
     <description>Dilution purge turnovers, pressure-swing cycles and NFPA 69 oxygen targets, with worked examples for taking a vessel from air to a safe oxygen level.</description>
     <pubDate>Tue, 20 Oct 2026 09:56:02 GMT</pubDate>
-  </item>
-  <item>
-    <title>Calendar Days vs Business Days Explained</title>
-    <link>https://www.engineerzcorner.com/posts/calendar-days-vs-business-days-contract-deadlines-explained.html</link>
-    <guid>https://www.engineerzcorner.com/posts/calendar-days-vs-business-days-contract-deadlines-explained.html</guid>
-    <description>How to count calendar and business days for contract deadlines: inclusive vs exclusive counts, weekends, holidays, month ends and leap years, with examples.</description>
-    <pubDate>Tue, 20 Oct 2026 07:36:30 GMT</pubDate>
   </item>
   <item>
     <title>Battery SoC vs DoD: Why They're Not the Same Number</title>
