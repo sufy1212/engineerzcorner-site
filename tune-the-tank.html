@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="assets/common-blocks.js"></script>
+<script src="assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tune the Tank: PI Level Control Game | Engineerz CorneR</title>
+<meta name="description" content="A graphical PI level-control game: tune Kp and Ki on four tanks to meet overshoot, settling and disturbance specs, from a fast small tank to a calm surge tank.">
+<link rel="canonical" href="https://www.engineerzcorner.com/tune-the-tank">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Tune the Tank: PI Level Control Game | Engineerz CorneR">
+<meta property="og:description" content="Tune the PI gains on four tanks and meet the specs before the draw-off hits.">
+<meta property="og:url" content="https://www.engineerzcorner.com/tune-the-tank">
+<meta property="og:image" content="https://www.engineerzcorner.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tune the Tank: PI Level Control Game | Engineerz CorneR">
+<meta name="twitter:description" content="Tune the PI gains on four tanks and meet the specs before the draw-off hits.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/common-blocks.css">
+<link rel="stylesheet" href="tune-the-tank.inline.css">
+<link rel="stylesheet" href="assets/share-result.css">
+<link rel="stylesheet" href="assets/sidebars.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.engineerzcorner.com/"},
+    {"@type":"ListItem","position":2,"name":"Tune the Tank","item":"https://www.engineerzcorner.com/tune-the-tank"}
+  ]
+}
+</script>
+</head>
+<body>
+<style>
+.ec-crumb-bar{background:#0C0F1E;border-bottom:1px solid rgba(255,255,255,.08);}
+.ec-crumb-inner{max-width:900px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono","SF Mono",Consolas,ui-monospace,monospace;font-size:10.5px;letter-spacing:.03em;flex-wrap:wrap;}
+.ec-crumb-inner a{color:#8F92B8;text-decoration:none;}
+.ec-crumb-inner a:hover{color:#5FA0FF;}
+.ec-crumb-sep{color:#4A4D68;}
+.ec-crumb-current{color:#5FA0FF;font-weight:600;}
+@media(max-width:480px){.ec-crumb-inner{font-size:9.5px;padding:6px 14px;gap:5px;}}
+</style>
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="./">Home</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Tune the Tank</span></div></nav>
+
+
+<nav class="tt-nav">
+  <span class="tt-nav-word">Engineerz <span>CorneR</span></span>
+  <a class="tt-back" href="games">← All games</a>
+</nav>
+
+<div class="tt-arena">
+<div class="tt-arena-grid"></div>
+<div class="wrap">
+
+  <div class="tt-hero">
+    <div class="tt-hero-inner">
+      <div class="tt-eyebrow"><span class="tt-eyebrow-dot"></span> Process control game</div>
+      <h1 class="tt-title">Tune the <span class="glow">Tank</span></h1>
+      <p class="tt-sub">Set the proportional and integral gains, press run, and watch the tank fill and take a sudden draw-off. Meet the specs for overshoot, settling time and disturbance dip on four very different tanks.</p>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div class="tt-card" id="startScreen">
+    <div class="tt-start-stats">
+      <span class="tt-chip" id="starTotal">Stars: <b>0 / 12</b></span>
+      <span class="tt-chip">4 tanks</span>
+    </div>
+    <ul class="tt-how">
+      <li><span class="tt-how-num">1</span><span>The tank starts at 20% and must reach <b>55%</b>. At 60 s a sudden draw-off opens the outlet for 9 s.</span></li>
+      <li><span class="tt-how-num">2</span><span>You set <b>Kp</b> (reacts to the error) and <b>Ki</b> (removes the offset). Each tank has three specs, one star per spec met.</span></li>
+      <li><span class="tt-how-num">3</span><span>Two specs let you advance. Gains do not transfer between tanks: a tank is an integrator, so its valve gain sets what works.</span></li>
+    </ul>
+    <div class="tt-levels" id="levels"></div>
+    <button class="ecs-share-btn ecs-dark" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> Share my stars</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="hidden" id="gameScreen">
+    <div class="tt-card">
+      <span class="tt-bank-tag" style="--disc-color:#A3E635;">Level control</span>
+      <h2 class="tt-bank-title" id="lvTitle">&mdash;</h2>
+      <p class="tt-note" id="lvNote">&mdash;</p>
+      <div id="specs"></div>
+      <div class="tt-stage"><canvas id="cv" aria-label="Tank level and inlet valve against time"></canvas></div>
+      <div class="tt-ctl"><label>Kp (proportional gain) <b id="kpVal">&mdash;</b></label><input type="range" id="kpIn" min="0.5" max="20" step="0.5" value="4"></div>
+      <div class="tt-ctl"><label>Ki (integral gain) <b id="kiVal">&mdash;</b></label><input type="range" id="kiIn" min="0" max="3" step="0.05" value="0.3"></div>
+      <details class="tt-hint"><summary>Hint: what the maths says</summary><p id="hint">&mdash;</p></details>
+      <div style="height:8px;"></div>
+      <button class="tt-btn" id="runBtn">Run</button>
+      <div class="tt-fb hidden" id="res"></div>
+      <div style="height:10px;"></div>
+      <button class="tt-btn hidden" id="nextBtn">Next tank</button>
+      <div style="height:10px;"></div>
+      <button class="tt-btn ghost" id="menuBtn">All tanks</button>
+    </div>
+  </div>
+
+  <div class="reftable-section">
+    <h2>About Tune the Tank</h2>
+    <p class="reftable-note">The model is a pure integrator, level change = (inlet &minus; outlet) &times; valve gain, with first-order valve lag and a PI controller that stops integrating when the valve is saturated. The specs and the three scenarios are teaching targets, not a tuning method for a real loop.</p>
+    <p class="reftable-note">The theory behind the hints is in <a href="posts/level-control-integrating-process-pi-tuning-explained">Level Control of an Integrating Process</a>, and you can explore the default tank in the <a href="automation/level-control-simulator">level control simulator</a>.</p>
+  </div>
+
+  <div class="tt-footer">More reference material lives in the <a href="./">discipline hubs</a>.</div>
+
+</div>
+</div>
+
+<div class="tt-toast" id="toast"></div>
+
+<script src="tune-the-tank.inline.js"></script>
+<script src="assets/share-result.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  ecShareSetup(document.getElementById("shareBtn"), function () {
+    var stars = document.getElementById("starTotal").textContent.replace("Stars:","").trim();
+    return {
+      title: "Tune the Tank — Engineerz CorneR",
+      text: "I have " + stars + " stars in Tune the Tank \u26A1 Can you beat me?",
+      url: "https://www.engineerzcorner.com/tune-the-tank"
+    };
+  });
+});
+</script>
+
+<a href="./" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference calculators, used at your own judgement; verify against applicable codes.</div>
+  <div><a href="about">About</a> &nbsp;·&nbsp; <a href="contact">Contact</a> &nbsp;·&nbsp; <a href="privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="changelog">Changelog</a> &nbsp;·&nbsp; <a href="feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
