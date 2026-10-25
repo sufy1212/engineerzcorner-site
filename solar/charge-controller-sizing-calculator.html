@@ -123,6 +123,14 @@
 
 
 
+    <div class="reftable-section" data-explainer="1">
+    <h2>PWM and MPPT Checks Explained</h2>
+    <p class="reftable-note">A PWM controller connects the array almost directly to the battery, so it is sized on current only. The minimum rating is the array short-circuit current (Isc) times a safety factor, typically 1.25. An array with an Isc of 8.5 A needs a controller rated at least 8.5 &times; 1.25 = 10.6 A, so choose the next standard size up.</p>
+    <p class="reftable-note">An MPPT controller steps the array voltage down to the battery voltage, so it has two checks. The first is output current: array power divided by battery voltage, with a 1.25 margin. A 1,000 W array on a 24 V bank gives 1000 &divide; 24 &times; 1.25 = 52 A.</p>
+    <p class="reftable-note"><strong>The voltage check.</strong> The second check is that the array's open-circuit voltage never exceeds the controller's maximum input voltage. Panel voltage rises as temperature falls, so the check must use the cold-adjusted Voc, not the datasheet STC value. Take the correction from your panel's Voc temperature coefficient and the lowest expected site temperature, then multiply by the number of panels in series. If the result is above the controller's limit, reduce the series count or choose a higher-voltage controller. A controller damaged by overvoltage on a cold morning is a common and avoidable failure.</p>
+    <p class="reftable-note"><strong>Choosing between them.</strong> PWM needs the array voltage to match the battery bank, while MPPT can accept a higher array voltage and usually harvests more energy. See <a href="../posts/mppt-vs-pwm-solar-charge-controllers">MPPT vs PWM charge controllers</a> for the trade-offs. Confirm all limits against the controller's datasheet.</p>
+  </div>
+
   <footer>Charge controller sizing — a first-pass check using common safety-factor rules of thumb, not a substitute for the specific manufacturer's datasheet and installation manual. <a href="./">&larr; Solar Index</a></footer>
 </div>
 </main>

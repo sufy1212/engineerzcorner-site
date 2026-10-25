@@ -133,6 +133,14 @@
 
 
 
+    <div class="reftable-section" data-explainer="1">
+    <h2>Why DC Voltage Drop Matters</h2>
+    <p class="reftable-note">The drop is &Delta;V = 2 &times; L &times; I &times; &rho; &divide; A, where L is the one-way length, the factor 2 covers the out-and-back conductors, &rho; is the resistivity (0.0175 &Omega;&middot;mm&sup2;/m for copper, 0.0282 for aluminum in this tool) and A is the cross-section in mm&sup2;. The percentage is the drop divided by the system voltage.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A 20 A circuit with a 10 m one-way run in 4 mm&sup2; copper on a 24 V system drops 2 &times; 10 &times; 20 &times; 0.0175 &divide; 4 = 1.75 V, which is 7.3%. To hold the drop to 3%, the minimum area is 2 &times; 10 &times; 20 &times; 0.0175 &divide; (24 &times; 0.03) = 9.7 mm&sup2;, so the next standard size, 10 mm&sup2;, is the choice.</p>
+    <p class="reftable-note"><strong>Why low voltage hurts.</strong> The same 1.75 V is only 0.7% on a 230 V circuit, so low-voltage battery-bank wiring needs much thicker cable than AC runs of the same current and length. The 2&ndash;3% target is a common guideline, and your local rules may set a different one.</p>
+    <p class="reftable-note"><strong>What it leaves out.</strong> This checks voltage drop only, not the current-carrying capacity. Cable ampacity, temperature, grouping and protective-device limits are separate checks, and the resistivity here is at a standard temperature, so a hot cable drops more. Read <a href="../posts/dc-cable-size-selection-pv-systems">DC cable size selection for PV systems</a> and the <a href="../posts/cable-derating-factors-worked-through-explained">cable derating factors</a> post.</p>
+  </div>
+
   <footer>DC cable sizing — a first-pass check against a common 2–3% voltage drop guideline, not a substitute for local wiring regulations or a manufacturer's ampacity table. <a href="./">&larr; Solar Index</a></footer>
 </div>
 </main>
