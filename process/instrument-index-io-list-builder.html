@@ -148,7 +148,7 @@
     <details>
       <summary>How this is calculated</summary>
       <div class="formula-note">Cards needed (per type) = ceil(point count &divide; points per card)</div>
-      <div class="hint" style="margin-top:8px;">This is a planning-stage point count, not a final I/O architecture — it doesn't account for spare/spartial capacity philosophy, redundant I/O, HART multiplexing, safety-rated (SIL) I/O kept on separate cards from standard I/O, or a specific vendor's actual card point density. Use it to size a rough card count early, then confirm against the selected platform's real module specifications.</div>
+      <div class="hint" style="margin-top:8px;">This is a planning-stage point count, not a final I/O architecture — it doesn't account for spare-capacity philosophy, redundant I/O, HART multiplexing, safety-rated (SIL) I/O kept on separate cards from standard I/O, or a specific vendor's actual card point density. Use it to size a rough card count early, then confirm against the selected platform's real module specifications.</div>
     </details>
   </div>
 
@@ -167,6 +167,15 @@
       <label for="ioOutput">Instrument index / I/O list</label>
       <textarea id="ioOutput" rows="14" readonly style="width:100%;background:var(--sheet-2);border:1px solid var(--line);color:var(--ink);font-family:var(--font-mono);font-size:11.5px;padding:10px;border-radius:5px;"></textarea>
     </div>
+  </div>
+
+    <div class="reftable-section">
+    <h2>How an Instrument Index Becomes an I/O List</h2>
+    <p class="reftable-note">The instrument index is the register of every field instrument and control device on a project, one row per tag. Tags usually follow ISA 5.1 style naming, where the first letter gives the measured variable and the following letters the function: FT for a flow transmitter, PT for a pressure transmitter, LT for a level transmitter, and so on. Instruments that work together share a loop number, which is how the P&amp;ID, the loop drawing and the I/O list are tied together.</p>
+    <p class="reftable-note"><strong>Counting points by signal type.</strong> Each connection to the control system uses one I/O point of a given type. A 4-20 mA transmitter is typically one analog input (AI). A control valve positioner is typically one analog output (AO), and some designs add an AI for position feedback. A pushbutton, level switch or limit switch is a discrete input (DI), and a motor start command or solenoid is a discrete output (DO). An on/off valve with two limit switches commonly needs one DO and two DI, and a motor starter often needs a start DO plus run and fault DI. These are common patterns, so confirm each against the project's control philosophy and the vendor's wiring requirements. See <a href="../posts/4-20ma-current-loop-basics">4-20 mA current loop basics</a> for how the analog signals work.</p>
+    <p class="reftable-note"><strong>Why cards are counted per type.</strong> I/O cards are type-specific, so each signal type is rounded up to whole cards separately. With 16 points per card, 20 AI and 10 DI need 2 + 1 = 3 cards, even though 30 points divided by 16 would suggest 2. This is why the estimate above is shown per type and then totalled.</p>
+    <p class="reftable-note"><strong>Spare capacity.</strong> Projects normally reserve spare points for later additions, and the percentage comes from the owner's or contractor's standard. This builder does not add spare automatically, so apply your project's spare allowance to the point counts, or lower the points-per-card setting to reflect usable channels, before reading the card total.</p>
+    <p class="reftable-note"><strong>What this does not cover.</strong> Safety-rated I/O is normally kept on separate cards from standard I/O (see <a href="../posts/functional-safety-sil-explained">functional safety and SIL explained</a>), and fieldbus or serial devices are counted as communication links rather than hard-wired points (see <a href="../posts/modbus-vs-profibus-vs-fieldbus-explained">Modbus vs Profibus vs fieldbus</a>). For signal ranges, use the <a href="../automation/signal-scaling">signal scaling tool</a>, and for choosing the instrument type itself, the <a href="../automation/instrument-selector">instrument selector</a>.</p>
   </div>
 
   <footer>Planning-stage point count only — verify actual I/O card density and architecture against the selected control system platform. Nothing here is saved anywhere — copy or export before closing the tab. <a href="./">&larr; Process Index</a></footer>
