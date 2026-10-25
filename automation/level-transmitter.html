@@ -175,6 +175,14 @@
       <div class="hint" style="margin-top:8px;">Basic open-tank, direct-mount case only — a wet-leg (remote seal / capillary) installation or a sealed/pressurized tank needs the reference-leg pressure and any seal-fill head added in separately (zero and span elevation/suppression).</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Ranging a DP Level Transmitter</h2>
+    <p class="reftable-note">A differential-pressure transmitter measures level through the pressure of the liquid column above it. For an open tank with the transmitter mounted at the 0% level point, the high-pressure side sees the column of liquid and the low-pressure side is vented to atmosphere. The span is therefore &Delta;P = &rho; &times; g &times; H, where H is the vertical distance between the 0% and 100% level points.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> For water (1,000 kg/m&sup3;) over a 3 m span, &Delta;P = 1000 &times; 9.81 &times; 3 = 29.43 kPa. That is 294 mbar or about 118 inH&#8322;O. The transmitter is calibrated so 0 kPa gives 4 mA and 29.43 kPa gives 20 mA, and because the response is linear, 50% level reads 12 mA. A lighter fluid at 800 kg/m&sup3; over the same span gives only 23.54 kPa.</p>
+    <p class="reftable-note"><strong>Density matters.</strong> The calibration assumes one fixed density. If the process fluid's density changes with temperature or composition, the level reading drifts by the same percentage, even though the actual level has not moved. Use the density at operating conditions, not the figure for cold water.</p>
+    <p class="reftable-note"><strong>When this is not enough.</strong> Many real installations are closed tanks, or use a wet leg or capillary-connected seal. Then the transmitter needs zero elevation or suppression to account for the reference leg and fill fluid head, which this basic case leaves out. To convert the 4&ndash;20 mA signal to engineering units, see <a href="signal-scaling">signal scaling</a> and <a href="../posts/4-20ma-current-loop-basics">4-20 mA current loop basics</a>.</p>
+  </div>
+
   <footer>Ranging figure for the transmitter span only — confirm mounting geometry, wet/dry leg and any suppression/elevation before final configuration.</footer>
 
 </div>
