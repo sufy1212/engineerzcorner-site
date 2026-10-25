@@ -112,6 +112,27 @@
   "a": "added"
  },
  {
+  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+  "u": "civil/pipe-flow-capacity",
+  "d": "2026-10-25",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Staircase Geometry Check",
+  "u": "civil/staircase-geometry",
+  "d": "2026-10-25",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
+  "u": "civil/trench-safe-slope",
+  "d": "2026-10-25",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -777,13 +798,6 @@
   "a": "updated"
  },
  {
-  "t": "Circular Pipe Flow Capacity (Manning's Equation)",
-  "u": "civil/pipe-flow-capacity",
-  "d": "2026-10-05",
-  "c": "Civil",
-  "a": "updated"
- },
- {
   "t": "Concrete Volume & Material Estimator",
   "u": "civil/concrete-volume-estimator",
   "d": "2026-10-05",
@@ -793,13 +807,6 @@
  {
   "t": "Slab-on-Grade Quick Thickness",
   "u": "civil/slab-on-grade-thickness",
-  "d": "2026-10-05",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Staircase Geometry Check",
-  "u": "civil/staircase-geometry",
   "d": "2026-10-05",
   "c": "Civil",
   "a": "updated"
@@ -849,13 +856,6 @@
  {
   "t": "Retaining Wall Stability",
   "u": "civil/retaining-wall",
-  "d": "2026-10-05",
-  "c": "Civil",
-  "a": "updated"
- },
- {
-  "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
-  "u": "civil/trench-safe-slope",
   "d": "2026-10-05",
   "c": "Civil",
   "a": "updated"

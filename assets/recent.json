@@ -1,5 +1,20 @@
 [
   {
+    "t": "Circular Pipe Flow Capacity (Manning's Equation)",
+    "u": "civil/pipe-flow-capacity",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Staircase Geometry Check",
+    "u": "civil/staircase-geometry",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
+    "u": "civil/trench-safe-slope",
+    "d": "2026-10-25"
+  },
+  {
     "t": "DP Level Transmitter Ranging",
     "u": "automation/level-transmitter",
     "d": "2026-10-25"
@@ -32,21 +47,6 @@
   {
     "t": "Pipe Wall Thickness (ASME B31.3)",
     "u": "posts/pipe-wall-thickness-asme-b31-3-explained",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Relay Basics: Construction, Working Principle & Contact Types",
-    "u": "posts/relay-basics-construction-working-principle-explained",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "System Voltages Explained: Low, Medium & High Voltage Levels and Phases",
-    "u": "posts/system-voltages-low-medium-high-explained",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "RFI Log",
-    "u": "pm/rfi-log",
     "d": "2026-10-25"
   }
 ]
