@@ -29,3 +29,8 @@
 # sitemap.xml, and this file were previously fighting that behavior with
 # redirects pointing the opposite direction, which produced a redirect loop
 # on every directory page and was why Google couldn't index them.
+
+# Google crawled a bare "/kWh" (stray external reference, no internal link
+# uses it). Send it to the closest relevant page instead of a 404.
+/kWh /electrical/energy-cost-calculator 301
+/kwh /electrical/energy-cost-calculator 301
