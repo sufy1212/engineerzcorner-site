@@ -138,6 +138,14 @@
       <div class="hint" style="margin-top:8px;">Assumes all cables are the same outer diameter — for mixed cable sizes, sum each cable's individual area separately. Fill limits are a mechanical-pull and heat-dissipation guideline, not a substitute for a full derating/ampacity check on the cables themselves.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Checking Conduit Fill</h2>
+    <p class="reftable-note">The tool compares the total cross-sectional area of the cables with the internal area of the conduit and shows the result as a percentage. The limit depends on the number of cables: the options here are 53% for one cable, 31% for two cables and 40% for three or more, which follow the common wiring-code convention. Confirm the limit in the code that governs your project.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A conduit with a 27 mm bore has an internal area of 573 mm&sup2;. Three cables of 10 mm outside diameter take up 236 mm&sup2;, which is 41.2% and just over the 40% limit. Three cables of 9 mm diameter take up 191 mm&sup2;, or 33.3%, which passes. A single millimetre of cable diameter changes the answer, so use the actual outer diameter from the datasheet.</p>
+    <p class="reftable-note"><strong>Use the bore, not the trade size.</strong> The nominal conduit size is not the internal diameter, and the real bore differs between conduit types and wall thicknesses. Take it from the manufacturer's data. If the cables are different sizes, add up each cable's own area instead of using one diameter multiplied by the count.</p>
+    <p class="reftable-note"><strong>Why a limit exists.</strong> Free space makes the pull possible without damaging insulation and gives the cables room to shed heat. A fill that passes does not mean the cables are rated for the current, because grouping in conduit also lowers ampacity. See <a href="../posts/conduit-fill-why-the-percentage-limit-exists">why the fill limit exists</a> and check the derating separately.</p>
+  </div>
+
   <footer>Cross-sectional fill check only — verify limits against your governing wiring code before final selection.</footer>
 </div>
 

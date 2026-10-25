@@ -122,6 +122,14 @@
       <div class="hint" style="margin-top:8px;">The simplified Dwight formula for a single vertical rod driven flush with grade. Real-world resistance also depends on soil moisture, temperature and compaction, and is normally confirmed with a fall-of-potential earth resistance test after installation.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>What Drives Rod Resistance</h2>
+    <p class="reftable-note">The tool uses the simplified Dwight formula, R = (&rho; &divide; 2&pi;L) &times; [ln(4L/d) &minus; 1], for one vertical rod driven flush with the ground. Soil resistivity &rho; sets the scale, rod length L has the largest effect, and diameter d has only a small one.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> In 100 &Omega;&middot;m soil, a 3 m rod 16 mm in diameter gives about 29.8 &Omega;. Doubling the length to 6 m drops it to about 16.7 &Omega;. Doubling the diameter to 32 mm only reaches about 26.1 &Omega;. When more earth conductance is needed, a longer rod or more rods help far more than a thicker one.</p>
+    <p class="reftable-note"><strong>Multiple rods.</strong> Two rods in parallel do not halve the resistance unless they are spaced well apart. When they are close, their current paths overlap and the improvement is smaller. A common guide is to space rods at least their own length apart, and this single-rod tool does not model that interaction.</p>
+    <p class="reftable-note"><strong>Soil is the big variable.</strong> Resistivity changes with moisture, temperature and soil type, so the result in a wet season can be well below the dry-season value. Measure the installed resistance with a fall-of-potential test and compare it against the target set by your code or utility. Read <a href="../posts/earthing-grounding-systems-explained">earthing and grounding systems explained</a> for the wider design, and use the <a href="earthing-grid-resistance">earthing grid resistance tool</a> for a mesh.</p>
+  </div>
+
   <footer>Single-rod estimate only — multi-rod arrays, ground grids and soil variation need a full earthing system design.</footer>
   <div style="margin:18px 0 4px;padding:14px 16px;border:1px solid #E3E6E9;border-radius:10px;background:#F5F7F8;">
     <a href="../posts/earthing-grounding-systems-explained" style="text-decoration:none;color:#3E8C97;font-size:13px;">📖 Read: Earthing &amp; Grounding Systems Explained — why resistance is the whole game &rarr;</a>
