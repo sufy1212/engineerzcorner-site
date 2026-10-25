@@ -182,6 +182,34 @@
   "a": "updated"
  },
  {
+  "t": "Dilution Purge Gas Sizing",
+  "u": "process/purge-gas-sizing",
+  "d": "2026-10-25",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
+  "t": "Belt / Pulley Drive",
+  "u": "mechanical/belt-drive-calculator",
+  "d": "2026-10-25",
+  "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Risk Register",
+  "u": "pm/risk-register",
+  "d": "2026-10-25",
+  "c": "Project Management",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Cavitation/Flashing Check",
+  "u": "process/cavitation-flashing-check",
+  "d": "2026-10-25",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -714,13 +742,6 @@
   "a": "updated"
  },
  {
-  "t": "Dilution Purge Gas Sizing",
-  "u": "process/purge-gas-sizing",
-  "d": "2026-10-15",
-  "c": "Process",
-  "a": "updated"
- },
- {
   "t": "Lighting / Illumination Sizing",
   "u": "electrical/lighting-illumination-sizing",
   "d": "2026-10-13",
@@ -1183,13 +1204,6 @@
   "a": "updated"
  },
  {
-  "t": "Belt / Pulley Drive",
-  "u": "mechanical/belt-drive-calculator",
-  "d": "2026-10-05",
-  "c": "Mechanical",
-  "a": "updated"
- },
- {
   "t": "Duct Sizing & Air Changes",
   "u": "mechanical/duct-sizing-calculator",
   "d": "2026-10-05",
@@ -1330,13 +1344,6 @@
   "a": "updated"
  },
  {
-  "t": "Risk Register",
-  "u": "pm/risk-register",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
   "t": "Action / Task Tracker",
   "u": "pm/task-tracker",
   "d": "2026-10-05",
@@ -1374,13 +1381,6 @@
  {
   "t": "Valve Type Selector",
   "u": "process/valve-type-selector",
-  "d": "2026-10-05",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Cavitation/Flashing Check",
-  "u": "process/cavitation-flashing-check",
   "d": "2026-10-05",
   "c": "Process",
   "a": "updated"
