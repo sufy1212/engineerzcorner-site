@@ -1,5 +1,12 @@
 [
  {
+  "t": "Level Control of an Integrating Process",
+  "u": "posts/level-control-integrating-process-pi-tuning-explained",
+  "d": "2026-10-22",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
   "t": "Tune the Tank",
   "u": "tune-the-tank",
   "d": "2026-10-20",
@@ -68,13 +75,6 @@
   "d": "2026-10-19",
   "c": "Blog",
   "a": "added"
- },
- {
-  "t": "Level Control of an Integrating Process",
-  "u": "posts/level-control-integrating-process-pi-tuning-explained",
-  "d": "2026-10-17",
-  "c": "Blog",
-  "a": "updated"
  },
  {
   "t": "Grid-Tied, Hybrid or Off-Grid Solar",

@@ -44,6 +44,7 @@
   <url><loc>https://www.engineerzcorner.com/contact</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/coordination-puzzle</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/defect-finder</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/discipline-cards-v2</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/</loc><lastmod>2026-10-05</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/arc-flash-incident-energy</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/electrical/awg-mm2-converter</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -268,7 +269,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/k-rated-transformer-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained</loc><lastmod>2026-10-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lighting-design-beyond-lux-en-12464-1-en-1838</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lighting-lumen-method-luminaire-count</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
@@ -392,9 +393,9 @@
   <url><loc>https://www.engineerzcorner.com/process/vessel-volume-level</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/purge-run</loc><lastmod>2026-10-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/quickfire</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/quiz</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/signal-chain</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-10-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/sitemap</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/</loc><lastmod>2026-10-05</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/battery-soc-simulator</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/solar/charge-controller-sizing-calculator</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>

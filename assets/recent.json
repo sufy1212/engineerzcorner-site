@@ -1,5 +1,10 @@
 [
   {
+    "t": "Level Control of an Integrating Process",
+    "u": "posts/level-control-integrating-process-pi-tuning-explained",
+    "d": "2026-10-22"
+  },
+  {
     "t": "Calendar Days vs Business Days Explained",
     "u": "posts/calendar-days-vs-business-days-contract-deadlines-explained",
     "d": "2026-10-20"
@@ -42,11 +47,6 @@
   {
     "t": "Arc Flash Hazard Basics",
     "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
-    "d": "2026-10-17"
-  },
-  {
-    "t": "BESS Types & Components Explained",
-    "u": "posts/bess-types-components-explained",
     "d": "2026-10-17"
   }
 ]
