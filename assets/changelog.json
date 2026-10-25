@@ -42,6 +42,13 @@
   "a": "updated"
  },
  {
+  "t": "Instrument Index / I/O List Builder",
+  "u": "process/instrument-index-io-list-builder",
+  "d": "2026-10-25",
+  "c": "Process",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -1339,13 +1346,6 @@
  {
   "t": "Process Line Sizing",
   "u": "process/line-sizing-velocity",
-  "d": "2026-10-05",
-  "c": "Process",
-  "a": "updated"
- },
- {
-  "t": "Instrument Index / I/O List Builder",
-  "u": "process/instrument-index-io-list-builder",
   "d": "2026-10-05",
   "c": "Process",
   "a": "updated"
