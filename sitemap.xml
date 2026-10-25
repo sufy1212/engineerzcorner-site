@@ -10,7 +10,7 @@
   <url><loc>https://www.engineerzcorner.com/automation/instrument-selector</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/is-entity-loop-calculator</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/level-control-simulator</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/automation/level-transmitter</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/automation/level-transmitter</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/modbus-timing</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/notes</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/automation/orifice-flow-sizing</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
@@ -228,7 +228,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/duct-sizing-velocity-limits-vs-airflow</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/earned-value-management-basics</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/earthing-grounding-systems-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/electrical-panel-fat-checklist</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/electrical-switchgear-protection-devices-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -251,7 +251,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/hira-vs-jsa-vs-sop-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/horizontal-tank-volume-vs-level-heads-explained</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/how-to-read-a-full-pid-worked-walkthrough</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/how-to-select-digital-protection-relay</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/hvac-mep-thumb-rules-formulas-quick-reference</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/hvac-plumbing-default-design-values</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -267,7 +267,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/is-iec-ieee-electrical-standards-reference</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/junction-box-types-parts-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/k-rated-transformer-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained</loc><lastmod>2026-10-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lighting-design-beyond-lux-en-12464-1-en-1838</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/lighting-lumen-method-luminaire-count</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -295,10 +295,10 @@
   <url><loc>https://www.engineerzcorner.com/posts/pid-legend-sheet-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pid-piping-instrumentation-diagram-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-flow-capacity-mannings-equation-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/pipe-routing-guide-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pipe-thermal-expansion-why-long-runs-move-more</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pipe-thermal-expansion-why-long-runs-move-more</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/plc-components-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/plc-vs-dcs-vs-scada-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/plc-vs-ddc-key-differences</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
@@ -319,7 +319,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/rational-method-peak-runoff-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/rebar-development-length-lap-splice-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/refrigerant-types-r410a-to-a2l-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/relay-coil-current-duty-cycle-flyback-protection-explained</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/relief-valve-sizing-api520-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/resource-loading-utilization-leveling-vs-smoothing-explained</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
@@ -352,7 +352,7 @@
   <url><loc>https://www.engineerzcorner.com/posts/superheat-subcooling-refrigerant-charge-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/supply-return-air-terminal-sizing-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/surge-protection-spd-lightning-protection-explained</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/tank-breathing-losses-api2000-explained</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/tap-changer-distribution-transformer-explained</loc><lastmod>2026-10-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.engineerzcorner.com/posts/tape-measure-fractions-to-decimals-explained</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>

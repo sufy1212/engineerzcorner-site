@@ -4,6 +4,62 @@
   <link>https://www.engineerzcorner.com/posts/</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Earthing vs. Grounding: Same Earth Connection, Different Job</title>
+    <link>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained</guid>
+    <description>Earthing and grounding both connect to earth, but serve different purposes — earthing protects people from shock, grounding protects the electrical system.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>How to Read a Wiring Diagram (Beginner's Guide)</title>
+    <link>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide</link>
+    <guid>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide</guid>
+    <description>What a wiring diagram shows, how it differs from a schematic and a single line diagram, the common symbols and how wires are numbered: a beginner&amp;#x27;s guide.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>kW, kVA, and kVAR: What Actually Separates Them</title>
+    <link>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/kw-kva-kvar-difference-explained</guid>
+    <description>Real power, apparent power, and reactive power explained through the power triangle.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies</title>
+    <link>https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime</link>
+    <guid>https://www.engineerzcorner.com/posts/pipe-flow-head-loss-reynolds-number-regime</guid>
+    <description>Pipe flow velocity, Reynolds number, friction factor and head loss.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess</title>
+    <link>https://www.engineerzcorner.com/posts/pipe-thermal-expansion-why-long-runs-move-more</link>
+    <guid>https://www.engineerzcorner.com/posts/pipe-thermal-expansion-why-long-runs-move-more</guid>
+    <description>Linear thermal expansion of a pipe run from material, length and temperature change.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>Pipe Wall Thickness (ASME B31.3)</title>
+    <link>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/pipe-wall-thickness-asme-b31-3-explained</guid>
+    <description>ASME B31.3 pressure design thickness, corrosion allowance and the 12.5% mill tolerance, with a worked NPS 6 example and schedule selection.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>Relay Basics: Construction, Working Principle &amp; Contact Types</title>
+    <link>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/relay-basics-construction-working-principle-explained</guid>
+    <description>What a relay is, how the coil and armature switch a separate power circuit, NO/NC/CO contact types, common applications, and trade-offs vs solid-state relays.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
+    <title>System Voltages Explained: Low, Medium &amp; High Voltage Levels and Phases</title>
+    <link>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/system-voltages-low-medium-high-explained</guid>
+    <description>Voltage classification from ELV to UHV explained &amp;mdash; IEC vs IEEE ranges, standard system voltages used worldwide, and single-phase vs three-phase configurations.</description>
+    <pubDate>Sun, 25 Oct 2026 19:43:52 GMT</pubDate>
+  </item>
+  <item>
     <title>Level Control of an Integrating Process</title>
     <link>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained</link>
     <guid>https://www.engineerzcorner.com/posts/level-control-integrating-process-pi-tuning-explained</guid>
@@ -130,13 +186,6 @@
     <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
   <item>
-    <title>How to Read a Wiring Diagram (Beginner's Guide)</title>
-    <link>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide</link>
-    <guid>https://www.engineerzcorner.com/posts/how-to-read-a-wiring-diagram-beginners-guide</guid>
-    <description>What a wiring diagram shows, how it differs from a schematic and a single line diagram, the common symbols and how wires are numbered: a beginner&amp;#x27;s guide.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
     <title>IEC 61850 Digital Substation Protocol Explained</title>
     <link>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained</link>
     <guid>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained</guid>
@@ -162,55 +211,6 @@
     <link>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics</link>
     <guid>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics</guid>
     <description>What a load flow study calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and coordination studies, and how to read results.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Markup vs Margin Explained</title>
-    <link>https://www.engineerzcorner.com/posts/markup-vs-margin-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/markup-vs-margin-explained</guid>
-    <description>Markup and margin use the same two numbers, cost and price, but divide by different ones, so one percentage means two different prices.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Modbus vs PROFIBUS vs Foundation Fieldbus Explained</title>
-    <link>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/modbus-vs-profibus-vs-fieldbus-explained</guid>
-    <description>Modbus RTU/TCP, PROFIBUS DP/PA and Foundation Fieldbus H1 compared: physical layer, baud rate, devices, distance, topology and where each is used.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>NPSH Available Explained</title>
-    <link>https://www.engineerzcorner.com/posts/npsh-available-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/npsh-available-explained</guid>
-    <description>NPSHa term by term: source pressure head, static elevation, suction friction losses and vapor pressure, and why temperature quietly decides marginal cases.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Order-of-Magnitude Checks</title>
-    <link>https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/order-of-magnitude-sanity-check-explained</guid>
-    <description>A one-line estimate rounded to one significant figure catches most decimal-point and unit-slip errors before they reach a real calculation.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Power Semiconductors: Si, SiC &amp; GaN</title>
-    <link>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/power-semiconductor-types-si-sic-gan-explained</guid>
-    <description>Silicon IGBT/MOSFET, SiC and GaN power semiconductors compared on bandgap, switching frequency, voltage range and losses, with selection by application.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Pump Types Explained: Centrifugal to PD</title>
-    <link>https://www.engineerzcorner.com/posts/pump-types-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/pump-types-explained</guid>
-    <description>What a pump actually does, eight common pump types, key parts, a centrifugal-vs-PD comparison, a selection checklist, and common failure points.</description>
-    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
-  </item>
-  <item>
-    <title>Rational Method: How Peak Stormwater Runoff Is Estimated</title>
-    <link>https://www.engineerzcorner.com/posts/rational-method-peak-runoff-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/rational-method-peak-runoff-explained</guid>
-    <description>Q = C × i × A looks simple, but the runoff coefficient, time of concentration and design storm decide whether the peak flow you size for is realistic.</description>
     <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
 </channel></rss>
