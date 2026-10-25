@@ -150,6 +150,14 @@
       <div class="hint" style="margin-top:8px;">Ignores belt slip (typically 1–3% for V-belts, negligible for timing belts) and doesn't size the belt itself — cross-check center distance, belt length and number of belts against the manufacturer's selection charts.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Speed, Torque and Belt Speed</h2>
+    <p class="reftable-note">The driven speed follows the diameter ratio: N2 = N1 &times; D1 &divide; D2. The belt pitch-line speed is &pi; &times; D1 &times; N1 &divide; 60, and the torque on each shaft comes from T = 9550 &times; P &divide; N, with power in kW, speed in rpm and torque in N&middot;m.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A 100 mm driver pulley at 1,450 rpm driving a 200 mm pulley gives a driven speed of 725 rpm. The belt runs at about 7.6 m/s. Transmitting 5.5 kW needs 36.2 N&middot;m on the driver shaft and 72.4 N&middot;m on the driven shaft. The speed halves and the torque doubles, because power is the same on both shafts.</p>
+    <p class="reftable-note"><strong>Belt speed check.</strong> Each belt type has a practical speed limit, and the tool flags a belt that exceeds it. The limits shown here are typical values, so check the manufacturer's figure for your section.</p>
+    <p class="reftable-note"><strong>What it leaves out.</strong> The speed figure ignores belt slip, which is typically 1&ndash;3% on V-belts and negligible on timing belts, so a V-belt drive runs slightly slower than the ideal ratio. The tool also does not size the belt itself. Belt selection needs the centre distance, wrap angle, service factor and the manufacturer's rating tables. For why the ratio and the tension are separate checks, read <a href="../posts/belt-drive-sizing-speed-ratio-vs-tension">belt drive sizing</a>, or try the <a href="belt-drive-simulator">belt drive simulator</a>.</p>
+  </div>
+
   <footer>Drive-ratio and torque estimate — confirm against the belt manufacturer's rating tables before finalising the selection.</footer>
 </div>
 
