@@ -35,6 +35,13 @@
   "a": "updated"
  },
  {
+  "t": "RFI Log",
+  "u": "pm/rfi-log",
+  "d": "2026-10-25",
+  "c": "Project Management",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -1290,13 +1297,6 @@
  {
   "t": "Team Directory",
   "u": "pm/team-directory",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
-  "t": "RFI Log",
-  "u": "pm/rfi-log",
   "d": "2026-10-05",
   "c": "Project Management",
   "a": "updated"
