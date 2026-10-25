@@ -165,6 +165,14 @@
     </div>
     <div class="hint" style="margin:0 16px 16px;">Continuous-rated coils tolerate 100% duty. Intermittent-rated coils (common on some contactors) list a max duty %/on-time — check the datasheet if this exceeds it.</div>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Coil Current and Duty Cycle</h2>
+    <p class="reftable-note">For a DC coil the steady-state current is I = V &divide; R and the power is P = V&sup2; &divide; R. A 24 V coil with 960 &Omega; resistance draws 25 mA and dissipates 0.6 W. Compare that current with the rating of the PLC output or driver that switches it, and add the loads of all coils on one output together.</p>
+    <p class="reftable-note"><strong>Duty cycle.</strong> Duty cycle is the energized time divided by the cycle period. If the coil is on for 5 s of every 20 s, the duty is 25%, it is energized for 15 minutes in each hour, and the time-weighted average power is 0.6 &times; 0.25 = 0.15 W. Continuous-rated coils tolerate 100% duty, but intermittent-rated coils list a maximum on-time, so check the datasheet.</p>
+    <p class="reftable-note"><strong>What this does not include.</strong> The resistance should be the value at working temperature, since a hot copper coil measures higher than a cold one, so cold-resistance figures give slightly high current. AC coils draw a much larger inrush current when they pull in than when they are held, and this simple I = V &divide; R model does not capture that. Switching a DC coil off also produces a voltage spike, which is normally suppressed with a flyback diode or similar device.</p>
+    <p class="reftable-note"><strong>More detail.</strong> For hot-coil resistance and flyback protection options, read <a href="../posts/relay-coil-current-duty-cycle-flyback-protection-explained">relay coil current and flyback protection</a>.</p>
+  </div>
+
   <footer>Steady-state DC coil math (I = V/R, P = V²/R) — AC coils draw a higher inrush current on pickup that this doesn't capture.</footer>
 
 </div>

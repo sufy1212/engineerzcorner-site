@@ -152,6 +152,14 @@
       <div class="hint" style="margin-top:8px;">Resistance→temperature is solved numerically (Newton-Raphson) against the same equation, so both directions stay consistent. This is the standard curve — a real RTD's tolerance class (A/B/AA per IEC 60751) adds an additional ± error band on top.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Pt100 Values and Accuracy</h2>
+    <p class="reftable-note">A Pt100 RTD is a platinum element with a resistance of 100 &Omega; at 0&deg;C that rises with temperature along a standard curve. The standard defines it with the Callendar-Van Dusen equation, which this page solves in both directions. Reference points: 80.31 &Omega; at &minus;50&deg;C, 100.00 &Omega; at 0&deg;C, 138.51 &Omega; at 100&deg;C and 175.86 &Omega; at 200&deg;C.</p>
+    <p class="reftable-note"><strong>Sensitivity.</strong> Near 0&deg;C the resistance changes by about 0.385 &Omega; per &deg;C. That small signal is why wiring matters. In a 2-wire connection the lead resistance adds directly to the sensor, so 1 &Omega; of total lead resistance reads about 2.6&deg;C high. 3-wire and 4-wire connections compensate for the leads, which is why they are used for accurate measurement.</p>
+    <p class="reftable-note"><strong>Tolerance classes.</strong> A real sensor is allowed to deviate from the ideal curve. Under IEC 60751 a Class A element is within &plusmn;(0.15 + 0.002|t|)&deg;C and a Class B element within &plusmn;(0.30 + 0.005|t|)&deg;C, where t is the temperature in &deg;C. At 100&deg;C that is &plusmn;0.35&deg;C for Class A and &plusmn;0.80&deg;C for Class B. This page gives the ideal value, and the tolerance adds to it.</p>
+    <p class="reftable-note"><strong>Check the alpha.</strong> The standard curve here uses &alpha; = 0.00385. A sensor built to a different alpha, such as older variants, will not match these coefficients. For how RTDs compare with thermocouples, read <a href="../posts/rtd-vs-thermocouple-pt100-type-k-explained">RTD vs thermocouple</a>.</p>
+  </div>
+
   <footer>IEC 60751 standard Pt100 curve (α = 0.00385) — not for RTD types with a different alpha (e.g. Pt100 α = 0.003916 to old JIS/DIN variants) without adjusting the coefficients.</footer>
 
 </div>
