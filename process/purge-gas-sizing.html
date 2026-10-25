@@ -147,6 +147,14 @@
       <div class="hint" style="margin-top:8px;">Perfectly mixed dilution model: C(t)/C₀ = exp(−Qt/V), so N = ln(C₀/C₁) turnovers are needed, purge time t = (V/Q)·N, and total purge gas consumed = Q·t = V·N.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>How Dilution Purging Works</h2>
+    <p class="reftable-note">In a well-mixed vessel, fresh purge gas dilutes the contents exponentially: C(t) = C0 &times; exp(&minus;Q t &divide; V). Reaching a target concentration needs N = ln(C0 &divide; C1) vessel turnovers. Purge time is then (V &divide; Q) &times; N, and the total gas used is V &times; N, whatever the flow rate.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> Taking a 10 m&sup3; vessel from 20.9% oxygen down to 2% needs ln(20.9 &divide; 2) = 2.35 turnovers. At 20 m&sup3;/h of nitrogen that is 70 minutes and about 23.5 m&sup3; of gas. Doubling the flow halves the time but uses the same total volume.</p>
+    <p class="reftable-note"><strong>Perfect mixing is optimistic.</strong> Real vessels have dead legs, baffles and short-circuit paths between inlet and outlet, so some regions purge slowly. Add a margin to the calculated time and confirm the end point by measuring oxygen at the slowest-purging point, not just at the vent.</p>
+    <p class="reftable-note"><strong>Target and method.</strong> The target concentration depends on the hazard, such as a limiting oxygen concentration for flammable service or a safe level for entry. Pressure-swing purging can use less gas for some vessels. See <a href="../posts/vessel-purging-dilution-turnovers-loc-explained">vessel purging and inerting explained</a> for target selection and the alternatives.</p>
+  </div>
+
   <footer>Ideal-mixing model — real vessels typically need extra time/volume margin for incomplete mixing and dead zones. <a href="./">← Process Index</a></footer>
 
 </div>

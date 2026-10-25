@@ -146,6 +146,14 @@
       <div class="hint" style="margin-top:8px;">σ = (P1 − Pv) / (P1 − P2). Flashing occurs when P2 ≤ Pv (downstream pressure never recovers above vapor pressure). Cavitation risk rises as σ approaches or falls below the valve's incipient-cavitation sigma σᵢ — a comfortable margin is generally σ ≥ 1.5·σᵢ.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Reading the Sigma Index</h2>
+    <p class="reftable-note">Cavitation happens when the pressure inside a control valve falls below the liquid's vapor pressure and the vapor bubbles then collapse downstream. The service sigma index, &sigma; = (P1 &minus; Pv) &divide; (P1 &minus; P2), compares the margin above vapor pressure with the pressure drop. A lower value means a higher risk.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> With the default values of 150 psia upstream, 60 psia downstream and 5 psia vapor pressure, &sigma; = 145 &divide; 90 = 1.61. Against a valve &sigma;i of 1.5 that is only 7% above the incipient limit, so intermittent cavitation is possible at the edges of the operating range. The tool treats a margin of 1.5 times &sigma;i as comfortable.</p>
+    <p class="reftable-note"><strong>Flashing is different.</strong> If the downstream pressure is at or below the vapor pressure, the liquid stays partly vapor and flashes. Flashing is set by the process pressures, so an anti-cavitation trim does not remove it. For example, 10 psia downstream with 15 psia vapor pressure is flashing. The remedies are different too: hardened or angle valves, or a larger downstream pipe to handle the two-phase flow, rather than an anti-cavitation trim.</p>
+    <p class="reftable-note"><strong>Use the valve's own figure.</strong> The default &sigma;i is a typical value for a standard globe valve, and real incipient and choked values depend on the trim and the manufacturer. Pressures are absolute (psia) and vapor pressure must be taken at the actual process temperature. Read <a href="../posts/cavitation-vs-flashing-control-valve-explained">cavitation vs flashing</a> for the full picture.</p>
+  </div>
+
   <footer>Screening check only — trim-specific σᵢ, σc (choked) and manufacturer sizing software give a definitive answer for a specific valve. <a href="./">← Process Index</a></footer>
 
 </div>
