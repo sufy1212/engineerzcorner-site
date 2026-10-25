@@ -1,5 +1,20 @@
 [
   {
+    "t": "Punch List / Snag Tracker",
+    "u": "pm/punch-list",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Air Changes per Hour",
+    "u": "hvac/air-changes-per-hour-calculator",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Panel GA Maker",
+    "u": "electrical/panel-ga-maker",
+    "d": "2026-10-25"
+  },
+  {
     "t": "Circular Pipe Flow Capacity (Manning's Equation)",
     "u": "civil/pipe-flow-capacity",
     "d": "2026-10-25"
@@ -32,21 +47,6 @@
   {
     "t": "kW, kVA, and kVAR: What Actually Separates Them",
     "u": "posts/kw-kva-kvar-difference-explained",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies",
-    "u": "posts/pipe-flow-head-loss-reynolds-number-regime",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Pipe Thermal Expansion: Why a 100m Run Moves More Than You'd Guess",
-    "u": "posts/pipe-thermal-expansion-why-long-runs-move-more",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Pipe Wall Thickness (ASME B31.3)",
-    "u": "posts/pipe-wall-thickness-asme-b31-3-explained",
     "d": "2026-10-25"
   }
 ]

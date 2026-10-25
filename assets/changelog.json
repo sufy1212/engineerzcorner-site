@@ -133,6 +133,27 @@
   "a": "updated"
  },
  {
+  "t": "Panel GA Maker",
+  "u": "electrical/panel-ga-maker",
+  "d": "2026-10-25",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Air Changes per Hour",
+  "u": "hvac/air-changes-per-hour-calculator",
+  "d": "2026-10-25",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Punch List / Snag Tracker",
+  "u": "pm/punch-list",
+  "d": "2026-10-25",
+  "c": "Project Management",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -875,13 +896,6 @@
   "a": "updated"
  },
  {
-  "t": "Panel GA Maker",
-  "u": "electrical/panel-ga-maker",
-  "d": "2026-10-05",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
   "t": "Single Line Diagram Creator",
   "u": "electrical/sld-creator",
   "d": "2026-10-05",
@@ -1113,13 +1127,6 @@
   "a": "updated"
  },
  {
-  "t": "Air Changes per Hour",
-  "u": "hvac/air-changes-per-hour-calculator",
-  "d": "2026-10-05",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
   "t": "Refrigeration / Chiller Capacity",
   "u": "hvac/chiller-capacity-calculator",
   "d": "2026-10-05",
@@ -1311,13 +1318,6 @@
  {
   "t": "PMP / PMBOK Reference",
   "u": "pm/pmp-pmbok-reference",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
-  "t": "Punch List / Snag Tracker",
-  "u": "pm/punch-list",
   "d": "2026-10-05",
   "c": "Project Management",
   "a": "updated"
