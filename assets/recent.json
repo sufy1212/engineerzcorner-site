@@ -1,5 +1,20 @@
 [
   {
+    "t": "Relay / Contactor Coil Current & Duty Cycle",
+    "u": "automation/relay-coil-sizing",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "RTD (Pt100) Temperature ↔ Resistance",
+    "u": "automation/rtd-conversion",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "CO2 Offset & Environmental Savings Calculator",
+    "u": "solar/co2-offset-calculator",
+    "d": "2026-10-25"
+  },
+  {
     "t": "Punch List / Snag Tracker",
     "u": "pm/punch-list",
     "d": "2026-10-25"
@@ -32,21 +47,6 @@
   {
     "t": "DP Level Transmitter Ranging",
     "u": "automation/level-transmitter",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Earthing vs. Grounding: Same Earth Connection, Different Job",
-    "u": "posts/earthing-vs-grounding-explained",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "How to Read a Wiring Diagram (Beginner's Guide)",
-    "u": "posts/how-to-read-a-wiring-diagram-beginners-guide",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "kW, kVA, and kVAR: What Actually Separates Them",
-    "u": "posts/kw-kva-kvar-difference-explained",
     "d": "2026-10-25"
   }
 ]

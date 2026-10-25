@@ -154,6 +154,20 @@
   "a": "updated"
  },
  {
+  "t": "Relay / Contactor Coil Current & Duty Cycle",
+  "u": "automation/relay-coil-sizing",
+  "d": "2026-10-25",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "RTD (Pt100) Temperature ↔ Resistance",
+  "u": "automation/rtd-conversion",
+  "d": "2026-10-25",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -546,13 +560,6 @@
   "a": "updated"
  },
  {
-  "t": "Relay / Contactor Coil Current & Duty Cycle",
-  "u": "automation/relay-coil-sizing",
-  "d": "2026-10-16",
-  "c": "Automation",
-  "a": "updated"
- },
- {
   "t": "Energy Cost / kWh Bill Estimator",
   "u": "electrical/energy-cost-calculator",
   "d": "2026-10-16",
@@ -614,13 +621,6 @@
   "d": "2026-10-15",
   "c": "Blog",
   "a": "added"
- },
- {
-  "t": "RTD (Pt100) Temperature ↔ Resistance",
-  "u": "automation/rtd-conversion",
-  "d": "2026-10-15",
-  "c": "Automation",
-  "a": "updated"
  },
  {
   "t": "Thermocouple (Type K) Reference",
