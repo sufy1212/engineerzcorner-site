@@ -1,5 +1,40 @@
 [
  {
+  "t": "Charge Controller Sizing Calculator",
+  "u": "solar/charge-controller-sizing-calculator",
+  "d": "2026-10-25",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "CO2 Offset & Environmental Savings Calculator",
+  "u": "solar/co2-offset-calculator",
+  "d": "2026-10-25",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "DC Cable Sizing & Voltage Drop Calculator",
+  "u": "solar/dc-cable-voltage-drop-calculator",
+  "d": "2026-10-25",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Inverter Sizing Calculator",
+  "u": "solar/inverter-sizing-calculator",
+  "d": "2026-10-25",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Row Spacing & Self-Shading Calculator",
+  "u": "solar/row-spacing-calculator",
+  "d": "2026-10-25",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -1330,34 +1365,6 @@
   "a": "added"
  },
  {
-  "t": "Charge Controller Sizing Calculator",
-  "u": "solar/charge-controller-sizing-calculator",
-  "d": "2026-10-05",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "CO2 Offset & Environmental Savings Calculator",
-  "u": "solar/co2-offset-calculator",
-  "d": "2026-10-05",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "DC Cable Sizing & Voltage Drop Calculator",
-  "u": "solar/dc-cable-voltage-drop-calculator",
-  "d": "2026-10-05",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Inverter Sizing Calculator",
-  "u": "solar/inverter-sizing-calculator",
-  "d": "2026-10-05",
-  "c": "Solar",
-  "a": "added"
- },
- {
   "t": "Panel Tilt & Orientation Calculator",
   "u": "solar/panel-tilt-orientation-calculator",
   "d": "2026-10-05",
@@ -1367,13 +1374,6 @@
  {
   "t": "PV String Sizing & Voltage Calculator",
   "u": "solar/pv-string-sizing-calculator",
-  "d": "2026-10-05",
-  "c": "Solar",
-  "a": "added"
- },
- {
-  "t": "Row Spacing & Self-Shading Calculator",
-  "u": "solar/row-spacing-calculator",
   "d": "2026-10-05",
   "c": "Solar",
   "a": "added"

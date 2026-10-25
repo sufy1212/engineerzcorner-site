@@ -1,5 +1,30 @@
 [
   {
+    "t": "Charge Controller Sizing Calculator",
+    "u": "solar/charge-controller-sizing-calculator",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "CO2 Offset & Environmental Savings Calculator",
+    "u": "solar/co2-offset-calculator",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "DC Cable Sizing & Voltage Drop Calculator",
+    "u": "solar/dc-cable-voltage-drop-calculator",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Inverter Sizing Calculator",
+    "u": "solar/inverter-sizing-calculator",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Row Spacing & Self-Shading Calculator",
+    "u": "solar/row-spacing-calculator",
+    "d": "2026-10-25"
+  },
+  {
     "t": "Level Control of an Integrating Process",
     "u": "posts/level-control-integrating-process-pi-tuning-explained",
     "d": "2026-10-22"
@@ -23,30 +48,5 @@
     "t": "Battery SoC vs DoD: Why They're Not the Same Number",
     "u": "posts/battery-soc-vs-dod-explained",
     "d": "2026-10-19"
-  },
-  {
-    "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
-    "u": "posts/row-spacing-inter-row-shading-explained",
-    "d": "2026-10-19"
-  },
-  {
-    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-    "d": "2026-10-19"
-  },
-  {
-    "t": "Solar Payback Period & ROI: What the Simple Formula Leaves Out",
-    "u": "posts/solar-payback-period-roi-explained",
-    "d": "2026-10-19"
-  },
-  {
-    "t": "Solar System Sizing: From Daily Load to Panel Count",
-    "u": "posts/solar-system-sizing-load-to-panel-count",
-    "d": "2026-10-19"
-  },
-  {
-    "t": "Arc Flash Hazard Basics",
-    "u": "posts/arc-flash-hazard-basics-incident-energy-ppe-categories",
-    "d": "2026-10-17"
   }
 ]
