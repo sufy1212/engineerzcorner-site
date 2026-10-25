@@ -1,5 +1,15 @@
 [
   {
+    "t": "Conduit Fill Calculator",
+    "u": "electrical/conduit-fill-calculator",
+    "d": "2026-10-25"
+  },
+  {
+    "t": "Earthing Rod Resistance",
+    "u": "electrical/earthing-rod-resistance",
+    "d": "2026-10-25"
+  },
+  {
     "t": "Relay / Contactor Coil Current & Duty Cycle",
     "u": "automation/relay-coil-sizing",
     "d": "2026-10-25"
@@ -37,16 +47,6 @@
   {
     "t": "Staircase Geometry Check",
     "u": "civil/staircase-geometry",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Trench Excavation Safe Slope (OSHA Soil Type)",
-    "u": "civil/trench-safe-slope",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "DP Level Transmitter Ranging",
-    "u": "automation/level-transmitter",
     "d": "2026-10-25"
   }
 ]

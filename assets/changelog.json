@@ -168,6 +168,20 @@
   "a": "updated"
  },
  {
+  "t": "Conduit Fill Calculator",
+  "u": "electrical/conduit-fill-calculator",
+  "d": "2026-10-25",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Earthing Rod Resistance",
+  "u": "electrical/earthing-rod-resistance",
+  "d": "2026-10-25",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
   "t": "Level Control of an Integrating Process",
   "u": "posts/level-control-integrating-process-pi-tuning-explained",
   "d": "2026-10-22",
@@ -912,20 +926,6 @@
  {
   "t": "Busbar & Enclosure Sizing",
   "u": "electrical/busbar-enclosure-sizing",
-  "d": "2026-10-05",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Conduit Fill Calculator",
-  "u": "electrical/conduit-fill-calculator",
-  "d": "2026-10-05",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Earthing Rod Resistance",
-  "u": "electrical/earthing-rod-resistance",
   "d": "2026-10-05",
   "c": "Electrical",
   "a": "updated"
