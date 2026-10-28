@@ -179,6 +179,14 @@
       <div class="hint" style="margin-top:8px;">This is the standard incompressible turbulent-flow formula — it gives the flow coefficient the valve needs, not a specific valve model or trim. Cross-check against the manufacturer's Cv/Kv table and confirm the valve isn't choked or cavitating at this ΔP.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Reading the Kv and Cv Result</h2>
+    <p class="reftable-note">For an incompressible liquid in turbulent flow, the required flow coefficient is Kv = Q &times; &radic;(SG &divide; &Delta;P), with Q in m&sup3;/h and &Delta;P in bar. Cv, the US coefficient, is about 1.156 times Kv. SG is the fluid density divided by 1,000 kg/m&sup3;, so it is 1.0 for water.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> Water at 50 m&sup3;/h with 0.5 bar available across the valve needs Kv = 50 &times; &radic;(1 &divide; 0.5) = 70.7, which is Cv 81.7. For a lighter liquid with SG 0.8 the same duty needs 63.2. A larger pressure drop reduces the Kv required, so a valve with a high design drop looks smaller on paper.</p>
+    <p class="reftable-note"><strong>Do not oversize.</strong> It is tempting to pick a valve with a large margin, but a valve that is too big operates near the bottom of its stroke at normal flow, where control is poor. Choose a valve whose calculated Kv at the normal flow sits in the working part of its range, and check the minimum and maximum flows as well.</p>
+    <p class="reftable-note"><strong>Limits of this formula.</strong> It does not cover choked flow, cavitation, flashing, or gas and steam service, and the pressure drop must be the drop across the valve, not across the whole line. Use the <a href="../process/cavitation-flashing-check">cavitation and flashing check</a> for liquids, and read <a href="../posts/control-valve-cv-sizing-oversizing-mistake">why oversizing is the common mistake</a>. A final selection should use the manufacturer's method, such as IEC 60534.</p>
+  </div>
+
   <footer>Sizing coefficient only — final valve selection also needs trim characteristic, rangeability and cavitation/noise checks.</footer>
 
 </div>

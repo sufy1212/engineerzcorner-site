@@ -166,6 +166,14 @@
       <div class="hint" style="margin-top:8px;">Too narrow a deadband causes a control output or alarm to chatter (rapid on/off cycling) right at the setpoint; too wide lets the process wander further before correcting. Typical starting point: 0.5–2% of span for most control loops, wider for noisy signals.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Setting a Deadband</h2>
+    <p class="reftable-note">A deadband, or hysteresis band, separates the point where a control output switches on from the point where it switches off. The tool splits the width evenly around the setpoint: upper trip = SP + width &divide; 2 and lower trip = SP &minus; width &divide; 2. It can also express the result as a percentage of the signal span.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A heater with a 20 &deg;C setpoint and a 1 &deg;C total deadband switches off at 20.5 &deg;C as the temperature rises and back on at 19.5 &deg;C as it falls. On a 0&ndash;100 range, a width of 2 units is a 2% deadband.</p>
+    <p class="reftable-note"><strong>Too narrow or too wide.</strong> With no deadband, a signal sitting at the setpoint makes the output chatter, which wears relays and contactors and starts and stops motors too often. Too wide a band lets the process drift further from the setpoint before it is corrected. The page suggests 0.5&ndash;2% of span as a starting point for most applications. Base the final value on the actual process noise.</p>
+    <p class="reftable-note"><strong>Related uses.</strong> The same idea sets the reset band on alarms, as in the <a href="alarm-setpoints">alarm setpoint calculator</a>. For why controls chatter and how to fix it, read <a href="../posts/deadband-hysteresis-why-controls-dont-chatter">deadband and hysteresis explained</a>.</p>
+  </div>
+
   <footer>A deadband is not the same as PID gains — it's a switching guard band, commonly used on on/off control, alarms, and digital outputs.</footer>
 
 </div>

@@ -184,6 +184,14 @@
       <div class="hint" style="margin-top:8px;">ISA-18.2 alarm management practice: HH should sit further from normal than H (and LL further than L), with enough deadband that the alarm doesn't re-trigger on process noise right at the trip point.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Setting Up Alarm Bands</h2>
+    <p class="reftable-note">Alarm positions are entered as a percentage of the signal range, and the tool converts them to engineering units: trip = range low + position &divide; 100 &times; (range high &minus; range low). A high alarm resets below its trip point and a low alarm resets above it, by the deadband.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> For a 0&ndash;10 bar signal with High-High at 90%, High at 80%, Low at 20%, Low-Low at 10% and a 2% deadband, the High alarm trips at 8.0 bar and clears at 7.8 bar. The Low alarm trips at 2.0 bar and clears at 2.2 bar. The High-High and Low-Low trips are 9.0 and 1.0 bar, clearing at 8.8 and 1.2 bar.</p>
+    <p class="reftable-note"><strong>Why the deadband matters.</strong> Without it, a signal hovering around the trip point makes the alarm repeatedly appear and clear, which floods the operator with chattering alarms. Choose a deadband wider than the normal noise on the signal. A time delay on the alarm is another common remedy.</p>
+    <p class="reftable-note"><strong>Good practice.</strong> Keep High-High further from normal than High, and Low-Low further than Low, so each level gives the operator a distinct warning. The ISA-18.2 alarm management standard describes this approach. Treat the values here as a starting configuration and confirm them against your process's real operating range. See <a href="../posts/alarm-setpoint-bands-high-highhigh-explained">alarm setpoint bands explained</a> and the <a href="deadband-hysteresis">deadband and hysteresis tool</a>.</p>
+  </div>
+
   <footer>Positions and deadband entered here are a starting configuration — validate against your process's actual noise band and site alarm-philosophy document before commissioning.</footer>
 
 </div>

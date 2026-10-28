@@ -205,6 +205,14 @@
       <div class="hint" style="margin-top:8px;">Straight linear scaling — for a square-root-extracted signal (e.g. some legacy DP flow transmitters) or a signal with live-zero suppression, apply that characterization before or after this scaling.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Scaling a 4-20 mA Signal</h2>
+    <p class="reftable-note">Linear scaling maps the raw signal range onto the engineering range, so the value is EU = EUlo + (raw &minus; rawlo) &divide; (rawhi &minus; rawlo) &times; (EUhi &minus; EUlo). The same relationship is solved backwards to get the signal that corresponds to a given value.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A pressure transmitter ranged 0&ndash;10 bar on 4&ndash;20 mA reads 12 mA at (12 &minus; 4) &divide; 16 &times; 10 = 5 bar. A reading of 8 mA is 2.5 bar, and 4 mA is 0 bar. Working the other way, 7.5 bar needs 4 + 0.75 &times; 16 = 16 mA.</p>
+    <p class="reftable-note"><strong>Why the range starts at 4 mA.</strong> The signal's &ldquo;live zero&rdquo; means a true zero reading still carries 4 mA, so a reading near 0 mA points to a broken wire or a dead transmitter instead of a zero process value. 0&ndash;20 mA and the voltage ranges 0&ndash;10 V and 1&ndash;5 V are scaled the same way.</p>
+    <p class="reftable-note"><strong>When linear scaling is wrong.</strong> Some differential-pressure flow transmitters output a signal proportional to the square of flow, and those need square-root extraction before the value is meaningful. Also check the channel configuration in the PLC, since an input block can apply its own characterization. For the signal itself, see <a href="../posts/4-20ma-current-loop-basics">4-20 mA current loop basics</a> and <a href="../posts/signal-scaling-4-20ma-engineering-units">signal scaling</a>.</p>
+  </div>
+
   <footer>Assumes linear 4-20mA-style analog scaling — check the transmitter/PLC channel configuration for any non-linear characterization.</footer>
 
 </div>
