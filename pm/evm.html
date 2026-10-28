@@ -178,6 +178,14 @@
       <div class="hint" style="margin-top:8px;">EAC here uses the common "CPI-based" formula, which assumes current cost performance continues for the remaining work — one of several EAC methods in practice; use a different one if your project's remaining work is expected to perform differently than it has so far.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Reading the EVM Numbers</h2>
+    <p class="reftable-note">Earned value compares three figures at the reporting date: Planned Value (PV, the budget for work scheduled), Earned Value (EV, the budget for work actually done) and Actual Cost (AC, what was spent). CPI = EV &divide; AC shows cost efficiency and SPI = EV &divide; PV shows schedule efficiency. Both above 1.0 is good.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> With a total budget (BAC) of 500,000, a PV of 100,000, EV of 80,000 and AC of 90,000: CPI = 0.89 and SPI = 0.80. Cost variance is &minus;10,000 and schedule variance is &minus;20,000, so the project is over cost and behind schedule. The project is 16% complete (80,000 &divide; 500,000).</p>
+    <p class="reftable-note"><strong>Forecast.</strong> The tool's estimate at completion is BAC &divide; CPI, which gives 562,500. The estimate to complete is 472,500, and the variance at completion is &minus;62,500. This forecast assumes the remaining work will be as cost-efficient as the work so far. If the overrun came from a one-off cause that is now fixed, another EAC method would give a better figure.</p>
+    <p class="reftable-note"><strong>Garbage in, garbage out.</strong> EV depends on how progress is measured. Percent-complete estimates on large tasks are often optimistic, and the indices only mean something if PV, EV and AC are all taken at the same date and on the same basis. Read <a href="../posts/earned-value-management-basics">earned value management basics</a>, and use the <a href="cost-contingency-calculator">contingency calculator</a> to size the reserve against the forecast.</p>
+  </div>
+
   <footer>Standard EVM formulas — the numbers are only as good as the PV/EV/AC inputs behind them. <a href="./">← PM Index</a></footer>
 </div>
 </main>
