@@ -1,5 +1,15 @@
 [
   {
+    "t": "Fastener Torque Calculator",
+    "u": "mechanical/bolt-torque-calculator",
+    "d": "2026-10-28"
+  },
+  {
+    "t": "Thermal Expansion of Piping",
+    "u": "mechanical/thermal-expansion-calculator",
+    "d": "2026-10-28"
+  },
+  {
     "t": "Sensible Heat / Supply Airflow",
     "u": "hvac/sensible-heat-airflow-calculator",
     "d": "2026-10-28"
@@ -37,16 +47,6 @@
   {
     "t": "Charge Controller Sizing Calculator",
     "u": "solar/charge-controller-sizing-calculator",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "DC Cable Sizing & Voltage Drop Calculator",
-    "u": "solar/dc-cable-voltage-drop-calculator",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Risk Register",
-    "u": "pm/risk-register",
     "d": "2026-10-25"
   }
 ]
