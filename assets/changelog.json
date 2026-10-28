@@ -1,5 +1,33 @@
 [
  {
+  "t": "Alarm Setpoint Band Calculator",
+  "u": "automation/alarm-setpoints",
+  "d": "2026-10-28",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Deadband / Hysteresis Calculator",
+  "u": "automation/deadband-hysteresis",
+  "d": "2026-10-28",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Signal Scaling",
+  "u": "automation/signal-scaling",
+  "d": "2026-10-28",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
+  "t": "Control Valve Sizing",
+  "u": "automation/valve-sizing",
+  "d": "2026-10-28",
+  "c": "Automation",
+  "a": "updated"
+ },
+ {
   "t": "Charge Controller Sizing Calculator",
   "u": "solar/charge-controller-sizing-calculator",
   "d": "2026-10-25",
@@ -798,20 +826,6 @@
   "a": "updated"
  },
  {
-  "t": "Alarm Setpoint Band Calculator",
-  "u": "automation/alarm-setpoints",
-  "d": "2026-10-05",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Deadband / Hysteresis Calculator",
-  "u": "automation/deadband-hysteresis",
-  "d": "2026-10-05",
-  "c": "Automation",
-  "a": "updated"
- },
- {
   "t": "Modbus RTU Timing / Baud Rate Calculator",
   "u": "automation/modbus-timing",
   "d": "2026-10-05",
@@ -821,20 +835,6 @@
  {
   "t": "PID Tuning (Reaction Curve)",
   "u": "automation/pid-tuning",
-  "d": "2026-10-05",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Signal Scaling",
-  "u": "automation/signal-scaling",
-  "d": "2026-10-05",
-  "c": "Automation",
-  "a": "updated"
- },
- {
-  "t": "Control Valve Sizing",
-  "u": "automation/valve-sizing",
   "d": "2026-10-05",
   "c": "Automation",
   "a": "updated"
