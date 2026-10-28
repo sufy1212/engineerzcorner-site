@@ -28,6 +28,27 @@
   "a": "updated"
  },
  {
+  "t": "Beam Bending & Deflection",
+  "u": "civil/beam-bending",
+  "d": "2026-10-28",
+  "c": "Civil",
+  "a": "updated"
+ },
+ {
+  "t": "Motor FLC / Starting Current",
+  "u": "electrical/motor-flc-starting-current",
+  "d": "2026-10-28",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Sensible Heat / Supply Airflow",
+  "u": "hvac/sensible-heat-airflow-calculator",
+  "d": "2026-10-28",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
   "t": "Charge Controller Sizing Calculator",
   "u": "solar/charge-controller-sizing-calculator",
   "d": "2026-10-25",
@@ -868,13 +889,6 @@
   "a": "updated"
  },
  {
-  "t": "Beam Bending & Deflection",
-  "u": "civil/beam-bending",
-  "d": "2026-10-05",
-  "c": "Civil",
-  "a": "updated"
- },
- {
   "t": "Column Axial Capacity",
   "u": "civil/column-capacity",
   "d": "2026-10-05",
@@ -954,13 +968,6 @@
  {
   "t": "LV Panel Estimate",
   "u": "electrical/lv-panel-estimate",
-  "d": "2026-10-05",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
-  "t": "Motor FLC / Starting Current",
-  "u": "electrical/motor-flc-starting-current",
   "d": "2026-10-05",
   "c": "Electrical",
   "a": "updated"
@@ -1171,13 +1178,6 @@
  {
   "t": "Pipe Insulation Heat Loss",
   "u": "hvac/pipe-insulation-heat-loss-calculator",
-  "d": "2026-10-05",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Sensible Heat / Supply Airflow",
-  "u": "hvac/sensible-heat-airflow-calculator",
   "d": "2026-10-05",
   "c": "HVAC",
   "a": "updated"

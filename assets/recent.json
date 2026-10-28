@@ -1,5 +1,20 @@
 [
   {
+    "t": "Sensible Heat / Supply Airflow",
+    "u": "hvac/sensible-heat-airflow-calculator",
+    "d": "2026-10-28"
+  },
+  {
+    "t": "Motor FLC / Starting Current",
+    "u": "electrical/motor-flc-starting-current",
+    "d": "2026-10-28"
+  },
+  {
+    "t": "Beam Bending & Deflection",
+    "u": "civil/beam-bending",
+    "d": "2026-10-28"
+  },
+  {
     "t": "Alarm Setpoint Band Calculator",
     "u": "automation/alarm-setpoints",
     "d": "2026-10-28"
@@ -32,21 +47,6 @@
   {
     "t": "Risk Register",
     "u": "pm/risk-register",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Belt / Pulley Drive",
-    "u": "mechanical/belt-drive-calculator",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Conduit Fill Calculator",
-    "u": "electrical/conduit-fill-calculator",
-    "d": "2026-10-25"
-  },
-  {
-    "t": "Earthing Rod Resistance",
-    "u": "electrical/earthing-rod-resistance",
     "d": "2026-10-25"
   }
 ]
