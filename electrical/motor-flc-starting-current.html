@@ -155,6 +155,14 @@
       <div class="hint" style="margin-top:8px;">Doesn't check the resulting voltage dip on the upstream supply during starting (see SH.06 Tx/Genset Sizing for that check), or the thermal withstand of the starter itself. Star-delta's stated multiple is its line current during the star phase; the transition to delta briefly draws a second, separate inrush.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>From Rating to Starting Current</h2>
+    <p class="reftable-note">Full-load current for a three-phase motor is FLC = P &divide; (&radic;3 &times; V &times; cos&phi; &times; &eta;), with power in watts. For single-phase the &radic;3 is dropped. The starting current is the FLC times a multiple set by the starting method, and the starting kVA is &radic;3 &times; V &times; I(start).</p>
+    <p class="reftable-note"><strong>Worked example.</strong> An 11 kW three-phase motor on 400 V with 90% efficiency and 0.85 power factor draws about 20.8 A at full load. Direct-on-line at 6.5 &times; FLC gives about 135 A and 93 kVA at start. Star-delta at 2.2 &times; gives about 46 A, a soft starter at 3 &times; gives about 62 A, and a VFD at 1.2 &times; about 25 A.</p>
+    <p class="reftable-note"><strong>Which number to use.</strong> Use the FLC as the design current for the cable and breaker selection. Use the starting current to check the voltage dip on the supply, the generator or transformer rating, and the breaker's short-time behavior. Starting multiples shown are typical values only. The nameplate locked-rotor figure, such as the NEMA code letter or the Ist/In ratio, is more accurate for a specific motor.</p>
+    <p class="reftable-note"><strong>Limits.</strong> Star-delta reduces starting current but also starting torque, so check that the load can still accelerate. Read <a href="../posts/motor-starting-methods-dol-star-delta-vfd-compared">motor starting methods compared</a> for the trade-offs.</p>
+  </div>
+
   <footer>Full-load and starting current only — locked-rotor withstand, thermal overload settings and starter sizing need the motor manufacturer's data sheet.</footer>
 </div>
 
