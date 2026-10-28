@@ -119,6 +119,14 @@
       <div class="hint" style="margin-top:8px;">Uses standard air density (1.2 kg/m³) and specific heat (1.005 kJ/kg·K) at sea level — correct for altitude if the site is significantly above sea level, since air density (and this relationship) changes with it.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>Supply Air for a Sensible Load</h2>
+    <p class="reftable-note">Cooling air carries away sensible heat according to Q = &rho; &times; cp &times; V &times; &Delta;T. With standard air at 1.2 kg/m&sup3; and 1.005 kJ/kg&middot;K, the airflow in m&sup3;/s is the sensible load in kW divided by (1.2 &times; 1.005 &times; &Delta;T).</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A 10 kW sensible load with air supplied 10 &deg;C below the room setpoint needs 10 &divide; (1.2 &times; 1.005 &times; 10) = 0.83 m&sup3;/s. That is about 2,985 m&sup3;/h, or roughly 1,757 CFM. A smaller &Delta;T needs more air, so a 6 &deg;C difference for the same load would need about 1.7 times as much airflow.</p>
+    <p class="reftable-note"><strong>Choosing the temperature difference.</strong> Comfort cooling commonly supplies air 8&ndash;12 &deg;C below the room. A larger difference reduces airflow and duct size but risks cold drafts and poor mixing. A smaller one is gentler but needs bigger ducts and fans.</p>
+    <p class="reftable-note"><strong>Limits.</strong> The constants are for sea-level air, so correct for altitude where it is significant. Latent load and dehumidification are separate, and the real airflow may be set by ventilation minimums or by the latent load instead. Take the sensible load from the <a href="cooling-load-calculator">cooling load calculator</a>, and read <a href="../posts/sensible-vs-latent-heat-cooling-load">sensible vs latent heat</a>.</p>
+  </div>
+
   <footer>Sensible airflow only — check latent load and dehumidification needs separately; total supply airflow may be governed by ventilation minimums instead.</footer>
 
   <div class="reftable-section">
