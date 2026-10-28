@@ -208,6 +208,14 @@
       <div class="hint" style="margin-top:8px;">This checks bending and deflection only — shear capacity, lateral-torsional buckling and bearing at supports all need separate checks for a real design.</div>
     </details>
   </div>
+    <div class="reftable-section" data-explainer="1">
+    <h2>The Two Checks That Size Most Beams</h2>
+    <p class="reftable-note">For a simply supported beam, a uniform load gives M = wL&sup2; &divide; 8 and a midspan deflection of 5wL&sup4; &divide; (384EI). A point load at midspan gives M = PL &divide; 4 and deflection PL&sup3; &divide; (48EI). Bending stress is the moment divided by the section modulus, &sigma; = M &divide; Z.</p>
+    <p class="reftable-note"><strong>Worked example.</strong> A steel beam with Z = 194 cm&sup3; and I = 1,943 cm&#8308; (about an IPE 200) spans 5 m under a 10 kN/m uniform load. The moment is 31.25 kN&middot;m, the bending stress is 161 MPa and the deflection is 20.9 mm. Against an L/250 limit of 20 mm the beam is marginally too flexible, and against L/360 (13.9 mm) it fails clearly. Here, deflection governs before strength does.</p>
+    <p class="reftable-note"><strong>Choosing the limit.</strong> The deflection limit depends on what the beam supports. L/180 is shown for roofs with non-brittle finishes, L/250 for general serviceability and L/360 for floors carrying brittle finishes such as plaster or tile. Stiffness comes from the moment of inertia I, so a deeper section is far more effective than a heavier one of the same depth.</p>
+    <p class="reftable-note"><strong>What this does not check.</strong> Shear, lateral-torsional buckling, bearing at the supports, and connection design all need separate checks, and the allowable stress and load factors come from the design code that applies. Read <a href="../posts/beam-bending-basics-section-modulus-deflection">beam bending basics</a> for the background.</p>
+  </div>
+
   <footer>Practical sizing check — verify against ACI 318 / Eurocode 2-3 / AISC 360 (as applicable) for anything load-bearing.</footer>
 
 </div>
