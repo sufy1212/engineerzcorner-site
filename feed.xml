@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly</title>
+    <link>https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained</guid>
+    <description>How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, and which rating to use when comparing equipment.</description>
+    <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size</title>
+    <link>https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained</guid>
+    <description>Why a small shadow cuts solar output more than its area, how bypass diodes help, typical soiling losses and whether cleaning pays.</description>
+    <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fire Alarm Systems Explained: Detection, Circuits and Standby Power</title>
+    <link>https://www.engineerzcorner.com/posts/fire-alarm-systems-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/fire-alarm-systems-explained</guid>
+    <description>How a fire alarm system works, conventional vs addressable, NFPA 72 detector spacing, circuit classes and standby battery sizing.</description>
+    <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Earthing vs. Grounding: Same Earth Connection, Different Job</title>
     <link>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained</link>
     <guid>https://www.engineerzcorner.com/posts/earthing-vs-grounding-explained</guid>
