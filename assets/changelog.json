@@ -21,6 +21,69 @@
   "a": "added"
  },
  {
+  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
+  "u": "posts/row-spacing-inter-row-shading-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "SEER / EER / COP Converter",
+  "u": "hvac/seer-eer-cop-converter",
+  "d": "2026-11-06",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
+  "u": "posts/flame-retardant-vs-flame-resistant-cables",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Basics of Fire Protection in Buildings Explained",
+  "u": "posts/basics-of-fire-protection-in-buildings-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
+  "u": "posts/elv-extra-low-voltage-systems-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+  "u": "posts/heat-pump-sizing-basics",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
+  "u": "posts/solar-panel-derating-factors-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "added"
+ },
+ {
   "t": "Alarm Setpoint Band Calculator",
   "u": "automation/alarm-setpoints",
   "d": "2026-10-28",
@@ -81,6 +144,13 @@
   "u": "mechanical/thermal-expansion-calculator",
   "d": "2026-10-28",
   "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Earned Value Management",
+  "u": "pm/evm",
+  "d": "2026-10-28",
+  "c": "Project Management",
   "a": "updated"
  },
  {
@@ -341,20 +411,6 @@
   "d": "2026-10-19",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-  "d": "2026-10-19",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
-  "u": "posts/row-spacing-inter-row-shading-explained",
-  "d": "2026-10-19",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Solar Payback Period & ROI: What the Simple Formula Leaves Out",
@@ -1183,13 +1239,6 @@
   "a": "updated"
  },
  {
-  "t": "SEER / EER / COP Converter",
-  "u": "hvac/seer-eer-cop-converter",
-  "d": "2026-10-05",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
   "t": "Refrigeration / Chiller Capacity",
   "u": "hvac/chiller-capacity-calculator",
   "d": "2026-10-05",
@@ -1318,13 +1367,6 @@
  {
   "t": "Commercial Terms of Project",
   "u": "pm/commercial-terms",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
-  "t": "Earned Value Management",
-  "u": "pm/evm",
   "d": "2026-10-05",
   "c": "Project Management",
   "a": "updated"
@@ -1554,13 +1596,6 @@
   "a": "updated"
  },
  {
-  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
-  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Fire Pump Room: 10 Common Installation & Commissioning Mistakes",
   "u": "posts/fire-pump-room-installation-commissioning-mistakes",
   "d": "2026-10-05",
@@ -1694,13 +1729,6 @@
   "a": "updated"
  },
  {
-  "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
-  "u": "posts/flame-retardant-vs-flame-resistant-cables",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Conduit Fill: Why 40% Isn't an Arbitrary Number",
   "u": "posts/conduit-fill-why-the-percentage-limit-exists",
   "d": "2026-10-05",
@@ -1780,13 +1808,6 @@
  {
   "t": "ATS, MTS, ECB & Switch Disconnectors: Transfer & Isolation Switching Devices Explained",
   "u": "posts/ats-mts-ecb-switch-disconnector-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Basics of Fire Protection in Buildings Explained",
-  "u": "posts/basics-of-fire-protection-in-buildings-explained",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "added"
@@ -1878,13 +1899,6 @@
  {
   "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
   "u": "posts/chilled-water-hvac-system-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
-  "u": "posts/elv-extra-low-voltage-systems-explained",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "added"
@@ -1988,13 +2002,6 @@
   "a": "updated"
  },
  {
-  "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
-  "u": "posts/heat-pump-sizing-basics",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "MEP Sleeves: Why, Where & How They're Used in Commercial Buildings",
   "u": "posts/mep-sleeves-installation-guide-explained",
   "d": "2026-10-05",
@@ -2088,34 +2095,6 @@
  {
   "t": "Harmonics in Power Systems: Sources, Effects and How to Mitigate Them",
   "u": "posts/harmonics-sources-effects-mitigation",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer",
-  "u": "posts/harmonics-thd-k-factor-transformer-derating",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
-  "u": "posts/hira-vs-jsa-vs-sop-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HVAC MEP Thumb Rules & Formulas: Quick Reference for Engineers",
-  "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HVAC & Plumbing Default Design Values: The Quick Reference",
-  "u": "posts/hvac-plumbing-default-design-values",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "added"

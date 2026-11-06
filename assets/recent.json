@@ -1,52 +1,52 @@
 [
   {
-    "t": "Fastener Torque Calculator",
-    "u": "mechanical/bolt-torque-calculator",
-    "d": "2026-10-28"
+    "t": "Basics of Fire Protection in Buildings Explained",
+    "u": "posts/basics-of-fire-protection-in-buildings-explained",
+    "d": "2026-11-06"
   },
   {
-    "t": "Thermal Expansion of Piping",
-    "u": "mechanical/thermal-expansion-calculator",
-    "d": "2026-10-28"
+    "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+    "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+    "d": "2026-11-06"
   },
   {
-    "t": "Sensible Heat / Supply Airflow",
-    "u": "hvac/sensible-heat-airflow-calculator",
-    "d": "2026-10-28"
+    "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
+    "u": "posts/elv-extra-low-voltage-systems-explained",
+    "d": "2026-11-06"
   },
   {
-    "t": "Motor FLC / Starting Current",
-    "u": "electrical/motor-flc-starting-current",
-    "d": "2026-10-28"
+    "t": "Fire Alarm Systems Explained: Detection, Circuits and Standby Power",
+    "u": "posts/fire-alarm-systems-explained",
+    "d": "2026-11-06"
   },
   {
-    "t": "Beam Bending & Deflection",
-    "u": "civil/beam-bending",
-    "d": "2026-10-28"
+    "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
+    "u": "posts/flame-retardant-vs-flame-resistant-cables",
+    "d": "2026-11-06"
   },
   {
-    "t": "Alarm Setpoint Band Calculator",
-    "u": "automation/alarm-setpoints",
-    "d": "2026-10-28"
+    "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+    "u": "posts/heat-pump-sizing-basics",
+    "d": "2026-11-06"
   },
   {
-    "t": "Deadband / Hysteresis Calculator",
-    "u": "automation/deadband-hysteresis",
-    "d": "2026-10-28"
+    "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
+    "u": "posts/row-spacing-inter-row-shading-explained",
+    "d": "2026-11-06"
   },
   {
-    "t": "Signal Scaling",
-    "u": "automation/signal-scaling",
-    "d": "2026-10-28"
+    "t": "SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly",
+    "u": "posts/seer-eer-cop-efficiency-ratings-explained",
+    "d": "2026-11-06"
   },
   {
-    "t": "Control Valve Sizing",
-    "u": "automation/valve-sizing",
-    "d": "2026-10-28"
+    "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+    "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+    "d": "2026-11-06"
   },
   {
-    "t": "Charge Controller Sizing Calculator",
-    "u": "solar/charge-controller-sizing-calculator",
-    "d": "2026-10-25"
+    "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
+    "u": "posts/solar-panel-derating-factors-explained",
+    "d": "2026-11-06"
   }
 ]
