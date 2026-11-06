@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fire Alarm Systems Explained | Engineerz CorneR</title>
+<meta name="description" content="How a fire alarm system works from detector to evacuation signal, conventional vs addressable panels, NFPA 72 detector spacing, circuit classes and battery standby sizing.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/fire-alarm-systems-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Fire Alarm Systems Explained: Detection, Circuits and Standby Power">
+<meta property="og:description" content="How a fire alarm system works from detector to evacuation signal, conventional vs addressable panels, NFPA 72 detector spacing, circuit classes and battery standby sizing.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/fire-alarm-systems-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fire Alarm Systems Explained: Detection, Circuits and Standby Power">
+<meta name="twitter:description" content="How a fire alarm system works from detector to evacuation signal, conventional vs addressable panels, NFPA 72 detector spacing, circuit classes and battery standby sizing.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fire Alarm Systems Explained: Detection, Circuits and Standby Power",
+      "item": "https://www.engineerzcorner.com/posts/fire-alarm-systems-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fire Alarm Systems Explained: Detection, Circuits and Standby Power",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "How a fire alarm system works from detector to evacuation signal, conventional vs addressable panels, NFPA 72 detector spacing, circuit classes and battery standby sizing.",
+  "url": "https://www.engineerzcorner.com/posts/fire-alarm-systems-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/fire-alarm-systems-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Fire Alarm Systems Explained: Detection, Circuits and Standby Power</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Fire Alarm</span>
+    <h1>Fire Alarm Systems Explained: Detection, Circuits and Standby Power</h1>
+    <p class="hero-sub">Detectors, a control panel, sounders, survivable wiring and a backup power supply: what each part does, the NFPA 72 numbers that shape a design, and a worked battery sizing example.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Life Safety</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Initiating devices report to the control panel, which drives sounders and control outputs such as air handler shutdown.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Addressable systems identify the exact device in alarm, while conventional systems identify only a zone.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">NFPA 72 uses a nominal 30 ft (9.1 m) smooth-ceiling spacing for spot smoke detectors, about 900 ft&sup2; per detector.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Secondary power must run 24 hours in standby, then 5 minutes of alarm (15 minutes for emergency voice systems).</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A fire alarm system has one job: detect a fire early and make sure everyone who needs to know finds out quickly. Under that single goal sit detectors, a control panel, sounders, wiring that has to keep working when part of it is damaged, and a power supply that works when the mains does not. The details differ between countries, so this guide uses US NFPA 72 for its numbers and notes where other codes, such as EN 54, may differ.</p>
+
+    <h2><span class="h2-dot"></span>The chain from detector to evacuation</h2>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>Inputs: initiating devices</b>
+        <p>Smoke detectors, heat detectors, manual call points and sprinkler flow switches. They report a condition to the panel.</p>
+      </div>
+      <div class="split-card latent">
+        <b>Outputs: notification and control</b>
+        <p>Horns, strobes and voice speakers tell occupants to leave. Other outputs can shut down air handlers, release magnetic door holders, recall lifts and signal a monitoring centre.</p>
+      </div>
+    </div>
+    <p>The fire alarm control panel sits in the middle. It watches every input, decides what the signal means, drives the outputs and supervises its own wiring and power so that a fault is reported instead of staying hidden.</p>
+
+    <h2><span class="h2-dot"></span>Conventional or addressable</h2>
+    <p>A <b>conventional</b> system wires detectors in zones. The panel knows which zone is in alarm but not which detector. An <b>addressable</b> system gives every device its own address on a signalling line circuit, so the panel shows the exact device, and one pair of wires can serve many devices. Addressable panels cost more but make faults and false alarms far easier to trace, which is why they dominate larger buildings.</p>
+
+    <h2><span class="h2-dot"></span>Choosing and spacing detectors</h2>
+    <p>Smoke detectors suit most occupied spaces. Photoelectric types respond well to the slow, smouldering fires common with soft furnishings, and ionization types to fast flaming fires. Heat detectors, which respond to a fixed temperature or a rapid rise, suit places where smoke detectors would false-alarm, such as kitchens, boiler rooms and dusty areas.</p>
+    <p>NFPA 72 uses a nominal spacing of 30 ft (9.1 m) for spot-type smoke detectors on a smooth, flat ceiling. That grid works out to roughly 900 ft&sup2; (about 84 m&sup2;) per detector, a useful sanity check on a quote but not a code minimum. No point on the ceiling should be further than 0.7 times the spacing from a detector, which is about 21 ft (6.4 m) for a 30 ft grid. Heat detector spacing comes from the listing of the specific detector and is reduced as the ceiling gets higher. Beams, sloped ceilings, airflow from diffusers and tall spaces all change the layout, so the final placement follows the code and the manufacturer's listing, not the nominal grid alone.</p>
+
+    <h2><span class="h2-dot"></span>Circuits that survive damage</h2>
+    <p>NFPA 72 defines circuit styles by how the wiring behaves when it is cut or shorted. A <b>Class B</b> circuit is a single path: a break stops every device beyond it. A <b>Class A</b> circuit returns as a loop, so a single break still leaves every device reachable from one end or the other, and a fault is reported. Class X adds short-circuit isolation to that. Larger and higher-risk buildings typically use the more survivable styles, while small systems often use Class B.</p>
+
+    <h2><span class="h2-dot"></span>Standby power: 24 hours, then alarm</h2>
+    <p>The system has to keep working through a mains failure and still sound the alarm at the end of it. NFPA 72 requires secondary power for 24 hours of standby followed by 5 minutes of alarm. Emergency voice and mass notification systems need 15 minutes of alarm instead, because speakers draw more and messages must be heard.</p>
+    <p class="lede">Battery Ah = standby A &times; 24 h + alarm A &times; alarm time (h)</p>
+    <div class="formula-note">Worked example with invented values: a panel and devices drawing 0.5 A in standby, and 3.0 A in full alarm for 5 minutes. Standby needs 0.5 &times; 24 = 12.0 Ah and the alarm needs 3.0 &times; 5 &divide; 60 = 0.25 Ah, so 12.25 Ah in total. Designers commonly add a margin for battery ageing and temperature, for example 20%, giving about 14.7 Ah, and then pick the next standard battery size. The margin is design practice, not a figure from the code.</div>
+
+    <h2><span class="h2-dot"></span>Where to read further</h2>
+    <p>For the wider picture of fire protection in buildings, see <a href="basics-of-fire-protection-in-buildings-explained">basics of fire protection in buildings</a>. Cable choice matters because fire alarm wiring often has to keep working in a fire, as covered in <a href="flame-retardant-vs-flame-resistant-cables">flame retardant vs flame resistant cables</a>. Fire alarm panels also sit alongside other extra-low-voltage systems, described in <a href="elv-extra-low-voltage-systems-explained">ELV systems explained</a>. Always design to the code adopted where the building is, and have the layout approved by the authority having jurisdiction.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Think of the system as inputs, a supervising panel and outputs, with the wiring and power monitored for faults.</span></li>
+      <li><span class="tk-check">✓</span><span>Use addressable systems where fast fault-finding matters, and conventional zones for small, simple buildings.</span></li>
+      <li><span class="tk-check">✓</span><span>Treat the 30 ft grid as a starting point only. Ceilings, beams and airflow change the layout.</span></li>
+      <li><span class="tk-check">✓</span><span>Size batteries from standby and alarm current, then add a margin and round up to the next standard size.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Fire%20Alarm%20Systems%20Explained%3A%20Detection%2C%20Circuits%20and%20Standby%20Power&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffire-alarm-systems-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffire-alarm-systems-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Fire%20Alarm%20Systems%20Explained%3A%20Detection%2C%20Circuits%20and%20Standby%20Power&text=How%20a%20fire%20alarm%20system%20works%20from%20detector%20to%20evacuation%20signal%2C%20conventional%20vs%20addressable%20panels%2C%20NFPA%2072%20detector%20spacing%2C%20circuit%20classes%20and%20battery%20standby%20sizing.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffire-alarm-systems-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Fire%20Alarm%20Systems%20Explained%3A%20Detection%2C%20Circuits%20and%20Standby%20Power&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AFire%20Alarm%20Systems%20Explained%3A%20Detection%2C%20Circuits%20and%20Standby%20Power%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffire-alarm-systems-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="basics-of-fire-protection-in-buildings-explained">Basics of Fire Protection in Buildings</a></li><li><a href="flame-retardant-vs-flame-resistant-cables">Flame Retardant vs Flame Resistant Cables</a></li><li><a href="elv-extra-low-voltage-systems-explained">ELV Systems Explained</a></li><li><a href="../electrical/notes">Electrical Learning Notes</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

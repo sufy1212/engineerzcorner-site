@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Shading and Soiling Losses | Engineerz CorneR</title>
+<meta name="description" content="Why a small shadow cuts output more than its area, how bypass diodes limit the damage, typical soiling losses, and how to decide whether panel cleaning pays.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size">
+<meta property="og:description" content="Why a small shadow cuts output more than its area, how bypass diodes limit the damage, typical soiling losses, and how to decide whether panel cleaning pays.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size">
+<meta name="twitter:description" content="Why a small shadow cuts output more than its area, how bypass diodes limit the damage, typical soiling losses, and how to decide whether panel cleaning pays.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size",
+      "item": "https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "Why a small shadow cuts output more than its area, how bypass diodes limit the damage, typical soiling losses, and how to decide whether panel cleaning pays.",
+  "url": "https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9728; Solar &middot; Losses</span>
+    <h1>Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size</h1>
+    <p class="hero-sub">A chimney shadow or a layer of dust takes only a small bite of the array, yet can take a bigger bite of the output. Here is why it happens and how to judge whether it matters on your roof.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Solar / Yield Losses</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Cells are wired in series, so one shaded cell limits the current of the cells it is connected to.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Bypass diodes route current around a shaded group of cells, but the module still gives up that group's power.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">NREL work suggests about 5% typical soiling loss in the US, with large differences between sites.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Cleaning only pays when the energy recovered is worth more than the cost of the cleaning.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Solar yield estimates usually assume a clean array in full sun. A real roof has a vent pipe, a chimney or a tree, and the glass collects dust between rains. Both effects are small in area but can cost more energy than their size suggests, which is why they deserve their own line in any loss budget.</p>
+
+    <h2><span class="h2-dot"></span>Why a little shade costs a lot</h2>
+    <p>The cells in a panel are wired in series, and a series chain can only pass as much current as its weakest element. Shade one cell and it limits the current of every cell it is connected to, so the loss is far larger than the shaded area. To stop that, each module has bypass diodes. A typical module is split into three groups of cells, each with its own diode. NREL's partial-shading work describes modules of three groups of 18 cells, where a conducting bypass diode removes that group's share of the module voltage and lets current pass around it.</p>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>What the bypass diode does</b>
+        <p>It gives current a path around a shaded group of cells. The module gives up roughly that group's share of its voltage and power, about a third for a three-group module, instead of being dragged down in full.</p>
+      </div>
+      <div class="split-card latent">
+        <b>What it cannot do</b>
+        <p>It cannot restore the lost group. If several modules in one string are partly shaded, the string still loses output, and the inverter's tracking has to work around the changed voltage.</p>
+      </div>
+    </div>
+    <p>Timing matters as much as size. Shade at midday removes light when the array would otherwise produce the most, while shade only at the start or end of the day costs much less. Equipment that works per module, such as microinverters or power optimizers, limits how far one shaded panel affects the others. See <a href="solar-inverter-topologies-string-vs-micro-vs-optimizer">string vs microinverter vs power optimizer</a> for that trade-off.</p>
+
+    <h2><span class="h2-dot"></span>Soiling: the slow loss</h2>
+    <p>Dust, pollen, bird droppings and film reduce the light reaching the cells. The loss builds up between rains or cleanings, and it varies widely with place.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Figure</th><th>Value reported</th></tr>
+        <tr><td>Typical soiling loss suggested by NREL for US systems</td><td>about 5%</td></tr>
+        <tr><td>Range seen between locations</td><td>from about 3% to 25% in some areas</td></tr>
+        <tr><td>Annual soiling loss observed in California</td><td>about 4% to 7%</td></tr>
+        <tr><td>Typical build-up rate in dry, dusty sites</td><td>roughly 0.01% to 0.5% per day</td></tr>
+      </table>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:-16px;">Figures reported from NREL work and industry summaries. Your site can differ a lot, so measure where you can.</p>
+    <p>Rain does much of the cleaning, so the same array loses far more in a dry season than in a wet one. Tilt helps too, since dirt sheds more easily from a steep panel than from a flat one. In one NREL modelling example, reported by pv magazine, two cleanings a year reduced an average 5% soiling loss to about 1.3%, so the first cleaning recovers the most.</p>
+
+    <h2><span class="h2-dot"></span>Is cleaning worth paying for?</h2>
+    <p>It comes down to one comparison: the value of the energy recovered against what the cleaning costs. Take a hypothetical system producing 5,000 kWh a year. If soiling takes 5% and cleaning brings the average loss down to 2%, the recovered energy is 5,000 &times; 0.03 = 150 kWh. At a tariff of 0.15 per kWh that is worth 22.50 a year, so a cleaning that costs more than that does not pay for itself on energy alone. A large dusty array with a high tariff can tip the other way, which is why the answer is site-specific.</p>
+
+    <h2><span class="h2-dot"></span>Putting numbers on your own site</h2>
+    <p>Check shade at the times that matter, midday above all, and note the seasons, since the sun is lower in winter and casts longer shadows. Then use the <a href="../solar/shading-soiling-loss-calculator">shading and soiling loss estimator</a> for a rough annual figure to sanity-check a quote. Remember that the general loss allowance in a yield estimate already includes an average for these effects, as covered in <a href="solar-panel-derating-factors-explained">solar panel derating factors</a>, so avoid counting the same loss twice. For spacing between rows, see <a href="row-spacing-inter-row-shading-explained">row spacing and inter-row shading</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Shade loss is out of proportion to the shaded area because of the series cell connection.</span></li>
+      <li><span class="tk-check">✓</span><span>Midday shade costs more than morning or late-afternoon shade.</span></li>
+      <li><span class="tk-check">✓</span><span>Soiling varies from a few percent to much higher in dusty, dry places, and rain does a lot of the cleaning.</span></li>
+      <li><span class="tk-check">✓</span><span>Compare the value of the recovered energy with the cleaning cost before scheduling regular cleanings.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Solar%20Shading%20and%20Soiling%20Losses%3A%20Why%20Small%20Obstructions%20Cost%20More%20Than%20Their%20Size&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-shading-soiling-losses-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-shading-soiling-losses-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Solar%20Shading%20and%20Soiling%20Losses%3A%20Why%20Small%20Obstructions%20Cost%20More%20Than%20Their%20Size&text=Why%20a%20small%20shadow%20cuts%20output%20more%20than%20its%20area%2C%20how%20bypass%20diodes%20limit%20the%20damage%2C%20typical%20soiling%20losses%2C%20and%20how%20to%20decide%20whether%20panel%20cleaning%20pays.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-shading-soiling-losses-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Solar%20Shading%20and%20Soiling%20Losses%3A%20Why%20Small%20Obstructions%20Cost%20More%20Than%20Their%20Size&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ASolar%20Shading%20and%20Soiling%20Losses%3A%20Why%20Small%20Obstructions%20Cost%20More%20Than%20Their%20Size%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fsolar-shading-soiling-losses-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../solar/shading-soiling-loss-calculator">Shading &amp; soiling loss estimator</a></li><li><a href="solar-panel-derating-factors-explained">Solar Panel Derating Factors</a></li><li><a href="solar-inverter-topologies-string-vs-micro-vs-optimizer">String vs Microinverter vs Power Optimizer</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

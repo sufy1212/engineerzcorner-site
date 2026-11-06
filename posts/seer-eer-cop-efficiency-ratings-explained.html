@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEER, EER and COP Explained | Engineerz CorneR</title>
+<meta name="description" content="How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, why SEER has no exact formula, and which rating to use when comparing equipment.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly">
+<meta property="og:description" content="How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, why SEER has no exact formula, and which rating to use when comparing equipment.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly">
+<meta name="twitter:description" content="How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, why SEER has no exact formula, and which rating to use when comparing equipment.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly",
+      "item": "https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, why SEER has no exact formula, and which rating to use when comparing equipment.",
+  "url": "https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#10052; HVAC &middot; Efficiency</span>
+    <h1>SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly</h1>
+    <p class="hero-sub">COP, EER and SEER all measure cooling per unit of electricity, but with different units and test conditions. Here is how they connect, where the conversion is exact, and where it is only an estimate.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; HVAC / Efficiency</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">COP and EER are the same ratio in different units: EER = COP &times; 3.412, an exact conversion.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">SEER is a seasonal average, so it has no exact link to EER, only rules of thumb.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">SEER2 comes from a tougher 2023 test, giving numbers about 5% lower than SEER for the same ducted equipment.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">kW per ton is 12 &divide; EER, or 3.517 &divide; COP, and lower is better.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A new air conditioner or heat pump quotes an efficiency number, but which one depends on where the equipment is sold and what it does. COP, EER and SEER all answer the same question, how much cooling you get for each unit of electricity, yet they use different units and different test conditions. Mixing them up leads to wrong comparisons and, occasionally, wrong purchases.</p>
+
+    <h2><span class="h2-dot"></span>Three yardsticks for one ratio</h2>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>COP and EER: one operating point</b>
+        <p>COP is cooling output divided by electrical input, with both in the same units, so it has no unit. EER is the same ratio with output in BTU/h and input in watts. Both describe performance at a single fixed test condition, typically full load on a hot day.</p>
+      </div>
+      <div class="split-card latent">
+        <b>SEER: a whole season</b>
+        <p>SEER divides the total cooling delivered over a season by the total electricity used, across a range of outdoor temperatures and part-load conditions. Equipment spends most hours at milder, part-load conditions, so SEER comes out higher than EER.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>The exact conversion: COP, EER and kW/ton</h2>
+    <p class="lede">EER = COP &times; 3.412</p>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>EER</b><span>BTU/h per W</span></div>
+        <div class="f-op">&equals;</div>
+        <div class="f-chip"><b>COP</b><span>unitless</span></div>
+        <div class="f-op">&times;</div>
+        <div class="f-result"><b>3.412</b><span>BTU/h per W</span></div>
+      </div>
+    </div>
+    <div class="formula-note">The factor is exact because 1 W equals 3.412 BTU/h. Chiller plants often use kW per ton instead, where one ton of cooling is 12,000 BTU/h: kW/ton = 12 &divide; EER, which is the same as 3.517 &divide; COP.</div>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>COP</th><th>EER (BTU/h per W)</th><th>kW per ton</th></tr>
+        <tr><td>2.5</td><td>8.5</td><td>1.41</td></tr>
+        <tr><td>3.0</td><td>10.2</td><td>1.17</td></tr>
+        <tr><td>3.5</td><td>11.9</td><td>1.00</td></tr>
+        <tr><td>4.0</td><td>13.6</td><td>0.88</td></tr>
+        <tr><td>5.0</td><td>17.1</td><td>0.70</td></tr>
+      </table>
+    </div>
+    <p>A higher COP or EER, or a lower kW/ton, always means better efficiency. For example, a unit with a COP of 3.5 has an EER of about 11.9 and uses roughly 1.0 kW per ton of cooling.</p>
+
+    <h2><span class="h2-dot"></span>SEER has no exact formula</h2>
+    <p>Because SEER averages performance over many conditions, there is no exact way to convert between it and EER. Rules of thumb put SEER at roughly 1.1 to 1.2 times EER for typical residential equipment, and converters use values in that range. The <a href="../hvac/seer-eer-cop-converter">SEER / EER / COP converter</a> on this site uses 1.2 and labels the result as an approximation. Use the manufacturer's published figures for any real comparison, and treat a converted SEER as a rough guide only.</p>
+
+    <h2><span class="h2-dot"></span>SEER2: a tougher test, not worse equipment</h2>
+    <p>In the United States, the Department of Energy replaced the older test procedure with the M1 procedure on January 1, 2023, giving the SEER2, EER2 and HSPF2 ratings. The main change is the external static pressure used during testing, raised from 0.1 to 0.5 inches of water column for ducted equipment, which is closer to the resistance real ductwork creates. Because the test is harder, the numbers are lower for the same hardware.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Equipment</th><th>SEER2 &divide; SEER</th><th>HSPF2 &divide; HSPF</th></tr>
+        <tr><td>Ducted split system</td><td>0.95</td><td>0.85</td></tr>
+        <tr><td>Ducted packaged unit</td><td>about 0.95 to 0.96</td><td>about 0.84</td></tr>
+        <tr><td>Ductless system</td><td>1.00</td><td>0.90</td></tr>
+      </table>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:-16px;">Conversion factors developed by AHRI and used in ANSI/RESNET 301. Treat as approximations for individual products.</p>
+    <p>Applying the split-system factor, a 16 SEER unit is roughly 15.2 SEER2 and a 14 SEER unit about 13.3 SEER2, with no change in how the equipment performs. When you compare products, make sure both are quoted on the same scale. Federal minimums are also set in SEER2 and vary by region of the US, for example 13.4 SEER2 for split air conditioners in the northern region and 14.3 SEER2 in the southeast and southwest for units under 45,000 BTU/h.</p>
+
+    <h2><span class="h2-dot"></span>Which number should you use?</h2>
+    <ul>
+      <li><b>Peak load and hot-day performance:</b> EER, or COP at the design condition, shows how the unit performs when it is working hardest.</li>
+      <li><b>Annual energy and running cost:</b> SEER2 (or HSPF2 for heating) reflects a typical season, so it is the better guide to the bill.</li>
+      <li><b>Chillers and large plant:</b> COP or kW/ton at full load, plus a part-load figure, since chillers spend most hours below full load.</li>
+      <li><b>Heat pumps in heating mode:</b> COP or HSPF2. A heat pump's COP includes the heat it moves, so values above 1 are normal.</li>
+    </ul>
+    <p>Whatever you choose, compare like with like: the same metric, the same test standard and the same capacity. Read the efficiency from the manufacturer's rating certificate rather than from a brochure headline.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>COP to EER is exact (&times; 3.412). Anything that involves SEER is an approximation.</span></li>
+      <li><span class="tk-check">✓</span><span>SEER2 is not a drop in performance. It is the same equipment measured at higher duct static pressure.</span></li>
+      <li><span class="tk-check">✓</span><span>Use EER or COP for peak behaviour and SEER2 for annual energy cost.</span></li>
+      <li><span class="tk-check">✓</span><span>Compare products on the same metric and the same test standard, taken from the rating certificate.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=SEER%2C%20EER%20and%20COP%20Explained%3A%20Reading%20Cooling%20Efficiency%20Ratings%20Correctly&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fseer-eer-cop-efficiency-ratings-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fseer-eer-cop-efficiency-ratings-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=SEER%2C%20EER%20and%20COP%20Explained%3A%20Reading%20Cooling%20Efficiency%20Ratings%20Correctly&text=How%20COP%2C%20EER%2C%20SEER%20and%20SEER2%20relate%2C%20the%20exact%20COP-to-EER%20conversion%2C%20why%20SEER%20has%20no%20exact%20formula%2C%20and%20which%20rating%20to%20use%20when%20comparing%20equipment.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fseer-eer-cop-efficiency-ratings-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=SEER%2C%20EER%20and%20COP%20Explained%3A%20Reading%20Cooling%20Efficiency%20Ratings%20Correctly&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ASEER%2C%20EER%20and%20COP%20Explained%3A%20Reading%20Cooling%20Efficiency%20Ratings%20Correctly%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fseer-eer-cop-efficiency-ratings-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../hvac/seer-eer-cop-converter">SEER / EER / COP converter</a></li><li><a href="chiller-capacity-cop-condenser-heat-rejection">Chiller Capacity and COP</a></li><li><a href="heat-pump-sizing-basics">Heat Pump Sizing Basics</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
