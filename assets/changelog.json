@@ -1,5 +1,26 @@
 [
  {
+  "t": "SEER, EER and COP Explained",
+  "u": "posts/seer-eer-cop-efficiency-ratings-explained",
+  "d": "2026-11-06",
+  "c": "HVAC",
+  "a": "added"
+ },
+ {
+  "t": "Solar Shading and Soiling Losses",
+  "u": "posts/solar-shading-soiling-losses-explained",
+  "d": "2026-11-06",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Fire Alarm Systems Explained",
+  "u": "posts/fire-alarm-systems-explained",
+  "d": "2026-11-06",
+  "c": "Electrical",
+  "a": "added"
+ },
+ {
   "t": "Alarm Setpoint Band Calculator",
   "u": "automation/alarm-setpoints",
   "d": "2026-10-28",
