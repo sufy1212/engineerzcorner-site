@@ -1,23 +1,100 @@
 [
  {
-  "t": "Fan Static vs Total Pressure",
+  "t": "Fan Static vs Total Pressure: What the Fan Is Really Working Against",
   "u": "posts/fan-static-vs-total-pressure-explained",
-  "d": "2026-11-06",
+  "d": "2026-11-07",
   "c": "HVAC",
-  "a": "added"
+  "a": "updated"
  },
  {
-  "t": "Incoterms 2020 Explained",
+  "t": "Incoterms 2020 Explained: Who Pays, and Where the Risk Passes",
   "u": "posts/incoterms-2020-explained",
-  "d": "2026-11-06",
+  "d": "2026-11-07",
   "c": "PM",
+  "a": "updated"
+ },
+ {
+  "t": "AWG vs mm²: Converting Wire Gauge to Metric Cross-Section",
+  "u": "posts/awg-vs-mm2-wire-size-explained",
+  "d": "2026-11-07",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Calendar Days vs Business Days Explained",
+  "u": "posts/calendar-days-vs-business-days-contract-deadlines-explained",
+  "d": "2026-11-07",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Change Order Cost and Schedule Impact",
+  "u": "posts/change-order-cost-and-schedule-impact-explained",
+  "d": "2026-11-07",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Derating Factors Worked Through",
+  "u": "posts/cable-derating-factors-worked-through-explained",
+  "d": "2026-11-07",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "AWG &harr; mm&sup2; Wire Size Converter",
+  "u": "electrical/awg-mm2-converter",
+  "d": "2026-11-07",
+  "c": "Electrical",
+  "a": "updated"
+ },
+ {
+  "t": "Fan Static & Total Pressure",
+  "u": "hvac/fan-static-total-pressure-calculator",
+  "d": "2026-11-07",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Incoterms",
+  "u": "pm/incoterms",
+  "d": "2026-11-07",
+  "c": "Project Management",
+  "a": "updated"
+ },
+ {
+  "t": "How to Select the Right DC Cable Size in PV Systems",
+  "u": "posts/dc-cable-size-selection-pv-systems",
+  "d": "2026-11-07",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
+  "u": "posts/duct-sizing-velocity-limits-vs-airflow",
+  "d": "2026-11-07",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Cable Size & Current Capacity: A Practical Selection Guide",
+  "u": "posts/cable-size-current-capacity-guide",
+  "d": "2026-11-07",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Pump & Fan Affinity Laws: Why Speed Changes Cube the Power",
+  "u": "posts/pump-fan-affinity-laws-explained",
+  "d": "2026-11-07",
+  "c": "Blog",
   "a": "added"
  },
  {
-  "t": "AWG vs mm² Wire Size",
-  "u": "posts/awg-vs-mm2-wire-size-explained",
-  "d": "2026-11-06",
-  "c": "Electrical",
+  "t": "Types of HVAC Fans",
+  "u": "posts/types-of-hvac-fans-explained",
+  "d": "2026-11-07",
+  "c": "Blog",
   "a": "added"
  },
  {
@@ -39,6 +116,76 @@
   "u": "posts/fire-alarm-systems-explained",
   "d": "2026-11-06",
   "c": "Electrical",
+  "a": "added"
+ },
+ {
+  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
+  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
+  "u": "posts/row-spacing-inter-row-shading-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "SEER / EER / COP Converter",
+  "u": "hvac/seer-eer-cop-converter",
+  "d": "2026-11-06",
+  "c": "HVAC",
+  "a": "updated"
+ },
+ {
+  "t": "Shading & Soiling Loss Estimator",
+  "u": "solar/shading-soiling-loss-calculator",
+  "d": "2026-11-06",
+  "c": "Solar",
+  "a": "updated"
+ },
+ {
+  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
+  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
+  "u": "posts/flame-retardant-vs-flame-resistant-cables",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Basics of Fire Protection in Buildings Explained",
+  "u": "posts/basics-of-fire-protection-in-buildings-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
+  "u": "posts/elv-extra-low-voltage-systems-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
+  "u": "posts/heat-pump-sizing-basics",
+  "d": "2026-11-06",
+  "c": "Blog",
+  "a": "updated"
+ },
+ {
+  "t": "Solar Panel Derating: Why Nameplate Wattage Isn't What You Get",
+  "u": "posts/solar-panel-derating-factors-explained",
+  "d": "2026-11-06",
+  "c": "Blog",
   "a": "added"
  },
  {
@@ -102,6 +249,13 @@
   "u": "mechanical/thermal-expansion-calculator",
   "d": "2026-10-28",
   "c": "Mechanical",
+  "a": "updated"
+ },
+ {
+  "t": "Earned Value Management",
+  "u": "pm/evm",
+  "d": "2026-10-28",
+  "c": "Project Management",
   "a": "updated"
  },
  {
@@ -336,13 +490,6 @@
   "a": "updated"
  },
  {
-  "t": "Calendar Days vs Business Days Explained",
-  "u": "posts/calendar-days-vs-business-days-contract-deadlines-explained",
-  "d": "2026-10-20",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Vessel Purging and Inerting Explained",
   "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
   "d": "2026-10-20",
@@ -362,20 +509,6 @@
   "d": "2026-10-19",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology",
-  "u": "posts/solar-inverter-topologies-string-vs-micro-vs-optimizer",
-  "d": "2026-10-19",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Row Spacing & Inter-Row Shading: Sizing the Gap Between Solar Rows",
-  "u": "posts/row-spacing-inter-row-shading-explained",
-  "d": "2026-10-19",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Solar Payback Period & ROI: What the Simple Formula Leaves Out",
@@ -677,20 +810,6 @@
   "d": "2026-10-16",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Change Order Cost and Schedule Impact",
-  "u": "posts/change-order-cost-and-schedule-impact-explained",
-  "d": "2026-10-16",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Cable Derating Factors Worked Through",
-  "u": "posts/cable-derating-factors-worked-through-explained",
-  "d": "2026-10-16",
-  "c": "Blog",
-  "a": "added"
  },
  {
   "t": "Cable Derating Factors Explained (guide correction)",
@@ -1078,13 +1197,6 @@
   "a": "updated"
  },
  {
-  "t": "AWG &harr; mm&sup2; Wire Size Converter",
-  "u": "electrical/awg-mm2-converter",
-  "d": "2026-10-05",
-  "c": "Electrical",
-  "a": "updated"
- },
- {
   "t": "Breaker / Fuse Sizing Calculator",
   "u": "electrical/breaker-fuse-sizing-calculator",
   "d": "2026-10-05",
@@ -1204,13 +1316,6 @@
   "a": "updated"
  },
  {
-  "t": "SEER / EER / COP Converter",
-  "u": "hvac/seer-eer-cop-converter",
-  "d": "2026-10-05",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
   "t": "Refrigeration / Chiller Capacity",
   "u": "hvac/chiller-capacity-calculator",
   "d": "2026-10-05",
@@ -1241,13 +1346,6 @@
  {
   "t": "Psychrometric Chart Simulator",
   "u": "hvac/psychrometric-chart-simulator",
-  "d": "2026-10-05",
-  "c": "HVAC",
-  "a": "updated"
- },
- {
-  "t": "Fan Static & Total Pressure",
-  "u": "hvac/fan-static-total-pressure-calculator",
   "d": "2026-10-05",
   "c": "HVAC",
   "a": "updated"
@@ -1339,20 +1437,6 @@
  {
   "t": "Commercial Terms of Project",
   "u": "pm/commercial-terms",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
-  "t": "Earned Value Management",
-  "u": "pm/evm",
-  "d": "2026-10-05",
-  "c": "Project Management",
-  "a": "updated"
- },
- {
-  "t": "Incoterms",
-  "u": "pm/incoterms",
   "d": "2026-10-05",
   "c": "Project Management",
   "a": "updated"
@@ -1463,13 +1547,6 @@
   "a": "added"
  },
  {
-  "t": "Shading & Soiling Loss Estimator",
-  "u": "solar/shading-soiling-loss-calculator",
-  "d": "2026-10-05",
-  "c": "Solar",
-  "a": "added"
- },
- {
   "t": "Solar Payback & ROI Calculator",
   "u": "solar/solar-payback-calculator",
   "d": "2026-10-05",
@@ -1575,13 +1652,6 @@
   "a": "updated"
  },
  {
-  "t": "Chiller Capacity and COP: Where the Compressor's Work Actually Goes",
-  "u": "posts/chiller-capacity-cop-condenser-heat-rejection",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Fire Pump Room: 10 Common Installation & Commissioning Mistakes",
   "u": "posts/fire-pump-room-installation-commissioning-mistakes",
   "d": "2026-10-05",
@@ -1673,22 +1743,8 @@
   "a": "updated"
  },
  {
-  "t": "How to Select the Right DC Cable Size in PV Systems",
-  "u": "posts/dc-cable-size-selection-pv-systems",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "Dissolved Gas Analysis (DGA) Explained",
   "u": "posts/dissolved-gas-analysis-dga-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Duct Sizing: Why Velocity Limits Matter as Much as Airflow",
-  "u": "posts/duct-sizing-velocity-limits-vs-airflow",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
@@ -1710,13 +1766,6 @@
  {
   "t": "Earthing & Grounding Systems Explained: Why Resistance Is the Whole Game",
   "u": "posts/earthing-grounding-systems-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Flame Retardant vs Flame Resistant Cables: Know the Difference",
-  "u": "posts/flame-retardant-vs-flame-resistant-cables",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
@@ -1806,13 +1855,6 @@
   "a": "added"
  },
  {
-  "t": "Basics of Fire Protection in Buildings Explained",
-  "u": "posts/basics-of-fire-protection-in-buildings-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Beam Bending Basics: Why Section Modulus Decides Capacity, Not Just Load",
   "u": "posts/beam-bending-basics-section-modulus-deflection",
   "d": "2026-10-05",
@@ -1869,13 +1911,6 @@
   "a": "added"
  },
  {
-  "t": "Cable Size & Current Capacity: A Practical Selection Guide",
-  "u": "posts/cable-size-current-capacity-guide",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
   "t": "Cavitation vs. Flashing in Control Valves: What's the Difference?",
   "u": "posts/cavitation-vs-flashing-control-valve-explained",
   "d": "2026-10-05",
@@ -1899,13 +1934,6 @@
  {
   "t": "Chilled Water HVAC Systems: How the Loop Actually Works",
   "u": "posts/chilled-water-hvac-system-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "What Is an ELV System? Types, Components & the BIM Engineer's Role",
-  "u": "posts/elv-extra-low-voltage-systems-explained",
   "d": "2026-10-05",
   "c": "Blog",
   "a": "added"
@@ -2009,13 +2037,6 @@
   "a": "updated"
  },
  {
-  "t": "Heat Pump Sizing Basics: Why Electrification Made This a Core Skill",
-  "u": "posts/heat-pump-sizing-basics",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
   "t": "MEP Sleeves: Why, Where & How They're Used in Commercial Buildings",
   "u": "posts/mep-sleeves-installation-guide-explained",
   "d": "2026-10-05",
@@ -2077,68 +2098,5 @@
   "d": "2026-10-05",
   "c": "Blog",
   "a": "updated"
- },
- {
-  "t": "Power Transformers Explained: Construction & Working Principle",
-  "u": "posts/power-transformer-construction-working-principle",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "updated"
- },
- {
-  "t": "Gas Detector Types & Working Principles Explained",
-  "u": "posts/gas-detector-types-working-principles-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Gas Insulated Substation (GIS) Explained",
-  "u": "posts/gas-insulated-substation-gis-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Grade & Slope: Why Percent, Ratio and Degrees Aren't the Same Number",
-  "u": "posts/grade-slope-percent-ratio-degrees-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Harmonics in Power Systems: Sources, Effects and How to Mitigate Them",
-  "u": "posts/harmonics-sources-effects-mitigation",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "Current THD and K-Factor: Why Harmonic Distortion Derates Your Transformer",
-  "u": "posts/harmonics-thd-k-factor-transformer-derating",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HIRA vs. JSA vs. SOP: Which Safety Document Do You Actually Need?",
-  "u": "posts/hira-vs-jsa-vs-sop-explained",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HVAC MEP Thumb Rules & Formulas: Quick Reference for Engineers",
-  "u": "posts/hvac-mep-thumb-rules-formulas-quick-reference",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
- },
- {
-  "t": "HVAC & Plumbing Default Design Values: The Quick Reference",
-  "u": "posts/hvac-plumbing-default-design-values",
-  "d": "2026-10-05",
-  "c": "Blog",
-  "a": "added"
  }
 ]
