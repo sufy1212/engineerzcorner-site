@@ -4,81 +4,46 @@
   <link>https://www.engineerzcorner.com/posts/</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
-    <title>Basics of Fire Protection in Buildings Explained</title>
-    <link>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/basics-of-fire-protection-in-buildings-explained</guid>
-    <description>Passive protection, active systems, detection, suppression and evacuation — the five layers of building fire protection and how they work together.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
+    <title>Fan Static vs Total Pressure: What the Fan Is Really Working Against</title>
+    <link>https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained</guid>
+    <description>How static, velocity and total pressure relate and how to work out fan total and static pressure from field readings.</description>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>Chiller Capacity and COP: Where the Compressor's Work Actually Goes</title>
-    <link>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection</link>
-    <guid>https://www.engineerzcorner.com/posts/chiller-capacity-cop-condenser-heat-rejection</guid>
-    <description>Refrigeration cycle capacity, COP and compressor power, and why condenser heat rejection has to account for the compressor's work input.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
+    <title>Incoterms 2020 Explained: Who Pays, and Where the Risk Passes</title>
+    <link>https://www.engineerzcorner.com/posts/incoterms-2020-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/incoterms-2020-explained</guid>
+    <description>The eleven Incoterms 2020 rules, where risk passes, CIF vs CIP insurance and what changed in 2020.</description>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>What Is an ELV System? Types, Components &amp; the BIM Engineer's Role</title>
-    <link>https://www.engineerzcorner.com/posts/elv-extra-low-voltage-systems-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/elv-extra-low-voltage-systems-explained</guid>
-    <description>Extra Low Voltage systems explained: the six categories, how ELV differs from electrical power systems, and where MEP BIM fits in.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
-  </item>
-  <item>
-    <title>Fire Alarm Systems Explained: Detection, Circuits and Standby Power</title>
-    <link>https://www.engineerzcorner.com/posts/fire-alarm-systems-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/fire-alarm-systems-explained</guid>
-    <description>How a fire alarm system works from detector to evacuation signal, conventional vs addressable panels, NFPA 72 detector spacing, circuit classes and battery standby sizing.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
-  </item>
-  <item>
-    <title>Flame Retardant vs Flame Resistant Cables: Know the Difference</title>
-    <link>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables</link>
-    <guid>https://www.engineerzcorner.com/posts/flame-retardant-vs-flame-resistant-cables</guid>
-    <description>IEC 60332 vs IEC 60331 explained — why flame retardant cables stop fire from spreading while flame (fire) resistant cables keep circuits alive during a fire.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
-  </item>
-  <item>
-    <title>Heat Pump Sizing Basics: Why Electrification Made This a Core Skill</title>
-    <link>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics</link>
-    <guid>https://www.engineerzcorner.com/posts/heat-pump-sizing-basics</guid>
-    <description>Why heat pump sizing isn't the same exercise as furnace or AC sizing, what COP and capacity-at-temperature actually mean.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
-  </item>
-  <item>
-    <title>Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows</title>
-    <link>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained</guid>
-    <description>Why ground-mount and rooftop solar rows need a minimum gap, how the winter-solstice sun angle sets that gap, and the ground coverage ratio trade-off behind it.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
+    <title>AWG vs mm²: Converting Wire Gauge to Metric Cross-Section</title>
+    <link>https://www.engineerzcorner.com/posts/awg-vs-mm2-wire-size-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/awg-vs-mm2-wire-size-explained</guid>
+    <description>How AWG is defined, a table of common sizes in mm², and why matching area does not replace an ampacity check.</description>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
   </item>
   <item>
     <title>SEER, EER and COP Explained: Reading Cooling Efficiency Ratings Correctly</title>
     <link>https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained</link>
     <guid>https://www.engineerzcorner.com/posts/seer-eer-cop-efficiency-ratings-explained</guid>
-    <description>How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, why SEER has no exact formula, and which rating to use when comparing equipment.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
-  </item>
-  <item>
-    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
-    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer</guid>
-    <description>How string inverters, microinverters and power optimizers differ in where MPPT happens, what a shaded panel costs under each, and how to pick between them.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
-  </item>
-  <item>
-    <title>Solar Panel Derating: Why Nameplate Wattage Isn't What You Get</title>
-    <link>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained</link>
-    <guid>https://www.engineerzcorner.com/posts/solar-panel-derating-factors-explained</guid>
-    <description>The STC nameplate rating on a solar panel assumes lab conditions no rooftop ever sees.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
+    <description>How COP, EER, SEER and SEER2 relate, the exact COP-to-EER conversion, and which rating to use when comparing equipment.</description>
+    <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Solar Shading and Soiling Losses: Why Small Obstructions Cost More Than Their Size</title>
     <link>https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained</link>
     <guid>https://www.engineerzcorner.com/posts/solar-shading-soiling-losses-explained</guid>
-    <description>Why a small shadow cuts output more than its area, how bypass diodes limit the damage, typical soiling losses, and how to decide whether panel cleaning pays.</description>
-    <pubDate>Fri, 06 Nov 2026 03:42:17 GMT</pubDate>
+    <description>Why a small shadow cuts solar output more than its area, how bypass diodes help, typical soiling losses and whether cleaning pays.</description>
+    <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fire Alarm Systems Explained: Detection, Circuits and Standby Power</title>
+    <link>https://www.engineerzcorner.com/posts/fire-alarm-systems-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/fire-alarm-systems-explained</guid>
+    <description>How a fire alarm system works, conventional vs addressable, NFPA 72 detector spacing, circuit classes and standby battery sizing.</description>
+    <pubDate>Fri, 06 Nov 2026 09:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Earthing vs. Grounding: Same Earth Connection, Different Job</title>
@@ -165,6 +130,20 @@
     <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
   </item>
   <item>
+    <title>Row Spacing &amp; Inter-Row Shading: Sizing the Gap Between Solar Rows</title>
+    <link>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/row-spacing-inter-row-shading-explained</guid>
+    <description>Why ground-mount and rooftop solar rows need a minimum gap, how the winter-solstice sun angle sets that gap, and the ground coverage ratio trade-off behind it.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
+    <title>String vs Microinverter vs Power Optimizer: Choosing a Solar Inverter Topology</title>
+    <link>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-inverter-topologies-string-vs-micro-vs-optimizer</guid>
+    <description>How string inverters, microinverters and power optimizers differ in where MPPT happens, what a shaded panel costs under each, and how to pick between them.</description>
+    <pubDate>Mon, 19 Oct 2026 11:19:54 GMT</pubDate>
+  </item>
+  <item>
     <title>Solar Payback Period &amp; ROI: What the Simple Formula Leaves Out</title>
     <link>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained</link>
     <guid>https://www.engineerzcorner.com/posts/solar-payback-period-roi-explained</guid>
@@ -211,6 +190,69 @@
     <link>https://www.engineerzcorner.com/posts/cooling-tower-types-explained</link>
     <guid>https://www.engineerzcorner.com/posts/cooling-tower-types-explained</guid>
     <description>What a cooling tower does, the main types (counterflow, crossflow, natural, forced and induced draft, open, closed, hybrid), parts, selection and failures.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>CT Sizing &amp; Burden Explained</title>
+    <link>https://www.engineerzcorner.com/posts/ct-sizing-burden-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/ct-sizing-burden-explained</guid>
+    <description>Ratio, burden, accuracy class and short-circuit withstand: the four specs behind every CT, and why one that reads well at normal load can fail in a fault.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Data Center Cooling: Air to Immersion</title>
+    <link>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/data-center-cooling-types-explained</guid>
+    <description>Data center cooling types (CRAC, CRAH, in-row, rear-door, direct-to-chip, immersion, free cooling), liquid loop parts, rack-density selection and PUE explained.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>DC/AC Ratio &amp; Inverter Clipping</title>
+    <link>https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/dc-ac-ratio-inverter-clipping-explained</guid>
+    <description>An array rarely delivers its nameplate power, so sizing the inverter to the full array rating wastes money: the DC/AC ratio and clipping trade-off explained.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Dimensional Analysis Explained</title>
+    <link>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/dimensional-analysis-unit-conversion-explained</guid>
+    <description>Unit conversion errors come from memorizing factors instead of tracking units through the arithmetic: how dimensional analysis catches the mistake early.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Elapsed Time Calculations</title>
+    <link>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/elapsed-time-duration-calculations-explained</guid>
+    <description>Why subtracting clock times like decimals gives the wrong answer: time is base 60 for minutes and seconds and base 24 for hours, and borrowing causes errors.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>IEC 61850 Digital Substation Protocol Explained</title>
+    <link>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/iec-61850-digital-substation-protocol-explained</guid>
+    <description>How IEC 61850 replaces hardwired substation panels with GOOSE, Sampled Values and MMS over Ethernet: the architecture, what each service carries, and security.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Industrial Sensor Types Explained</title>
+    <link>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/industrial-sensor-types-explained</guid>
+    <description>What an industrial sensor does, the main types (inductive, capacitive, photoelectric, ultrasonic, RTD, pressure, level, encoder) and how to select one.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>LMTD Heat Exchanger Sizing</title>
+    <link>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/lmtd-heat-exchanger-explained</guid>
+    <description>Log-mean temperature difference explained: why it isn&amp;#x27;t a simple average, why counter-current beats co-current, and where the F correction factor comes in.</description>
+    <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
+  </item>
+  <item>
+    <title>Load Flow (Power Flow) Study Basics</title>
+    <link>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics</link>
+    <guid>https://www.engineerzcorner.com/posts/load-flow-power-flow-study-basics</guid>
+    <description>What a load flow study calculates, the three bus types (slack, PV, PQ), why it comes before short-circuit and coordination studies, and how to read results.</description>
     <pubDate>Sat, 17 Oct 2026 16:59:35 GMT</pubDate>
   </item>
 </channel></rss>
