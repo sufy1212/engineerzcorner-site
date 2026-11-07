@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fan Static vs Total Pressure | Engineerz CorneR</title>
+<meta name="description" content="How static, velocity and total pressure relate, how to work out fan total and static pressure from field readings, with worked examples for plenum and ducted inlets.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Fan Static vs Total Pressure: What the Fan Is Really Working Against">
+<meta property="og:description" content="How static, velocity and total pressure relate, how to work out fan total and static pressure from field readings, with worked examples for plenum and ducted inlets.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fan Static vs Total Pressure: What the Fan Is Really Working Against">
+<meta name="twitter:description" content="How static, velocity and total pressure relate, how to work out fan total and static pressure from field readings, with worked examples for plenum and ducted inlets.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fan Static vs Total Pressure: What the Fan Is Really Working Against",
+      "item": "https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fan Static vs Total Pressure: What the Fan Is Really Working Against",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "How static, velocity and total pressure relate, how to work out fan total and static pressure from field readings, with worked examples for plenum and ducted inlets.",
+  "url": "https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/fan-static-vs-total-pressure-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Fan Static vs Total Pressure: What the Fan Is Really Working Against</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#10052; HVAC &middot; Fans &amp; Airflow</span>
+    <h1>Fan Static vs Total Pressure: What the Fan Is Really Working Against</h1>
+    <p class="hero-sub">A fan curve can be quoted in static or total pressure, and a field test can measure either. Here is how the two connect, with worked numbers, and why mixing them up leads to the wrong fan.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; HVAC / Air Distribution</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Total pressure is static pressure plus velocity pressure, and velocity pressure is always positive.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Fan total pressure is outlet total pressure minus inlet total pressure.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Fan static pressure is fan total pressure minus the velocity pressure at the fan outlet.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Always compare a fan curve and a system requirement on the same pressure basis.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A fan datasheet can quote its pressure two ways, and a field test can measure it two ways. Mixing them up is a common reason a fan appears to under-perform, or why a replacement fan ends up the wrong size. The difference comes down to one term: the velocity pressure of the air leaving the fan.</p>
+
+    <h2><span class="h2-dot"></span>Three pressures in a moving airstream</h2>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>Static pressure</b>
+        <p>The pressure that pushes sideways on the duct walls. It is what a manometer connected to a wall tap reads, and it can be positive or negative relative to the room.</p>
+      </div>
+      <div class="split-card latent">
+        <b>Velocity pressure</b>
+        <p>The pressure the moving air itself carries, always positive and equal to &frac12; &times; density &times; velocity&sup2;. For standard air it is about 0.6 &times; v&sup2; in pascals, with v in m/s.</p>
+      </div>
+    </div>
+    <p class="lede">Total pressure = static pressure + velocity pressure</p>
+
+    <h2><span class="h2-dot"></span>Fan total pressure and fan static pressure</h2>
+    <p>The fan has to raise the total pressure of the air from its inlet to its outlet, so the fan total pressure (FTP) is the outlet total pressure minus the inlet total pressure. The fan static pressure (FSP) is then the fan total pressure minus the velocity pressure at the fan outlet. The reasoning is that the velocity pressure of the air leaving the fan is not recovered by the system, so it is excluded from the useful static pressure. This is the relationship in the AMCA field-test method that the <a href="../hvac/fan-static-total-pressure-calculator">fan static &amp; total pressure calculator</a> follows.</p>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>FTP</b><span>TP<sub>out</sub> &minus; TP<sub>in</sub></span></div>
+        <div class="f-op">&rarr;</div>
+        <div class="f-result"><b>FSP = FTP &minus; VP<sub>out</sub></b><span>static pressure the system sees</span></div>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Worked example: fan drawing from a plenum</h2>
+    <p>A fan draws from an open plenum, so the inlet velocity is taken as zero. The inlet static pressure reads &minus;100 Pa, the outlet duct velocity is 10 m/s and the outlet static pressure reads +300 Pa, with air at 1.2 kg/m&sup3;.</p>
+    <ul>
+      <li>Outlet velocity pressure: 0.5 &times; 1.2 &times; 10&sup2; = 60 Pa.</li>
+      <li>Inlet total pressure is &minus;100 Pa (no velocity pressure). Outlet total pressure is 300 + 60 = 360 Pa.</li>
+      <li>FTP = 360 &minus; (&minus;100) = 460 Pa.</li>
+      <li>FSP = 460 &minus; 60 = 400 Pa.</li>
+    </ul>
+    <p>The fan is working against 460 Pa in total, of which 400 Pa shows up as static pressure the ductwork has to overcome. Pressure gauges in the US often read inches of water gauge, where 1 in. w.g. is about 249 Pa, so 400 Pa is about 1.6 in. w.g.</p>
+
+    <h2><span class="h2-dot"></span>With a ducted inlet</h2>
+    <p>When the fan also draws through duct, the inlet carries velocity pressure and the sums change. With an inlet velocity of 8 m/s, an inlet static pressure of &minus;120 Pa, an outlet velocity of 10 m/s and an outlet static pressure of +250 Pa: inlet velocity pressure is 38.4 Pa, so inlet total pressure is &minus;81.6 Pa. Outlet total pressure is 250 + 60 = 310 Pa. FTP = 310 &minus; (&minus;81.6) = 391.6 Pa and FSP = 391.6 &minus; 60 = 331.6 Pa. Ignoring the inlet velocity pressure would have given the wrong answer, which is why both readings are needed.</p>
+
+    <h2><span class="h2-dot"></span>Why it matters when you select or check a fan</h2>
+    <ul>
+      <li><b>Know which basis the fan curve uses.</b> Catalogues publish curves on a static or a total pressure basis. Compare your system's required pressure on the same basis, or the fan will be mis-sized.</li>
+      <li><b>Power follows total pressure.</b> Air power is flow times total pressure. A fan moving 2 m&sup3;/s at 460 Pa FTP delivers 920 W of air power, and the shaft power is higher by the fan's total efficiency.</li>
+      <li><b>Outlet velocity is a loss.</b> The faster the air leaves the fan, the more of the total pressure is velocity pressure that the system cannot use, which is why a diffuser or a well-designed outlet duct can improve performance.</li>
+      <li><b>Density changes the numbers.</b> At altitude or high temperature the air is lighter, so the same velocity gives less velocity pressure. Use the actual air density for the reading, not just the standard 1.2 kg/m&sup3;.</li>
+    </ul>
+    <p>For how fan speed changes pressure and power, see <a href="pump-fan-affinity-laws-explained">pump and fan affinity laws</a>, and for the duct side, <a href="duct-sizing-velocity-limits-vs-airflow">duct sizing</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Velocity pressure is 0.5 &times; density &times; velocity&sup2;, about 0.6 &times; v&sup2; Pa for standard air.</span></li>
+      <li><span class="tk-check">✓</span><span>FTP = TP(out) &minus; TP(in), and FSP = FTP &minus; VP(out).</span></li>
+      <li><span class="tk-check">✓</span><span>A ducted inlet carries its own velocity pressure, so measure both inlet and outlet readings.</span></li>
+      <li><span class="tk-check">✓</span><span>Check whether the catalogue curve is static or total before comparing it with the system.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Fan%20Static%20vs%20Total%20Pressure%3A%20What%20the%20Fan%20Is%20Really%20Working%20Against&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffan-static-vs-total-pressure-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffan-static-vs-total-pressure-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Fan%20Static%20vs%20Total%20Pressure%3A%20What%20the%20Fan%20Is%20Really%20Working%20Against&text=How%20static%2C%20velocity%20and%20total%20pressure%20relate%2C%20how%20to%20work%20out%20fan%20total%20and%20static%20pressure%20from%20field%20readings%2C%20with%20worked%20examples%20for%20plenum%20and%20ducted%20inlets.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffan-static-vs-total-pressure-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Fan%20Static%20vs%20Total%20Pressure%3A%20What%20the%20Fan%20Is%20Really%20Working%20Against&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AFan%20Static%20vs%20Total%20Pressure%3A%20What%20the%20Fan%20Is%20Really%20Working%20Against%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Ffan-static-vs-total-pressure-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../hvac/fan-static-total-pressure-calculator">Fan static &amp; total pressure calculator</a></li><li><a href="types-of-hvac-fans-explained">Types of HVAC Fans Explained</a></li><li><a href="pump-fan-affinity-laws-explained">Pump &amp; Fan Affinity Laws</a></li><li><a href="duct-sizing-velocity-limits-vs-airflow">Duct Sizing: Velocity Limits vs Airflow</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
