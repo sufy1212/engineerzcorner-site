@@ -4,6 +4,27 @@
   <link>https://www.engineerzcorner.com/posts/</link>
   <description>Deep-dive technical write-ups across Electrical, Mechanical, HVAC, Automation, Civil and Solar.</description>
   <item>
+    <title>Solar CO2 Offset: How Avoided Emissions Are Estimated, and Why the Factor Matters</title>
+    <link>https://www.engineerzcorner.com/posts/solar-co2-offset-avoided-emissions-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/solar-co2-offset-avoided-emissions-explained</guid>
+    <description>How to estimate CO2 avoided by solar, average vs marginal grid factors, lifecycle emissions and degradation.</description>
+    <pubDate>Fri, 06 Nov 2026 21:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover</title>
+    <link>https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained</guid>
+    <description>The fields in a cable schedule, how to choose cable type and a worked example turning it into an order quantity.</description>
+    <pubDate>Fri, 06 Nov 2026 21:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>From Instrument Index to I/O List: Counting Points and Sizing Cards</title>
+    <link>https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained</link>
+    <guid>https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained</guid>
+    <description>How an instrument index maps to an I/O list, ISA 5.1 tag basics and why I/O cards are rounded up by type.</description>
+    <pubDate>Fri, 06 Nov 2026 21:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>RFIs and the RFI Log: Raising, Tracking and Closing Requests for Information</title>
     <link>https://www.engineerzcorner.com/posts/rfi-log-raising-tracking-closing-rfis-explained</link>
     <guid>https://www.engineerzcorner.com/posts/rfi-log-raising-tracking-closing-rfis-explained</guid>
