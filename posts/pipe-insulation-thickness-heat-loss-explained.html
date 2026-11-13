@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipe Insulation Heat Loss | Engineerz CorneR</title>
+<meta name="description" content="The cylindrical heat-loss formula for insulated pipe, a worked 25 vs 50 vs 75 mm example showing diminishing returns, and what the simple formula leaves out.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pipe-insulation-thickness-heat-loss-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pipe Insulation Thickness and Heat Loss: Why Each Layer Helps Less">
+<meta property="og:description" content="The cylindrical heat-loss formula for insulated pipe, a worked 25 vs 50 vs 75 mm example showing diminishing returns, and what the simple formula leaves out.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pipe-insulation-thickness-heat-loss-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pipe Insulation Thickness and Heat Loss: Why Each Layer Helps Less">
+<meta name="twitter:description" content="The cylindrical heat-loss formula for insulated pipe, a worked 25 vs 50 vs 75 mm example showing diminishing returns, and what the simple formula leaves out.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pipe Insulation Thickness and Heat Loss: Why Each Layer Helps Less",
+      "item": "https://www.engineerzcorner.com/posts/pipe-insulation-thickness-heat-loss-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pipe Insulation Thickness and Heat Loss: Why Each Layer Helps Less",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "The cylindrical heat-loss formula for insulated pipe, a worked 25 vs 50 vs 75 mm example showing diminishing returns, and what the simple formula leaves out.",
+  "url": "https://www.engineerzcorner.com/posts/pipe-insulation-thickness-heat-loss-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/pipe-insulation-thickness-heat-loss-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pipe Insulation Thickness and Heat Loss: Why Each Layer Helps Less</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#10052; HVAC &middot; Insulation</span>
+    <h1>Pipe Insulation Thickness and Heat Loss: Why Each Layer Helps Less</h1>
+    <p class="hero-sub">Insulation on a pipe follows a logarithmic law, so doubling the thickness does not halve the loss. Here is the formula, a worked example with annual energy, and what a simple calculation ignores.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; HVAC / Pipework</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Heat loss per metre is 2&pi;k&Delta;T divided by ln(r2/r1), so thickness has diminishing returns.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">In the example, doubling insulation from 25 to 50 mm cuts heat loss by about 38%, not 50%.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The simple formula ignores surface film and gives a slightly high estimate.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Cold lines need enough thickness and a vapour barrier to stay above the dew point.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Insulation on a hot pipe pays for itself by cutting standing heat loss, and on a cold pipe it also keeps the surface above the dew point. The question is always how thick. The heat loss through a cylinder of insulation follows a logarithmic relationship, which is why each extra layer helps less than the one before.</p>
+
+    <h2><span class="h2-dot"></span>Heat loss through a cylindrical shell</h2>
+    <p class="lede">Q per metre = 2&pi; &times; k &times; (Ti &minus; To) &divide; ln(r2 &divide; r1)</p>
+    <div class="formula-note">k is the thermal conductivity of the insulation in W/m&middot;K, Ti is the pipe surface temperature and To the ambient temperature, r1 is the pipe outer radius and r2 is the outer radius of the insulation, r1 plus the thickness. Mineral wool and foam pipe insulation commonly have a conductivity of about 0.035 to 0.045 W/m&middot;K.</div>
+
+    <h2><span class="h2-dot"></span>Worked example: diminishing returns</h2>
+    <p>A pipe with a 30 mm outer radius carries fluid at 80 &deg;C in 20 &deg;C surroundings, with insulation of conductivity 0.04 W/m&middot;K, so the temperature difference is 60 K.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Insulation thickness</th><th>Heat loss (W/m)</th><th>Loss over 100 m (kW)</th><th>Energy per metre per year (kWh)</th></tr>
+        <tr><td>25 mm</td><td>24.9</td><td>2.49</td><td>218</td></tr>
+        <tr><td>50 mm</td><td>15.4</td><td>1.54</td><td>135</td></tr>
+        <tr><td>75 mm</td><td>12.0</td><td>1.20</td><td>105</td></tr>
+      </table>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:-16px;">Annual energy assumes continuous operation, 8,760 hours a year. The numbers are an illustration, not a design.</p>
+    <p>Doubling the insulation from 25 mm to 50 mm cuts the heat loss by about 38%, not 50%. Tripling it to 75 mm cuts the loss by about 52%. For the 100 m run, going from 25 mm to 50 mm saves roughly 8,300 kWh a year of heat. Whether that justifies the cost depends on the fuel price, the hours of operation and the cost of the extra insulation and its cladding, so a simple payback comparison is the usual way to decide.</p>
+
+    <h2><span class="h2-dot"></span>What the formula leaves out</h2>
+    <ul>
+      <li><b>Surface film.</b> The <a href="../hvac/pipe-insulation-heat-loss-calculator">pipe insulation heat loss calculator</a> ignores the convective resistance at the outer surface, so it gives a slightly high, conservative loss. The film matters more for thin insulation.</li>
+      <li><b>Temperature-dependent conductivity.</b> Conductivity rises with the mean temperature of the insulation, so use a value for the actual operating range.</li>
+      <li><b>Very small pipes.</b> On a small enough pipe, thin insulation can raise heat loss, because the outer surface area grows faster than the resistance. This happens only below a critical radius equal to k divided by the outside film coefficient, a few millimetres for typical values, so it rarely applies to process piping.</li>
+      <li><b>Fittings, supports and gaps.</b> Valves, flanges and hangers lose far more heat per metre than straight pipe unless they are insulated too, and wet or damaged insulation loses much of its value.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Cold lines and condensation</h2>
+    <p>On chilled water and refrigerant lines the aim shifts from saving energy to holding the outside surface above the dew point of the surrounding air. If it falls below, water condenses on the insulation, wets it and ruins its performance, so cold lines need a vapour barrier and generally more thickness in humid spaces. The same radial formula applies in reverse, with heat flowing in. For the plant side of that system, see <a href="chilled-water-hvac-system-explained">chilled water HVAC systems explained</a>, and for why pipes also need room to grow when hot, <a href="pipe-thermal-expansion-why-long-runs-move-more">pipe thermal expansion</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Use Q = 2&pi;k&Delta;T / ln(r2/r1) per metre of pipe, with conductivity at the operating temperature.</span></li>
+      <li><span class="tk-check">✓</span><span>Compare thicknesses by annual energy saved against the added cost, not by percentage alone.</span></li>
+      <li><span class="tk-check">✓</span><span>Insulate valves, flanges and supports too, or they dominate the remaining loss.</span></li>
+      <li><span class="tk-check">✓</span><span>On chilled lines, check surface temperature against the dew point and keep a vapour barrier intact.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Pipe%20Insulation%20Thickness%20and%20Heat%20Loss%3A%20Why%20Each%20Layer%20Helps%20Less&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-insulation-thickness-heat-loss-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-insulation-thickness-heat-loss-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Pipe%20Insulation%20Thickness%20and%20Heat%20Loss%3A%20Why%20Each%20Layer%20Helps%20Less&text=The%20cylindrical%20heat-loss%20formula%20for%20insulated%20pipe%2C%20a%20worked%2025%20vs%2050%20vs%2075%20mm%20example%20showing%20diminishing%20returns%2C%20and%20what%20the%20simple%20formula%20leaves%20out.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-insulation-thickness-heat-loss-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Pipe%20Insulation%20Thickness%20and%20Heat%20Loss%3A%20Why%20Each%20Layer%20Helps%20Less&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APipe%20Insulation%20Thickness%20and%20Heat%20Loss%3A%20Why%20Each%20Layer%20Helps%20Less%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpipe-insulation-thickness-heat-loss-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../hvac/pipe-insulation-heat-loss-calculator">Pipe insulation heat loss calculator</a></li><li><a href="chilled-water-hvac-system-explained">Chilled Water HVAC Systems</a></li><li><a href="pipe-thermal-expansion-why-long-runs-move-more">Pipe Thermal Expansion</a></li><li><a href="chiller-capacity-cop-condenser-heat-rejection">Chiller Capacity and COP</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

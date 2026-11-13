@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaft Diameter Sizing (ASME) | Engineerz CorneR</title>
+<meta name="description" content="How the ASME shaft equation combines bending and torque with shock and fatigue factors, the allowable shear stress values, a worked 15 kW example and its limits.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/shaft-diameter-sizing-asme-bending-torsion-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation">
+<meta property="og:description" content="How the ASME shaft equation combines bending and torque with shock and fatigue factors, the allowable shear stress values, a worked 15 kW example and its limits.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/shaft-diameter-sizing-asme-bending-torsion-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation">
+<meta name="twitter:description" content="How the ASME shaft equation combines bending and torque with shock and fatigue factors, the allowable shear stress values, a worked 15 kW example and its limits.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation",
+      "item": "https://www.engineerzcorner.com/posts/shaft-diameter-sizing-asme-bending-torsion-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "How the ASME shaft equation combines bending and torque with shock and fatigue factors, the allowable shear stress values, a worked 15 kW example and its limits.",
+  "url": "https://www.engineerzcorner.com/posts/shaft-diameter-sizing-asme-bending-torsion-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/shaft-diameter-sizing-asme-bending-torsion-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9881; Mechanical &middot; Machine Design</span>
+    <h1>Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation</h1>
+    <p class="hero-sub">A power shaft bends and twists at the same time. Here is how the ASME equation combines the two, what the shock factors and allowable stress mean, and a worked example with the limits of the method.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Mechanical / Machine Design</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">The ASME equation gives the minimum solid diameter from bending moment, torque, allowable stress and the Kb and Kt factors.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Allowable shear stress is 30% of yield but no more than 18% of ultimate strength, commonly reduced 25% for a keyway.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Shock factors can raise the required diameter noticeably for harsh duty.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The result does not cover fatigue life, critical speed or deflection.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A shaft that transmits power is almost never loaded in pure torsion. Belt pull, gear forces and overhung couplings all bend it while it twists. The ASME design equation combines the two into one check and adds factors for shock and fatigue, which makes it a quick way to find a minimum solid diameter for a section of shaft.</p>
+
+    <h2><span class="h2-dot"></span>The ASME equation</h2>
+    <p class="lede">d&sup3; = 16 &divide; (&pi; &times; &tau;) &times; &radic;[ (Kb &times; Mb)&sup2; + (Kt &times; Mt)&sup2; ]</p>
+    <div class="formula-note">Mb is the bending moment and Mt the torque at the section, &tau; is the allowable shear stress, and Kb and Kt are the combined shock-and-fatigue factors. When the torque is not given, it comes from power and speed: Mt = 9,550 &times; P &divide; N with P in kW, N in rpm and Mt in N&middot;m.</div>
+
+    <h2><span class="h2-dot"></span>The inputs</h2>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>Allowable shear stress</b>
+        <p>For steel bought to a specification, the ASME approach takes 30% of the yield strength, but not more than 18% of the ultimate strength, and commonly reduces that by 25% where there is a keyway. For commercial shafting steel, values of about 55 MPa without a keyway and 40 MPa with one are often used.</p>
+      </div>
+      <div class="split-card latent">
+        <b>Shock and fatigue factors</b>
+        <p>These raise the design moment for harsher loading. A stationary shaft with a gradual load uses 1.0 for both. A rotating shaft with a steady load is usually 1.5 for bending and 1.0 for torsion, and heavy shocks push the pair up to between 2 and 3 for bending and 1.5 to 3 for torsion.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>A shaft carries 15 kW at 1,450 rpm, with a bending moment of 150 N&middot;m at the critical section. The shaft has a keyway, so the allowable shear stress is taken as 40 MPa, and the load is a rotating shaft with minor shocks, Kb = 2.0 and Kt = 1.5.</p>
+    <ul>
+      <li>Torque: 9,550 &times; 15 &divide; 1,450 = 98.8 N&middot;m.</li>
+      <li>Equivalent moment: &radic;[ (2.0 &times; 150)&sup2; + (1.5 &times; 98.8)&sup2; ] = 334.6 N&middot;m.</li>
+      <li>d&sup3; = 16 &times; 334.6 &divide; (&pi; &times; 40&times;10&#8310;) gives d = 34.9 mm.</li>
+      <li>The torsional shear stress at that size is about 11.8 MPa, well below the allowable value, since the shock factors and the bending moment do most of the sizing.</li>
+    </ul>
+    <p>The <a href="../mechanical/shaft-diameter-calculator">shaft diameter calculator</a> then adds a simplified 10% allowance for the keyway, giving 38.4 mm, and the next stock size up, such as 40 mm, would be chosen. Changing the load type to a rotating shaft with a steady load (Kb = 1.5, Kt = 1.0) in the same case gives 31.5 mm, or 34.7 mm with the keyway allowance, which shows how much the shock factors matter.</p>
+
+    <h2><span class="h2-dot"></span>What this check does not cover</h2>
+    <ul>
+      <li><b>Where the bending moment comes from.</b> It is an input. Work it out from the bearing positions and the loads, as in <a href="beam-bending-basics-section-modulus-deflection">beam bending basics</a>.</li>
+      <li><b>Fatigue life.</b> The K factors are a simple allowance. A shaft that runs for a long life under reversing bending needs a proper fatigue analysis with stress concentration at shoulders and keyways.</li>
+      <li><b>Critical speed and deflection.</b> A shaft can be strong enough and still whirl or deflect too much at its operating speed. Check both separately.</li>
+      <li><b>Other sections.</b> The result applies to one section. Check each place where the moment or torque is high, or where a shoulder or keyway concentrates the stress.</li>
+    </ul>
+    <p>For the fasteners that hold the assembly together, see <a href="bolt-torque-vs-preload-nut-factor">bolt torque vs preload</a> and the <a href="../mechanical/belt-drive-calculator">belt drive calculator</a>, which supplies the belt forces that cause the bending.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Compute torque from power and speed as 9,550 &times; kW &divide; rpm.</span></li>
+      <li><span class="tk-check">✓</span><span>Select Kb and Kt for the real loading, since they change the diameter more than people expect.</span></li>
+      <li><span class="tk-check">✓</span><span>Add an allowance for keyways and round up to a stock size.</span></li>
+      <li><span class="tk-check">✓</span><span>Check fatigue, whirling speed and deflection separately, and check every section, not just one.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Shaft%20Diameter%20Sizing%3A%20Combining%20Bending%20and%20Torsion%20with%20the%20ASME%20Equation&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fshaft-diameter-sizing-asme-bending-torsion-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fshaft-diameter-sizing-asme-bending-torsion-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Shaft%20Diameter%20Sizing%3A%20Combining%20Bending%20and%20Torsion%20with%20the%20ASME%20Equation&text=How%20the%20ASME%20shaft%20equation%20combines%20bending%20and%20torque%20with%20shock%20and%20fatigue%20factors%2C%20the%20allowable%20shear%20stress%20values%2C%20a%20worked%2015%20kW%20example%20and%20its%20limits.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fshaft-diameter-sizing-asme-bending-torsion-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Shaft%20Diameter%20Sizing%3A%20Combining%20Bending%20and%20Torsion%20with%20the%20ASME%20Equation&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AShaft%20Diameter%20Sizing%3A%20Combining%20Bending%20and%20Torsion%20with%20the%20ASME%20Equation%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fshaft-diameter-sizing-asme-bending-torsion-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../mechanical/shaft-diameter-calculator">Shaft diameter calculator</a></li><li><a href="beam-bending-basics-section-modulus-deflection">Beam Bending Basics</a></li><li><a href="bolt-torque-vs-preload-nut-factor">Bolt Torque vs Preload</a></li><li><a href="../mechanical/belt-drive-calculator">Belt drive calculator</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

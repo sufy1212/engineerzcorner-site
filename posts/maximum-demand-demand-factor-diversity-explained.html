@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maximum Demand, Demand Factor and Diversity | Engineerz CorneR</title>
+<meta name="description" content="Demand factor vs diversity vs coincidence, a worked connected-load to maximum-demand example with current, and why these factors only apply upstream.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/maximum-demand-demand-factor-diversity-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Maximum Demand, Demand Factor and Diversity: Sizing a Supply Below the Connected Load">
+<meta property="og:description" content="Demand factor vs diversity vs coincidence, a worked connected-load to maximum-demand example with current, and why these factors only apply upstream.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/maximum-demand-demand-factor-diversity-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maximum Demand, Demand Factor and Diversity: Sizing a Supply Below the Connected Load">
+<meta name="twitter:description" content="Demand factor vs diversity vs coincidence, a worked connected-load to maximum-demand example with current, and why these factors only apply upstream.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Maximum Demand, Demand Factor and Diversity: Sizing a Supply Below the Connected Load",
+      "item": "https://www.engineerzcorner.com/posts/maximum-demand-demand-factor-diversity-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Maximum Demand, Demand Factor and Diversity: Sizing a Supply Below the Connected Load",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "Demand factor vs diversity vs coincidence, a worked connected-load to maximum-demand example with current, and why these factors only apply upstream.",
+  "url": "https://www.engineerzcorner.com/posts/maximum-demand-demand-factor-diversity-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/maximum-demand-demand-factor-diversity-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Maximum Demand, Demand Factor and Diversity: Sizing a Supply Below the Connected Load</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Load Estimation</span>
+    <h1>Maximum Demand, Demand Factor and Diversity: Sizing a Supply Below the Connected Load</h1>
+    <p class="hero-sub">Connected load is never the load you draw. Here is how demand factor and diversity bring a schedule down to a realistic maximum demand, with a worked example and the naming traps to watch for.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Load Estimation</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Demand factor is maximum demand over connected load, always 1.0 or less.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Diversity accounts for loads or feeders peaking at different times.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A 50 kW connected schedule becomes 34.2 kW of demand, or 58.1 A at 400 V three-phase, in the worked example.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Demand factors apply to upstream sizing, not to each final circuit.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Adding up every nameplate on a site gives a number nobody will ever draw at once. Sizing a supply for the connected load wastes money on a transformer, cable and breaker that stay lightly loaded, while sizing it too tightly risks nuisance trips and overheating. Demand factors and diversity are the tools engineers use to land between the two.</p>
+
+    <h2><span class="h2-dot"></span>Three terms that get mixed up</h2>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>Demand factor</b>
+        <p>Maximum demand divided by total connected load for one load or one group, always 1.0 or less. It reflects that equipment is not all running, or not all running at full output, at the same moment.</p>
+      </div>
+      <div class="split-card latent">
+        <b>Diversity</b>
+        <p>It covers how the peaks of different loads or feeders fall at different times. Sizing a shared upstream point on the sum of their individual peaks overstates what it will actually carry.</p>
+      </div>
+    </div>
+    <p>Naming differs between references. In most formal definitions the diversity factor is the sum of individual maximum demands divided by the system maximum demand, so it is 1.0 or more, and its reciprocal is the coincidence factor, 1.0 or less. The <a href="../electrical/load-demand-calculator">load / demand calculator</a> on this site takes a single &ldquo;overall diversity factor&rdquo; that multiplies the summed demand, so it behaves like a coincidence factor: 1.0 means all categories peak together, and lower values mean they peak at different times. Know which convention a table or colleague is using before applying a number.</p>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Category</th><th>Connected (kW)</th><th>Demand factor</th><th>Demand (kW)</th></tr>
+        <tr><td>Lighting</td><td>5</td><td>0.90</td><td>4.5</td></tr>
+        <tr><td>General power and sockets</td><td>15</td><td>0.50</td><td>7.5</td></tr>
+        <tr><td>HVAC</td><td>20</td><td>0.90</td><td>18.0</td></tr>
+        <tr><td>Motors</td><td>10</td><td>0.80</td><td>8.0</td></tr>
+        <tr><td><b>Total</b></td><td><b>50</b></td><td></td><td><b>38.0</b></td></tr>
+      </table>
+    </div>
+    <p>With an overall diversity multiplier of 0.9 the maximum demand is 38.0 &times; 0.9 = 34.2 kW. The effective overall factor is 34.2 &divide; 50 = 0.684, so the supply is sized on about 68% of the connected load. For a three-phase 400 V supply at a power factor of 0.85, the current is 34,200 &divide; (&radic;3 &times; 400 &times; 0.85) = 58.1 A, and a single-phase 230 V supply would carry about 175 A for the same demand.</p>
+
+    <h2><span class="h2-dot"></span>Where the factors come from</h2>
+    <p>The factors in the table are planning values: lighting near 0.9, general power commonly between 0.4 and 0.7, HVAC between 0.8 and 1.0, and motors between 0.75 and 0.85 depending on duty. They are only starting points. Wiring codes and utilities publish demand-factor tables by occupancy type, and these vary by country, so use the table that governs your project. Continuous loads, such as process equipment that runs flat out, deserve a factor close to 1.0, and loads that are planned to expand need a margin.</p>
+
+    <h2><span class="h2-dot"></span>Using the result</h2>
+    <ul>
+      <li><b>Sizing the supply.</b> The demand current sets the incoming supply, main breaker and transformer, with margin for growth. See <a href="load-estimation-first-step-electrical-design">load estimation as the first step in electrical design</a>.</li>
+      <li><b>Not the cable or branch circuits.</b> Each final circuit is still sized for the load it serves. Demand factors apply upstream, where many circuits are combined.</li>
+      <li><b>Motors and starting.</b> Demand current does not capture starting inrush, so check generator or transformer capacity against starting separately, as in <a href="transformer-generator-sizing-motor-starting">transformer and generator sizing for motor starting</a>.</li>
+      <li><b>Cost.</b> What you pay for demand on a tariff is a related but separate question, covered in <a href="running-cost-of-a-load-kwh-demand-tariff-explained">the running cost of a load</a>.</li>
+    </ul>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Apply a demand factor within a schedule, then a diversity or coincidence factor across the summed groups.</span></li>
+      <li><span class="tk-check">✓</span><span>Check which convention a table uses, because diversity can be quoted as 1.0 or more and coincidence as 1.0 or less.</span></li>
+      <li><span class="tk-check">✓</span><span>Use the demand factors from the code or utility that governs the project, not generic values.</span></li>
+      <li><span class="tk-check">✓</span><span>Check motor starting and future growth separately from the demand figure.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Maximum%20Demand%2C%20Demand%20Factor%20and%20Diversity%3A%20Sizing%20a%20Supply%20Below%20the%20Connected%20Load&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmaximum-demand-demand-factor-diversity-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmaximum-demand-demand-factor-diversity-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Maximum%20Demand%2C%20Demand%20Factor%20and%20Diversity%3A%20Sizing%20a%20Supply%20Below%20the%20Connected%20Load&text=Demand%20factor%20vs%20diversity%20vs%20coincidence%2C%20a%20worked%20connected-load%20to%20maximum-demand%20example%20with%20current%2C%20and%20why%20these%20factors%20only%20apply%20upstream.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmaximum-demand-demand-factor-diversity-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Maximum%20Demand%2C%20Demand%20Factor%20and%20Diversity%3A%20Sizing%20a%20Supply%20Below%20the%20Connected%20Load&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AMaximum%20Demand%2C%20Demand%20Factor%20and%20Diversity%3A%20Sizing%20a%20Supply%20Below%20the%20Connected%20Load%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmaximum-demand-demand-factor-diversity-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../electrical/load-demand-calculator">Load / demand calculator</a></li><li><a href="load-estimation-first-step-electrical-design">Load Estimation: First Step in Electrical Design</a></li><li><a href="transformer-generator-sizing-motor-starting">Transformer &amp; Generator Sizing for Motor Starting</a></li><li><a href="running-cost-of-a-load-kwh-demand-tariff-explained">The Running Cost of a Load</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

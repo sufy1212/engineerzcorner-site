@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instrument Index to I/O List | Engineerz CorneR</title>
+<meta name="description" content="How an instrument index maps to an I/O list, ISA 5.1 tag basics, common I/O patterns by device, why cards are rounded up by type, and what the count leaves out.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="From Instrument Index to I/O List: Counting Points and Sizing Cards">
+<meta property="og:description" content="How an instrument index maps to an I/O list, ISA 5.1 tag basics, common I/O patterns by device, why cards are rounded up by type, and what the count leaves out.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="From Instrument Index to I/O List: Counting Points and Sizing Cards">
+<meta name="twitter:description" content="How an instrument index maps to an I/O list, ISA 5.1 tag basics, common I/O patterns by device, why cards are rounded up by type, and what the count leaves out.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "From Instrument Index to I/O List: Counting Points and Sizing Cards",
+      "item": "https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "From Instrument Index to I/O List: Counting Points and Sizing Cards",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "How an instrument index maps to an I/O list, ISA 5.1 tag basics, common I/O patterns by device, why cards are rounded up by type, and what the count leaves out.",
+  "url": "https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/instrument-index-to-io-list-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">From Instrument Index to I/O List: Counting Points and Sizing Cards</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Instrumentation</span>
+    <h1>From Instrument Index to I/O List: Counting Points and Sizing Cards</h1>
+    <p class="hero-sub">The instrument index lists every device and the I/O list turns it into signals and cards. Here is how tags read, how to count points by type, why each type rounds up separately and what a count leaves out.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Process / Control Documentation</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Tags follow ISA 5.1 style: the first letter is the measured variable and later letters are the function.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Each device maps to I/O points of a type: AI, AO, DI or DO.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Cards are type-specific, so each type is rounded up to whole cards separately.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Spare capacity, safety I/O, fieldbus devices and barriers are handled on top of the basic count.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Every transmitter, switch and control valve on a plant needs a tag, a data sheet and a place to land on the control system. The instrument index is the register that holds them, and the I/O list is what falls out of it when each instrument is mapped to the signals the control system has to handle. The point of the second list is to size the hardware: how many input and output cards, and how many of each kind.</p>
+
+    <h2><span class="h2-dot"></span>Reading an instrument tag</h2>
+    <p>Tags commonly follow the ISA 5.1 pattern, where the first letter gives the measured variable and the following letters give the function. Instruments that work together share a loop number, which ties the P&amp;ID, the loop drawing and the I/O list together. For the symbols and layout, see <a href="pid-instrument-bubble-symbols-tag-anatomy-explained">P&amp;ID instrument bubbles and tag anatomy</a>.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Tag</th><th>Reads as</th></tr>
+        <tr><td>FT-101</td><td>Flow transmitter, loop 101</td></tr>
+        <tr><td>PT-205</td><td>Pressure transmitter, loop 205</td></tr>
+        <tr><td>LT-310</td><td>Level transmitter, loop 310</td></tr>
+        <tr><td>TIC-402</td><td>Temperature indicating controller, loop 402</td></tr>
+        <tr><td>LSHH-310</td><td>Level switch, high-high, loop 310</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Counting I/O points</h2>
+    <p>Each connection to the control system uses one point of a given type. These patterns are common, but the control philosophy and the vendor's wiring requirements decide each case.</p>
+    <ul>
+      <li><b>Analog input (AI):</b> a 4-20 mA transmitter, such as flow, pressure or level. See <a href="4-20ma-current-loop-basics">4-20 mA current loop basics</a>.</li>
+      <li><b>Analog output (AO):</b> a control valve positioner or VFD speed reference, and sometimes an AI for position feedback.</li>
+      <li><b>Discrete input (DI):</b> a switch, pushbutton, limit switch or motor run or fault feedback.</li>
+      <li><b>Discrete output (DO):</b> a motor start command, solenoid or alarm beacon.</li>
+    </ul>
+    <p>An on/off valve with two limit switches typically needs one DO and two DI. A motor starter often needs a start DO plus run and fault DI.</p>
+
+    <h2><span class="h2-dot"></span>From points to cards</h2>
+    <p>I/O cards are type-specific, so each signal type is rounded up to whole cards separately. With 16 points per card, 20 AI and 10 DI need 2 + 1 = 3 cards, even though 30 points divided by 16 would suggest 2. Add spare capacity on top, because projects reserve spare points for later additions. The percentage comes from the owner's or contractor's standard, so use your project's figure, for example 20%: 20 AI plus 20% is 24 points, which needs 2 cards at 16 per card and still leaves room. The <a href="../process/instrument-index-io-list-builder">instrument index and I/O list builder</a> does the count by type and shows the cards needed, and it does not add spare for you.</p>
+
+    <h2><span class="h2-dot"></span>What the count leaves out</h2>
+    <ul>
+      <li><b>Safety I/O.</b> Safety-rated signals are normally kept on separate cards from standard I/O. See <a href="functional-safety-sil-explained">functional safety and SIL explained</a>.</li>
+      <li><b>Fieldbus and serial devices.</b> These are counted as communication links, not hard-wired points. See <a href="modbus-vs-profibus-vs-fieldbus-explained">Modbus vs Profibus vs fieldbus</a>.</li>
+      <li><b>Barriers, relays and marshalling.</b> Intrinsically safe loops and interposing relays add hardware that does not appear in the I/O count.</li>
+    </ul>
+    <p>To pick the instrument itself, use the <a href="../automation/instrument-selector">instrument selector</a>, and for signal ranges, the <a href="../automation/signal-scaling">signal scaling tool</a>. The index is a living document, so revise it whenever the P&amp;IDs change.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Build the I/O list from the instrument index so the two never disagree.</span></li>
+      <li><span class="tk-check">✓</span><span>Count points by signal type, then round each type up to whole cards.</span></li>
+      <li><span class="tk-check">✓</span><span>Apply the project spare allowance after counting, since the builder does not add it.</span></li>
+      <li><span class="tk-check">✓</span><span>Treat safety I/O and fieldbus devices separately from the hard-wired count.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=From%20Instrument%20Index%20to%20I/O%20List%3A%20Counting%20Points%20and%20Sizing%20Cards&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finstrument-index-to-io-list-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finstrument-index-to-io-list-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=From%20Instrument%20Index%20to%20I/O%20List%3A%20Counting%20Points%20and%20Sizing%20Cards&text=How%20an%20instrument%20index%20maps%20to%20an%20I/O%20list%2C%20ISA%205.1%20tag%20basics%2C%20common%20I/O%20patterns%20by%20device%2C%20why%20cards%20are%20rounded%20up%20by%20type%2C%20and%20what%20the%20count%20leaves%20out.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finstrument-index-to-io-list-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=From%20Instrument%20Index%20to%20I/O%20List%3A%20Counting%20Points%20and%20Sizing%20Cards&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AFrom%20Instrument%20Index%20to%20I/O%20List%3A%20Counting%20Points%20and%20Sizing%20Cards%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Finstrument-index-to-io-list-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../process/instrument-index-io-list-builder">Instrument index and I/O list builder</a></li><li><a href="pid-instrument-bubble-symbols-tag-anatomy-explained">P&amp;ID Instrument Bubbles and Tag Anatomy</a></li><li><a href="4-20ma-current-loop-basics">4-20 mA Current Loop Basics</a></li><li><a href="functional-safety-sil-explained">Functional Safety and SIL Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

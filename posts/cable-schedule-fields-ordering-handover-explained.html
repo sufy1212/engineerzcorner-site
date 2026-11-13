@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cable Schedules Explained | Engineerz CorneR</title>
+<meta name="description" content="The fields in a cable schedule, how to choose cable type, a worked example turning a schedule into an order quantity, and what a schedule does not check.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover">
+<meta property="og:description" content="The fields in a cable schedule, how to choose cable type, a worked example turning a schedule into an order quantity, and what a schedule does not check.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover">
+<meta name="twitter:description" content="The fields in a cable schedule, how to choose cable type, a worked example turning a schedule into an order quantity, and what a schedule does not check.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover",
+      "item": "https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "description": "The fields in a cable schedule, how to choose cable type, a worked example turning a schedule into an order quantity, and what a schedule does not check.",
+  "url": "https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/cable-schedule-fields-ordering-handover-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Documentation</span>
+    <h1>Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover</h1>
+    <p class="hero-sub">A cable schedule lists every cable with its tag, route, size, type and length. Here is what each field is for, how the totals become an order, and the checks a schedule cannot do for you.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Cable Documentation</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Each row records a unique tag, origin, destination, size and cores, type and length.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">XLPE is commonly rated at 90 &deg;C against 70 &deg;C for PVC, which affects current rating.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A worked 8-cable example shows 555 m of cable becoming a 610.5 m order with a 10% allowance.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A schedule records data only and does not check ampacity, voltage drop or fault withstand.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A cable schedule is the list of every cable on a project: where it starts, where it ends, what it is and how long it is. It looks like paperwork, but the same list is used to order cable, to pull it, to test it and to hand the installation over. Getting the fields and the habits right early saves a great deal of confusion later.</p>
+
+    <h2><span class="h2-dot"></span>What goes in each row</h2>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Field</th><th>What it records</th><th>Why it matters</th></tr>
+        <tr><td>Cable tag</td><td>A unique reference</td><td>Links the schedule to drawings, labels and test records</td></tr>
+        <tr><td>From / To</td><td>Origin and destination equipment</td><td>Tells the installer where it runs and the tester what to isolate</td></tr>
+        <tr><td>Size / cores</td><td>Conductor area and number of cores</td><td>Drives ordering and termination hardware</td></tr>
+        <tr><td>Type</td><td>Insulation, armour and sheath, or special duty</td><td>Sets temperature rating, mechanical protection and fire behaviour</td></tr>
+        <tr><td>Length</td><td>Route length in metres</td><td>Sets the order quantity and voltage drop</td></tr>
+        <tr><td>Notes / route</td><td>Tray, duct or special routing</td><td>Avoids clashes and mixing of power and instrument cables</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Choosing the type column</h2>
+    <ul>
+      <li><b>XLPE or PVC insulation.</b> XLPE is rated for a higher conductor temperature than PVC, commonly 90 &deg;C against 70 &deg;C, which usually gives it a higher current rating for the same size. See <a href="cable-size-current-capacity-guide">cable size and current capacity</a>.</li>
+      <li><b>SWA, steel wire armour.</b> Adds mechanical protection for buried or exposed runs, and the armour is often used as part of the earth path where the design allows it. Terminate it with the correct <a href="cable-gland-overview-selection-guide">cable gland</a>.</li>
+      <li><b>Fire-rated cable.</b> Used where a circuit must keep working in a fire, such as alarms and emergency lighting. These are tested to circuit-integrity standards such as IEC 60331.</li>
+      <li><b>Instrument and control cable.</b> Usually screened and kept apart from power cables to limit interference, which is why the route notes matter.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Worked example: turning the schedule into an order</h2>
+    <p>Suppose a small schedule has eight cables with lengths of 45, 60, 35, 120, 80, 25, 150 and 40 m. The total is 555 m, and the average is about 69 m. Cables are cut from drums, and real routes are longer than a drawing suggests because of slack, bends and termination length, so an allowance is normally added. At an illustrative 10%, the order quantity is 555 &times; 1.1 = 610.5 m. The right allowance depends on the project, so treat 10% only as an example. Totals by cable type, which the <a href="../electrical/cable-schedule-builder">cable schedule builder</a> keeps as you add rows, give the quantity for each drum order.</p>
+
+    <h2><span class="h2-dot"></span>What a schedule does not check</h2>
+    <p>A schedule only records what you enter. It does not confirm that the cable can carry the current, that the voltage drop is acceptable or that the cable will survive a fault. Do those separately, with <a href="cable-derating-factors-worked-through-explained">derating factors</a>, <a href="voltage-drop-lv-feeders-explained">voltage drop</a> and <a href="short-circuit-current-iec-60909-basics">short-circuit current</a>, and then update the schedule with the sizes that result.</p>
+
+    <h2><span class="h2-dot"></span>Habits that keep it useful</h2>
+    <ul>
+      <li><b>Use a tag system from the start,</b> and never reuse a tag for a different cable.</li>
+      <li><b>Issue it with revisions,</b> since the cable schedule changes whenever equipment moves.</li>
+      <li><b>Record as-built lengths</b> once the cables are installed, so the handover set is accurate.</li>
+      <li><b>Test every cable.</b> Insulation resistance results are normally recorded against the cable tag, as described in <a href="insulation-resistance-testing-megger-pi-explained">insulation resistance testing</a>.</li>
+      <li><b>Keep tray and route notes honest,</b> including separation between power, control and instrument cables. See <a href="cable-tray-vs-ladder-vs-trunking-vs-conduit-explained">tray, ladder, trunking and conduit</a>.</li>
+    </ul>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Give every cable a unique tag and keep it for life.</span></li>
+      <li><span class="tk-check">✓</span><span>Add a length allowance for slack and termination when ordering, and check the allowance for your project.</span></li>
+      <li><span class="tk-check">✓</span><span>Size cables with separate calculations, then record the results in the schedule.</span></li>
+      <li><span class="tk-check">✓</span><span>Update the schedule with as-built lengths and tie test records to each tag.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Cable%20Schedules%20Explained%3A%20What%20Goes%20in%20One%20and%20How%20It%20Drives%20Ordering%20and%20Handover&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-schedule-fields-ordering-handover-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-schedule-fields-ordering-handover-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Cable%20Schedules%20Explained%3A%20What%20Goes%20in%20One%20and%20How%20It%20Drives%20Ordering%20and%20Handover&text=The%20fields%20in%20a%20cable%20schedule%2C%20how%20to%20choose%20cable%20type%2C%20a%20worked%20example%20turning%20a%20schedule%20into%20an%20order%20quantity%2C%20and%20what%20a%20schedule%20does%20not%20check.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-schedule-fields-ordering-handover-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Cable%20Schedules%20Explained%3A%20What%20Goes%20in%20One%20and%20How%20It%20Drives%20Ordering%20and%20Handover&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACable%20Schedules%20Explained%3A%20What%20Goes%20in%20One%20and%20How%20It%20Drives%20Ordering%20and%20Handover%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcable-schedule-fields-ordering-handover-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../electrical/cable-schedule-builder">Cable schedule builder</a></li><li><a href="cable-size-current-capacity-guide">Cable Size and Current Capacity Guide</a></li><li><a href="cable-gland-overview-selection-guide">Cable Gland Selection Guide</a></li><li><a href="insulation-resistance-testing-megger-pi-explained">Insulation Resistance Testing</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
