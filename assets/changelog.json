@@ -1,5 +1,26 @@
 [
  {
+  "t": "Solar CO2 Offset Explained",
+  "u": "posts/solar-co2-offset-avoided-emissions-explained",
+  "d": "2026-11-06",
+  "c": "Solar",
+  "a": "added"
+ },
+ {
+  "t": "Cable Schedules Explained",
+  "u": "posts/cable-schedule-fields-ordering-handover-explained",
+  "d": "2026-11-06",
+  "c": "Electrical",
+  "a": "added"
+ },
+ {
+  "t": "Instrument Index to I/O List",
+  "u": "posts/instrument-index-to-io-list-explained",
+  "d": "2026-11-06",
+  "c": "Process",
+  "a": "added"
+ },
+ {
   "t": "RFIs and the RFI Log",
   "u": "posts/rfi-log-raising-tracking-closing-rfis-explained",
   "d": "2026-11-06",
