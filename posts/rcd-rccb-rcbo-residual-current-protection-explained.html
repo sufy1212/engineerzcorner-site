@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RCD, RCCB and RCBO Explained | Engineerz CorneR</title>
+<meta name="description" content="How RCDs detect earth leakage, RCCB vs RCBO, the 30 mA rating and trip time limits, types AC, A, F and B, and how to select and test residual current devices.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/rcd-rccb-rcbo-residual-current-protection-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use">
+<meta property="og:description" content="How RCDs detect earth leakage, RCCB vs RCBO, the 30 mA rating and trip time limits, types AC, A, F and B, and how to select and test residual current devices.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/rcd-rccb-rcbo-residual-current-protection-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use">
+<meta name="twitter:description" content="How RCDs detect earth leakage, RCCB vs RCBO, the 30 mA rating and trip time limits, types AC, A, F and B, and how to select and test residual current devices.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use",
+      "item": "https://www.engineerzcorner.com/posts/rcd-rccb-rcbo-residual-current-protection-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "description": "How RCDs detect earth leakage, RCCB vs RCBO, the 30 mA rating and trip time limits, types AC, A, F and B, and how to select and test residual current devices.",
+  "url": "https://www.engineerzcorner.com/posts/rcd-rccb-rcbo-residual-current-protection-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/rcd-rccb-rcbo-residual-current-protection-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Protection</span>
+    <h1>RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use</h1>
+    <p class="hero-sub">A breaker cannot see a 30 mA leak through a person. An RCD can. Here is how it senses current imbalance, what its trip limits are, what types AC, A, F and B detect, and how to choose and test one.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Shock Protection</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">An RCD trips on the imbalance between live and neutral current, which means leakage to earth.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">General RCDs trip within 300 ms at rated current and within 40 ms at five times rated current.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Types AC, A, F and B differ in which waveforms they detect, so match the type to the load.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">An RCD does not protect against overload, short circuit or a person touching live and neutral together.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Most electric shocks do not come from touching live parts on purpose. They come from current that finds a way to earth through a damaged cable, a wet appliance or a person. A circuit breaker will not notice a leak of 30 milliamps, because it is far below any overload setting. A residual current device, or RCD, is built for exactly that gap.</p>
+
+    <h2><span class="h2-dot"></span>How an RCD senses a leak</h2>
+    <p>Inside the RCD, the live and neutral conductors pass through a ring-shaped current transformer. In a healthy circuit, the current going out on the live equals the current returning on the neutral, so the magnetic effects cancel and the transformer sees nothing. If some current leaks to earth, perhaps through a person, the two no longer match. The difference, called the residual current, induces a signal that trips the device, normally within a few tens of milliseconds.</p>
+    <div class="two-col">
+      <div class="split-card sensible">
+        <b>What it protects against</b>
+        <p>Earth leakage: current flowing from a live conductor to earth through a fault, a damaged insulation or a person. It also gives some protection against fire caused by earth faults.</p>
+      </div>
+      <div class="split-card latent">
+        <b>What it does not protect against</b>
+        <p>Overload and short circuit, which need a breaker or fuse. It also cannot detect a person touching live and neutral together, because the current returns through the neutral, so there is no imbalance.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2-dot"></span>RCCB or RCBO?</h2>
+    <p>An <b>RCCB</b> is an RCD without overcurrent protection, so it needs a breaker or fuse upstream to guard against overload and short circuits. An <b>RCBO</b> combines the RCD and a circuit breaker in one device, so each circuit gets both protections and a leak on one circuit trips only that circuit.</p>
+
+    <h2><span class="h2-dot"></span>Ratings and trip limits</h2>
+    <p>The rated residual operating current is written IΔn. Common values are 10, 30, 100, 300 and 500 mA. For additional protection against electric shock in final circuits, IEC 60364-4-41 calls for RCDs rated at 30 mA or less. A device does not trip at exactly its rating. The standard gives a window, and a time limit that gets shorter as the leak grows.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Condition</th><th>General RCD (IEC 61008/61009)</th><th>Time-delayed S-type</th></tr>
+        <tr><td>Below 0.5 &times; I&Delta;n</td><td>Must not trip</td><td>Must not trip</td></tr>
+        <tr><td>At 1 &times; I&Delta;n</td><td>Trips within 300 ms</td><td>Trips between 130 and 500 ms</td></tr>
+        <tr><td>At 2 &times; I&Delta;n</td><td>Trips within 150 ms</td><td>Trips between 60 and 200 ms</td></tr>
+        <tr><td>At 5 &times; I&Delta;n</td><td>Trips within 40 ms</td><td>Trips between 50 and 150 ms</td></tr>
+      </table>
+    </div>
+    <p>Worked example for a 30 mA RCD on AC leakage: it must stay in at 15 mA or less and will trip somewhere between 15 and 30 mA, so a steady leak of 20 mA may or may not trip it. At 150 mA, which is 5 times its rating, it must open within 40 ms. That speed is the reason it protects people: the risk to the body depends on the current and how long it flows, and 30 mA with a fast trip is meant to be below the dangerous zone in the IEC 60479 body-current curves. North American GFCIs for personnel protection work on the same idea, with a lower trip level of about 5 mA.</p>
+
+    <h2><span class="h2-dot"></span>Types AC, A, F and B</h2>
+    <p>Modern loads such as drives, chargers and electronic power supplies can produce leakage that is not a plain sine wave. The RCD type says which kinds of leakage it will detect.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Type</th><th>Detects</th><th>Typical use</th></tr>
+        <tr><td>AC</td><td>Sinusoidal AC residual current only</td><td>Simple resistive loads</td></tr>
+        <tr><td>A</td><td>AC and pulsating DC, and tolerates a small smooth DC offset</td><td>Most general circuits with electronics</td></tr>
+        <tr><td>F</td><td>As type A, plus mixed frequencies up to 1 kHz and a larger DC offset</td><td>Circuits with single-phase drives and inverters</td></tr>
+        <tr><td>B</td><td>All of the above plus smooth DC and higher-frequency AC</td><td>Three-phase drives, EV charging, PV inverters</td></tr>
+      </table>
+    </div>
+    <p>A type AC device can be blinded by a DC component, so it may fail to trip on a fault that a type A device would catch. Which types the code accepts for which circuits depends on the country and the equipment, so check the local rules and the equipment manual, especially for EV chargers and drives.</p>
+
+    <h2><span class="h2-dot"></span>Choosing and applying them</h2>
+    <ul>
+      <li><b>Personal protection:</b> 30 mA, general type, on socket circuits and wet areas.</li>
+      <li><b>Discrimination:</b> an S-type with a built-in delay upstream lets the 30 mA device nearer the fault trip first. The downstream device should be rated at one third or less of the upstream one. See <a href="breaker-selectivity-discrimination-explained">breaker selectivity</a>.</li>
+      <li><b>Fire protection:</b> 300 mA devices are commonly used on circuits where a small earth fault could cause a fire, since 300 mA is not a shock-protection rating.</li>
+      <li><b>Nuisance tripping:</b> many electronic loads leak a little to earth through their filters, and the leakage adds up on a shared circuit. Splitting loads across RCDs or using a short-time-delay type helps.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Testing</h2>
+    <p>Press the built-in test button regularly, for example every three months, since it checks the mechanism. A test instrument then confirms the actual trip points and times. Instrument tests commonly apply half the rated current, where the device should not trip, and the full rated current, where it should trip within its limit. Note that some regulations have changed which tests are required, so follow the current edition. An RCD that is bypassed because it trips too often is a hazard, so fix the leakage instead.</p>
+    <p>For how earthing arrangements change what an RCD can do, read <a href="earthing-grounding-systems-explained">earthing and grounding systems</a> and <a href="earthing-vs-grounding-explained">earthing vs grounding</a>. For the overcurrent side, see <a href="circuit-breaker-types-explained">circuit breaker types</a> and <a href="electrical-switchgear-protection-devices-explained">switchgear protection devices</a>, and for the insulation faults that cause leakage, <a href="insulation-resistance-testing-megger-pi-explained">insulation resistance testing</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Use 30 mA RCDs for personal protection and 300 mA devices for fire protection on suitable circuits.</span></li>
+      <li><span class="tk-check">✓</span><span>Choose RCBOs to give each circuit overcurrent and leakage protection together.</span></li>
+      <li><span class="tk-check">✓</span><span>Pick the RCD type for the load, since type AC can miss DC components from electronics.</span></li>
+      <li><span class="tk-check">✓</span><span>Test the built-in button regularly, check trip times with an instrument and fix nuisance trips instead of bypassing the device.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=RCD%2C%20RCCB%20and%20RCBO%20Explained%3A%20How%20Residual%20Current%20Protection%20Works%20and%20Which%20Type%20to%20Use&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frcd-rccb-rcbo-residual-current-protection-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frcd-rccb-rcbo-residual-current-protection-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=RCD%2C%20RCCB%20and%20RCBO%20Explained%3A%20How%20Residual%20Current%20Protection%20Works%20and%20Which%20Type%20to%20Use&text=How%20RCDs%20detect%20earth%20leakage%2C%20RCCB%20vs%20RCBO%2C%20the%2030%20mA%20rating%20and%20trip%20time%20limits%2C%20types%20AC%2C%20A%2C%20F%20and%20B%2C%20and%20how%20to%20select%20and%20test%20residual%20current%20devices.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frcd-rccb-rcbo-residual-current-protection-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=RCD%2C%20RCCB%20and%20RCBO%20Explained%3A%20How%20Residual%20Current%20Protection%20Works%20and%20Which%20Type%20to%20Use&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ARCD%2C%20RCCB%20and%20RCBO%20Explained%3A%20How%20Residual%20Current%20Protection%20Works%20and%20Which%20Type%20to%20Use%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Frcd-rccb-rcbo-residual-current-protection-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="circuit-breaker-types-explained">Circuit Breaker Types Explained</a></li><li><a href="earthing-grounding-systems-explained">Earthing and Grounding Systems</a></li><li><a href="breaker-selectivity-discrimination-explained">Breaker Selectivity and Discrimination</a></li><li><a href="insulation-resistance-testing-megger-pi-explained">Insulation Resistance Testing</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
