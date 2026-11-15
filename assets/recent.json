@@ -1,5 +1,30 @@
 [
   {
+    "t": "Air Changes per Hour: What ACH Actually Tells You (and Doesn't)",
+    "u": "posts/air-changes-per-hour-ventilation-explained",
+    "d": "2026-11-15"
+  },
+  {
+    "t": "Fan Static vs Total Pressure: What the Fan Is Really Working Against",
+    "u": "posts/fan-static-vs-total-pressure-explained",
+    "d": "2026-11-15"
+  },
+  {
+    "t": "Heat Recovery Ventilation: HRV, ERV and What Effectiveness Really Means",
+    "u": "posts/heat-recovery-ventilation-hrv-erv-effectiveness-explained",
+    "d": "2026-11-15"
+  },
+  {
+    "t": "Reading a Psychrometric Chart: The Five Lines That Matter",
+    "u": "posts/psychrometric-chart-basics",
+    "d": "2026-11-15"
+  },
+  {
+    "t": "Sensible vs. Latent Heat: Why Cooling Load Isn't Just Temperature",
+    "u": "posts/sensible-vs-latent-heat-cooling-load",
+    "d": "2026-11-15"
+  },
+  {
     "t": "Breaker Selectivity: Why Two Correctly Rated Breakers Can Still Trip Together",
     "u": "posts/breaker-selectivity-discrimination-explained",
     "d": "2026-11-15"
@@ -22,31 +47,6 @@
   {
     "t": "RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use",
     "u": "posts/rcd-rccb-rcbo-residual-current-protection-explained",
-    "d": "2026-11-15"
-  },
-  {
-    "t": "AWG vs mm²: Converting Wire Gauge to Metric Cross-Section",
-    "u": "posts/awg-vs-mm2-wire-size-explained",
-    "d": "2026-11-15"
-  },
-  {
-    "t": "Cable Schedules Explained: What Goes in One and How It Drives Ordering and Handover",
-    "u": "posts/cable-schedule-fields-ordering-handover-explained",
-    "d": "2026-11-15"
-  },
-  {
-    "t": "Reading a Centrifugal Pump Curve: Head, Flow, Efficiency & the BEP",
-    "u": "posts/centrifugal-pump-curve-explained",
-    "d": "2026-11-15"
-  },
-  {
-    "t": "Column Axial Capacity: Why Reinforcement Ratio and Slenderness Both Matter",
-    "u": "posts/column-axial-capacity-reinforcement-ratio-explained",
-    "d": "2026-11-15"
-  },
-  {
-    "t": "Concrete Grades Explained: What C25/30 Means and Why the Water-Cement Ratio Matters",
-    "u": "posts/concrete-grades-strength-class-water-cement-ratio-explained",
     "d": "2026-11-15"
   }
 ]
