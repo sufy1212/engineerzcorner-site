@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor Overload Protection and Trip Classes | Engineerz CorneR</title>
+<meta name="description" content="How thermal overload relays protect motors, the IEC 60947-4-1 trip classes 10A, 10, 20 and 30 with trip times at 7.2 times setting, and how to match the class to the start.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/motor-overload-protection-trip-classes-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Motor Overload Protection: How Overload Relays and Trip Classes Work">
+<meta property="og:description" content="How thermal overload relays protect motors, the IEC 60947-4-1 trip classes 10A, 10, 20 and 30 with trip times at 7.2 times setting, and how to match the class to the start.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/motor-overload-protection-trip-classes-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Motor Overload Protection: How Overload Relays and Trip Classes Work">
+<meta name="twitter:description" content="How thermal overload relays protect motors, the IEC 60947-4-1 trip classes 10A, 10, 20 and 30 with trip times at 7.2 times setting, and how to match the class to the start.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Motor Overload Protection: How Overload Relays and Trip Classes Work",
+      "item": "https://www.engineerzcorner.com/posts/motor-overload-protection-trip-classes-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Motor Overload Protection: How Overload Relays and Trip Classes Work",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "description": "How thermal overload relays protect motors, the IEC 60947-4-1 trip classes 10A, 10, 20 and 30 with trip times at 7.2 times setting, and how to match the class to the start.",
+  "url": "https://www.engineerzcorner.com/posts/motor-overload-protection-trip-classes-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/motor-overload-protection-trip-classes-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Motor Overload Protection: How Overload Relays and Trip Classes Work</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Motor Protection</span>
+    <h1>Motor Overload Protection: How Overload Relays and Trip Classes Work</h1>
+    <p class="hero-sub">A motor must be able to start without tripping and still be protected from overheating. Here is how an overload relay works, what the trip classes mean in seconds and how to match a class to the load.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Motor Control</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">An overload relay protects against sustained overcurrent, not short circuits, which need a fuse or breaker.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">IEC 60947-4-1 trip classes are defined by the trip time at 7.2 times the current setting from cold.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Class 10A trips in 2 to 10 s, class 10 in 4 to 10 s, class 20 in 6 to 20 s and class 30 in 9 to 30 s.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">The class has to match the motor start time, or a normal start will trip the relay.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A motor that is overloaded does not fail at once. It heats, the insulation ages faster, and the winding eventually breaks down. Protection has to act before that happens, yet it also has to let the motor start, since a starting motor draws several times its running current for a few seconds. The overload relay and its trip class are how that balance is set.</p>
+
+    <h2><span class="h2-dot"></span>What an overload relay does</h2>
+    <p>A thermal overload relay passes the motor current through a bimetal in each phase. The bimetals heat in proportion to the current and bend, and when they have bent far enough the relay trips the contactor. Electronic overload relays copy the same behaviour with current sensing, and add extras. Neither one protects against a short circuit. That is the job of the fuse or breaker upstream, which is why overload and short-circuit protection are chosen as a pair.</p>
+
+    <h2><span class="h2-dot"></span>Trip classes</h2>
+    <p>IEC 60947-4-1 defines trip classes by how long the relay takes to trip from cold at 7.2 times its current setting, which is roughly what a motor draws at standstill.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Class</th><th>Trip time at 7.2 &times; setting (cold)</th><th>Typical use</th></tr>
+        <tr><td>10A</td><td>2 to 10 s</td><td>Quick-starting loads, most small motors</td></tr>
+        <tr><td>10</td><td>4 to 10 s</td><td>Normal starting, such as pumps</td></tr>
+        <tr><td>20</td><td>6 to 20 s</td><td>Longer starts, such as some fans and compressors</td></tr>
+        <tr><td>30</td><td>9 to 30 s</td><td>Heavy, high-inertia loads</td></tr>
+      </table>
+    </div>
+    <p>The standard also sets the slow end of the curve. A relay must not trip at 1.05 times its setting, must trip within 2 hours at 1.2 times, and at 1.5 times the maximum trip time is 2, 4, 8 and 12 minutes for classes 10A, 10, 20 and 30. The class describes a curve, so a higher class gives a motor longer to start before it trips, at the price of slower protection.</p>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>An 11 kW motor on 400 V draws about 20.8 A at full load. The overload is set to the nameplate current of 20.8 A. At 7.2 times that, 150 A, a class 10 relay trips in 4 to 10 s from cold, and a class 20 relay in 6 to 20 s. If this motor drives a fan with a long acceleration time of, say, 8 s, a class 10 relay could trip during a normal start, so class 20 is the better choice. A pump that reaches speed in 2 s fits class 10 comfortably. The class has to be matched to the start time, and the start time has to come from the load, not from a guess. For starting current and starting methods, see <a href="motor-starting-methods-dol-star-delta-vfd-compared">motor starting methods compared</a>.</p>
+
+    <h2><span class="h2-dot"></span>Beyond simple overload</h2>
+    <ul>
+      <li><b>Phase loss and unbalance.</b> Most relays trip faster when one phase is lost or the currents are badly unbalanced, since the motor heats much faster in that state.</li>
+      <li><b>Ambient temperature.</b> Bimetal relays are affected by the temperature where they sit, so use one with ambient compensation, or an electronic one, when the panel is hot.</li>
+      <li><b>Thermistors.</b> Sensors built into the winding act on actual winding temperature, which also catches cooling failure and frequent starts that current alone would miss.</li>
+      <li><b>Motor protection breakers.</b> An MPCB combines an adjustable thermal trip with a magnetic trip for short circuits in one device. See <a href="circuit-breaker-types-explained">circuit breaker types</a> for how magnetic and thermal tripping differ.</li>
+      <li><b>Drives.</b> A VFD has its own electronic motor protection, so check the drive manual before adding a separate overload relay.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Setting it up</h2>
+    <p>Set the relay to the motor's rated current from the nameplate, after allowing for the service factor if the motor has one, and confirm the rating of the fuse or breaker that backs it up. Check that the settings suit the actual start. Work out the running current with the <a href="../electrical/motor-flc-starting-current">motor full-load current calculator</a>, and for how protection devices coordinate, read <a href="breaker-selectivity-discrimination-explained">breaker selectivity</a> and <a href="relay-basics-construction-working-principle-explained">relay basics</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Set the overload to the motor nameplate current, adjusting for service factor where it applies.</span></li>
+      <li><span class="tk-check">✓</span><span>Pick the trip class from the real start time of the load, using a higher class for long, high-inertia starts.</span></li>
+      <li><span class="tk-check">✓</span><span>Overload relays do not clear short circuits, so check the fuse or breaker that backs them up.</span></li>
+      <li><span class="tk-check">✓</span><span>Look at phase-loss sensitivity, ambient compensation and thermistors for added protection.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Motor%20Overload%20Protection%3A%20How%20Overload%20Relays%20and%20Trip%20Classes%20Work&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-overload-protection-trip-classes-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-overload-protection-trip-classes-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Motor%20Overload%20Protection%3A%20How%20Overload%20Relays%20and%20Trip%20Classes%20Work&text=How%20thermal%20overload%20relays%20protect%20motors%2C%20the%20IEC%2060947-4-1%20trip%20classes%2010A%2C%2010%2C%2020%20and%2030%20with%20trip%20times%20at%207.2%20times%20setting%2C%20and%20how%20to%20match%20the%20class%20to%20the%20start.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-overload-protection-trip-classes-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Motor%20Overload%20Protection%3A%20How%20Overload%20Relays%20and%20Trip%20Classes%20Work&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AMotor%20Overload%20Protection%3A%20How%20Overload%20Relays%20and%20Trip%20Classes%20Work%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fmotor-overload-protection-trip-classes-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../electrical/motor-flc-starting-current">Motor full-load current calculator</a></li><li><a href="motor-starting-methods-dol-star-delta-vfd-compared">Motor Starting Methods Compared</a></li><li><a href="circuit-breaker-types-explained">Circuit Breaker Types Explained</a></li><li><a href="relay-basics-construction-working-principle-explained">Relay Basics</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>

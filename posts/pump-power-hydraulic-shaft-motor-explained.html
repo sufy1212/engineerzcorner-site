@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pump Power: Hydraulic, Shaft and Motor | Engineerz CorneR</title>
+<meta name="description" content="How to get from flow and head to hydraulic power, shaft power and motor input, with a worked example, a standard motor size, and what density, speed and efficiency change.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/pump-power-hydraulic-shaft-motor-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size">
+<meta property="og:description" content="How to get from flow and head to hydraulic power, shaft power and motor input, with a worked example, a standard motor size, and what density, speed and efficiency change.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/pump-power-hydraulic-shaft-motor-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size">
+<meta name="twitter:description" content="How to get from flow and head to hydraulic power, shaft power and motor input, with a worked example, a standard motor size, and what density, speed and efficiency change.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size",
+      "item": "https://www.engineerzcorner.com/posts/pump-power-hydraulic-shaft-motor-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "description": "How to get from flow and head to hydraulic power, shaft power and motor input, with a worked example, a standard motor size, and what density, speed and efficiency change.",
+  "url": "https://www.engineerzcorner.com/posts/pump-power-hydraulic-shaft-motor-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/pump-power-hydraulic-shaft-motor-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚙ Mechanical &middot; Pumps</span>
+    <h1>Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size</h1>
+    <p class="hero-sub">A pump is specified by flow and head, but the motor is sized in kilowatts. Here are the three steps from the liquid to the drive, with worked numbers, and the factors that move the answer.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Mechanical / Pumps</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Hydraulic power is density &times; g &times; flow &times; head, the useful work done on the liquid.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Shaft power is hydraulic power divided by pump efficiency, and motor input divides again by the motor and drive efficiency.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A 50 m&sup3;/h, 30 m duty at 70% and 92% efficiency needs 6.35 kW of input, so a 7.5 kW standard size.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Cutting speed by 10% cuts shaft power to about 73%, since power follows the cube of speed.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Pumps are specified by flow and head, but the motor that drives them is specified in kilowatts. Getting from one to the other takes three steps, one for each place where energy is lost: the fluid, the pump and the drive. Skip a step and the motor is either too small to hold the duty point or far too big to run efficiently.</p>
+
+    <h2><span class="h2-dot"></span>Three powers, three efficiencies</h2>
+    <div class="formula-box">
+      <div class="formula-row">
+        <div class="f-chip"><b>Hydraulic</b><span>&rho; &times; g &times; Q &times; H</span></div>
+        <div class="f-op">&rarr;</div>
+        <div class="f-chip"><b>Shaft</b><span>&divide; pump efficiency</span></div>
+        <div class="f-op">&rarr;</div>
+        <div class="f-result"><b>Motor input</b><span>&divide; motor and drive efficiency</span></div>
+      </div>
+    </div>
+    <div class="formula-note">With density &rho; in kg/m&sup3;, flow Q in m&sup3;/s and head H in metres, the hydraulic power in kW is &rho; &times; 9.81 &times; Q &times; H &divide; 1000. It is the useful work done on the liquid. The shaft (brake) power is what the pump takes from its motor, and the motor input is what is drawn from the supply.</div>
+
+    <h2><span class="h2-dot"></span>Worked example</h2>
+    <p>A pump delivers 50 m&sup3;/h of water, 13.9 L/s, against a total dynamic head of 30 m. The pump efficiency at this duty point is 70% and the motor and drive efficiency is 92%.</p>
+    <ul>
+      <li>Hydraulic power: 1000 &times; 9.81 &times; (50 &divide; 3600) &times; 30 &divide; 1000 = 4.09 kW.</li>
+      <li>Shaft power: 4.09 &divide; 0.70 = 5.84 kW.</li>
+      <li>Motor input power: 5.84 &divide; 0.92 = 6.35 kW.</li>
+    </ul>
+    <p>The <a href="../mechanical/pump-power-npsh-calculator">pump power and NPSH calculator</a> gives the same figures and then rounds the motor input up to the next standard size, here 7.5 kW. Many specifications size the motor on the shaft power plus a margin, so the rounding in the tool is deliberately on the cautious side. Use the margin and the standard that apply to your project. A US-unit cross-check gives the same shaft power: 220 gpm at 98.4 ft with 70% efficiency is 220 &times; 98.4 &divide; (3,960 &times; 0.70) = 7.8 hp, which is 5.8 kW.</p>
+
+    <h2><span class="h2-dot"></span>What changes the answer</h2>
+    <ul>
+      <li><b>Efficiency at the duty point.</b> Read it from the pump curve at the real flow and head, not from the best-efficiency figure in a brochure. A pump running far from its best point can lose many percentage points. See <a href="centrifugal-pump-curve-explained">the centrifugal pump curve</a>.</li>
+      <li><b>Fluid density.</b> Power scales directly with density. Seawater at about 1,030 kg/m&sup3; raises the 4.09 kW hydraulic figure to about 4.21 kW, and a slurry or a heavy brine more. Viscous fluids also lower pump efficiency.</li>
+      <li><b>Speed.</b> Shaft power falls with the cube of speed, so cutting the speed by 10% cuts the shaft power to 0.9&sup3; = 73% of its value, 4.26 kW in this example. That is the basis of the savings in <a href="vfd-speed-scaling-affinity-laws-energy-savings">VFD speed scaling</a> and <a href="pump-fan-affinity-laws-explained">the affinity laws</a>, valid for a system with little static head.</li>
+      <li><b>Operating hours.</b> The 6.35 kW input over 6,000 hours a year uses about 38,100 kWh. Efficiency gains are worth chasing for pumps that run long hours.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Checks that sit beside the power figure</h2>
+    <p>The power calculation says nothing about whether the pump will cavitate. Check the suction side with <a href="npsh-available-explained">NPSH available</a> and keep a real margin, as in <a href="npsh-margin-why-passing-on-paper-can-still-cavitate">why passing on paper can still cavitate</a>. Also check that the motor can start the pump, and that the head used in the calculation includes the friction losses from <a href="pipe-flow-head-loss-reynolds-number-regime">pipe head loss</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Use the pump efficiency read from the curve at the real duty point, not the best-efficiency figure.</span></li>
+      <li><span class="tk-check">✓</span><span>Power scales with fluid density, so heavy fluids need more power for the same flow and head.</span></li>
+      <li><span class="tk-check">✓</span><span>Size the motor on shaft power plus the margin your standard requires, then round to a standard size.</span></li>
+      <li><span class="tk-check">✓</span><span>Check NPSH margin and motor starting separately from the power figure.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Pump%20Power%20Explained%3A%20From%20Hydraulic%20Power%20to%20Shaft%20Power%20to%20Motor%20Size&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-power-hydraulic-shaft-motor-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-power-hydraulic-shaft-motor-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Pump%20Power%20Explained%3A%20From%20Hydraulic%20Power%20to%20Shaft%20Power%20to%20Motor%20Size&text=How%20to%20get%20from%20flow%20and%20head%20to%20hydraulic%20power%2C%20shaft%20power%20and%20motor%20input%2C%20with%20a%20worked%20example%2C%20a%20standard%20motor%20size%2C%20and%20what%20density%2C%20speed%20and%20efficiency%20change.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-power-hydraulic-shaft-motor-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Pump%20Power%20Explained%3A%20From%20Hydraulic%20Power%20to%20Shaft%20Power%20to%20Motor%20Size&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APump%20Power%20Explained%3A%20From%20Hydraulic%20Power%20to%20Shaft%20Power%20to%20Motor%20Size%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fpump-power-hydraulic-shaft-motor-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="../mechanical/pump-power-npsh-calculator">Pump power &amp; NPSH calculator</a></li><li><a href="centrifugal-pump-curve-explained">Centrifugal Pump Curve Explained</a></li><li><a href="pump-fan-affinity-laws-explained">Pump &amp; Fan Affinity Laws</a></li><li><a href="npsh-margin-why-passing-on-paper-can-still-cavitate">NPSH Margin: Why Passing on Paper Can Still Cavitate</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
