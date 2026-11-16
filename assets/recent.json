@@ -1,32 +1,32 @@
 [
   {
-    "t": "Bearing Failures: Root Causes & Prevention",
-    "u": "posts/bearing-failure-modes-causes-prevention",
+    "t": "Circuit Breaker Types Explained: MCB to OCB",
+    "u": "posts/circuit-breaker-types-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
-    "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
+    "t": "Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough",
+    "u": "posts/earth-fault-loop-impedance-disconnection-times-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Compressed Air Systems: Where the Energy Goes and How to Cut It",
-    "u": "posts/compressed-air-system-leaks-pressure-energy-explained",
+    "t": "Motor Efficiency Classes Explained: IE1 to IE4, the EU Rules and What the Savings Look Like",
+    "u": "posts/motor-efficiency-classes-ie1-ie4-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies",
-    "u": "posts/pipe-flow-head-loss-reynolds-number-regime",
+    "t": "Motor Overload Protection: How Overload Relays and Trip Classes Work",
+    "u": "posts/motor-overload-protection-trip-classes-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Cavitation in Pumps: Causes, Warning Signs, and Prevention",
-    "u": "posts/pump-cavitation-causes-prevention",
+    "t": "Motor Starting Methods: DOL vs Star-Delta vs Soft Starter vs VFD Compared",
+    "u": "posts/motor-starting-methods-dol-star-delta-vfd-compared",
     "d": "2026-11-16"
   },
   {
-    "t": "Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size",
-    "u": "posts/pump-power-hydraulic-shaft-motor-explained",
+    "t": "RCD, RCCB and RCBO Explained: How Residual Current Protection Works and Which Type to Use",
+    "u": "posts/rcd-rccb-rcbo-residual-current-protection-explained",
     "d": "2026-11-16"
   },
   {
@@ -35,8 +35,8 @@
     "d": "2026-11-16"
   },
   {
-    "t": "Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation",
-    "u": "posts/shaft-diameter-sizing-asme-bending-torsion-explained",
+    "t": "Types of Earthing Systems: 9 Electrode Types Explained",
+    "u": "posts/types-of-earthing-systems-explained",
     "d": "2026-11-16"
   },
   {
@@ -45,8 +45,8 @@
     "d": "2026-11-16"
   },
   {
-    "t": "Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You",
-    "u": "posts/vibration-analysis-iso-20816-severity-spectrum-explained",
+    "t": "Voltage Drop in LV Feeders: Why It's a Chain, Not a Single Number",
+    "u": "posts/voltage-drop-lv-feeders-explained",
     "d": "2026-11-16"
   }
 ]
