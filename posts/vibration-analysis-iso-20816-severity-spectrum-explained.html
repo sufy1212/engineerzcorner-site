@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibration Analysis: ISO 20816-3 and the Spectrum | Engineerz CorneR</title>
+<meta name="description" content="How machine vibration is measured, the ISO 20816-3 severity zones by machine group, how alarms and change are set, and how unbalance, misalignment and bearing faults show in a spectrum.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/vibration-analysis-iso-20816-severity-spectrum-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You">
+<meta property="og:description" content="How machine vibration is measured, the ISO 20816-3 severity zones by machine group, how alarms and change are set, and how unbalance, misalignment and bearing faults show in a spectrum.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/vibration-analysis-iso-20816-severity-spectrum-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You">
+<meta name="twitter:description" content="How machine vibration is measured, the ISO 20816-3 severity zones by machine group, how alarms and change are set, and how unbalance, misalignment and bearing faults show in a spectrum.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You",
+      "item": "https://www.engineerzcorner.com/posts/vibration-analysis-iso-20816-severity-spectrum-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "description": "How machine vibration is measured, the ISO 20816-3 severity zones by machine group, how alarms and change are set, and how unbalance, misalignment and bearing faults show in a spectrum.",
+  "url": "https://www.engineerzcorner.com/posts/vibration-analysis-iso-20816-severity-spectrum-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/vibration-analysis-iso-20816-severity-spectrum-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9881; Mechanical &middot; Condition Monitoring</span>
+    <h1>Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You</h1>
+    <p class="hero-sub">Vibration changes before most machines fail. Here is how velocity relates to displacement, how ISO 20816-3 zones classify severity by machine group and how to read the spectrum to find the cause.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Mechanical / Condition Monitoring</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Overall severity is judged on RMS velocity measured at the bearing housings.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">ISO 20816-3 divides readings into zones A to D, with limits that depend on machine size and support stiffness.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A Group 2 machine on a rigid base reaches Zone C above 2.8 mm/s and Zone D above 4.5 mm/s.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Unbalance shows at 1&times; running speed, misalignment at 1&times; and 2&times;, and bearing faults at their own frequencies.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>A rotating machine that is running well produces a small, steady vibration. When something changes, such as a worn bearing, a loose foot or a shaft that has drifted out of line, the vibration changes with it, often weeks before anything else shows. Measuring it is the oldest and most reliable form of condition monitoring for pumps, fans, motors and gearboxes.</p>
+
+    <h2><span class="h2-dot"></span>Velocity, displacement and acceleration</h2>
+    <p>Vibration can be expressed as how far the surface moves, how fast it moves or how hard it accelerates, and for a steady sine wave they are linked: v = 2&pi; &times; f &times; x, where f is the frequency in hertz and x is the displacement. Overall machine severity is judged on <b>velocity</b>, because across the usual 10 to 1,000 Hz range it tracks the energy that fatigues a machine best. Displacement suits slow machines, and acceleration suits high-frequency bearing and gear faults.</p>
+    <p>A worked case: a motor at 1,480 rpm runs at 24.7 Hz. If the bearing housing moves 20 micrometres peak, the peak velocity is 2&pi; &times; 24.7 &times; 0.020 = 3.1 mm/s and the RMS velocity is 3.1 &divide; &radic;2 = 2.2 mm/s. Severity limits use the RMS figure.</p>
+
+    <h2><span class="h2-dot"></span>Severity zones under ISO 20816-3</h2>
+    <p>ISO 20816-3, which carries forward ISO 10816-3, rates machines by broadband RMS velocity measured on the bearing housings. Readings land in four zones: A for newly commissioned machines, B acceptable for long-term operation, C unsatisfactory for long-term running but possible for a limited period, and D severe enough to cause damage. The limits depend on the machine size and on whether it sits on a rigid or flexible support.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Machine group and support</th><th>A/B (mm/s)</th><th>B/C (mm/s)</th><th>C/D (mm/s)</th></tr>
+        <tr><td>Group 2 (about 15 to 300 kW), rigid</td><td>1.4</td><td>2.8</td><td>4.5</td></tr>
+        <tr><td>Group 2, flexible</td><td>2.3</td><td>4.5</td><td>7.1</td></tr>
+        <tr><td>Group 1 (above about 300 kW), rigid</td><td>2.3</td><td>4.5</td><td>7.1</td></tr>
+        <tr><td>Group 1, flexible</td><td>3.5</td><td>7.1</td><td>11.0</td></tr>
+      </table>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:-16px;">Older documents based on ISO 10816-1 use different class limits, with lower boundaries for small machines. Check which standard and group an alarm table follows.</p>
+    <p>A 150 kW pump motor on a rigid base reading 3.0 mm/s RMS is in Zone C. Keep it running if you must, and plan the repair. The same reading on a large machine on a flexible support would still be in Zone B, which shows why the group has to be right before the limit means anything.</p>
+
+    <h2><span class="h2-dot"></span>Alarms and change</h2>
+    <p>The standard suggests setting an alarm above the machine&rsquo;s own steady baseline by 25% of the upper limit of Zone B, and not normally above 1.25 times that limit. For a Group 2 machine on a rigid base, the Zone B upper limit is 2.8 mm/s, so a motor that normally reads 1.2 mm/s gets an alarm at 1.9 mm/s, and no alarm on that class would normally sit above 3.5 mm/s. The standard also treats a change of more than 25% of the B/C boundary, 0.7 mm/s here, as significant even inside Zone B. A pump that moves from 1.0 to 1.8 mm/s has not left Zone B, but it has changed enough to need a spectrum.</p>
+
+    <h2><span class="h2-dot"></span>Reading the spectrum</h2>
+    <p>A single severity number tells you that a machine is in trouble but not why. A frequency spectrum splits the vibration by frequency, and the faults leave recognisable signatures, in multiples of the running speed (1&times;).</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Fault</th><th>Typical signature</th></tr>
+        <tr><td>Unbalance</td><td>A strong peak at 1&times; running speed, mostly radial</td></tr>
+        <tr><td>Misalignment</td><td>Peaks at 1&times; and 2&times;, often with high axial vibration</td></tr>
+        <tr><td>Looseness</td><td>Many harmonics of 1&times;, and sometimes half-order components</td></tr>
+        <tr><td>Rolling bearing defect</td><td>Non-synchronous peaks at the bearing defect frequencies, with high-frequency noise early on</td></tr>
+        <tr><td>Electrical (motor)</td><td>Peaks at twice the line frequency, 100 or 120 Hz, that vanish when the power is cut</td></tr>
+      </table>
+    </div>
+
+    <h2><span class="h2-dot"></span>Taking a useful measurement</h2>
+    <ul>
+      <li><b>Sensor position.</b> Measure on the bearing housings, as close to the bearing as practical, in the horizontal and vertical directions, and axially where it helps diagnosis. Use the same points and the same method every time.</li>
+      <li><b>Operating condition.</b> Read at normal speed, load and temperature. A cold or unloaded machine gives a different answer.</li>
+      <li><b>Trend, not just limits.</b> A rising trend at a point is the earliest warning, so keep the history.</li>
+      <li><b>Machine range.</b> The standard applies to machines running between 120 and 15,000 rpm, and slower machines need measurement from lower frequencies.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Related reading</h2>
+    <p>For what vibration is usually telling you, see <a href="bearing-failure-modes-causes-prevention">bearing failure modes</a> and <a href="pump-cavitation-causes-prevention">pump cavitation</a>, and for how heat finds electrical faults, <a href="infrared-thermography-electrical-inspection-explained">infrared thermography</a>. When the problem is a shaft that is too light for its loads, read <a href="shaft-diameter-sizing-asme-bending-torsion-explained">shaft diameter sizing</a>, and for how belts add bending loads, <a href="belt-drive-sizing-speed-ratio-vs-tension">belt drive sizing</a>.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Classify the machine by group and support before applying any limit.</span></li>
+      <li><span class="tk-check">✓</span><span>Judge change as well as level, since a 25% step is significant even inside Zone B.</span></li>
+      <li><span class="tk-check">✓</span><span>Use the spectrum to find the cause once the overall level or trend says there is a problem.</span></li>
+      <li><span class="tk-check">✓</span><span>Measure at the same points and operating condition each time so the trend means something.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Vibration%20Analysis%20Basics%3A%20ISO%2020816-3%20Severity%20Zones%20and%20What%20the%20Spectrum%20Tells%20You&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvibration-analysis-iso-20816-severity-spectrum-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvibration-analysis-iso-20816-severity-spectrum-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Vibration%20Analysis%20Basics%3A%20ISO%2020816-3%20Severity%20Zones%20and%20What%20the%20Spectrum%20Tells%20You&text=How%20machine%20vibration%20is%20measured%2C%20the%20ISO%2020816-3%20severity%20zones%20by%20machine%20group%2C%20how%20alarms%20and%20change%20are%20set%2C%20and%20how%20unbalance%2C%20misalignment%20and%20bearing%20faults%20show%20in%20a%20spectrum.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvibration-analysis-iso-20816-severity-spectrum-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Vibration%20Analysis%20Basics%3A%20ISO%2020816-3%20Severity%20Zones%20and%20What%20the%20Spectrum%20Tells%20You&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AVibration%20Analysis%20Basics%3A%20ISO%2020816-3%20Severity%20Zones%20and%20What%20the%20Spectrum%20Tells%20You%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fvibration-analysis-iso-20816-severity-spectrum-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="bearing-failure-modes-causes-prevention">Bearing Failure Modes</a></li><li><a href="pump-cavitation-causes-prevention">Pump Cavitation: Causes and Prevention</a></li><li><a href="infrared-thermography-electrical-inspection-explained">Infrared Thermography for Electrical Inspection</a></li><li><a href="shaft-diameter-sizing-asme-bending-torsion-explained">Shaft Diameter Sizing (ASME)</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
