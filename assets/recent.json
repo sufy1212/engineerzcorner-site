@@ -5,48 +5,48 @@
     "d": "2026-11-16"
   },
   {
-    "t": "Electrical Panel Factory Acceptance Test (FAT): The Complete Checklist",
-    "u": "posts/electrical-panel-fat-checklist",
+    "t": "Belt Drive Sizing: Why the Speed Ratio Alone Doesn't Tell You the Tension",
+    "u": "posts/belt-drive-sizing-speed-ratio-vs-tension",
     "d": "2026-11-16"
   },
   {
-    "t": "MCB, MCCB, ACB, RCCB & More: Electrical Switchgear & Protection Devices Explained",
-    "u": "posts/electrical-switchgear-protection-devices-explained",
+    "t": "Compressed Air Systems: Where the Energy Goes and How to Cut It",
+    "u": "posts/compressed-air-system-leaks-pressure-energy-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3",
-    "u": "posts/hydrostatic-pneumatic-leak-test-asme-b31-3-explained",
+    "t": "Pipe Head Loss: Why Reynolds Number Decides Which Formula Applies",
+    "u": "posts/pipe-flow-head-loss-reynolds-number-regime",
     "d": "2026-11-16"
   },
   {
-    "t": "Infrared Thermography for Electrical Inspection: Finding Hot Spots Before They Fail",
-    "u": "posts/infrared-thermography-electrical-inspection-explained",
+    "t": "Cavitation in Pumps: Causes, Warning Signs, and Prevention",
+    "u": "posts/pump-cavitation-causes-prevention",
     "d": "2026-11-16"
   },
   {
-    "t": "Insulation Resistance Testing Explained",
-    "u": "posts/insulation-resistance-testing-megger-pi-explained",
+    "t": "Pump Power Explained: From Hydraulic Power to Shaft Power to Motor Size",
+    "u": "posts/pump-power-hydraulic-shaft-motor-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Pipe Wall Thickness (ASME B31.3)",
-    "u": "posts/pipe-wall-thickness-asme-b31-3-explained",
+    "t": "What a Load Really Costs to Run",
+    "u": "posts/running-cost-of-a-load-kwh-demand-tariff-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Relief Valve Orifice Sizing",
-    "u": "posts/relief-valve-sizing-api520-explained",
+    "t": "Shaft Diameter Sizing: Combining Bending and Torsion with the ASME Equation",
+    "u": "posts/shaft-diameter-sizing-asme-bending-torsion-explained",
     "d": "2026-11-16"
   },
   {
-    "t": "Industrial Valves Explained: Types & Parts",
-    "u": "posts/valve-types-parts-explained",
+    "t": "VFD Speed Scaling: Why Affinity Laws Make Small Speed Cuts Deliver Outsized Savings",
+    "u": "posts/vfd-speed-scaling-affinity-laws-energy-savings",
     "d": "2026-11-16"
   },
   {
-    "t": "Vessel Purging and Inerting Explained",
-    "u": "posts/vessel-purging-dilution-turnovers-loc-explained",
+    "t": "Vibration Analysis Basics: ISO 20816-3 Severity Zones and What the Spectrum Tells You",
+    "u": "posts/vibration-analysis-iso-20816-severity-spectrum-explained",
     "d": "2026-11-16"
   }
 ]
