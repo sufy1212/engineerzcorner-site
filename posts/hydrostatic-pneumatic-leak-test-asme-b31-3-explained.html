@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydrostatic and Pneumatic Leak Testing (B31.3) | Engineerz CorneR</title>
+<meta name="description" content="How ASME B31.3 sets hydrostatic and pneumatic test pressures, the stress ratio correction, a worked example, hold time, and the practical hazards of static head, trapped air and stored energy.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/hydrostatic-pneumatic-leak-test-asme-b31-3-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3">
+<meta property="og:description" content="How ASME B31.3 sets hydrostatic and pneumatic test pressures, the stress ratio correction, a worked example, hold time, and the practical hazards of static head, trapped air and stored energy.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/hydrostatic-pneumatic-leak-test-asme-b31-3-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3">
+<meta name="twitter:description" content="How ASME B31.3 sets hydrostatic and pneumatic test pressures, the stress ratio correction, a worked example, hold time, and the practical hazards of static head, trapped air and stored energy.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3",
+      "item": "https://www.engineerzcorner.com/posts/hydrostatic-pneumatic-leak-test-asme-b31-3-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "description": "How ASME B31.3 sets hydrostatic and pneumatic test pressures, the stress ratio correction, a worked example, hold time, and the practical hazards of static head, trapped air and stored energy.",
+  "url": "https://www.engineerzcorner.com/posts/hydrostatic-pneumatic-leak-test-asme-b31-3-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/hydrostatic-pneumatic-leak-test-asme-b31-3-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9879; Process &middot; Piping</span>
+    <h1>Piping Pressure Tests Explained: Hydrostatic and Pneumatic Leak Testing to ASME B31.3</h1>
+    <p class="hero-sub">Before a process line goes into service it is pressurised to prove its joints. Here is how B31.3 sets the hydrostatic and pneumatic test pressures, why the stress ratio matters, and the practical points that make tests safe.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Process / Piping Testing</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Minimum hydrostatic test pressure is 1.5 &times; design pressure &times; (S<sub>T</sub>/S), with the ratio capped at 6.5.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">A pneumatic test uses at least 1.1 &times; design pressure and stores far more energy than a water test.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">The test pressure is held at least 10 minutes, or long enough to examine every joint.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Static head, trapped air and thermal expansion are common reasons a test goes wrong.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Before a new or modified piping system goes into service, it is pressurised to confirm that its joints do not leak and that the pipe can carry more than its working pressure. ASME B31.3, the process piping code, sets the rules for that leak test, and the central choice is between testing with water, which is the default, or with gas.</p>
+
+    <h2><span class="h2-dot"></span>Hydrostatic test pressure</h2>
+    <p class="lede">P<sub>T</sub> = 1.5 &times; P &times; (S<sub>T</sub> &divide; S)</p>
+    <div class="formula-note">P is the internal design pressure, S<sub>T</sub> is the allowable stress at the test temperature and S the allowable stress at the design temperature. The ratio S<sub>T</sub>/S, which is at least 1 when the design temperature is higher than the test temperature, may not be taken as more than 6.5. The test pressure must also not push the stress past the yield strength of the pipe at the test temperature.</div>
+    <p>The stress ratio matters because steel is weaker hot. A line designed for a high temperature is tested cold, so the test pressure is raised to put the same stress in the pipe that 1.5 times design pressure would at design temperature.</p>
+    <p><b>Worked example.</b> A line has a design pressure of 16 bar(g). The allowable stress is 120 MPa at the design temperature and 138 MPa at the test temperature, values chosen only for this illustration, so take real ones from the code tables. The ratio is 138 &divide; 120 = 1.15 and P<sub>T</sub> = 1.5 &times; 16 &times; 1.15 = 27.6 bar(g). Without the temperature correction the answer would be 24 bar(g), which shows what the ratio adds. Check this against the lowest-rated component in the test section, such as a flange or a valve, because the test pressure may not exceed what any connected item can take.</p>
+
+    <h2><span class="h2-dot"></span>Pneumatic testing</h2>
+    <p>A pneumatic test uses air or an inert gas, at a minimum of 1.1 times the design pressure, which would be 17.6 bar(g) for the same line. It is used when water cannot be tolerated or the supports cannot carry its weight. It is also much more hazardous, because compressed gas stores a large amount of energy that releases violently if a component fails, while water barely stores any. Codes therefore ask for extra precautions, such as stepped pressurisation, a relief device and a controlled exclusion zone. Use gas only when water is not an option.</p>
+
+    <h2><span class="h2-dot"></span>Hold time</h2>
+    <p>The test pressure is held for at least 10 minutes, or for as long as it takes to examine every joint, whichever is longer. Practical tests often run longer, since temperature changes in a closed water-filled line cause the pressure to drift. Pressure is raised in steps so the test can be stopped if a leak appears.</p>
+
+    <h2><span class="h2-dot"></span>Practical points that catch people out</h2>
+    <ul>
+      <li><b>Static head.</b> Water adds about 1 bar for every 10.2 m of height, so the bottom of a 30 m tall line sees roughly 2.9 bar more than a gauge at the top. Set the gauge location and check the lowest point does not exceed any limit.</li>
+      <li><b>Air in the line.</b> Trapped air is compressible and makes the test less safe and the readings unstable. Vent at all high points while filling.</li>
+      <li><b>Thermal expansion.</b> A water-filled, closed system can gain pressure quickly from a small temperature rise. Keep a relief device on the test setup.</li>
+      <li><b>Isolate what cannot take the test.</b> Vessels, pumps, instruments and relief valves are normally isolated or removed and tested to their own limits.</li>
+      <li><b>Water quality and temperature.</b> Austenitic stainless steel needs low-chloride water, and testing near the material&rsquo;s brittle transition temperature must be avoided. Drain and dry the line afterward, especially in cold weather.</li>
+      <li><b>Hydrotest weight.</b> A large line full of water may need extra supports. See <a href="pipe-thermal-expansion-why-long-runs-move-more">pipe thermal expansion</a> and <a href="valve-types-parts-explained">valve types</a> for what is in the line.</li>
+    </ul>
+
+    <h2><span class="h2-dot"></span>Where it fits</h2>
+    <p>The leak test follows fabrication, welding and the required examinations, and it comes before insulation, painting and commissioning, since joints must be visible. Wall thickness and design pressure come from the design, as in <a href="pipe-wall-thickness-asme-b31-3-explained">pipe wall thickness to ASME B31.3</a>, and relief devices that protect the line in service are covered in <a href="relief-valve-sizing-api520-explained">relief valve sizing</a>. After the test, flushing and purging prepare the line for service, as described in <a href="vessel-purging-dilution-turnovers-loc-explained">vessel purging and inerting</a>. Always work from the edition of the code your project cites, since details and factors can differ between editions.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Hydrostatic testing with water is the default, and pneumatic testing is for cases where water cannot be used.</span></li>
+      <li><span class="tk-check">✓</span><span>The stress ratio raises the test pressure for lines designed for high temperature, and the test must not exceed any component limit or yield.</span></li>
+      <li><span class="tk-check">✓</span><span>Account for static head, vent trapped air and keep a relief device on the test rig.</span></li>
+      <li><span class="tk-check">✓</span><span>Use the code edition your project cites, and the allowable stresses from its tables.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Piping%20Pressure%20Tests%20Explained%3A%20Hydrostatic%20and%20Pneumatic%20Leak%20Testing%20to%20ASME%20B31.3&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhydrostatic-pneumatic-leak-test-asme-b31-3-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhydrostatic-pneumatic-leak-test-asme-b31-3-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Piping%20Pressure%20Tests%20Explained%3A%20Hydrostatic%20and%20Pneumatic%20Leak%20Testing%20to%20ASME%20B31.3&text=How%20ASME%20B31.3%20sets%20hydrostatic%20and%20pneumatic%20test%20pressures%2C%20the%20stress%20ratio%20correction%2C%20a%20worked%20example%2C%20hold%20time%2C%20and%20the%20practical%20hazards%20of%20static%20head%2C%20trapped%20air%20and%20stored%20energy.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhydrostatic-pneumatic-leak-test-asme-b31-3-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Piping%20Pressure%20Tests%20Explained%3A%20Hydrostatic%20and%20Pneumatic%20Leak%20Testing%20to%20ASME%20B31.3&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0APiping%20Pressure%20Tests%20Explained%3A%20Hydrostatic%20and%20Pneumatic%20Leak%20Testing%20to%20ASME%20B31.3%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fhydrostatic-pneumatic-leak-test-asme-b31-3-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="pipe-wall-thickness-asme-b31-3-explained">Pipe Wall Thickness to ASME B31.3</a></li><li><a href="relief-valve-sizing-api520-explained">Relief Valve Orifice Sizing (API 520)</a></li><li><a href="vessel-purging-dilution-turnovers-loc-explained">Vessel Purging and Inerting</a></li><li><a href="valve-types-parts-explained">Valve Types and Parts Explained</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
