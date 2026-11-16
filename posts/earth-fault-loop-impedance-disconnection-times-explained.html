@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earth Fault Loop Impedance (Zs) Explained | Engineerz CorneR</title>
+<meta name="description" content="What earth fault loop impedance is, the 0.4 s and 5 s disconnection times, how to find maximum Zs for MCB types, the 0.8 rule, maximum cable length and TT systems.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/earth-fault-loop-impedance-disconnection-times-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough">
+<meta property="og:description" content="What earth fault loop impedance is, the 0.4 s and 5 s disconnection times, how to find maximum Zs for MCB types, the 0.8 rule, maximum cable length and TT systems.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/earth-fault-loop-impedance-disconnection-times-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough">
+<meta name="twitter:description" content="What earth fault loop impedance is, the 0.4 s and 5 s disconnection times, how to find maximum Zs for MCB types, the 0.8 rule, maximum cable length and TT systems.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-posts.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough",
+      "item": "https://www.engineerzcorner.com/posts/earth-fault-loop-impedance-disconnection-times-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "description": "What earth fault loop impedance is, the 0.4 s and 5 s disconnection times, how to find maximum Zs for MCB types, the 0.8 rule, maximum cable length and TT systems.",
+  "url": "https://www.engineerzcorner.com/posts/earth-fault-loop-impedance-disconnection-times-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/earth-fault-loop-impedance-disconnection-times-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Fault Protection</span>
+    <h1>Earth Fault Loop Impedance Explained: Why the Breaker Must Trip Fast Enough</h1>
+    <p class="hero-sub">Earthing only protects people if the fault current is large enough to trip the device in time. Here is how Zs sets that current, the disconnection times, a worked 32 A example, the 0.8 rule and how cable length changes the answer.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Reference &middot; Electrical / Shock Protection</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">In a TN system the condition is Zs &le; U0 &divide; Ia, where Ia is the current that trips the device in time.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">At 230 V, final circuits up to 32 A (and socket circuits up to 63 A) need disconnection within 0.4 s, and distribution circuits within 5 s.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">A 32 A Type B breaker has a tabulated maximum Zs of 1.37 &Omega;, and a Type C limit is half that.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">A common site check compares a cold Zs reading with 80% of the tabulated limit.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>The point of earthing a circuit is not the earth itself. It is to make sure that when a live conductor touches an exposed metal part, enough current flows to trip the protective device quickly, before anyone can be harmed by the voltage on that metal. How much current flows depends on one number, the earth fault loop impedance, written Zs.</p>
+
+    <h2><span class="h2-dot"></span>What the loop is</h2>
+    <p>In a TN system, a fault from line to an earthed metal part sends current round a loop: from the supply transformer, along the line conductor to the fault, back through the protective conductor and the earthing path, and into the transformer neutral. Zs is the total impedance of that loop, so the prospective fault current is roughly U<sub>0</sub> &divide; Z<sub>s</sub>. The device must operate within a limited time at that current.</p>
+    <p class="lede">Z<sub>s</sub> &le; U<sub>0</sub> &divide; I<sub>a</sub></p>
+    <div class="formula-note">U<sub>0</sub> is the nominal voltage to earth and I<sub>a</sub> the current that makes the device disconnect within the required time. Zs is the sum of the external loop impedance Ze (the supply and its earthing) and the circuit&rsquo;s own R1 + R2, the resistance of the line conductor plus the protective conductor.</div>
+
+    <h2><span class="h2-dot"></span>Disconnection times</h2>
+    <p>For a TN system at 230 V to earth, the rules in IEC 60364-4-41 and BS 7671 set these maximum disconnection times.</p>
+    <div class="tbl-scroll">
+      <table class="dtable">
+        <tr><th>Circuit</th><th>Maximum disconnection time (TN, 230 V)</th></tr>
+        <tr><td>Final circuit up to 63 A with socket outlets, or up to 32 A with fixed equipment only</td><td>0.4 s</td></tr>
+        <tr><td>Distribution circuits and other final circuits</td><td>5 s</td></tr>
+      </table>
+    </div>
+    <p>For a TT system the equivalent times are 0.2 s for the final circuits above, and 1 s for the rest. The longer 5 s time for distribution circuits is allowed because the protective devices there need time to discriminate with those downstream, and the touch voltages stay lower.</p>
+
+    <h2><span class="h2-dot"></span>Worked example: a 32 A circuit</h2>
+    <p>A 32 A Type B miniature circuit breaker trips instantaneously between 3 and 5 times its rating, so to guarantee a fast trip the fault current must reach 5 &times; 32 = 160 A. The simple limit is Zs &le; 230 &divide; 160 = 1.44 &Omega;. BS 7671 tabulates 1.37 &Omega; for this breaker because it also allows for supply voltage tolerance with a factor of 0.95: 0.95 &times; 230 &divide; 160 = 1.37 &Omega;. A Type C breaker trips at 5 to 10 times rating, so its limit is half the Type B value, and a Type D breaker&rsquo;s is a quarter.</p>
+
+    <h2><span class="h2-dot"></span>The 0.8 rule on site</h2>
+    <p>The tabulated limits assume the conductors are at their working temperature, such as 70 &deg;C for PVC cable. Tests on a cold installation read lower, since copper resistance rises with temperature. A common allowance is to compare the measured value with 80% of the tabulated limit. For the 32 A Type B breaker, that is 0.8 &times; 1.37 = 1.10 &Omega;. A measured Zs of 0.95 &Omega; passes, and 1.2 &Omega; fails even though it is under 1.37 &Omega;.</p>
+
+    <h2><span class="h2-dot"></span>How long can the cable be?</h2>
+    <p>Zs grows with cable length, so a long run can fail even when the cable carries the current without trouble. Take a 16 A Type B circuit in 2.5 mm&sup2; live and 1.5 mm&sup2; protective conductor, with R1 + R2 about 19.5 m&Omega; per metre at 20 &deg;C, and an external impedance Ze of 0.35 &Omega; (illustrative). The tabulated limit is 0.95 &times; 230 &divide; (5 &times; 16) = 2.73 &Omega;, and 80% of that is 2.19 &Omega;. The room left for the cable is 2.19 &minus; 0.35 = 1.84 &Omega;, so the longest run is 1.84 &divide; 0.01951 = about 94 m. At 30 m, Zs is 0.35 + 30 &times; 0.01951 = 0.94 &Omega;, which gives a fault current of about 246 A, well above the 80 A needed. Long runs call for a larger protective conductor, a lower-rated or faster device, or an RCD.</p>
+
+    <h2><span class="h2-dot"></span>TT systems use an RCD</h2>
+    <p>In a TT system the earth electrode resistance Ra is far higher than the loop of a TN system, so the fault current is too small for a breaker to trip fast. Protection relies on an RCD, with the condition R<sub>a</sub> &times; I<sub>&Delta;n</sub> &le; 50 V. With a 30 mA RCD, Ra can be as high as 50 &divide; 0.03 = 1,667 &Omega;. A 100 mA device allows 500 &Omega; and a 300 mA device 167 &Omega;. See <a href="rcd-rccb-rcbo-residual-current-protection-explained">RCD, RCCB and RCBO explained</a>.</p>
+
+    <h2><span class="h2-dot"></span>What to do about a high Zs</h2>
+    <ul>
+      <li><b>Check the connections.</b> A loose protective conductor or a poor joint is the commonest cause, and it also makes the circuit unsafe.</li>
+      <li><b>Increase the protective conductor</b> or shorten the circuit.</li>
+      <li><b>Use a device with a lower limit,</b> such as a Type B instead of a Type C, or an RCBO.</li>
+      <li><b>Reduce Ze,</b> by improving the supply earthing where it is within your control.</li>
+    </ul>
+    <p>For the supply arrangements these rules depend on, see <a href="types-of-earthing-systems-explained">types of earthing systems</a> and <a href="earthing-grounding-systems-explained">earthing and grounding</a>. The device curves behind Type B, C and D are in <a href="circuit-breaker-types-explained">circuit breaker types</a>, and fault levels in <a href="short-circuit-current-iec-60909-basics">short-circuit current basics</a>. Local rules govern real designs, so confirm the limits in the edition your project uses.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Zs is Ze plus R1 + R2, and it must be low enough for the protective device to trip within the required time.</span></li>
+      <li><span class="tk-check">✓</span><span>Type C limits are half and Type D limits a quarter of Type B limits for the same rating.</span></li>
+      <li><span class="tk-check">✓</span><span>Compare a cold reading with 80% of the tabulated limit, and recheck long circuits.</span></li>
+      <li><span class="tk-check">✓</span><span>On TT systems rely on an RCD with Ra &times; I&Delta;n &le; 50 V.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Earth%20Fault%20Loop%20Impedance%20Explained%3A%20Why%20the%20Breaker%20Must%20Trip%20Fast%20Enough&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fearth-fault-loop-impedance-disconnection-times-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fearth-fault-loop-impedance-disconnection-times-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Earth%20Fault%20Loop%20Impedance%20Explained%3A%20Why%20the%20Breaker%20Must%20Trip%20Fast%20Enough&text=What%20earth%20fault%20loop%20impedance%20is%2C%20the%200.4%20s%20and%205%20s%20disconnection%20times%2C%20how%20to%20find%20maximum%20Zs%20for%20MCB%20types%2C%20the%200.8%20rule%2C%20maximum%20cable%20length%20and%20TT%20systems.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fearth-fault-loop-impedance-disconnection-times-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Earth%20Fault%20Loop%20Impedance%20Explained%3A%20Why%20the%20Breaker%20Must%20Trip%20Fast%20Enough&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AEarth%20Fault%20Loop%20Impedance%20Explained%3A%20Why%20the%20Breaker%20Must%20Trip%20Fast%20Enough%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fearth-fault-loop-impedance-disconnection-times-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="types-of-earthing-systems-explained">Types of Earthing Systems</a></li><li><a href="rcd-rccb-rcbo-residual-current-protection-explained">RCD, RCCB and RCBO Explained</a></li><li><a href="circuit-breaker-types-explained">Circuit Breaker Types Explained</a></li><li><a href="voltage-drop-lv-feeders-explained">Voltage Drop in LV Feeders</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
