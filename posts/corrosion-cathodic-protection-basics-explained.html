@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corrosion and Cathodic Protection Basics | Engineerz CorneR</title>
+<meta name="description" content="A visual guide to the corrosion cell, a worked corrosion rate example, galvanic potentials and cathodic protection with anodes or impressed current.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/corrosion-cathodic-protection-basics-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="Corrosion and Cathodic Protection Basics: Why Steel Rusts and How Coatings and Anodes Stop It">
+<meta property="og:description" content="A visual guide to the corrosion cell, a worked corrosion rate example, galvanic potentials and cathodic protection with anodes or impressed current.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/corrosion-cathodic-protection-basics-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-corrosion.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Corrosion and Cathodic Protection Basics: Why Steel Rusts and How Coatings and Anodes Stop It">
+<meta name="twitter:description" content="A visual guide to the corrosion cell, a worked corrosion rate example, galvanic potentials and cathodic protection with anodes or impressed current.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-corrosion.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<link rel="stylesheet" href="corrosion-cathodic-protection-basics-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Corrosion and Cathodic Protection Basics: Why Steel Rusts and How Coatings and Anodes Stop It",
+      "item": "https://www.engineerzcorner.com/posts/corrosion-cathodic-protection-basics-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Corrosion and Cathodic Protection Basics: Why Steel Rusts and How Coatings and Anodes Stop It",
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "description": "A visual guide to the corrosion cell, a worked corrosion rate example, galvanic potentials and cathodic protection with anodes or impressed current.",
+  "url": "https://www.engineerzcorner.com/posts/corrosion-cathodic-protection-basics-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/corrosion-cathodic-protection-basics-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">Corrosion and Cathodic Protection Basics: Why Steel Rusts and How Coatings and Anodes Stop It</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">⚗ Process &middot; Corrosion &amp; Coatings</span>
+    <h1>Corrosion and Cathodic Protection Basics: Why Steel Rusts and How Coatings and Anodes Stop It</h1>
+    <p class="hero-sub">Rust is a small battery. Here is how it works, how to put a number on it, why zinc and magnesium protect steel, and how coatings and cathodic protection work together.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Visual guide &middot; Process / Corrosion Control</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">Corrosion needs four things: an anode, a cathode, an electrolyte and a metallic path. Remove one and it stops.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Corrosion rate in mm/y is 87.6 &times; mass loss (mg) &divide; (density &times; area &times; hours).</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Steel is usually considered protected at about &minus;850 mV against a copper/copper sulfate electrode.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Sacrificial anodes need no power. Impressed current systems use a rectifier and suit large structures.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Steel is refined from ore, and it spends its life trying to go back. In air, water or soil that return trip is a slow electrochemical reaction, and understanding it is what makes every protection method make sense. This post draws the reaction, puts a number on it and shows how coatings and cathodic protection break it.</p>
+
+    <h2><span class="h2-dot"></span>Rust is a small battery</h2>
+    <p>On a wet steel surface, some areas become anodes and others cathodes. At the anode, iron gives up electrons and dissolves. The electrons travel through the steel to the cathode, where they are used up, usually by dissolved oxygen. Ions carry the charge through the water. All four ingredients have to be present.</p>
+    <div class="cor-card">
+  <h3>The corrosion cell: a tiny battery on every wet steel surface</h3>
+  <p class="cor-sub">Steel dissolves where electrons leave. Rust forms where the products meet.</p>
+  <svg class="cor-svg" viewBox="0 76 340 176" role="img" aria-label="Diagram of a corrosion cell: an anode area losing iron on the left, a cathode area consuming oxygen on the right, water as the electrolyte above, and electrons flowing through the steel">
+    <defs>
+      <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#111827"/></marker>
+      <pattern id="hat" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#6B7280"/><rect width="3" height="8" fill="#808A99"/></pattern>
+    </defs>
+    <path d="M18 150 Q18 86 170 86 Q322 86 322 150 Z" fill="#BFDBFE" opacity=".9"/>
+    <text x="170" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A8A">ELECTROLYTE</text>
+    <text x="170" y="127" text-anchor="middle" font-size="10.5" fill="#1E3A8A">water + dissolved salts</text>
+    <path d="M268 144 L92 144" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arw)"/>
+    <text x="180" y="138" text-anchor="middle" font-size="10" fill="#1E3A8A">OH&#8315; ions drift toward the anode</text>
+    <rect x="10" y="150" width="320" height="72" rx="6" fill="url(#hat)"/>
+    <rect x="10" y="150" width="155" height="72" rx="6" fill="#DC2626" opacity=".55"/>
+    <rect x="175" y="150" width="155" height="72" rx="6" fill="#2563EB" opacity=".55"/>
+    <path d="M62 150 q12 20 24 0 z" fill="#BFDBFE"/>
+    <text x="87" y="176" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">ANODE</text>
+    <text x="87" y="192" text-anchor="middle" font-size="10.5" fill="#fff">iron dissolves</text>
+    <text x="252" y="176" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">CATHODE</text>
+    <text x="252" y="192" text-anchor="middle" font-size="10.5" fill="#fff">oxygen is consumed</text>
+    <path d="M60 208 L282 208" stroke="#FDE68A" stroke-width="2.5" marker-end="url(#arw)"/>
+    <text x="170" y="240" text-anchor="middle" font-size="11" fill="#374151">electrons flow through the steel (the metallic path)</text>
+  </svg>
+  <div class="cor-need">
+    <div class="a"><b>1. Anode</b>Where metal dissolves into ions</div>
+    <div class="c"><b>2. Cathode</b>Where electrons are used up, often by oxygen</div>
+    <div class="e"><b>3. Electrolyte</b>Water carrying salts, so ions can move</div>
+    <div class="m"><b>4. Metallic path</b>The steel itself, so electrons can flow</div>
+  </div>
+  <div class="cor-tip"><b>Take away any one and corrosion stops.</b> Coatings cut off the electrolyte. Cathodic protection turns the whole steel surface into a cathode. Reactions: at the anode Fe &rarr; Fe&sup2;&#8314; + 2e&#8315;. At the cathode O&#8322; + 2H&#8322;O + 4e&#8315; &rarr; 4OH&#8315;. The products meet and form rust.</div>
+</div>
+    <p>The attack is rarely even. It can spread over the whole surface, or it can concentrate in a pit, a crevice or a joint between two metals. Pits and crevices can penetrate far faster than the average rate suggests, which is why a calculated uniform rate is only part of the story.</p>
+    <div class="cor-forms"><span>Uniform</span><span>Pitting</span><span>Crevice</span><span>Galvanic</span><span>Erosion-corrosion</span><span>Stress corrosion cracking</span></div>
+
+    <h2><span class="h2-dot"></span>Putting a number on it</h2>
+    <p>The simplest measurement is a weight-loss coupon: a small steel sample exposed in the environment, cleaned and weighed before and after.</p>
+    <p class="lede">CR (mm/y) = 87.6 &times; W &divide; (D &times; A &times; t)</p>
+    <div class="formula-note">W is the mass loss in milligrams, D the density in g/cm&sup3;, A the exposed area in cm&sup2; and t the exposure time in hours. For mils per year, the constant is 534 and the area is in square inches.</div>
+    <p><b>Worked example.</b> A steel coupon (D = 7.86 g/cm&sup3;) with 20 cm&sup2; exposed loses 150 mg in 30 days, which is 720 hours. CR = 87.6 &times; 150 &divide; (7.86 &times; 20 &times; 720) = 0.116 mm/y, or 4.6 mpy. That is at the top of the &ldquo;moderate&rdquo; band. Over a 20-year life, the average loss would be about 2.3 mm, which is the order of corrosion allowance a designer would need, before allowing for pitting. Corrosion tends to speed up in warmer conditions, and a common rule of thumb is that the rate roughly doubles for every 10 &deg;C rise.</p>
+    <div class="cor-card">
+  <h3>How bad is a given corrosion rate?</h3>
+  <p class="cor-sub">NACE RP0775 grades, in mils per year (mpy). 1 mpy = 0.0254 mm/y. The marker is the worked example above.</p>
+  <div class="cor-rate"><div class="cor-mark">4.6 mpy &middot; 0.116 mm/y</div>
+    <div class="cor-bands"><div class="b1">LOW</div><div class="b2">MODERATE</div><div class="b3">SEVERE</div><div class="b4">VERY SEVERE</div></div>
+    <div class="cor-ticks"><span>&lt; 1</span><span>1&ndash;5</span><span>5&ndash;10</span><span>&gt; 10</span></div></div>
+  <p class="cor-note">In mm per year: low below 0.025, moderate 0.025 to 0.125, severe 0.125 to 0.254, very severe above 0.254. The bands are not drawn to a linear scale.</p>
+</div>
+
+    <h2><span class="h2-dot"></span>Why zinc protects steel</h2>
+    <p>Different metals have different tendencies to give up electrons, which shows up as a potential measured against a reference electrode. When two metals are connected in the same electrolyte, the more negative one becomes the anode and corrodes, while the other is protected. Zinc, aluminium alloys and magnesium are all more negative than steel, so they sacrifice themselves.</p>
+    <div class="cor-card">
+  <h3>Who sacrifices for whom? Typical potentials in soil and water</h3>
+  <p class="cor-sub">Volts against a copper/copper sulfate reference electrode. More negative metals corrode first.</p>
+  <div class="cor-pot" style="--p:32.1"><div class="cor-pl" style="--p:32.1"><span>&minus;0.85 V</span></div><div class="cor-pr"><span class="n">Mild steel, clean</span><span class="t"><i class="d steel" style="--l:7.1%;--w:21.4%"></i></span></div><div class="cor-pr"><span class="n">Aluminium, commercially pure</span><span class="t"><i class="d al" style="--l:27.4%;--w:2.4%"></i></span></div><div class="cor-pr"><span class="n">Aluminium alloy (5% Zn)</span><span class="t"><i class="d al" style="--l:45.2%;--w:2.4%"></i></span></div><div class="cor-pr"><span class="n">Zinc</span><span class="t"><i class="d zn" style="--l:48.8%;--w:2.4%"></i></span></div><div class="cor-pr"><span class="n">Magnesium alloy</span><span class="t"><i class="d mg" style="--l:84.5%;--w:2.4%"></i></span></div><div class="cor-pr"><span class="n">Magnesium, pure</span><span class="t"><i class="d mg" style="--l:95.2%;--w:2.4%"></i></span></div></div>
+  <div class="cor-ax"><span></span><div><span>&minus;0.4</span><span>&minus;0.6</span><span>&minus;0.8</span><span>&minus;1.0</span><span>&minus;1.2</span><span>&minus;1.4</span><span>&minus;1.6</span><span>&minus;1.8</span></div></div>
+  <p class="cor-note">The dashed line is the usual protection criterion for steel, about &minus;0.85 V against copper/copper sulfate. Metals to the right of the steel band are more active, so they give up electrons and protect it. Values are typical, and the real potential depends on the environment and the alloy.</p>
+</div>
+
+    <h2><span class="h2-dot"></span>Two ways to apply cathodic protection</h2>
+    <p>Cathodic protection makes the entire steel surface a cathode by supplying electrons from outside. The common target for buried or submerged steel is a polarised potential of at least &minus;850 mV against a copper/copper sulfate electrode, with a polarisation shift of 100 mV as an alternative criterion in some standards. Measurements have to allow for the voltage drop in the soil, which is why surveys often use instant-off readings.</p>
+    <div class="cor-two">
+  <div class="cor-m g"><h3>Sacrificial anodes</h3><svg class="cor-svg" viewBox="0 22 300 112" role="img" aria-label="Buried pipe connected by a wire to a sacrificial anode, with protective current flowing through the soil from the anode to the pipe">
+  <rect x="0" y="34" width="300" height="98" fill="#E7D3B5"/><rect x="0" y="30" width="300" height="5" fill="#86A961"/>
+  <circle cx="90" cy="84" r="20" fill="#9CA3AF" stroke="#4B5563" stroke-width="3"/><text x="90" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">pipe</text>
+  <rect x="222" y="66" width="34" height="36" rx="4" fill="#F59E0B" stroke="#92400E" stroke-width="2"/><text x="239" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#451A03">anode</text>
+  <path d="M110 84 H222" stroke="#111827" stroke-width="2.5"/><text x="166" y="78" text-anchor="middle" font-size="10" fill="#111827">wire</text>
+  <path d="M239 104 Q170 120 108 100" fill="none" stroke="#B91C1C" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arw2)"/>
+  <defs><marker id="arw2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#B91C1C"/></marker></defs>
+  <text x="170" y="129" text-anchor="middle" font-size="10" fill="#7F1D1D">protective current through soil</text>
+</svg>
+    <p>A more active metal is wired to the steel and corrodes in its place. No power supply is needed.</p>
+    <ul><li><b>Zinc and aluminium</b> suit low-resistivity soils, seawater and tanks. <b>Magnesium</b> has the highest driving voltage and suits higher-resistivity soils.</li><li>Simple and low maintenance, but the current is limited and the anodes are used up.</li><li>Best for smaller or well-coated structures.</li></ul></div>
+  <div class="cor-m i"><h3>Impressed current (ICCP)</h3><svg class="cor-svg" viewBox="0 0 300 132" role="img" aria-label="Buried pipe connected to the negative terminal of a rectifier, and an inert anode bed connected to the positive terminal, with protective current flowing through the soil to the pipe">
+  <rect x="0" y="40" width="300" height="92" fill="#E7D3B5"/><rect x="0" y="36" width="300" height="5" fill="#86A961"/>
+  <rect x="116" y="2" width="68" height="30" rx="5" fill="#FDBA74" stroke="#9A3412" stroke-width="2"/><text x="150" y="21" text-anchor="middle" font-size="11" font-weight="700" fill="#431407">rectifier</text>
+  <circle cx="60" cy="94" r="18" fill="#9CA3AF" stroke="#4B5563" stroke-width="3"/><text x="60" y="98" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">pipe</text>
+  <rect x="228" y="74" width="30" height="42" rx="4" fill="#374151"/><text x="243" y="99" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">anode</text>
+  <path d="M126 32 V52 H60 V76" fill="none" stroke="#111827" stroke-width="2.2"/><text x="74" y="50" font-size="13" font-weight="800" fill="#1D4ED8">&minus;</text>
+  <path d="M174 32 V52 H243 V74" fill="none" stroke="#111827" stroke-width="2.2"/><text x="224" y="50" font-size="13" font-weight="800" fill="#B91C1C">+</text>
+  <path d="M228 106 Q150 120 80 102" fill="none" stroke="#B91C1C" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arw3)"/>
+  <defs><marker id="arw3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#B91C1C"/></marker></defs>
+  <text x="150" y="129" text-anchor="middle" font-size="10" fill="#7F1D1D">protective current through soil</text>
+</svg>
+    <p>A rectifier pushes direct current from inert anodes to the steel. The output can be adjusted.</p>
+    <ul><li>Suits large structures, bare or poorly coated steel and high-resistivity soils.</li><li>Needs a power source, monitoring and care over polarity.</li><li>Can interfere with neighbouring buried metalwork, so it needs design and testing.</li></ul></div>
+</div>
+    <p>More is not better. Over-protection can disbond coatings, and on high-strength steels it can cause hydrogen embrittlement, so standards also set a limit on how negative the potential may go. Coatings and cathodic protection are designed together: the coating keeps the bare area small, so the current needed stays practical. The coating specification can reflect this directly. In the Aramco APCS immersion systems, for example, the coating within 2 m of anode connections must be 30% thicker.</p>
+
+    <h2><span class="h2-dot"></span>The corrosion control toolbox</h2>
+    <p>Most real systems use several defences at once.</p>
+    <div class="cor-tool">
+  <div class="k"><i>&#129521;</i><div><b>Choose and design</b><br>Pick the right alloy, avoid crevices and water traps, drain low points and keep dissimilar metals from touching.</div></div>
+  <div class="k"><i>&#127912;</i><div><b>Coat it</b><br>A coating system blocks the electrolyte. See <a href="protective-coating-systems-aramco-apcs-explained">protective coating systems</a> for layers, thickness and blast grades.</div></div>
+  <div class="k"><i>&#9889;</i><div><b>Add cathodic protection</b><br>Sacrificial anodes or impressed current for buried pipe, tank bottoms, jetties and offshore steel. Used together with coatings.</div></div>
+  <div class="k"><i>&#129514;</i><div><b>Treat the environment</b><br>Corrosion inhibitors, oxygen removal, pH control and drying reduce how aggressive the fluid or air is.</div></div>
+  <div class="k" style="grid-column:1/-1"><i>&#128207;</i><div><b>Allow and monitor</b><br>Add a corrosion allowance to wall thickness, then track it with coupons, probes and thickness surveys. See <a href="pipe-wall-thickness-asme-b31-3-explained">pipe wall thickness to ASME B31.3</a>.</div></div>
+</div>
+
+    <h2><span class="h2-dot"></span>Where to go next</h2>
+    <p>Corrosion allowance goes straight into the wall thickness equation in <a href="pipe-wall-thickness-asme-b31-3-explained">pipe wall thickness to ASME B31.3</a>, and cathodic protection and coating design are covered for specific systems in <a href="protective-coating-systems-aramco-apcs-explained">protective coating systems</a>. Insulation also hides corrosion risk, so see <a href="pipe-insulation-thickness-heat-loss-explained">pipe insulation thickness and heat loss</a>, and for leak testing a protected line, <a href="hydrostatic-pneumatic-leak-test-asme-b31-3-explained">hydrostatic and pneumatic testing</a>. Always apply the standards named in your project specification.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Think of every wet steel surface as a corrosion cell, and defend by removing one of its four ingredients.</span></li>
+      <li><span class="tk-check">✓</span><span>Measure corrosion rate by weight loss, grade it low to very severe, and remember that pitting runs faster than the average.</span></li>
+      <li><span class="tk-check">✓</span><span>Zinc, aluminium and magnesium protect steel because they are more electrochemically active.</span></li>
+      <li><span class="tk-check">✓</span><span>Use coatings and cathodic protection together, and watch for over-protection.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=Corrosion%20and%20Cathodic%20Protection%20Basics%3A%20Why%20Steel%20Rusts%20and%20How%20Coatings%20and%20Anodes%20Stop%20It&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcorrosion-cathodic-protection-basics-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcorrosion-cathodic-protection-basics-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=Corrosion%20and%20Cathodic%20Protection%20Basics%3A%20Why%20Steel%20Rusts%20and%20How%20Coatings%20and%20Anodes%20Stop%20It&text=A%20visual%20guide%20to%20corrosion%3A%20the%20four-part%20corrosion%20cell%2C%20a%20worked%20corrosion%20rate%20calculation%2C%20galvanic%20potentials%2C%20sacrificial%20anodes%20versus%20impressed%20current%2C%20and%20the%20-850%20mV%20criterion.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcorrosion-cathodic-protection-basics-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=Corrosion%20and%20Cathodic%20Protection%20Basics%3A%20Why%20Steel%20Rusts%20and%20How%20Coatings%20and%20Anodes%20Stop%20It&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0ACorrosion%20and%20Cathodic%20Protection%20Basics%3A%20Why%20Steel%20Rusts%20and%20How%20Coatings%20and%20Anodes%20Stop%20It%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fcorrosion-cathodic-protection-basics-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="weld-defects-ndt-methods-asme-b31-3-examination-explained">Weld Defects and NDT Methods (B31.3)</a></li><li><a href="steam-traps-types-failure-modes-cost-explained">Steam Traps: Types, Failures and Cost</a></li><li><a href="protective-coating-systems-aramco-apcs-explained">Protective Coating Systems (Aramco APCS)</a></li><li><a href="pipe-wall-thickness-asme-b31-3-explained">Pipe Wall Thickness to ASME B31.3</a></li><li><a href="pipe-insulation-thickness-heat-loss-explained">Pipe Insulation Thickness and Heat Loss</a></li><li><a href="hydrostatic-pneumatic-leak-test-asme-b31-3-explained">Piping Pressure Tests (Hydrostatic and Pneumatic)</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
