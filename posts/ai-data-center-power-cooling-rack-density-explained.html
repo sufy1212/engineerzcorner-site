@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2326282A'/%3E%3Cpath d='M17 5 8 18h6l-2 9 11-14h-7z' fill='%23C1662B'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD2HFL7ZME"></script>
+<script src="../assets/common-blocks.js"></script>
+<script src="../assets/creator.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Data Center Power and Cooling | Engineerz CorneR</title>
+<meta name="description" content="A visual guide to AI data center racks: the jump to 120 kW, why liquid cooling wins, why voltage is rising, PUE, and a live calculator.">
+<link rel="canonical" href="https://www.engineerzcorner.com/posts/ai-data-center-power-cooling-rack-density-explained">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Engineerz CorneR">
+<meta property="og:title" content="AI Data Centers Explained: Why Racks Jumped to 120 kW and Went Liquid-Cooled">
+<meta property="og:description" content="A visual guide to AI data center racks: the jump to 120 kW, why liquid cooling wins, why voltage is rising, PUE, and a live calculator.">
+<meta property="og:url" content="https://www.engineerzcorner.com/posts/ai-data-center-power-cooling-rack-density-explained">
+<meta property="og:image" content="https://www.engineerzcorner.com/assets/og/og-datacenter.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Data Centers Explained: Why Racks Jumped to 120 kW and Went Liquid-Cooled">
+<meta name="twitter:description" content="A visual guide to AI data center racks: the jump to 120 kW, why liquid cooling wins, why voltage is rising, PUE, and a live calculator.">
+<meta name="twitter:image" content="https://www.engineerzcorner.com/assets/og/og-datacenter.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common-blocks.css">
+<link rel="stylesheet" href="ai-data-center-power-cooling-rack-density-explained.inline.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.engineerzcorner.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "https://www.engineerzcorner.com/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Data Centers Explained: Why Racks Jumped to 120 kW and Went Liquid-Cooled",
+      "item": "https://www.engineerzcorner.com/posts/ai-data-center-power-cooling-rack-density-explained"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Data Centers Explained: Why Racks Jumped to 120 kW and Went Liquid-Cooled",
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "description": "A visual guide to AI data center racks: the jump to 120 kW, why liquid cooling wins, why voltage is rising, PUE, and a live calculator.",
+  "url": "https://www.engineerzcorner.com/posts/ai-data-center-power-cooling-rack-density-explained",
+  "author": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Engineerz CorneR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.engineerzcorner.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.engineerzcorner.com/posts/ai-data-center-power-cooling-rack-density-explained"
+  }
+}
+</script>
+<link rel="stylesheet" href="../assets/sidebars.css">
+
+<body>
+
+<nav class="ec-crumb-bar" aria-label="Breadcrumb"><div class="ec-crumb-inner"><a href="../">Home</a><span class="ec-crumb-sep">/</span><a href="./">Posts</a><span class="ec-crumb-sep">/</span><span class="ec-crumb-current">AI Data Centers Explained: Why Racks Jumped to 120 kW and Went Liquid-Cooled</span></div></nav>
+
+<nav class="nt-nav">
+  <div class="nt-nav-word">Engineerz<span>CorneR</span></div>
+  <a class="nt-back" href="./">&larr; All posts</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="post-tag">&#9889; Electrical &middot; Trending</span>
+    <h1>AI Data Centers Explained: Why Racks Jumped to 120 kW and Went Liquid-Cooled</h1>
+    <p class="hero-sub">AI racks went from 10 kW to 120 kW and beyond. Here is what that does to cooling, voltage and the power chain, with a density ladder, the heat-balance maths and a calculator to try.</p>
+    <div class="post-meta"><span>Engineerz CorneR</span><span>Visual guide &middot; Electrical / Data Centres</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="highlights">
+    <div class="hl-card"><div class="hl-num">01</div><div class="hl-text">A GB200 NVL72 rack draws about 120 kW, roughly ten times a conventional rack.</div></div>
+    <div class="hl-card"><div class="hl-num">02</div><div class="hl-text">Air cooling reaches a practical limit near 30 kW per rack, so racks above that use liquid.</div></div>
+    <div class="hl-card"><div class="hl-num">03</div><div class="hl-text">Water carries about 3,500 times as much heat per unit volume as air, so 120 kW needs about 115 L/min instead of 14,000 cfm.</div></div>
+    <div class="hl-card"><div class="hl-num">04</div><div class="hl-text">Higher distribution voltage cuts current, so 800 V DC needs about 150 A where 54 V needs over 2,000 A for the same 120 kW.</div></div>
+  </div>
+
+  <div class="post-body">
+
+    <p>Ask anyone in the electrical or HVAC business what has changed most in the last two years and many will say the same thing: AI. The computers that train and run today&rsquo;s large models are packed into racks that draw as much power as a small factory. That has forced a rethink of everything around them, from the cooling loops to the voltage on the busbars. This post puts numbers and pictures on it, with a calculator you can play with.</p>
+    <div class="dc-stats">
+  <div class="dc-stat"><b>120 kW</b><span>one GB200 NVL72 rack</span></div>
+  <div class="dc-stat"><b>~10&times;</b><span>a conventional rack</span></div>
+  <div class="dc-stat"><b>~30 kW</b><span>practical limit of air cooling</span></div>
+</div>
+
+    <h2><span class="h2-dot"></span>A rack that draws 120 kW</h2>
+    <p>A typical enterprise rack draws 7 to 10 kW, and Uptime Institute surveys, as reported, put the average of operators&rsquo; most common rack densities at about 11 kW in 2026. NVIDIA lists about 120 kW for a GB200 NVL72 rack, which holds 72 GPUs and 36 CPUs in one liquid-cooled frame, and 135 kW for the GB300 version. Facility designers such as Vertiv plan around 130 and 142 kW. Next-generation racks are listed even higher.</p>
+    <div class="dc-card">
+  <h3>The density ladder</h3>
+  <p class="dc-sub">Power per rack in kW on a logarithmic scale. Each gridline is ten times the last.</p>
+  <div class="dc-lad"><div class="dc-r"><span class="n">Conventional rack<small>typical</small></span><span class="t"><i class="b air" style="--l:28.2%;--w:5.2%"></i><span class="v" style="left:34.8%">7&ndash;10 kW</span></span></div><div class="dc-r"><span class="n">Air-cooling limit<small>practical</small></span><span class="t"><i class="b air" style="--l:48.2%;--w:1.9%"></i><span class="v" style="left:51.7%">~30 kW</span></span></div><div class="dc-r"><span class="n">Hopper-class GPU rack</span><span class="t"><i class="b rd" style="--l:49.2%;--w:5.9%"></i><span class="v" style="left:56.6%">30&ndash;45 kW</span></span></div><div class="dc-r"><span class="n">Rear-door / in-row<small>extended air</small></span><span class="t"><i class="b rd" style="--l:53.4%;--w:5.9%"></i><span class="v" style="left:60.8%">40&ndash;60 kW</span></span></div><div class="dc-r"><span class="n">GB200 NVL72<small>Blackwell</small></span><span class="t"><i class="b liq" style="--l:69.1%;--w:1.6%"></i><span class="v" style="right:32.4%">120 kW</span></span></div><div class="dc-r"><span class="n">GB300 NVL72<small>Blackwell Ultra</small></span><span class="t"><i class="b liq" style="--l:70.8%;--w:1.6%"></i><span class="v" style="right:30.7%">135 kW</span></span></div><div class="dc-r"><span class="n">Vera Rubin NVL72<small>as listed by vendors</small></span><span class="t"><i class="b liq" style="--l:76.7%;--w:2.6%"></i><span class="v" style="right:24.8%">200&ndash;240 kW</span></span></div><div class="dc-r"><span class="n">Announced targets<small>not yet deployed</small></span><span class="t"><i class="b fut" style="--l:92.6%;--w:7.4%"></i><span class="v" style="right:8.9%">600&ndash;1,000 kW</span></span></div></div>
+  <div class="dc-axis"><div></div><div><span style="left:0%">1</span><span style="left:33.3%">10</span><span style="left:66.7%">100</span><span style="left:99%;transform:translateX(-100%)">1,000</span></div></div>
+  <div class="dc-key" style="display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:10px;font-size:11.5px;color:#374151"><span><i style="display:inline-block;width:14px;height:14px;border-radius:4px;background:#3B82F6;vertical-align:-2px"></i> air</span><span><i style="display:inline-block;width:14px;height:14px;border-radius:4px;background:#14B8A6;vertical-align:-2px"></i> rear-door / in-row</span><span><i style="display:inline-block;width:14px;height:14px;border-radius:4px;background:#F59E0B;vertical-align:-2px"></i> direct liquid</span><span><i style="display:inline-block;width:14px;height:14px;border-radius:4px;background:repeating-linear-gradient(45deg,#8B5CF6 0 4px,#C4B5FD 4px 7px);vertical-align:-2px"></i> targets</span></div>
+  <p class="dc-note">Rack figures are vendor and survey numbers as reported. Rubin-generation and 600&ndash;1,000 kW values are announced targets or vendor-listed figures and may change.</p>
+</div>
+
+    <h2><span class="h2-dot"></span>Why air gave up</h2>
+    <p>Air cooling reaches a practical limit near 30 kW per rack. Beyond that, the fans that move the air draw serious power, make serious noise and still struggle. The physics is the heat balance Q = &#7745; &times; c<sub>p</sub> &times; &Delta;T. Water has a far larger specific heat and density, so a small flow does the work of a very large airflow.</p>
+    <div class="dc-card">
+  <h3>Why liquid wins: the same heat, 3,500 times less volume</h3>
+  <p class="dc-sub">Heat removed = mass flow &times; specific heat &times; temperature rise</p>
+  <div class="dc-vs">
+  <div class="s air"><h4>Cooling 120 kW with air</h4><div class="big">14,000 cfm</div><p>6.6 m&sup3;/s of air through one rack, with a 15 K temperature rise. Fans, ducts and floor space cannot keep up.</p></div>
+  <div class="s wat"><h4>Cooling 120 kW with water</h4><div class="big">115 L/min</div><p>1.9 L/s with the same 15 K rise. Pipes the size of a garden hose carry the load.</p></div>
+</div>
+  <p class="dc-note">Air at 1.2 kg/m&sup3; and 1.005 kJ/kg&middot;K. Water at 4.186 kJ/kg&middot;K. Water carries about 3,500 times as much heat per unit volume, which is why a thin pipe replaces a duct.</p>
+</div>
+    <p>For this reason, GB200-class racks are sold with direct-to-chip liquid cooling and no air-only option. Cold plates sit on the processors, and the liquid goes to a coolant distribution unit that exchanges heat with the facility water loop. Some heat still goes to the air, so rooms still need airflow. For the airflow side of the same maths, see the <a href="../hvac/sensible-heat-airflow-calculator">sensible heat airflow calculator</a> and <a href="sensible-vs-latent-heat-cooling-load">sensible vs latent heat</a>.</p>
+
+    <h2><span class="h2-dot"></span>Play with the numbers</h2>
+    <div class="dc-card dc-calc">
+  <h3>Try the numbers</h3>
+  <p class="dc-sub">Move the sliders. Results update instantly.</p>
+  <div class="row"><label for="kP">Rack power</label><output id="oP">120 kW</output><input type="range" id="kP" min="10" max="250" step="5" value="120"></div>
+  <div class="row"><label for="kT">Water temperature rise</label><output id="oT">10 K</output><input type="range" id="kT" min="5" max="20" step="1" value="10"></div>
+  <div class="row"><label for="kI">Campus IT load</label><output id="oI">100 MW</output><input type="range" id="kI" min="10" max="300" step="10" value="100"></div>
+  <div class="row"><label for="kU">PUE</label><output id="oU">1.15</output><input type="range" id="kU" min="1.05" max="2" step="0.01" value="1.15"></div>
+  <div class="dc-out" aria-live="polite">
+    <div><b id="rW">172 L/min</b><span>water per rack</span></div>
+    <div><b id="rA">14,056 cfm</b><span>air for the same heat (15 K)</span></div>
+    <div><b id="rM">8.3</b><span>racks per MW of IT</span></div>
+    <div><b id="rR">833</b><span>racks on the campus</span></div>
+    <div><b id="rF">115 MW</b><span>total facility power</span></div>
+    <div><b id="rO">15 MW</b><span>cooling and losses</span></div>
+    <div class="hi"><b id="rS">39 MW</b><span>less than an average site (PUE 1.54)</span></div>
+    <div class="hi"><b id="rE">342 GWh</b><span>saved per year vs 1.54</span></div>
+  </div>
+  <p class="dc-note">Water and air figures use the heat-balance formula. Glycol mixes carry less heat per litre than water, so real flows are higher. Savings assume continuous operation, 8,760 hours.</p>
+</div>
+<script>
+(function(){
+function $(i){return document.getElementById(i)}
+function f(n,d){return n.toLocaleString('en-US',{maximumFractionDigits:d||0,minimumFractionDigits:d||0})}
+function u(){
+var P=+$('kP').value,T=+$('kT').value,I=+$('kI').value,U=+$('kU').value;
+$('oP').textContent=P+' kW';$('oT').textContent=T+' K';$('oI').textContent=I+' MW';$('oU').textContent=U.toFixed(2);
+var w=P/(4.186*T)*60,a=P/(1.2*1.005*15)*2118.88,m=1000/P,r=I*1000/P,F=I*U,O=I*(U-1),S=I*(1.54-U),E=S*8.76;
+$('rW').textContent=f(w)+' L/min';$('rA').textContent=f(a)+' cfm';$('rM').textContent=f(m,1);$('rR').textContent=f(r);
+$('rF').textContent=f(F,1)+' MW';$('rO').textContent=f(O,1)+' MW';
+$('rS').textContent=(S>=0?'':'+')+f(Math.abs(S),1)+' MW';$('rE').textContent=(S>=0?'':'+')+f(Math.abs(E),0)+' GWh';}
+['kP','kT','kI','kU'].forEach(function(i){$(i).addEventListener('input',u)});u();
+})();
+</script>
+
+    <h2><span class="h2-dot"></span>PUE: how much overhead?</h2>
+    <p>Power usage effectiveness is total facility power divided by IT power. A PUE of 1.5 means half a watt of overhead for every watt that reaches the servers. The Uptime Institute&rsquo;s 2025 survey put the global average at 1.54, flat for years. Purpose-built liquid-cooled halls target about 1.1 to 1.25. On a 10 MW IT load, going from 1.54 to 1.15 cuts the facility from 15.4 MW to 11.5 MW, saving 3.9 MW. Over 8,760 hours that is about 34,000 MWh a year, or roughly 2.7 million a year at 0.08 per kWh. Use the slider above to try your own case.</p>
+
+    <h2><span class="h2-dot"></span>Higher voltage, thinner copper</h2>
+    <p>Delivering 120 kW at the 54 V common in older rack designs needs more than 2,000 A, which means heavy bus bars. NVIDIA has announced a move to 800 V DC distribution for coming rack generations, and the maths shows why: the same power needs about 150 A. Lower current means smaller conductors and much lower resistive loss. For how voltage and current trade off in ordinary cables, see <a href="voltage-drop-lv-feeders-explained">voltage drop in LV feeders</a>.</p>
+    <div class="dc-card">
+  <h3>Why the voltage is going up</h3>
+  <p class="dc-sub">Current needed to deliver 120 kW to one rack: I = P &divide; V (AC at a power factor of 0.95)</p>
+  <div class="dc-amps"><div class="dc-a"><span class="n">54 V DC</span><span class="t"><i style="--w:100.0%;--bs:100%"></i><span style="right:8px;color:#fff">2,222 A</span></span></div><div class="dc-a"><span class="n">415 V AC, 3-phase</span><span class="t"><i style="--w:7.9%;--bs:1262%"></i><span style="left:calc(7.9% + 8px)">176 A</span></span></div><div class="dc-a"><span class="n">800 V DC</span><span class="t"><i style="--w:6.8%;--bs:1481%"></i><span style="left:calc(6.8% + 8px)">150 A</span></span></div></div>
+  <p class="dc-note">For the same conductor, resistive loss follows I&sup2;R. Moving from 54 V to 800 V cuts current by about 15 times, so the loss in the same conductor falls by about 220 times.</p>
+</div>
+    <div class="dc-card">
+  <h3>From the grid to the GPU</h3>
+  <p class="dc-sub">Every step loses a little energy, and every step turns up as heat to remove.</p>
+  <div class="dc-chain">
+    <div class="n"><i>&#9889;</i><div><b>Utility connection</b><br>Medium or high voltage supply, often the longest lead-time item.</div></div><div class="ar">&#9660;</div>
+    <div class="n"><i>&#128268;</i><div><b>Transformers and switchgear</b><br>Step down to low voltage and distribute to the data halls.</div></div><div class="ar">&#9660;</div>
+    <div class="n"><i>&#128267;</i><div><b>UPS and batteries</b><br>Ride through disturbances until generators start.</div></div><div class="ar">&#9660;</div>
+    <div class="n"><i>&#128736;</i><div><b>Busway and PDUs</b><br>Carry hundreds of amps to each row. Today usually 415 or 480 V AC.</div></div><div class="ar">&#9660;</div>
+    <div class="n"><i>&#129302;</i><div><b>Rack power shelves and GPUs</b><br>Convert to the low DC voltages the chips use, and turn almost all of it into heat.</div></div>
+  </div>
+</div>
+
+    <h2><span class="h2-dot"></span>What it means on site</h2>
+    <ul>
+      <li><b>Cooling plant and loops.</b> NVIDIA&rsquo;s GB200 documentation calls for facility water at roughly 25 to 45 &deg;C through the cold plates, so chillers can often run warmer, or dry coolers can do the job in cool climates. See <a href="chiller-capacity-cop-condenser-heat-rejection">chiller capacity and COP</a>.</li>
+      <li><b>Weight.</b> A 132 kW rack can weigh about 1.4 tonnes, so floors need checking.</li>
+      <li><b>Electrical design.</b> At 120 kW a rack, a hall of 100 racks is a 12 MW load, and the design must handle <a href="harmonics-sources-effects-mitigation">harmonics</a> and size supply equipment with realistic <a href="maximum-demand-demand-factor-diversity-explained">demand factors</a>.</li>
+      <li><b>Leaks and monitoring.</b> Water moving through electronics needs leak detection, good isolation and well-planned maintenance access.</li>
+      <li><b>Heat reuse.</b> Warm return water is a useful heat source, as discussed for ventilation in <a href="heat-recovery-ventilation-hrv-erv-effectiveness-explained">heat recovery ventilation</a>.</li>
+    </ul>
+    <p class="dc-note" style="margin-top:14px">Figures in this post come from NVIDIA specifications as reported, Vertiv reference designs, Uptime Institute surveys and published engineering guides, and they change quickly. Use manufacturer documents for real designs.</p>
+
+
+    <h2><span class="h2-dot"></span>Key takeaways</h2>
+    <ul class="takeaways">
+      <li><span class="tk-check">✓</span><span>Rack density, not floor area, now sizes an AI data centre.</span></li>
+      <li><span class="tk-check">✓</span><span>Use the heat balance Q = flow &times; cp &times; &Delta;T to see why liquid cooling replaces air at high density.</span></li>
+      <li><span class="tk-check">✓</span><span>PUE shows the overhead, and liquid-cooled designs target about 1.1 to 1.25 against an industry average near 1.54.</span></li>
+      <li><span class="tk-check">✓</span><span>Raising voltage lowers current and resistive loss, which is why 800 V DC distribution is being adopted.</span></li>
+    </ul>
+
+  </div>
+
+  <div class="post-share">
+    <div class="post-share-label">Found this useful? Share it &mdash;</div>
+    <div class="post-share-links">
+      <a href="https://twitter.com/intent/tweet?text=AI%20Data%20Centers%20Explained%3A%20Why%20Racks%20Jumped%20to%20120%20kW%20and%20Went%20Liquid-Cooled&url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fai-data-center-power-cooling-rack-density-explained" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fai-data-center-power-cooling-rack-density-explained" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.reddit.com/submit?selftext=true&title=AI%20Data%20Centers%20Explained%3A%20Why%20Racks%20Jumped%20to%20120%20kW%20and%20Went%20Liquid-Cooled&text=A%20visual%20guide%20to%20AI%20data%20center%20racks%3A%20the%20jump%20to%20120%20kW%2C%20why%20liquid%20cooling%20wins%2C%20why%20voltage%20is%20rising%2C%20PUE%2C%20and%20a%20live%20calculator.%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fai-data-center-power-cooling-rack-density-explained" target="_blank" rel="noopener">Reddit</a>
+      <a href="mailto:?subject=AI%20Data%20Centers%20Explained%3A%20Why%20Racks%20Jumped%20to%20120%20kW%20and%20Went%20Liquid-Cooled&body=Thought%20you%20might%20find%20this%20useful%3A%0A%0AAI%20Data%20Centers%20Explained%3A%20Why%20Racks%20Jumped%20to%20120%20kW%20and%20Went%20Liquid-Cooled%0A%0Ahttps%3A%2F%2Fwww.engineerzcorner.com%2Fposts%2Fai-data-center-power-cooling-rack-density-explained">Email</a>
+    </div>
+  </div>
+
+  <div class="post-related">
+    <h2>Related</h2>
+    <p class="post-related-label">Related reading</p>
+    <ul><li><a href="chiller-capacity-cop-condenser-heat-rejection">Chiller Capacity and COP</a></li><li><a href="harmonics-sources-effects-mitigation">Harmonics: Sources, Effects and Mitigation</a></li><li><a href="maximum-demand-demand-factor-diversity-explained">Maximum Demand and Demand Factor</a></li><li><a href="sensible-vs-latent-heat-cooling-load">Sensible vs Latent Heat in Cooling Load</a></li></ul>
+  </div>
+
+  <div class="post-foot">
+    <a href="./">&larr; Back to all posts</a>
+  </div>
+</div>
+
+
+<a href="../" class="ecr-home-fab" aria-label="Go to homepage">
+  <span class="ecr-home-fab-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+  <span class="ecr-home-fab-label">Home</span>
+</a>
+<script src="../assets/sidebars.js" defer></script>
+
+<footer class="site-footer">
+  <div>Engineerz CorneR — reference material, used at your own judgement; verify against applicable codes and a qualified professional's judgement.</div>
+  <div><a href="../about">About</a> &nbsp;·&nbsp; <a href="../privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="../changelog">Changelog</a> &nbsp;·&nbsp; <a href="../feed.xml">RSS</a></div>
+</footer>
+<script type="text/javascript">aclib.runBanner({zoneId: '12056222'});</script>
+</body>
+</html>
